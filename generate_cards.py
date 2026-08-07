@@ -118,7 +118,8 @@ def generate_stream_xml(stream_key: str, stream_config: dict, batch: list[dict],
             f"<strong>Q: {card['prompt']}</strong><br><br>"
             f"<details><summary>💡 Click to reveal answer</summary><br>{card['answer']}</details>"
         )
-        fe.pubDate(now)
+        pub_time = datetime.now(timezone.utc) - timedelta(minutes=5)
+        fe.pubDate(pub_time)
 
     fg.rss_file(str(xml_filename), pretty=True)
     return xml_filename
