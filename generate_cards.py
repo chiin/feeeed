@@ -127,13 +127,16 @@ def generate_stream_xml(stream_key: str, stream_config: dict, batch: list[dict],
         fe.title(f"{stream_key.title()}")
         
         # 4. Clean HTML Body for feeeed's renderer
+        # Clean, explicit HTML layout that renders reliably across all RSS readers
         card_html = (
-            f"<div>"
-            f"<p><strong>Q: {card['prompt']}</strong></p><br>"
-            f"<details>"
-            f"<summary>💡 Click to reveal answer</summary>"
-            f"<p><br><strong>A:</strong> {card['answer']}</p>"
-            f"</details>"
+            f"<div style='font-family: -apple-system, sans-serif; padding: 10px 0;'>"
+            f"  <p style='font-size: 1.2em; font-weight: 600; margin-bottom: 15px;'>"
+            f"    <strong>Q:</strong> {card['prompt']}"
+            f"  </p>"
+            f"  <hr style='border: 0; border-top: 1px dashed #ccc; margin: 20px 0;' />"
+            f"  <p style='font-size: 1.1em; margin-top: 15px;'>"
+            f"    <strong>A:</strong> {card['answer']}"
+            f"  </p>"
             f"</div>"
         )
         fe.description(card_html)
