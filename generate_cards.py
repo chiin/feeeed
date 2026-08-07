@@ -87,7 +87,6 @@ def select_batch(cards: list[dict], stream_history: dict, batch_size: int) -> li
 
 def generate_stream_xml(stream_key: str, stream_config: dict, batch: list[dict], stream_history: dict) -> Path:
     now = datetime.now(timezone.utc)
-    # Use a slight offset (10 mins ago) to avoid client clock sync issues
     pub_time = now - timedelta(minutes=10)
     
     xml_filename = Path(f"{stream_key}.xml")
@@ -114,27 +113,30 @@ def generate_stream_xml(stream_key: str, stream_config: dict, batch: list[dict],
             "times_shown": times_shown
         }
 
-        # Unique identifier version per run
+        # Unique GUID string for tracking unread state in feeeed
         item_guid = f"{stream_key}-{card_id}-v{times_shown}"
 
         fe = fg.add_entry()
-        # 1. Unique ID / GUID
+        # 1. GUID (Internal tracking ID)
         fe.id(item_guid)
         
-        # 2. Explicit Item Link (REQUIRED by feeeed parser)
-        fe.link(href=f"{feed_url}#{item_guid}")
+        # 2. Valid URL for tapping (Prevents 404 error)
+        fe.link(href="https://github.com/chiin/feeeed")
         
         # 3. Card Title
         fe.title(f"{stream_key.title()}")
         
-        # 4. Content / Description Body
+        # 4. Clean HTML Body for feeeed's renderer
         card_html = (
-            f"<p><strong>Q: {card['prompt']}</strong></p>"
-            f"<details><summary>💡 Click to reveal answer</summary><p>{card['answer']}</p></details>"
+            f"<div>"
+            f"<p><strong>Q: {card['prompt']}</strong></p><br>"
+            f"<details>"
+            f"<summary>💡 Click to reveal answer</summary>"
+            f"<p><br><strong>A:</strong> {card['answer']}</p>"
+            f"</details>"
+            f"</div>"
         )
         fe.description(card_html)
-        
-        # 5. Timestamp
         fe.pubDate(pub_time)
 
     fg.rss_file(str(xml_filename), pretty=True)
