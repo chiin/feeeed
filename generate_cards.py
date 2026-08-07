@@ -8,6 +8,7 @@ from feedgen.feed import FeedGenerator
 # File Paths
 CONFIG_PATH = Path("flashcard_config.json")
 HISTORY_PATH = Path("history.json")
+CARDS_DIR = Path("cards")
 BASE_URL = "https://chiin.github.io/feeeed"
 
 # Leitner Box intervals (in days)
@@ -25,7 +26,6 @@ def save_json(path: Path, data: dict):
 
 def load_csv_cards(csv_path: Path) -> list[dict]:
     if not csv_path.exists():
-        print(f"Warning: CSV file {csv_path} not found. Skipping stream.")
         return []
     cards = []
     with open(csv_path, mode="r", encoding="utf-8") as f:
@@ -85,6 +85,79 @@ def select_batch(cards: list[dict], stream_history: dict, batch_size: int) -> li
     random.shuffle(selected_cards)
     return selected_cards
 
+def create_html_card(stream_key: str, card: list[dict]) -> str:
+    """Generates an HTML web page for the card with a interactive click-to-reveal answer button."""
+    CARDS_DIR.mkdir(exist_ok=True)
+    filename = f"{stream_key}-{card['id']}.html"
+    filepath = CARDS_DIR / filename
+    
+    html_content = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard</title>
+    <style>
+        body {{
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            background-color: #f4f4f7;
+            margin: 0;
+            padding: 20px;
+        }}
+        .card {{
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }}
+        .question {{
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 25px;
+        }}
+        .btn {{
+            background-color: #007aff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+        }}
+        .answer {{
+            display: none;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed #e0e0e0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="question">Q: {card['prompt']}</div>
+        <button class="btn" onclick="document.getElementById('ans').style.display='block'; this.style.display='none';">Show Answer</button>
+        <div id="ans" class="answer">A: {card['answer']}</div>
+    </div>
+</body>
+</html>"""
+
+    with open(filepath, "w", encoding="utf-8") as f:
+        f.write(html_content)
+        
+    return f"{BASE_URL}/cards/{filename}"
+
 def generate_stream_xml(stream_key: str, stream_config: dict, batch: list[dict], stream_history: dict) -> Path:
     now = datetime.now(timezone.utc)
     pub_time = now - timedelta(minutes=10)
@@ -113,33 +186,15 @@ def generate_stream_xml(stream_key: str, stream_config: dict, batch: list[dict],
             "times_shown": times_shown
         }
 
-        # Unique GUID string for tracking unread state in feeeed
+        # Create HTML answer page and get its URL
+        card_web_url = create_html_card(stream_key, card)
         item_guid = f"{stream_key}-{card_id}-v{times_shown}"
 
         fe = fg.add_entry()
-        # 1. GUID (Internal tracking ID)
         fe.id(item_guid)
-        
-        # 2. Valid URL for tapping (Prevents 404 error)
-        fe.link(href="https://github.com/chiin/feeeed")
-        
-        # 3. Card Title
+        fe.link(href=card_web_url)  # Tapping card opens the interactive HTML answer card!
         fe.title(f"{stream_key.title()}")
-        
-        # 4. Clean HTML Body for feeeed's renderer
-        # Clean, explicit HTML layout that renders reliably across all RSS readers
-        card_html = (
-            f"<div style='font-family: -apple-system, sans-serif; padding: 10px 0;'>"
-            f"  <p style='font-size: 1.2em; font-weight: 600; margin-bottom: 15px;'>"
-            f"    <strong>Q:</strong> {card['prompt']}"
-            f"  </p>"
-            f"  <hr style='border: 0; border-top: 1px dashed #ccc; margin: 20px 0;' />"
-            f"  <p style='font-size: 1.1em; margin-top: 15px;'>"
-            f"    <strong>A:</strong> {card['answer']}"
-            f"  </p>"
-            f"</div>"
-        )
-        fe.description(card_html)
+        fe.description(f"Tap to view card and reveal answer -> {card['prompt']}")
         fe.pubDate(pub_time)
 
     fg.rss_file(str(xml_filename), pretty=True)
@@ -151,7 +206,6 @@ def main():
     streams = config.get("streams", {})
 
     if not streams:
-        print("No streams found in flashcard_config.json")
         return
 
     for stream_key, stream_config in streams.items():
@@ -162,13 +216,9 @@ def main():
         if not cards:
             continue
 
-        # Get or create isolated history namespace for this stream
         stream_history = master_history.setdefault(stream_key, {})
-        
         batch = select_batch(cards, stream_history, daily_n)
-        xml_file = generate_stream_xml(stream_key, stream_config, batch, stream_history)
-        
-        print(f"Generated {len(batch)} cards -> {BASE_URL}/{xml_file.name}")
+        generate_stream_xml(stream_key, stream_config, batch, stream_history)
 
     save_json(HISTORY_PATH, master_history)
 
