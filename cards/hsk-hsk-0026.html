@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+            background-color: #f4f4f7;
+            margin: 0;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            padding: 30px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+        .question {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 25px;
+        }
+        .btn {
+            background-color: #007aff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .answer {
+            display: none;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed #e0e0e0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="question">Q: 能</div>
+        <button class="btn" onclick="document.getElementById('ans').style.display='block'; this.style.display='none';">Show Answer</button>
+        <div id="ans" class="answer">A: néng - can; be able</div>
+    </div>
+</body>
+</html>
