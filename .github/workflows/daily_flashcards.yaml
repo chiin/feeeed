@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: '0 6 * * *'
   workflow_dispatch:
+  push:                   # <-- ADD THIS: Triggers an auto-build anytime you push changes
+    branches:
+      - main
+    paths:
+      - 'flashcard_config.json'
+      - '*.csv'
 
 permissions:
   contents: write
