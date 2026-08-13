@@ -11,7 +11,7 @@
       "type": "pdf_folder",
       "folder": "Economics_Cards",
       "strategy": "sequential",
-      "daily_n": 2,
+      "daily_n": 5,
       "feed_title": "Daily Economics Reading",
       "max_feed_items": 10
     },
@@ -19,8 +19,15 @@
       "type": "pdf_folder",
       "folder": "Politics_Cards",
       "strategy": "random_without_replacement",
-      "daily_n": 2,
+      "daily_n": 5,
       "feed_title": "Random Politics Insights"
-    }
+    },
+    "philosophy": {
+      "type": "pdf_folder",
+      "folder": "Philosophy_Cards",
+      "strategy": "random_with_replacement",
+      "daily_n": 5,
+      "feed_title": "Random Philosophy Reading"
+    }    
   }
 }
