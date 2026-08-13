@@ -83,15 +83,18 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>{chapter_title}</title>
+    <!-- PDF.js library for multi-page rendering on iOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <style>
         * {{ box-sizing: border-box; }}
-        body {{ margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #1c1c1e; color: white; overflow: hidden; }}
-        .header {{ display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #2c2c2e; border-bottom: 1px solid #3a3a3c; height: 55px; }}
+        body {{ margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #1c1c1e; color: white; }}
+        .header {{ position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #2c2c2e; border-bottom: 1px solid #3a3a3c; height: 55px; }}
         .title {{ font-weight: 600; font-size: 0.95rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 60%; }}
         .btn {{ background-color: #30d158; color: #000; border: none; padding: 8px 14px; font-weight: 600; border-radius: 8px; cursor: pointer; font-size: 0.85rem; }}
         .btn:disabled {{ background-color: #636366; color: #8e8e93; cursor: not-allowed; }}
-        .pdf-container {{ height: calc(100vh - 55px); width: 100vw; }}
-        iframe {{ width: 100%; height: 100%; border: none; }}
+        .pdf-container {{ padding: 10px; width: 100%; max-width: 800px; margin: 0 auto; min-height: 100vh; }}
+        canvas {{ width: 100% !important; height: auto !important; margin-bottom: 12px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }}
+        .loading {{ text-align: center; padding: 40px; color: #8e8e93; font-size: 0.9rem; }}
     </style>
 </head>
 <body>
@@ -99,11 +102,39 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
         <div class="title">{chapter_title}</div>
         <button id="finishBtn" class="btn" onclick="markFinished()">Finished Chapter ✓</button>
     </div>
-    <div class="pdf-container">
-        <iframe src="{pdf_url}"></iframe>
-    </div>
+
+    <div id="loading" class="loading">Loading PDF chapter...</div>
+    <div id="pdf-viewer" class="pdf-container"></div>
 
     <script>
+    // Initialize PDF.js
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    // Render all pages sequentially
+    pdfjsLib.getDocument('{pdf_url}').promise.then(pdf => {{
+        document.getElementById('loading').style.display = 'none';
+        const viewer = document.getElementById('pdf-viewer');
+        
+        for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {{
+            pdf.getPage(pageNum).then(page => {{
+                const viewport = page.getViewport({{ scale: 2.0 }});
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+                
+                viewer.appendChild(canvas);
+
+                page.render({{
+                    canvasContext: context,
+                    viewport: viewport
+                }});
+            }});
+        }}
+    }}).catch(err => {{
+        document.getElementById('loading').innerText = 'Failed to load PDF: ' + err.message;
+    }});
+
     async function markFinished() {{
         const btn = document.getElementById('finishBtn');
         btn.innerText = "Updating...";
@@ -130,7 +161,8 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
                 btn.style.backgroundColor = "#0a84ff";
                 btn.style.color = "#ffffff";
             }} else {{
-                btn.innerText = "Error. Try again.";
+                // Displays specific HTTP status code for easy debugging
+                btn.innerText = "Error (" + response.status + ")";
                 btn.disabled = false;
             }}
         }} catch (err) {{
@@ -141,6 +173,7 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
     </script>
 </body>
 </html>"""
+
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(html_content)
 
