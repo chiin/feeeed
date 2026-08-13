@@ -12,6 +12,7 @@ HISTORY_PATH = Path("history.json")
 CARDS_DIR = Path("cards")
 BASE_URL = "https://chiin.github.io/feeeed"
 
+# Leitner Box Intervals (in days)
 BOX_INTERVALS = {1: 1, 2: 3, 3: 7, 4: 14, 5: 30}
 
 def load_json(path: Path) -> dict:
@@ -26,49 +27,125 @@ def save_json(path: Path, data: dict):
 
 # --- DISPATCH PAYLOAD DETECTOR ---
 
-def get_dispatched_stream_to_advance() -> str | None:
-    """Checks if workflow run was triggered by a 'Finished Chapter' button dispatch."""
+def get_dispatch_payload() -> dict:
+    """Reads payload if workflow was triggered by a repository_dispatch event."""
     event_path = os.environ.get("GITHUB_EVENT_PATH")
     if event_path and os.path.exists(event_path):
         try:
             with open(event_path, "r", encoding="utf-8") as f:
                 event_data = json.load(f)
-                client_payload = event_data.get("client_payload", {})
-                return client_payload.get("stream")
+                return event_data.get("client_payload", {})
         except Exception as e:
             print(f"Error reading event dispatch payload: {e}")
-    return None
+    return {}
 
 # --- HTML CARD GENERATORS ---
 
-def create_flashcard_html(stream_key: str, card: dict) -> str:
+def create_flashcard_html(stream_key: str, card: dict, box: int, github_pat: str = "") -> str:
     CARDS_DIR.mkdir(exist_ok=True)
     filename = f"{stream_key}-{card['id']}.html"
     filepath = CARDS_DIR / filename
-    
+
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flashcard: {card['prompt']}</title>
     <style>
-        body {{ font-family: -apple-system, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 90vh; background-color: #f4f4f7; margin: 0; padding: 20px; }}
-        .card {{ background: white; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); padding: 30px; max-width: 400px; width: 100%; text-align: center; }}
-        .question {{ font-size: 1.3rem; font-weight: 600; color: #111; margin-bottom: 25px; }}
-        .btn {{ background-color: #007aff; color: white; border: none; padding: 12px 24px; font-size: 1rem; font-weight: 600; border-radius: 10px; cursor: pointer; }}
-        .answer {{ display: none; margin-top: 25px; padding-top: 20px; border-top: 1px dashed #e0e0e0; font-size: 1.2rem; color: #2c3e50; font-weight: 500; }}
+        * {{ box-sizing: border-box; }}
+        body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #1c1c1e; color: white; margin: 0; padding: 20px; }}
+        .card {{ background: #2c2c2e; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 28px; max-width: 420px; width: 100%; text-align: center; border: 1px solid #3a3a3c; }}
+        .box-badge {{ display: inline-block; background: #3a3a3c; color: #0a84ff; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }}
+        .question {{ font-size: 1.35rem; font-weight: 600; color: #ffffff; margin-bottom: 24px; line-height: 1.4; }}
+        .btn {{ background-color: #0a84ff; color: white; border: none; padding: 12px 24px; font-size: 1rem; font-weight: 600; border-radius: 10px; cursor: pointer; transition: opacity 0.2s; width: 100%; }}
+        .btn:disabled {{ opacity: 0.5; cursor: not-allowed; }}
+        .answer-box {{ display: none; margin-top: 24px; padding-top: 20px; border-top: 1px dashed #48484a; }}
+        .answer {{ font-size: 1.25rem; color: #30d158; font-weight: 600; margin-bottom: 24px; }}
+        .controls {{ display: flex; gap: 12px; margin-top: 16px; }}
+        .btn-fail {{ background-color: #ff453a; flex: 1; }}
+        .btn-pass {{ background-color: #30d158; color: #000; flex: 1; }}
+        .status-msg {{ display: none; margin-top: 16px; font-size: 0.95rem; font-weight: 500; color: #8e8e93; }}
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="question">Q: {card['prompt']}</div>
-        <button class="btn" onclick="document.getElementById('ans').style.display='block'; this.style.display='none';">Show Answer</button>
-        <div id="ans" class="answer">A: {card['answer']}</div>
+        <div class="box-badge">Leitner Box {box}</div>
+        <div class="question">{card['prompt']}</div>
+        
+        <button id="showBtn" class="btn" onclick="revealAnswer()">Show Answer</button>
+        
+        <div id="answerBox" class="answer-box">
+            <div class="answer">{card['answer']}</div>
+            <div id="controls" class="controls">
+                <button id="failBtn" class="btn btn-fail" onclick="gradeCard('incorrect')">❌ Incorrect</button>
+                <button id="passBtn" class="btn btn-pass" onclick="gradeCard('correct')">✅ Correct</button>
+            </div>
+        </div>
+        
+        <div id="statusMsg" class="status-msg"></div>
     </div>
+
+    <script>
+    function revealAnswer() {{
+        document.getElementById('answerBox').style.display = 'block';
+        document.getElementById('showBtn').style.display = 'none';
+    }}
+
+    async function gradeCard(grade) {{
+        const failBtn = document.getElementById('failBtn');
+        const passBtn = document.getElementById('passBtn');
+        const statusMsg = document.getElementById('statusMsg');
+
+        failBtn.disabled = true;
+        passBtn.disabled = true;
+        statusMsg.innerText = "Saving grade...";
+        statusMsg.style.display = 'block';
+
+        const TOKEN = "{github_pat}";
+
+        try {{
+            const response = await fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {{
+                method: "POST",
+                headers: {{
+                    "Accept": "application/vnd.github+json",
+                    "Authorization": `Bearer ${{TOKEN}}`,
+                    "Content-Type": "application/json"
+                }},
+                body: JSON.stringify({{
+                    event_type: "flashcard_grade",
+                    client_payload: {{
+                        stream: "{stream_key}",
+                        card_id: "{card['id']}",
+                        grade: grade
+                    }}
+                }})
+            }});
+
+            if (response.ok) {{
+                document.getElementById('controls').style.display = 'none';
+                statusMsg.innerText = grade === 'correct' 
+                    ? "✅ Marked Correct! Moved to next Leitner box." 
+                    : "❌ Marked Incorrect. Reset to Box 1 for tomorrow.";
+                statusMsg.style.color = grade === 'correct' ? '#30d158' : '#ff453a';
+            }} else {{
+                statusMsg.innerText = "Error saving grade (" + response.status + ")";
+                failBtn.disabled = false;
+                passBtn.disabled = false;
+            }}
+        }} catch (err) {{
+            statusMsg.innerText = "Network error. Check connection.";
+            failBtn.disabled = false;
+            passBtn.disabled = false;
+        }}
+    }}
+    </script>
 </body>
 </html>"""
+
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(html_content)
+
     return f"{BASE_URL}/cards/{filename}"
 
 
@@ -83,7 +160,6 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>{chapter_title}</title>
-    <!-- PDF.js library for multi-page rendering on iOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <style>
         * {{ box-sizing: border-box; }}
@@ -107,10 +183,8 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
     <div id="pdf-viewer" class="pdf-container"></div>
 
     <script>
-    // Initialize PDF.js
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    // Render all pages sequentially
     pdfjsLib.getDocument('{pdf_url}').promise.then(pdf => {{
         document.getElementById('loading').style.display = 'none';
         const viewer = document.getElementById('pdf-viewer');
@@ -161,7 +235,6 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
                 btn.style.backgroundColor = "#0a84ff";
                 btn.style.color = "#ffffff";
             }} else {{
-                // Displays specific HTTP status code for easy debugging
                 btn.innerText = "Error (" + response.status + ")";
                 btn.disabled = false;
             }}
@@ -179,29 +252,93 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
 
     return f"{BASE_URL}/cards/{filename}"
 
-# --- STREAM HANDLERS ---
+# --- STREAM PROCESSORS ---
 
-def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, fg, advance_stream: str | None):
-    folder = Path(stream_cfg["folder"])
-    if not folder.exists():
-        print(f"Warning: Folder '{folder}' does not exist.")
+def process_flashcards(stream_key: str, stream_cfg: dict, stream_history: dict, fg, dispatch_payload: dict, github_pat: str):
+    csv_path = Path(stream_cfg["csv_file"])
+    if not csv_path.exists():
+        print(f"Warning: CSV file '{csv_path}' not found.")
         return
 
-    # Sort files alphabetically
+    cards_history = stream_history.setdefault("cards", {})
+
+    # 1. Update Leitner score if this stream was triggered via flashcard grading
+    if dispatch_payload.get("stream") == stream_key and "card_id" in dispatch_payload:
+        card_id = dispatch_payload["card_id"]
+        grade = dispatch_payload.get("grade", "correct")
+
+        card_stat = cards_history.setdefault(card_id, {"box": 1})
+        current_box = card_stat.get("box", 1)
+
+        if grade == "correct":
+            new_box = min(current_box + 1, 5)
+        else:
+            new_box = 1  # Reset back to Box 1 on error
+
+        now_utc = datetime.now(timezone.utc)
+        days_ahead = BOX_INTERVALS.get(new_box, 1)
+        next_due = now_utc + timedelta(days=days_ahead)
+
+        card_stat["box"] = new_box
+        card_stat["last_reviewed"] = now_utc.isoformat()
+        card_stat["next_due"] = next_due.isoformat()
+        print(f"[{stream_key}] Rated '{card_id}' as '{grade}'. Box: {current_box} -> {new_box}. Next due in {days_ahead} days.")
+
+    # 2. Read CSV cards
+    cards = []
+    with open(csv_path, mode="r", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            cards.append({"id": row["id"].strip(), "prompt": row["prompt"].strip(), "answer": row["answer"].strip()})
+
+    # 3. Filter due cards (next_due <= now or unreviewed)
+    now_iso = datetime.now(timezone.utc).isoformat()
+    due_cards = []
+
+    for card in cards:
+        cid = card["id"]
+        c_stat = cards_history.get(cid, {})
+        next_due_iso = c_stat.get("next_due")
+
+        if not next_due_iso or next_due_iso <= now_iso:
+            due_cards.append(card)
+
+    daily_n = stream_cfg.get("daily_n", 10)
+    selected_cards = due_cards[:daily_n]
+    pub_time = datetime.now(timezone.utc) - timedelta(minutes=10)
+
+    for card in selected_cards:
+        cid = card["id"]
+        c_stat = cards_history.get(cid, {})
+        box = c_stat.get("box", 1)
+
+        card_web_url = create_flashcard_html(stream_key, card, box, github_pat)
+        item_guid = f"{stream_key}-{cid}"
+
+        fe = fg.add_entry()
+        fe.id(item_guid)
+        fe.link(href=card_web_url)
+        fe.title(f"[{stream_key.title()}] Box {box}")
+        fe.description(f"Tap to review flashcard -> {card['prompt']}")
+        fe.pubDate(pub_time)
+
+
+def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, fg, dispatch_payload: dict, github_pat: str):
+    folder = Path(stream_cfg["folder"])
+    if not folder.exists():
+        return
+
     pdf_files = sorted(list(folder.glob("*.pdf")), key=lambda p: p.name.lower())
     if not pdf_files:
-        print(f"Warning: No PDF files found in '{folder}'.")
         return
 
     current_index = stream_history.get("current_index", 0)
 
-    # Check if this stream was triggered to advance via GitHub dispatch
-    if advance_stream == stream_key:
+    # Advance chapter if triggered via dispatch
+    if dispatch_payload.get("stream") == stream_key and "card_id" not in dispatch_payload:
         print(f"Advancing stream '{stream_key}' to next chapter!")
         current_index += 1
         stream_history["current_index"] = current_index
 
-    # Check for end-of-book state
     if current_index >= len(pdf_files):
         fe = fg.add_entry()
         fe.id(f"{stream_key}-completed")
@@ -212,9 +349,7 @@ def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, 
 
     active_pdf = pdf_files[current_index]
     pdf_url = f"{BASE_URL}/{folder.name}/{active_pdf.name}"
-    github_pat = stream_cfg.get("github_pat", "")
 
-    # Generate viewer card
     card_web_url = create_book_reader_html(stream_key, active_pdf.stem, pdf_url, github_pat)
 
     item_guid = f"{stream_key}-ch-{current_index:03d}"
@@ -239,12 +374,9 @@ def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, 
     if strategy in ["sequential", "alphabetical"]:
         pdfs.sort(key=lambda p: p.name.lower())
 
-    if strategy in ["sequential", "alphabetical"]:
-        last_index = stream_history.get("last_index", 0)
-        batch = pdfs[last_index : last_index + daily_n]
-        stream_history["last_index"] = last_index + len(batch)
-    else:
-        batch = pdfs[:daily_n]
+    last_index = stream_history.get("last_index", 0)
+    batch = pdfs[last_index : last_index + daily_n]
+    stream_history["last_index"] = last_index + len(batch)
 
     for pdf_file in batch:
         pdf_url = f"{BASE_URL}/{folder.name}/{pdf_file.name}"
@@ -258,32 +390,6 @@ def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, 
         fe.enclosure(url=pdf_url, length=str(pdf_file.stat().st_size), type="application/pdf")
         fe.pubDate(pub_time)
 
-
-def process_flashcards(stream_key: str, stream_cfg: dict, stream_history: dict, fg):
-    csv_path = Path(stream_cfg["csv_file"])
-    if not csv_path.exists():
-        return
-
-    cards = []
-    with open(csv_path, mode="r", encoding="utf-8") as f:
-        for row in csv.DictReader(f):
-            cards.append({"id": row["id"].strip(), "prompt": row["prompt"].strip(), "answer": row["answer"].strip()})
-
-    daily_n = stream_cfg.get("daily_n", 10)
-    pub_time = datetime.now(timezone.utc) - timedelta(minutes=10)
-    selected_cards = cards[:daily_n]
-
-    for card in selected_cards:
-        card_web_url = create_flashcard_html(stream_key, card)
-        item_guid = f"{stream_key}-{card['id']}"
-
-        fe = fg.add_entry()
-        fe.id(item_guid)
-        fe.link(href=card_web_url)
-        fe.title(f"{stream_key.title()}")
-        fe.description(f"Tap to view flashcard -> {card['prompt']}")
-        fe.pubDate(pub_time)
-
 # --- MAIN CONTROLLER ---
 
 def main():
@@ -291,12 +397,14 @@ def main():
     master_history = load_json(HISTORY_PATH)
     streams = config.get("streams", {})
 
-    advance_stream = get_dispatched_stream_to_advance()
-    if advance_stream:
-        print(f"Triggered via dispatch for stream: '{advance_stream}'")
+    dispatch_payload = get_dispatch_payload()
+    github_pat = os.environ.get("GH_PAT", "")
+
+    if dispatch_payload:
+        print(f"Triggered via dispatch with payload: {dispatch_payload}")
 
     for stream_key, stream_cfg in streams.items():
-        # BACKWARDS COMPATIBILITY: Detect stream type automatically if not explicitly defined
+        # Autodetect stream type for backwards compatibility
         stream_type = stream_cfg.get("type")
         if not stream_type:
             if "csv_file" in stream_cfg:
@@ -317,12 +425,12 @@ def main():
         fg.link(href=feed_url, rel="self")
         fg.language("en")
 
-        if stream_type == "book_queue":
-            process_book_queue(stream_key, stream_cfg, stream_history, fg, advance_stream)
+        if stream_type == "flashcard":
+            process_flashcards(stream_key, stream_cfg, stream_history, fg, dispatch_payload, github_pat)
+        elif stream_type == "book_queue":
+            process_book_queue(stream_key, stream_cfg, stream_history, fg, dispatch_payload, github_pat)
         elif stream_type == "pdf_folder":
             process_pdf_folder(stream_key, stream_cfg, stream_history, fg)
-        elif stream_type == "flashcard":
-            process_flashcards(stream_key, stream_cfg, stream_history, fg)
 
         fg.rss_file(str(xml_filename), pretty=True)
         print(f"Generated {xml_filename}")
