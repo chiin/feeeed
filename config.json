@@ -1,0 +1,26 @@
+{
+  "streams": {
+    "hsk": {
+      "type": "flashcard",
+      "csv_file": "HSK.csv",
+      "strategy": "leitner",
+      "daily_n": 50,
+      "feed_title": "HSK Vocab"
+    },
+    "economics": {
+      "type": "pdf_folder",
+      "folder": "Economics_Cards",
+      "strategy": "sequential",
+      "daily_n": 2,
+      "feed_title": "Daily Economics Reading",
+      "max_feed_items": 10
+    },
+    "politics": {
+      "type": "pdf_folder",
+      "folder": "Politics_Cards",
+      "strategy": "random_without_replacement",
+      "daily_n": 2,
+      "feed_title": "Random Politics Insights"
+    }
+  }
+}
