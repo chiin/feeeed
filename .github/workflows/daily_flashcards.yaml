@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: '0 6 * * *'
   workflow_dispatch:
+  repository_dispatch:
+      types: [advance_chapter]  
   push:                   # <-- ADD THIS: Triggers an auto-build anytime you push changes
     branches:
       - main
