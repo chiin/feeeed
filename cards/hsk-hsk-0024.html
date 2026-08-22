@@ -44,6 +44,18 @@
         document.getElementById('showBtn').style.display = 'none';
     }
 
+    function getPAT() {
+        let token = localStorage.getItem("feeeed_pat");
+        if (!token) {
+            token = prompt("Enter your GitHub PAT (saved on your device):");
+            if (token) {
+                token = token.trim();
+                localStorage.setItem("feeeed_pat", token);
+            }
+        }
+        return token;
+    }
+
     async function gradeCard(grade) {
         const failBtn = document.getElementById('failBtn');
         const passBtn = document.getElementById('passBtn');
@@ -54,7 +66,13 @@
         statusMsg.innerText = "Saving grade...";
         statusMsg.style.display = 'block';
 
-        const TOKEN = "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";
+        const TOKEN = getPAT();
+        if (!TOKEN) {
+            statusMsg.innerText = "PAT required to submit.";
+            failBtn.disabled = false;
+            passBtn.disabled = false;
+            return;
+        }
 
         try {
             const response = await fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
@@ -80,6 +98,12 @@
                     ? "✅ Marked Correct! Moved to next Leitner box." 
                     : "❌ Marked Incorrect. Reset to Box 1 for tomorrow.";
                 statusMsg.style.color = grade === 'correct' ? '#30d158' : '#ff453a';
+            } else if (response.status === 401) {
+                alert("Invalid PAT. Clearing saved token.");
+                localStorage.removeItem("feeeed_pat");
+                statusMsg.innerText = "Invalid PAT. Tap button again.";
+                failBtn.disabled = false;
+                passBtn.disabled = false;
             } else {
                 statusMsg.innerText = "Error saving grade (" + response.status + ")";
                 failBtn.disabled = false;
