@@ -209,40 +209,61 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
         document.getElementById('loading').innerText = 'Failed to load PDF: ' + err.message;
     }});
 
-    async function markFinished() {{
+    function getPAT() {
+        let token = localStorage.getItem("feeeed_pat");
+        if (!token) {
+            token = prompt("Enter your GitHub PAT (saved on your device):");
+            if (token) {
+                token = token.trim();
+                localStorage.setItem("feeeed_pat", token);
+            }
+        }
+        return token;
+    }
+
+    async function markFinished() {
         const btn = document.getElementById('finishBtn');
         btn.innerText = "Updating...";
         btn.disabled = true;
-
-        const TOKEN = "{github_pat}";
-
-        try {{
-            const response = await fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {{
+    
+        const TOKEN = getPAT();
+        if (!TOKEN) {
+            btn.innerText = "PAT Required";
+            btn.disabled = false;
+            return;
+        }
+    
+        try {
+            const response = await fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
                 method: "POST",
-                headers: {{
+                headers: {
                     "Accept": "application/vnd.github+json",
-                    "Authorization": `Bearer ${{TOKEN}}`,
+                    "Authorization": `Bearer ${TOKEN}`,
                     "Content-Type": "application/json"
-                }},
-                body: JSON.stringify({{
+                },
+                body: JSON.stringify({
                     event_type: "advance_chapter",
-                    client_payload: {{ stream: "{stream_key}" }}
-                }})
-            }});
-
-            if (response.ok) {{
-                btn.innerText = "Chapter Done! Next tomorrow.";
+                    client_payload: { stream: "{stream_key}" }
+                })
+            });
+    
+            if (response.ok) {
+                btn.innerText = "Done!";
                 btn.style.backgroundColor = "#0a84ff";
-                btn.style.color = "#ffffff";
-            }} else {{
+            } else if (response.status === 401) {
+                alert("Invalid PAT. Clearing saved token.");
+                localStorage.removeItem("feeeed_pat");
+                btn.innerText = "Try Again";
+                btn.disabled = false;
+            } else {
                 btn.innerText = "Error (" + response.status + ")";
                 btn.disabled = false;
-            }}
-        }} catch (err) {{
+            }
+        } catch (err) {
             btn.innerText = "Network Error";
             btn.disabled = false;
-        }}
-    }}
+        }
+    }
     </script>
 </body>
 </html>"""
