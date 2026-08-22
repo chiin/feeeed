@@ -300,7 +300,7 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str) -
 
 # --- STREAM PROCESSORS ---
 
-def process_flashcards(stream_key: str, stream_cfg: dict, stream_history: dict, fg, dispatch_payload: dict, github_pat: str):
+def process_flashcards(stream_key: str, stream_cfg: dict, stream_history: dict, fg, dispatch_payload: dict):
     csv_path = Path(stream_cfg["csv_file"])
     if not csv_path.exists():
         print(f"Warning: CSV file '{csv_path}' not found.")
@@ -357,7 +357,7 @@ def process_flashcards(stream_key: str, stream_cfg: dict, stream_history: dict, 
         c_stat = cards_history.get(cid, {})
         box = c_stat.get("box", 1)
 
-        card_web_url = create_flashcard_html(stream_key, card, box, github_pat)
+        card_web_url = create_flashcard_html(stream_key, card, box)
         item_guid = f"{stream_key}-{cid}"
 
         fe = fg.add_entry()
@@ -368,7 +368,7 @@ def process_flashcards(stream_key: str, stream_cfg: dict, stream_history: dict, 
         fe.pubDate(pub_time)
 
 
-def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, fg, dispatch_payload: dict, github_pat: str):
+def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, fg, dispatch_payload: dict):
     folder = Path(stream_cfg["folder"])
     if not folder.exists():
         return
@@ -396,7 +396,7 @@ def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, 
     active_pdf = pdf_files[current_index]
     pdf_url = f"{BASE_URL}/{folder.name}/{active_pdf.name}"
 
-    card_web_url = create_book_reader_html(stream_key, active_pdf.stem, pdf_url, github_pat)
+    card_web_url = create_book_reader_html(stream_key, active_pdf.stem, pdf_url)
 
     item_guid = f"{stream_key}-ch-{current_index:03d}"
     fe = fg.add_entry()
@@ -444,7 +444,7 @@ def main():
     streams = config.get("streams", {})
 
     dispatch_payload = get_dispatch_payload()
-    github_pat = os.environ.get("GH_PAT", "")
+    # github_pat = os.environ.get("GH_PAT", "")
 
     if dispatch_payload:
         print(f"Triggered via dispatch with payload: {dispatch_payload}")
@@ -472,9 +472,9 @@ def main():
         fg.language("en")
 
         if stream_type == "flashcard":
-            process_flashcards(stream_key, stream_cfg, stream_history, fg, dispatch_payload, github_pat)
+            process_flashcards(stream_key, stream_cfg, stream_history, fg, dispatch_payload)
         elif stream_type == "book_queue":
-            process_book_queue(stream_key, stream_cfg, stream_history, fg, dispatch_payload, github_pat)
+            process_book_queue(stream_key, stream_cfg, stream_history, fg, dispatch_payload)
         elif stream_type == "pdf_folder":
             process_pdf_folder(stream_key, stream_cfg, stream_history, fg)
 
