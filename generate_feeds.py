@@ -41,7 +41,7 @@ def get_dispatch_payload() -> dict:
 
 # --- HTML CARD GENERATORS ---
 
-def create_flashcard_html(stream_key: str, card: dict, box: int, github_pat: str = "") -> str:
+def create_flashcard_html(stream_key: str, card: dict, box: int) -> str:
     CARDS_DIR.mkdir(exist_ok=True)
     filename = f"{stream_key}-{card['id']}.html"
     filepath = CARDS_DIR / filename
@@ -92,6 +92,18 @@ def create_flashcard_html(stream_key: str, card: dict, box: int, github_pat: str
         document.getElementById('showBtn').style.display = 'none';
     }}
 
+    function getPAT() {{
+        let token = localStorage.getItem("feeeed_pat");
+        if (!token) {{
+            token = prompt("Enter your GitHub PAT (saved on your device):");
+            if (token) {{
+                token = token.trim();
+                localStorage.setItem("feeeed_pat", token);
+            }}
+        }}
+        return token;
+    }}
+
     async function gradeCard(grade) {{
         const failBtn = document.getElementById('failBtn');
         const passBtn = document.getElementById('passBtn');
@@ -102,7 +114,13 @@ def create_flashcard_html(stream_key: str, card: dict, box: int, github_pat: str
         statusMsg.innerText = "Saving grade...";
         statusMsg.style.display = 'block';
 
-        const TOKEN = "{github_pat}";
+        const TOKEN = getPAT();
+        if (!TOKEN) {{
+            statusMsg.innerText = "PAT required to submit.";
+            failBtn.disabled = false;
+            passBtn.disabled = false;
+            return;
+        }}
 
         try {{
             const response = await fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {{
@@ -128,6 +146,12 @@ def create_flashcard_html(stream_key: str, card: dict, box: int, github_pat: str
                     ? "✅ Marked Correct! Moved to next Leitner box." 
                     : "❌ Marked Incorrect. Reset to Box 1 for tomorrow.";
                 statusMsg.style.color = grade === 'correct' ? '#30d158' : '#ff453a';
+            }} else if (response.status === 401) {{
+                alert("Invalid PAT. Clearing saved token.");
+                localStorage.removeItem("feeeed_pat");
+                statusMsg.innerText = "Invalid PAT. Tap button again.";
+                failBtn.disabled = false;
+                passBtn.disabled = false;
             }} else {{
                 statusMsg.innerText = "Error saving grade (" + response.status + ")";
                 failBtn.disabled = false;
@@ -149,7 +173,7 @@ def create_flashcard_html(stream_key: str, card: dict, box: int, github_pat: str
     return f"{BASE_URL}/cards/{filename}"
 
 
-def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, github_pat: str = "") -> str:
+def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str) -> str:
     CARDS_DIR.mkdir(exist_ok=True)
     filename = f"{stream_key}-{chapter_title}.html"
     filepath = CARDS_DIR / filename
@@ -209,61 +233,62 @@ def create_book_reader_html(stream_key: str, chapter_title: str, pdf_url: str, g
         document.getElementById('loading').innerText = 'Failed to load PDF: ' + err.message;
     }});
 
-    function getPAT() {
+    function getPAT() {{
         let token = localStorage.getItem("feeeed_pat");
-        if (!token) {
+        if (!token) {{
             token = prompt("Enter your GitHub PAT (saved on your device):");
-            if (token) {
+            if (token) {{
                 token = token.trim();
                 localStorage.setItem("feeeed_pat", token);
-            }
-        }
+            }}
+        }}
         return token;
-    }
+    }}
 
-    async function markFinished() {
+    async function markFinished() {{
         const btn = document.getElementById('finishBtn');
         btn.innerText = "Updating...";
         btn.disabled = true;
-    
+
         const TOKEN = getPAT();
-        if (!TOKEN) {
+        if (!TOKEN) {{
             btn.innerText = "PAT Required";
             btn.disabled = false;
             return;
-        }
-    
-        try {
-            const response = await fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
+        }}
+
+        try {{
+            const response = await fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {{
                 method: "POST",
-                headers: {
+                headers: {{
                     "Accept": "application/vnd.github+json",
-                    "Authorization": `Bearer ${TOKEN}`,
+                    "Authorization": `Bearer ${{TOKEN}}`,
                     "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
+                }},
+                body: JSON.stringify({{
                     event_type: "advance_chapter",
-                    client_payload: { stream: "{stream_key}" }
-                })
-            });
-    
-            if (response.ok) {
+                    client_payload: {{ stream: "{stream_key}" }}
+                }})
+            }});
+
+            if (response.ok) {{
                 btn.innerText = "Done!";
                 btn.style.backgroundColor = "#0a84ff";
-            } else if (response.status === 401) {
+                btn.style.color = "#ffffff";
+            }} else if (response.status === 401) {{
                 alert("Invalid PAT. Clearing saved token.");
                 localStorage.removeItem("feeeed_pat");
-                btn.innerText = "Try Again";
+                btn.innerText = "Invalid PAT. Try again.";
                 btn.disabled = false;
-            } else {
+            }} else {{
                 btn.innerText = "Error (" + response.status + ")";
                 btn.disabled = false;
-            }
-        } catch (err) {
+            }}
+        }} catch (err) {{
             btn.innerText = "Network Error";
             btn.disabled = false;
-        }
-    }
+        }}
+    }}
     </script>
 </body>
 </html>"""
