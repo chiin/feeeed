@@ -2,7 +2,7 @@ name: Daily Flashcard Generator
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 * * * *'  # Runs at the top of every hour
   workflow_dispatch:
   repository_dispatch:
     types: [advance_chapter, flashcard_grade, ank_session, pdf_completed]
