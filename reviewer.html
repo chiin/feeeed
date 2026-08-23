@@ -250,9 +250,28 @@
         deckId = urlParams.get('deck');
 
         if (!deckId) {
-            document.getElementById('loadingScreen').innerHTML = "<p style='color:#ff453a;'>No deck specified in URL.</p>";
+            loadDeckMenu();
         } else {
             loadDeck();
+        }
+        
+        async function loadDeckMenu() {
+            try {
+                const res = await fetch("config.json");
+                const config = await res.json();
+                const loading = document.getElementById('loadingScreen');
+                
+                let html = `<h2>Available Decks</h2><div style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">`;
+                for (const [key, stream] of Object.entries(config.streams || {})) {
+                    if (stream.type === "anki_deck") {
+                        html += `<a href="reviewer.html?deck=${key}" class="btn btn-primary" style="text-decoration:none;">${stream.feed_title || key}</a>`;
+                    }
+                }
+                html += `</div>`;
+                loading.innerHTML = html;
+            } catch (err) {
+                document.getElementById('loadingScreen').innerHTML = "<p style='color:#ff453a;'>No deck specified in URL.</p>";
+            }
         }
 
         async function loadDeck() {
