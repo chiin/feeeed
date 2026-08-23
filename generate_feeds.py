@@ -15,6 +15,31 @@ BASE_URL = "https://chiin.github.io/feeeed"
 # Leitner Box Intervals (in days)
 BOX_INTERVALS = {1: 1, 2: 3, 3: 7, 4: 14, 5: 30}
 
+
+from datetime import datetime, timezone, timedelta
+
+def get_next_update_time(last_update_iso: str = None) -> str:
+    hkt = timezone(timedelta(hours=8))
+    now_hkt = datetime.now(hkt)
+
+    if last_update_iso:
+        last_dt = datetime.fromisoformat(last_update_iso).astimezone(hkt)
+    else:
+        last_dt = now_hkt
+
+    # 24h + rand(-3h, +3h)
+    random_offset_hours = random.uniform(-3.0, 3.0)
+    next_dt = last_dt + timedelta(hours=24 + random_offset_hours)
+
+    # Floor at 00:00 HKT and cap at 23:59 HKT for that target day
+    target_date = next_dt.date()
+    day_start = datetime.combine(target_date, datetime.min.time(), tzinfo=hkt)
+    day_end = datetime.combine(target_date, datetime.max.time(), tzinfo=hkt)
+
+    clamped_dt = max(day_start, min(next_dt, day_end))
+    return clamped_dt.isoformat()
+    
+
 def load_json(path: Path) -> dict:
     if path.exists():
         with open(path, mode="r", encoding="utf-8") as f:
@@ -412,6 +437,15 @@ def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, 
     if not folder_path.exists():
         print(f"[{stream_key}] Folder '{folder_path}' does not exist.")
         return
+    
+    now_hkt = datetime.now(timezone(timedelta(hours=8)))
+    next_update_str = stream_history.get("next_update_at")
+    
+    if next_update_str:
+        next_update_dt = datetime.fromisoformat(next_update_str)
+        if now_hkt < next_update_dt:
+            print(f"[{stream_key}] Skipping. Next update scheduled at {next_update_str}")
+            return  # Skip feed generation until scheduled time arrives        
 
     # Track completed PDFs in history
     completed_files = set(stream_history.get("completed_files", []))
@@ -478,6 +512,8 @@ def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, 
     fe.link(href=web_reader_url)
     fe.description(f"Today's queue ({card_count} remaining): {titles_summary}")
     fe.pubDate(datetime.now(timezone.utc) - timedelta(minutes=5))
+
+    stream_history["next_update_at"] = get_next_update_time(now_hkt.isoformat())
 
 # --- MAIN CONTROLLER ---
 
