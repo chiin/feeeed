@@ -407,34 +407,77 @@ def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, 
     fe.enclosure(url=pdf_url, length=str(active_pdf.stat().st_size), type="application/pdf")
 
 
-def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, fg):
-    folder = Path(stream_cfg["folder"])
-    if not folder.exists():
+def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, fg, base_url: str, dispatch_payload: dict = None):
+    folder_path = Path(stream_cfg["folder"])
+    if not folder_path.exists():
+        print(f"[{stream_key}] Folder '{folder_path}' does not exist.")
         return
 
-    strategy = stream_cfg.get("strategy", "sequential")
-    daily_n = stream_cfg.get("daily_n", 1)
-    pub_time = datetime.now(timezone.utc) - timedelta(minutes=10)
+    # Track completed PDFs in history
+    completed_files = set(stream_history.get("completed_files", []))
 
-    pdfs = list(folder.glob("*.pdf"))
-    if strategy in ["sequential", "alphabetical"]:
-        pdfs.sort(key=lambda p: p.name.lower())
+    # Process incoming completion dispatches
+    if dispatch_payload and dispatch_payload.get("stream") == stream_key and dispatch_payload.get("event_type") == "pdf_completed":
+        completed_id = dispatch_payload.get("pdf_id")
+        if completed_id:
+            completed_files.add(completed_id)
+            stream_history["completed_files"] = list(completed_files)
+            print(f"[{stream_key}] Marked PDF completed: {completed_id}")
 
-    last_index = stream_history.get("last_index", 0)
-    batch = pdfs[last_index : last_index + daily_n]
-    stream_history["last_index"] = last_index + len(batch)
+    # Gather all PDFs in folder
+    all_pdfs = sorted([f for f in folder_path.glob("*.pdf")])
+    unread_pdfs = [f for f in all_pdfs if f.name not in completed_files]
 
-    for pdf_file in batch:
-        pdf_url = f"{BASE_URL}/{folder.name}/{pdf_file.name}"
-        item_guid = f"{stream_key}-{pdf_file.stem}"
+    mode = stream_cfg.get("mode", "sequential")
+    batch_size = stream_cfg.get("batch_size", 5)
 
-        fe = fg.add_entry()
-        fe.id(item_guid)
-        fe.title(f"[{stream_cfg.get('feed_title', stream_key)}] {pdf_file.stem}")
-        fe.link(href=pdf_url)
-        fe.description(f"Tap to read PDF document: {pdf_file.name}")
-        fe.enclosure(url=pdf_url, length=str(pdf_file.stat().st_size), type="application/pdf")
-        fe.pubDate(pub_time)
+    # Select batch based on policy
+    if mode == "random_without_replacement":
+        today_seed = datetime.now(timezone.utc).strftime("%Y%m%d") + stream_key
+        rng = random.Random(today_seed)
+        shuffled = unread_pdfs.copy()
+        rng.shuffle(shuffled)
+        batch = shuffled[:batch_size]
+    else:  # 'sequential'
+        batch = unread_pdfs[:batch_size]
+
+    # Save batch JSON payload for web reader
+    cards_dir = Path("cards")
+    cards_dir.mkdir(exist_ok=True)
+    batch_json_path = cards_dir / f"{stream_key}_pdf_batch.json"
+
+    batch_items = [
+        {
+            "id": f.name,
+            "title": f.stem.replace("_", " ").title(),
+            "pdf_url": f"{base_url}/{folder_path.name}/{f.name}"
+        }
+        for f in batch
+    ]
+
+    compiled_payload = {
+        "stream": stream_key,
+        "title": stream_cfg.get("feed_title", stream_key.title()),
+        "compiled_at": datetime.now(timezone.utc).isoformat(),
+        "total_unread_remaining": len(unread_pdfs),
+        "batch": batch_items
+    }
+
+    with open(batch_json_path, "w", encoding="utf-8") as json_out:
+        json.dump(compiled_payload, json_out, indent=2)
+
+    # Generate single daily RSS feed item with cycling GUID
+    now_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    card_count = len(batch_items)
+    titles_summary = ", ".join([item["title"] for item in batch_items]) if batch_items else "All PDFs completed!"
+    web_reader_url = f"{base_url}/pdf_reader.html?stream={stream_key}"
+
+    fe = fg.add_entry()
+    fe.id(f"{stream_key}-pdf-batch-{now_date}")
+    fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {card_count} PDFs Queued")
+    fe.link(href=web_reader_url)
+    fe.description(f"Today's queue ({card_count} remaining): {titles_summary}")
+    fe.pubDate(datetime.now(timezone.utc) - timedelta(minutes=5))
 
 # --- MAIN CONTROLLER ---
 
@@ -475,7 +518,7 @@ def main():
         elif stream_type == "book_queue":
             process_book_queue(stream_key, stream_cfg, stream_history, fg, dispatch_payload)
         elif stream_type == "pdf_folder":
-            process_pdf_folder(stream_key, stream_cfg, stream_history, fg)
+            process_pdf_folder(stream_key, stream_cfg, stream_history, fg, BASE_URL, dispatch_payload)
         elif stream_type == "anki_deck":
             process_anki_deck(stream_key, stream_cfg, stream_history, fg, BASE_URL, dispatch_payload)
 
