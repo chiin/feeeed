@@ -444,7 +444,6 @@ def main():
     streams = config.get("streams", {})
 
     dispatch_payload = get_dispatch_payload()
-    # github_pat = os.environ.get("GH_PAT", "")
 
     if dispatch_payload:
         print(f"Triggered via dispatch with payload: {dispatch_payload}")
@@ -477,6 +476,8 @@ def main():
             process_book_queue(stream_key, stream_cfg, stream_history, fg, dispatch_payload)
         elif stream_type == "pdf_folder":
             process_pdf_folder(stream_key, stream_cfg, stream_history, fg)
+        elif stream_type == "anki_deck":
+            process_anki_deck(stream_key, stream_cfg, stream_history, fg, BASE_URL, dispatch_payload)
 
         fg.rss_file(str(xml_filename), pretty=True)
         print(f"Generated {xml_filename}")
@@ -626,6 +627,11 @@ def process_anki_deck(stream_key: str, stream_cfg: dict, stream_history: dict, f
     fe.link(href=web_reviewer_url)
     fe.description(f"Tap to start today's review session ({card_count} cards pending).")
     fe.pubDate(datetime.now(timezone.utc) - timedelta(minutes=5))
+
+    # 6. Export RSS file
+    rss_filepath = Path(f"{stream_key}.xml")
+    # fg.rss_file(rss_filepath, pretty=True)
+    print(f"[{stream_key}] Saved feed to {rss_filepath}")
 
 if __name__ == "__main__":
     main()
