@@ -483,5 +483,149 @@ def main():
 
     save_json(HISTORY_PATH, master_history)
 
+# --- DECK PARSERS ---
+
+def parse_csv_deck(csv_path: Path, base_url: str) -> list[dict]:
+    cards = []
+    with open(csv_path, mode="r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            card_id = row["id"].strip()
+            audio_url = row.get("audio_url", "").strip()
+            if audio_url and not audio_url.startswith("http"):
+                audio_url = f"{base_url}/{audio_url}"
+
+            cards.append({
+                "id": card_id,
+                "front": {
+                    "text": row.get("front", "").strip(),
+                    "audio": audio_url if audio_url else None,
+                    "image": row.get("image_url", "").strip() or None
+                },
+                "back": {
+                    "text": row.get("back", "").strip(),
+                    "notes": row.get("notes", "").strip() or None
+                }
+            })
+    return cards
+
+def parse_media_folder(folder_path: Path, base_url: str) -> list[dict]:
+    cards = []
+    audio_extensions = {".mp3", ".m4a", ".wav", ".ogg"}
+    
+    # Pair audio files with matching .txt description files
+    for audio_file in sorted(folder_path.glob("*")):
+        if audio_file.suffix.lower() in audio_extensions:
+            card_id = audio_file.stem
+            txt_file = folder_path / f"{card_id}.txt"
+            
+            back_text = ""
+            if txt_file.exists():
+                with open(txt_file, "r", encoding="utf-8") as f:
+                    back_text = f.read().strip()
+
+            cards.append({
+                "id": card_id,
+                "front": {
+                    "text": f"🔊 Audio Prompt: {card_id}",
+                    "audio": f"{base_url}/{folder_path.name}/{audio_file.name}",
+                    "image": None
+                },
+                "back": {
+                    "text": back_text if back_text else card_id,
+                    "notes": None
+                }
+            })
+    return cards
+
+# --- PROCESSOR FOR ANKI DECKS ---
+
+def process_anki_deck(stream_key: str, stream_cfg: dict, stream_history: dict, fg, base_url: str, dispatch_payload: dict):
+    source_type = stream_cfg.get("source_type", "csv")
+    path = Path(stream_cfg["path"])
+    
+    if not path.exists():
+        print(f"Warning: Deck path '{path}' does not exist.")
+        return
+
+    # 1. Parse Card Data
+    if source_type == "csv":
+        all_cards = parse_csv_deck(path, base_url)
+    elif source_type == "media_folder":
+        all_cards = parse_media_folder(path, base_url)
+    else:
+        return
+
+    # 2. Process Session Batch Dispatch from Web App
+    if dispatch_payload.get("stream") == stream_key and dispatch_payload.get("event_type") == "anki_session":
+        session_results = dispatch_payload.get("results", [])
+        for res in session_results:
+            cid = res["id"]
+            stream_history[cid] = {
+                "state": res["state"],
+                "easiness_factor": res["easiness_factor"],
+                "interval": res["interval"],
+                "repetitions": res["repetitions"],
+                "last_reviewed": datetime.now(timezone.utc).isoformat(),
+                "next_due": res["next_due"]
+            }
+        print(f"[{stream_key}] Processed Anki review session: {len(session_results)} cards updated.")
+
+    # 3. Filter Due Cards via SM-2 History
+    now_iso = datetime.now(timezone.utc).isoformat()
+    due_cards = []
+    new_cards = []
+
+    for card in all_cards:
+        cid = card["id"]
+        c_history = stream_history.get(cid)
+        
+        if not c_history:
+            new_cards.append(card)
+        elif c_history.get("next_due", "") <= now_iso:
+            card["sm2"] = c_history
+            due_cards.append(card)
+
+    # Limit new cards per day according to config
+    new_limit = stream_cfg.get("new_cards_per_day", 5)
+    selected_new = new_cards[:new_limit]
+    for c in selected_new:
+        c["sm2"] = {
+            "state": "new",
+            "easiness_factor": 2.5,
+            "interval": 0,
+            "repetitions": 0
+        }
+
+    session_queue = due_cards + selected_new
+    if not session_queue:
+        print(f"[{stream_key}] No cards due today!")
+
+    # 4. Save Compiled Deck JSON for the Web App Reviewer
+    cards_dir = Path("cards")
+    cards_dir.mkdir(exist_ok=True)
+    deck_json_path = cards_dir / f"{stream_key}_deck.json"
+    
+    compiled_payload = {
+        "deck_id": stream_key,
+        "title": stream_cfg.get("feed_title", stream_key.title()),
+        "compiled_at": datetime.now(timezone.utc).isoformat(),
+        "cards": session_queue
+    }
+    
+    with open(deck_json_path, "w", encoding="utf-8") as f:
+        json.dump(compiled_payload, f, indent=2)
+
+    # 5. Generate Single Daily RSS Item
+    web_reviewer_url = f"{base_url}/reviewer.html?deck={stream_key}"
+    card_count = len(session_queue)
+    
+    fe = fg.add_entry()
+    fe.id(f"{stream_key}-session-{datetime.now(timezone.utc).strftime('%Y-%m-%d')}")
+    fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {card_count} Cards Due")
+    fe.link(href=web_reviewer_url)
+    fe.description(f"Tap to start today's review session ({card_count} cards pending).")
+    fe.pubDate(datetime.now(timezone.utc) - timedelta(minutes=5))
+
 if __name__ == "__main__":
     main()
