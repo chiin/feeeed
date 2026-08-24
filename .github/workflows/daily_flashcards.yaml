@@ -13,6 +13,10 @@ on:
       - 'flashcard_config.json'
       - '*.csv'
 
+concurrency:
+  group: flashcard-sync
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
