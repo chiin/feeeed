@@ -681,6 +681,9 @@ def process_anki_deck(stream_key: str, stream_cfg: dict, stream_history: dict, f
     if not session_queue:
         print(f"[{stream_key}] No cards due today!")
 
+    # Shuffle the queue so cards don't appear in CSV order
+    random.shuffle(session_queue)
+
     # 4. Save Compiled Deck JSON for the Web App Reviewer
     cards_dir = Path("cards")
     cards_dir.mkdir(exist_ok=True)
