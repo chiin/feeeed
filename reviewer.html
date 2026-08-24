@@ -241,6 +241,7 @@
 
     <script>
         let deckId = "";
+        let deckCompiledAt = ""; // <-- Added variable to track compilation timestamp
         let cards = [];
         let currentIndex = 0;
         let sessionResults = [];
@@ -262,6 +263,7 @@
                 
                 document.getElementById('deckTitle').innerText = data.title || deckId;
                 cards = data.cards || [];
+                deckCompiledAt = data.compiled_at || ""; // <-- Save compilation timestamp
 
                 if (cards.length === 0) {
                     showScreen('finishScreen');
@@ -269,12 +271,12 @@
                     return;
                 }
 
-                // Restore saved session from localStorage if available
+                // Restore saved session from localStorage if it matches today's compiled deck
                 const savedStateRaw = localStorage.getItem(`anki_session_${deckId}`);
                 if (savedStateRaw) {
                     try {
                         const savedState = JSON.parse(savedStateRaw);
-                        if (savedState.compiled_at === data.compiled_at) {
+                        if (savedState.compiled_at === deckCompiledAt) {
                             currentIndex = savedState.currentIndex || 0;
                             sessionResults = savedState.sessionResults || [];
                         }
@@ -439,13 +441,14 @@
             sessionResults.push(cardResult);
             currentIndex++;
 
-            // 1. Save progress immediately to browser storage
+            // Save progress including compiled_at to local storage
             localStorage.setItem(`anki_session_${deckId}`, JSON.stringify({
+                compiled_at: deckCompiledAt, // <-- Included here so the timestamp match passes
                 currentIndex: currentIndex,
                 sessionResults: sessionResults
             }));
 
-            // 2. Fire immediate background sync to GitHub for this single card
+            // Fire background dispatch to GitHub
             sendBackgroundSync([cardResult]);
 
             if (currentIndex < cards.length) {
