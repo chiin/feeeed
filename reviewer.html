@@ -470,12 +470,11 @@
             if (pendingResults.length === 0) return;
         
             const resultsToSend = [...pendingResults];
-            pendingResults = []; // Clear queue to avoid duplicate sends
+            pendingResults = [];
         
             const token = getPAT();
             if (!token) return;
         
-            // Use sendBeacon if available for reliable background execution on app exit
             const payload = JSON.stringify({
                 event_type: "anki_session",
                 client_payload: {
@@ -485,6 +484,7 @@
                 }
             });
         
+            // keepalive: true ensures the request finishes even if Feeeeed is closed
             fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
                 method: "POST",
                 headers: {
@@ -492,9 +492,9 @@
                     "Authorization": `Bearer ${token}`,
                     "Content-Type": "application/json"
                 },
-                body: payload
+                body: payload,
+                keepalive: true
             }).catch(() => {
-                // If network failed, re-queue results for next flush
                 pendingResults = pendingResults.concat(resultsToSend);
             });
         }
