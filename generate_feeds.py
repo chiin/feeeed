@@ -433,52 +433,68 @@ def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, 
 
 
 def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, fg, base_url: str, dispatch_payload: dict = None):
-    folder_path = Path(stream_cfg["folder"])
+    folder_path = Path(stream_cfg.get("folder", ""))
     if not folder_path.exists():
         print(f"[{stream_key}] Folder '{folder_path}' does not exist.")
         return
-    
-    now_hkt = datetime.now(timezone(timedelta(hours=8)))
-    next_update_str = stream_history.get("next_update_at")
-    
-    if next_update_str:
-        next_update_dt = datetime.fromisoformat(next_update_str)
-        if now_hkt < next_update_dt:
-            print(f"[{stream_key}] Skipping. Next update scheduled at {next_update_str}")
-            return  # Skip feed generation until scheduled time arrives        
 
-    # Track completed PDFs in history
+    # 1. Process incoming completion dispatches
     completed_files = set(stream_history.get("completed_files", []))
+    is_dispatch = bool(dispatch_payload and dispatch_payload.get("stream") == stream_key)
 
-    # Process incoming completion dispatches
-    if dispatch_payload and dispatch_payload.get("stream") == stream_key and dispatch_payload.get("event_type") == "pdf_completed":
+    if is_dispatch and dispatch_payload.get("event_type") == "pdf_completed":
         completed_id = dispatch_payload.get("pdf_id")
         if completed_id:
             completed_files.add(completed_id)
             stream_history["completed_files"] = list(completed_files)
             print(f"[{stream_key}] Marked PDF completed: {completed_id}")
 
-    # Gather all PDFs in folder
+    # 2. Check stagger timing
+    now_hkt = datetime.now(timezone(timedelta(hours=8)))
+    next_update_str = stream_history.get("next_update_at")
+
+    cards_dir = Path("cards")
+    cards_dir.mkdir(exist_ok=True)
+    batch_json_path = cards_dir / f"{stream_key}_pdf_batch.json"
+
+    # If skipping build, re-publish current batch to RSS so feed stays populated
+    if next_update_str and not is_dispatch:
+        next_update_dt = datetime.fromisoformat(next_update_str)
+        if now_hkt < next_update_dt and batch_json_path.exists():
+            try:
+                with open(batch_json_path, "r", encoding="utf-8") as f:
+                    existing_data = json.load(f)
+                batch_items = existing_data.get("batch", [])
+                card_count = len(batch_items)
+                titles_summary = ", ".join([item["title"] for item in batch_items]) if batch_items else "All PDFs completed!"
+                web_reader_url = f"{base_url}/pdf_reader.html?stream={stream_key}"
+                now_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+                fe = fg.add_entry()
+                fe.id(f"{stream_key}-pdf-batch-{now_date}")
+                fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {card_count} PDFs Queued")
+                fe.link(href=web_reader_url)
+                fe.description(f"Today's queue ({card_count} remaining): {titles_summary}")
+                fe.pubDate(datetime.now(timezone.utc) - timedelta(minutes=5))
+                return
+            except Exception as e:
+                print(f"[{stream_key}] Error reading batch JSON: {e}")
+
+    # 3. Gather unread PDFs and generate batch
     all_pdfs = sorted([f for f in folder_path.glob("*.pdf")])
     unread_pdfs = [f for f in all_pdfs if f.name not in completed_files]
 
     mode = stream_cfg.get("mode", "sequential")
     batch_size = stream_cfg.get("batch_size", 5)
 
-    # Select batch based on policy
     if mode == "random_without_replacement":
         today_seed = datetime.now(timezone.utc).strftime("%Y%m%d") + stream_key
         rng = random.Random(today_seed)
         shuffled = unread_pdfs.copy()
         rng.shuffle(shuffled)
         batch = shuffled[:batch_size]
-    else:  # 'sequential'
+    else:
         batch = unread_pdfs[:batch_size]
-
-    # Save batch JSON payload for web reader
-    cards_dir = Path("cards")
-    cards_dir.mkdir(exist_ok=True)
-    batch_json_path = cards_dir / f"{stream_key}_pdf_batch.json"
 
     batch_items = [
         {
@@ -500,7 +516,6 @@ def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, 
     with open(batch_json_path, "w", encoding="utf-8") as json_out:
         json.dump(compiled_payload, json_out, indent=2)
 
-    # Generate single daily RSS feed item with cycling GUID
     now_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     card_count = len(batch_items)
     titles_summary = ", ".join([item["title"] for item in batch_items]) if batch_items else "All PDFs completed!"
