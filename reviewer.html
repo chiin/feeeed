@@ -256,47 +256,63 @@
         }
 
         async function loadDeck() {
+        try {
+            // 1. Fetch deck snapshot with cache-busting
+            const res = await fetch(`cards/${deckId}_deck.json?t=${Date.now()}`);
+            if (!res.ok) throw new Error("Deck file not found");
+            const data = await res.json();
+            
+            document.getElementById('deckTitle').innerText = data.title || deckId;
+            const rawCards = data.cards || [];
+            deckCompiledAt = data.compiled_at || "";
+    
+            // 2. Fetch live history directly to detect cross-device updates
+            let historyCards = {};
             try {
-                const res = await fetch(`cards/${deckId}_deck.json`);
-                if (!res.ok) throw new Error("Deck file not found");
-                const data = await res.json();
-                
-                document.getElementById('deckTitle').innerText = data.title || deckId;
-                cards = data.cards || [];
-                deckCompiledAt = data.compiled_at || ""; // <-- Save compilation timestamp
-
-                if (cards.length === 0) {
-                    showScreen('finishScreen');
-                    document.getElementById('finishScreen').innerHTML = "<h2>🎉 All Caught Up!</h2><p style='color:#8e8e93;'>No cards due today.</p>";
-                    return;
+                const histRes = await fetch(`history.json?t=${Date.now()}`);
+                if (histRes.ok) {
+                    const masterHistory = await histRes.json();
+                    historyCards = masterHistory[deckId]?.cards || {};
                 }
-
-                // Restore saved session from localStorage if it matches today's compiled deck
-                const savedStateRaw = localStorage.getItem(`anki_session_${deckId}`);
-                if (savedStateRaw) {
-                    try {
-                        const savedState = JSON.parse(savedStateRaw);
-                        if (savedState.compiled_at === deckCompiledAt) {
-                            currentIndex = savedState.currentIndex || 0;
-                            sessionResults = savedState.sessionResults || [];
-                        }
-                    } catch (e) {
-                        localStorage.removeItem(`anki_session_${deckId}`);
-                    }
-                }
-
-                if (currentIndex >= cards.length) {
-                    showScreen('finishScreen');
-                    document.getElementById('syncStatus').innerText = "All cards in this batch were completed!";
-                    return;
-                }
-
-                showScreen('reviewScreen');
-                renderCard();
-            } catch (err) {
-                document.getElementById('loadingScreen').innerHTML = `<p style='color:#ff453a;'>Error loading deck: ${err.message}</p>`;
+            } catch (e) {
+                console.warn("Could not fetch history.json, falling back to static deck.");
             }
+    
+            // 3. Filter out cards reviewed within the last 12 hours on any device
+            const twelveHoursAgo = new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString();
+            cards = rawCards.filter(card => {
+                const hist = historyCards[card.id];
+                if (hist && hist.last_reviewed && hist.last_reviewed > twelveHoursAgo) {
+                    return false; // Already reviewed on another device
+                }
+                return true;
+            });
+    
+            if (cards.length === 0) {
+                showScreen('finishScreen');
+                document.getElementById('finishScreen').innerHTML = "<h2>🎉 All Caught Up!</h2><p style='color:#8e8e93;'>No cards due today.</p>";
+                return;
+            }
+    
+            // 4. Restore local device position if applicable
+            const savedStateRaw = localStorage.getItem(`anki_session_${deckId}`);
+            if (savedStateRaw) {
+                try {
+                    const savedState = JSON.parse(savedStateRaw);
+                    if (savedState.compiled_at === deckCompiledAt) {
+                        currentIndex = Math.min(savedState.currentIndex || 0, cards.length - 1);
+                    }
+                } catch (e) {
+                    localStorage.removeItem(`anki_session_${deckId}`);
+                }
+            }
+    
+            showScreen('reviewScreen');
+            renderCard();
+        } catch (err) {
+            document.getElementById('loadingScreen').innerHTML = `<p style='color:#ff453a;'>Error loading deck: ${err.message}</p>`;
         }
+    }
 
         function showScreen(id) {
             document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
