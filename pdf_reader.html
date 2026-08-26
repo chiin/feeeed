@@ -52,13 +52,22 @@
 
         async function loadBatch() {
             try {
-                const res = await fetch(`cards/${streamKey}_pdf_batch.json`);
+                // Fetch latest batch snapshot with cache-busting
+                const res = await fetch(`cards/${streamKey}_pdf_batch.json?t=${Date.now()}`);
                 if (!res.ok) throw new Error("Batch file not found");
                 const data = await res.json();
-                batch = data.batch || [];
+                const rawBatch = data.batch || [];
+
+                // Load locally completed PDF IDs for this stream
+                const completedLocal = JSON.parse(localStorage.getItem(`pdf_completed_${streamKey}`) || "[]");
+
+                // Filter out cards already finished on this device
+                batch = rawBatch.filter(item => !completedLocal.includes(item.id));
 
                 if (batch.length === 0) {
-                    document.getElementById('statusMsg').innerHTML = "<h2 style='color:#30d158;'>🎉 All Caught Up!</h2><p>No unread PDFs remaining in this queue.</p>";
+                    document.getElementById('statusScreen').classList.add('active');
+                    document.getElementById('mainUI').style.display = 'none';
+                    document.getElementById('statusMsg').innerHTML = "<h2 style='color:#30d158;'>🎉 Batch Complete!</h2><p>You have finished all items in today's reading queue.</p>";
                     return;
                 }
 
@@ -108,12 +117,20 @@
             return token;
         }
 
-        async function finishCurrentPDF() {
+        function finishCurrentPDF() {
             const btn = document.getElementById('finishBtn');
             const finishedItem = batch[currentIndex];
             btn.disabled = true;
             btn.innerText = "Syncing...";
 
+            // 1. Immediately record progress in local device storage
+            let completedLocal = JSON.parse(localStorage.getItem(`pdf_completed_${streamKey}`) || "[]");
+            if (!completedLocal.includes(finishedItem.id)) {
+                completedLocal.push(finishedItem.id);
+                localStorage.setItem(`pdf_completed_${streamKey}`, JSON.stringify(completedLocal));
+            }
+
+            // 2. Dispatch event to GitHub background process with keepalive
             const token = getPAT();
             if (token) {
                 fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
@@ -130,7 +147,8 @@
                             event_type: "pdf_completed",
                             pdf_id: finishedItem.id
                         }
-                    })
+                    }),
+                    keepalive: true
                 }).catch(() => {});
             }
 
