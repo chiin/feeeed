@@ -108,13 +108,22 @@
         function getPAT() {
             let token = localStorage.getItem("feeeed_pat");
             if (!token) {
-                token = prompt("Enter your GitHub PAT (saved on your device):");
-                if (token) {
-                    token = token.trim();
-                    localStorage.setItem("feeeed_pat", token);
-                }
+                // Show in-page modal if token is missing
+                const modal = document.getElementById("patModal");
+                if (modal) modal.style.display = "flex";
+                return null;
             }
             return token;
+        }
+        
+        function savePATFromModal() {
+            const input = document.getElementById("patInput");
+            if (input && input.value.trim()) {
+                const token = input.value.trim();
+                localStorage.setItem("feeeed_pat", token);
+                document.getElementById("patModal").style.display = "none";
+                alert("Token saved! Please tap the button again to sync.");
+            }
         }
 
         function finishCurrentPDF() {
