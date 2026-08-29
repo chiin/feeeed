@@ -450,7 +450,10 @@
                 const token = input.value.trim();
                 localStorage.setItem("feeeed_pat", token);
                 document.getElementById("patModal").style.display = "none";
-                alert("Token saved! Please tap the button again to sync.");
+                console.log("[Feeeeed Sync] PAT saved to localStorage. Flushing pending sync...");
+                
+                // Immediately retry sending buffered card results
+                flushPendingSync();
             }
         }
 
@@ -494,11 +497,12 @@
         function flushPendingSync() {
             if (pendingResults.length === 0) return;
         
-            const resultsToSend = [...pendingResults];
-            pendingResults = [];
-        
+            // 1. Verify token FIRST before modifying pendingResults
             const token = getPAT();
-            if (!token) return;
+            if (!token) return; // Modal will display; queue remains safely in pendingResults
+        
+            const resultsToSend = [...pendingResults];
+            pendingResults = []; // Clear queue only when sending
         
             const payload = JSON.stringify({
                 event_type: "anki_session",
@@ -509,7 +513,8 @@
                 }
             });
         
-            // keepalive: true ensures the request finishes even if Feeeeed is closed
+            console.log(`[Feeeeed Sync] Sending ${resultsToSend.length} result(s) to GitHub...`);
+        
             fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
                 method: "POST",
                 headers: {
@@ -519,7 +524,23 @@
                 },
                 body: payload,
                 keepalive: true
-            }).catch(() => {
+            })
+            .then(res => {
+                if (res.ok) {
+                    console.log("[Feeeeed Sync] GitHub Dispatch sent successfully!");
+                } else if (res.status === 401) {
+                    console.error("[Feeeeed Sync] Invalid PAT token (401). Clearing stored token.");
+                    alert("Invalid GitHub Token. Please re-enter your PAT.");
+                    localStorage.removeItem("feeeed_pat");
+                    pendingResults = pendingResults.concat(resultsToSend);
+                    getPAT();
+                } else {
+                    console.error(`[Feeeeed Sync] GitHub API Error (${res.status}). Re-queueing.`);
+                    pendingResults = pendingResults.concat(resultsToSend);
+                }
+            })
+            .catch(err => {
+                console.error("[Feeeeed Sync] Network error:", err);
                 pendingResults = pendingResults.concat(resultsToSend);
             });
         }
