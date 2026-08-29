@@ -423,12 +423,17 @@ def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, 
 
     card_web_url = create_book_reader_html(stream_key, active_pdf.stem, pdf_url)
 
-    item_guid = f"{stream_key}-ch-{current_index:03d}"
+    # Generate a unique timestamp for the item GUID
+    timestamp = int(now_hkt.timestamp())
+    now_utc = datetime.now(timezone.utc)
+
+    item_guid = f"{stream_key}-ch-{current_index:03d}-{timestamp}"
     fe = fg.add_entry()
     fe.id(item_guid)
     fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {active_pdf.stem}")
     fe.link(href=card_web_url)
     fe.description(f"Tap to read chapter: {active_pdf.name}")
+    fe.pubDate(now_utc)
     fe.enclosure(url=pdf_url, length=str(active_pdf.stat().st_size), type="application/pdf")
 
 
@@ -521,12 +526,17 @@ def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, 
     titles_summary = ", ".join([item["title"] for item in batch_items]) if batch_items else "All PDFs completed!"
     web_reader_url = f"{base_url}/pdf_reader.html?stream={stream_key}"
 
+    # Generate a unique timestamp for the item GUID
+    timestamp = int(now_hkt.timestamp())
+    now_utc = datetime.now(timezone.utc)
+
     fe = fg.add_entry()
-    fe.id(f"{stream_key}-pdf-batch-{now_date}")
+    # Adding timestamp guarantees Feeeed sees every queue update as a fresh unread item
+    fe.id(f"{stream_key}-pdf-batch-{timestamp}")
     fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {card_count} PDFs Queued")
     fe.link(href=web_reader_url)
     fe.description(f"Today's queue ({card_count} remaining): {titles_summary}")
-    fe.pubDate(datetime.now(timezone.utc) - timedelta(minutes=5))
+    fe.pubDate(now_utc)
 
     stream_history["next_update_at"] = get_next_update_time(now_hkt.isoformat())
 
@@ -717,13 +727,18 @@ def process_anki_deck(stream_key: str, stream_cfg: dict, stream_history: dict, f
     # 5. Generate Single Daily RSS Item
     web_reviewer_url = f"{base_url}/reviewer.html?deck={stream_key}"
     card_count = len(session_queue)
+
+    # Generate a unique timestamp for the item GUID
+    timestamp = int(now_hkt.timestamp())
+    now_utc = datetime.now(timezone.utc)    
     
     fe = fg.add_entry()
-    fe.id(f"{stream_key}-session-{datetime.now(timezone.utc).strftime('%Y-%m-%d')}")
+    # Adding timestamp guarantees Feeeed sees every queue update as a fresh unread item
+    fe.id(f"{stream_key}-pdf-batch-{timestamp}")
     fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {card_count} Cards Due")
     fe.link(href=web_reviewer_url)
     fe.description(f"Tap to start today's review session ({card_count} cards pending).")
-    fe.pubDate(datetime.now(timezone.utc) - timedelta(minutes=5))
+    fe.pubDate(now_utc)
 
     # 6. Export RSS file
     rss_filepath = Path(f"{stream_key}.xml")
