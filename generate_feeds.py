@@ -729,8 +729,8 @@ def process_anki_deck(stream_key: str, stream_cfg: dict, stream_history: dict, f
     card_count = len(session_queue)
 
     # Generate a unique timestamp for the item GUID
-    timestamp = int(now_hkt.timestamp())
-    now_utc = datetime.now(timezone.utc)    
+    now_utc = datetime.now(timezone.utc)
+    timestamp = int(now_utc.timestamp())
     
     fe = fg.add_entry()
     # Adding timestamp guarantees Feeeed sees every queue update as a fresh unread item
