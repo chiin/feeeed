@@ -2,10 +2,10 @@ name: Daily Flashcard Generator
 
 on:
   schedule:
-    - cron: '0 16 * * *'  # 00:00 HKT (UTC+8)
+    - cron: '0 * * * *'  # Poll hourly; Python releases each stream once per HKT day
   workflow_dispatch:
   repository_dispatch:
-    types: [advance_chapter, flashcard_grade, anki_review, pdf_completed]
+    types: [advance_chapter, flashcard_grade, anki_review, pdf_batch_event, pdf_completed]
   push:                   # <-- ADD THIS: Triggers an auto-build anytime you push changes
     branches:
       - main
@@ -16,6 +16,9 @@ on:
       - 'reviewer.html'
       - 'reviewer_app.js'
       - 'reviewer_state.js'
+      - 'pdf_scheduler.py'
+      - 'pdf_reader.html'
+      - 'pdf_reader_app.js'
       - '*.csv'
 
 concurrency:
