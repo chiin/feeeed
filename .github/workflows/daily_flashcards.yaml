@@ -2,15 +2,20 @@ name: Daily Flashcard Generator
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Runs at the top of every hour
+    - cron: '0 16 * * *'  # 00:00 HKT (UTC+8)
   workflow_dispatch:
   repository_dispatch:
-    types: [advance_chapter, flashcard_grade, anki_session, pdf_completed]
+    types: [advance_chapter, flashcard_grade, anki_review, pdf_completed]
   push:                   # <-- ADD THIS: Triggers an auto-build anytime you push changes
     branches:
       - main
     paths:
-      - 'flashcard_config.json'
+      - 'config.json'
+      - 'generate_feeds.py'
+      - 'anki_scheduler.py'
+      - 'reviewer.html'
+      - 'reviewer_app.js'
+      - 'reviewer_state.js'
       - '*.csv'
 
 concurrency:
