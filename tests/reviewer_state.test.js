@@ -109,3 +109,41 @@ test("local reconciliation removes ratings and delays Again by ten minutes", () 
     );
     assert.deepEqual(reconcileCards(cards, [again, good]), []);
 });
+
+test("PDF reconciliation hides locally completed items until acknowledged", () => {
+    const { reconcilePdfItems } = require("../reviewer_state.js");
+    const items = [
+        { id: "first.pdf", title: "First" },
+        { id: "second.pdf", title: "Second" }
+    ];
+    const pending = [{
+        event_id: "event-1",
+        stream_id: "economics",
+        action: "complete",
+        pdf_id: "first.pdf",
+        occurred_at: "2026-08-30T02:00:00Z"
+    }];
+    assert.deepEqual(
+        reconcilePdfItems(items, pending).map(item => item.id),
+        ["second.pdf"]
+    );
+});
+
+test("PDF and Anki outboxes use separate storage namespaces", () => {
+    const storage = new MemoryStorage();
+    const anki = new DurableOutbox(storage, "shared");
+    const pdf = new DurableOutbox(
+        storage, "shared", undefined, "pdf_outbox_v2"
+    );
+    anki.enqueue(createReviewEvent(
+        "shared", "card-1", "good", "2026-08-30T02:00:00Z", "anki-1"
+    ));
+    pdf.enqueue({
+        event_id: "pdf-1",
+        stream_id: "shared",
+        action: "continue",
+        occurred_at: "2026-08-30T02:00:00Z"
+    });
+    assert.equal(anki.events()[0].event_id, "anki-1");
+    assert.equal(pdf.events()[0].event_id, "pdf-1");
+});
