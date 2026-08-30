@@ -55,6 +55,25 @@ test("acknowledged events are removed from the durable outbox", () => {
     assert.deepEqual(outbox.events(), []);
 });
 
+test("a new event resends every unacknowledged event cumulatively", () => {
+    const storage = new MemoryStorage();
+    const now = Date.parse("2026-08-30T02:00:00Z");
+    const outbox = new DurableOutbox(storage, "hsk", () => now);
+    outbox.enqueue(createReviewEvent(
+        "hsk", "hsk-1", "good", "2026-08-30T02:00:00Z", "event-1"
+    ));
+    outbox.markAttempt(["event-1"]);
+    assert.deepEqual(outbox.retryable(), []);
+
+    outbox.enqueue(createReviewEvent(
+        "hsk", "hsk-2", "easy", "2026-08-30T02:01:00Z", "event-2"
+    ));
+    assert.deepEqual(
+        outbox.retryable().map(event => event.event_id),
+        ["event-1", "event-2"]
+    );
+});
+
 test("concurrent tabs merge events instead of overwriting them", () => {
     const storage = new MemoryStorage();
     const firstTab = new DurableOutbox(storage, "hsk");
