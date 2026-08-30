@@ -2075,20 +2075,26 @@
   "economics": {
     "pdf_schema_version": 2,
     "strategy": "sequential",
-    "revision": 1,
+    "revision": 2,
     "completed_ids": [
       "article_004_Scarcity.pdf",
       "article_005_Utility.pdf",
       "article_003_Economic_man_and_rationality.pdf",
       "article_006_Preferences.pdf",
-      "article_002_Introduction.pdf"
+      "article_002_Introduction.pdf",
+      "article_007_Opportunity_cost.pdf"
     ],
     "completion_counts": {
-      "article_002_Introduction.pdf": 1
+      "article_002_Introduction.pdf": 1,
+      "article_007_Opportunity_cost.pdf": 1
     },
     "processed_events": {
       "34ba6c78-2800-4955-bd66-56792fff70f0": {
         "processed_at": "2026-08-30T15:53:33.733394Z",
+        "status": "applied"
+      },
+      "eb168b00-0e04-4830-b7f0-49eba7240568": {
+        "processed_at": "2026-08-30T15:54:10.531529Z",
         "status": "applied"
       }
     },
@@ -2104,7 +2110,6 @@
         "article_010_Income_and_substitution_effect.pdf"
       ],
       "active_ids": [
-        "article_007_Opportunity_cost.pdf",
         "article_008_Substitutes_and_complements.pdf",
         "article_009_Normal_and_inferior_goods.pdf",
         "article_010_Income_and_substitution_effect.pdf"
