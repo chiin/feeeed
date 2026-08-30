@@ -12,6 +12,13 @@ from anki_scheduler import (
     build_deck_snapshot,
     ensure_daily_batch,
 )
+from pdf_scheduler import (
+    apply_completion_events,
+    apply_continuation_events,
+    build_snapshot as build_pdf_snapshot,
+    migrate_history as migrate_pdf_history,
+    release_if_due,
+)
 
 CONFIG_PATH = Path("config.json")
 HISTORY_PATH = Path("history.json")
@@ -20,30 +27,6 @@ BASE_URL = "https://chiin.github.io/feeeed"
 
 # Leitner Box Intervals (in days)
 BOX_INTERVALS = {1: 1, 2: 3, 3: 7, 4: 14, 5: 30}
-
-
-from datetime import datetime, timezone, timedelta
-
-def get_next_update_time(last_update_iso: str = None) -> str:
-    hkt = timezone(timedelta(hours=8))
-    now_hkt = datetime.now(hkt)
-
-    if last_update_iso:
-        last_dt = datetime.fromisoformat(last_update_iso).astimezone(hkt)
-    else:
-        last_dt = now_hkt
-
-    # 24h + rand(-3h, +3h)
-    random_offset_hours = random.uniform(-3.0, 3.0)
-    next_dt = last_dt + timedelta(hours=24 + random_offset_hours)
-
-    # Floor at 00:00 HKT and cap at 23:59 HKT for that target day
-    target_date = next_dt.date()
-    day_start = datetime.combine(target_date, datetime.min.time(), tzinfo=hkt)
-    day_end = datetime.combine(target_date, datetime.max.time(), tzinfo=hkt)
-
-    clamped_dt = max(day_start, min(next_dt, day_end))
-    return clamped_dt.isoformat()
     
 
 def load_json(path: Path) -> dict:
@@ -437,123 +420,153 @@ def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, 
 
     card_web_url = create_book_reader_html(stream_key, active_pdf.stem, pdf_url)
 
-    now_hkt = datetime.now(timezone(timedelta(hours=8)))
-    # Generate a unique timestamp for the item GUID
-    timestamp = int(now_hkt.timestamp())
     now_utc = datetime.now(timezone.utc)
+    if stream_history.get("active_chapter_index") != current_index:
+        stream_history["active_chapter_index"] = current_index
+        stream_history["chapter_started_at"] = now_utc.isoformat()
+    chapter_started_at = datetime.fromisoformat(
+        stream_history["chapter_started_at"].replace("Z", "+00:00")
+    )
 
-    item_guid = f"{stream_key}-ch-{current_index:03d}-{timestamp}"
+    item_guid = f"{stream_key}-ch-{current_index:03d}"
     fe = fg.add_entry()
     fe.id(item_guid)
     fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {active_pdf.stem}")
     fe.link(href=card_web_url)
     fe.description(f"Tap to read chapter: {active_pdf.name}")
-    fe.pubDate(now_utc)
+    fe.pubDate(chapter_started_at)
     fe.enclosure(url=pdf_url, length=str(active_pdf.stat().st_size), type="application/pdf")
 
 
-def process_pdf_folder(stream_key: str, stream_cfg: dict, stream_history: dict, fg, base_url: str, dispatch_payload: dict = None):
+def process_pdf_folder(
+    stream_key: str,
+    stream_cfg: dict,
+    stream_history: dict,
+    fg,
+    base_url: str,
+    dispatch_payload: dict | None = None,
+    now: datetime | None = None,
+):
+    now = now or datetime.now(timezone.utc)
+    dispatch_payload = dispatch_payload or {}
     folder_path = Path(stream_cfg.get("folder", ""))
     if not folder_path.exists():
         print(f"[{stream_key}] Folder '{folder_path}' does not exist.")
         return
 
-    # 1. Process incoming completion dispatches
-    completed_files = set(stream_history.get("completed_files", []))
-    is_dispatch = bool(dispatch_payload and dispatch_payload.get("stream") == stream_key)
-
-    if is_dispatch and dispatch_payload.get("event_type") == "pdf_completed":
-        completed_id = dispatch_payload.get("pdf_id")
-        if completed_id:
-            completed_files.add(completed_id)
-            stream_history["completed_files"] = list(completed_files)
-            print(f"[{stream_key}] Marked PDF completed: {completed_id}")
-
-    # 2. Check stagger timing
-    now_hkt = datetime.now(timezone(timedelta(hours=8)))
-    next_update_str = stream_history.get("next_update_at")
-
     cards_dir = Path("cards")
     cards_dir.mkdir(exist_ok=True)
     batch_json_path = cards_dir / f"{stream_key}_pdf_batch.json"
+    legacy_snapshot = None
+    if batch_json_path.exists():
+        try:
+            legacy_snapshot = load_json(batch_json_path)
+        except (OSError, ValueError, json.JSONDecodeError) as error:
+            print(f"[{stream_key}] Could not read legacy PDF batch: {error}")
 
-    # If skipping build, re-publish current batch to RSS so feed stays populated
-    if next_update_str and not is_dispatch:
-        next_update_dt = datetime.fromisoformat(next_update_str)
-        if now_hkt < next_update_dt and batch_json_path.exists():
-            try:
-                with open(batch_json_path, "r", encoding="utf-8") as f:
-                    existing_data = json.load(f)
-                batch_items = existing_data.get("batch", [])
-                card_count = len(batch_items)
-                titles_summary = ", ".join([item["title"] for item in batch_items]) if batch_items else "All PDFs completed!"
-                web_reader_url = f"{base_url}/pdf_reader.html?stream={stream_key}"
-                now_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-                fe = fg.add_entry()
-                fe.id(f"{stream_key}-pdf-batch-{now_date}")
-                fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {card_count} PDFs Queued")
-                fe.link(href=web_reader_url)
-                fe.description(f"Today's queue ({card_count} remaining): {titles_summary}")
-                fe.pubDate(datetime.now(timezone.utc) - timedelta(minutes=5))
-                return
-            except Exception as e:
-                print(f"[{stream_key}] Error reading batch JSON: {e}")
-
-    # 3. Gather unread PDFs and generate batch
-    all_pdfs = sorted([f for f in folder_path.glob("*.pdf")])
-    unread_pdfs = [f for f in all_pdfs if f.name not in completed_files]
-
-    mode = stream_cfg.get("mode", "sequential")
+    all_pdf_ids = sorted(path.name for path in folder_path.glob("*.pdf"))
+    strategy = stream_cfg.get("strategy", "sequential")
     batch_size = stream_cfg.get("batch_size", 5)
+    migrate_pdf_history(
+        stream_key, strategy, stream_history, now, legacy_snapshot
+    )
 
-    if mode == "random_without_replacement":
-        today_seed = datetime.now(timezone.utc).strftime("%Y%m%d") + stream_key
-        rng = random.Random(today_seed)
-        shuffled = unread_pdfs.copy()
-        rng.shuffle(shuffled)
-        batch = shuffled[:batch_size]
-    else:
-        batch = unread_pdfs[:batch_size]
+    events = []
+    if (
+        dispatch_payload.get("event_type") == "pdf_batch_event"
+        and dispatch_payload.get("stream_id") == stream_key
+    ):
+        raw_events = dispatch_payload.get("events", [])
+        if isinstance(raw_events, list):
+            events = raw_events
+        else:
+            print(f"[{stream_key}] Ignoring PDF dispatch: events must be a list.")
+    elif (
+        dispatch_payload.get("event_type") == "pdf_completed"
+        and dispatch_payload.get("stream") == stream_key
+        and dispatch_payload.get("pdf_id")
+    ):
+        events = [{
+            "event_id": (
+                f"legacy:{stream_key}:{dispatch_payload['pdf_id']}:"
+                f"{now.date().isoformat()}"
+            ),
+            "stream_id": stream_key,
+            "action": "complete",
+            "pdf_id": dispatch_payload["pdf_id"],
+            "occurred_at": now.isoformat(),
+        }]
 
-    batch_items = [
-        {
-            "id": f.name,
-            "title": f.stem.replace("_", " ").title(),
-            "pdf_url": f"{base_url}/{folder_path.name}/{f.name}"
-        }
-        for f in batch
-    ]
+    completion_result = apply_completion_events(
+        stream_key, stream_history, events, now
+    )
+    continuation_requested = any(
+        isinstance(event, dict) and event.get("action") == "continue"
+        for event in events
+    )
+    current_batch = stream_history.get("daily_batch")
+    force_today = bool(
+        continuation_requested
+        and current_batch
+        and not current_batch["active_ids"]
+    )
+    released = release_if_due(
+        stream_key,
+        stream_history,
+        all_pdf_ids,
+        batch_size,
+        now,
+        force_today=force_today,
+    )
+    continuation_result = apply_continuation_events(
+        stream_key,
+        stream_history,
+        events,
+        all_pdf_ids,
+        batch_size,
+        now,
+    )
+    if events:
+        print(
+            f"[{stream_key}] Processed PDF events: "
+            f"completions={completion_result}, continuations={continuation_result}."
+        )
+    if released:
+        print(f"[{stream_key}] Released HKT batch {stream_history['daily_batch']['id']}.")
 
-    compiled_payload = {
-        "stream": stream_key,
-        "title": stream_cfg.get("feed_title", stream_key.title()),
-        "compiled_at": datetime.now(timezone.utc).isoformat(),
-        "total_unread_remaining": len(unread_pdfs),
-        "batch": batch_items
-    }
+    compiled_payload = build_pdf_snapshot(
+        stream_key,
+        stream_cfg.get("feed_title", stream_key.title()),
+        folder_path.name,
+        base_url,
+        stream_history,
+        all_pdf_ids,
+        batch_size,
+        now,
+    )
+    save_json(batch_json_path, compiled_payload)
 
-    with open(batch_json_path, "w", encoding="utf-8") as json_out:
-        json.dump(compiled_payload, json_out, indent=2)
-
-    now_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    card_count = len(batch_items)
-    titles_summary = ", ".join([item["title"] for item in batch_items]) if batch_items else "All PDFs completed!"
+    release_summary = compiled_payload["release_summary"]
+    if not release_summary:
+        return
+    titles_summary = ", ".join(item["title"] for item in release_summary)
     web_reader_url = f"{base_url}/pdf_reader.html?stream={stream_key}"
 
-    # Generate a unique timestamp for the item GUID
-    timestamp = int(now_hkt.timestamp())
-    now_utc = datetime.now(timezone.utc)
-
     fe = fg.add_entry()
-    # Adding timestamp guarantees Feeeed sees every queue update as a fresh unread item
-    fe.id(f"{stream_key}-pdf-batch-{timestamp}")
-    fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {card_count} PDFs Queued")
+    fe.id(f"{stream_key}-pdf-batch-{compiled_payload['batch_id']}")
+    fe.title(
+        f"[{stream_cfg.get('feed_title', stream_key.title())}] {titles_summary}"
+    )
     fe.link(href=web_reader_url)
-    fe.description(f"Today's queue ({card_count} remaining): {titles_summary}")
-    fe.pubDate(now_utc)
-
-    stream_history["next_update_at"] = get_next_update_time(now_hkt.isoformat())
+    fe.description(
+        f"{len(release_summary)} PDFs released; "
+        f"{len(compiled_payload['active'])} remaining."
+    )
+    fe.pubDate(
+        datetime.fromisoformat(
+            compiled_payload["released_at"].replace("Z", "+00:00")
+        )
+    )
 
 # --- MAIN CONTROLLER ---
 
