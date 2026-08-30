@@ -11,84 +11,41 @@
             padding: 16px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: #1c1c1e;
-            color: #ffffff;
+            color: #fff;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
             min-height: 100vh;
         }
-
+        .screen { display: none; width: 100%; max-width: 480px; text-align: center; }
+        .screen.active { display: block; }
         .header {
-            width: 100%;
-            max-width: 480px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 16px;
         }
-
-        .title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #8e8e93;
-        }
-
+        .title { color: #8e8e93; font-size: 1.1rem; font-weight: 700; }
         .progress {
-            font-size: 0.9rem;
-            color: #0a84ff;
-            font-weight: 600;
-            background: #2c2c2e;
             padding: 4px 12px;
             border-radius: 12px;
-        }
-
-        .card {
             background: #2c2c2e;
-            border: 1px solid #3a3a3c;
-            border-radius: 20px;
-            width: 100%;
-            max-width: 480px;
+            color: #0a84ff;
+            font-size: .9rem;
+            font-weight: 600;
+        }
+        .card {
             min-height: 320px;
             padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            text-align: center;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.4);
-        }
-
-        .card-content {
-            width: 100%;
-            margin: auto 0;
-        }
-
-        .prompt-text {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            line-height: 1.4;
-        }
-
-        .card-img {
-            max-width: 100%;
-            max-height: 180px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-        }
-
-        .audio-btn {
-            background: #3a3a3c;
-            color: #0a84ff;
-            border: none;
-            padding: 8px 16px;
+            border: 1px solid #3a3a3c;
             border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            cursor: pointer;
-            margin-bottom: 16px;
+            background: #2c2c2e;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, .4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
+        .card-content { width: 100%; }
+        .prompt-text { font-size: 1.5rem; font-weight: 600; line-height: 1.4; }
         .answer-box {
             display: none;
             width: 100%;
@@ -96,550 +53,125 @@
             padding-top: 20px;
             border-top: 1px dashed #48484a;
         }
-
-        .answer-text {
-            font-size: 1.3rem;
-            color: #30d158;
+        .answer-text { color: #30d158; font-size: 1.3rem; font-weight: 600; }
+        .notes-text { margin-top: 8px; color: #8e8e93; font-size: .95rem; font-style: italic; }
+        .card-img { display: none; max-width: 100%; max-height: 180px; margin: 16px auto; border-radius: 12px; }
+        .audio-btn {
+            display: none;
+            margin: 16px auto;
+            padding: 8px 16px;
+            border: 0;
+            border-radius: 20px;
+            background: #3a3a3c;
+            color: #0a84ff;
             font-weight: 600;
-            margin-bottom: 8px;
         }
-
-        .notes-text {
-            font-size: 0.95rem;
-            color: #8e8e93;
-            font-style: italic;
-        }
-
-        .action-area {
-            width: 100%;
-            max-width: 480px;
-            margin-top: 20px;
-        }
-
+        .action-area { margin-top: 20px; }
         .btn {
             width: 100%;
             padding: 14px;
+            border: 0;
+            border-radius: 12px;
             font-size: 1rem;
             font-weight: 600;
-            border: none;
-            border-radius: 12px;
             cursor: pointer;
-            transition: opacity 0.2s;
         }
-
         .btn-primary { background: #0a84ff; color: #fff; }
-
-        .btn-grid {
-            display: none;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-        }
-
-        .btn-again { background: #ff453a; color: #fff; }
-        .btn-hard { background: #ff9f0a; color: #000; }
-        .btn-good { background: #30d158; color: #000; }
-        .btn-easy { background: #64d2ff; color: #000; }
-
+        .btn-grid { display: none; grid-template-columns: repeat(4, 1fr); gap: 8px; }
         .btn-grade {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             padding: 10px 4px;
+            border: 0;
             border-radius: 10px;
-            border: none;
+            font-size: .85rem;
             font-weight: 700;
-            font-size: 0.85rem;
             cursor: pointer;
         }
-
-        .interval-label {
-            font-size: 0.7rem;
-            opacity: 0.8;
-            margin-top: 2px;
-            font-weight: 500;
-        }
-
-        .screen { display: none; width: 100%; max-width: 480px; text-align: center; }
-        .screen.active { display: block; }
-
+        .btn-grade span { display: block; margin-top: 2px; font-size: .7rem; font-weight: 500; opacity: .8; }
+        .btn-again { background: #ff453a; color: #fff; }
+        .btn-hard { background: #ff9f0a; }
+        .btn-good { background: #30d158; }
+        .btn-easy { background: #64d2ff; }
+        .muted { color: #8e8e93; }
+        .error { color: #ff453a; }
         .loader {
-            border: 3px solid #3a3a3c;
-            border-top: 3px solid #0a84ff;
-            border-radius: 50%;
             width: 36px;
             height: 36px;
-            animation: spin 0.8s linear infinite;
             margin: 40px auto;
+            border: 3px solid #3a3a3c;
+            border-top-color: #0a84ff;
+            border-radius: 50%;
+            animation: spin .8s linear infinite;
         }
-
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10;
+            padding: 20px;
+            background: rgba(0, 0, 0, .85);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content { width: 100%; max-width: 400px; padding: 24px; border-radius: 12px; background: #2c2c2e; text-align: left; }
+        .modal input { width: 100%; margin: 12px 0; padding: 10px; border: 1px solid #3a3a3c; border-radius: 6px; background: #1c1c1e; color: #fff; }
     </style>
 </head>
 <body>
-
-    <!-- LOADING SCREEN -->
     <div id="loadingScreen" class="screen active">
         <div class="loader"></div>
-        <p style="color: #8e8e93;">Loading deck session...</p>
+        <p class="muted">Loading deck session...</p>
     </div>
 
-    <!-- MAIN REVIEW SCREEN -->
     <div id="reviewScreen" class="screen">
         <div class="header">
             <div id="deckTitle" class="title">Deck</div>
-            <div id="progress" class="progress">0 / 0</div>
+            <div id="progress" class="progress">0 remaining</div>
         </div>
-
         <div class="card">
             <div class="card-content">
                 <div id="frontText" class="prompt-text"></div>
-                <img id="frontImage" class="card-img" style="display:none;" />
-                <button id="frontAudioBtn" class="audio-btn" style="display:none;" onclick="playAudio('frontAudio')">🔊 Play Audio</button>
-
+                <img id="frontImage" class="card-img" alt="">
+                <button id="frontAudioBtn" class="audio-btn" onclick="playAudio('frontAudio')">Play Audio</button>
                 <div id="answerBox" class="answer-box">
                     <div id="backText" class="answer-text"></div>
-                    <img id="backImage" class="card-img" style="display:none;" />
-                    <button id="backAudioBtn" class="audio-btn" style="display:none;" onclick="playAudio('backAudio')">🔊 Play Audio</button>
+                    <img id="backImage" class="card-img" alt="">
+                    <button id="backAudioBtn" class="audio-btn" onclick="playAudio('backAudio')">Play Audio</button>
                     <div id="backNotes" class="notes-text"></div>
                 </div>
             </div>
         </div>
-
         <div class="action-area">
             <button id="showBtn" class="btn btn-primary" onclick="showAnswer()">Show Answer</button>
             <div id="gradeGrid" class="btn-grid">
-                <button class="btn-grade btn-again" onclick="gradeCard(1)">
-                    Again
-                    <span id="int-1" class="interval-label">1d</span>
-                </button>
-                <button class="btn-grade btn-hard" onclick="gradeCard(2)">
-                    Hard
-                    <span id="int-2" class="interval-label">1d</span>
-                </button>
-                <button class="btn-grade btn-good" onclick="gradeCard(3)">
-                    Good
-                    <span id="int-3" class="interval-label">1d</span>
-                </button>
-                <button class="btn-grade btn-easy" onclick="gradeCard(4)">
-                    Easy
-                    <span id="int-4" class="interval-label">1d</span>
-                </button>
+                <button class="btn-grade btn-again" onclick="gradeCard(1)">Again<span id="int-1">10m</span></button>
+                <button class="btn-grade btn-hard" onclick="gradeCard(2)">Hard<span id="int-2"></span></button>
+                <button class="btn-grade btn-good" onclick="gradeCard(3)">Good<span id="int-3"></span></button>
+                <button class="btn-grade btn-easy" onclick="gradeCard(4)">Easy<span id="int-4"></span></button>
             </div>
         </div>
     </div>
 
-    <!-- FINISH SCREEN -->
     <div id="finishScreen" class="screen">
-        <h2 style="color: #30d158; font-size: 2rem; margin-bottom: 8px;">🎉 Session Complete!</h2>
-        <p style="color: #8e8e93; margin-bottom: 24px;">All due cards reviewed.</p>
-        <button id="syncBtn" class="btn btn-primary" onclick="syncWithGitHub()">Sync Results to GitHub</button>
-        <p id="syncStatus" style="margin-top: 16px; color: #8e8e93; font-size: 0.9rem;"></p>
+        <h2 id="finishTitle">Session Complete!</h2>
+        <p id="finishMessage" class="muted">All due cards reviewed.</p>
+        <button id="syncBtn" class="btn btn-primary" onclick="syncWithGitHub()">Retry Sync Now</button>
+        <p id="syncStatus" class="muted"></p>
     </div>
 
     <audio id="frontAudio"></audio>
     <audio id="backAudio"></audio>
 
-    <script>
-        let deckId = "";
-        let deckCompiledAt = ""; // <-- Added variable to track compilation timestamp
-        let cards = [];
-        let currentIndex = 0;
-        let sessionResults = [];
-
-        const urlParams = new URLSearchParams(window.location.search);
-        deckId = urlParams.get('deck');
-
-        if (!deckId) {
-            document.getElementById('loadingScreen').innerHTML = "<p style='color:#ff453a;'>No deck specified in URL.</p>";
-        } else {
-            loadDeck();
-        }
-
-        async function loadDeck() {
-        try {
-            // 1. Fetch deck snapshot with cache-busting
-            const res = await fetch(`cards/${deckId}_deck.json?t=${Date.now()}`);
-            if (!res.ok) throw new Error("Deck file not found");
-            const data = await res.json();
-            
-            document.getElementById('deckTitle').innerText = data.title || deckId;
-            const rawCards = data.cards || [];
-            deckCompiledAt = data.compiled_at || "";
-    
-            // 2. Fetch live history directly to detect cross-device updates
-            let historyCards = {};
-            try {
-                const histRes = await fetch(`history.json?t=${Date.now()}`);
-                if (histRes.ok) {
-                    const masterHistory = await histRes.json();
-                    historyCards = masterHistory[deckId]?.cards || {};
-                }
-            } catch (e) {
-                console.warn("Could not fetch history.json, falling back to static deck.");
-            }
-    
-            // 3. Filter out cards reviewed within the last 12 hours on any device
-            const twelveHoursAgo = new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString();
-            cards = rawCards.filter(card => {
-                const hist = historyCards[card.id];
-                if (hist && hist.last_reviewed && hist.last_reviewed > twelveHoursAgo) {
-                    return false; // Already reviewed on another device
-                }
-                return true;
-            });
-    
-            if (cards.length === 0) {
-                showScreen('finishScreen');
-                document.getElementById('finishScreen').innerHTML = "<h2>🎉 All Caught Up!</h2><p style='color:#8e8e93;'>No cards due today.</p>";
-                return;
-            }
-    
-            // 4. Restore local device position if applicable
-            const savedStateRaw = localStorage.getItem(`anki_session_${deckId}`);
-            if (savedStateRaw) {
-                try {
-                    const savedState = JSON.parse(savedStateRaw);
-                    if (savedState.compiled_at === deckCompiledAt) {
-                        currentIndex = Math.min(savedState.currentIndex || 0, cards.length - 1);
-                    }
-                } catch (e) {
-                    localStorage.removeItem(`anki_session_${deckId}`);
-                }
-            }
-    
-            showScreen('reviewScreen');
-            renderCard();
-        } catch (err) {
-            document.getElementById('loadingScreen').innerHTML = `<p style='color:#ff453a;'>Error loading deck: ${err.message}</p>`;
-        }
-    }
-
-        function showScreen(id) {
-            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-        }
-
-        function renderCard() {
-            const card = cards[currentIndex];
-            document.getElementById('progress').innerText = `${currentIndex + 1} / ${cards.length}`;
-
-            document.getElementById('answerBox').style.display = 'none';
-            document.getElementById('showBtn').style.display = 'block';
-            document.getElementById('gradeGrid').style.display = 'none';
-
-            document.getElementById('frontText').innerText = card.front.text || '';
-            
-            const frontImg = document.getElementById('frontImage');
-            if (card.front.image) {
-                frontImg.src = card.front.image;
-                frontImg.style.display = 'block';
-            } else {
-                frontImg.style.display = 'none';
-            }
-
-            const frontAudioBtn = document.getElementById('frontAudioBtn');
-            if (card.front.audio) {
-                document.getElementById('frontAudio').src = card.front.audio;
-                frontAudioBtn.style.display = 'inline-block';
-                playAudio('frontAudio');
-            } else {
-                frontAudioBtn.style.display = 'none';
-            }
-
-            document.getElementById('backText').innerText = card.back.text || '';
-            document.getElementById('backNotes').innerText = card.back.notes || '';
-            
-            const backImg = document.getElementById('backImage');
-            if (card.back.image) {
-                backImg.src = card.back.image;
-                backImg.style.display = 'block';
-            } else {
-                backImg.style.display = 'none';
-            }
-
-            if (card.back.audio) {
-                document.getElementById('backAudio').src = card.back.audio;
-                document.getElementById('backAudioBtn').style.display = 'inline-block';
-            } else {
-                document.getElementById('backAudioBtn').style.display = 'none';
-            }
-
-            calculateIntervalLabels(card.sm2 || {});
-        }
-
-        function showAnswer() {
-            document.getElementById('answerBox').style.display = 'block';
-            document.getElementById('showBtn').style.display = 'none';
-            document.getElementById('gradeGrid').style.display = 'grid';
-
-            const card = cards[currentIndex];
-            if (card.back.audio) {
-                playAudio('backAudio');
-            }
-        }
-
-        function playAudio(elementId) {
-            const audio = document.getElementById(elementId);
-            if (audio && audio.src) {
-                audio.play().catch(() => {});
-            }
-        }
-
-        function computeSM2(currentSm2, grade) {
-            let ef = currentSm2.easiness_factor || 2.5;
-            let interval = currentSm2.interval || 0;
-            let reps = currentSm2.repetitions || 0;
-            let state = currentSm2.state || 'new';
-
-            if (grade === 1) {
-                reps = 0;
-                interval = 1;
-                ef = Math.max(1.3, ef - 0.2);
-                state = 'relearning';
-            } else if (grade === 2) {
-                interval = reps === 0 ? 1 : Math.max(interval + 1, Math.round(interval * 1.2));
-                ef = Math.max(1.3, ef - 0.15);
-                state = 'review';
-            } else if (grade === 3) {
-                if (reps === 0) interval = 1;
-                else if (reps === 1) interval = 6;
-                else interval = Math.round(interval * ef);
-                reps += 1;
-                state = 'review';
-            } else if (grade === 4) {
-                if (reps === 0) interval = 4;
-                else if (reps === 1) interval = 8;
-                else interval = Math.round(interval * ef * 1.3);
-                reps += 1;
-                ef += 0.15;
-                state = 'review';
-            }
-
-            const nextDue = new Date(Date.now() + interval * 86400000).toISOString();
-
-            return {
-                easiness_factor: parseFloat(ef.toFixed(2)),
-                interval: interval,
-                repetitions: reps,
-                state: state,
-                next_due: nextDue
-            };
-        }
-
-        function calculateIntervalLabels(sm2) {
-            [1, 2, 3, 4].forEach(grade => {
-                const res = computeSM2(sm2, grade);
-                document.getElementById(`int-${grade}`).innerText = `${res.interval}d`;
-            });
-        }
-
-        function getPAT() {
-            let token = localStorage.getItem("feeeed_pat");
-            if (!token) {
-                // Show in-page modal if token is missing
-                const modal = document.getElementById("patModal");
-                if (modal) modal.style.display = "flex";
-                return null;
-            }
-            return token;
-        }
-        
-        function savePATFromModal() {
-            const input = document.getElementById("patInput");
-            if (input && input.value.trim()) {
-                const token = input.value.trim();
-                localStorage.setItem("feeeed_pat", token);
-                document.getElementById("patModal").style.display = "none";
-                console.log("[Feeeeed Sync] PAT saved to localStorage. Flushing pending sync...");
-                
-                // Immediately retry sending buffered card results
-                flushPendingSync();
-            }
-        }
-
-        let pendingResults = [];
-        let syncTimer = null;
-        
-        function gradeCard(grade) {
-            const card = cards[currentIndex];
-            const updatedSm2 = computeSM2(card.sm2 || {}, grade);
-        
-            const cardResult = {
-                id: card.id,
-                ...updatedSm2
-            };
-        
-            sessionResults.push(cardResult);
-            pendingResults.push(cardResult);
-            currentIndex++;
-        
-            // 1. Instant local persistence for this device
-            localStorage.setItem(`anki_session_${deckId}`, JSON.stringify({
-                compiled_at: deckCompiledAt,
-                currentIndex: currentIndex,
-                sessionResults: sessionResults
-            }));
-        
-            // 2. Debounce sync: Wait 10 seconds of inactivity before sending to GitHub
-            clearTimeout(syncTimer);
-            syncTimer = setTimeout(() => {
-                flushPendingSync();
-            }, 10000);
-        
-            if (currentIndex < cards.length) {
-                renderCard();
-            } else {
-                showScreen('finishScreen');
-                flushPendingSync();
-            }
-        }
-        
-        function flushPendingSync() {
-            if (pendingResults.length === 0) return;
-        
-            // 1. Verify token FIRST before modifying pendingResults
-            const token = getPAT();
-            if (!token) return; // Modal will display; queue remains safely in pendingResults
-        
-            const resultsToSend = [...pendingResults];
-            pendingResults = []; // Clear queue only when sending
-        
-            const payload = JSON.stringify({
-                event_type: "anki_session",
-                client_payload: {
-                    stream: deckId,
-                    event_type: "anki_session",
-                    results: resultsToSend
-                }
-            });
-        
-            console.log(`[Feeeeed Sync] Sending ${resultsToSend.length} result(s) to GitHub...`);
-        
-            fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
-                method: "POST",
-                headers: {
-                    "Accept": "application/vnd.github+json",
-                    "Authorization": `Bearer ${token}`,
-                    "Content-Type": "application/json"
-                },
-                body: payload,
-                keepalive: true
-            })
-            .then(res => {
-                if (res.ok) {
-                    console.log("[Feeeeed Sync] GitHub Dispatch sent successfully!");
-                } else if (res.status === 401) {
-                    console.error("[Feeeeed Sync] Invalid PAT token (401). Clearing stored token.");
-                    alert("Invalid GitHub Token. Please re-enter your PAT.");
-                    localStorage.removeItem("feeeed_pat");
-                    pendingResults = pendingResults.concat(resultsToSend);
-                    getPAT();
-                } else {
-                    console.error(`[Feeeeed Sync] GitHub API Error (${res.status}). Re-queueing.`);
-                    pendingResults = pendingResults.concat(resultsToSend);
-                }
-            })
-            .catch(err => {
-                console.error("[Feeeeed Sync] Network error:", err);
-                pendingResults = pendingResults.concat(resultsToSend);
-            });
-        }
-        
-        // Automatically flush buffered reviews when leaving/minimizing Feeeeed
-        document.addEventListener("visibilitychange", () => {
-            if (document.visibilityState === "hidden") {
-                flushPendingSync();
-            }
-        });
-
-        function sendBackgroundSync(results) {
-            const token = getPAT();
-            if (!token) return;
-
-            fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
-                method: "POST",
-                headers: {
-                    "Accept": "application/vnd.github+json",
-                    "Authorization": `Bearer ${token}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    event_type: "anki_session",
-                    client_payload: {
-                        stream: deckId,
-                        event_type: "anki_session",
-                        results: results
-                    }
-                })
-            }).catch(() => {});
-        }
-
-        async function syncWithGitHub() {
-            const btn = document.getElementById('syncBtn');
-            const status = document.getElementById('syncStatus');
-
-            btn.disabled = true;
-            btn.innerText = "Syncing...";
-            status.innerText = "Sending session data to GitHub Actions...";
-
-            const token = getPAT();
-            if (!token) {
-                status.innerText = "PAT required to sync.";
-                btn.disabled = false;
-                btn.innerText = "Try Syncing Again";
-                return;
-            }
-
-            try {
-                const res = await fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
-                    method: "POST",
-                    headers: {
-                        "Accept": "application/vnd.github+json",
-                        "Authorization": `Bearer ${token}`,
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        event_type: "anki_session",
-                        client_payload: {
-                            stream: deckId,
-                            event_type: "anki_session",
-                            results: sessionResults
-                        }
-                    })
-                });
-
-                if (res.ok) {
-                    localStorage.removeItem(`anki_session_${deckId}`); // Clean up session storage on successful full completion
-                    btn.innerText = "Saved to GitHub ✓";
-                    btn.style.backgroundColor = "#30d158";
-                    btn.style.color = "#000";
-                    status.innerText = "State updated! Changes will appear after the next build.";
-                } else if (res.status === 401) {
-                    alert("Invalid PAT token. Clearing saved token.");
-                    localStorage.removeItem("feeeed_pat");
-                    status.innerText = "Invalid PAT. Please try again.";
-                    btn.disabled = false;
-                    btn.innerText = "Re-enter PAT & Sync";
-                } else {
-                    status.innerText = `Error saving (${res.status}).`;
-                    btn.disabled = false;
-                    btn.innerText = "Retry Sync";
-                }
-            } catch (err) {
-                status.innerText = "Network error. Check your connection.";
-                btn.disabled = false;
-                btn.innerText = "Retry Sync";
-            }
-        }
-    </script>
-    <!-- In-Page PAT Token Modal for App WebViews -->
-    <div id="patModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center; padding:20px; box-sizing:border-box;">
-        <div style="background:#2c2c2e; padding:24px; border-radius:12px; max-width:400px; width:100%; color:#fff; font-family:-apple-system, sans-serif;">
-            <h3 style="margin-top:0;">GitHub Token Required</h3>
-            <p style="font-size:0.85rem; color:#8e8e93;">Enter your GitHub Personal Access Token to sync progress from inside Feeeeed:</p>
-            <input type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxx" style="width:100%; padding:10px; margin:12px 0; border-radius:6px; border:1px solid #3a3a3c; background:#1c1c1e; color:#fff; box-sizing:border-box;" />
-            <button onclick="savePATFromModal()" style="width:100%; padding:10px; background:#30d158; border:none; border-radius:6px; font-weight:600; cursor:pointer;">Save Token</button>
+    <div id="patModal" class="modal">
+        <div class="modal-content">
+            <h3>GitHub Token Required</h3>
+            <p class="muted">Enter your GitHub Personal Access Token to sync progress.</p>
+            <input type="password" id="patInput" autocomplete="off" placeholder="GitHub token">
+            <button class="btn btn-primary" onclick="savePATFromModal()">Save Token</button>
         </div>
     </div>
+
+    <script src="reviewer_state.js"></script>
+    <script src="reviewer_app.js"></script>
 </body>
 </html>
