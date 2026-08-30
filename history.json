@@ -1200,24 +1200,24 @@
       },
       "hsk-0118": {
         "state": "review",
-        "interval_days": 1,
-        "repetitions": 1,
-        "last_reviewed_at": "2026-08-10T07:09:21.062633Z",
-        "next_due_at": "2026-08-10T16:00:00Z"
+        "interval_days": 3,
+        "repetitions": 2,
+        "last_reviewed_at": "2026-08-30T08:48:17.076000Z",
+        "next_due_at": "2026-09-01T16:00:00Z"
       },
       "hsk-0117": {
         "state": "review",
-        "interval_days": 1,
-        "repetitions": 1,
-        "last_reviewed_at": "2026-08-10T07:09:21.062633Z",
-        "next_due_at": "2026-08-10T16:00:00Z"
+        "interval_days": 3,
+        "repetitions": 2,
+        "last_reviewed_at": "2026-08-30T08:46:23.467000Z",
+        "next_due_at": "2026-09-01T16:00:00Z"
       },
       "hsk-0116": {
         "state": "review",
-        "interval_days": 1,
-        "repetitions": 1,
-        "last_reviewed_at": "2026-08-10T07:09:21.062633Z",
-        "next_due_at": "2026-08-10T16:00:00Z"
+        "interval_days": 3,
+        "repetitions": 2,
+        "last_reviewed_at": "2026-08-30T08:46:20.283000Z",
+        "next_due_at": "2026-09-01T16:00:00Z"
       },
       "hsk-0149": {
         "state": "review",
@@ -1351,7 +1351,7 @@
       "name": "deterministic-v1",
       "version": 1
     },
-    "revision": 14,
+    "revision": 17,
     "processed_events": {
       "9b388466-e31d-4df5-9102-05901dfbc03a": {
         "processed_at": "2026-08-30T08:03:20.615217Z",
@@ -1403,6 +1403,18 @@
       },
       "9548f7c5-6d97-4a85-a294-36d45043439a": {
         "processed_at": "2026-08-30T08:48:33.865532Z",
+        "status": "applied"
+      },
+      "d8715f96-e0f1-4694-a689-7c7fc0b77ef4": {
+        "processed_at": "2026-08-30T09:33:53.453664Z",
+        "status": "applied"
+      },
+      "72ddf72d-16c2-4d6c-8401-80f146bfa032": {
+        "processed_at": "2026-08-30T09:33:53.453664Z",
+        "status": "applied"
+      },
+      "4f33b2e8-244f-42d2-90b4-fc9a51110a08": {
+        "processed_at": "2026-08-30T09:33:53.453664Z",
         "status": "applied"
       }
     },
@@ -1553,18 +1565,6 @@
         "hsk-0100"
       ],
       "active": [
-        {
-          "card_id": "hsk-0116",
-          "available_at": "2026-08-29T16:00:00Z"
-        },
-        {
-          "card_id": "hsk-0117",
-          "available_at": "2026-08-29T16:00:00Z"
-        },
-        {
-          "card_id": "hsk-0118",
-          "available_at": "2026-08-29T16:00:00Z"
-        },
         {
           "card_id": "hsk-0120",
           "available_at": "2026-08-29T16:00:00Z"
