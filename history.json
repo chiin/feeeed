@@ -1074,10 +1074,10 @@
       },
       "hsk-0114": {
         "state": "review",
-        "interval_days": 1,
-        "repetitions": 1,
-        "last_reviewed_at": "2026-08-10T07:09:21.062633Z",
-        "next_due_at": "2026-08-10T16:00:00Z"
+        "interval_days": 3,
+        "repetitions": 2,
+        "last_reviewed_at": "2026-08-30T08:46:13.612000Z",
+        "next_due_at": "2026-09-01T16:00:00Z"
       },
       "hsk-0108": {
         "state": "review",
@@ -1144,10 +1144,10 @@
       },
       "hsk-0115": {
         "state": "review",
-        "interval_days": 1,
-        "repetitions": 1,
-        "last_reviewed_at": "2026-08-10T07:09:21.062633Z",
-        "next_due_at": "2026-08-10T16:00:00Z"
+        "interval_days": 3,
+        "repetitions": 2,
+        "last_reviewed_at": "2026-08-30T08:46:14.732000Z",
+        "next_due_at": "2026-09-01T16:00:00Z"
       },
       "hsk-0146": {
         "state": "review",
@@ -1351,7 +1351,7 @@
       "name": "deterministic-v1",
       "version": 1
     },
-    "revision": 12,
+    "revision": 14,
     "processed_events": {
       "9b388466-e31d-4df5-9102-05901dfbc03a": {
         "processed_at": "2026-08-30T08:03:20.615217Z",
@@ -1395,6 +1395,14 @@
       },
       "f02f1773-53a8-4d81-bf2c-0a71a453d2b2": {
         "processed_at": "2026-08-30T08:46:26.894001Z",
+        "status": "applied"
+      },
+      "bcb1dd78-7635-419c-a017-4c8fdb99020d": {
+        "processed_at": "2026-08-30T08:48:33.865532Z",
+        "status": "applied"
+      },
+      "9548f7c5-6d97-4a85-a294-36d45043439a": {
+        "processed_at": "2026-08-30T08:48:33.865532Z",
         "status": "applied"
       }
     },
@@ -1545,14 +1553,6 @@
         "hsk-0100"
       ],
       "active": [
-        {
-          "card_id": "hsk-0114",
-          "available_at": "2026-08-29T16:00:00Z"
-        },
-        {
-          "card_id": "hsk-0115",
-          "available_at": "2026-08-29T16:00:00Z"
-        },
         {
           "card_id": "hsk-0116",
           "available_at": "2026-08-29T16:00:00Z"
