@@ -80,13 +80,13 @@
         retryable(force = false) {
             this.mergeStored();
             const cutoff = this.now() - RETRY_DELAY_MS;
-            return this.records
-                .filter(record =>
-                    force
-                    || !record.last_attempt_at
-                    || Date.parse(record.last_attempt_at) <= cutoff
-                )
-                .map(record => record.event);
+            const shouldSend = force || this.records.some(record =>
+                !record.last_attempt_at
+                || Date.parse(record.last_attempt_at) <= cutoff
+            );
+            return shouldSend
+                ? this.records.map(record => record.event)
+                : [];
         }
 
         markAttempt(eventIds) {
