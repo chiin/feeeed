@@ -7,182 +7,143 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <style>
         * { box-sizing: border-box; }
-        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #1c1c1e; color: #ffffff; }
-        .header { position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; background: #2c2c2e; border-bottom: 1px solid #3a3a3c; min-height: 55px; }
-        .title { font-weight: 600; font-size: 0.95rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 55%; }
-        .progress { font-size: 0.8rem; color: #0a84ff; font-weight: 700; background: #3a3a3c; padding: 4px 8px; border-radius: 8px; }
-        .btn { background-color: #30d158; color: #000; border: none; padding: 8px 14px; font-weight: 600; border-radius: 8px; cursor: pointer; font-size: 0.85rem; }
-        .btn:disabled { background-color: #636366; color: #8e8e93; cursor: not-allowed; }
-        .pdf-container { padding: 10px; width: 100%; max-width: 800px; margin: 0 auto; min-height: 100vh; }
-        canvas { width: 100% !important; height: auto !important; margin-bottom: 12px; border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
-        .screen { display: none; text-align: center; padding: 40px 20px; }
+        body {
+            margin: 0;
+            background: #1c1c1e;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            min-height: 58px;
+            padding: 10px 14px;
+            border-bottom: 1px solid #3a3a3c;
+            background: #2c2c2e;
+        }
+        .title {
+            max-width: 58vw;
+            overflow: hidden;
+            font-size: .95rem;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .progress {
+            display: inline-block;
+            margin-top: 4px;
+            padding: 3px 8px;
+            border-radius: 8px;
+            background: #3a3a3c;
+            color: #0a84ff;
+            font-size: .75rem;
+            font-weight: 700;
+        }
+        .btn {
+            padding: 10px 14px;
+            border: 0;
+            border-radius: 8px;
+            background: #30d158;
+            color: #000;
+            font-size: .85rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .btn-primary { background: #0a84ff; color: #fff; }
+        .pdf-container {
+            width: 100%;
+            max-width: 800px;
+            min-height: 100vh;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
+        }
+        .screen {
+            display: none;
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
         .screen.active { display: block; }
+        .muted { color: #8e8e93; }
+        .error { color: #ff453a; }
+        .rendering { padding: 20px; text-align: center; }
+        #syncStatus {
+            min-height: 20px;
+            margin: 8px 14px;
+            font-size: .8rem;
+            text-align: center;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, .85);
+        }
+        .modal-content {
+            width: 100%;
+            max-width: 400px;
+            padding: 24px;
+            border-radius: 12px;
+            background: #2c2c2e;
+        }
+        .modal input {
+            width: 100%;
+            margin: 12px 0;
+            padding: 10px;
+            border: 1px solid #3a3a3c;
+            border-radius: 6px;
+            background: #1c1c1e;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-
     <div id="mainUI" style="display:none;">
         <div class="header">
             <div>
                 <div id="docTitle" class="title">Loading...</div>
-                <span id="batchProgress" class="progress">0 / 0</span>
+                <span id="batchProgress" class="progress">0 remaining</span>
             </div>
-            <button id="finishBtn" class="btn" onclick="finishCurrentPDF()">Finished Reading ✓</button>
+            <button id="finishBtn" class="btn" onclick="finishCurrentPDF()">Finished</button>
         </div>
-
+        <p id="syncStatus" class="muted"></p>
         <div id="pdfViewer" class="pdf-container"></div>
     </div>
 
     <div id="statusScreen" class="screen active">
-        <p id="statusMsg" style="color: #8e8e93;">Loading PDF queue...</p>
+        <h2>PDF Queue</h2>
+        <p id="statusMsg" class="muted">Loading PDF queue...</p>
+        <button id="continueBtn" class="btn btn-primary" style="display:none;" onclick="requestContinuation()">Continue with another batch</button>
+        <p id="statusSyncStatus" class="muted"></p>
     </div>
 
-    <script>
-        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-        let streamKey = new URLSearchParams(window.location.search).get('stream');
-        let batch = [];
-        let currentIndex = 0;
-
-        if (!streamKey) {
-            document.getElementById('statusMsg').innerText = "No stream specified in URL.";
-        } else {
-            loadBatch();
-        }
-
-        async function loadBatch() {
-            try {
-                // Fetch latest batch snapshot with cache-busting
-                const res = await fetch(`cards/${streamKey}_pdf_batch.json?t=${Date.now()}`);
-                if (!res.ok) throw new Error("Batch file not found");
-                const data = await res.json();
-                const rawBatch = data.batch || [];
-
-                // Load locally completed PDF IDs for this stream
-                const completedLocal = JSON.parse(localStorage.getItem(`pdf_completed_${streamKey}`) || "[]");
-
-                // Filter out cards already finished on this device
-                batch = rawBatch.filter(item => !completedLocal.includes(item.id));
-
-                if (batch.length === 0) {
-                    document.getElementById('statusScreen').classList.add('active');
-                    document.getElementById('mainUI').style.display = 'none';
-                    document.getElementById('statusMsg').innerHTML = "<h2 style='color:#30d158;'>🎉 Batch Complete!</h2><p>You have finished all items in today's reading queue.</p>";
-                    return;
-                }
-
-                document.getElementById('statusScreen').classList.remove('active');
-                document.getElementById('mainUI').style.display = 'block';
-                renderPDF();
-            } catch (err) {
-                document.getElementById('statusMsg').innerText = "Error loading queue: " + err.message;
-            }
-        }
-
-        function renderPDF() {
-            const currentItem = batch[currentIndex];
-            document.getElementById('docTitle').innerText = currentItem.title;
-            document.getElementById('batchProgress').innerText = `${currentIndex + 1} of ${batch.length}`;
-            
-            const viewer = document.getElementById('pdfViewer');
-            viewer.innerHTML = '<p style="text-align:center; color:#8e8e93; padding:20px;">Rendering PDF...</p>';
-
-            pdfjsLib.getDocument(currentItem.pdf_url).promise.then(pdf => {
-                viewer.innerHTML = '';
-                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-                    pdf.getPage(pageNum).then(page => {
-                        const viewport = page.getViewport({ scale: 2.0 });
-                        const canvas = document.createElement('canvas');
-                        const context = canvas.getContext('2d');
-                        canvas.height = viewport.height;
-                        canvas.width = viewport.width;
-                        viewer.appendChild(canvas);
-                        page.render({ canvasContext: context, viewport: viewport });
-                    });
-                }
-            }).catch(err => {
-                viewer.innerHTML = `<p style="color:#ff453a; text-align:center;">Failed to load PDF: ${err.message}</p>`;
-            });
-        }
-
-        function getPAT() {
-            let token = localStorage.getItem("feeeed_pat");
-            if (!token) {
-                // Show in-page modal if token is missing
-                const modal = document.getElementById("patModal");
-                if (modal) modal.style.display = "flex";
-                return null;
-            }
-            return token;
-        }
-        
-        function savePATFromModal() {
-            const input = document.getElementById("patInput");
-            if (input && input.value.trim()) {
-                const token = input.value.trim();
-                localStorage.setItem("feeeed_pat", token);
-                document.getElementById("patModal").style.display = "none";
-                alert("Token saved! Please tap the button again to sync.");
-            }
-        }
-
-        function finishCurrentPDF() {
-            const btn = document.getElementById('finishBtn');
-            const finishedItem = batch[currentIndex];
-            btn.disabled = true;
-            btn.innerText = "Syncing...";
-
-            // 1. Immediately record progress in local device storage
-            let completedLocal = JSON.parse(localStorage.getItem(`pdf_completed_${streamKey}`) || "[]");
-            if (!completedLocal.includes(finishedItem.id)) {
-                completedLocal.push(finishedItem.id);
-                localStorage.setItem(`pdf_completed_${streamKey}`, JSON.stringify(completedLocal));
-            }
-
-            // 2. Dispatch event to GitHub background process with keepalive
-            const token = getPAT();
-            if (token) {
-                fetch("https://api.github.com/repos/chiin/feeeed/dispatches", {
-                    method: "POST",
-                    headers: {
-                        "Accept": "application/vnd.github+json",
-                        "Authorization": `Bearer ${token}`,
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        event_type: "pdf_completed",
-                        client_payload: {
-                            stream: streamKey,
-                            event_type: "pdf_completed",
-                            pdf_id: finishedItem.id
-                        }
-                    }),
-                    keepalive: true
-                }).catch(() => {});
-            }
-
-            currentIndex++;
-            btn.disabled = false;
-            btn.innerText = "Finished Reading ✓";
-
-            if (currentIndex < batch.length) {
-                renderPDF();
-                window.scrollTo(0, 0);
-            } else {
-                document.getElementById('mainUI').style.display = 'none';
-                document.getElementById('statusScreen').classList.add('active');
-                document.getElementById('statusMsg').innerHTML = "<h2 style='color:#30d158;'>🎉 Batch Complete!</h2><p>You have finished all items in today's reading queue.</p>";
-            }
-        }
-    </script>
-    <!-- In-Page PAT Token Modal for App WebViews -->
-    <div id="patModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; justify-content:center; align-items:center; padding:20px; box-sizing:border-box;">
-        <div style="background:#2c2c2e; padding:24px; border-radius:12px; max-width:400px; width:100%; color:#fff; font-family:-apple-system, sans-serif;">
-            <h3 style="margin-top:0;">GitHub Token Required</h3>
-            <p style="font-size:0.85rem; color:#8e8e93;">Enter your GitHub Personal Access Token to sync progress from inside Feeeeed:</p>
-            <input type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxx" style="width:100%; padding:10px; margin:12px 0; border-radius:6px; border:1px solid #3a3a3c; background:#1c1c1e; color:#fff; box-sizing:border-box;" />
-            <button onclick="savePATFromModal()" style="width:100%; padding:10px; background:#30d158; border:none; border-radius:6px; font-weight:600; cursor:pointer;">Save Token</button>
+    <div id="patModal" class="modal">
+        <div class="modal-content">
+            <h3>GitHub Token Required</h3>
+            <p class="muted">Enter your GitHub Personal Access Token to sync reading progress.</p>
+            <input type="password" id="patInput" autocomplete="off" placeholder="GitHub token">
+            <button class="btn btn-primary" onclick="savePATFromModal()">Save Token</button>
         </div>
     </div>
+
+    <script src="reviewer_state.js"></script>
+    <script src="pdf_reader_app.js"></script>
 </body>
 </html>
