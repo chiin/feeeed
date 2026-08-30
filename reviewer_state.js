@@ -24,11 +24,16 @@
     }
 
     class DurableOutbox {
-        constructor(storage, deckId, now = () => Date.now()) {
+        constructor(
+            storage,
+            deckId,
+            now = () => Date.now(),
+            keyPrefix = "anki_outbox_v2"
+        ) {
             this.storage = storage;
             this.deckId = deckId;
             this.now = now;
-            this.key = `anki_outbox_v2_${deckId}`;
+            this.key = `${keyPrefix}_${deckId}`;
             this.records = parseStoredArray(storage, this.key);
         }
 
@@ -147,10 +152,22 @@
         return cards;
     }
 
+    function reconcilePdfItems(serverItems, pendingEvents) {
+        const completedIds = new Set(
+            (pendingEvents || [])
+                .filter(event => event.action === "complete")
+                .map(event => event.pdf_id)
+        );
+        return (serverItems || [])
+            .filter(item => !completedIds.has(item.id))
+            .map(item => ({ ...item }));
+    }
+
     return {
         DurableOutbox,
         RETRY_DELAY_MS,
         createReviewEvent,
-        reconcileCards
+        reconcileCards,
+        reconcilePdfItems
     };
 });
