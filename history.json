@@ -2073,48 +2073,248 @@
     }
   },
   "economics": {
-    "last_index": 129,
-    "next_update_at": "2026-08-31T22:18:46.433024+08:00",
-    "completed_files": [
+    "pdf_schema_version": 2,
+    "strategy": "sequential",
+    "revision": 0,
+    "completed_ids": [
       "article_004_Scarcity.pdf",
       "article_005_Utility.pdf",
       "article_003_Economic_man_and_rationality.pdf",
       "article_006_Preferences.pdf"
-    ]
+    ],
+    "completion_counts": {},
+    "processed_events": {},
+    "daily_batch": {
+      "id": "2026-08-30",
+      "date": "2026-08-30",
+      "released_at": "2026-08-30T14:11:56.857309Z",
+      "release_summary_ids": [
+        "article_002_Introduction.pdf",
+        "article_007_Opportunity_cost.pdf",
+        "article_008_Substitutes_and_complements.pdf",
+        "article_009_Normal_and_inferior_goods.pdf",
+        "article_010_Income_and_substitution_effect.pdf"
+      ],
+      "active_ids": [
+        "article_002_Introduction.pdf",
+        "article_007_Opportunity_cost.pdf",
+        "article_008_Substitutes_and_complements.pdf",
+        "article_009_Normal_and_inferior_goods.pdf",
+        "article_010_Income_and_substitution_effect.pdf"
+      ],
+      "selected_ids": [
+        "article_002_Introduction.pdf",
+        "article_007_Opportunity_cost.pdf",
+        "article_008_Substitutes_and_complements.pdf",
+        "article_009_Normal_and_inferior_goods.pdf",
+        "article_010_Income_and_substitution_effect.pdf"
+      ],
+      "segments": [
+        {
+          "kind": "initial",
+          "ids": [
+            "article_002_Introduction.pdf",
+            "article_007_Opportunity_cost.pdf",
+            "article_008_Substitutes_and_complements.pdf",
+            "article_009_Normal_and_inferior_goods.pdf",
+            "article_010_Income_and_substitution_effect.pdf"
+          ]
+        }
+      ]
+    },
+    "next_release_at": "2026-08-31T14:18:46.433024Z"
   },
   "politics": {
-    "shown_files": [
-      "article_110_Social_democracy.pdf",
-      "article_146_Multiculturalism.pdf",
-      "article_096_Marx_philosophy_history.pdf",
-      "article_057_Republic.pdf",
-      "article_082_Constitutionalism.pdf",
-      "article_198_A_shrinking_world.pdf",
-      "article_188_Transnational_corporations.pdf"
-    ],
-    "last_index": 105,
-    "next_update_at": "2026-08-31T17:42:46.746910+08:00"
+    "pdf_schema_version": 2,
+    "strategy": "random_without_replacement",
+    "revision": 0,
+    "completed_ids": [],
+    "completion_counts": {},
+    "processed_events": {},
+    "daily_batch": {
+      "id": "2026-08-30",
+      "date": "2026-08-30",
+      "released_at": "2026-08-30T12:41:45.107716Z",
+      "release_summary_ids": [
+        "article_001_Introduction.pdf",
+        "article_002_The_evolution_of_politics.pdf",
+        "article_003_Government_and_leadership.pdf",
+        "article_004_Hierarchies.pdf",
+        "article_005_The_Greeks_and_the_city-state.pdf"
+      ],
+      "active_ids": [
+        "article_001_Introduction.pdf",
+        "article_002_The_evolution_of_politics.pdf",
+        "article_003_Government_and_leadership.pdf",
+        "article_004_Hierarchies.pdf",
+        "article_005_The_Greeks_and_the_city-state.pdf"
+      ],
+      "selected_ids": [
+        "article_001_Introduction.pdf",
+        "article_002_The_evolution_of_politics.pdf",
+        "article_003_Government_and_leadership.pdf",
+        "article_004_Hierarchies.pdf",
+        "article_005_The_Greeks_and_the_city-state.pdf"
+      ],
+      "segments": [
+        {
+          "kind": "initial",
+          "ids": [
+            "article_001_Introduction.pdf",
+            "article_002_The_evolution_of_politics.pdf",
+            "article_003_Government_and_leadership.pdf",
+            "article_004_Hierarchies.pdf",
+            "article_005_The_Greeks_and_the_city-state.pdf"
+          ]
+        }
+      ]
+    },
+    "next_release_at": "2026-08-31T09:42:46.746910Z"
   },
   "philosophy": {
-    "last_index": 105,
-    "next_update_at": "2026-08-31T14:14:08.662924+08:00"
+    "pdf_schema_version": 2,
+    "strategy": "random_with_replacement",
+    "revision": 0,
+    "completed_ids": [],
+    "completion_counts": {},
+    "processed_events": {},
+    "daily_batch": {
+      "id": "2026-08-30",
+      "date": "2026-08-30",
+      "released_at": "2026-08-30T07:31:00.293887Z",
+      "release_summary_ids": [
+        "article_001_Introduction.pdf",
+        "article_002_Branches_of_philosophy.pdf",
+        "article_003_Metaphysics.pdf",
+        "article_004_Epistemology.pdf",
+        "article_005_Ontology.pdf"
+      ],
+      "active_ids": [
+        "article_001_Introduction.pdf",
+        "article_002_Branches_of_philosophy.pdf",
+        "article_003_Metaphysics.pdf",
+        "article_004_Epistemology.pdf",
+        "article_005_Ontology.pdf"
+      ],
+      "selected_ids": [
+        "article_001_Introduction.pdf",
+        "article_002_Branches_of_philosophy.pdf",
+        "article_003_Metaphysics.pdf",
+        "article_004_Epistemology.pdf",
+        "article_005_Ontology.pdf"
+      ],
+      "segments": [
+        {
+          "kind": "initial",
+          "ids": [
+            "article_001_Introduction.pdf",
+            "article_002_Branches_of_philosophy.pdf",
+            "article_003_Metaphysics.pdf",
+            "article_004_Epistemology.pdf",
+            "article_005_Ontology.pdf"
+          ]
+        }
+      ]
+    },
+    "next_release_at": "2026-08-31T06:14:08.662924Z"
   },
   "book_1": {
-    "current_index": 6
+    "current_index": 6,
+    "active_chapter_index": 6,
+    "chapter_started_at": "2026-08-30T15:30:39.766949+00:00"
   },
   "architecture": {
-    "last_index": 73,
-    "next_update_at": "2026-08-31T20:01:36.628651+08:00",
-    "completed_files": [
-      "article_002_Megaliths.pdf",
-      "article_001_Introduction.pdf"
-    ]
+    "pdf_schema_version": 2,
+    "strategy": "random_with_replacement",
+    "revision": 0,
+    "completed_ids": [],
+    "completion_counts": {},
+    "processed_events": {},
+    "daily_batch": {
+      "id": "2026-08-30",
+      "date": "2026-08-30",
+      "released_at": "2026-08-30T13:26:15.252773Z",
+      "release_summary_ids": [
+        "article_003_Mesopotamia_and_Persia.pdf",
+        "article_004_Sumerian_ziggurats.pdf",
+        "article_005_Egyptian_pyramids.pdf",
+        "article_006_Ancient_Egyptian_temples.pdf",
+        "article_007_Assyrian_fortifications_and.pdf"
+      ],
+      "active_ids": [
+        "article_003_Mesopotamia_and_Persia.pdf",
+        "article_004_Sumerian_ziggurats.pdf",
+        "article_005_Egyptian_pyramids.pdf",
+        "article_006_Ancient_Egyptian_temples.pdf",
+        "article_007_Assyrian_fortifications_and.pdf"
+      ],
+      "selected_ids": [
+        "article_003_Mesopotamia_and_Persia.pdf",
+        "article_004_Sumerian_ziggurats.pdf",
+        "article_005_Egyptian_pyramids.pdf",
+        "article_006_Ancient_Egyptian_temples.pdf",
+        "article_007_Assyrian_fortifications_and.pdf"
+      ],
+      "segments": [
+        {
+          "kind": "initial",
+          "ids": [
+            "article_003_Mesopotamia_and_Persia.pdf",
+            "article_004_Sumerian_ziggurats.pdf",
+            "article_005_Egyptian_pyramids.pdf",
+            "article_006_Ancient_Egyptian_temples.pdf",
+            "article_007_Assyrian_fortifications_and.pdf"
+          ]
+        }
+      ]
+    },
+    "next_release_at": "2026-08-31T12:01:36.628651Z"
   },
   "art_history": {
-    "last_index": 63,
-    "next_update_at": "2026-08-31T15:08:57.126603+08:00",
-    "completed_files": [
-      "article_001_Introduction.pdf"
-    ]
+    "pdf_schema_version": 2,
+    "strategy": "random_with_replacement",
+    "revision": 0,
+    "completed_ids": [],
+    "completion_counts": {},
+    "processed_events": {},
+    "daily_batch": {
+      "id": "2026-08-30",
+      "date": "2026-08-30",
+      "released_at": "2026-08-30T07:31:00.296390Z",
+      "release_summary_ids": [
+        "article_002_Stone_Age_sculpture.pdf",
+        "article_003_Stone_Age_painting.pdf",
+        "article_004_Sumerian_and_Akkadian_art.pdf",
+        "article_005_Babylonian_and_Assyrian_art.pdf",
+        "article_006_Ancient_Egyptian_sculpture.pdf"
+      ],
+      "active_ids": [
+        "article_002_Stone_Age_sculpture.pdf",
+        "article_003_Stone_Age_painting.pdf",
+        "article_004_Sumerian_and_Akkadian_art.pdf",
+        "article_005_Babylonian_and_Assyrian_art.pdf",
+        "article_006_Ancient_Egyptian_sculpture.pdf"
+      ],
+      "selected_ids": [
+        "article_002_Stone_Age_sculpture.pdf",
+        "article_003_Stone_Age_painting.pdf",
+        "article_004_Sumerian_and_Akkadian_art.pdf",
+        "article_005_Babylonian_and_Assyrian_art.pdf",
+        "article_006_Ancient_Egyptian_sculpture.pdf"
+      ],
+      "segments": [
+        {
+          "kind": "initial",
+          "ids": [
+            "article_002_Stone_Age_sculpture.pdf",
+            "article_003_Stone_Age_painting.pdf",
+            "article_004_Sumerian_and_Akkadian_art.pdf",
+            "article_005_Babylonian_and_Assyrian_art.pdf",
+            "article_006_Ancient_Egyptian_sculpture.pdf"
+          ]
+        }
+      ]
+    },
+    "next_release_at": "2026-08-31T07:08:57.126603Z"
   }
 }
