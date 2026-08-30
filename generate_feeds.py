@@ -6,6 +6,12 @@ import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from feedgen.feed import FeedGenerator
+from anki_scheduler import (
+    DeterministicScheduler,
+    apply_review_events,
+    build_deck_snapshot,
+    ensure_daily_batch,
+)
 
 CONFIG_PATH = Path("config.json")
 HISTORY_PATH = Path("history.json")
@@ -59,8 +65,16 @@ def get_dispatch_payload() -> dict:
         try:
             with open(event_path, "r", encoding="utf-8") as f:
                 event_data = json.load(f)
-                return event_data.get("client_payload", {})
-        except Exception as e:
+                payload = event_data.get("client_payload", {})
+                if not isinstance(payload, dict):
+                    raise ValueError("client_payload must be an object")
+                normalized = dict(payload)
+                normalized.setdefault(
+                    "event_type",
+                    event_data.get("action") or event_data.get("event_type"),
+                )
+                return normalized
+        except (OSError, ValueError, json.JSONDecodeError) as e:
             print(f"Error reading event dispatch payload: {e}")
     return {}
 
@@ -423,6 +437,7 @@ def process_book_queue(stream_key: str, stream_cfg: dict, stream_history: dict, 
 
     card_web_url = create_book_reader_html(stream_key, active_pdf.stem, pdf_url)
 
+    now_hkt = datetime.now(timezone(timedelta(hours=8)))
     # Generate a unique timestamp for the item GUID
     timestamp = int(now_hkt.timestamp())
     now_utc = datetime.now(timezone.utc)
@@ -645,7 +660,16 @@ def parse_media_folder(folder_path: Path, base_url: str) -> list[dict]:
 
 # --- PROCESSOR FOR ANKI DECKS ---
 
-def process_anki_deck(stream_key: str, stream_cfg: dict, stream_history: dict, fg, base_url: str, dispatch_payload: dict):
+def process_anki_deck(
+    stream_key: str,
+    stream_cfg: dict,
+    stream_history: dict,
+    fg,
+    base_url: str,
+    dispatch_payload: dict,
+    now: datetime | None = None,
+):
+    now = now or datetime.now(timezone.utc)
     source_type = stream_cfg.get("source_type", "csv")
     path = Path(stream_cfg["path"])
     
@@ -661,84 +685,59 @@ def process_anki_deck(stream_key: str, stream_cfg: dict, stream_history: dict, f
     else:
         return
 
-    # 2. Process Session Batch Dispatch from Web App
-    if dispatch_payload.get("stream") == stream_key and dispatch_payload.get("event_type") == "anki_session":
-        session_results = dispatch_payload.get("results", [])
-        for res in session_results:
-            cid = res["id"]
-            stream_history[cid] = {
-                "state": res["state"],
-                "easiness_factor": res["easiness_factor"],
-                "interval": res["interval"],
-                "repetitions": res["repetitions"],
-                "last_reviewed": datetime.now(timezone.utc).isoformat(),
-                "next_due": res["next_due"]
-            }
-        print(f"[{stream_key}] Processed Anki review session: {len(session_results)} cards updated.")
+    # The HKT rollover freezes membership before any reviews mutate the batch.
+    batch = ensure_daily_batch(
+        stream_history,
+        [card["id"] for card in all_cards],
+        stream_cfg.get("new_cards_per_day", 50),
+        now,
+    )
 
-    # 3. Filter Due Cards via SM-2 History
-    now_iso = datetime.now(timezone.utc).isoformat()
-    due_cards = []
-    new_cards = []
+    if (
+        dispatch_payload.get("event_type") == "anki_review"
+        and dispatch_payload.get("deck_id") == stream_key
+    ):
+        raw_events = dispatch_payload.get("events")
+        if raw_events is None:
+            raw_events = [dispatch_payload]
+        if not isinstance(raw_events, list):
+            print(f"[{stream_key}] Ignoring Anki dispatch: events must be a list.")
+        else:
+            result = apply_review_events(
+                stream_key, stream_history, raw_events, now
+            )
+            print(f"[{stream_key}] Processed Anki reviews: {result}.")
 
-    for card in all_cards:
-        cid = card["id"]
-        c_history = stream_history.get(cid)
-        
-        if not c_history:
-            new_cards.append(card)
-        elif c_history.get("next_due", "") <= now_iso:
-            card["sm2"] = c_history
-            due_cards.append(card)
-
-    # Limit new cards per day according to config
-    new_limit = stream_cfg.get("new_cards_per_day", 5)
-    selected_new = new_cards[:new_limit]
-    for c in selected_new:
-        c["sm2"] = {
-            "state": "new",
-            "easiness_factor": 2.5,
-            "interval": 0,
-            "repetitions": 0
-        }
-
-    session_queue = due_cards + selected_new
-    if not session_queue:
+    scheduler = DeterministicScheduler()
+    compiled_payload = build_deck_snapshot(
+        stream_key,
+        stream_cfg.get("feed_title", stream_key.title()),
+        all_cards,
+        stream_history,
+        now,
+        scheduler,
+    )
+    if not compiled_payload["cards"]:
         print(f"[{stream_key}] No cards due today!")
 
-    # Shuffle the queue so cards don't appear in CSV order
-    random.shuffle(session_queue)
-
-    # 4. Save Compiled Deck JSON for the Web App Reviewer
+    # Save the authoritative active batch snapshot for the reviewer.
     cards_dir = Path("cards")
     cards_dir.mkdir(exist_ok=True)
     deck_json_path = cards_dir / f"{stream_key}_deck.json"
     
-    compiled_payload = {
-        "deck_id": stream_key,
-        "title": stream_cfg.get("feed_title", stream_key.title()),
-        "compiled_at": datetime.now(timezone.utc).isoformat(),
-        "cards": session_queue
-    }
-    
     with open(deck_json_path, "w", encoding="utf-8") as f:
         json.dump(compiled_payload, f, indent=2)
 
-    # 5. Generate Single Daily RSS Item
+    # Reuse one GUID for the HKT day so review updates do not create unread items.
     web_reviewer_url = f"{base_url}/reviewer.html?deck={stream_key}"
-    card_count = len(session_queue)
-
-    # Generate a unique timestamp for the item GUID
-    now_utc = datetime.now(timezone.utc)
-    timestamp = int(now_utc.timestamp())
+    card_count = len(compiled_payload["cards"])
     
     fe = fg.add_entry()
-    # Adding timestamp guarantees Feeeed sees every queue update as a fresh unread item
-    fe.id(f"{stream_key}-pdf-batch-{timestamp}")
+    fe.id(f"{stream_key}-anki-batch-{batch['date']}")
     fe.title(f"[{stream_cfg.get('feed_title', stream_key.title())}] {card_count} Cards Due")
     fe.link(href=web_reviewer_url)
     fe.description(f"Tap to start today's review session ({card_count} cards pending).")
-    fe.pubDate(now_utc)
+    fe.pubDate(datetime.fromisoformat(batch["created_at"].replace("Z", "+00:00")))
 
     # 6. Export RSS file
     rss_filepath = Path(f"{stream_key}.xml")
@@ -747,3 +746,4 @@ def process_anki_deck(stream_key: str, stream_cfg: dict, stream_history: dict, f
 
 if __name__ == "__main__":
     main()
+
