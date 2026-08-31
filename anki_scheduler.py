@@ -1,16 +1,29 @@
 from __future__ import annotations
 
-import math
 from dataclasses import dataclass
 from datetime import date, datetime, time, timedelta, timezone
 from typing import Iterable
 
+from fsrs import Card, Rating, Scheduler, State
+
 
 HKT = timezone(timedelta(hours=8))
-SCHEMA_VERSION = 2
-SCHEDULER_NAME = "deterministic-v1"
+SCHEMA_VERSION = 3
+SCHEDULER_NAME = "fsrs-6.3.2"
+SCHEDULER_VERSION = 1
+DESIRED_RETENTION = 0.9
 RATINGS = {"again", "hard", "good", "easy"}
-LEGACY_BOX_INTERVALS = {1: 1, 2: 3, 3: 7, 4: 14, 5: 30}
+RATING_MAP = {
+    "again": Rating.Again,
+    "hard": Rating.Hard,
+    "good": Rating.Good,
+    "easy": Rating.Easy,
+}
+STATE_MAP = {
+    "learning": State.Learning,
+    "review": State.Review,
+    "relearning": State.Relearning,
+}
 STATE_KEYS = {
     "schema_version",
     "scheduler",
@@ -47,20 +60,42 @@ def next_hkt_rollover(reviewed_at: datetime, days: int) -> datetime:
     return hkt_midnight(hkt_day(reviewed_at) + timedelta(days=days))
 
 
-def _rounded_days(value: float) -> int:
-    return max(1, math.floor(value + 0.5))
-
-
 @dataclass(frozen=True)
 class ScheduleResult:
     state: str
+    step: int | None
+    stability: float
+    difficulty: float
     interval_days: int
-    repetitions: int
+    reviews: int
+    lapses: int
+    last_reviewed_at: datetime
     next_due_at: datetime
 
 
-class DeterministicScheduler:
+class FSRSScheduler:
     name = SCHEDULER_NAME
+
+    def __init__(self) -> None:
+        self.scheduler = Scheduler(
+            desired_retention=DESIRED_RETENTION,
+            learning_steps=(),
+            relearning_steps=(),
+            enable_fuzzing=False,
+        )
+
+    def _card(self, card_state: dict | None, reviewed_at: datetime) -> Card:
+        if not card_state:
+            return Card(card_id=0, due=reviewed_at)
+        return Card(
+            card_id=0,
+            state=STATE_MAP[card_state["state"]],
+            step=card_state.get("step"),
+            stability=float(card_state["stability"]),
+            difficulty=float(card_state["difficulty"]),
+            due=parse_datetime(card_state["next_due_at"]),
+            last_review=parse_datetime(card_state["last_reviewed_at"]),
+        )
 
     def schedule(
         self, card_state: dict | None, rating: str, reviewed_at: datetime
@@ -68,117 +103,76 @@ class DeterministicScheduler:
         if rating not in RATINGS:
             raise ValueError(f"unsupported rating: {rating}")
 
-        current = card_state or {}
-        interval = max(0, int(current.get("interval_days", 0)))
-        repetitions = max(0, int(current.get("repetitions", 0)))
-
+        reviewed_at = reviewed_at.astimezone(timezone.utc)
+        card = self._card(card_state, reviewed_at)
+        updated, _review_log = self.scheduler.review_card(
+            card, RATING_MAP[rating], review_datetime=reviewed_at
+        )
+        reviews = max(0, int((card_state or {}).get("reviews", 0))) + 1
+        lapses = max(0, int((card_state or {}).get("lapses", 0)))
         if rating == "again":
-            return ScheduleResult(
-                state="relearning",
-                interval_days=0,
-                repetitions=0,
-                next_due_at=reviewed_at + timedelta(minutes=10),
-            )
-
-        if rating == "hard":
-            next_interval = 1 if interval == 0 else _rounded_days(interval * 1.2)
-            next_repetitions = repetitions
-        elif rating == "good":
-            if repetitions == 0:
-                next_interval = 1
-            elif repetitions == 1:
-                next_interval = 3
-            else:
-                next_interval = _rounded_days(interval * 2.5)
-            next_repetitions = repetitions + 1
+            next_due_at = reviewed_at + timedelta(minutes=10)
+            state = "relearning"
+            step = 0
+            if card_state:
+                lapses += 1
+            interval_days = 0
         else:
-            next_interval = 4 if repetitions == 0 else _rounded_days(interval * 3.25)
-            next_repetitions = repetitions + 1
+            interval_days = max(1, (updated.due - reviewed_at).days)
+            next_due_at = next_hkt_rollover(reviewed_at, interval_days)
+            state = "review"
+            step = None
 
         return ScheduleResult(
-            state="review",
-            interval_days=next_interval,
-            repetitions=next_repetitions,
-            next_due_at=next_hkt_rollover(reviewed_at, next_interval),
+            state=state,
+            step=step,
+            stability=float(updated.stability),
+            difficulty=float(updated.difficulty),
+            interval_days=interval_days,
+            reviews=reviews,
+            lapses=lapses,
+            last_reviewed_at=reviewed_at,
+            next_due_at=next_due_at,
         )
 
-    def previews(self, card_state: dict | None) -> dict[str, str]:
-        current = card_state or {}
-        interval = max(0, int(current.get("interval_days", 0)))
-        repetitions = max(0, int(current.get("repetitions", 0)))
-        hard = 1 if interval == 0 else _rounded_days(interval * 1.2)
-        if repetitions == 0:
-            good = 1
-        elif repetitions == 1:
-            good = 3
-        else:
-            good = _rounded_days(interval * 2.5)
-        easy = 4 if repetitions == 0 else _rounded_days(interval * 3.25)
-        return {
-            "again": "10m",
-            "hard": f"{hard}d",
-            "good": f"{good}d",
-            "easy": f"{easy}d",
-        }
-
-
-def _migrate_card_state(card_state: dict) -> dict:
-    if "next_due_at" in card_state:
-        return {
-            "state": card_state.get("state", "review"),
-            "interval_days": max(0, int(card_state.get("interval_days", 0))),
-            "repetitions": max(0, int(card_state.get("repetitions", 0))),
-            "last_reviewed_at": card_state.get("last_reviewed_at"),
-            "next_due_at": card_state["next_due_at"],
-        }
-
-    if "next_due" in card_state:
-        return {
-            "state": card_state.get("state", "review"),
-            "interval_days": max(0, int(card_state.get("interval", 0))),
-            "repetitions": max(0, int(card_state.get("repetitions", 0))),
-            "last_reviewed_at": card_state.get("last_reviewed"),
-            "next_due_at": card_state["next_due"],
-        }
-
-    if "last_shown" in card_state:
-        last_reviewed = parse_datetime(card_state["last_shown"])
-        interval = LEGACY_BOX_INTERVALS.get(int(card_state.get("box", 1)), 1)
-        return {
-            "state": "review",
-            "interval_days": interval,
-            "repetitions": max(0, int(card_state.get("times_shown", 0))),
-            "last_reviewed_at": isoformat_utc(last_reviewed),
-            "next_due_at": isoformat_utc(next_hkt_rollover(last_reviewed, interval)),
-        }
-
-    raise ValueError("unrecognized card history record")
+    def previews(
+        self, card_state: dict | None, reviewed_at: datetime
+    ) -> dict[str, str]:
+        previews = {"again": "10m"}
+        for rating in ("hard", "good", "easy"):
+            result = self.schedule(card_state, rating, reviewed_at)
+            previews[rating] = f"{result.interval_days}d"
+        return previews
 
 
 def migrate_history(stream_history: dict) -> dict:
-    existing_cards = stream_history.get("cards", {})
     legacy_cards = {
         key: value
         for key, value in list(stream_history.items())
         if key not in STATE_KEYS and isinstance(value, dict)
     }
-    merged_cards = {**legacy_cards, **existing_cards}
-    migrated_cards = {}
-    for card_id, card_state in merged_cards.items():
-        try:
-            migrated_cards[card_id] = _migrate_card_state(card_state)
-        except (TypeError, ValueError):
-            print(f"Ignoring invalid legacy Anki state for card '{card_id}'.")
-
     for card_id in legacy_cards:
         del stream_history[card_id]
+
+    current_scheduler = stream_history.get("scheduler", {})
+    reset_cards = (
+        stream_history.get("schema_version") != SCHEMA_VERSION
+        or current_scheduler.get("name") != SCHEDULER_NAME
+        or current_scheduler.get("version") != SCHEDULER_VERSION
+    )
+    if reset_cards and (legacy_cards or stream_history.get("cards")):
+        print("Resetting incompatible Anki card state for FSRS migration.")
 
     stream_history.update(
         {
             "schema_version": SCHEMA_VERSION,
-            "scheduler": {"name": SCHEDULER_NAME, "version": 1},
+            "scheduler": {
+                "name": SCHEDULER_NAME,
+                "version": SCHEDULER_VERSION,
+                "desired_retention": DESIRED_RETENTION,
+            },
             "revision": max(0, int(stream_history.get("revision", 0))),
-            "cards": migrated_cards,
+            "cards": {} if reset_cards else stream_history.get("cards", {}),
             "processed_events": stream_history.get("processed_events", {}),
         }
     )
@@ -279,10 +273,10 @@ def apply_review_events(
     stream_history: dict,
     events: Iterable[dict],
     now: datetime,
-    scheduler: DeterministicScheduler | None = None,
+    scheduler: FSRSScheduler | None = None,
 ) -> dict[str, int]:
     migrate_history(stream_history)
-    scheduler = scheduler or DeterministicScheduler()
+    scheduler = scheduler or FSRSScheduler()
     processed = stream_history["processed_events"]
     current_batch = stream_history.get("daily_batch")
     previous_batch = stream_history.get("previous_batch")
@@ -338,14 +332,24 @@ def apply_review_events(
             counts["stale"] += 1
             continue
 
-        result = scheduler.schedule(
-            stream_history["cards"].get(card_id), rating, reviewed_at
-        )
+        current_state = stream_history["cards"].get(card_id)
+        if (
+            current_state
+            and parse_datetime(current_state["last_reviewed_at"]) > reviewed_at
+        ):
+            counts["stale"] += 1
+            continue
+
+        result = scheduler.schedule(current_state, rating, reviewed_at)
         stream_history["cards"][card_id] = {
             "state": result.state,
+            "step": result.step,
+            "stability": result.stability,
+            "difficulty": result.difficulty,
             "interval_days": result.interval_days,
-            "repetitions": result.repetitions,
-            "last_reviewed_at": isoformat_utc(reviewed_at),
+            "reviews": result.reviews,
+            "lapses": result.lapses,
+            "last_reviewed_at": isoformat_utc(result.last_reviewed_at),
             "next_due_at": isoformat_utc(result.next_due_at),
         }
         del batch["active"][active_index]
@@ -385,9 +389,9 @@ def build_deck_snapshot(
     all_cards: list[dict],
     stream_history: dict,
     now: datetime,
-    scheduler: DeterministicScheduler | None = None,
+    scheduler: FSRSScheduler | None = None,
 ) -> dict:
-    scheduler = scheduler or DeterministicScheduler()
+    scheduler = scheduler or FSRSScheduler()
     batch = stream_history["daily_batch"]
     cards_by_id = {card["id"]: card for card in all_cards}
     active_cards = []
@@ -401,7 +405,7 @@ def build_deck_snapshot(
                 **card,
                 "available_at": item["available_at"],
                 "scheduler_state": state,
-                "schedule_previews": scheduler.previews(state),
+                "schedule_previews": scheduler.previews(state, now),
             }
         )
     return {
@@ -415,3 +419,4 @@ def build_deck_snapshot(
         "processed_event_ids": list(stream_history["processed_events"]),
         "cards": active_cards,
     }
+
