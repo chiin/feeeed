@@ -2572,10 +2572,19 @@
   "politics": {
     "pdf_schema_version": 2,
     "strategy": "random_without_replacement",
-    "revision": 1,
-    "completed_ids": [],
-    "completion_counts": {},
-    "processed_events": {},
+    "revision": 2,
+    "completed_ids": [
+      "article_001_Introduction.pdf"
+    ],
+    "completion_counts": {
+      "article_001_Introduction.pdf": 1
+    },
+    "processed_events": {
+      "e1e6daff-62a5-48ec-9e53-6304f9957e7f": {
+        "processed_at": "2026-08-31T11:54:49.926401Z",
+        "status": "applied"
+      }
+    },
     "daily_batch": {
       "id": "2026-08-31",
       "date": "2026-08-31",
@@ -2588,7 +2597,6 @@
         "article_005_The_Greeks_and_the_city-state.pdf"
       ],
       "active_ids": [
-        "article_001_Introduction.pdf",
         "article_002_The_evolution_of_politics.pdf",
         "article_003_Government_and_leadership.pdf",
         "article_004_Hierarchies.pdf",
