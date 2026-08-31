@@ -941,10 +941,10 @@
       },
       "hsk-0063": {
         "state": "review",
-        "interval_days": 3,
-        "repetitions": 2,
-        "last_reviewed_at": "2026-08-12T07:07:39.444711Z",
-        "next_due_at": "2026-08-14T16:00:00Z"
+        "interval_days": 8,
+        "repetitions": 3,
+        "last_reviewed_at": "2026-08-31T11:51:42.881000Z",
+        "next_due_at": "2026-09-07T16:00:00Z"
       },
       "hsk-0068": {
         "state": "review",
@@ -1351,7 +1351,7 @@
       "name": "deterministic-v1",
       "version": 1
     },
-    "revision": 104,
+    "revision": 105,
     "processed_events": {
       "9b388466-e31d-4df5-9102-05901dfbc03a": {
         "processed_at": "2026-08-30T08:03:20.615217Z",
@@ -1760,6 +1760,10 @@
       "c4b856dc-2744-465a-bff1-70f4bdf2c898": {
         "processed_at": "2026-08-31T09:19:36.053725Z",
         "status": "applied"
+      },
+      "a04eb983-b41e-47eb-8935-ee2b298786fc": {
+        "processed_at": "2026-08-31T11:52:16.038495Z",
+        "status": "applied"
       }
     },
     "daily_batch": {
@@ -1849,10 +1853,6 @@
         "hsk-0014"
       ],
       "active": [
-        {
-          "card_id": "hsk-0063",
-          "available_at": "2026-08-30T16:00:00Z"
-        },
         {
           "card_id": "hsk-0064",
           "available_at": "2026-08-30T16:00:00Z"
@@ -2572,14 +2572,14 @@
   "politics": {
     "pdf_schema_version": 2,
     "strategy": "random_without_replacement",
-    "revision": 0,
+    "revision": 1,
     "completed_ids": [],
     "completion_counts": {},
     "processed_events": {},
     "daily_batch": {
-      "id": "2026-08-30",
-      "date": "2026-08-30",
-      "released_at": "2026-08-30T12:41:45.107716Z",
+      "id": "2026-08-31",
+      "date": "2026-08-31",
+      "released_at": "2026-08-31T11:52:16.042847Z",
       "release_summary_ids": [
         "article_001_Introduction.pdf",
         "article_002_The_evolution_of_politics.pdf",
@@ -2614,7 +2614,7 @@
         }
       ]
     },
-    "next_release_at": "2026-08-31T09:42:46.746910Z"
+    "next_release_at": "2026-09-01T13:00:00Z"
   },
   "philosophy": {
     "pdf_schema_version": 2,
