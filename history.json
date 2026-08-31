@@ -2484,7 +2484,7 @@
   "economics": {
     "pdf_schema_version": 2,
     "strategy": "sequential",
-    "revision": 5,
+    "revision": 6,
     "completed_ids": [
       "article_004_Scarcity.pdf",
       "article_005_Utility.pdf",
@@ -2523,41 +2523,51 @@
       "aac835e3-3142-4a78-b922-4c20208b686a": {
         "processed_at": "2026-08-31T09:11:37.094337Z",
         "status": "applied"
+      },
+      "91313579-4cc2-48d3-b294-99311e3d3c32": {
+        "processed_at": "2026-08-31T09:18:24.591379Z",
+        "status": "stale"
       }
     },
     "daily_batch": {
-      "id": "2026-08-30",
-      "date": "2026-08-30",
-      "released_at": "2026-08-30T14:11:56.857309Z",
+      "id": "2026-08-31",
+      "date": "2026-08-31",
+      "released_at": "2026-08-31T09:18:24.591379Z",
       "release_summary_ids": [
-        "article_002_Introduction.pdf",
-        "article_007_Opportunity_cost.pdf",
-        "article_008_Substitutes_and_complements.pdf",
-        "article_009_Normal_and_inferior_goods.pdf",
-        "article_010_Income_and_substitution_effect.pdf"
+        "article_011_Consumer_surplus.pdf",
+        "article_012_Engels_law.pdf",
+        "article_013_Time_and_discounting.pdf",
+        "article_014_Labour_supply.pdf",
+        "article_015_The_paradox_of_value.pdf"
       ],
-      "active_ids": [],
+      "active_ids": [
+        "article_011_Consumer_surplus.pdf",
+        "article_012_Engels_law.pdf",
+        "article_013_Time_and_discounting.pdf",
+        "article_014_Labour_supply.pdf",
+        "article_015_The_paradox_of_value.pdf"
+      ],
       "selected_ids": [
-        "article_002_Introduction.pdf",
-        "article_007_Opportunity_cost.pdf",
-        "article_008_Substitutes_and_complements.pdf",
-        "article_009_Normal_and_inferior_goods.pdf",
-        "article_010_Income_and_substitution_effect.pdf"
+        "article_011_Consumer_surplus.pdf",
+        "article_012_Engels_law.pdf",
+        "article_013_Time_and_discounting.pdf",
+        "article_014_Labour_supply.pdf",
+        "article_015_The_paradox_of_value.pdf"
       ],
       "segments": [
         {
           "kind": "initial",
           "ids": [
-            "article_002_Introduction.pdf",
-            "article_007_Opportunity_cost.pdf",
-            "article_008_Substitutes_and_complements.pdf",
-            "article_009_Normal_and_inferior_goods.pdf",
-            "article_010_Income_and_substitution_effect.pdf"
+            "article_011_Consumer_surplus.pdf",
+            "article_012_Engels_law.pdf",
+            "article_013_Time_and_discounting.pdf",
+            "article_014_Labour_supply.pdf",
+            "article_015_The_paradox_of_value.pdf"
           ]
         }
       ]
     },
-    "next_release_at": "2026-08-31T14:18:46.433024Z"
+    "next_release_at": "2026-09-01T06:36:00Z"
   },
   "politics": {
     "pdf_schema_version": 2,
