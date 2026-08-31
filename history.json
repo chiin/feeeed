@@ -2793,10 +2793,17 @@
   "art_history": {
     "pdf_schema_version": 2,
     "strategy": "random_with_replacement",
-    "revision": 1,
+    "revision": 2,
     "completed_ids": [],
-    "completion_counts": {},
-    "processed_events": {},
+    "completion_counts": {
+      "article_002_Stone_Age_sculpture.pdf": 1
+    },
+    "processed_events": {
+      "15d26b50-d32b-4374-9b49-e131f8f0840b": {
+        "processed_at": "2026-08-31T15:37:19.019188Z",
+        "status": "applied"
+      }
+    },
     "daily_batch": {
       "id": "2026-08-31",
       "date": "2026-08-31",
@@ -2809,7 +2816,6 @@
         "article_006_Ancient_Egyptian_sculpture.pdf"
       ],
       "active_ids": [
-        "article_002_Stone_Age_sculpture.pdf",
         "article_003_Stone_Age_painting.pdf",
         "article_004_Sumerian_and_Akkadian_art.pdf",
         "article_005_Babylonian_and_Assyrian_art.pdf",
