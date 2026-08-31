@@ -7,7 +7,10 @@ from pathlib import Path
 from unittest.mock import patch
 
 from anki_scheduler import (
-    DeterministicScheduler,
+    FSRSScheduler,
+    SCHEMA_VERSION,
+    SCHEDULER_NAME,
+    SCHEDULER_VERSION,
     apply_review_events,
     build_deck_snapshot,
     ensure_daily_batch,
@@ -20,6 +23,37 @@ NOW = datetime(2026, 8, 30, 2, 0, tzinfo=timezone.utc)
 ROLLOVER = datetime(2026, 8, 29, 16, 0, tzinfo=timezone.utc)
 
 
+def fsrs_history(cards=None):
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "scheduler": {
+            "name": SCHEDULER_NAME,
+            "version": SCHEDULER_VERSION,
+            "desired_retention": 0.9,
+        },
+        "cards": cards or {},
+    }
+
+
+def fsrs_card_state(
+    last_reviewed_at="2026-08-28T16:00:00Z",
+    next_due_at="2026-08-29T16:00:00Z",
+    state="review",
+    step=None,
+):
+    return {
+        "state": state,
+        "step": step,
+        "stability": 1.2931,
+        "difficulty": 5.112170705601056,
+        "interval_days": 1,
+        "reviews": 1,
+        "lapses": 0,
+        "last_reviewed_at": last_reviewed_at,
+        "next_due_at": next_due_at,
+    }
+
+
 def review_event(event_id, card_id, rating, reviewed_at=NOW):
     return {
         "event_id": event_id,
@@ -30,29 +64,60 @@ def review_event(event_id, card_id, rating, reviewed_at=NOW):
     }
 
 
-class DeterministicSchedulerTests(unittest.TestCase):
-    def test_confirmed_rating_defaults(self):
-        scheduler = DeterministicScheduler()
+class FSRSSchedulerTests(unittest.TestCase):
+    def test_default_fsrs_ratings_are_ordered_and_hkt_anchored(self):
+        scheduler = FSRSScheduler()
         new_hard = scheduler.schedule(None, "hard", NOW)
         new_good = scheduler.schedule(None, "good", NOW)
         new_easy = scheduler.schedule(None, "easy", NOW)
-        mature = {"interval_days": 10, "repetitions": 3}
 
         self.assertEqual(new_hard.interval_days, 1)
-        self.assertEqual(new_good.interval_days, 1)
-        self.assertEqual(new_easy.interval_days, 4)
-        self.assertEqual(scheduler.schedule(mature, "hard", NOW).interval_days, 12)
-        self.assertEqual(scheduler.schedule(mature, "good", NOW).interval_days, 25)
-        self.assertEqual(scheduler.schedule(mature, "easy", NOW).interval_days, 33)
+        self.assertLess(new_hard.interval_days, new_good.interval_days)
+        self.assertLess(new_good.interval_days, new_easy.interval_days)
+        self.assertLess(new_hard.stability, new_good.stability)
+        self.assertLess(new_good.stability, new_easy.stability)
         self.assertEqual(
             new_good.next_due_at,
-            datetime(2026, 8, 30, 16, 0, tzinfo=timezone.utc),
+            datetime(2026, 9, 1, 0, 0, tzinfo=timezone(timedelta(hours=8))),
         )
 
     def test_again_is_due_in_ten_minutes(self):
-        result = DeterministicScheduler().schedule(None, "again", NOW)
+        result = FSRSScheduler().schedule(None, "again", NOW)
         self.assertEqual(result.next_due_at, NOW + timedelta(minutes=10))
         self.assertEqual(result.state, "relearning")
+        self.assertEqual(result.step, 0)
+
+    def test_repeated_good_increases_stability_and_interval(self):
+        scheduler = FSRSScheduler()
+        first = scheduler.schedule(None, "good", NOW)
+        state = {
+            "state": first.state,
+            "step": first.step,
+            "stability": first.stability,
+            "difficulty": first.difficulty,
+            "interval_days": first.interval_days,
+            "reviews": first.reviews,
+            "lapses": first.lapses,
+            "last_reviewed_at": first.last_reviewed_at.isoformat(),
+            "next_due_at": first.next_due_at.isoformat(),
+        }
+        second_review = first.next_due_at.astimezone(timezone.utc)
+        second = scheduler.schedule(state, "good", second_review)
+
+        self.assertGreater(second.stability, first.stability)
+        self.assertGreater(second.interval_days, first.interval_days)
+
+    def test_previews_are_deterministic_and_do_not_mutate_state(self):
+        scheduler = FSRSScheduler()
+        state = fsrs_card_state()
+        original = dict(state)
+
+        first = scheduler.previews(state, NOW)
+        second = scheduler.previews(state, NOW)
+
+        self.assertEqual(first, second)
+        self.assertEqual(state, original)
+        self.assertEqual(first["again"], "10m")
 
 
 class DailyBatchTests(unittest.TestCase):
@@ -62,17 +127,7 @@ class DailyBatchTests(unittest.TestCase):
             {"id": "new-1", "front": {}, "back": {}},
             {"id": "new-2", "front": {}, "back": {}},
         ]
-        self.history = {
-            "cards": {
-                "due": {
-                    "state": "review",
-                    "interval_days": 1,
-                    "repetitions": 1,
-                    "last_reviewed_at": "2026-08-28T16:00:00Z",
-                    "next_due_at": "2026-08-29T16:00:00Z",
-                }
-            }
-        }
+        self.history = fsrs_history({"due": fsrs_card_state()})
 
     def test_midnight_batch_has_all_due_then_limited_unseen_and_is_frozen(self):
         batch = ensure_daily_batch(
@@ -217,7 +272,7 @@ class DailyBatchTests(unittest.TestCase):
 
 
 class MigrationAndDispatchTests(unittest.TestCase):
-    def test_legacy_records_move_under_cards(self):
+    def test_legacy_scheduler_state_is_reset_but_sync_state_is_preserved(self):
         history = {
             "hsk-1": {
                 "box": 2,
@@ -225,11 +280,18 @@ class MigrationAndDispatchTests(unittest.TestCase):
                 "times_shown": 2,
             },
             "cards": {},
+            "revision": 7,
+            "processed_events": {"event-1": {"status": "applied"}},
+            "daily_batch": {"id": "2026-08-30", "active": []},
         }
         migrate_history(history)
         self.assertNotIn("hsk-1", history)
-        self.assertIn("hsk-1", history["cards"])
-        self.assertEqual(history["schema_version"], 2)
+        self.assertEqual(history["cards"], {})
+        self.assertEqual(history["schema_version"], SCHEMA_VERSION)
+        self.assertEqual(history["scheduler"]["name"], SCHEDULER_NAME)
+        self.assertEqual(history["revision"], 7)
+        self.assertIn("event-1", history["processed_events"])
+        self.assertEqual(history["daily_batch"]["id"], "2026-08-30")
 
     def test_repository_dispatch_action_is_normalized(self):
         event = {
