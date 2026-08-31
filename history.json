@@ -304,10 +304,10 @@
       },
       "hsk-0042": {
         "state": "review",
-        "interval_days": 3,
-        "repetitions": 2,
-        "last_reviewed_at": "2026-08-11T06:46:42.389281Z",
-        "next_due_at": "2026-08-13T16:00:00Z"
+        "interval_days": 8,
+        "repetitions": 3,
+        "last_reviewed_at": "2026-08-31T09:10:39.046000Z",
+        "next_due_at": "2026-09-07T16:00:00Z"
       },
       "hsk-0030": {
         "state": "review",
@@ -1351,7 +1351,7 @@
       "name": "deterministic-v1",
       "version": 1
     },
-    "revision": 84,
+    "revision": 85,
     "processed_events": {
       "9b388466-e31d-4df5-9102-05901dfbc03a": {
         "processed_at": "2026-08-30T08:03:20.615217Z",
@@ -1680,6 +1680,10 @@
       "9cc43087-2e53-4aab-b974-effb1e79785d": {
         "processed_at": "2026-08-31T03:09:12.272248Z",
         "status": "applied"
+      },
+      "46da8615-7a17-47ac-83c3-d0fa8129bca7": {
+        "processed_at": "2026-08-31T09:10:56.702528Z",
+        "status": "applied"
       }
     },
     "daily_batch": {
@@ -1769,10 +1773,6 @@
         "hsk-0014"
       ],
       "active": [
-        {
-          "card_id": "hsk-0042",
-          "available_at": "2026-08-30T16:00:00Z"
-        },
         {
           "card_id": "hsk-0043",
           "available_at": "2026-08-30T16:00:00Z"
