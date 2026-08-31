@@ -2661,10 +2661,17 @@
   "architecture": {
     "pdf_schema_version": 2,
     "strategy": "random_with_replacement",
-    "revision": 0,
+    "revision": 1,
     "completed_ids": [],
-    "completion_counts": {},
-    "processed_events": {},
+    "completion_counts": {
+      "article_003_Mesopotamia_and_Persia.pdf": 1
+    },
+    "processed_events": {
+      "b7bae92f-c6bc-468f-a7a1-c54cc502ccc7": {
+        "processed_at": "2026-08-31T09:12:43.693962Z",
+        "status": "applied"
+      }
+    },
     "daily_batch": {
       "id": "2026-08-30",
       "date": "2026-08-30",
@@ -2677,7 +2684,6 @@
         "article_007_Assyrian_fortifications_and.pdf"
       ],
       "active_ids": [
-        "article_003_Mesopotamia_and_Persia.pdf",
         "article_004_Sumerian_ziggurats.pdf",
         "article_005_Egyptian_pyramids.pdf",
         "article_006_Ancient_Egyptian_temples.pdf",
