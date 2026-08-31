@@ -2572,14 +2572,16 @@
   "politics": {
     "pdf_schema_version": 2,
     "strategy": "random_without_replacement",
-    "revision": 3,
+    "revision": 4,
     "completed_ids": [
       "article_001_Introduction.pdf",
-      "article_002_The_evolution_of_politics.pdf"
+      "article_002_The_evolution_of_politics.pdf",
+      "article_003_Government_and_leadership.pdf"
     ],
     "completion_counts": {
       "article_001_Introduction.pdf": 1,
-      "article_002_The_evolution_of_politics.pdf": 1
+      "article_002_The_evolution_of_politics.pdf": 1,
+      "article_003_Government_and_leadership.pdf": 1
     },
     "processed_events": {
       "e1e6daff-62a5-48ec-9e53-6304f9957e7f": {
@@ -2588,6 +2590,10 @@
       },
       "88432b05-5874-4fa0-b481-3d5f1db54a6d": {
         "processed_at": "2026-08-31T11:55:10.916405Z",
+        "status": "applied"
+      },
+      "a276e3d5-6563-45ea-b10b-bc094068c48b": {
+        "processed_at": "2026-08-31T14:05:15.507147Z",
         "status": "applied"
       }
     },
@@ -2603,7 +2609,6 @@
         "article_005_The_Greeks_and_the_city-state.pdf"
       ],
       "active_ids": [
-        "article_003_Government_and_leadership.pdf",
         "article_004_Hierarchies.pdf",
         "article_005_The_Greeks_and_the_city-state.pdf"
       ],
@@ -2684,7 +2689,7 @@
   "architecture": {
     "pdf_schema_version": 2,
     "strategy": "random_with_replacement",
-    "revision": 5,
+    "revision": 6,
     "completed_ids": [],
     "completion_counts": {
       "article_003_Mesopotamia_and_Persia.pdf": 1,
@@ -2716,38 +2721,44 @@
       }
     },
     "daily_batch": {
-      "id": "2026-08-30",
-      "date": "2026-08-30",
-      "released_at": "2026-08-30T13:26:15.252773Z",
+      "id": "2026-08-31",
+      "date": "2026-08-31",
+      "released_at": "2026-08-31T14:05:15.509036Z",
       "release_summary_ids": [
-        "article_003_Mesopotamia_and_Persia.pdf",
-        "article_004_Sumerian_ziggurats.pdf",
-        "article_005_Egyptian_pyramids.pdf",
-        "article_006_Ancient_Egyptian_temples.pdf",
-        "article_007_Assyrian_fortifications_and.pdf"
+        "article_047_The_Dome_of_the_Rock.pdf",
+        "article_048_Islamic_urban_planning.pdf",
+        "article_158_Le_Corbusier.pdf",
+        "article_151_Gerrit_Rietveld.pdf",
+        "article_054_Vaults.pdf"
       ],
-      "active_ids": [],
+      "active_ids": [
+        "article_047_The_Dome_of_the_Rock.pdf",
+        "article_048_Islamic_urban_planning.pdf",
+        "article_158_Le_Corbusier.pdf",
+        "article_151_Gerrit_Rietveld.pdf",
+        "article_054_Vaults.pdf"
+      ],
       "selected_ids": [
-        "article_003_Mesopotamia_and_Persia.pdf",
-        "article_004_Sumerian_ziggurats.pdf",
-        "article_005_Egyptian_pyramids.pdf",
-        "article_006_Ancient_Egyptian_temples.pdf",
-        "article_007_Assyrian_fortifications_and.pdf"
+        "article_047_The_Dome_of_the_Rock.pdf",
+        "article_048_Islamic_urban_planning.pdf",
+        "article_158_Le_Corbusier.pdf",
+        "article_151_Gerrit_Rietveld.pdf",
+        "article_054_Vaults.pdf"
       ],
       "segments": [
         {
           "kind": "initial",
           "ids": [
-            "article_003_Mesopotamia_and_Persia.pdf",
-            "article_004_Sumerian_ziggurats.pdf",
-            "article_005_Egyptian_pyramids.pdf",
-            "article_006_Ancient_Egyptian_temples.pdf",
-            "article_007_Assyrian_fortifications_and.pdf"
+            "article_047_The_Dome_of_the_Rock.pdf",
+            "article_048_Islamic_urban_planning.pdf",
+            "article_158_Le_Corbusier.pdf",
+            "article_151_Gerrit_Rietveld.pdf",
+            "article_054_Vaults.pdf"
           ]
         }
       ]
     },
-    "next_release_at": "2026-08-31T12:01:36.628651Z"
+    "next_release_at": "2026-09-01T12:22:00Z"
   },
   "art_history": {
     "pdf_schema_version": 2,
