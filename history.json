@@ -2646,12 +2646,13 @@
   "philosophy": {
     "pdf_schema_version": 2,
     "strategy": "random_with_replacement",
-    "revision": 4,
+    "revision": 5,
     "completed_ids": [],
     "completion_counts": {
       "article_001_Introduction.pdf": 1,
       "article_002_Branches_of_philosophy.pdf": 1,
-      "article_003_Metaphysics.pdf": 1
+      "article_003_Metaphysics.pdf": 1,
+      "article_004_Epistemology.pdf": 1
     },
     "processed_events": {
       "3988dc66-3303-49d3-819d-eb9d6cd1aa3d": {
@@ -2664,6 +2665,10 @@
       },
       "7f8fa60b-670b-4eff-be59-bcfaeee5f8ac": {
         "processed_at": "2026-08-31T15:35:35.763836Z",
+        "status": "applied"
+      },
+      "5c1b0e83-f05e-4ffd-83d8-e8235322ec89": {
+        "processed_at": "2026-08-31T15:36:27.788984Z",
         "status": "applied"
       }
     },
@@ -2679,7 +2684,6 @@
         "article_005_Ontology.pdf"
       ],
       "active_ids": [
-        "article_004_Epistemology.pdf",
         "article_005_Ontology.pdf"
       ],
       "selected_ids": [
