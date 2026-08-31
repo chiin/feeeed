@@ -45,7 +45,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install feedgen
+          pip install feedgen fsrs==6.3.2
       
       - name: Run Feed Engine
         run: |
