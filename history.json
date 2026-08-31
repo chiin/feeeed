@@ -2484,7 +2484,7 @@
   "economics": {
     "pdf_schema_version": 2,
     "strategy": "sequential",
-    "revision": 4,
+    "revision": 5,
     "completed_ids": [
       "article_004_Scarcity.pdf",
       "article_005_Utility.pdf",
@@ -2493,13 +2493,15 @@
       "article_002_Introduction.pdf",
       "article_007_Opportunity_cost.pdf",
       "article_008_Substitutes_and_complements.pdf",
-      "article_009_Normal_and_inferior_goods.pdf"
+      "article_009_Normal_and_inferior_goods.pdf",
+      "article_010_Income_and_substitution_effect.pdf"
     ],
     "completion_counts": {
       "article_002_Introduction.pdf": 1,
       "article_007_Opportunity_cost.pdf": 1,
       "article_008_Substitutes_and_complements.pdf": 1,
-      "article_009_Normal_and_inferior_goods.pdf": 1
+      "article_009_Normal_and_inferior_goods.pdf": 1,
+      "article_010_Income_and_substitution_effect.pdf": 1
     },
     "processed_events": {
       "34ba6c78-2800-4955-bd66-56792fff70f0": {
@@ -2517,6 +2519,10 @@
       "a727ef9c-44b0-443c-9ca0-35fcc3133a72": {
         "processed_at": "2026-08-31T08:43:59.333578Z",
         "status": "applied"
+      },
+      "aac835e3-3142-4a78-b922-4c20208b686a": {
+        "processed_at": "2026-08-31T09:11:37.094337Z",
+        "status": "applied"
       }
     },
     "daily_batch": {
@@ -2530,9 +2536,7 @@
         "article_009_Normal_and_inferior_goods.pdf",
         "article_010_Income_and_substitution_effect.pdf"
       ],
-      "active_ids": [
-        "article_010_Income_and_substitution_effect.pdf"
-      ],
+      "active_ids": [],
       "selected_ids": [
         "article_002_Introduction.pdf",
         "article_007_Opportunity_cost.pdf",
