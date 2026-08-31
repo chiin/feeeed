@@ -2572,18 +2572,20 @@
   "politics": {
     "pdf_schema_version": 2,
     "strategy": "random_without_replacement",
-    "revision": 5,
+    "revision": 6,
     "completed_ids": [
       "article_001_Introduction.pdf",
       "article_002_The_evolution_of_politics.pdf",
       "article_003_Government_and_leadership.pdf",
-      "article_004_Hierarchies.pdf"
+      "article_004_Hierarchies.pdf",
+      "article_005_The_Greeks_and_the_city-state.pdf"
     ],
     "completion_counts": {
       "article_001_Introduction.pdf": 1,
       "article_002_The_evolution_of_politics.pdf": 1,
       "article_003_Government_and_leadership.pdf": 1,
-      "article_004_Hierarchies.pdf": 1
+      "article_004_Hierarchies.pdf": 1,
+      "article_005_The_Greeks_and_the_city-state.pdf": 1
     },
     "processed_events": {
       "e1e6daff-62a5-48ec-9e53-6304f9957e7f": {
@@ -2601,6 +2603,10 @@
       "dda8d55f-8db0-4073-abc4-b02373029371": {
         "processed_at": "2026-08-31T14:06:03.518894Z",
         "status": "applied"
+      },
+      "9c9e3f2d-1b5c-48aa-9d7f-3fbb8f235495": {
+        "processed_at": "2026-08-31T14:06:28.191022Z",
+        "status": "applied"
       }
     },
     "daily_batch": {
@@ -2614,9 +2620,7 @@
         "article_004_Hierarchies.pdf",
         "article_005_The_Greeks_and_the_city-state.pdf"
       ],
-      "active_ids": [
-        "article_005_The_Greeks_and_the_city-state.pdf"
-      ],
+      "active_ids": [],
       "selected_ids": [
         "article_001_Introduction.pdf",
         "article_002_The_evolution_of_politics.pdf",
