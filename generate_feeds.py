@@ -7,7 +7,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from feedgen.feed import FeedGenerator
 from anki_scheduler import (
-    DeterministicScheduler,
+    FSRSScheduler,
     apply_review_events,
     build_deck_snapshot,
     ensure_daily_batch,
@@ -721,7 +721,7 @@ def process_anki_deck(
             )
             print(f"[{stream_key}] Processed Anki reviews: {result}.")
 
-    scheduler = DeterministicScheduler()
+    scheduler = FSRSScheduler()
     compiled_payload = build_deck_snapshot(
         stream_key,
         stream_cfg.get("feed_title", stream_key.title()),
