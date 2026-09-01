@@ -14,6 +14,7 @@ from pdf_scheduler import (
     hkt_day,
     initial_release_at,
     migrate_history,
+    natural_sort_key,
     next_release_at,
     parse_datetime,
     release_if_due,
@@ -33,6 +34,13 @@ def pdf_event(event_id, action, pdf_id=None, occurred_at=NOW):
     }
     if pdf_id:
         event["pdf_id"] = pdf_id
+    return event
+
+
+def book_event(event_id, action, book_id, pdf_id=None, occurred_at=NOW):
+    event = pdf_event(event_id, action, pdf_id, occurred_at)
+    event["stream_id"] = "current_book"
+    event["book_id"] = book_id
     return event
 
 
@@ -88,6 +96,35 @@ class ReleaseTimingTests(unittest.TestCase):
 
 
 class StrategyTests(unittest.TestCase):
+    def test_sequential_uses_natural_chapter_order(self):
+        chapter_ids = [
+            "Book - 1 - First.pdf",
+            "Book - 10 - Tenth.pdf",
+            "Book - 2 - Second.pdf",
+        ]
+        state = {}
+        migrate_history("current_book", "sequential", state, NOW)
+        release_if_due(
+            "current_book",
+            state,
+            chapter_ids,
+            3,
+            NOW,
+            force_today=True,
+        )
+        self.assertEqual(
+            state["daily_batch"]["active_ids"],
+            [
+                "Book - 1 - First.pdf",
+                "Book - 2 - Second.pdf",
+                "Book - 10 - Tenth.pdf",
+            ],
+        )
+        self.assertLess(
+            natural_sort_key("Book - 2.pdf"),
+            natural_sort_key("Book - 10.pdf"),
+        )
+
     def test_sequential_carries_unfinished_then_fills_vacancies(self):
         state = state_for()
         self.assertEqual(state["daily_batch"]["active_ids"], PDF_IDS[:3])
@@ -283,6 +320,132 @@ class EventAndSnapshotTests(unittest.TestCase):
         self.assertEqual(result["duplicate"], 1)
         self.assertIn(pdf_id, state["daily_batch"]["active_ids"])
 
+    def test_book_id_change_resets_progress_and_releases_first_chapter(self):
+        state = {}
+        migrate_history(
+            "current_book", "sequential", state, NOW, book_id="book-one"
+        )
+        self.assertEqual(parse_datetime(state["next_release_at"]), NOW)
+        release_if_due(
+            "current_book", state, PDF_IDS, 1, NOW
+        )
+        first_chapter = state["daily_batch"]["active_ids"][0]
+        completion = book_event(
+            "book-one-complete", "complete", "book-one", first_chapter
+        )
+        self.assertEqual(
+            apply_completion_events(
+                "current_book", state, [completion], NOW, "book-one"
+            )["applied"],
+            1,
+        )
+
+        migrate_history(
+            "current_book", "sequential", state, NOW, book_id="book-two"
+        )
+        self.assertEqual(state["book_id"], "book-two")
+        self.assertEqual(state["completed_ids"], [])
+        self.assertEqual(state["processed_events"], {})
+        self.assertIsNone(state["daily_batch"])
+        release_if_due(
+            "current_book", state, PDF_IDS, 1, NOW
+        )
+        self.assertEqual(
+            state["daily_batch"]["active_ids"], [PDF_IDS[0]]
+        )
+
+    def test_stale_event_from_previous_book_is_rejected(self):
+        state = {}
+        migrate_history(
+            "current_book", "sequential", state, NOW, book_id="book-two"
+        )
+        release_if_due(
+            "current_book", state, PDF_IDS, 1, NOW
+        )
+        stale = book_event(
+            "stale-book-event", "complete", "book-one", PDF_IDS[0]
+        )
+        matching = book_event(
+            "current-book-event", "complete", "book-two", PDF_IDS[0]
+        )
+
+        self.assertEqual(
+            apply_completion_events(
+                "current_book", state, [stale], NOW, "book-two"
+            )["invalid"],
+            1,
+        )
+        self.assertEqual(
+            state["daily_batch"]["active_ids"], [PDF_IDS[0]]
+        )
+        self.assertEqual(
+            apply_completion_events(
+                "current_book", state, [matching], NOW, "book-two"
+            )["applied"],
+            1,
+        )
+
+    def test_current_book_snapshot_exposes_book_identity(self):
+        state = {}
+        migrate_history(
+            "current_book", "sequential", state, NOW, book_id="book-one"
+        )
+        release_if_due(
+            "current_book", state, PDF_IDS, 1, NOW
+        )
+        snapshot = build_snapshot(
+            "current_book",
+            "Current Book",
+            "Book Cards",
+            "https://example.test",
+            state,
+            PDF_IDS,
+            1,
+            NOW,
+            "book-one",
+        )
+
+        self.assertEqual(snapshot["book_id"], "book-one")
+        self.assertEqual(snapshot["strategy"], "sequential")
+        self.assertEqual(snapshot["batch_size"], 1)
+        self.assertEqual(len(snapshot["active"]), 1)
+
+    def test_current_book_carries_chapter_daily_and_can_advance_immediately(self):
+        state = {}
+        migrate_history(
+            "current_book", "sequential", state, NOW, book_id="book-one"
+        )
+        release_if_due("current_book", state, PDF_IDS, 1, NOW)
+        self.assertEqual(state["daily_batch"]["active_ids"], [PDF_IDS[0]])
+
+        tomorrow = NOW + timedelta(days=1)
+        release_if_due(
+            "current_book", state, PDF_IDS, 1, tomorrow, force_today=True
+        )
+        self.assertEqual(state["daily_batch"]["active_ids"], [PDF_IDS[0]])
+
+        completion = book_event(
+            "finish-first", "complete", "book-one", PDF_IDS[0], tomorrow
+        )
+        continuation = book_event(
+            "next-chapter", "continue", "book-one", occurred_at=tomorrow
+        )
+        apply_completion_events(
+            "current_book", state, [completion], tomorrow, "book-one"
+        )
+        result = apply_continuation_events(
+            "current_book",
+            state,
+            [continuation],
+            PDF_IDS,
+            1,
+            tomorrow,
+            "book-one",
+        )
+
+        self.assertEqual(result["applied"], 1)
+        self.assertEqual(state["daily_batch"]["active_ids"], [PDF_IDS[1]])
+
 
 class FakeEntry:
     def __init__(self):
@@ -373,6 +536,61 @@ class ProcessorIntegrationTests(unittest.TestCase):
             finally:
                 os.chdir(previous_cwd)
 
+    def test_current_book_uses_stable_stream_and_book_scoped_rss_identity(self):
+        from generate_feeds import process_pdf_folder
+
+        config = {
+            "type": "current_book",
+            "book_id": "the-test-book",
+            "folder": "Book_Cards",
+            "feed_title": "Current Book",
+        }
+        history = {}
+        with tempfile.TemporaryDirectory() as directory:
+            previous_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                folder = Path(config["folder"])
+                folder.mkdir()
+                for pdf_id in PDF_IDS[:2]:
+                    (folder / pdf_id).write_bytes(b"%PDF-test")
+
+                feed = FakeFeed()
+                process_pdf_folder(
+                    "current_book",
+                    config,
+                    history,
+                    feed,
+                    "https://example.test",
+                    now=NOW,
+                )
+                snapshot = json.loads(
+                    Path("cards/current_book_pdf_batch.json").read_text(
+                        encoding="utf-8"
+                    )
+                )
+
+                self.assertEqual(snapshot["book_id"], "the-test-book")
+                self.assertEqual(snapshot["batch_size"], 1)
+                self.assertEqual(snapshot["strategy"], "sequential")
+                self.assertEqual(len(snapshot["active"]), 1)
+                self.assertEqual(
+                    feed.entries[0].values["id"],
+                    "current_book-the-test-book-pdf-batch-2026-08-30",
+                )
+                self.assertEqual(
+                    feed.entries[0].values["link"],
+                    {
+                        "href": (
+                            "https://example.test/"
+                            "pdf_reader.html?stream=current_book"
+                        )
+                    },
+                )
+            finally:
+                os.chdir(previous_cwd)
+
 
 if __name__ == "__main__":
     unittest.main()
+
