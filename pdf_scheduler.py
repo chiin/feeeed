@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import random
+import re
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
 from typing import Iterable
@@ -78,6 +79,13 @@ def _normalize_strategy(strategy: str) -> str:
     return strategy
 
 
+def natural_sort_key(value: str) -> tuple:
+    return tuple(
+        (0, int(part)) if part.isdigit() else (1, part.lower())
+        for part in re.split(r"(\d+)", value)
+    )
+
+
 def _legacy_batch(legacy_snapshot: dict | None) -> dict | None:
     if not legacy_snapshot or not legacy_snapshot.get("batch"):
         return None
@@ -103,9 +111,27 @@ def migrate_history(
     stream_history: dict,
     now: datetime,
     legacy_snapshot: dict | None = None,
+    book_id: str | None = None,
 ) -> dict:
     strategy = _normalize_strategy(strategy)
     if stream_history.get("pdf_schema_version") == SCHEMA_VERSION:
+        if book_id is not None and stream_history.get("book_id") != book_id:
+            previous_revision = max(0, int(stream_history.get("revision", 0)))
+            stream_history.clear()
+            stream_history.update(
+                {
+                    "pdf_schema_version": SCHEMA_VERSION,
+                    "strategy": strategy,
+                    "book_id": book_id,
+                    "revision": previous_revision + 1,
+                    "completed_ids": [],
+                    "completion_counts": {},
+                    "processed_events": {},
+                    "daily_batch": None,
+                    "next_release_at": isoformat_utc(now),
+                }
+            )
+            return stream_history
         stream_history["strategy"] = strategy
         return stream_history
 
@@ -136,10 +162,17 @@ def migrate_history(
             "processed_events": stream_history.get("processed_events", {}),
             "daily_batch": batch,
             "next_release_at": isoformat_utc(
-                release_at or initial_release_at(stream_key, now)
+                release_at
+                or (
+                    now.astimezone(timezone.utc)
+                    if book_id
+                    else initial_release_at(stream_key, now)
+                )
             ),
         }
     )
+    if book_id is not None:
+        stream_history["book_id"] = book_id
     return stream_history
 
 
@@ -217,7 +250,7 @@ def release_if_due(
     now: datetime,
     force_today: bool = False,
 ) -> bool:
-    all_ids = sorted(all_ids)
+    all_ids = sorted(all_ids, key=natural_sort_key)
     today = hkt_day(now).isoformat()
     current = stream_history.get("daily_batch")
     if current and current.get("date") == today:
@@ -259,7 +292,10 @@ def release_if_due(
 
 
 def _validate_event(
-    stream_key: str, event: dict, now: datetime
+    stream_key: str,
+    event: dict,
+    now: datetime,
+    book_id: str | None = None,
 ) -> tuple[str, str, str | None, datetime]:
     if not isinstance(event, dict):
         raise ValueError("PDF event must be an object")
@@ -269,6 +305,8 @@ def _validate_event(
         raise ValueError(f"PDF event missing: {', '.join(missing)}")
     if event["stream_id"] != stream_key:
         raise ValueError("PDF event stream does not match")
+    if book_id is not None and event.get("book_id") != book_id:
+        raise ValueError("PDF event book does not match")
     if event["action"] not in EVENT_ACTIONS:
         raise ValueError("PDF event action is invalid")
     pdf_id = event.get("pdf_id")
@@ -285,6 +323,7 @@ def apply_completion_events(
     stream_history: dict,
     events: Iterable[dict],
     now: datetime,
+    book_id: str | None = None,
 ) -> dict[str, int]:
     processed = stream_history["processed_events"]
     batch = stream_history.get("daily_batch")
@@ -292,7 +331,7 @@ def apply_completion_events(
     valid_events = []
     for event in events:
         try:
-            validated = _validate_event(stream_key, event, now)
+            validated = _validate_event(stream_key, event, now, book_id)
         except (TypeError, ValueError) as error:
             print(f"Ignoring invalid PDF event: {error}")
             counts["invalid"] += 1
@@ -334,13 +373,14 @@ def apply_continuation_events(
     all_ids: Iterable[str],
     batch_size: int,
     now: datetime,
+    book_id: str | None = None,
 ) -> dict[str, int]:
     processed = stream_history["processed_events"]
     counts = {"applied": 0, "duplicate": 0, "stale": 0, "invalid": 0}
     valid_events = []
     for event in events:
         try:
-            validated = _validate_event(stream_key, event, now)
+            validated = _validate_event(stream_key, event, now, book_id)
         except (TypeError, ValueError) as error:
             print(f"Ignoring invalid PDF event: {error}")
             counts["invalid"] += 1
@@ -364,7 +404,7 @@ def apply_continuation_events(
         selected = _fill_batch(
             stream_key,
             stream_history,
-            sorted(all_ids),
+            sorted(all_ids, key=natural_sort_key),
             batch_size,
             "continuation",
         )
@@ -383,7 +423,7 @@ def can_continue(stream_history: dict, all_ids: Iterable[str]) -> bool:
         return False
     return bool(
         _eligible_ids(
-            sorted(all_ids),
+            sorted(all_ids, key=natural_sort_key),
             stream_history["strategy"],
             set(stream_history["completed_ids"]),
             set(batch["selected_ids"]),
@@ -412,6 +452,7 @@ def build_snapshot(
     all_ids: Iterable[str],
     batch_size: int,
     now: datetime,
+    book_id: str | None = None,
 ) -> dict:
     batch = stream_history.get("daily_batch")
     active_ids = batch["active_ids"] if batch else []
@@ -439,4 +480,5 @@ def build_snapshot(
         ],
         "can_continue": can_continue(stream_history, all_ids),
         "processed_event_ids": list(stream_history["processed_events"]),
+        **({"book_id": book_id} if book_id is not None else {}),
     }
