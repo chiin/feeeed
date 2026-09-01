@@ -690,6 +690,17 @@
         "lapses": 0,
         "last_reviewed_at": "2026-09-01T01:29:01.498000Z",
         "next_due_at": "2026-09-02T16:00:00Z"
+      },
+      "hsk-0037": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "lapses": 0,
+        "last_reviewed_at": "2026-09-01T08:54:29.993000Z",
+        "next_due_at": "2026-09-02T16:00:00Z"
       }
     },
     "schema_version": 3,
@@ -698,7 +709,7 @@
       "version": 1,
       "desired_retention": 0.9
     },
-    "revision": 163,
+    "revision": 164,
     "processed_events": {
       "9b388466-e31d-4df5-9102-05901dfbc03a": {
         "processed_at": "2026-08-30T08:03:20.615217Z",
@@ -1339,6 +1350,10 @@
       "3aaa818b-af84-4784-9edf-40489aad71f6": {
         "processed_at": "2026-09-01T01:29:24.037527Z",
         "status": "applied"
+      },
+      "fd6c746d-5cc1-4820-80a1-2a4d78ac05c2": {
+        "processed_at": "2026-09-01T08:54:48.345298Z",
+        "status": "applied"
       }
     },
     "daily_batch": {
@@ -1398,10 +1413,6 @@
         "hsk-0050"
       ],
       "active": [
-        {
-          "card_id": "hsk-0037",
-          "available_at": "2026-08-31T16:00:00Z"
-        },
         {
           "card_id": "hsk-0038",
           "available_at": "2026-08-31T16:00:00Z"
@@ -1946,7 +1957,7 @@
   "art_history": {
     "pdf_schema_version": 2,
     "strategy": "random_with_replacement",
-    "revision": 2,
+    "revision": 3,
     "completed_ids": [],
     "completion_counts": {
       "article_002_Stone_Age_sculpture.pdf": 1
@@ -1958,43 +1969,44 @@
       }
     },
     "daily_batch": {
-      "id": "2026-08-31",
-      "date": "2026-08-31",
-      "released_at": "2026-08-31T08:17:38.722450Z",
+      "id": "2026-09-01",
+      "date": "2026-09-01",
+      "released_at": "2026-09-01T08:54:48.358606Z",
       "release_summary_ids": [
-        "article_002_Stone_Age_sculpture.pdf",
         "article_003_Stone_Age_painting.pdf",
         "article_004_Sumerian_and_Akkadian_art.pdf",
         "article_005_Babylonian_and_Assyrian_art.pdf",
-        "article_006_Ancient_Egyptian_sculpture.pdf"
+        "article_006_Ancient_Egyptian_sculpture.pdf",
+        "article_126_Still_life.pdf"
       ],
       "active_ids": [
         "article_003_Stone_Age_painting.pdf",
         "article_004_Sumerian_and_Akkadian_art.pdf",
         "article_005_Babylonian_and_Assyrian_art.pdf",
-        "article_006_Ancient_Egyptian_sculpture.pdf"
+        "article_006_Ancient_Egyptian_sculpture.pdf",
+        "article_126_Still_life.pdf"
       ],
       "selected_ids": [
-        "article_002_Stone_Age_sculpture.pdf",
         "article_003_Stone_Age_painting.pdf",
         "article_004_Sumerian_and_Akkadian_art.pdf",
         "article_005_Babylonian_and_Assyrian_art.pdf",
-        "article_006_Ancient_Egyptian_sculpture.pdf"
+        "article_006_Ancient_Egyptian_sculpture.pdf",
+        "article_126_Still_life.pdf"
       ],
       "segments": [
         {
           "kind": "initial",
           "ids": [
-            "article_002_Stone_Age_sculpture.pdf",
             "article_003_Stone_Age_painting.pdf",
             "article_004_Sumerian_and_Akkadian_art.pdf",
             "article_005_Babylonian_and_Assyrian_art.pdf",
-            "article_006_Ancient_Egyptian_sculpture.pdf"
+            "article_006_Ancient_Egyptian_sculpture.pdf",
+            "article_126_Still_life.pdf"
           ]
         }
       ]
     },
-    "next_release_at": "2026-09-01T08:35:00Z"
+    "next_release_at": "2026-09-02T09:41:00Z"
   },
   "current_book": {
     "pdf_schema_version": 2,
