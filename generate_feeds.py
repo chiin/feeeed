@@ -449,6 +449,12 @@ def process_pdf_folder(
 ):
     now = now or datetime.now(timezone.utc)
     dispatch_payload = dispatch_payload or {}
+    is_current_book = stream_cfg.get("type") == "current_book"
+    book_id = stream_cfg.get("book_id") if is_current_book else None
+    if is_current_book and (not isinstance(book_id, str) or not book_id.strip()):
+        raise ValueError(f"[{stream_key}] current_book requires a non-empty book_id.")
+    if book_id is not None:
+        book_id = book_id.strip()
     folder_path = Path(stream_cfg.get("folder", ""))
     if not folder_path.exists():
         print(f"[{stream_key}] Folder '{folder_path}' does not exist.")
@@ -464,11 +470,15 @@ def process_pdf_folder(
         except (OSError, ValueError, json.JSONDecodeError) as error:
             print(f"[{stream_key}] Could not read legacy PDF batch: {error}")
 
-    all_pdf_ids = sorted(path.name for path in folder_path.glob("*.pdf"))
-    strategy = stream_cfg.get("strategy", "sequential")
-    batch_size = stream_cfg.get("batch_size", 5)
+    all_pdf_ids = [path.name for path in folder_path.glob("*.pdf")]
+    strategy = (
+        "sequential"
+        if is_current_book
+        else stream_cfg.get("strategy", "sequential")
+    )
+    batch_size = 1 if is_current_book else stream_cfg.get("batch_size", 5)
     migrate_pdf_history(
-        stream_key, strategy, stream_history, now, legacy_snapshot
+        stream_key, strategy, stream_history, now, legacy_snapshot, book_id
     )
 
     events = []
@@ -498,7 +508,7 @@ def process_pdf_folder(
         }]
 
     completion_result = apply_completion_events(
-        stream_key, stream_history, events, now
+        stream_key, stream_history, events, now, book_id
     )
     continuation_requested = any(
         isinstance(event, dict) and event.get("action") == "continue"
@@ -525,6 +535,7 @@ def process_pdf_folder(
         all_pdf_ids,
         batch_size,
         now,
+        book_id,
     )
     if events:
         print(
@@ -543,6 +554,7 @@ def process_pdf_folder(
         all_pdf_ids,
         batch_size,
         now,
+        book_id,
     )
     save_json(batch_json_path, compiled_payload)
 
@@ -553,7 +565,8 @@ def process_pdf_folder(
     web_reader_url = f"{base_url}/pdf_reader.html?stream={stream_key}"
 
     fe = fg.add_entry()
-    fe.id(f"{stream_key}-pdf-batch-{compiled_payload['batch_id']}")
+    identity = f"{stream_key}-{book_id}" if book_id else stream_key
+    fe.id(f"{identity}-pdf-batch-{compiled_payload['batch_id']}")
     fe.title(
         f"[{stream_cfg.get('feed_title', stream_key.title())}] {titles_summary}"
     )
@@ -606,7 +619,7 @@ def main():
             process_flashcards(stream_key, stream_cfg, stream_history, fg, dispatch_payload)
         elif stream_type == "book_queue":
             process_book_queue(stream_key, stream_cfg, stream_history, fg, dispatch_payload)
-        elif stream_type == "pdf_folder":
+        elif stream_type in {"pdf_folder", "current_book"}:
             process_pdf_folder(stream_key, stream_cfg, stream_history, fg, BASE_URL, dispatch_payload)
         elif stream_type == "anki_deck":
             process_anki_deck(stream_key, stream_cfg, stream_history, fg, BASE_URL, dispatch_payload)
