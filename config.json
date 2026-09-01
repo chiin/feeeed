@@ -41,12 +41,12 @@
       "strategy": "random_with_replacement",
       "batch_size": 5,
       "feed_title": "Art History Cards"
-    },    
-    "book_1": {
-      "type": "book_queue",
+    },
+    "current_book": {
+      "type": "current_book",
+      "book_id": "the_jazz_scene",
       "folder": "Book_1_Cards",
-      "feed_title": "Book 1 Reading Queue"
+      "feed_title": "Current Book"
     }
   }
 }
-
