@@ -7,6 +7,8 @@ const streamKey = new URLSearchParams(window.location.search).get("stream");
 let activeItems = [];
 let canContinue = false;
 let outbox = null;
+let bookId = null;
+let outboxScope = null;
 let syncInFlight = false;
 let renderVersion = 0;
 let renderedPdfId = null;
@@ -14,12 +16,6 @@ let renderedPdfId = null;
 if (!streamKey) {
     showStatus("No stream specified in URL.");
 } else {
-    outbox = new ReviewerState.DurableOutbox(
-        localStorage,
-        streamKey,
-        undefined,
-        "pdf_outbox_v2"
-    );
     loadBatch();
     setInterval(loadBatch, 60000);
     setInterval(() => flushPendingSync(), 30000);
@@ -33,6 +29,7 @@ async function loadBatch() {
         );
         if (!response.ok) throw new Error("Batch file not found");
         const data = await response.json();
+        configureOutbox(data.book_id || null);
         outbox.acknowledge(data.processed_event_ids);
         activeItems = ReviewerState.reconcilePdfItems(
             data.active || data.batch || [],
@@ -46,6 +43,19 @@ async function loadBatch() {
             showStatus(`Error loading queue: ${error.message}`, true);
         }
     }
+}
+
+function configureOutbox(nextBookId) {
+    const nextScope = nextBookId ? `${streamKey}:${nextBookId}` : streamKey;
+    if (outbox && outboxScope === nextScope) return;
+    bookId = nextBookId;
+    outboxScope = nextScope;
+    outbox = new ReviewerState.DurableOutbox(
+        localStorage,
+        nextScope,
+        undefined,
+        nextBookId ? "pdf_outbox_v3" : "pdf_outbox_v2"
+    );
 }
 
 function renderCurrentState() {
@@ -151,6 +161,7 @@ function createPdfEvent(action, pdfId = null) {
         occurred_at: new Date().toISOString()
     };
     if (pdfId) event.pdf_id = pdfId;
+    if (bookId) event.book_id = bookId;
     return event;
 }
 
@@ -187,14 +198,16 @@ function savePATFromModal() {
 }
 
 async function flushPendingSync(force = false) {
-    if (syncInFlight) return;
-    const events = outbox.retryable(force);
+    if (!outbox || syncInFlight) return;
+    const syncOutbox = outbox;
+    const syncBookId = bookId;
+    const events = syncOutbox.retryable(force);
     if (!events.length) return;
     const token = getPAT();
     if (!token) return;
 
     const eventIds = events.map(event => event.event_id);
-    outbox.markAttempt(eventIds);
+    syncOutbox.markAttempt(eventIds);
     syncInFlight = true;
     try {
         const response = await fetch(
@@ -210,6 +223,7 @@ async function flushPendingSync(force = false) {
                     event_type: "pdf_batch_event",
                     client_payload: {
                         stream_id: streamKey,
+                        ...(syncBookId ? { book_id: syncBookId } : {}),
                         events
                     }
                 }),
@@ -226,7 +240,7 @@ async function flushPendingSync(force = false) {
         }
         setSyncStatus("Progress accepted; waiting for GitHub Pages to publish.");
     } catch (error) {
-        outbox.markFailed(eventIds);
+        syncOutbox.markFailed(eventIds);
         console.error("[Feeeeed PDF Sync]", error);
         setSyncStatus("Sync failed. The durable outbox will retry.");
     } finally {
