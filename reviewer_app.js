@@ -1,6 +1,9 @@
 "use strict";
 
-const deckId = new URLSearchParams(window.location.search).get("deck");
+const deckParam = new URLSearchParams(window.location.search).get("deck");
+const deckId = deckParam && deckParam.toUpperCase() !== "NONE"
+    ? deckParam
+    : null;
 const ratingNames = { 1: "again", 2: "hard", 3: "good", 4: "easy" };
 let cards = [];
 let outbox = null;
@@ -8,13 +11,42 @@ let waitTimer = null;
 let syncInFlight = false;
 
 if (!deckId) {
-    document.getElementById("loadingScreen").innerHTML =
-        "<p class='error'>No deck specified in URL.</p>";
+    loadDeckIndex();
 } else {
     outbox = new ReviewerState.DurableOutbox(localStorage, deckId);
     loadDeck();
     setInterval(loadDeck, 60000);
     setInterval(() => flushPendingSync(), 30000);
+}
+
+async function loadDeckIndex() {
+    try {
+        const response = await fetch(`config.json?t=${Date.now()}`, {
+            cache: "no-store"
+        });
+        if (!response.ok) throw new Error("Configuration not found");
+        const config = await response.json();
+        const decks = Object.entries(config.streams || {})
+            .filter(([, stream]) => stream.type === "anki_deck");
+        const list = document.getElementById("deckList");
+        list.replaceChildren(...decks.map(([id, stream]) => {
+            const link = document.createElement("a");
+            link.className = "reader-link";
+            link.href = `reviewer.html?deck=${encodeURIComponent(id)}`;
+            link.textContent = stream.feed_title || id;
+            const detail = document.createElement("span");
+            detail.textContent = `${stream.new_cards_per_day || 0} new cards per day`;
+            link.appendChild(detail);
+            return link;
+        }));
+        if (!decks.length) {
+            list.innerHTML = '<p class="muted">No Anki decks configured.</p>';
+        }
+        showScreen("homeScreen");
+    } catch (error) {
+        document.getElementById("loadingScreen").innerHTML =
+            `<p class="error">Error loading deck list: ${error.message}</p>`;
+    }
 }
 
 async function loadDeck() {
@@ -24,6 +56,10 @@ async function loadDeck() {
         });
         if (!response.ok) throw new Error("Deck file not found");
         const data = await response.json();
+        document.documentElement.style.setProperty(
+            "--front-text-scale",
+            String(data.front_text_scale || 1)
+        );
         document.getElementById("deckTitle").innerText = data.title || deckId;
         outbox.acknowledge(data.processed_event_ids);
         cards = ReviewerState.reconcileCards(data.cards, outbox.events());
