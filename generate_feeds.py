@@ -735,6 +735,11 @@ def process_anki_deck(
             print(f"[{stream_key}] Processed Anki reviews: {result}.")
 
     scheduler = FSRSScheduler()
+    front_text_scale = float(stream_cfg.get("front_text_scale", 1.0))
+    if not 0.5 <= front_text_scale <= 4:
+        raise ValueError(
+            f"[{stream_key}] front_text_scale must be between 0.5 and 4."
+        )
     compiled_payload = build_deck_snapshot(
         stream_key,
         stream_cfg.get("feed_title", stream_key.title()),
@@ -742,6 +747,7 @@ def process_anki_deck(
         stream_history,
         now,
         scheduler,
+        front_text_scale,
     )
     if not compiled_payload["cards"]:
         print(f"[{stream_key}] No cards due today!")
@@ -772,4 +778,3 @@ def process_anki_deck(
 
 if __name__ == "__main__":
     main()
-
