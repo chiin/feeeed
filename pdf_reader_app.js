@@ -3,7 +3,14 @@
 pdfjsLib.GlobalWorkerOptions.workerSrc =
     "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 
-const streamKey = new URLSearchParams(window.location.search).get("stream");
+const streamParam = new URLSearchParams(window.location.search).get("stream");
+const indexKind = streamParam && streamParam.toUpperCase() === "BOOKS"
+    ? "books"
+    : "pdf";
+const streamKey = streamParam
+    && !["NONE", "BOOKS"].includes(streamParam.toUpperCase())
+    ? streamParam
+    : null;
 let activeItems = [];
 let canContinue = false;
 let outbox = null;
@@ -14,11 +21,48 @@ let renderVersion = 0;
 let renderedPdfId = null;
 
 if (!streamKey) {
-    showStatus("No stream specified in URL.");
+    loadReaderIndex(indexKind);
 } else {
     loadBatch();
     setInterval(loadBatch, 60000);
     setInterval(() => flushPendingSync(), 30000);
+}
+
+async function loadReaderIndex(kind) {
+    try {
+        const response = await fetch(`config.json?t=${Date.now()}`, {
+            cache: "no-store"
+        });
+        if (!response.ok) throw new Error("Configuration not found");
+        const config = await response.json();
+        const expectedType = kind === "books" ? "current_book" : "pdf_folder";
+        const streams = Object.entries(config.streams || {})
+            .filter(([, stream]) => stream.type === expectedType);
+        const list = document.getElementById("readerList");
+        list.replaceChildren(...streams.map(([id, stream]) => {
+            const link = document.createElement("a");
+            link.className = "reader-link";
+            link.href = `pdf_reader.html?stream=${encodeURIComponent(id)}`;
+            link.textContent = stream.feed_title || id;
+            const detail = document.createElement("span");
+            detail.textContent = kind === "books"
+                ? `Current book: ${stream.book_id}`
+                : `${stream.batch_size || 5} PDFs · ${formatStrategy(stream.strategy)}`;
+            link.appendChild(detail);
+            return link;
+        }));
+        document.querySelector("#statusScreen h2").innerText =
+            kind === "books" ? "Book Readers" : "PDF Folder Readers";
+        document.getElementById("statusMsg").innerText =
+            streams.length ? "Choose a reader." : "No readers configured.";
+        list.style.display = streams.length ? "grid" : "none";
+    } catch (error) {
+        showStatus(`Error loading reader list: ${error.message}`, true);
+    }
+}
+
+function formatStrategy(strategy) {
+    return (strategy || "sequential").replaceAll("_", " ");
 }
 
 async function loadBatch() {
