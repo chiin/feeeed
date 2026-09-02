@@ -216,6 +216,16 @@ class DailyBatchTests(unittest.TestCase):
         self.assertNotIn("due", [card["id"] for card in snapshot["cards"]])
         self.assertIn("event-1", snapshot["processed_event_ids"])
 
+    def test_snapshot_exposes_configured_front_text_scale(self):
+        ensure_daily_batch(
+            self.history, [card["id"] for card in self.cards], 1, NOW
+        )
+        snapshot = build_deck_snapshot(
+            "hsk", "HSK", self.cards, self.history, NOW, front_text_scale=2
+        )
+
+        self.assertEqual(snapshot["front_text_scale"], 2)
+
     def test_rollover_replaces_yesterdays_batch(self):
         self.history["daily_batch"] = {
             "id": "2026-08-29",
