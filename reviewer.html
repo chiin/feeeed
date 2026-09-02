@@ -45,7 +45,11 @@
             justify-content: center;
         }
         .card-content { width: 100%; }
-        .prompt-text { font-size: 1.5rem; font-weight: 600; line-height: 1.4; }
+        .prompt-text {
+            font-size: calc(1.5rem * var(--front-text-scale, 1));
+            font-weight: 600;
+            line-height: 1.4;
+        }
         .answer-box {
             display: none;
             width: 100%;
@@ -93,6 +97,31 @@
         .btn-easy { background: #64d2ff; }
         .muted { color: #8e8e93; }
         .error { color: #ff453a; }
+        .home-title { margin: 28px 0 8px; font-size: 1.8rem; }
+        .reader-list {
+            display: grid;
+            gap: 12px;
+            margin-top: 28px;
+            text-align: left;
+        }
+        .reader-link {
+            display: block;
+            padding: 18px;
+            border: 1px solid #3a3a3c;
+            border-radius: 14px;
+            background: #2c2c2e;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .reader-link span {
+            display: block;
+            margin-top: 5px;
+            color: #8e8e93;
+            font-size: .85rem;
+            font-weight: 500;
+        }
         .loader {
             width: 36px;
             height: 36px;
@@ -121,6 +150,12 @@
     <div id="loadingScreen" class="screen active">
         <div class="loader"></div>
         <p class="muted">Loading deck session...</p>
+    </div>
+
+    <div id="homeScreen" class="screen">
+        <h1 class="home-title">Anki Reviewers</h1>
+        <p class="muted">Choose a deck to review.</p>
+        <div id="deckList" class="reader-list"></div>
     </div>
 
     <div id="reviewScreen" class="screen">
@@ -172,6 +207,6 @@
     </div>
 
     <script src="reviewer_state.js?v=4"></script>
-    <script src="reviewer_app.js?v=4"></script>
+    <script src="reviewer_app.js?v=5"></script>
 </body>
 </html>
