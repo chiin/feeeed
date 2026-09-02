@@ -3,147 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>PDF Queue Reader</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <title>Flashcard Reviewer</title>
     <style>
         * { box-sizing: border-box; }
         body {
             margin: 0;
+            padding: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: #1c1c1e;
             color: #fff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
         }
+        .screen { display: none; width: 100%; max-width: 480px; text-align: center; }
+        .screen.active { display: block; }
         .header {
-            position: sticky;
-            top: 0;
-            z-index: 2;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 12px;
-            min-height: 58px;
-            padding: 10px 14px;
-            border-bottom: 1px solid #3a3a3c;
-            background: #2c2c2e;
+            margin-bottom: 16px;
         }
-        .title {
-            max-width: 58vw;
-            overflow: hidden;
-            font-size: .95rem;
-            font-weight: 600;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
+        .title { color: #8e8e93; font-size: 1.1rem; font-weight: 700; }
         .progress {
-            display: inline-block;
-            margin-top: 4px;
-            padding: 3px 8px;
-            border-radius: 8px;
+            padding: 4px 12px;
+            border-radius: 12px;
+            background: #2c2c2e;
+            color: #0a84ff;
+            font-size: .9rem;
+            font-weight: 600;
+        }
+        .card {
+            min-height: 320px;
+            padding: 24px;
+            border: 1px solid #3a3a3c;
+            border-radius: 20px;
+            background: #2c2c2e;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, .4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-content { width: 100%; }
+        .prompt-text {
+            font-size: calc(1.5rem * var(--front-text-scale, 1));
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .answer-box {
+            display: none;
+            width: 100%;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed #48484a;
+        }
+        .answer-text { color: #30d158; font-size: 1.3rem; font-weight: 600; }
+        .notes-text { margin-top: 8px; color: #8e8e93; font-size: .95rem; font-style: italic; }
+        .card-img { display: none; max-width: 100%; max-height: 180px; margin: 16px auto; border-radius: 12px; }
+        .audio-btn {
+            display: none;
+            margin: 16px auto;
+            padding: 8px 16px;
+            border: 0;
+            border-radius: 20px;
             background: #3a3a3c;
             color: #0a84ff;
-            font-size: .75rem;
-            font-weight: 700;
+            font-weight: 600;
         }
+        .action-area { margin-top: 20px; }
         .btn {
-            padding: 10px 14px;
+            width: 100%;
+            padding: 14px;
             border: 0;
-            border-radius: 8px;
-            background: #30d158;
-            color: #000;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn-primary { background: #0a84ff; color: #fff; }
+        .btn-grid { display: none; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        .btn-grade {
+            padding: 10px 4px;
+            border: 0;
+            border-radius: 10px;
             font-size: .85rem;
             font-weight: 700;
             cursor: pointer;
         }
-        .btn-primary { background: #0a84ff; color: #fff; }
-        .pdf-container {
-            width: 100%;
-            max-width: 800px;
-            min-height: 100vh;
-            margin: 0 auto;
-            padding: 10px;
-        }
-        canvas {
-            width: 100% !important;
-            height: auto !important;
-            margin-bottom: 12px;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
-        }
-        .screen {
-            display: none;
-            max-width: 480px;
-            margin: 0 auto;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .screen.active { display: block; }
+        .btn-grade span { display: block; margin-top: 2px; font-size: .7rem; font-weight: 500; opacity: .8; }
+        .btn-again { background: #ff453a; color: #fff; }
+        .btn-hard { background: #ff9f0a; }
+        .btn-good { background: #30d158; }
+        .btn-easy { background: #64d2ff; }
         .muted { color: #8e8e93; }
         .error { color: #ff453a; }
-        .rendering { padding: 20px; text-align: center; }
-        #syncStatus {
-            min-height: 20px;
-            margin: 8px 14px;
-            font-size: .8rem;
-            text-align: center;
+        .home-title { margin: 28px 0 8px; font-size: 1.8rem; }
+        .reader-list {
+            display: grid;
+            gap: 12px;
+            margin-top: 28px;
+            text-align: left;
         }
+        .reader-link {
+            display: block;
+            padding: 18px;
+            border: 1px solid #3a3a3c;
+            border-radius: 14px;
+            background: #2c2c2e;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .reader-link span {
+            display: block;
+            margin-top: 5px;
+            color: #8e8e93;
+            font-size: .85rem;
+            font-weight: 500;
+        }
+        .loader {
+            width: 36px;
+            height: 36px;
+            margin: 40px auto;
+            border: 3px solid #3a3a3c;
+            border-top-color: #0a84ff;
+            border-radius: 50%;
+            animation: spin .8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
         .modal {
             display: none;
             position: fixed;
             inset: 0;
             z-index: 10;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
             background: rgba(0, 0, 0, .85);
+            align-items: center;
+            justify-content: center;
         }
-        .modal-content {
-            width: 100%;
-            max-width: 400px;
-            padding: 24px;
-            border-radius: 12px;
-            background: #2c2c2e;
-        }
-        .modal input {
-            width: 100%;
-            margin: 12px 0;
-            padding: 10px;
-            border: 1px solid #3a3a3c;
-            border-radius: 6px;
-            background: #1c1c1e;
-            color: #fff;
-        }
+        .modal-content { width: 100%; max-width: 400px; padding: 24px; border-radius: 12px; background: #2c2c2e; text-align: left; }
+        .modal input { width: 100%; margin: 12px 0; padding: 10px; border: 1px solid #3a3a3c; border-radius: 6px; background: #1c1c1e; color: #fff; }
     </style>
 </head>
 <body>
-    <div id="mainUI" style="display:none;">
-        <div class="header">
-            <div>
-                <div id="docTitle" class="title">Loading...</div>
-                <span id="batchProgress" class="progress">0 remaining</span>
-            </div>
-            <button id="finishBtn" class="btn" onclick="finishCurrentPDF()">Finished</button>
-        </div>
-        <p id="syncStatus" class="muted"></p>
-        <div id="pdfViewer" class="pdf-container"></div>
+    <div id="loadingScreen" class="screen active">
+        <div class="loader"></div>
+        <p class="muted">Loading deck session...</p>
     </div>
 
-    <div id="statusScreen" class="screen active">
-        <h2>PDF Queue</h2>
-        <p id="statusMsg" class="muted">Loading PDF queue...</p>
-        <button id="continueBtn" class="btn btn-primary" style="display:none;" onclick="requestContinuation()">Continue with another batch</button>
-        <p id="statusSyncStatus" class="muted"></p>
+    <div id="homeScreen" class="screen">
+        <h1 class="home-title">Anki Reviewers</h1>
+        <p class="muted">Choose a deck to review.</p>
+        <div id="deckList" class="reader-list"></div>
     </div>
+
+    <div id="reviewScreen" class="screen">
+        <div class="header">
+            <div id="deckTitle" class="title">Deck</div>
+            <div id="progress" class="progress">0 remaining</div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div id="frontText" class="prompt-text"></div>
+                <img id="frontImage" class="card-img" alt="">
+                <button id="frontAudioBtn" class="audio-btn" onclick="playAudio('frontAudio')">Play Audio</button>
+                <div id="answerBox" class="answer-box">
+                    <div id="backText" class="answer-text"></div>
+                    <img id="backImage" class="card-img" alt="">
+                    <button id="backAudioBtn" class="audio-btn" onclick="playAudio('backAudio')">Play Audio</button>
+                    <div id="backNotes" class="notes-text"></div>
+                </div>
+            </div>
+        </div>
+        <div class="action-area">
+            <button id="showBtn" class="btn btn-primary" onclick="showAnswer()">Show Answer</button>
+            <div id="gradeGrid" class="btn-grid">
+                <button class="btn-grade btn-again" onclick="gradeCard(1)">Again<span id="int-1">10m</span></button>
+                <button class="btn-grade btn-hard" onclick="gradeCard(2)">Hard<span id="int-2"></span></button>
+                <button class="btn-grade btn-good" onclick="gradeCard(3)">Good<span id="int-3"></span></button>
+                <button class="btn-grade btn-easy" onclick="gradeCard(4)">Easy<span id="int-4"></span></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="finishScreen" class="screen">
+        <h2 id="finishTitle">Session Complete!</h2>
+        <p id="finishMessage" class="muted">All due cards reviewed.</p>
+        <button id="syncBtn" class="btn btn-primary" onclick="syncWithGitHub()">Retry Sync Now</button>
+        <p id="syncStatus" class="muted"></p>
+    </div>
+
+    <audio id="frontAudio"></audio>
+    <audio id="backAudio"></audio>
 
     <div id="patModal" class="modal">
         <div class="modal-content">
             <h3>GitHub Token Required</h3>
-            <p class="muted">Enter your GitHub Personal Access Token to sync reading progress.</p>
+            <p class="muted">Enter your GitHub Personal Access Token to sync progress.</p>
             <input type="password" id="patInput" autocomplete="off" placeholder="GitHub token">
             <button class="btn btn-primary" onclick="savePATFromModal()">Save Token</button>
         </div>
     </div>
 
     <script src="reviewer_state.js?v=4"></script>
-    <script src="pdf_reader_app.js?v=4"></script>
+    <script src="reviewer_app.js?v=5"></script>
 </body>
 </html>
