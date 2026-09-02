@@ -16,18 +16,23 @@ class WebAssetSmokeTests(unittest.TestCase):
 
     def test_reviewer_loads_versioned_anki_assets(self):
         html = (ROOT / "reviewer.html").read_text(encoding="utf-8")
+        app = (ROOT / "reviewer_app.js").read_text(encoding="utf-8")
 
         self.assertIn('src="reviewer_state.js?v=4"', html)
-        self.assertIn('src="reviewer_app.js?v=4"', html)
+        self.assertIn('src="reviewer_app.js?v=5"', html)
+        self.assertIn('id="homeScreen"', html)
+        self.assertIn("loadDeckIndex", app)
 
     def test_pdf_reader_loads_book_aware_assets(self):
         html = (ROOT / "pdf_reader.html").read_text(encoding="utf-8")
         app = (ROOT / "pdf_reader_app.js").read_text(encoding="utf-8")
 
         self.assertIn('src="reviewer_state.js?v=4"', html)
-        self.assertIn('src="pdf_reader_app.js?v=4"', html)
+        self.assertIn('src="pdf_reader_app.js?v=5"', html)
         self.assertIn("data.book_id", app)
         self.assertIn("pdf_outbox_v3", app)
+        self.assertIn("loadReaderIndex", app)
+        self.assertIn('"BOOKS"', app)
 
 
 if __name__ == "__main__":
