@@ -4,8 +4,8 @@
   "title": "HSK Vocabulary",
   "batch_id": "2026-09-02",
   "batch_date": "2026-09-02",
-  "compiled_at": "2026-09-02T03:32:05.373360Z",
-  "state_revision": 179,
+  "compiled_at": "2026-09-02T05:30:27.015614Z",
+  "state_revision": 180,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -182,39 +182,10 @@
     "2a2e86d8-faed-4dc0-a53d-a8653e7a6c07",
     "27e2d480-7171-4e32-acbd-e9301a5e4a38",
     "3b100d64-2035-4d5a-88db-ba21f261a501",
-    "15b5c324-701f-45b3-9aa8-3fa8201f2425"
+    "15b5c324-701f-45b3-9aa8-3fa8201f2425",
+    "74b27b6c-96db-460a-bda2-7f7f255f88c5"
   ],
   "cards": [
-    {
-      "id": "hsk-0013",
-      "front": {
-        "text": "\u6703",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "hu\u00ec - know how to",
-        "notes": null
-      },
-      "available_at": "2026-09-01T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "lapses": 0,
-        "last_reviewed_at": "2026-09-01T08:54:54.249000Z",
-        "next_due_at": "2026-09-01T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
     {
       "id": "hsk-0051",
       "front": {
@@ -1213,6 +1184,36 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "hsk-0013",
+      "front": {
+        "text": "\u6703",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "hu\u00ec - know how to",
+        "notes": null
+      },
+      "available_at": "2026-09-02T05:40:04.850000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.09603383636195935,
+        "difficulty": 8.802628058192235,
+        "interval_days": 0,
+        "reviews": 3,
+        "lapses": 1,
+        "last_reviewed_at": "2026-09-02T05:30:04.850000Z",
+        "next_due_at": "2026-09-02T05:40:04.850000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
