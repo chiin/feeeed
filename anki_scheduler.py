@@ -390,6 +390,7 @@ def build_deck_snapshot(
     stream_history: dict,
     now: datetime,
     scheduler: FSRSScheduler | None = None,
+    front_text_scale: float = 1.0,
 ) -> dict:
     scheduler = scheduler or FSRSScheduler()
     batch = stream_history["daily_batch"]
@@ -412,6 +413,7 @@ def build_deck_snapshot(
         "schema_version": SCHEMA_VERSION,
         "deck_id": stream_key,
         "title": title,
+        "front_text_scale": front_text_scale,
         "batch_id": batch["id"],
         "batch_date": batch["date"],
         "compiled_at": isoformat_utc(now),
