@@ -1,19 +1,30 @@
 "use strict";
 
-const deckParam = new URLSearchParams(window.location.search).get("deck");
+const searchParams = new URLSearchParams(window.location.search);
+const deckParam = searchParams.get("deck");
+const programParam = searchParams.get("program");
 const deckId = deckParam && deckParam.toUpperCase() !== "NONE"
     ? deckParam
     : null;
+const programId = programParam && programParam.toUpperCase() !== "NONE"
+    ? programParam
+    : null;
+const sessionId = programId ? `program:${programId}` : deckId;
 const ratingNames = { 1: "again", 2: "hard", 3: "good", 4: "easy" };
 let cards = [];
 let outbox = null;
 let waitTimer = null;
 let syncInFlight = false;
 
-if (!deckId) {
+if (!sessionId) {
     loadDeckIndex();
 } else {
-    outbox = new ReviewerState.DurableOutbox(localStorage, deckId);
+    outbox = new ReviewerState.DurableOutbox(
+        localStorage,
+        sessionId,
+        undefined,
+        programId ? "anki_program_outbox_v1" : "anki_outbox_v2"
+    );
     loadDeck();
     setInterval(loadDeck, 60000);
     setInterval(() => flushPendingSync(), 30000);
@@ -26,10 +37,22 @@ async function loadDeckIndex() {
         });
         if (!response.ok) throw new Error("Configuration not found");
         const config = await response.json();
+        const programs = Object.entries(config.programs || {})
+            .filter(([, program]) => program.enabled);
         const decks = Object.entries(config.streams || {})
             .filter(([, stream]) => stream.type === "anki_deck");
         const list = document.getElementById("deckList");
-        list.replaceChildren(...decks.map(([id, stream]) => {
+        const programLinks = programs.map(([id, program]) => {
+            const link = document.createElement("a");
+            link.className = "reader-link";
+            link.href = `reviewer.html?program=${encodeURIComponent(id)}`;
+            link.textContent = program.feed_title || id;
+            const detail = document.createElement("span");
+            detail.textContent = "Combined vocabulary and sentence review";
+            link.appendChild(detail);
+            return link;
+        });
+        const deckLinks = decks.map(([id, stream]) => {
             const link = document.createElement("a");
             link.className = "reader-link";
             link.href = `reviewer.html?deck=${encodeURIComponent(id)}`;
@@ -38,8 +61,9 @@ async function loadDeckIndex() {
             detail.textContent = `${stream.new_cards_per_day || 0} new cards per day`;
             link.appendChild(detail);
             return link;
-        }));
-        if (!decks.length) {
+        });
+        list.replaceChildren(...programLinks, ...deckLinks);
+        if (!programLinks.length && !deckLinks.length) {
             list.innerHTML = '<p class="muted">No Anki decks configured.</p>';
         }
         showScreen("homeScreen");
@@ -51,16 +75,20 @@ async function loadDeckIndex() {
 
 async function loadDeck() {
     try {
-        const response = await fetch(`cards/${deckId}_deck.json?t=${Date.now()}`, {
+        const snapshotPath = programId
+            ? `cards/${programId}_program.json`
+            : `cards/${deckId}_deck.json`;
+        const response = await fetch(`${snapshotPath}?t=${Date.now()}`, {
             cache: "no-store"
         });
-        if (!response.ok) throw new Error("Deck file not found");
+        if (!response.ok) throw new Error("Review session file not found");
         const data = await response.json();
         document.documentElement.style.setProperty(
             "--front-text-scale",
             String(data.front_text_scale || 1)
         );
-        document.getElementById("deckTitle").innerText = data.title || deckId;
+        document.getElementById("deckTitle").innerText =
+            data.title || programId || deckId;
         outbox.acknowledge(data.processed_event_ids);
         cards = ReviewerState.reconcileCards(data.cards, outbox.events());
         renderNextCard();
@@ -109,6 +137,10 @@ function renderNextCard() {
         cards.unshift(cards.splice(readyIndex, 1)[0]);
     }
     const card = cards[0];
+    document.documentElement.style.setProperty(
+        "--front-text-scale",
+        String(card.front_text_scale || 1)
+    );
     showScreen("reviewScreen");
     document.getElementById("progress").innerText = `${cards.length} remaining`;
     document.getElementById("answerBox").style.display = "none";
@@ -167,7 +199,11 @@ function gradeCard(grade) {
     const reviewedAt = new Date().toISOString();
     outbox.enqueue(
         ReviewerState.createReviewEvent(
-            deckId, card.id, rating, reviewedAt, createEventId()
+            card.deck_id || deckId,
+            card.id,
+            rating,
+            reviewedAt,
+            createEventId()
         )
     );
 
@@ -198,12 +234,65 @@ function savePATFromModal() {
     flushPendingSync(true);
 }
 
+async function flushProgramEvents(events, token) {
+    const eventIds = events.map(event => event.event_id);
+    outbox.markAttempt(eventIds);
+    syncInFlight = true;
+    let failedEventIds = eventIds;
+    try {
+        for (const [targetDeckId, deckEvents] of
+            ReviewerState.groupReviewEventsByDeck(events)) {
+            failedEventIds = deckEvents.map(event => event.event_id);
+            const response = await fetch(
+                "https://api.github.com/repos/chiin/feeeed/dispatches",
+                {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/vnd.github+json",
+                        "Authorization": `Bearer ${token}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        event_type: "anki_review",
+                        client_payload: {
+                            deck_id: targetDeckId,
+                            events: deckEvents
+                        }
+                    }),
+                    keepalive: true
+                }
+            );
+            if (!response.ok) {
+                if (response.status === 401) {
+                    localStorage.removeItem("feeeed_pat");
+                    alert("Invalid GitHub Token. Please re-enter your PAT.");
+                    getPAT();
+                }
+                throw new Error(`GitHub API returned ${response.status}`);
+            }
+        }
+        document.getElementById("syncStatus").innerText =
+            "Events accepted; waiting for GitHub Pages to publish.";
+    } catch (error) {
+        outbox.markFailed(failedEventIds);
+        console.error("[Feeeeed Sync]", error);
+        document.getElementById("syncStatus").innerText =
+            "Sync failed. The durable outbox will retry.";
+    } finally {
+        syncInFlight = false;
+    }
+}
+
 async function flushPendingSync(force = false) {
     if (syncInFlight) return;
     const events = outbox.retryable(force);
     if (!events.length) return;
     const token = getPAT();
     if (!token) return;
+    if (programId) {
+        await flushProgramEvents(events, token);
+        return;
+    }
 
     const eventIds = events.map(event => event.event_id);
     outbox.markAttempt(eventIds);

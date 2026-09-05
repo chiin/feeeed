@@ -21,6 +21,7 @@ from pdf_scheduler import (
 )
 from sentence_program import (
     apply_sentence_review_results,
+    build_combined_snapshot,
     eligible_source_word_ids,
     load_sentence_content,
     prepare_sentence_program,
@@ -612,6 +613,7 @@ def main():
     gated_new_cards = {}
     sentence_content_updates = {}
     sentence_program_contexts = {}
+    anki_snapshots = {}
     for program_id, program_cfg in config.get("programs", {}).items():
         if not program_cfg.get("enabled", False):
             continue
@@ -740,7 +742,7 @@ def main():
                     return sentence_cards(content)
 
                 after_review_events = reconcile_sentence_reviews
-            process_anki_deck(
+            snapshot = process_anki_deck(
                 stream_key,
                 stream_cfg,
                 stream_history,
@@ -752,9 +754,76 @@ def main():
                 eligible_new_card_ids=gated_new_cards.get(stream_key),
                 after_review_events=after_review_events,
             )
+            if snapshot is not None:
+                anki_snapshots[stream_key] = snapshot
 
         fg.rss_file(str(xml_filename), pretty=True)
         print(f"Generated {xml_filename}")
+
+    for (
+        sentence_stream_id,
+        (program_id, program_cfg, program_state, _content),
+    ) in sentence_program_contexts.items():
+        source_stream_id = program_cfg["source_stream"]
+        missing_snapshots = [
+            stream_id
+            for stream_id in (source_stream_id, sentence_stream_id)
+            if stream_id not in anki_snapshots
+        ]
+        if missing_snapshots:
+            raise RuntimeError(
+                f"[{program_id}] missing source snapshots: "
+                f"{', '.join(missing_snapshots)}"
+            )
+        combined_snapshot = build_combined_snapshot(
+            program_id,
+            program_cfg.get("feed_title", program_id),
+            program_state,
+            [
+                anki_snapshots[source_stream_id],
+                anki_snapshots[sentence_stream_id],
+            ],
+            run_now,
+        )
+        cards_dir = Path("cards")
+        cards_dir.mkdir(exist_ok=True)
+        save_json(
+            cards_dir / f"{program_id}_program.json",
+            combined_snapshot,
+        )
+        feed_filename = program_cfg.get("feed_file", f"{program_id}.xml")
+        if Path(feed_filename).name != feed_filename or not feed_filename.endswith(
+            ".xml"
+        ):
+            raise ValueError(f"[{program_id}] feed_file must be a root XML filename")
+        feed_url = f"{BASE_URL}/{feed_filename}"
+        program_feed = FeedGenerator()
+        program_feed.id(feed_url)
+        program_feed.title(program_cfg.get("feed_title", program_id))
+        program_feed.description(f"Combined learning feed for {program_id}")
+        program_feed.link(href=feed_url, rel="self")
+        program_feed.language("en")
+        entry = program_feed.add_entry()
+        entry.id(f"{program_id}-combined-batch-{combined_snapshot['batch_id']}")
+        entry.title(
+            f"[{program_cfg.get('feed_title', program_id)}] "
+            f"{len(combined_snapshot['cards'])} Cards Due"
+        )
+        entry.link(
+            href=f"{BASE_URL}/reviewer.html?program={program_id}"
+        )
+        entry.description(
+            "A shuffled review session combining vocabulary and sentence cards."
+        )
+        entry.pubDate(
+            datetime.fromisoformat(
+                program_state["combined_batch"]["created_at"].replace(
+                    "Z", "+00:00"
+                )
+            )
+        )
+        program_feed.rss_file(feed_filename, pretty=True)
+        print(f"[{program_id}] Generated combined feed {feed_filename}.")
 
     for content_path, content in sentence_content_updates.items():
         save_sentence_content(content_path, content)
@@ -933,6 +1002,7 @@ def process_anki_deck(
     rss_filepath = Path(f"{stream_key}.xml")
     # fg.rss_file(rss_filepath, pretty=True)
     print(f"[{stream_key}] Saved feed to {rss_filepath}")
+    return compiled_payload
 
 if __name__ == "__main__":
     main()

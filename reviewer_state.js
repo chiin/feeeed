@@ -135,7 +135,10 @@
         );
 
         sortedEvents.forEach(event => {
-            const index = cards.findIndex(card => card.id === event.card_id);
+            const index = cards.findIndex(card =>
+                card.id === event.card_id
+                && (!card.deck_id || card.deck_id === event.deck_id)
+            );
             if (index < 0) return;
             const card = cards[index];
             if (Date.parse(card.available_at) > Date.parse(event.reviewed_at)) return;
@@ -150,6 +153,18 @@
             }
         });
         return cards;
+    }
+
+    function groupReviewEventsByDeck(events) {
+        const groups = new Map();
+        (events || []).forEach(event => {
+            if (!event || typeof event.deck_id !== "string" || !event.deck_id) {
+                throw new Error("Review event is missing its deck ID.");
+            }
+            if (!groups.has(event.deck_id)) groups.set(event.deck_id, []);
+            groups.get(event.deck_id).push(event);
+        });
+        return groups;
     }
 
     function reconcilePdfItems(serverItems, pendingEvents) {
@@ -167,6 +182,7 @@
         DurableOutbox,
         RETRY_DELAY_MS,
         createReviewEvent,
+        groupReviewEventsByDeck,
         reconcileCards,
         reconcilePdfItems
     };
