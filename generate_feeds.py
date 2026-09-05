@@ -19,6 +19,15 @@ from pdf_scheduler import (
     migrate_history as migrate_pdf_history,
     release_if_due,
 )
+from sentence_program import (
+    apply_sentence_review_results,
+    eligible_source_word_ids,
+    load_sentence_content,
+    prepare_sentence_program,
+    save_sentence_content,
+    sentence_cards,
+    resolve_sentence_content_path,
+)
 from state_store import StateStore
 
 CONFIG_PATH = Path("config.json")
@@ -585,14 +594,76 @@ def process_pdf_folder(
 # --- MAIN CONTROLLER ---
 
 def main():
+    run_now = datetime.now(timezone.utc)
     config = load_json(CONFIG_PATH)
     state_store = StateStore(Path("."), LEGACY_HISTORY_PATH)
     streams = config.get("streams", {})
-
     dispatch_payload = get_dispatch_payload()
-
     if dispatch_payload:
         print(f"Triggered via dispatch with payload: {dispatch_payload}")
+
+    stream_states = {
+        stream_key: state_store.load_stream(
+            stream_key, stream_cfg.get("state_file")
+        )
+        for stream_key, stream_cfg in streams.items()
+    }
+    generated_card_overrides = {}
+    gated_new_cards = {}
+    sentence_content_updates = {}
+    sentence_program_contexts = {}
+    for program_id, program_cfg in config.get("programs", {}).items():
+        if not program_cfg.get("enabled", False):
+            continue
+        source_stream_id = program_cfg.get("source_stream")
+        sentence_stream_id = program_cfg.get("sentence_stream")
+        if source_stream_id not in streams:
+            raise ValueError(
+                f"[{program_id}] unknown source stream: {source_stream_id}"
+            )
+        if sentence_stream_id not in streams:
+            raise ValueError(
+                f"[{program_id}] unknown sentence stream: {sentence_stream_id}"
+            )
+        source_cfg = streams[source_stream_id]
+        if source_cfg.get("type") != "anki_deck":
+            raise ValueError(
+                f"[{program_id}] source stream must be an Anki deck"
+            )
+        source_cards = load_anki_cards(source_cfg, BASE_URL)
+        content_path = resolve_sentence_content_path(
+            Path("."), program_cfg.get("content_path")
+        )
+        content = load_sentence_content(content_path, program_id)
+        program_state = state_store.load_program(
+            program_id, program_cfg.get("program_state_file")
+        )
+        generation_state = state_store.load_generation(
+            program_id, program_cfg.get("generation_state_file")
+        )
+        result = prepare_sentence_program(
+            program_id,
+            program_cfg,
+            program_state,
+            generation_state,
+            content,
+            source_cards,
+            stream_states[source_stream_id],
+            run_now,
+        )
+        generated_card_overrides[sentence_stream_id] = sentence_cards(content)
+        sentence_content_updates[content_path] = content
+        sentence_program_contexts[sentence_stream_id] = (
+            program_id,
+            program_cfg,
+            program_state,
+            content,
+        )
+        if program_cfg.get("control_source_new_cards", False):
+            gated_new_cards[source_stream_id] = eligible_source_word_ids(
+                program_state
+            )
+        print(f"[{program_id}] Processed sentence program: {result}.")
 
     for stream_key, stream_cfg in streams.items():
         # Autodetect stream type for backwards compatibility
@@ -605,9 +676,7 @@ def main():
             else:
                 continue
 
-        stream_history = state_store.load_stream(
-            stream_key, stream_cfg.get("state_file")
-        )
+        stream_history = stream_states[stream_key]
         xml_filename = Path(f"{stream_key}.xml")
         feed_url = f"{BASE_URL}/{xml_filename}"
 
@@ -623,13 +692,72 @@ def main():
         elif stream_type == "book_queue":
             process_book_queue(stream_key, stream_cfg, stream_history, fg, dispatch_payload)
         elif stream_type in {"pdf_folder", "current_book"}:
-            process_pdf_folder(stream_key, stream_cfg, stream_history, fg, BASE_URL, dispatch_payload)
+            process_pdf_folder(
+                stream_key,
+                stream_cfg,
+                stream_history,
+                fg,
+                BASE_URL,
+                dispatch_payload,
+                run_now,
+            )
         elif stream_type == "anki_deck":
-            process_anki_deck(stream_key, stream_cfg, stream_history, fg, BASE_URL, dispatch_payload)
+            after_review_events = None
+            if stream_key in sentence_program_contexts:
+                (
+                    program_id,
+                    program_cfg,
+                    program_state,
+                    content,
+                ) = sentence_program_contexts[stream_key]
+
+                def reconcile_sentence_reviews(
+                    program_id=program_id,
+                    program_cfg=program_cfg,
+                    program_state=program_state,
+                    content=content,
+                    stream_history=stream_history,
+                ):
+                    review_result = apply_sentence_review_results(
+                        program_id,
+                        program_cfg["sentence_stream"],
+                        program_state,
+                        stream_history,
+                        content,
+                        dispatch_payload,
+                        int(
+                            program_cfg.get(
+                                "promotion_threshold_sentence_passes", 3
+                            )
+                        ),
+                        run_now,
+                    )
+                    if any(review_result.values()):
+                        print(
+                            f"[{program_id}] Reconciled sentence reviews: "
+                            f"{review_result}."
+                        )
+                    return sentence_cards(content)
+
+                after_review_events = reconcile_sentence_reviews
+            process_anki_deck(
+                stream_key,
+                stream_cfg,
+                stream_history,
+                fg,
+                BASE_URL,
+                dispatch_payload,
+                run_now,
+                all_cards_override=generated_card_overrides.get(stream_key),
+                eligible_new_card_ids=gated_new_cards.get(stream_key),
+                after_review_events=after_review_events,
+            )
 
         fg.rss_file(str(xml_filename), pretty=True)
         print(f"Generated {xml_filename}")
 
+    for content_path, content in sentence_content_updates.items():
+        save_sentence_content(content_path, content)
     state_store.save_all()
 
 # --- DECK PARSERS ---
@@ -687,6 +815,23 @@ def parse_media_folder(folder_path: Path, base_url: str) -> list[dict]:
             })
     return cards
 
+
+def load_anki_cards(stream_cfg: dict, base_url: str) -> list[dict]:
+    source_type = stream_cfg.get("source_type", "csv")
+    path = Path(stream_cfg["path"])
+    if not path.exists():
+        raise FileNotFoundError(f"deck path does not exist: {path}")
+    if source_type == "csv":
+        return parse_csv_deck(path, base_url)
+    if source_type == "media_folder":
+        return parse_media_folder(path, base_url)
+    if source_type == "generated_sentences":
+        program_id = stream_cfg.get("program_id")
+        if not isinstance(program_id, str) or not program_id:
+            raise ValueError("generated sentence deck requires program_id")
+        return sentence_cards(load_sentence_content(path, program_id))
+    raise ValueError(f"unsupported Anki source type: {source_type}")
+
 # --- PROCESSOR FOR ANKI DECKS ---
 
 def process_anki_deck(
@@ -697,27 +842,33 @@ def process_anki_deck(
     base_url: str,
     dispatch_payload: dict,
     now: datetime | None = None,
+    all_cards_override: list[dict] | None = None,
+    eligible_new_card_ids: set[str] | None = None,
+    after_review_events=None,
 ):
     now = now or datetime.now(timezone.utc)
-    source_type = stream_cfg.get("source_type", "csv")
-    path = Path(stream_cfg["path"])
-    
-    if not path.exists():
-        print(f"Warning: Deck path '{path}' does not exist.")
-        return
-
-    # 1. Parse Card Data
-    if source_type == "csv":
-        all_cards = parse_csv_deck(path, base_url)
-    elif source_type == "media_folder":
-        all_cards = parse_media_folder(path, base_url)
+    if all_cards_override is None:
+        try:
+            all_cards = load_anki_cards(stream_cfg, base_url)
+        except FileNotFoundError as error:
+            print(f"Warning: {error}.")
+            return
     else:
-        return
+        all_cards = all_cards_override
+
+    batch_card_ids = [card["id"] for card in all_cards]
+    if eligible_new_card_ids is not None:
+        scheduled_ids = set(stream_history.get("cards", {}))
+        batch_card_ids = [
+            card_id
+            for card_id in batch_card_ids
+            if card_id in scheduled_ids or card_id in eligible_new_card_ids
+        ]
 
     # The HKT rollover freezes membership before any reviews mutate the batch.
     batch = ensure_daily_batch(
         stream_history,
-        [card["id"] for card in all_cards],
+        batch_card_ids,
         stream_cfg.get("new_cards_per_day", 50),
         now,
     )
@@ -736,6 +887,10 @@ def process_anki_deck(
                 stream_key, stream_history, raw_events, now
             )
             print(f"[{stream_key}] Processed Anki reviews: {result}.")
+    if after_review_events is not None:
+        updated_cards = after_review_events()
+        if updated_cards is not None:
+            all_cards = updated_cards
 
     scheduler = FSRSScheduler()
     front_text_scale = float(stream_cfg.get("front_text_scale", 1.0))
