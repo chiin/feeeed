@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-05",
   "batch_date": "2026-09-05",
-  "compiled_at": "2026-09-05T02:49:25.496865Z",
-  "state_revision": 381,
+  "compiled_at": "2026-09-05T02:49:44.971562Z",
+  "state_revision": 384,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -382,99 +382,12 @@
     "d5edc869-4a6b-4813-a079-7fec64a87868",
     "bcabb084-82a8-4ddb-88c1-85418c69edc7",
     "a203f177-6e5b-4252-ac40-5b962c5c7611",
-    "52771b9f-9462-4d79-8ad1-42db29db2371"
+    "52771b9f-9462-4d79-8ad1-42db29db2371",
+    "b0e38588-15e2-47a3-87a5-8565f4102af8",
+    "4c28f048-50f5-49ef-a49c-f64d5e8858ae",
+    "fae0ea64-a11a-4a2d-b4db-aef6b83503c9"
   ],
   "cards": [
-    {
-      "id": "hsk-0080",
-      "front": {
-        "text": "\u5beb",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "xi\u011b - to write; to compose",
-        "notes": null
-      },
-      "available_at": "2026-09-04T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.6075801062519337,
-        "difficulty": 7.394502741279718,
-        "interval_days": 0,
-        "reviews": 2,
-        "lapses": 1,
-        "last_reviewed_at": "2026-09-04T15:46:28.213000Z",
-        "next_due_at": "2026-09-04T15:56:28.213000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0081",
-      "front": {
-        "text": "\u6708",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "yu\u00e8 - moon; month; flesh (radical)",
-        "notes": null
-      },
-      "available_at": "2026-09-04T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.6075801062519337,
-        "difficulty": 7.394502741279718,
-        "interval_days": 0,
-        "reviews": 2,
-        "lapses": 1,
-        "last_reviewed_at": "2026-09-04T15:46:31.931000Z",
-        "next_due_at": "2026-09-04T15:56:31.931000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0013",
-      "front": {
-        "text": "\u6703",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "hu\u00ec - know how to",
-        "notes": null
-      },
-      "available_at": "2026-09-04T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.2577471660973825,
-        "difficulty": 8.356499107508712,
-        "interval_days": 1,
-        "reviews": 6,
-        "lapses": 1,
-        "last_reviewed_at": "2026-09-04T15:44:55.930000Z",
-        "next_due_at": "2026-09-04T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
-      }
-    },
     {
       "id": "hsk-0087",
       "front": {
@@ -1973,6 +1886,36 @@
         "hard": "5d",
         "good": "7d",
         "easy": "12d"
+      }
+    },
+    {
+      "id": "hsk-0080",
+      "front": {
+        "text": "\u5beb",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "xi\u011b - to write; to compose",
+        "notes": null
+      },
+      "available_at": "2026-09-05T02:59:08.181000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.22290513490476177,
+        "difficulty": 9.128819137736839,
+        "interval_days": 0,
+        "reviews": 3,
+        "lapses": 2,
+        "last_reviewed_at": "2026-09-05T02:49:08.181000Z",
+        "next_due_at": "2026-09-05T02:59:08.181000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
