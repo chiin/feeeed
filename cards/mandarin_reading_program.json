@@ -1,12 +1,15 @@
 {
-  "schema_version": 3,
-  "deck_id": "hsk",
-  "title": "HSK Vocabulary",
-  "front_text_scale": 2.0,
+  "schema_version": 1,
+  "program_id": "mandarin_reading",
+  "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-06",
   "batch_date": "2026-09-06",
   "compiled_at": "2026-09-05T17:15:55.541017Z",
-  "state_revision": 437,
+  "state_revision": 3,
+  "source_revisions": {
+    "hsk": 437,
+    "mandarin_sentences": 2
+  },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -468,7 +471,10 @@
         "hard": "1d",
         "good": "1d",
         "easy": "2d"
-      }
+      },
+      "deck_id": "hsk",
+      "deck_title": "HSK Vocabulary",
+      "front_text_scale": 2.0
     },
     {
       "id": "hsk-0056",
@@ -498,37 +504,10 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0080",
-      "front": {
-        "text": "\u5beb",
-        "audio": null,
-        "image": null
       },
-      "back": {
-        "text": "xi\u011b - to write; to compose",
-        "notes": null
-      },
-      "available_at": "2026-09-05T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.25852403523801404,
-        "difficulty": 9.114918687895939,
-        "interval_days": 1,
-        "reviews": 4,
-        "lapses": 2,
-        "last_reviewed_at": "2026-09-05T15:57:59.473000Z",
-        "next_due_at": "2026-09-05T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
+      "deck_id": "hsk",
+      "deck_title": "HSK Vocabulary",
+      "front_text_scale": 2.0
     },
     {
       "id": "hsk-0081",
@@ -558,59 +537,32 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
+      },
+      "deck_id": "hsk",
+      "deck_title": "HSK Vocabulary",
+      "front_text_scale": 2.0
     },
     {
-      "id": "hsk-0085",
+      "id": "hsk-0080",
       "front": {
-        "text": "\u770b\u898b",
+        "text": "\u5beb",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "k\u00e0nji\u00e0n - see; catch sight of",
+        "text": "xi\u011b - to write; to compose",
         "notes": null
       },
       "available_at": "2026-09-05T16:00:00Z",
       "scheduler_state": {
         "state": "review",
         "step": null,
-        "stability": 2.1520782454047453,
-        "difficulty": 6.379778751497693,
-        "interval_days": 2,
+        "stability": 0.25852403523801404,
+        "difficulty": 9.114918687895939,
+        "interval_days": 1,
         "reviews": 4,
-        "lapses": 0,
-        "last_reviewed_at": "2026-09-04T15:46:47.767000Z",
-        "next_due_at": "2026-09-05T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "4d",
-        "good": "5d",
-        "easy": "7d"
-      }
-    },
-    {
-      "id": "hsk-0087",
-      "front": {
-        "text": "\u5582",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "w\u00e8i - hello (on the phone)",
-        "notes": null
-      },
-      "available_at": "2026-09-05T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.801638987512545,
-        "difficulty": 8.761945991110197,
-        "interval_days": 1,
-        "reviews": 6,
-        "lapses": 1,
-        "last_reviewed_at": "2026-09-05T03:48:11.595000Z",
+        "lapses": 2,
+        "last_reviewed_at": "2026-09-05T15:57:59.473000Z",
         "next_due_at": "2026-09-05T16:00:00Z"
       },
       "schedule_previews": {
@@ -618,37 +570,10 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0136",
-      "front": {
-        "text": "\u4e5d",
-        "audio": null,
-        "image": null
       },
-      "back": {
-        "text": "ji\u01d4 - nine",
-        "notes": null
-      },
-      "available_at": "2026-09-05T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.6228007531723337,
-        "difficulty": 7.382336607835277,
-        "interval_days": 1,
-        "reviews": 3,
-        "lapses": 1,
-        "last_reviewed_at": "2026-09-05T15:58:00.855000Z",
-        "next_due_at": "2026-09-05T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
+      "deck_id": "hsk",
+      "deck_title": "HSK Vocabulary",
+      "front_text_scale": 2.0
     },
     {
       "id": "hsk-0146",
@@ -678,7 +603,109 @@
         "hard": "3d",
         "good": "4d",
         "easy": "7d"
-      }
+      },
+      "deck_id": "hsk",
+      "deck_title": "HSK Vocabulary",
+      "front_text_scale": 2.0
+    },
+    {
+      "id": "hsk-0136",
+      "front": {
+        "text": "\u4e5d",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "ji\u01d4 - nine",
+        "notes": null
+      },
+      "available_at": "2026-09-05T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.6228007531723337,
+        "difficulty": 7.382336607835277,
+        "interval_days": 1,
+        "reviews": 3,
+        "lapses": 1,
+        "last_reviewed_at": "2026-09-05T15:58:00.855000Z",
+        "next_due_at": "2026-09-05T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "hsk",
+      "deck_title": "HSK Vocabulary",
+      "front_text_scale": 2.0
+    },
+    {
+      "id": "hsk-0087",
+      "front": {
+        "text": "\u5582",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "w\u00e8i - hello (on the phone)",
+        "notes": null
+      },
+      "available_at": "2026-09-05T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.801638987512545,
+        "difficulty": 8.761945991110197,
+        "interval_days": 1,
+        "reviews": 6,
+        "lapses": 1,
+        "last_reviewed_at": "2026-09-05T03:48:11.595000Z",
+        "next_due_at": "2026-09-05T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "hsk",
+      "deck_title": "HSK Vocabulary",
+      "front_text_scale": 2.0
+    },
+    {
+      "id": "hsk-0085",
+      "front": {
+        "text": "\u770b\u898b",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "k\u00e0nji\u00e0n - see; catch sight of",
+        "notes": null
+      },
+      "available_at": "2026-09-05T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.1520782454047453,
+        "difficulty": 6.379778751497693,
+        "interval_days": 2,
+        "reviews": 4,
+        "lapses": 0,
+        "last_reviewed_at": "2026-09-04T15:46:47.767000Z",
+        "next_due_at": "2026-09-05T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "4d",
+        "good": "5d",
+        "easy": "7d"
+      },
+      "deck_id": "hsk",
+      "deck_title": "HSK Vocabulary",
+      "front_text_scale": 2.0
     }
   ]
 }
