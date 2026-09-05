@@ -19,9 +19,10 @@ from pdf_scheduler import (
     migrate_history as migrate_pdf_history,
     release_if_due,
 )
+from state_store import StateStore
 
 CONFIG_PATH = Path("config.json")
-HISTORY_PATH = Path("history.json")
+LEGACY_HISTORY_PATH = Path("history.json")
 CARDS_DIR = Path("cards")
 BASE_URL = "https://chiin.github.io/feeeed"
 
@@ -585,7 +586,7 @@ def process_pdf_folder(
 
 def main():
     config = load_json(CONFIG_PATH)
-    master_history = load_json(HISTORY_PATH)
+    state_store = StateStore(Path("."), LEGACY_HISTORY_PATH)
     streams = config.get("streams", {})
 
     dispatch_payload = get_dispatch_payload()
@@ -604,7 +605,9 @@ def main():
             else:
                 continue
 
-        stream_history = master_history.setdefault(stream_key, {})
+        stream_history = state_store.load_stream(
+            stream_key, stream_cfg.get("state_file")
+        )
         xml_filename = Path(f"{stream_key}.xml")
         feed_url = f"{BASE_URL}/{xml_filename}"
 
@@ -627,7 +630,7 @@ def main():
         fg.rss_file(str(xml_filename), pretty=True)
         print(f"Generated {xml_filename}")
 
-    save_json(HISTORY_PATH, master_history)
+    state_store.save_all()
 
 # --- DECK PARSERS ---
 
