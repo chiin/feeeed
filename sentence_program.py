@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import os
+import hashlib
+import random
 import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -277,6 +279,98 @@ def eligible_source_word_ids(program_state: dict) -> set[str]:
     return promoted_word_ids(program_state) | set(
         program_state.get("grandfathered_word_ids", [])
     )
+
+
+def ensure_combined_batch(
+    program_id: str,
+    program_state: dict,
+    source_snapshots: list[dict],
+    now: datetime,
+) -> dict:
+    _migrate_program_state(program_state)
+    day = hkt_day(now).isoformat()
+    existing = program_state.get("combined_batch")
+    if existing and existing.get("date") == day:
+        return existing
+
+    members = [
+        {
+            "deck_id": snapshot["deck_id"],
+            "card_id": card["id"],
+        }
+        for snapshot in source_snapshots
+        for card in snapshot.get("cards", [])
+    ]
+    seed_material = f"{program_id}:{day}".encode("utf-8")
+    seed = int.from_bytes(hashlib.sha256(seed_material).digest(), "big")
+    random.Random(seed).shuffle(members)
+    if existing:
+        program_state["previous_combined_batch"] = existing
+    combined_batch = {
+        "id": day,
+        "date": day,
+        "created_at": isoformat_utc(now),
+        "source_batch_ids": {
+            snapshot["deck_id"]: snapshot["batch_id"]
+            for snapshot in source_snapshots
+        },
+        "members": members,
+    }
+    program_state["combined_batch"] = combined_batch
+    program_state["revision"] += 1
+    return combined_batch
+
+
+def build_combined_snapshot(
+    program_id: str,
+    title: str,
+    program_state: dict,
+    source_snapshots: list[dict],
+    now: datetime,
+) -> dict:
+    batch = ensure_combined_batch(
+        program_id,
+        program_state,
+        source_snapshots,
+        now,
+    )
+    source_cards = {
+        (snapshot["deck_id"], card["id"]): {
+            **card,
+            "deck_id": snapshot["deck_id"],
+            "deck_title": snapshot["title"],
+            "front_text_scale": snapshot.get("front_text_scale", 1),
+        }
+        for snapshot in source_snapshots
+        for card in snapshot.get("cards", [])
+    }
+    cards = [
+        source_cards[(member["deck_id"], member["card_id"])]
+        for member in batch["members"]
+        if (member["deck_id"], member["card_id"]) in source_cards
+    ]
+    processed_event_ids = []
+    seen_event_ids = set()
+    for snapshot in source_snapshots:
+        for event_id in snapshot.get("processed_event_ids", []):
+            if event_id not in seen_event_ids:
+                seen_event_ids.add(event_id)
+                processed_event_ids.append(event_id)
+    return {
+        "schema_version": 1,
+        "program_id": program_id,
+        "title": title,
+        "batch_id": batch["id"],
+        "batch_date": batch["date"],
+        "compiled_at": isoformat_utc(now),
+        "state_revision": program_state["revision"],
+        "source_revisions": {
+            snapshot["deck_id"]: snapshot["state_revision"]
+            for snapshot in source_snapshots
+        },
+        "processed_event_ids": processed_event_ids,
+        "cards": cards,
+    }
 
 
 def _migrate_program_state(program_state: dict) -> None:
@@ -629,7 +723,11 @@ def prepare_sentence_program(
     day = hkt_day(now).isoformat()
     existing_job = generation_state["jobs"].get(day)
     generated_count = 0
-    if not existing_job:
+    generation_pending = (
+        not existing_job
+        or existing_job.get("generated_count") == 0
+    )
+    if generation_pending:
         tracked = program_state["vocabulary"]
         active_buffer = sum(
             1
@@ -721,12 +819,13 @@ def prepare_sentence_program(
             generated_count = len(generated)
             program_state["revision"] += 1
 
-        generation_state["jobs"][day] = {
-            "status": "completed",
-            "completed_at": isoformat_utc(now),
-            "generated_count": generated_count,
-            "sentence_ids": generated_sentence_ids if candidates else [],
-        }
+        if candidates or not existing_job:
+            generation_state["jobs"][day] = {
+                "status": "completed",
+                "completed_at": isoformat_utc(now),
+                "generated_count": generated_count,
+                "sentence_ids": generated_sentence_ids if candidates else [],
+            }
 
     return {
         "generated": generated_count,
