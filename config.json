@@ -68,6 +68,9 @@
   "programs": {
     "mandarin_reading": {
       "enabled": true,
+      "feed_title": "Mandarin Vocabulary and Sentences",
+      "feed_file": "mandarin.xml",
+      "feed_file": "mandarin.xml",
       "source_stream": "hsk",
       "sentence_stream": "mandarin_sentences",
       "content_path": "generated/mandarin_reading/sentences.json",
@@ -85,7 +88,7 @@
       "sentence_lifecycle": "disposable_scaffold",
       "generation": {
         "provider": "openrouter",
-        "model": "qwen/qwen3-30b-a3b-instruct-2507",
+        "model": "qwen/qwen3-30b-a3b:free",
         "api_key_env": "OPENROUTER_API_KEY",
         "timeout_seconds": 90
       }
