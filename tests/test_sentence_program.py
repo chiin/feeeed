@@ -10,6 +10,7 @@ from sentence_program import (
     DeterministicSentenceGenerator,
     OpenRouterSentenceGenerator,
     apply_sentence_review_results,
+    build_combined_snapshot,
     eligible_source_word_ids,
     load_sentence_content,
     prepare_sentence_program,
@@ -145,6 +146,35 @@ class SentenceProgramTests(unittest.TestCase):
         self.assertEqual(job["status"], "completed")
         self.assertEqual(job["generated_count"], 2)
         self.assertEqual(len(job["sentence_ids"]), 2)
+
+    def test_zero_result_job_retries_when_new_vocabulary_arrives(self):
+        initial_cards = self.cards
+        self.cards = self.cards[:2]
+        first = self.process()
+        first_job = dict(self.generation_state["jobs"]["2026-09-05"])
+
+        self.cards = initial_cards
+        second = self.process(now=NOW + timedelta(hours=1))
+
+        self.assertEqual(first["generated"], 0)
+        self.assertEqual(first_job["generated_count"], 0)
+        self.assertEqual(second["generated"], 2)
+        self.assertEqual(
+            self.generation_state["jobs"]["2026-09-05"]["generated_count"],
+            2,
+        )
+
+    def test_repeated_zero_result_does_not_rewrite_job(self):
+        self.cards = self.cards[:2]
+        self.process()
+        first_job = dict(self.generation_state["jobs"]["2026-09-05"])
+
+        self.process(now=NOW + timedelta(hours=1))
+
+        self.assertEqual(
+            self.generation_state["jobs"]["2026-09-05"],
+            first_job,
+        )
 
     def test_good_reviews_promote_word_and_archive_disposable_sentence(self):
         self.process()
@@ -301,6 +331,135 @@ class SentenceProgramTests(unittest.TestCase):
                 resolve_sentence_content_path(root, "../sentences.json")
             with self.assertRaises(ValueError):
                 resolve_sentence_content_path(root, "state/sentences.json")
+
+    def test_combined_batch_is_a_frozen_deterministic_union(self):
+        snapshots = [
+            {
+                "deck_id": "hsk",
+                "title": "HSK",
+                "front_text_scale": 2,
+                "batch_id": "2026-09-05",
+                "state_revision": 4,
+                "processed_event_ids": ["word-event"],
+                "cards": [
+                    {
+                        **source_card("shared", "我"),
+                        "available_at": "2026-09-04T16:00:00Z",
+                    },
+                    {
+                        **source_card("word-2", "你"),
+                        "available_at": "2026-09-04T16:00:00Z",
+                    },
+                ],
+            },
+            {
+                "deck_id": "mandarin_sentences",
+                "title": "Sentences",
+                "front_text_scale": 1.5,
+                "batch_id": "2026-09-05",
+                "state_revision": 2,
+                "processed_event_ids": ["sentence-event"],
+                "cards": [
+                    {
+                        **source_card("shared", "我是學生。"),
+                        "available_at": "2026-09-04T16:00:00Z",
+                    }
+                ],
+            },
+        ]
+        first_state = {}
+        first = build_combined_snapshot(
+            "mandarin_reading",
+            "Mandarin",
+            first_state,
+            snapshots,
+            NOW,
+        )
+        second = build_combined_snapshot(
+            "mandarin_reading",
+            "Mandarin",
+            first_state,
+            list(reversed(snapshots)),
+            NOW + timedelta(hours=1),
+        )
+        independent = build_combined_snapshot(
+            "mandarin_reading",
+            "Mandarin",
+            {},
+            snapshots,
+            NOW,
+        )
+
+        first_refs = [
+            (card["deck_id"], card["id"]) for card in first["cards"]
+        ]
+        self.assertCountEqual(
+            first_refs,
+            [
+                ("hsk", "shared"),
+                ("hsk", "word-2"),
+                ("mandarin_sentences", "shared"),
+            ],
+        )
+        self.assertEqual(first_refs, [
+            (card["deck_id"], card["id"]) for card in second["cards"]
+        ])
+        self.assertEqual(first_refs, [
+            (card["deck_id"], card["id"]) for card in independent["cards"]
+        ])
+        self.assertEqual(
+            first["processed_event_ids"],
+            ["word-event", "sentence-event"],
+        )
+
+    def test_combined_snapshot_filters_card_removed_by_source_scheduler(self):
+        snapshots = [
+            {
+                "deck_id": "hsk",
+                "title": "HSK",
+                "batch_id": "2026-09-05",
+                "state_revision": 1,
+                "processed_event_ids": [],
+                "cards": [
+                    {
+                        **source_card("word-1", "我"),
+                        "available_at": "2026-09-04T16:00:00Z",
+                    }
+                ],
+            },
+            {
+                "deck_id": "mandarin_sentences",
+                "title": "Sentences",
+                "batch_id": "2026-09-05",
+                "state_revision": 1,
+                "processed_event_ids": [],
+                "cards": [
+                    {
+                        **source_card("sentence-1", "我是學生。"),
+                        "available_at": "2026-09-04T16:00:00Z",
+                    }
+                ],
+            },
+        ]
+        state = {}
+        build_combined_snapshot(
+            "mandarin_reading", "Mandarin", state, snapshots, NOW
+        )
+        snapshots[0]["cards"] = []
+
+        updated = build_combined_snapshot(
+            "mandarin_reading",
+            "Mandarin",
+            state,
+            snapshots,
+            NOW + timedelta(minutes=1),
+        )
+
+        self.assertEqual(
+            [(card["deck_id"], card["id"]) for card in updated["cards"]],
+            [("mandarin_sentences", "sentence-1")],
+        )
+        self.assertEqual(len(state["combined_batch"]["members"]), 2)
 
 
 class OpenRouterGeneratorTests(unittest.TestCase):
@@ -466,6 +625,17 @@ class SentenceProgramIntegrationTests(unittest.TestCase):
                 )
                 self.assertEqual(len(generated["sentences"]), 1)
                 self.assertEqual(len(snapshot["cards"]), 1)
+                combined = json.loads(
+                    Path("cards/mandarin_reading_program.json").read_text(
+                        encoding="utf-8"
+                    )
+                )
+                self.assertEqual(len(combined["cards"]), 1)
+                self.assertEqual(
+                    combined["cards"][0]["deck_id"],
+                    "mandarin_sentences",
+                )
+                self.assertTrue(Path("mandarin_reading.xml").exists())
                 self.assertTrue(
                     Path("state/programs/mandarin_reading.json").exists()
                 )
