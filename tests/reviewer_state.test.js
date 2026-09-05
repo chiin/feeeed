@@ -6,6 +6,7 @@ const {
     DurableOutbox,
     RETRY_DELAY_MS,
     createReviewEvent,
+    groupReviewEventsByDeck,
     reconcileCards
 } = require("../reviewer_state.js");
 
@@ -108,6 +109,62 @@ test("local reconciliation removes ratings and delays Again by ten minutes", () 
         "hsk", "hsk-1", "good", "2026-08-30T02:11:00Z", "good-1"
     );
     assert.deepEqual(reconcileCards(cards, [again, good]), []);
+});
+
+test("combined reconciliation distinguishes identical IDs from different decks", () => {
+    const cards = [
+        {
+            id: "shared",
+            deck_id: "hsk",
+            available_at: "2026-08-30T02:00:00Z"
+        },
+        {
+            id: "shared",
+            deck_id: "mandarin_sentences",
+            available_at: "2026-08-30T02:00:00Z"
+        }
+    ];
+    const event = createReviewEvent(
+        "mandarin_sentences",
+        "shared",
+        "good",
+        "2026-08-30T02:01:00Z",
+        "sentence-event"
+    );
+
+    assert.deepEqual(
+        reconcileCards(cards, [event]).map(card => card.deck_id),
+        ["hsk"]
+    );
+});
+
+test("combined outbox events are grouped by authoritative source deck", () => {
+    const events = [
+        createReviewEvent(
+            "hsk", "word-1", "good", "2026-08-30T02:00:00Z", "word-event"
+        ),
+        createReviewEvent(
+            "mandarin_sentences",
+            "sentence-1",
+            "easy",
+            "2026-08-30T02:01:00Z",
+            "sentence-event"
+        ),
+        createReviewEvent(
+            "hsk", "word-2", "hard", "2026-08-30T02:02:00Z", "word-event-2"
+        )
+    ];
+
+    const groups = groupReviewEventsByDeck(events);
+
+    assert.deepEqual(
+        groups.get("hsk").map(event => event.event_id),
+        ["word-event", "word-event-2"]
+    );
+    assert.deepEqual(
+        groups.get("mandarin_sentences").map(event => event.event_id),
+        ["sentence-event"]
+    );
 });
 
 test("PDF reconciliation hides locally completed items until acknowledged", () => {
