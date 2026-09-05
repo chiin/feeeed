@@ -111,6 +111,7 @@ class SentenceProgramTests(unittest.TestCase):
             self.content,
             self.cards,
             self.source_state,
+            self.sentence_stream_state,
             now,
             self.factory,
         )
@@ -174,6 +175,138 @@ class SentenceProgramTests(unittest.TestCase):
         self.assertEqual(
             self.generation_state["jobs"]["2026-09-05"],
             first_job,
+        )
+
+    def test_generated_cards_backfill_an_empty_same_day_batch_once(self):
+        self.sentence_stream_state.update(
+            {
+                "revision": 2,
+                "daily_batch": {
+                    "id": "2026-09-05",
+                    "date": "2026-09-05",
+                    "created_at": "2026-09-04T16:00:00Z",
+                    "card_ids": [],
+                    "active": [],
+                },
+            }
+        )
+        self.program_state["combined_batch"] = {
+            "id": "2026-09-05",
+            "date": "2026-09-05",
+            "members": [{"deck_id": "hsk", "card_id": "known-1"}],
+        }
+
+        first = self.process()
+        second = self.process(now=NOW + timedelta(minutes=1))
+
+        sentence_ids = [
+            sentence["id"] for sentence in self.content["sentences"]
+        ]
+        self.assertEqual(first["backfilled"], 2)
+        self.assertEqual(second["backfilled"], 0)
+        self.assertEqual(
+            self.sentence_stream_state["daily_batch"]["card_ids"],
+            sentence_ids,
+        )
+        self.assertEqual(
+            [
+                item["card_id"]
+                for item in self.sentence_stream_state["daily_batch"]["active"]
+            ],
+            sentence_ids,
+        )
+        self.assertEqual(self.sentence_stream_state["revision"], 3)
+        self.assertNotIn("combined_batch", self.program_state)
+        self.assertIn(
+            "released_same_day_at",
+            self.generation_state["jobs"]["2026-09-05"],
+        )
+        sentence_snapshot = {
+            "deck_id": "mandarin_sentences",
+            "title": "Sentences",
+            "front_text_scale": 1.5,
+            "batch_id": "2026-09-05",
+            "state_revision": 3,
+            "processed_event_ids": [],
+            "cards": [
+                {
+                    **card,
+                    "available_at": self.sentence_stream_state[
+                        "daily_batch"
+                    ]["active"][index]["available_at"],
+                }
+                for index, card in enumerate(sentence_cards(self.content))
+            ],
+        }
+        combined = build_combined_snapshot(
+            "mandarin_reading",
+            "Mandarin",
+            self.program_state,
+            [
+                {
+                    "deck_id": "hsk",
+                    "title": "HSK",
+                    "front_text_scale": 2,
+                    "batch_id": "2026-09-05",
+                    "state_revision": 1,
+                    "processed_event_ids": [],
+                    "cards": [
+                        {
+                            **source_card("known-1", "我"),
+                            "available_at": "2026-09-04T16:00:00Z",
+                        }
+                    ],
+                },
+                sentence_snapshot,
+            ],
+            NOW,
+        )
+        self.assertEqual(len(combined["cards"]), 3)
+        self.assertEqual(
+            sum(
+                card["deck_id"] == "mandarin_sentences"
+                for card in combined["cards"]
+            ),
+            2,
+        )
+
+    def test_generated_cards_do_not_change_a_nonempty_batch(self):
+        self.sentence_stream_state["daily_batch"] = {
+            "id": "2026-09-05",
+            "date": "2026-09-05",
+            "created_at": "2026-09-04T16:00:00Z",
+            "card_ids": ["existing-sentence"],
+            "active": [
+                {
+                    "card_id": "existing-sentence",
+                    "available_at": "2026-09-04T16:00:00Z",
+                }
+            ],
+        }
+
+        result = self.process()
+
+        self.assertEqual(result["backfilled"], 0)
+        self.assertEqual(
+            self.sentence_stream_state["daily_batch"]["card_ids"],
+            ["existing-sentence"],
+        )
+
+    def test_generated_cards_do_not_backfill_a_prior_day_batch(self):
+        self.sentence_stream_state["daily_batch"] = {
+            "id": "2026-09-04",
+            "date": "2026-09-04",
+            "created_at": "2026-09-03T16:00:00Z",
+            "card_ids": [],
+            "active": [],
+        }
+
+        result = self.process()
+
+        self.assertEqual(result["backfilled"], 0)
+        self.assertEqual(
+            self.sentence_stream_state["daily_batch"]["card_ids"],
+            [],
         )
 
     def test_good_reviews_promote_word_and_archive_disposable_sentence(self):
