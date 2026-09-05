@@ -651,6 +651,7 @@ def main():
             content,
             source_cards,
             stream_states[source_stream_id],
+            stream_states[sentence_stream_id],
             run_now,
         )
         generated_card_overrides[sentence_stream_id] = sentence_cards(content)

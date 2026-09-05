@@ -671,6 +671,58 @@ def _openrouter_generator(config: dict) -> SentenceGenerator:
     )
 
 
+def _backfill_empty_sentence_batch(
+    program_state: dict,
+    generation_state: dict,
+    sentence_stream_state: dict,
+    content: dict,
+    now: datetime,
+) -> int:
+    day = hkt_day(now).isoformat()
+    job = generation_state["jobs"].get(day)
+    batch = sentence_stream_state.get("daily_batch")
+    if (
+        not job
+        or int(job.get("generated_count", 0)) < 1
+        or not batch
+        or batch.get("date") != day
+        or batch.get("card_ids")
+        or batch.get("active")
+    ):
+        return 0
+
+    active_sentence_ids = {
+        sentence["id"]
+        for sentence in content["sentences"]
+        if sentence.get("status") == "active"
+    }
+    sentence_ids = [
+        sentence_id
+        for sentence_id in job.get("sentence_ids", [])
+        if sentence_id in active_sentence_ids
+    ]
+    if not sentence_ids:
+        return 0
+
+    available_at = isoformat_utc(now)
+    batch["card_ids"] = sentence_ids
+    batch["active"] = [
+        {
+            "card_id": sentence_id,
+            "available_at": available_at,
+        }
+        for sentence_id in sentence_ids
+    ]
+    sentence_stream_state["revision"] = (
+        max(0, int(sentence_stream_state.get("revision", 0))) + 1
+    )
+    job["released_same_day_at"] = available_at
+    if program_state.get("combined_batch", {}).get("date") == day:
+        del program_state["combined_batch"]
+    program_state["revision"] += 1
+    return len(sentence_ids)
+
+
 def prepare_sentence_program(
     program_id: str,
     config: dict,
@@ -679,6 +731,7 @@ def prepare_sentence_program(
     content: dict,
     source_cards: list[dict],
     source_stream_state: dict,
+    sentence_stream_state: dict,
     now: datetime,
     generator_factory: Callable[[dict], SentenceGenerator] | None = None,
 ) -> dict:
@@ -827,8 +880,16 @@ def prepare_sentence_program(
                 "sentence_ids": generated_sentence_ids if candidates else [],
             }
 
+    backfilled_count = _backfill_empty_sentence_batch(
+        program_state,
+        generation_state,
+        sentence_stream_state,
+        content,
+        now,
+    )
     return {
         "generated": generated_count,
+        "backfilled": backfilled_count,
         "active_sentences": len(sentence_cards(content)),
         "promoted_words": len(promoted_word_ids(program_state)),
     }
