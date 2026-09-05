@@ -5,9 +5,11 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-06",
   "batch_date": "2026-09-06",
-  "compiled_at": "2026-09-05T17:27:09.919609Z",
-  "state_revision": 3,
-  "processed_event_ids": [],
+  "compiled_at": "2026-09-05T17:27:33.529604Z",
+  "state_revision": 4,
+  "processed_event_ids": [
+    "29a49f8a-c7ef-4b77-b5cb-1709c0885178"
+  ],
   "cards": [
     {
       "id": "mandarin_reading-2026-09-06-hsk-0151",
@@ -150,26 +152,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-09-06-hsk-0158",
-      "front": {
-        "text": "\u9019\u689d\u8def\u5f88\u9577,\u6211\u5011\u5750\u51fa\u79df\u8eca\u53bb\u5427\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This road is very long; let's take a taxi.",
-        "notes": "Zh\u00e8 ti\u00e1o l\u00f9 h\u011bn ch\u00e1ng, w\u01d2men zu\u00f2 ch\u016bz\u016bch\u0113 q\u00f9 ba.\n\n\u9577 (ch\u00e1ng) - long"
-      },
-      "available_at": "2026-09-05T17:24:00.504659Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-09-06-hsk-0159",
       "front": {
         "text": "\u6211\u5f88\u9ad8\u8208\u80fd\u548c\u4f60\u4e00\u8d77\u5531\u6b4c\u3002",
@@ -207,6 +189,36 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-09-06-hsk-0158",
+      "front": {
+        "text": "\u9019\u689d\u8def\u5f88\u9577,\u6211\u5011\u5750\u51fa\u79df\u8eca\u53bb\u5427\u3002",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "This road is very long; let's take a taxi.",
+        "notes": "Zh\u00e8 ti\u00e1o l\u00f9 h\u011bn ch\u00e1ng, w\u01d2men zu\u00f2 ch\u016bz\u016bch\u0113 q\u00f9 ba.\n\n\u9577 (ch\u00e1ng) - long"
+      },
+      "available_at": "2026-09-05T17:37:09.106000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "lapses": 0,
+        "last_reviewed_at": "2026-09-05T17:27:09.106000Z",
+        "next_due_at": "2026-09-05T17:37:09.106000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]

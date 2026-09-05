@@ -4,11 +4,11 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-06",
   "batch_date": "2026-09-06",
-  "compiled_at": "2026-09-05T17:27:09.919609Z",
+  "compiled_at": "2026-09-05T17:27:33.529604Z",
   "state_revision": 5,
   "source_revisions": {
     "hsk": 438,
-    "mandarin_sentences": 3
+    "mandarin_sentences": 4
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -441,7 +441,8 @@
     "c163dd36-6016-4645-8b88-725c6045a193",
     "b5f50f51-a7d4-4385-902a-4a5a48beded9",
     "8a443804-6a93-45b3-a191-61923db23e22",
-    "6c0de374-661c-4b3b-909c-92cd0d1fdaee"
+    "6c0de374-661c-4b3b-909c-92cd0d1fdaee",
+    "29a49f8a-c7ef-4b77-b5cb-1709c0885178"
   ],
   "cards": [
     {
@@ -521,13 +522,23 @@
         "text": "This road is very long; let's take a taxi.",
         "notes": "Zh\u00e8 ti\u00e1o l\u00f9 h\u011bn ch\u00e1ng, w\u01d2men zu\u00f2 ch\u016bz\u016bch\u0113 q\u00f9 ba.\n\n\u9577 (ch\u00e1ng) - long"
       },
-      "available_at": "2026-09-05T17:24:00.504659Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-05T17:37:09.106000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "lapses": 0,
+        "last_reviewed_at": "2026-09-05T17:27:09.106000Z",
+        "next_due_at": "2026-09-05T17:37:09.106000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
