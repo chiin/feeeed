@@ -388,6 +388,45 @@ class FeedIntegrationTests(unittest.TestCase):
             finally:
                 os.chdir(old_cwd)
 
+    def test_program_gate_allows_due_cards_and_only_promoted_new_cards(self):
+        from generate_feeds import process_anki_deck
+
+        config = {
+            "source_type": "csv",
+            "path": "HSK.csv",
+            "feed_title": "HSK",
+            "new_cards_per_day": 10,
+        }
+        history = fsrs_history({"due": fsrs_card_state()})
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                Path("HSK.csv").write_text(
+                    "id,front,back\n"
+                    "due,old,reviewed\n"
+                    "promoted,new,eligible\n"
+                    "blocked,new,not eligible\n",
+                    encoding="utf-8",
+                )
+                process_anki_deck(
+                    "hsk",
+                    config,
+                    history,
+                    self.make_feed(),
+                    "https://example.test",
+                    {},
+                    NOW,
+                    eligible_new_card_ids={"promoted"},
+                )
+            finally:
+                os.chdir(old_cwd)
+
+        self.assertEqual(
+            history["daily_batch"]["card_ids"],
+            ["due", "promoted"],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
