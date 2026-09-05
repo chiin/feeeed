@@ -25,8 +25,12 @@ class WebAssetSmokeTests(unittest.TestCase):
 
     def test_pdf_reader_loads_book_aware_assets(self):
         html = (ROOT / "pdf_reader.html").read_text(encoding="utf-8")
+        reviewer_html = (ROOT / "reviewer.html").read_text(encoding="utf-8")
         app = (ROOT / "pdf_reader_app.js").read_text(encoding="utf-8")
 
+        self.assertIn("<title>PDF Queue Reader</title>", html)
+        self.assertIn('id="pdfViewer"', html)
+        self.assertNotEqual(html, reviewer_html)
         self.assertIn('src="reviewer_state.js?v=4"', html)
         self.assertIn('src="pdf_reader_app.js?v=5"', html)
         self.assertIn("data.book_id", app)

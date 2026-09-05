@@ -147,3 +147,30 @@ test("PDF and Anki outboxes use separate storage namespaces", () => {
     assert.equal(anki.events()[0].event_id, "anki-1");
     assert.equal(pdf.events()[0].event_id, "pdf-1");
 });
+
+test("different books use separate durable PDF outboxes", () => {
+    const storage = new MemoryStorage();
+    const firstBook = new DurableOutbox(
+        storage,
+        "current_book:book-one",
+        undefined,
+        "pdf_outbox_v3"
+    );
+    const secondBook = new DurableOutbox(
+        storage,
+        "current_book:book-two",
+        undefined,
+        "pdf_outbox_v3"
+    );
+    firstBook.enqueue({
+        event_id: "book-one-event",
+        stream_id: "current_book",
+        book_id: "book-one",
+        action: "complete",
+        pdf_id: "chapter_001.pdf",
+        occurred_at: "2026-08-30T02:00:00Z"
+    });
+
+    assert.equal(firstBook.events().length, 1);
+    assert.deepEqual(secondBook.events(), []);
+});
