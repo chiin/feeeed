@@ -54,6 +54,41 @@
       "book_id": "china_next_global_order",
       "folder": "Book_2_Cards",
       "feed_title": "Current Book 2"
+    },
+    "mandarin_sentences": {
+      "type": "anki_deck",
+      "source_type": "generated_sentences",
+      "program_id": "mandarin_reading",
+      "path": "generated/mandarin_reading/sentences.json",
+      "feed_title": "Mandarin Sentence Practice",
+      "new_cards_per_day": 10,
+      "front_text_scale": 1.5
+    }
+  },
+  "programs": {
+    "mandarin_reading": {
+      "enabled": true,
+      "source_stream": "hsk",
+      "sentence_stream": "mandarin_sentences",
+      "content_path": "generated/mandarin_reading/sentences.json",
+      "control_source_new_cards": true,
+      "language_code": "zh-CN",
+      "orthography": "Traditional Chinese",
+      "mode": "text_reading",
+      "prompt_style": "formal written Mandarin",
+      "promotion_threshold_sentence_passes": 3,
+      "max_active_word_buffer": 30,
+      "daily_sentence_target": 10,
+      "mastery_interval_days": 21,
+      "familiar_min_reviews": 1,
+      "known_pool_limit": 200,
+      "sentence_lifecycle": "disposable_scaffold",
+      "generation": {
+        "provider": "openrouter",
+        "model": "qwen/qwen3-30b-a3b-instruct-2507",
+        "api_key_env": "OPENROUTER_API_KEY",
+        "timeout_seconds": 90
+      }
     }
   }
 }
