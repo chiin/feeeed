@@ -107,6 +107,34 @@ class FSRSSchedulerTests(unittest.TestCase):
         self.assertGreater(second.stability, first.stability)
         self.assertGreater(second.interval_days, first.interval_days)
 
+    def test_only_good_and_easy_increment_passing_reviews(self):
+        scheduler = FSRSScheduler()
+
+        again = scheduler.schedule(None, "again", NOW)
+        hard = scheduler.schedule(None, "hard", NOW)
+        good = scheduler.schedule(None, "good", NOW)
+        easy = scheduler.schedule(
+            {
+                **fsrs_card_state(),
+                "passing_reviews": 1,
+            },
+            "easy",
+            NOW,
+        )
+
+        self.assertEqual(again.passing_reviews, 0)
+        self.assertEqual(hard.passing_reviews, 0)
+        self.assertEqual(good.passing_reviews, 1)
+        self.assertEqual(easy.passing_reviews, 2)
+
+    def test_migration_grandfathers_reviewed_cards_as_passing(self):
+        history = fsrs_history({"legacy": fsrs_card_state()})
+
+        migrate_history(history)
+
+        self.assertEqual(history["cards"]["legacy"]["passing_reviews"], 1)
+        self.assertIsNone(history["cards"]["legacy"]["last_rating"])
+
     def test_previews_are_deterministic_and_do_not_mutate_state(self):
         scheduler = FSRSScheduler()
         state = fsrs_card_state()
@@ -329,6 +357,24 @@ class FeedIntegrationTests(unittest.TestCase):
         feed.description("Test feed")
         feed.link(href="https://example.test/hsk.xml", rel="self")
         return feed
+
+    def test_csv_deck_accepts_utf8_bom(self):
+        from generate_feeds import parse_csv_deck
+
+        with tempfile.TemporaryDirectory() as directory:
+            csv_path = Path(directory) / "Slovak.csv"
+            csv_path.write_text(
+                "\ufeffid,front,back,entry_type\n"
+                "slovak-0001,jeden,1,term\n",
+                encoding="utf-8",
+            )
+
+            cards = parse_csv_deck(csv_path, "https://example.test")
+
+        self.assertEqual(cards[0]["id"], "slovak-0001")
+        self.assertEqual(cards[0]["front"]["text"], "jeden")
+        self.assertEqual(cards[0]["back"]["text"], "1")
+        self.assertEqual(cards[0]["entry_type"], "term")
 
     def test_generated_json_and_rss_follow_authoritative_batch(self):
         from generate_feeds import process_anki_deck

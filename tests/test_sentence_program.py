@@ -24,9 +24,10 @@ from sentence_program import (
 NOW = datetime(2026, 9, 5, 14, 0, tzinfo=timezone.utc)
 
 
-def source_card(card_id, surface):
+def source_card(card_id, surface, entry_type="term"):
     return {
         "id": card_id,
+        "entry_type": entry_type,
         "front": {"text": surface, "audio": None, "image": None},
         "back": {"text": f"meaning of {surface}", "notes": None},
     }
@@ -40,6 +41,8 @@ def reviewed_state(interval_days=3):
         "difficulty": 5.0,
         "interval_days": interval_days,
         "reviews": 2,
+        "passing_reviews": 1,
+        "last_rating": "good",
         "lapses": 0,
         "last_reviewed_at": "2026-09-01T16:00:00Z",
         "next_due_at": "2026-09-08T16:00:00Z",
@@ -595,6 +598,156 @@ class SentenceProgramTests(unittest.TestCase):
         self.assertEqual(len(state["combined_batch"]["members"]), 2)
 
 
+class VocabularyFirstSentenceProgramTests(unittest.TestCase):
+    def setUp(self):
+        self.config = {
+            **program_config(daily_target=2),
+            "vocabulary_introduction": {"strategy": "vocabulary_first"},
+            "sentence_generation": {
+                "trigger": "after_first_passing_vocabulary_review",
+                "minimum_passing_reviews": 1,
+                "allow_inflected_targets": True,
+            },
+        }
+        self.program_state = {}
+        self.generation_state = {}
+        self.content = empty_content()
+        self.source_state = {"cards": {}}
+        self.sentence_state = {"processed_events": {}}
+
+    def process(self, cards, generator_factory=None, now=NOW):
+        return prepare_sentence_program(
+            "mandarin_reading",
+            self.config,
+            self.program_state,
+            self.generation_state,
+            self.content,
+            cards,
+            self.source_state,
+            self.sentence_state,
+            now,
+            generator_factory,
+        )
+
+    def test_sentence_waits_for_first_passing_vocabulary_review(self):
+        cards = [source_card("target-1", "mesto")]
+
+        first = self.process(cards, lambda _config: DeterministicSentenceGenerator())
+        self.source_state["cards"]["target-1"] = reviewed_state()
+        second = self.process(
+            cards,
+            lambda _config: DeterministicSentenceGenerator(),
+            NOW + timedelta(hours=1),
+        )
+
+        self.assertEqual(first["generated"], 0)
+        self.assertEqual(second["generated"], 1)
+        self.assertEqual(
+            self.program_state["vocabulary"]["target-1"]["status"],
+            "sentence_reinforcement",
+        )
+
+    def test_again_or_hard_only_card_is_not_a_sentence_target(self):
+        cards = [source_card("target-1", "mesto")]
+        self.source_state["cards"]["target-1"] = {
+            **reviewed_state(),
+            "passing_reviews": 0,
+            "last_rating": "hard",
+        }
+
+        result = self.process(
+            cards,
+            lambda _config: DeterministicSentenceGenerator(),
+        )
+
+        self.assertEqual(result["generated"], 0)
+        self.assertEqual(self.program_state["vocabulary"], {})
+
+    def test_source_sentence_becomes_direct_sentence_practice(self):
+        cards = [
+            source_card(
+                "sentence-1",
+                "Sedím na stoličke.",
+                entry_type="sentence",
+            )
+        ]
+        self.source_state["cards"]["sentence-1"] = reviewed_state()
+
+        result = self.process(
+            cards,
+            lambda _config: self.fail("generator should not be created"),
+        )
+
+        self.assertEqual(result["generated"], 1)
+        sentence = self.content["sentences"][0]
+        self.assertEqual(sentence["source"], "vocabulary_sentence")
+        self.assertEqual(sentence["payload"]["primary_text"], "Sedím na stoličke.")
+
+    def test_inflected_target_occurrence_is_accepted(self):
+        class InflectedGenerator:
+            def generate(self, _request):
+                return [
+                    {
+                        "target_word_id": "target-1",
+                        "target_occurrence": "meste",
+                        "primary_text": "Bývam v malom meste.",
+                        "transliteration": "ˈmes.ce",
+                        "translation": "I live in a small town.",
+                        "cloze_text": "Bývam v malom […].",
+                        "target_breakdown": "mesto → meste, locative singular",
+                    }
+                ]
+
+        cards = [source_card("target-1", "mesto")]
+        self.source_state["cards"]["target-1"] = reviewed_state()
+
+        result = self.process(cards, lambda _config: InflectedGenerator())
+
+        self.assertEqual(result["generated"], 1)
+        self.assertEqual(
+            self.content["sentences"][0]["payload"]["primary_text"],
+            "Bývam v malom meste.",
+        )
+
+    def test_reinforcement_completion_does_not_promote_vocabulary(self):
+        cards = [source_card("target-1", "mesto")]
+        self.source_state["cards"]["target-1"] = reviewed_state()
+        self.process(cards, lambda _config: DeterministicSentenceGenerator())
+        sentence = self.content["sentences"][0]
+
+        for index in range(3):
+            event = review_event(
+                f"reinforcement-{index}",
+                sentence["id"],
+                "good",
+                NOW + timedelta(minutes=index),
+            )
+            self.sentence_state["processed_events"][event["event_id"]] = {
+                "status": "applied"
+            }
+            apply_sentence_review_results(
+                "mandarin_reading",
+                "mandarin_sentences",
+                self.program_state,
+                self.sentence_state,
+                self.content,
+                {
+                    "event_type": "anki_review",
+                    "deck_id": "mandarin_sentences",
+                    "events": [event],
+                },
+                3,
+                NOW + timedelta(minutes=index),
+            )
+
+        self.assertEqual(
+            self.program_state["vocabulary"]["target-1"]["status"],
+            "sentence_complete",
+        )
+        self.assertNotIn("target-1", promoted_word_ids(self.program_state))
+        self.assertEqual(sentence["status"], "archived")
+
+
 class OpenRouterGeneratorTests(unittest.TestCase):
     class FakeResponse:
         def __init__(self, data):
@@ -774,6 +927,162 @@ class SentenceProgramIntegrationTests(unittest.TestCase):
                 )
                 self.assertTrue(
                     Path("state/generation/mandarin_reading.json").exists()
+                )
+            finally:
+                os.chdir(old_cwd)
+
+    def test_vocabulary_review_immediately_generates_reinforcement_sentence(self):
+        from anki_scheduler import hkt_day, isoformat_utc
+        from generate_feeds import main
+
+        now = datetime.now(timezone.utc)
+        day = hkt_day(now).isoformat()
+        reviewed_at = now - timedelta(seconds=1)
+        config = {
+            "streams": {
+                "slovak_vocab": {
+                    "type": "anki_deck",
+                    "source_type": "csv",
+                    "path": "Slovak.csv",
+                    "feed_title": "Slovak Vocabulary",
+                    "new_cards_per_day": 20,
+                },
+                "slovak_sentences": {
+                    "type": "anki_deck",
+                    "source_type": "generated_sentences",
+                    "program_id": "slovak_reading",
+                    "path": "generated/slovak_reading/sentences.json",
+                    "feed_title": "Slovak Sentences",
+                    "new_cards_per_day": 10,
+                },
+            },
+            "programs": {
+                "slovak_reading": {
+                    **program_config(daily_target=1),
+                    "enabled": True,
+                    "source_stream": "slovak_vocab",
+                    "sentence_stream": "slovak_sentences",
+                    "content_path": "generated/slovak_reading/sentences.json",
+                    "vocabulary_introduction": {
+                        "strategy": "vocabulary_first",
+                    },
+                    "sentence_generation": {
+                        "trigger": "after_first_passing_vocabulary_review",
+                        "minimum_passing_reviews": 1,
+                        "allow_inflected_targets": True,
+                    },
+                    "generation": {
+                        "provider": "openrouter",
+                        "model": "qwen/test",
+                    },
+                }
+            },
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                Path("config.json").write_text(
+                    json.dumps(config),
+                    encoding="utf-8",
+                )
+                Path("history.json").write_text("{}", encoding="utf-8")
+                Path("Slovak.csv").write_text(
+                    "id,front,back,entry_type\n"
+                    "slovak-1,mesto,town,term\n",
+                    encoding="utf-8",
+                )
+                source_state_path = Path("state/streams/slovak_vocab.json")
+                source_state_path.parent.mkdir(parents=True)
+                source_state_path.write_text(
+                    json.dumps(
+                        {
+                            "schema_version": 3,
+                            "scheduler": {
+                                "name": "fsrs-6.3.2",
+                                "version": 1,
+                                "desired_retention": 0.9,
+                            },
+                            "revision": 1,
+                            "cards": {},
+                            "processed_events": {},
+                            "daily_batch": {
+                                "id": day,
+                                "date": day,
+                                "created_at": isoformat_utc(
+                                    reviewed_at - timedelta(minutes=1)
+                                ),
+                                "card_ids": ["slovak-1"],
+                                "active": [
+                                    {
+                                        "card_id": "slovak-1",
+                                        "available_at": isoformat_utc(
+                                            reviewed_at - timedelta(minutes=1)
+                                        ),
+                                    }
+                                ],
+                            },
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+                event_path = Path("event.json")
+                event_path.write_text(
+                    json.dumps(
+                        {
+                            "action": "anki_review",
+                            "client_payload": {
+                                "event_type": "anki_review",
+                                "deck_id": "slovak_vocab",
+                                "events": [
+                                    {
+                                        "event_id": "slovak-pass",
+                                        "deck_id": "slovak_vocab",
+                                        "card_id": "slovak-1",
+                                        "rating": "good",
+                                        "reviewed_at": isoformat_utc(reviewed_at),
+                                    }
+                                ],
+                            },
+                        }
+                    ),
+                    encoding="utf-8",
+                )
+                with (
+                    patch.dict(
+                        os.environ,
+                        {"GITHUB_EVENT_PATH": str(event_path)},
+                        clear=False,
+                    ),
+                    patch(
+                        "sentence_program._openrouter_generator",
+                        return_value=DeterministicSentenceGenerator(),
+                    ),
+                ):
+                    main()
+
+                source_state = json.loads(
+                    source_state_path.read_text(encoding="utf-8")
+                )
+                program_state = json.loads(
+                    Path("state/programs/slovak_reading.json").read_text(
+                        encoding="utf-8"
+                    )
+                )
+                content = json.loads(
+                    Path(
+                        "generated/slovak_reading/sentences.json"
+                    ).read_text(encoding="utf-8")
+                )
+                self.assertEqual(
+                    source_state["cards"]["slovak-1"]["passing_reviews"],
+                    1,
+                )
+                self.assertEqual(source_state["cards"]["slovak-1"]["reviews"], 1)
+                self.assertEqual(len(content["sentences"]), 1)
+                self.assertEqual(
+                    program_state["vocabulary"]["slovak-1"]["status"],
+                    "sentence_reinforcement",
                 )
             finally:
                 os.chdir(old_cwd)
