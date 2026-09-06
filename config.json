@@ -129,7 +129,8 @@
       "sentence_generation": {
         "trigger": "after_first_passing_vocabulary_review",
         "minimum_passing_reviews": 1,
-        "allow_inflected_targets": true
+        "allow_inflected_targets": true,
+        "familiar_pool_policy": "natural_priority"
       },
       "language_code": "sk-SK",
       "orthography": "Standard Slovak using the Slovak Latin alphabet",
@@ -146,7 +147,9 @@
         "provider": "openrouter",
         "model": "openrouter/free",
         "api_key_env": "OPENROUTER_API_KEY",
-        "timeout_seconds": 90
+        "timeout_seconds": 90,
+        "quality_version": 2,
+        "max_attempts": 3
       }
     }
   }

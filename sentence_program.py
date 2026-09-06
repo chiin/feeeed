@@ -71,6 +71,24 @@ class OpenRouterSentenceGenerator:
             for item in targets
         )
         known_words = ", ".join(request["known_words"])
+        familiar_pool_policy = request.get("familiar_pool_policy", "restricted")
+        if familiar_pool_policy == "natural_priority":
+            vocabulary_instruction = f"""
+Use familiar vocabulary where it fits naturally:
+{known_words}
+
+You may freely use basic vocabulary outside that pool. Natural, grammatical,
+communicative language is more important than familiar-word coverage. Write one
+short everyday sentence with a clear meaning. Never output a word list,
+enumeration, greeting used as filler, or a chain of contrasts added only to use
+known words.
+""".strip()
+        else:
+            vocabulary_instruction = f"""
+At least 85 percent of the surrounding vocabulary should come from this
+familiar pool:
+{known_words}
+""".strip()
         target_instruction = (
             "Use a grammatically natural inflected form of each target when "
             "appropriate. Return that exact substring as \"target_occurrence\"."
@@ -79,7 +97,10 @@ class OpenRouterSentenceGenerator:
             "Return that form as \"target_occurrence\"."
         )
         system_prompt = (
-            "You are an expert language-pedagogy engine. Generate natural "
+            "You are an expert language-pedagogy engine. Generate natural, "
+            "grammatical, communicative practice sentences. Return JSON only."
+            if familiar_pool_policy == "natural_priority"
+            else "You are an expert language-pedagogy engine. Generate natural "
             "practice sentences using restricted vocabulary. Return JSON only."
         )
         user_prompt = f"""
@@ -91,14 +112,16 @@ Transliteration/pronunciation field: {request.get('transliteration_style', 'help
 Create exactly one sentence for each target:
 {target_lines}
 
-At least 85 percent of the surrounding vocabulary should come from this
-familiar pool:
-{known_words}
+{vocabulary_instruction}
 
 {target_instruction} Return an object with a
 "sentences" array. Every item must contain exactly these string fields:
 "target_word_id", "target_occurrence", "primary_text", "transliteration", "translation",
 "cloze_text", and "target_breakdown".
+
+The translation must express the same coherent sentence. The target breakdown
+must explain only the target's meaning and grammar in this sentence; do not add
+etymology.
 """.strip()
         schema = {
             "name": "sentence_batch",
@@ -483,6 +506,25 @@ def _passing_review_count(card_state: dict | None) -> int:
     return 0
 
 
+def _known_words(
+    vocabulary: dict[str, dict],
+    source_scheduler_cards: dict,
+    tracked_vocabulary: dict,
+    minimum_passing_reviews: int,
+    limit: int,
+) -> list[str]:
+    return [
+        item["surface_form"]
+        for word_id, item in vocabulary.items()
+        if (
+            _passing_review_count(source_scheduler_cards.get(word_id))
+            >= minimum_passing_reviews
+            or tracked_vocabulary.get(word_id, {}).get("status")
+            in {"active_anki", "mastered"}
+        )
+    ][:limit]
+
+
 def _direct_sentence(
     program_id: str,
     day: str,
@@ -695,6 +737,7 @@ def _validate_generated_sentences(
     generated: list[dict],
     targets: list[dict],
     allow_inflected_targets: bool = False,
+    familiar_pool_policy: str = "restricted",
 ) -> list[dict]:
     if not isinstance(generated, list):
         raise ValueError("sentence generator must return a list")
@@ -735,11 +778,65 @@ def _validate_generated_sentences(
             )
         if not allow_inflected_targets and occurrence != target["surface_form"]:
             raise ValueError("generated sentence changed an exact-form target")
+        if familiar_pool_policy == "natural_priority":
+            primary_text = sentence["primary_text"]
+            translation = sentence["translation"]
+            if primary_text.count(",") > 2 or translation.count(",") > 2:
+                raise ValueError("generated sentence is list-like")
         seen_ids.add(target_id)
         validated.append(sentence)
     if seen_ids != set(target_by_id):
         raise ValueError("sentence generator omitted a target")
     return validated
+
+
+def _generation_request(
+    program_id: str,
+    config: dict,
+    known_words: list[str],
+    targets: list[dict],
+    allow_inflected_targets: bool,
+    familiar_pool_policy: str,
+) -> dict:
+    return {
+        "program_id": program_id,
+        "language_code": config.get("language_code", "zh-CN"),
+        "prompt_style": config.get("prompt_style", "formal_mandarin"),
+        "orthography": config.get("orthography", "Traditional Chinese"),
+        "transliteration_style": config.get(
+            "transliteration_style",
+            "helpful pronunciation guidance",
+        ),
+        "known_words": known_words,
+        "targets": targets,
+        "allow_inflected_targets": allow_inflected_targets,
+        "familiar_pool_policy": familiar_pool_policy,
+    }
+
+
+def _generate_with_retries(
+    generator: SentenceGenerator,
+    request: dict,
+    targets: list[dict],
+    allow_inflected_targets: bool,
+    familiar_pool_policy: str,
+    max_attempts: int,
+) -> list[dict]:
+    last_error = None
+    for _attempt in range(max_attempts):
+        try:
+            return _validate_generated_sentences(
+                generator.generate(request),
+                targets,
+                allow_inflected_targets,
+                familiar_pool_policy,
+            )
+        except ValueError as error:
+            last_error = error
+    raise ValueError(
+        f"sentence generator failed quality validation after {max_attempts} attempts: "
+        f"{last_error}"
+    ) from last_error
 
 
 def _openrouter_generator(config: dict) -> SentenceGenerator:
@@ -859,6 +956,22 @@ def prepare_sentence_program(
     allow_inflected_targets = bool(
         sentence_generation.get("allow_inflected_targets", False)
     )
+    familiar_pool_policy = sentence_generation.get(
+        "familiar_pool_policy",
+        "restricted",
+    )
+    if familiar_pool_policy not in {"restricted", "natural_priority"}:
+        raise ValueError(
+            f"unsupported familiar pool policy: {familiar_pool_policy}"
+        )
+    generation_config = config.get("generation", {})
+    if not isinstance(generation_config, dict):
+        raise ValueError("generation must be an object")
+    quality_version = int(generation_config.get("quality_version", 1))
+    refresh_quality = "quality_version" in generation_config
+    max_generation_attempts = int(generation_config.get("max_attempts", 1))
+    if quality_version < 1 or not 1 <= max_generation_attempts <= 5:
+        raise ValueError("sentence generation quality settings are invalid")
     promotion_threshold = int(config.get("promotion_threshold_sentence_passes", 3))
     daily_target = int(config.get("daily_sentence_target", 10))
     max_buffer = int(config.get("max_active_word_buffer", 30))
@@ -894,6 +1007,71 @@ def prepare_sentence_program(
     _refresh_mastery(program_state, source_stream_state, mastery_interval, now)
 
     day = hkt_day(now).isoformat()
+    tracked = program_state["vocabulary"]
+    source_scheduler_cards = source_stream_state.get("cards", {})
+    known_pool_limit = int(config.get("known_pool_limit", 200))
+    known_words = _known_words(
+        vocabulary,
+        source_scheduler_cards,
+        tracked,
+        minimum_passing_reviews,
+        known_pool_limit,
+    )
+    outdated_sentences = [
+        sentence
+        for sentence in content["sentences"]
+        if (
+            refresh_quality
+            and sentence.get("status") == "active"
+            and sentence.get("source") == "generated"
+            and int(sentence.get("quality_version", 0)) < quality_version
+        )
+    ]
+    refreshed_count = 0
+    if outdated_sentences:
+        refresh_targets = [
+            vocabulary[sentence["target_word_ids"][0]]
+            for sentence in outdated_sentences
+        ]
+        refresh_request = _generation_request(
+            program_id,
+            config,
+            known_words,
+            refresh_targets,
+            allow_inflected_targets,
+            familiar_pool_policy,
+        )
+        refresh_generator = (generator_factory or _openrouter_generator)(config)
+        refreshed = _generate_with_retries(
+            refresh_generator,
+            refresh_request,
+            refresh_targets,
+            allow_inflected_targets,
+            familiar_pool_policy,
+            max_generation_attempts,
+        )
+        refreshed_by_target = {
+            sentence["target_word_id"]: sentence for sentence in refreshed
+        }
+        refreshed_at = isoformat_utc(now)
+        for stored_sentence in outdated_sentences:
+            target_id = stored_sentence["target_word_ids"][0]
+            replacement = refreshed_by_target[target_id]
+            stored_sentence["payload"] = {
+                key: replacement[key]
+                for key in (
+                    "primary_text",
+                    "transliteration",
+                    "translation",
+                    "cloze_text",
+                    "target_breakdown",
+                )
+            }
+            stored_sentence["quality_version"] = quality_version
+            stored_sentence["refreshed_at"] = refreshed_at
+        refreshed_count = len(outdated_sentences)
+        program_state["revision"] += 1
+
     existing_job = generation_state["jobs"].get(day)
     generated_count = 0
     generation_pending = (
@@ -901,7 +1079,6 @@ def prepare_sentence_program(
         or existing_job.get("generated_count") == 0
     )
     if generation_pending:
-        tracked = program_state["vocabulary"]
         active_buffer = sum(
             1
             for item in tracked.values()
@@ -914,7 +1091,6 @@ def prepare_sentence_program(
         )
         available_slots = max(0, max_buffer - active_buffer)
         target_count = min(daily_target, available_slots)
-        source_scheduler_cards = source_stream_state.get("cards", {})
         previously_exposed = set(program_state["grandfathered_word_ids"])
         if strategy == "sentence_first":
             candidates = [
@@ -938,17 +1114,6 @@ def prepare_sentence_program(
             ][:target_count]
 
         if candidates:
-            known_pool_limit = int(config.get("known_pool_limit", 200))
-            known_words = [
-                item["surface_form"]
-                for word_id, item in vocabulary.items()
-                if (
-                    _passing_review_count(source_scheduler_cards.get(word_id))
-                    >= minimum_passing_reviews
-                    or tracked.get(word_id, {}).get("status")
-                    in {"active_anki", "mastered"}
-                )
-            ][:known_pool_limit]
             generated_targets = [
                 item for item in candidates if item["entry_type"] != "sentence"
             ]
@@ -958,24 +1123,22 @@ def prepare_sentence_program(
                 )
             generated_by_target = {}
             if generated_targets:
-                request = {
-                    "program_id": program_id,
-                    "language_code": config.get("language_code", "zh-CN"),
-                    "prompt_style": config.get("prompt_style", "formal_mandarin"),
-                    "orthography": config.get("orthography", "Traditional Chinese"),
-                    "transliteration_style": config.get(
-                        "transliteration_style",
-                        "helpful pronunciation guidance",
-                    ),
-                    "known_words": known_words,
-                    "targets": generated_targets,
-                    "allow_inflected_targets": allow_inflected_targets,
-                }
-                generator = (generator_factory or _openrouter_generator)(config)
-                generated = _validate_generated_sentences(
-                    generator.generate(request),
+                request = _generation_request(
+                    program_id,
+                    config,
+                    known_words,
                     generated_targets,
                     allow_inflected_targets,
+                    familiar_pool_policy,
+                )
+                generator = (generator_factory or _openrouter_generator)(config)
+                generated = _generate_with_retries(
+                    generator,
+                    request,
+                    generated_targets,
+                    allow_inflected_targets,
+                    familiar_pool_policy,
+                    max_generation_attempts,
                 )
                 generated_by_target = {
                     sentence["target_word_id"]: sentence for sentence in generated
@@ -1016,6 +1179,7 @@ def prepare_sentence_program(
                         "created_at": created_at,
                         "introduction_strategy": strategy,
                         "source": "generated",
+                        "quality_version": quality_version,
                         "payload": {
                             key: sentence[key]
                             for key in (
@@ -1055,6 +1219,7 @@ def prepare_sentence_program(
     )
     return {
         "generated": generated_count,
+        "refreshed": refreshed_count,
         "backfilled": backfilled_count,
         "active_sentences": len(sentence_cards(content)),
         "promoted_words": len(promoted_word_ids(program_state)),
