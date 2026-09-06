@@ -1,5 +1,177 @@
 {
   "schema_version": 1,
   "program_id": "slovak_reading",
-  "sentences": []
+  "sentences": [
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0001",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0001"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-09-06T05:14:07.086732Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "payload": {
+        "primary_text": "Dobrý deň, jeden, nie dva, nie tri, nie desať.",
+        "transliteration": "[ˈjɛdɛn]",
+        "translation": "Good day, one, not two, not three, not ten.",
+        "cloze_text": "Dobrý deň, ___, nie dva, nie tri, nie desať.",
+        "target_breakdown": "jeden — cardinal number 'one', nominative masculine singular; from Proto-Slavic *jedinъ"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0002",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0002"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-09-06T05:14:07.086732Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "payload": {
+        "primary_text": "Nie, dobrý deň, dva, nie jeden, nie tri, nie desať.",
+        "transliteration": "[dva]",
+        "translation": "No, good day, two, not one, not three, not ten.",
+        "cloze_text": "Nie, dobrý deň, ___, nie jeden, nie tri, nie desať.",
+        "target_breakdown": "dva — cardinal number 'two', nominative masculine; from Proto-Slavic *dъva"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0003",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0003"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-09-06T05:14:07.086732Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "payload": {
+        "primary_text": "Dobrý deň, tri, nie dva, nie sedem, nie osem.",
+        "transliteration": "[tri]",
+        "translation": "Good day, three, not two, not seven, not eight.",
+        "cloze_text": "Dobrý deň, ___, nie dva, nie sedem, nie osem.",
+        "target_breakdown": "tri — cardinal number 'three', nominative neuter plural; from Proto-Slavic *trьje"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0007",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0007"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-09-06T05:14:07.086732Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "payload": {
+        "primary_text": "Nie, dobrý deň, sedem, nie tri, nie osem, nie desať.",
+        "transliteration": "[ˈsɛdɛm]",
+        "translation": "No, good day, seven, not three, not eight, not ten.",
+        "cloze_text": "Nie, dobrý deň, ___, nie tri, nie osem, nie desať.",
+        "target_breakdown": "sedem — cardinal number 'seven', nominative neuter singular; from Proto-Slavic *sedmь"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0008",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0008"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-09-06T05:14:07.086732Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "payload": {
+        "primary_text": "Dobrý deň, osem, nie sedem, nie deväť, nie desať.",
+        "transliteration": "[ˈɔsɛm]",
+        "translation": "Good day, eight, not seven, not nine, not ten.",
+        "cloze_text": "Dobrý deň, ___, nie sedem, nie deväť, nie desať.",
+        "target_breakdown": "osem — cardinal number 'eight', nominative neuter singular; from Proto-Slavic *osmь"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0009",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0009"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-09-06T05:14:07.086732Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "payload": {
+        "primary_text": "Nie, dobrý deň, deväť, nie osem, nie desať, nie jeden.",
+        "transliteration": "[ˈdɛvæc]",
+        "translation": "No, good day, nine, not eight, not ten, not one.",
+        "cloze_text": "Nie, dobrý deň, ___, nie osem, nie desať, nie jeden.",
+        "target_breakdown": "deväť — cardinal number 'nine', nominative neuter singular; from Proto-Slavic *devętь, with soft ť from palatalization"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0010",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0010"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-09-06T05:14:07.086732Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "payload": {
+        "primary_text": "Dobrý deň, desať, nie deväť, nie sedem, nie dva.",
+        "transliteration": "[ˈdɛsac]",
+        "translation": "Good day, ten, not nine, not seven, not two.",
+        "cloze_text": "Dobrý deň, ___, nie deväť, nie sedem, nie dva.",
+        "target_breakdown": "desať — cardinal number 'ten', nominative neuter singular; from Proto-Slavic *desętь, with soft ť from palatalization"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0015",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0015"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-09-06T05:14:07.086732Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "payload": {
+        "primary_text": "Dobrý deň, jeden, dva, tri, desať, nie sedem.",
+        "transliteration": "[ˈdɔbriː ˈdɛɲ]",
+        "translation": "Good day, one, two, three, ten, not seven.",
+        "cloze_text": "___, jeden, dva, tri, desať, nie sedem.",
+        "target_breakdown": "dobrý deň — set greeting phrase; dobrý = adjective 'good' nominative masculine singular, deň = noun 'day' nominative masculine singular"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0018",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0018"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-09-06T05:14:07.086732Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "payload": {
+        "primary_text": "Nie, dobrý deň, jeden, dva, tri, desať.",
+        "transliteration": "[ɲiɛ]",
+        "translation": "No, good day, one, two, three, ten.",
+        "cloze_text": "___, dobrý deň, jeden, dva, tri, desať.",
+        "target_breakdown": "nie — negation particle 'no/not'; from Proto-Slavic *ne, with Slovak diphthongization of e → ie"
+      }
+    }
+  ]
 }
