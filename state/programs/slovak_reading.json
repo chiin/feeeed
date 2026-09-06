@@ -1,12 +1,13 @@
 {
   "schema_version": 1,
-  "revision": 5,
+  "revision": 6,
   "vocabulary": {
     "slovak-0001": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-09-06T05:14:07.086732Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-09-06T05:15:50.840000Z"
     },
     "slovak-0002": {
       "status": "sentence_reinforcement",
@@ -57,7 +58,12 @@
       "introduction_strategy": "vocabulary_first"
     }
   },
-  "processed_events": {},
+  "processed_events": {
+    "7a834f9a-b829-4f9c-a602-9e8a87e3a759": {
+      "processed_at": "2026-09-06T05:16:12.649061Z",
+      "status": "applied"
+    }
+  },
   "grandfathered_word_ids": [],
   "source_gate_initialized": true,
   "combined_batch": {
