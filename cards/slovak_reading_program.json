@@ -4,11 +4,11 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-06",
   "batch_date": "2026-09-06",
-  "compiled_at": "2026-09-06T07:07:19.067425Z",
+  "compiled_at": "2026-09-06T07:10:37.748966Z",
   "state_revision": 8,
   "source_revisions": {
     "slovak_vocab": 21,
-    "slovak_sentences": 4
+    "slovak_sentences": 5
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -32,7 +32,8 @@
     "de399cb3-8662-4328-85d9-3536c5ad79b8",
     "bb858b72-0593-4308-9886-8769114f3f5e",
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
-    "1b661cb7-1889-407a-b4e5-15aac3ffca55"
+    "1b661cb7-1889-407a-b4e5-15aac3ffca55",
+    "b1e73139-ac5d-4301-918a-0a135aec15d9"
   ],
   "cards": [
     {
@@ -197,13 +198,25 @@
         "text": "I have three pieces.",
         "notes": "[tri]\n\nThe word 'tri' is the masculine nominative/accusative plural form of the numeral 'three', agreeing with the plural noun 'k\u00fasky'."
       },
-      "available_at": "2026-09-06T05:14:07.086732Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-06T07:20:20.606000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-06T07:10:20.606000Z",
+        "next_due_at": "2026-09-06T07:20:20.606000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",

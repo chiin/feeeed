@@ -5,33 +5,14 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-06",
   "batch_date": "2026-09-06",
-  "compiled_at": "2026-09-06T07:07:19.067425Z",
-  "state_revision": 4,
+  "compiled_at": "2026-09-06T07:10:37.748966Z",
+  "state_revision": 5,
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
-    "1b661cb7-1889-407a-b4e5-15aac3ffca55"
+    "1b661cb7-1889-407a-b4e5-15aac3ffca55",
+    "b1e73139-ac5d-4301-918a-0a135aec15d9"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0003",
-      "front": {
-        "text": "M\u00e1m tri k\u00fasky.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have three pieces.",
-        "notes": "[tri]\n\nThe word 'tri' is the masculine nominative/accusative plural form of the numeral 'three', agreeing with the plural noun 'k\u00fasky'."
-      },
-      "available_at": "2026-09-06T05:14:07.086732Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
     {
       "id": "slovak_reading-2026-09-06-slovak-0007",
       "front": {
@@ -150,6 +131,38 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0003",
+      "front": {
+        "text": "M\u00e1m tri k\u00fasky.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I have three pieces.",
+        "notes": "[tri]\n\nThe word 'tri' is the masculine nominative/accusative plural form of the numeral 'three', agreeing with the plural noun 'k\u00fasky'."
+      },
+      "available_at": "2026-09-06T07:20:20.606000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-06T07:10:20.606000Z",
+        "next_due_at": "2026-09-06T07:20:20.606000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
