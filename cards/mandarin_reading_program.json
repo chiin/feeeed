@@ -4,11 +4,11 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-06",
   "batch_date": "2026-09-06",
-  "compiled_at": "2026-09-06T02:12:57.495300Z",
+  "compiled_at": "2026-09-06T02:13:19.624702Z",
   "state_revision": 5,
   "source_revisions": {
     "hsk": 442,
-    "mandarin_sentences": 7
+    "mandarin_sentences": 8
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -449,7 +449,8 @@
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
-    "9b9112ec-1ced-4952-b39c-99dc2e9dc04a"
+    "9b9112ec-1ced-4952-b39c-99dc2e9dc04a",
+    "4e323880-37ef-412f-b83b-6153486b30a7"
   ],
   "cards": [
     {
@@ -562,13 +563,23 @@
         "text": "Tomorrow morning we are going out to buy things.",
         "notes": "M\u00edngti\u0101n sh\u00e0ngw\u01d4 w\u01d2men y\u00e0o ch\u016bq\u00f9 m\u01cei d\u014dngxi.\n\n\u51fa (ch\u016b) - to go out; \u51fa\u53bb (to go out)"
       },
-      "available_at": "2026-09-05T17:24:00.504659Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-06T02:22:59.589000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "lapses": 0,
+        "last_reviewed_at": "2026-09-06T02:12:59.589000Z",
+        "next_due_at": "2026-09-06T02:22:59.589000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
