@@ -18,12 +18,14 @@ class WebAssetSmokeTests(unittest.TestCase):
         html = (ROOT / "reviewer.html").read_text(encoding="utf-8")
         app = (ROOT / "reviewer_app.js").read_text(encoding="utf-8")
 
-        self.assertIn('src="reviewer_state.js?v=5"', html)
-        self.assertIn('src="reviewer_app.js?v=6"', html)
+        self.assertIn('src="reviewer_state.js?v=6"', html)
+        self.assertIn('src="reviewer_app.js?v=7"', html)
         self.assertIn('id="homeScreen"', html)
+        self.assertIn('id="candidateScreen"', html)
         self.assertIn("loadDeckIndex", app)
         self.assertIn("programId", app)
         self.assertIn("groupReviewEventsByDeck", app)
+        self.assertIn("flushCandidateSync", app)
 
     def test_pdf_reader_loads_book_aware_assets(self):
         html = (ROOT / "pdf_reader.html").read_text(encoding="utf-8")

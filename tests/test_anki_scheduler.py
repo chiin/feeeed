@@ -210,6 +210,45 @@ class DailyBatchTests(unittest.TestCase):
             [item["card_id"] for item in self.history["daily_batch"]["active"]],
         )
 
+    def test_again_retry_remains_valid_across_hkt_midnight(self):
+        before_midnight = datetime(2026, 8, 29, 15, 50, tzinfo=timezone.utc)
+        after_midnight = before_midnight + timedelta(minutes=10)
+        self.history["daily_batch"] = {
+            "id": "2026-08-29",
+            "date": "2026-08-29",
+            "created_at": "2026-08-28T16:00:00Z",
+            "card_ids": ["due"],
+            "active": [
+                {
+                    "card_id": "due",
+                    "available_at": "2026-08-29T15:00:00Z",
+                }
+            ],
+        }
+
+        again = review_event("midnight-again", "due", "again", before_midnight)
+        good = review_event("midnight-good", "due", "good", after_midnight)
+
+        self.assertEqual(
+            apply_review_events(
+                "hsk",
+                self.history,
+                [again],
+                before_midnight,
+            )["applied"],
+            1,
+        )
+        self.assertEqual(
+            apply_review_events(
+                "hsk",
+                self.history,
+                [good],
+                after_midnight,
+            )["applied"],
+            1,
+        )
+        self.assertEqual(self.history["cards"]["due"]["last_rating"], "good")
+
     def test_duplicate_and_stale_device_events_do_not_reschedule(self):
         ensure_daily_batch(
             self.history, [card["id"] for card in self.cards], 1, NOW

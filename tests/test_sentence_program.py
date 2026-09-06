@@ -10,6 +10,9 @@ from sentence_program import (
     DeterministicSentenceGenerator,
     OpenRouterSentenceGenerator,
     apply_sentence_review_results,
+    apply_vocabulary_candidate_event,
+    approved_vocabulary_cards,
+    build_candidate_snapshot,
     build_combined_snapshot,
     eligible_source_word_ids,
     load_sentence_content,
@@ -649,6 +652,43 @@ class VocabularyFirstSentenceProgramTests(unittest.TestCase):
             "sentence_reinforcement",
         )
 
+    def test_parallel_relearning_targets_catalog_without_vocabulary_review(self):
+        class CapturingGenerator:
+            def __init__(self):
+                self.requests = []
+
+            def generate(self, request):
+                self.requests.append(request)
+                return DeterministicSentenceGenerator().generate(request)
+
+        self.config["prior_knowledge"] = {
+            "source_catalog": "assumed_familiar",
+        }
+        self.config["sentence_generation"].update(
+            {
+                "trigger": "catalog_order",
+                "context_pool": "source_catalog",
+            }
+        )
+        cards = [
+            source_card("target-1", "mesto"),
+            source_card("target-2", "kniha"),
+            source_card("target-3", "stôl"),
+        ]
+        generator = CapturingGenerator()
+
+        result = self.process(cards, lambda _config: generator)
+
+        self.assertEqual(result["generated"], 2)
+        self.assertEqual(
+            [target["id"] for target in generator.requests[0]["targets"]],
+            ["target-1", "target-2"],
+        )
+        self.assertEqual(
+            set(generator.requests[0]["known_words"]),
+            {"mesto", "kniha", "stôl"},
+        )
+
     def test_again_or_hard_only_card_is_not_a_sentence_target(self):
         cards = [source_card("target-1", "mesto")]
         self.source_state["cards"]["target-1"] = {
@@ -858,6 +898,83 @@ class VocabularyFirstSentenceProgramTests(unittest.TestCase):
             1,
         )
 
+    def test_discovered_vocabulary_is_pending_until_approved(self):
+        class DiscoveryGenerator:
+            def generate(self, _request):
+                return [
+                    {
+                        "target_word_id": "target-1",
+                        "target_occurrence": "meste",
+                        "primary_text": "V meste je nová knižnica.",
+                        "transliteration": "ˈmes.ce",
+                        "translation": "There is a new library in the town.",
+                        "cloze_text": "V […] je nová knižnica.",
+                        "target_breakdown": "mesto → meste, locative singular",
+                        "discovered_vocabulary": [
+                            {
+                                "surface_form": "knižnica",
+                                "observed_form": "knižnica",
+                                "translation": "library",
+                            }
+                        ],
+                    }
+                ]
+
+        self.config["daily_sentence_target"] = 1
+        self.config["vocabulary_discovery"] = {
+            "enabled": True,
+            "approval": "manual",
+        }
+        cards = [source_card("target-1", "mesto")]
+        self.source_state["cards"]["target-1"] = reviewed_state()
+
+        result = self.process(cards, lambda _config: DiscoveryGenerator())
+
+        self.assertEqual(result["discovered"], 1)
+        candidate_id, candidate = next(
+            iter(self.program_state["vocabulary_candidates"].items())
+        )
+        self.assertEqual(candidate["status"], "pending")
+        snapshot = build_candidate_snapshot(
+            "mandarin_reading",
+            "Test",
+            self.program_state,
+            NOW,
+        )
+        self.assertEqual(snapshot["candidates"][0]["id"], candidate_id)
+
+        payload = {
+            "event_type": "vocabulary_candidate",
+            "event_id": "approve-1",
+            "program_id": "mandarin_reading",
+            "candidate_id": candidate_id,
+            "action": "approve",
+            "occurred_at": NOW.isoformat(),
+        }
+        applied = apply_vocabulary_candidate_event(
+            "mandarin_reading",
+            self.program_state,
+            payload,
+            NOW,
+        )
+        duplicate = apply_vocabulary_candidate_event(
+            "mandarin_reading",
+            self.program_state,
+            payload,
+            NOW,
+        )
+
+        self.assertEqual(applied["applied"], 1)
+        self.assertEqual(duplicate["duplicate"], 1)
+        self.assertEqual(
+            approved_vocabulary_cards(self.program_state)[0]["front"]["text"],
+            "knižnica",
+        )
+        self.assertEqual(
+            self.program_state["vocabulary"][candidate_id]["status"],
+            "sentence_complete",
+        )
+
 
 class OpenRouterGeneratorTests(unittest.TestCase):
     class FakeResponse:
@@ -1044,6 +1161,12 @@ class SentenceProgramIntegrationTests(unittest.TestCase):
                 self.assertTrue(
                     Path("state/generation/mandarin_reading.json").exists()
                 )
+                candidate_snapshot = json.loads(
+                    Path(
+                        "cards/mandarin_reading_candidates.json"
+                    ).read_text(encoding="utf-8")
+                )
+                self.assertEqual(candidate_snapshot["candidates"], [])
             finally:
                 os.chdir(old_cwd)
 

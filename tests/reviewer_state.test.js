@@ -6,8 +6,10 @@ const {
     DurableOutbox,
     RETRY_DELAY_MS,
     createReviewEvent,
+    createVocabularyCandidateEvent,
     groupReviewEventsByDeck,
-    reconcileCards
+    reconcileCards,
+    reconcileVocabularyCandidates
 } = require("../reviewer_state.js");
 
 class MemoryStorage {
@@ -164,6 +166,48 @@ test("combined outbox events are grouped by authoritative source deck", () => {
     assert.deepEqual(
         groups.get("mandarin_sentences").map(event => event.event_id),
         ["sentence-event"]
+    );
+});
+
+test("candidate decisions are durable and hide locally decided candidates", () => {
+    const storage = new MemoryStorage();
+    const outbox = new DurableOutbox(
+        storage,
+        "slovak_reading",
+        undefined,
+        "vocabulary_candidate_outbox_v1"
+    );
+    const event = createVocabularyCandidateEvent(
+        "slovak_reading",
+        "candidate-1",
+        "approve",
+        "2026-09-06T08:00:00Z",
+        "candidate-event-1"
+    );
+    outbox.enqueue(event);
+
+    const candidates = reconcileVocabularyCandidates(
+        [
+            { id: "candidate-1", surface_form: "kniha" },
+            { id: "candidate-2", surface_form: "stôl" }
+        ],
+        outbox.events()
+    );
+
+    assert.deepEqual(candidates.map(candidate => candidate.id), ["candidate-2"]);
+    assert.equal(outbox.events()[0].action, "approve");
+});
+
+test("candidate events reject unsupported actions", () => {
+    assert.throws(
+        () => createVocabularyCandidateEvent(
+            "slovak_reading",
+            "candidate-1",
+            "maybe",
+            "2026-09-06T08:00:00Z",
+            "candidate-event-1"
+        ),
+        /Unsupported vocabulary candidate action/
     );
 });
 
