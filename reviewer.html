@@ -81,6 +81,11 @@
             cursor: pointer;
         }
         .btn-primary { background: #0a84ff; color: #fff; }
+        .btn-secondary { margin-top: 10px; background: #3a3a3c; color: #fff; }
+        .btn-approve { background: #30d158; color: #000; }
+        .btn-reject { background: #ff453a; color: #fff; }
+        .candidate-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .candidate-context { margin-top: 18px; color: #8e8e93; line-height: 1.5; }
         .btn-grid { display: none; grid-template-columns: repeat(4, 1fr); gap: 8px; }
         .btn-grade {
             padding: 10px 4px;
@@ -163,6 +168,7 @@
             <div id="deckTitle" class="title">Deck</div>
             <div id="progress" class="progress">0 remaining</div>
         </div>
+        <button id="candidateBtn" class="btn btn-secondary" style="display:none" onclick="showCandidateReview()"></button>
         <div class="card">
             <div class="card-content">
                 <div id="frontText" class="prompt-text"></div>
@@ -187,10 +193,31 @@
         </div>
     </div>
 
+    <div id="candidateScreen" class="screen">
+        <div class="header">
+            <div class="title">Vocabulary Candidates</div>
+            <div id="candidateProgress" class="progress">0 pending</div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div id="candidateWord" class="prompt-text"></div>
+                <div id="candidateTranslation" class="answer-text"></div>
+                <div id="candidateObserved" class="notes-text"></div>
+                <div id="candidateContext" class="candidate-context"></div>
+            </div>
+        </div>
+        <div class="action-area candidate-actions">
+            <button class="btn btn-reject" onclick="decideCandidate('reject')">Reject</button>
+            <button class="btn btn-approve" onclick="decideCandidate('approve')">Approve</button>
+        </div>
+        <button class="btn btn-secondary" onclick="returnToReview()">Back to review</button>
+    </div>
+
     <div id="finishScreen" class="screen">
         <h2 id="finishTitle">Session Complete!</h2>
         <p id="finishMessage" class="muted">All due cards reviewed.</p>
         <button id="syncBtn" class="btn btn-primary" onclick="syncWithGitHub()">Retry Sync Now</button>
+        <button id="finishCandidateBtn" class="btn btn-secondary" style="display:none" onclick="showCandidateReview()"></button>
         <p id="syncStatus" class="muted"></p>
     </div>
 
@@ -206,7 +233,7 @@
         </div>
     </div>
 
-    <script src="reviewer_state.js?v=5"></script>
-    <script src="reviewer_app.js?v=6"></script>
+    <script src="reviewer_state.js?v=6"></script>
+    <script src="reviewer_app.js?v=7"></script>
 </body>
 </html>

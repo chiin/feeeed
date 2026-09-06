@@ -20,7 +20,10 @@ from pdf_scheduler import (
     release_if_due,
 )
 from sentence_program import (
+    apply_vocabulary_candidate_event,
     apply_sentence_review_results,
+    approved_vocabulary_cards,
+    build_candidate_snapshot,
     build_combined_snapshot,
     controls_source_new_cards,
     eligible_source_word_ids,
@@ -657,7 +660,6 @@ def main():
             raise ValueError(
                 f"[{program_id}] source stream must be an Anki deck"
             )
-        source_cards = load_anki_cards(source_cfg, BASE_URL)
         content_path = resolve_sentence_content_path(
             Path("."), program_cfg.get("content_path")
         )
@@ -665,6 +667,22 @@ def main():
         program_state = state_store.load_program(
             program_id, program_cfg.get("program_state_file")
         )
+        candidate_result = apply_vocabulary_candidate_event(
+            program_id,
+            program_state,
+            dispatch_payload,
+            run_now,
+        )
+        if any(candidate_result.values()):
+            print(
+                f"[{program_id}] Processed vocabulary candidate event: "
+                f"{candidate_result}."
+            )
+        source_cards = [
+            *approved_vocabulary_cards(program_state),
+            *load_anki_cards(source_cfg, BASE_URL),
+        ]
+        generated_card_overrides[source_stream_id] = source_cards
         generation_state = state_store.load_generation(
             program_id, program_cfg.get("generation_state_file")
         )
@@ -691,6 +709,20 @@ def main():
             gated_new_cards[source_stream_id] = eligible_source_word_ids(
                 program_state
             )
+        cards_dir = Path("cards")
+        cards_dir.mkdir(exist_ok=True)
+        candidate_snapshot = build_candidate_snapshot(
+            program_id,
+            program_cfg.get("feed_title", program_id),
+            program_state,
+            run_now,
+        )
+        with (cards_dir / f"{program_id}_candidates.json").open(
+            mode="w",
+            encoding="utf-8",
+        ) as file:
+            json.dump(candidate_snapshot, file, ensure_ascii=False, indent=2)
+            file.write("\n")
         print(f"[{program_id}] Processed sentence program: {result}.")
 
     for stream_key, stream_cfg in streams.items():

@@ -12,9 +12,12 @@ const programId = programParam && programParam.toUpperCase() !== "NONE"
 const sessionId = programId ? `program:${programId}` : deckId;
 const ratingNames = { 1: "again", 2: "hard", 3: "good", 4: "easy" };
 let cards = [];
+let candidates = [];
 let outbox = null;
+let candidateOutbox = null;
 let waitTimer = null;
 let syncInFlight = false;
+let candidateSyncInFlight = false;
 
 if (!sessionId) {
     loadDeckIndex();
@@ -25,9 +28,18 @@ if (!sessionId) {
         undefined,
         programId ? "anki_program_outbox_v1" : "anki_outbox_v2"
     );
+    if (programId) {
+        candidateOutbox = new ReviewerState.DurableOutbox(
+            localStorage,
+            programId,
+            undefined,
+            "vocabulary_candidate_outbox_v1"
+        );
+    }
     loadDeck();
     setInterval(loadDeck, 60000);
     setInterval(() => flushPendingSync(), 30000);
+    if (programId) setInterval(() => flushCandidateSync(), 30000);
 }
 
 async function loadDeckIndex() {
@@ -91,6 +103,7 @@ async function loadDeck() {
             data.title || programId || deckId;
         outbox.acknowledge(data.processed_event_ids);
         cards = ReviewerState.reconcileCards(data.cards, outbox.events());
+        if (programId) await loadCandidates();
         renderNextCard();
         flushPendingSync();
     } catch (error) {
@@ -99,6 +112,31 @@ async function loadDeck() {
                 `<p class="error">Error loading deck: ${error.message}</p>`;
         }
     }
+}
+
+async function loadCandidates() {
+    const response = await fetch(
+        `cards/${programId}_candidates.json?t=${Date.now()}`,
+        { cache: "no-store" }
+    );
+    if (!response.ok) throw new Error("Vocabulary candidate file not found");
+    const data = await response.json();
+    candidateOutbox.acknowledge(data.processed_event_ids);
+    candidates = ReviewerState.reconcileVocabularyCandidates(
+        data.candidates,
+        candidateOutbox.events()
+    );
+    updateCandidateButtons();
+    flushCandidateSync();
+}
+
+function updateCandidateButtons() {
+    const label = `Review vocabulary candidates (${candidates.length})`;
+    ["candidateBtn", "finishCandidateBtn"].forEach(id => {
+        const button = document.getElementById(id);
+        button.innerText = label;
+        button.style.display = programId && candidates.length ? "block" : "none";
+    });
 }
 
 function showScreen(id) {
@@ -176,6 +214,52 @@ function showCompletion(title, message) {
         outbox.events().length ? "block" : "none";
 }
 
+function showCandidateReview() {
+    if (!programId || !candidates.length) {
+        returnToReview();
+        return;
+    }
+    const candidate = candidates[0];
+    document.getElementById("candidateProgress").innerText =
+        `${candidates.length} pending`;
+    document.getElementById("candidateWord").innerText =
+        candidate.surface_form || "";
+    document.getElementById("candidateTranslation").innerText =
+        candidate.translation || "";
+    document.getElementById("candidateObserved").innerText =
+        candidate.observed_form
+            ? `Observed form: ${candidate.observed_form}`
+            : "";
+    document.getElementById("candidateContext").innerText =
+        candidate.source_sentence_text || "";
+    showScreen("candidateScreen");
+}
+
+function returnToReview() {
+    renderNextCard();
+}
+
+function decideCandidate(action) {
+    if (!candidates.length) return;
+    const candidate = candidates.shift();
+    candidateOutbox.enqueue(
+        ReviewerState.createVocabularyCandidateEvent(
+            programId,
+            candidate.id,
+            action,
+            new Date().toISOString(),
+            createEventId()
+        )
+    );
+    updateCandidateButtons();
+    if (candidates.length) {
+        showCandidateReview();
+    } else {
+        returnToReview();
+    }
+    flushCandidateSync();
+}
+
 function showAnswer() {
     document.getElementById("answerBox").style.display = "block";
     document.getElementById("showBtn").style.display = "none";
@@ -232,6 +316,7 @@ function savePATFromModal() {
     input.value = "";
     document.getElementById("patModal").style.display = "none";
     flushPendingSync(true);
+    if (programId) flushCandidateSync(true);
 }
 
 async function flushProgramEvents(events, token) {
@@ -334,10 +419,62 @@ async function flushPendingSync(force = false) {
     }
 }
 
+async function flushCandidateSync(force = false) {
+    if (!candidateOutbox || candidateSyncInFlight) return;
+    const events = candidateOutbox.retryable(force);
+    if (!events.length) return;
+    const token = getPAT();
+    if (!token) return;
+    const eventIds = events.map(event => event.event_id);
+    candidateOutbox.markAttempt(eventIds);
+    candidateSyncInFlight = true;
+    try {
+        for (const event of events) {
+            const response = await fetch(
+                "https://api.github.com/repos/chiin/feeeed/dispatches",
+                {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/vnd.github+json",
+                        "Authorization": "Bearer " + token,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        event_type: "vocabulary_candidate",
+                        client_payload: event
+                    }),
+                    keepalive: true
+                }
+            );
+            if (!response.ok) {
+                if (response.status === 401) {
+                    localStorage.removeItem("feeeed_pat");
+                    alert("Invalid GitHub Token. Please re-enter your PAT.");
+                    getPAT();
+                }
+                throw new Error(`GitHub API returned ${response.status}`);
+            }
+        }
+        document.getElementById("syncStatus").innerText =
+            "Candidate decisions accepted; waiting for GitHub Pages to publish.";
+    } catch (error) {
+        candidateOutbox.markFailed(eventIds);
+        console.error("[Feeeeed Candidate Sync]", error);
+        document.getElementById("syncStatus").innerText =
+            "Candidate sync failed. The durable outbox will retry.";
+    } finally {
+        candidateSyncInFlight = false;
+    }
+}
+
 function syncWithGitHub() {
     flushPendingSync(true);
+    if (programId) flushCandidateSync(true);
 }
 
 document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "hidden") flushPendingSync();
+    if (document.visibilityState === "hidden") {
+        flushPendingSync();
+        if (programId) flushCandidateSync();
+    }
 });

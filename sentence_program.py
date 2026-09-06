@@ -44,6 +44,7 @@ class DeterministicSentenceGenerator:
                     "target_breakdown": (
                         f"{surface}: {target['translation']}"
                     ),
+                    "discovered_vocabulary": [],
                 }
             )
         return sentences
@@ -122,6 +123,12 @@ Create exactly one sentence for each target:
 The translation must express the same coherent sentence. The target breakdown
 must explain only the target's meaning and grammar in this sentence; do not add
 etymology.
+
+Also return "discovered_vocabulary" as an array containing at most one useful
+content word introduced outside the familiar pool, or an empty array. A
+candidate must contain exactly "surface_form" (dictionary form),
+"observed_form" (the exact form in the sentence), and "translation". Do not
+propose function words, proper names, the target itself, or familiar words.
 """.strip()
         schema = {
             "name": "sentence_batch",
@@ -146,18 +153,42 @@ etymology.
                                 "translation",
                                 "cloze_text",
                                 "target_breakdown",
+                                "discovered_vocabulary",
                             ],
                             "properties": {
-                                key: {"type": "string"}
-                                for key in (
-                                    "target_word_id",
-                                    "target_occurrence",
-                                    "primary_text",
-                                    "transliteration",
-                                    "translation",
-                                    "cloze_text",
-                                    "target_breakdown",
-                                )
+                                **{
+                                    key: {"type": "string"}
+                                    for key in (
+                                        "target_word_id",
+                                        "target_occurrence",
+                                        "primary_text",
+                                        "transliteration",
+                                        "translation",
+                                        "cloze_text",
+                                        "target_breakdown",
+                                    )
+                                },
+                                "discovered_vocabulary": {
+                                    "type": "array",
+                                    "maxItems": 1,
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": False,
+                                        "required": [
+                                            "surface_form",
+                                            "observed_form",
+                                            "translation",
+                                        ],
+                                        "properties": {
+                                            key: {"type": "string"}
+                                            for key in (
+                                                "surface_form",
+                                                "observed_form",
+                                                "translation",
+                                            )
+                                        },
+                                    },
+                                },
                             },
                         },
                     }
@@ -421,12 +452,18 @@ def _migrate_program_state(program_state: dict) -> None:
     program_state.setdefault("revision", 0)
     program_state.setdefault("vocabulary", {})
     program_state.setdefault("processed_events", {})
+    program_state.setdefault("vocabulary_candidates", {})
+    program_state.setdefault("processed_candidate_events", {})
     program_state.setdefault("grandfathered_word_ids", [])
     program_state.setdefault("source_gate_initialized", False)
     if not isinstance(program_state["vocabulary"], dict):
         raise ValueError("program vocabulary state must be an object")
     if not isinstance(program_state["processed_events"], dict):
         raise ValueError("program processed_events state must be an object")
+    if not isinstance(program_state["vocabulary_candidates"], dict):
+        raise ValueError("program vocabulary_candidates state must be an object")
+    if not isinstance(program_state["processed_candidate_events"], dict):
+        raise ValueError("program processed_candidate_events state must be an object")
     if not (
         isinstance(program_state["grandfathered_word_ids"], list)
         and all(
@@ -525,6 +562,19 @@ def _known_words(
     ][:limit]
 
 
+def _catalog_context_words(
+    program_id: str,
+    day: str,
+    vocabulary: dict[str, dict],
+    limit: int,
+) -> list[str]:
+    items = list(vocabulary.values())
+    seed_material = f"{program_id}:{day}:context".encode("utf-8")
+    seed = int.from_bytes(hashlib.sha256(seed_material).digest(), "big")
+    random.Random(seed).shuffle(items)
+    return [item["surface_form"] for item in items[:limit]]
+
+
 def _direct_sentence(
     program_id: str,
     day: str,
@@ -549,6 +599,166 @@ def _direct_sentence(
         "introduction_strategy": strategy,
         "source": "vocabulary_sentence",
     }
+
+
+def approved_vocabulary_cards(program_state: dict) -> list[dict]:
+    _migrate_program_state(program_state)
+    return [
+        {
+            "id": candidate_id,
+            "entry_type": "term",
+            "front": {
+                "text": candidate["surface_form"],
+                "audio": None,
+                "image": None,
+            },
+            "back": {
+                "text": candidate["translation"],
+                "notes": (
+                    f"Discovered in: {candidate['source_sentence_text']}"
+                ),
+            },
+        }
+        for candidate_id, candidate in program_state[
+            "vocabulary_candidates"
+        ].items()
+        if candidate.get("status") == "approved"
+    ]
+
+
+def apply_vocabulary_candidate_event(
+    program_id: str,
+    program_state: dict,
+    payload: dict,
+    now: datetime,
+) -> dict[str, int]:
+    counts = {"applied": 0, "duplicate": 0, "stale": 0, "invalid": 0}
+    if payload.get("event_type") != "vocabulary_candidate":
+        return counts
+    _migrate_program_state(program_state)
+    required = ("event_id", "program_id", "candidate_id", "action", "occurred_at")
+    if any(not payload.get(key) for key in required):
+        counts["invalid"] += 1
+        return counts
+    if payload["program_id"] != program_id:
+        return counts
+    event_id = payload["event_id"]
+    if not isinstance(event_id, str) or len(event_id) > 128:
+        counts["invalid"] += 1
+        return counts
+    processed = program_state["processed_candidate_events"]
+    if event_id in processed:
+        counts["duplicate"] += 1
+        return counts
+    processed[event_id] = {
+        "processed_at": isoformat_utc(now),
+        "status": "invalid",
+    }
+    try:
+        occurred_at = parse_datetime(payload["occurred_at"])
+    except (TypeError, ValueError):
+        counts["invalid"] += 1
+        return counts
+    if occurred_at > now.astimezone(timezone.utc) + timedelta(minutes=5):
+        counts["invalid"] += 1
+        return counts
+    action = payload["action"]
+    if action not in {"approve", "reject"}:
+        counts["invalid"] += 1
+        return counts
+    candidate = program_state["vocabulary_candidates"].get(
+        payload["candidate_id"]
+    )
+    if not candidate or candidate.get("status") != "pending":
+        processed[event_id]["status"] = "stale"
+        counts["stale"] += 1
+        return counts
+    candidate["status"] = "approved" if action == "approve" else "rejected"
+    candidate["decided_at"] = isoformat_utc(occurred_at)
+    if action == "approve":
+        program_state["vocabulary"].setdefault(
+            payload["candidate_id"],
+            {
+                "status": "sentence_complete",
+                "sentence_pass_count": 0,
+                "introduced_at": candidate["created_at"],
+                "introduction_strategy": "sentence_discovery",
+            },
+        )
+    processed[event_id]["status"] = "applied"
+    program_state["revision"] += 1
+    counts["applied"] += 1
+    while len(processed) > 1000:
+        del processed[next(iter(processed))]
+    return counts
+
+
+def build_candidate_snapshot(
+    program_id: str,
+    title: str,
+    program_state: dict,
+    now: datetime,
+) -> dict:
+    _migrate_program_state(program_state)
+    pending = [
+        {"id": candidate_id, **candidate}
+        for candidate_id, candidate in program_state[
+            "vocabulary_candidates"
+        ].items()
+        if candidate.get("status") == "pending"
+    ]
+    return {
+        "schema_version": 1,
+        "program_id": program_id,
+        "title": title,
+        "compiled_at": isoformat_utc(now),
+        "state_revision": program_state["revision"],
+        "processed_event_ids": list(
+            program_state["processed_candidate_events"]
+        ),
+        "candidates": pending,
+    }
+
+
+def _record_discovered_vocabulary(
+    program_id: str,
+    program_state: dict,
+    vocabulary: dict[str, dict],
+    sentence_id: str,
+    sentence_text: str,
+    discovered: list[dict],
+    now: datetime,
+) -> int:
+    known_surfaces = {
+        item["surface_form"].strip().casefold() for item in vocabulary.values()
+    }
+    candidates = program_state["vocabulary_candidates"]
+    known_surfaces.update(
+        item["surface_form"].strip().casefold() for item in candidates.values()
+    )
+    added = 0
+    for item in discovered:
+        normalized = item["surface_form"].strip().casefold()
+        if normalized in known_surfaces:
+            continue
+        digest = hashlib.sha256(
+            f"{program_id}:{normalized}".encode("utf-8")
+        ).hexdigest()[:16]
+        candidate_id = f"{program_id}-discovered-{digest}"
+        candidates[candidate_id] = {
+            "surface_form": item["surface_form"].strip(),
+            "observed_form": item["observed_form"].strip(),
+            "translation": item["translation"].strip(),
+            "source_sentence_id": sentence_id,
+            "source_sentence_text": sentence_text,
+            "status": "pending",
+            "created_at": isoformat_utc(now),
+        }
+        known_surfaces.add(normalized)
+        added += 1
+    if added:
+        program_state["revision"] += 1
+    return added
 
 
 def _refresh_mastery(
@@ -757,8 +967,13 @@ def _validate_generated_sentences(
     for sentence in generated:
         if not isinstance(sentence, dict):
             raise ValueError("generated sentence must be an object")
-        allowed_fields = required_fields | {"target_occurrence"}
-        if set(sentence) not in (required_fields, allowed_fields):
+        allowed_fields = required_fields | {
+            "target_occurrence",
+            "discovered_vocabulary",
+        }
+        if not required_fields.issubset(sentence) or not set(sentence).issubset(
+            allowed_fields
+        ):
             raise ValueError("generated sentence has unexpected or missing fields")
         if not all(
             isinstance(sentence[field], str) and sentence[field].strip()
@@ -783,6 +998,29 @@ def _validate_generated_sentences(
             translation = sentence["translation"]
             if primary_text.count(",") > 2 or translation.count(",") > 2:
                 raise ValueError("generated sentence is list-like")
+        discovered = sentence.get("discovered_vocabulary", [])
+        if not isinstance(discovered, list) or len(discovered) > 1:
+            raise ValueError("discovered_vocabulary must contain at most one item")
+        for candidate in discovered:
+            if not isinstance(candidate, dict) or set(candidate) != {
+                "surface_form",
+                "observed_form",
+                "translation",
+            }:
+                raise ValueError("discovered vocabulary has an invalid shape")
+            if not all(
+                isinstance(candidate[key], str) and candidate[key].strip()
+                for key in candidate
+            ):
+                raise ValueError("discovered vocabulary fields must be non-empty")
+            if candidate["observed_form"] not in sentence["primary_text"]:
+                raise ValueError(
+                    "discovered vocabulary occurrence is absent from sentence"
+                )
+            if candidate["surface_form"].casefold() == target[
+                "surface_form"
+            ].casefold():
+                raise ValueError("discovered vocabulary duplicates the target")
         seen_ids.add(target_id)
         validated.append(sentence)
     if seen_ids != set(target_by_id):
@@ -939,15 +1177,16 @@ def prepare_sentence_program(
             else "after_first_passing_vocabulary_review"
         ),
     )
-    valid_trigger = (
-        "before_vocabulary"
+    valid_triggers = (
+        {"before_vocabulary"}
         if strategy == "sentence_first"
-        else "after_first_passing_vocabulary_review"
+        else {
+            "after_first_passing_vocabulary_review",
+            "catalog_order",
+        }
     )
-    if trigger != valid_trigger:
-        raise ValueError(
-            f"{strategy} requires sentence generation trigger {valid_trigger}"
-        )
+    if trigger not in valid_triggers:
+        raise ValueError(f"{strategy} does not support sentence trigger {trigger}")
     minimum_passing_reviews = int(
         sentence_generation.get("minimum_passing_reviews", 1)
     )
@@ -964,6 +1203,27 @@ def prepare_sentence_program(
         raise ValueError(
             f"unsupported familiar pool policy: {familiar_pool_policy}"
         )
+    context_pool = sentence_generation.get(
+        "context_pool",
+        "reviewed_vocabulary",
+    )
+    if context_pool not in {"reviewed_vocabulary", "source_catalog"}:
+        raise ValueError(f"unsupported sentence context pool: {context_pool}")
+    prior_knowledge = config.get("prior_knowledge", {})
+    if not isinstance(prior_knowledge, dict):
+        raise ValueError("prior_knowledge must be an object")
+    if trigger == "catalog_order" and prior_knowledge.get(
+        "source_catalog"
+    ) != "assumed_familiar":
+        raise ValueError(
+            "catalog_order requires an assumed-familiar source catalog"
+        )
+    discovery_config = config.get("vocabulary_discovery", {})
+    if not isinstance(discovery_config, dict):
+        raise ValueError("vocabulary_discovery must be an object")
+    discovery_enabled = bool(discovery_config.get("enabled", False))
+    if discovery_enabled and discovery_config.get("approval") != "manual":
+        raise ValueError("vocabulary discovery currently requires manual approval")
     generation_config = config.get("generation", {})
     if not isinstance(generation_config, dict):
         raise ValueError("generation must be an object")
@@ -1010,13 +1270,23 @@ def prepare_sentence_program(
     tracked = program_state["vocabulary"]
     source_scheduler_cards = source_stream_state.get("cards", {})
     known_pool_limit = int(config.get("known_pool_limit", 200))
-    known_words = _known_words(
-        vocabulary,
-        source_scheduler_cards,
-        tracked,
-        minimum_passing_reviews,
-        known_pool_limit,
+    known_words = (
+        _catalog_context_words(
+            program_id,
+            day,
+            vocabulary,
+            known_pool_limit,
+        )
+        if context_pool == "source_catalog"
+        else _known_words(
+            vocabulary,
+            source_scheduler_cards,
+            tracked,
+            minimum_passing_reviews,
+            known_pool_limit,
+        )
     )
+    discovered_count = 0
     outdated_sentences = [
         sentence
         for sentence in content["sentences"]
@@ -1069,6 +1339,16 @@ def prepare_sentence_program(
             }
             stored_sentence["quality_version"] = quality_version
             stored_sentence["refreshed_at"] = refreshed_at
+            if discovery_enabled:
+                discovered_count += _record_discovered_vocabulary(
+                    program_id,
+                    program_state,
+                    vocabulary,
+                    stored_sentence["id"],
+                    stored_sentence["payload"]["primary_text"],
+                    replacement.get("discovered_vocabulary", []),
+                    now,
+                )
         refreshed_count = len(outdated_sentences)
         program_state["revision"] += 1
 
@@ -1092,7 +1372,13 @@ def prepare_sentence_program(
         available_slots = max(0, max_buffer - active_buffer)
         target_count = min(daily_target, available_slots)
         previously_exposed = set(program_state["grandfathered_word_ids"])
-        if strategy == "sentence_first":
+        if trigger == "catalog_order":
+            candidates = [
+                item
+                for word_id, item in vocabulary.items()
+                if word_id not in tracked
+            ][:target_count]
+        elif strategy == "sentence_first":
             candidates = [
                 item
                 for word_id, item in vocabulary.items()
@@ -1192,6 +1478,16 @@ def prepare_sentence_program(
                         },
                     }
                 content["sentences"].append(stored_sentence)
+                if discovery_enabled and target["entry_type"] != "sentence":
+                    discovered_count += _record_discovered_vocabulary(
+                        program_id,
+                        program_state,
+                        vocabulary,
+                        sentence_id,
+                        stored_sentence["payload"]["primary_text"],
+                        sentence.get("discovered_vocabulary", []),
+                        now,
+                    )
                 generated_sentence_ids.append(sentence_id)
                 tracked[target_id] = {
                     "status": word_status,
@@ -1220,6 +1516,7 @@ def prepare_sentence_program(
     return {
         "generated": generated_count,
         "refreshed": refreshed_count,
+        "discovered": discovered_count,
         "backfilled": backfilled_count,
         "active_sentences": len(sentence_cards(content)),
         "promoted_words": len(promoted_word_ids(program_state)),

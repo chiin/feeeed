@@ -128,6 +128,25 @@
         };
     }
 
+    function createVocabularyCandidateEvent(
+        programId,
+        candidateId,
+        action,
+        occurredAt,
+        eventId
+    ) {
+        if (!["approve", "reject"].includes(action)) {
+            throw new Error(`Unsupported vocabulary candidate action: ${action}`);
+        }
+        return {
+            program_id: programId,
+            candidate_id: candidateId,
+            action,
+            occurred_at: occurredAt,
+            event_id: eventId
+        };
+    }
+
     function reconcileCards(serverCards, pendingEvents) {
         const cards = (serverCards || []).map(card => ({ ...card }));
         const sortedEvents = [...(pendingEvents || [])].sort(
@@ -167,6 +186,15 @@
         return groups;
     }
 
+    function reconcileVocabularyCandidates(serverCandidates, pendingEvents) {
+        const decidedIds = new Set(
+            (pendingEvents || []).map(event => event.candidate_id)
+        );
+        return (serverCandidates || [])
+            .filter(candidate => !decidedIds.has(candidate.id))
+            .map(candidate => ({ ...candidate }));
+    }
+
     function reconcilePdfItems(serverItems, pendingEvents) {
         const completedIds = new Set(
             (pendingEvents || [])
@@ -182,8 +210,10 @@
         DurableOutbox,
         RETRY_DELAY_MS,
         createReviewEvent,
+        createVocabularyCandidateEvent,
         groupReviewEventsByDeck,
         reconcileCards,
+        reconcileVocabularyCandidates,
         reconcilePdfItems
     };
 });

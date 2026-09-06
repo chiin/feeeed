@@ -332,6 +332,23 @@ def apply_review_events(
             None,
         )
         if not batch:
+            batch = next(
+                (
+                    candidate
+                    for candidate in (current_batch, previous_batch)
+                    if candidate
+                    and any(
+                        item["card_id"] == card_id
+                        and hkt_day(
+                            parse_datetime(item["available_at"])
+                        ).isoformat()
+                        == event_day
+                        for item in candidate["active"]
+                    )
+                ),
+                None,
+            )
+        if not batch:
             counts["stale"] += 1
             continue
 
@@ -387,9 +404,7 @@ def apply_review_events(
             and hkt_day(result.next_due_at).isoformat() == current_batch.get("date")
             else batch
         )
-        if rating == "again" and target_batch.get("date") == hkt_day(
-            result.next_due_at
-        ).isoformat():
+        if rating == "again":
             target_batch["active"].append(
                 {
                     "card_id": card_id,

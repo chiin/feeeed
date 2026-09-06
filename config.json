@@ -126,11 +126,19 @@
       "vocabulary_introduction": {
         "strategy": "vocabulary_first"
       },
+      "prior_knowledge": {
+        "source_catalog": "assumed_familiar"
+      },
       "sentence_generation": {
-        "trigger": "after_first_passing_vocabulary_review",
+        "trigger": "catalog_order",
         "minimum_passing_reviews": 1,
         "allow_inflected_targets": true,
-        "familiar_pool_policy": "natural_priority"
+        "familiar_pool_policy": "natural_priority",
+        "context_pool": "source_catalog"
+      },
+      "vocabulary_discovery": {
+        "enabled": true,
+        "approval": "manual"
       },
       "language_code": "sk-SK",
       "orthography": "Standard Slovak using the Slovak Latin alphabet",
