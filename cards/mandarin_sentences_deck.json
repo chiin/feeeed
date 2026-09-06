@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-06",
   "batch_date": "2026-09-06",
-  "compiled_at": "2026-09-06T05:32:16.449086Z",
-  "state_revision": 15,
+  "compiled_at": "2026-09-06T05:33:48.694964Z",
+  "state_revision": 16,
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
@@ -19,7 +19,8 @@
     "4db6ad5e-48ca-4a78-92a2-3266b0db7f9b",
     "278cd143-892e-41bf-aae1-ae978cdb2bc4",
     "a4f193fc-d0d4-4779-af59-354e5c75edac",
-    "fa025189-5e9e-4286-9aad-888a8929d39b"
+    "fa025189-5e9e-4286-9aad-888a8929d39b",
+    "aa137583-4e86-4bd4-b1cf-0c4cb54697db"
   ],
   "cards": [
     {
@@ -103,38 +104,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-09-06-hsk-0157",
-      "front": {
-        "text": "\u5abd\u5abd\u8aaa\u5225\u5728\u684c\u5b50\u4e0a\u5beb\u5b57\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Mother says don't write on the table.",
-        "notes": "M\u0101m\u0101 shu\u014d bi\u00e9 z\u00e0i zhu\u014dzi sh\u00e0ng xi\u011b z\u00ec.\n\n\u5225 (bi\u00e9) - don't; prohibitive adverb"
-      },
-      "available_at": "2026-09-06T02:24:00.591000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "lapses": 0,
-        "last_reviewed_at": "2026-09-06T02:14:00.591000Z",
-        "next_due_at": "2026-09-06T02:24:00.591000Z",
-        "passing_reviews": 0,
-        "last_rating": null
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-09-06-hsk-0152",
       "front": {
         "text": "\u738b\u5148\u751f\u4eca\u5929\u7a7f\u4e86\u4e00\u4ef6\u767d\u8272\u7684\u8863\u670d\u3002",
@@ -190,6 +159,38 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-06T05:28:15.266000Z",
         "next_due_at": "2026-09-06T05:38:15.266000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-09-06-hsk-0157",
+      "front": {
+        "text": "\u5abd\u5abd\u8aaa\u5225\u5728\u684c\u5b50\u4e0a\u5beb\u5b57\u3002",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Mother says don't write on the table.",
+        "notes": "M\u0101m\u0101 shu\u014d bi\u00e9 z\u00e0i zhu\u014dzi sh\u00e0ng xi\u011b z\u00ec.\n\n\u5225 (bi\u00e9) - don't; prohibitive adverb"
+      },
+      "available_at": "2026-09-06T05:43:25.202000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-06T05:33:25.202000Z",
+        "next_due_at": "2026-09-06T05:43:25.202000Z"
       },
       "schedule_previews": {
         "again": "10m",
