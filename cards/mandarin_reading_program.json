@@ -4,11 +4,11 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-06",
   "batch_date": "2026-09-06",
-  "compiled_at": "2026-09-06T05:33:48.694964Z",
+  "compiled_at": "2026-09-06T05:34:13.854945Z",
   "state_revision": 8,
   "source_revisions": {
     "hsk": 445,
-    "mandarin_sentences": 16
+    "mandarin_sentences": 17
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -461,7 +461,8 @@
     "278cd143-892e-41bf-aae1-ae978cdb2bc4",
     "a4f193fc-d0d4-4779-af59-354e5c75edac",
     "fa025189-5e9e-4286-9aad-888a8929d39b",
-    "aa137583-4e86-4bd4-b1cf-0c4cb54697db"
+    "aa137583-4e86-4bd4-b1cf-0c4cb54697db",
+    "4dd8a13d-db41-41ef-9796-a0779bf05923"
   ],
   "cards": [
     {
@@ -580,13 +581,25 @@
         "text": "The doctor says helping patients is his most important job.",
         "notes": "Y\u012bsh\u0113ng shu\u014d b\u0101ngzh\u00f9 b\u00ecngr\u00e9n sh\u00ec t\u0101 zu\u00ec zh\u00f2ngy\u00e0o de g\u014dngzu\u00f2.\n\n\u5e6b\u52a9 (b\u0101ngzh\u00f9) - to help / to assist"
       },
-      "available_at": "2026-09-05T17:24:00.504659Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-06T05:43:37.635000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-06T05:33:37.635000Z",
+        "next_due_at": "2026-09-06T05:43:37.635000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
