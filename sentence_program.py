@@ -18,6 +18,7 @@ GENERATION_SCHEMA_VERSION = 1
 CONTENT_SCHEMA_VERSION = 1
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 PASSING_RATINGS = {"good", "easy"}
+INTRODUCTION_STRATEGIES = {"sentence_first", "vocabulary_first"}
 
 
 class SentenceGenerator(Protocol):
@@ -35,6 +36,7 @@ class DeterministicSentenceGenerator:
             sentences.append(
                 {
                     "target_word_id": target["id"],
+                    "target_occurrence": surface,
                     "primary_text": f"我會在句子中使用「{surface}」。",
                     "transliteration": f"Mock transliteration for {surface}",
                     "translation": f"I will use “{surface}” in a sentence.",
@@ -69,6 +71,13 @@ class OpenRouterSentenceGenerator:
             for item in targets
         )
         known_words = ", ".join(request["known_words"])
+        target_instruction = (
+            "Use a grammatically natural inflected form of each target when "
+            "appropriate. Return that exact substring as \"target_occurrence\"."
+            if request.get("allow_inflected_targets", False)
+            else "Each sentence must contain its target surface form exactly. "
+            "Return that form as \"target_occurrence\"."
+        )
         system_prompt = (
             "You are an expert language-pedagogy engine. Generate natural "
             "practice sentences using restricted vocabulary. Return JSON only."
@@ -77,6 +86,7 @@ class OpenRouterSentenceGenerator:
 Language: {request['language_code']}
 Style: {request['prompt_style']}
 Orthography: {request['orthography']}
+Transliteration/pronunciation field: {request.get('transliteration_style', 'helpful pronunciation guidance')}
 
 Create exactly one sentence for each target:
 {target_lines}
@@ -85,9 +95,9 @@ At least 85 percent of the surrounding vocabulary should come from this
 familiar pool:
 {known_words}
 
-Each sentence must contain its target surface form. Return an object with a
+{target_instruction} Return an object with a
 "sentences" array. Every item must contain exactly these string fields:
-"target_word_id", "primary_text", "transliteration", "translation",
+"target_word_id", "target_occurrence", "primary_text", "transliteration", "translation",
 "cloze_text", and "target_breakdown".
 """.strip()
         schema = {
@@ -107,6 +117,7 @@ Each sentence must contain its target surface form. Return an object with a
                             "additionalProperties": False,
                             "required": [
                                 "target_word_id",
+                                "target_occurrence",
                                 "primary_text",
                                 "transliteration",
                                 "translation",
@@ -117,6 +128,7 @@ Each sentence must contain its target surface form. Return an object with a
                                 key: {"type": "string"}
                                 for key in (
                                     "target_word_id",
+                                    "target_occurrence",
                                     "primary_text",
                                     "transliteration",
                                     "translation",
@@ -246,9 +258,14 @@ def sentence_cards(content: dict) -> list[dict]:
         if sentence.get("status") != "active":
             continue
         payload = sentence["payload"]
-        notes = payload["transliteration"]
-        if payload["target_breakdown"]:
-            notes = f"{notes}\n\n{payload['target_breakdown']}"
+        notes = "\n\n".join(
+            item
+            for item in (
+                payload.get("transliteration"),
+                payload.get("target_breakdown"),
+            )
+            if item
+        ) or None
         cards.append(
             {
                 "id": sentence["id"],
@@ -423,12 +440,73 @@ def _source_vocabulary(source_cards: list[dict]) -> dict[str, dict]:
             raise ValueError("source vocabulary cards require id, front text, and back text")
         if word_id in vocabulary:
             raise ValueError(f"duplicate source vocabulary ID: {word_id}")
+        entry_type = card.get("entry_type", "term")
+        if entry_type not in {"term", "word", "phrase", "sentence"}:
+            raise ValueError(f"unsupported vocabulary entry type: {entry_type}")
         vocabulary[word_id] = {
             "id": word_id,
             "surface_form": surface,
             "translation": translation,
+            "entry_type": entry_type,
+            "notes": card.get("back", {}).get("notes"),
         }
     return vocabulary
+
+
+def introduction_strategy(config: dict) -> str:
+    policy = config.get("vocabulary_introduction", {})
+    if not isinstance(policy, dict):
+        raise ValueError("vocabulary_introduction must be an object")
+    strategy = policy.get("strategy")
+    if strategy is None:
+        strategy = (
+            "sentence_first"
+            if config.get("control_source_new_cards", True)
+            else "vocabulary_first"
+        )
+    if strategy not in INTRODUCTION_STRATEGIES:
+        raise ValueError(f"unsupported vocabulary introduction strategy: {strategy}")
+    return strategy
+
+
+def controls_source_new_cards(config: dict) -> bool:
+    return introduction_strategy(config) == "sentence_first"
+
+
+def _passing_review_count(card_state: dict | None) -> int:
+    if not card_state:
+        return 0
+    if "passing_reviews" in card_state:
+        return max(0, int(card_state["passing_reviews"]))
+    if card_state.get("state") == "review" and int(card_state.get("reviews", 0)) > 0:
+        return 1
+    return 0
+
+
+def _direct_sentence(
+    program_id: str,
+    day: str,
+    target: dict,
+    created_at: str,
+    strategy: str,
+) -> dict:
+    return {
+        "id": f"{program_id}-{day}-{target['id']}",
+        "card_type": "text_reading",
+        "target_word_ids": [target["id"]],
+        "lifecycle": "disposable_scaffold",
+        "status": "active",
+        "created_at": created_at,
+        "payload": {
+            "primary_text": target["surface_form"],
+            "transliteration": target.get("notes") or "",
+            "translation": target["translation"],
+            "cloze_text": "",
+            "target_breakdown": "",
+        },
+        "introduction_strategy": strategy,
+        "source": "vocabulary_sentence",
+    }
 
 
 def _refresh_mastery(
@@ -586,13 +664,20 @@ def apply_sentence_review_results(
         if rating in PASSING_RATINGS:
             for word_id in sentence["target_word_ids"]:
                 word_state = program_state["vocabulary"].get(word_id)
-                if not word_state or word_state.get("status") != "sentence_preview":
+                if not word_state or word_state.get("status") not in {
+                    "sentence_preview",
+                    "sentence_reinforcement",
+                }:
                     continue
                 word_state["sentence_pass_count"] += 1
                 word_state["last_sentence_pass_at"] = isoformat_utc(reviewed_at)
                 if word_state["sentence_pass_count"] >= promotion_threshold:
-                    word_state["status"] = "active_anki"
-                    word_state["promoted_at"] = isoformat_utc(reviewed_at)
+                    if word_state["status"] == "sentence_preview":
+                        word_state["status"] = "active_anki"
+                        word_state["promoted_at"] = isoformat_utc(reviewed_at)
+                    else:
+                        word_state["status"] = "sentence_complete"
+                        word_state["completed_at"] = isoformat_utc(reviewed_at)
                     for candidate in content["sentences"]:
                         if (
                             candidate.get("status") == "active"
@@ -609,6 +694,7 @@ def apply_sentence_review_results(
 def _validate_generated_sentences(
     generated: list[dict],
     targets: list[dict],
+    allow_inflected_targets: bool = False,
 ) -> list[dict]:
     if not isinstance(generated, list):
         raise ValueError("sentence generator must return a list")
@@ -617,18 +703,19 @@ def _validate_generated_sentences(
         raise ValueError("sentence generator returned the wrong number of sentences")
     validated = []
     seen_ids = set()
-    required_fields = (
+    required_fields = {
         "target_word_id",
         "primary_text",
         "transliteration",
         "translation",
         "cloze_text",
         "target_breakdown",
-    )
+    }
     for sentence in generated:
         if not isinstance(sentence, dict):
             raise ValueError("generated sentence must be an object")
-        if set(sentence) != set(required_fields):
+        allowed_fields = required_fields | {"target_occurrence"}
+        if set(sentence) not in (required_fields, allowed_fields):
             raise ValueError("generated sentence has unexpected or missing fields")
         if not all(
             isinstance(sentence[field], str) and sentence[field].strip()
@@ -639,10 +726,15 @@ def _validate_generated_sentences(
         target = target_by_id.get(target_id)
         if not target or target_id in seen_ids:
             raise ValueError("generated sentence has an unknown or duplicate target")
-        if target["surface_form"] not in sentence["primary_text"]:
+        occurrence = sentence.get("target_occurrence", target["surface_form"])
+        if not isinstance(occurrence, str) or not occurrence.strip():
+            raise ValueError("generated sentence target occurrence must be non-empty")
+        if occurrence not in sentence["primary_text"]:
             raise ValueError(
-                f"generated sentence does not contain target {target['surface_form']}"
+                f"generated sentence does not contain target occurrence {occurrence}"
             )
+        if not allow_inflected_targets and occurrence != target["surface_form"]:
+            raise ValueError("generated sentence changed an exact-form target")
         seen_ids.add(target_id)
         validated.append(sentence)
     if seen_ids != set(target_by_id):
@@ -738,7 +830,35 @@ def prepare_sentence_program(
     _migrate_program_state(program_state)
     _migrate_generation_state(generation_state)
     vocabulary = _source_vocabulary(source_cards)
-    sentence_stream_id = config["sentence_stream"]
+    strategy = introduction_strategy(config)
+    sentence_generation = config.get("sentence_generation", {})
+    if not isinstance(sentence_generation, dict):
+        raise ValueError("sentence_generation must be an object")
+    trigger = sentence_generation.get(
+        "trigger",
+        (
+            "before_vocabulary"
+            if strategy == "sentence_first"
+            else "after_first_passing_vocabulary_review"
+        ),
+    )
+    valid_trigger = (
+        "before_vocabulary"
+        if strategy == "sentence_first"
+        else "after_first_passing_vocabulary_review"
+    )
+    if trigger != valid_trigger:
+        raise ValueError(
+            f"{strategy} requires sentence generation trigger {valid_trigger}"
+        )
+    minimum_passing_reviews = int(
+        sentence_generation.get("minimum_passing_reviews", 1)
+    )
+    if minimum_passing_reviews < 1:
+        raise ValueError("minimum_passing_reviews must be positive")
+    allow_inflected_targets = bool(
+        sentence_generation.get("allow_inflected_targets", False)
+    )
     promotion_threshold = int(config.get("promotion_threshold_sentence_passes", 3))
     daily_target = int(config.get("daily_sentence_target", 10))
     max_buffer = int(config.get("max_active_word_buffer", 30))
@@ -785,64 +905,107 @@ def prepare_sentence_program(
         active_buffer = sum(
             1
             for item in tracked.values()
-            if item.get("status") in {"sentence_preview", "active_anki"}
+            if item.get("status")
+            in (
+                {"sentence_preview", "active_anki"}
+                if strategy == "sentence_first"
+                else {"sentence_preview", "sentence_reinforcement"}
+            )
         )
         available_slots = max(0, max_buffer - active_buffer)
         target_count = min(daily_target, available_slots)
         source_scheduler_cards = source_stream_state.get("cards", {})
         previously_exposed = set(program_state["grandfathered_word_ids"])
-        candidates = [
-            item
-            for word_id, item in vocabulary.items()
-            if (
-                word_id not in tracked
-                and word_id not in source_scheduler_cards
-                and word_id not in previously_exposed
-            )
-        ][:target_count]
+        if strategy == "sentence_first":
+            candidates = [
+                item
+                for word_id, item in vocabulary.items()
+                if (
+                    word_id not in tracked
+                    and word_id not in source_scheduler_cards
+                    and word_id not in previously_exposed
+                )
+            ][:target_count]
+        else:
+            candidates = [
+                item
+                for word_id, item in vocabulary.items()
+                if (
+                    word_id not in tracked
+                    and _passing_review_count(source_scheduler_cards.get(word_id))
+                    >= minimum_passing_reviews
+                )
+            ][:target_count]
 
         if candidates:
-            minimum_reviews = int(config.get("familiar_min_reviews", 1))
             known_pool_limit = int(config.get("known_pool_limit", 200))
             known_words = [
                 item["surface_form"]
                 for word_id, item in vocabulary.items()
                 if (
-                    int(source_scheduler_cards.get(word_id, {}).get("reviews", 0))
-                    >= minimum_reviews
+                    _passing_review_count(source_scheduler_cards.get(word_id))
+                    >= minimum_passing_reviews
                     or tracked.get(word_id, {}).get("status")
                     in {"active_anki", "mastered"}
                 )
             ][:known_pool_limit]
-            if not known_words:
+            generated_targets = [
+                item for item in candidates if item["entry_type"] != "sentence"
+            ]
+            if generated_targets and not known_words:
                 raise RuntimeError(
                     f"[{program_id}] no familiar vocabulary is available for generation"
                 )
-            request = {
-                "program_id": program_id,
-                "language_code": config.get("language_code", "zh-CN"),
-                "prompt_style": config.get("prompt_style", "formal_mandarin"),
-                "orthography": config.get("orthography", "Traditional Chinese"),
-                "known_words": known_words,
-                "targets": candidates,
-            }
-            generator = (generator_factory or _openrouter_generator)(config)
-            generated = _validate_generated_sentences(
-                generator.generate(request),
-                candidates,
-            )
+            generated_by_target = {}
+            if generated_targets:
+                request = {
+                    "program_id": program_id,
+                    "language_code": config.get("language_code", "zh-CN"),
+                    "prompt_style": config.get("prompt_style", "formal_mandarin"),
+                    "orthography": config.get("orthography", "Traditional Chinese"),
+                    "transliteration_style": config.get(
+                        "transliteration_style",
+                        "helpful pronunciation guidance",
+                    ),
+                    "known_words": known_words,
+                    "targets": generated_targets,
+                    "allow_inflected_targets": allow_inflected_targets,
+                }
+                generator = (generator_factory or _openrouter_generator)(config)
+                generated = _validate_generated_sentences(
+                    generator.generate(request),
+                    generated_targets,
+                    allow_inflected_targets,
+                )
+                generated_by_target = {
+                    sentence["target_word_id"]: sentence for sentence in generated
+                }
             created_at = isoformat_utc(now)
             generated_sentence_ids = []
-            for sentence in generated:
-                target_id = sentence["target_word_id"]
+            word_status = (
+                "sentence_preview"
+                if strategy == "sentence_first"
+                else "sentence_reinforcement"
+            )
+            for target in candidates:
+                target_id = target["id"]
                 sentence_id = f"{program_id}-{day}-{target_id}"
                 if any(
                     existing.get("id") == sentence_id
                     for existing in content["sentences"]
                 ):
                     raise ValueError(f"duplicate generated sentence ID: {sentence_id}")
-                content["sentences"].append(
-                    {
+                if target["entry_type"] == "sentence":
+                    stored_sentence = _direct_sentence(
+                        program_id,
+                        day,
+                        target,
+                        created_at,
+                        strategy,
+                    )
+                else:
+                    sentence = generated_by_target[target_id]
+                    stored_sentence = {
                         "id": sentence_id,
                         "card_type": config.get("mode", "text_reading"),
                         "target_word_ids": [target_id],
@@ -851,6 +1014,8 @@ def prepare_sentence_program(
                         ),
                         "status": "active",
                         "created_at": created_at,
+                        "introduction_strategy": strategy,
+                        "source": "generated",
                         "payload": {
                             key: sentence[key]
                             for key in (
@@ -862,14 +1027,15 @@ def prepare_sentence_program(
                             )
                         },
                     }
-                )
+                content["sentences"].append(stored_sentence)
                 generated_sentence_ids.append(sentence_id)
                 tracked[target_id] = {
-                    "status": "sentence_preview",
+                    "status": word_status,
                     "sentence_pass_count": 0,
                     "introduced_at": created_at,
+                    "introduction_strategy": strategy,
                 }
-            generated_count = len(generated)
+            generated_count = len(candidates)
             program_state["revision"] += 1
 
         if candidates or not existing_job:

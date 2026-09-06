@@ -63,6 +63,23 @@
       "feed_title": "Mandarin Sentence Practice",
       "new_cards_per_day": 10,
       "front_text_scale": 1.5
+    },
+    "slovak_vocab": {
+      "type": "anki_deck",
+      "source_type": "csv",
+      "path": "Slovak.csv",
+      "feed_title": "Slovak Vocabulary",
+      "new_cards_per_day": 20,
+      "front_text_scale": 1.5
+    },
+    "slovak_sentences": {
+      "type": "anki_deck",
+      "source_type": "generated_sentences",
+      "program_id": "slovak_reading",
+      "path": "generated/slovak_reading/sentences.json",
+      "feed_title": "Slovak Sentence Practice",
+      "new_cards_per_day": 10,
+      "front_text_scale": 1.2
     }
   },
   "programs": {
@@ -73,16 +90,56 @@
       "source_stream": "hsk",
       "sentence_stream": "mandarin_sentences",
       "content_path": "generated/mandarin_reading/sentences.json",
-      "control_source_new_cards": true,
+      "vocabulary_introduction": {
+        "strategy": "vocabulary_first"
+      },
+      "sentence_generation": {
+        "trigger": "after_first_passing_vocabulary_review",
+        "minimum_passing_reviews": 1,
+        "allow_inflected_targets": false
+      },
       "language_code": "zh-CN",
       "orthography": "Traditional Chinese",
+      "transliteration_style": "Hanyu Pinyin with tone marks",
       "mode": "text_reading",
       "prompt_style": "formal written Mandarin",
       "promotion_threshold_sentence_passes": 3,
       "max_active_word_buffer": 30,
       "daily_sentence_target": 10,
       "mastery_interval_days": 21,
-      "familiar_min_reviews": 1,
+      "known_pool_limit": 200,
+      "sentence_lifecycle": "disposable_scaffold",
+      "generation": {
+        "provider": "openrouter",
+        "model": "openrouter/free",
+        "api_key_env": "OPENROUTER_API_KEY",
+        "timeout_seconds": 90
+      }
+    },
+    "slovak_reading": {
+      "enabled": true,
+      "feed_title": "Slovak Vocabulary and Sentences",
+      "feed_file": "slovak.xml",
+      "source_stream": "slovak_vocab",
+      "sentence_stream": "slovak_sentences",
+      "content_path": "generated/slovak_reading/sentences.json",
+      "vocabulary_introduction": {
+        "strategy": "vocabulary_first"
+      },
+      "sentence_generation": {
+        "trigger": "after_first_passing_vocabulary_review",
+        "minimum_passing_reviews": 1,
+        "allow_inflected_targets": true
+      },
+      "language_code": "sk-SK",
+      "orthography": "Standard Slovak using the Slovak Latin alphabet",
+      "transliteration_style": "IPA for the target occurrence",
+      "mode": "text_reading",
+      "prompt_style": "natural contemporary Slovak",
+      "promotion_threshold_sentence_passes": 3,
+      "max_active_word_buffer": 30,
+      "daily_sentence_target": 10,
+      "mastery_interval_days": 21,
       "known_pool_limit": 200,
       "sentence_lifecycle": "disposable_scaffold",
       "generation": {

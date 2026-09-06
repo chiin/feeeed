@@ -22,6 +22,7 @@ from pdf_scheduler import (
 from sentence_program import (
     apply_sentence_review_results,
     build_combined_snapshot,
+    controls_source_new_cards,
     eligible_source_word_ids,
     load_sentence_content,
     prepare_sentence_program,
@@ -365,7 +366,7 @@ def process_flashcards(stream_key: str, stream_cfg: dict, stream_history: dict, 
 
     # 2. Read CSV cards
     cards = []
-    with open(csv_path, mode="r", encoding="utf-8") as f:
+    with open(csv_path, mode="r", encoding="utf-8-sig") as f:
         for row in csv.DictReader(f):
             cards.append({"id": row["id"].strip(), "prompt": row["prompt"].strip(), "answer": row["answer"].strip()})
 
@@ -609,6 +610,30 @@ def main():
         )
         for stream_key, stream_cfg in streams.items()
     }
+    preprocessed_anki_streams = set()
+    dispatch_deck_id = dispatch_payload.get("deck_id")
+    if (
+        dispatch_payload.get("event_type") == "anki_review"
+        and dispatch_deck_id in streams
+        and streams[dispatch_deck_id].get("type") == "anki_deck"
+    ):
+        raw_events = dispatch_payload.get("events")
+        if raw_events is None:
+            raw_events = [dispatch_payload]
+        if not isinstance(raw_events, list):
+            print(
+                f"[{dispatch_deck_id}] Ignoring Anki dispatch: "
+                "events must be a list."
+            )
+        else:
+            result = apply_review_events(
+                dispatch_deck_id,
+                stream_states[dispatch_deck_id],
+                raw_events,
+                run_now,
+            )
+            print(f"[{dispatch_deck_id}] Processed Anki reviews: {result}.")
+            preprocessed_anki_streams.add(dispatch_deck_id)
     generated_card_overrides = {}
     gated_new_cards = {}
     sentence_content_updates = {}
@@ -662,7 +687,7 @@ def main():
             program_state,
             content,
         )
-        if program_cfg.get("control_source_new_cards", False):
+        if controls_source_new_cards(program_cfg):
             gated_new_cards[source_stream_id] = eligible_source_word_ids(
                 program_state
             )
@@ -754,6 +779,7 @@ def main():
                 all_cards_override=generated_card_overrides.get(stream_key),
                 eligible_new_card_ids=gated_new_cards.get(stream_key),
                 after_review_events=after_review_events,
+                reviews_preprocessed=stream_key in preprocessed_anki_streams,
             )
             if snapshot is not None:
                 anki_snapshots[stream_key] = snapshot
@@ -834,7 +860,7 @@ def main():
 
 def parse_csv_deck(csv_path: Path, base_url: str) -> list[dict]:
     cards = []
-    with open(csv_path, mode="r", encoding="utf-8") as f:
+    with open(csv_path, mode="r", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         for row in reader:
             card_id = row["id"].strip()
@@ -844,6 +870,7 @@ def parse_csv_deck(csv_path: Path, base_url: str) -> list[dict]:
 
             cards.append({
                 "id": card_id,
+                "entry_type": row.get("entry_type", "").strip() or "term",
                 "front": {
                     "text": row.get("front", "").strip(),
                     "audio": audio_url if audio_url else None,
@@ -915,6 +942,7 @@ def process_anki_deck(
     all_cards_override: list[dict] | None = None,
     eligible_new_card_ids: set[str] | None = None,
     after_review_events=None,
+    reviews_preprocessed: bool = False,
 ):
     now = now or datetime.now(timezone.utc)
     if all_cards_override is None:
@@ -944,6 +972,8 @@ def process_anki_deck(
     )
 
     if (
+        not reviews_preprocessed
+        and
         dispatch_payload.get("event_type") == "anki_review"
         and dispatch_payload.get("deck_id") == stream_key
     ):

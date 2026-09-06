@@ -28,7 +28,7 @@ def load_csv_cards(csv_path: Path) -> list[dict]:
     if not csv_path.exists():
         return []
     cards = []
-    with open(csv_path, mode="r", encoding="utf-8") as f:
+    with open(csv_path, mode="r", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         for row in reader:
             cards.append({

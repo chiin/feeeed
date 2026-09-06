@@ -68,7 +68,9 @@ class ScheduleResult:
     difficulty: float
     interval_days: int
     reviews: int
+    passing_reviews: int
     lapses: int
+    last_rating: str
     last_reviewed_at: datetime
     next_due_at: datetime
 
@@ -109,6 +111,11 @@ class FSRSScheduler:
             card, RATING_MAP[rating], review_datetime=reviewed_at
         )
         reviews = max(0, int((card_state or {}).get("reviews", 0))) + 1
+        passing_reviews = max(
+            0, int((card_state or {}).get("passing_reviews", 0))
+        )
+        if rating in {"good", "easy"}:
+            passing_reviews += 1
         lapses = max(0, int((card_state or {}).get("lapses", 0)))
         if rating == "again":
             next_due_at = reviewed_at + timedelta(minutes=10)
@@ -130,7 +137,9 @@ class FSRSScheduler:
             difficulty=float(updated.difficulty),
             interval_days=interval_days,
             reviews=reviews,
+            passing_reviews=passing_reviews,
             lapses=lapses,
+            last_rating=rating,
             last_reviewed_at=reviewed_at,
             next_due_at=next_due_at,
         )
@@ -176,6 +185,17 @@ def migrate_history(stream_history: dict) -> dict:
             "processed_events": stream_history.get("processed_events", {}),
         }
     )
+    for card_state in stream_history["cards"].values():
+        if not isinstance(card_state, dict):
+            continue
+        if "passing_reviews" not in card_state:
+            card_state["passing_reviews"] = (
+                1
+                if card_state.get("state") == "review"
+                and int(card_state.get("reviews", 0)) > 0
+                else 0
+            )
+        card_state.setdefault("last_rating", None)
     return stream_history
 
 
@@ -348,7 +368,9 @@ def apply_review_events(
             "difficulty": result.difficulty,
             "interval_days": result.interval_days,
             "reviews": result.reviews,
+            "passing_reviews": result.passing_reviews,
             "lapses": result.lapses,
+            "last_rating": result.last_rating,
             "last_reviewed_at": isoformat_utc(result.last_reviewed_at),
             "next_due_at": isoformat_utc(result.next_due_at),
         }
@@ -421,4 +443,3 @@ def build_deck_snapshot(
         "processed_event_ids": list(stream_history["processed_events"]),
         "cards": active_cards,
     }
-
