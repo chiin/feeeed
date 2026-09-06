@@ -9,6 +9,7 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable, Protocol
+from xml.sax.saxutils import escape
 
 from anki_scheduler import hkt_day, isoformat_utc, parse_datetime
 
@@ -19,11 +20,105 @@ CONTENT_SCHEMA_VERSION = 1
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 PASSING_RATINGS = {"good", "easy"}
 INTRODUCTION_STRATEGIES = {"sentence_first", "vocabulary_first"}
+MAX_AUDIO_BYTES = 10 * 1024 * 1024
 
 
 class SentenceGenerator(Protocol):
     def generate(self, request: dict) -> list[dict]:
         ...
+
+
+class SpeechSynthesizer(Protocol):
+    def synthesize(
+        self,
+        text: str,
+        language_code: str,
+        voice: str,
+        output_format: str,
+    ) -> bytes:
+        ...
+
+
+class AzureSpeechSynthesizer:
+    def __init__(
+        self,
+        api_key: str,
+        region: str,
+        timeout_seconds: int = 60,
+    ) -> None:
+        if not api_key:
+            raise ValueError("Azure Speech API key must not be empty")
+        if not region or any(
+            character not in "abcdefghijklmnopqrstuvwxyz0123456789-"
+            for character in region
+        ):
+            raise ValueError("Azure Speech region is invalid")
+        if not 10 <= timeout_seconds <= 300:
+            raise ValueError("Azure Speech timeout_seconds must be between 10 and 300")
+        self.api_key = api_key
+        self.region = region
+        self.timeout_seconds = timeout_seconds
+
+    def synthesize(
+        self,
+        text: str,
+        language_code: str,
+        voice: str,
+        output_format: str,
+    ) -> bytes:
+        if not isinstance(text, str) or not text.strip():
+            raise ValueError("speech text must be non-empty")
+        if len(text) > 2000:
+            raise ValueError("speech text exceeds the 2000 character limit")
+        if not all(
+            isinstance(value, str) and value
+            for value in (language_code, voice, output_format)
+        ):
+            raise ValueError("speech language, voice, and output format are required")
+        ssml = (
+            f'<speak version="1.0" xml:lang="{escape(language_code)}">'
+            f'<voice name="{escape(voice)}">{escape(text)}</voice>'
+            "</speak>"
+        )
+        request = urllib.request.Request(
+            (
+                f"https://{self.region}.tts.speech.microsoft.com/"
+                "cognitiveservices/v1"
+            ),
+            data=ssml.encode("utf-8"),
+            method="POST",
+            headers={
+                "Ocp-Apim-Subscription-Key": self.api_key,
+                "Content-Type": "application/ssml+xml",
+                "X-Microsoft-OutputFormat": output_format,
+                "User-Agent": "Feeeed",
+            },
+        )
+        try:
+            with urllib.request.urlopen(
+                request,
+                timeout=self.timeout_seconds,
+            ) as response:
+                content_type = response.headers.get("Content-Type", "")
+                audio = response.read(MAX_AUDIO_BYTES + 1)
+        except urllib.error.HTTPError as error:
+            detail = error.read(1000).decode("utf-8", errors="replace")
+            raise RuntimeError(
+                f"Azure Speech request failed with HTTP {error.code}: {detail}"
+            ) from error
+        except urllib.error.URLError as error:
+            raise RuntimeError(
+                f"Azure Speech request failed: {error.reason}"
+            ) from error
+        if not content_type.lower().startswith("audio/"):
+            raise ValueError(
+                f"Azure Speech returned non-audio content: {content_type or 'unknown'}"
+            )
+        if not audio:
+            raise ValueError("Azure Speech returned an empty audio response")
+        if len(audio) > MAX_AUDIO_BYTES:
+            raise ValueError("Azure Speech audio response exceeds the size limit")
+        return audio
 
 
 class DeterministicSentenceGenerator:
@@ -127,8 +222,9 @@ etymology.
 Also return "discovered_vocabulary" as an array containing at most one useful
 content word introduced outside the familiar pool, or an empty array. A
 candidate must contain exactly "surface_form" (dictionary form),
-"observed_form" (the exact form in the sentence), and "translation". Do not
-propose function words, proper names, the target itself, or familiar words.
+"observed_form" (the exact form in the sentence), "pronunciation" using the
+configured pronunciation system, and "translation". Do not propose function
+words, proper names, the target itself, or familiar words.
 """.strip()
         schema = {
             "name": "sentence_batch",
@@ -177,6 +273,7 @@ propose function words, proper names, the target itself, or familiar words.
                                         "required": [
                                             "surface_form",
                                             "observed_form",
+                                            "pronunciation",
                                             "translation",
                                         ],
                                         "properties": {
@@ -184,6 +281,7 @@ propose function words, proper names, the target itself, or familiar words.
                                             for key in (
                                                 "surface_form",
                                                 "observed_form",
+                                                "pronunciation",
                                                 "translation",
                                             )
                                         },
@@ -198,6 +296,7 @@ propose function words, proper names, the target itself, or familiar words.
         payload = {
             "model": self.model,
             "temperature": 0.3,
+            "provider": {"require_parameters": True},
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
@@ -234,15 +333,44 @@ propose function words, proper names, the target itself, or familiar words.
             raise ValueError("OpenRouter returned invalid response JSON") from error
 
         try:
-            message_content = response_data["choices"][0]["message"]["content"]
+            choice = response_data["choices"][0]
+            message_content = choice["message"]["content"]
         except (KeyError, IndexError, TypeError) as error:
             raise ValueError("OpenRouter response did not contain message content") from error
-        if not isinstance(message_content, str):
-            raise ValueError("OpenRouter message content must be a JSON string")
-        try:
-            generated = json.loads(message_content)
-        except json.JSONDecodeError as error:
-            raise ValueError("OpenRouter message content was not valid JSON") from error
+        if isinstance(message_content, dict):
+            generated = message_content
+        else:
+            if isinstance(message_content, list):
+                text_parts = []
+                for part in message_content:
+                    if (
+                        not isinstance(part, dict)
+                        or part.get("type") != "text"
+                        or not isinstance(part.get("text"), str)
+                    ):
+                        raise ValueError(
+                            "OpenRouter message content contained a non-text part"
+                        )
+                    text_parts.append(part["text"])
+                message_content = "".join(text_parts)
+            if not isinstance(message_content, str):
+                detail = choice.get("error")
+                finish_reason = choice.get("finish_reason")
+                suffix = (
+                    f" (finish_reason={finish_reason!r}, error={detail!r})"
+                    if finish_reason is not None or detail is not None
+                    else ""
+                )
+                raise ValueError(
+                    "OpenRouter message content was not text or a JSON object"
+                    f"{suffix}"
+                )
+            try:
+                generated = json.loads(message_content)
+            except json.JSONDecodeError as error:
+                raise ValueError(
+                    "OpenRouter message content was not valid JSON"
+                ) from error
         if not isinstance(generated, dict):
             raise ValueError("OpenRouter generated content must be an object")
         return generated.get("sentences")
@@ -312,10 +440,12 @@ def sentence_cards(content: dict) -> list[dict]:
         if sentence.get("status") != "active":
             continue
         payload = sentence["payload"]
+        audio_listening = sentence.get("card_type") == "audio_listening"
         notes = "\n\n".join(
             item
             for item in (
                 payload.get("transliteration"),
+                payload.get("translation") if audio_listening else None,
                 payload.get("target_breakdown"),
             )
             if item
@@ -324,14 +454,21 @@ def sentence_cards(content: dict) -> list[dict]:
             {
                 "id": sentence["id"],
                 "front": {
-                    "text": payload["primary_text"],
+                    "text": "" if audio_listening else payload["primary_text"],
                     "audio": payload.get("audio_url"),
                     "image": None,
                 },
                 "back": {
-                    "text": payload["translation"],
+                    "text": (
+                        payload["primary_text"]
+                        if audio_listening
+                        else payload["translation"]
+                    ),
                     "notes": notes,
                 },
+                "presentation": (
+                    "audio_only" if audio_listening else "text_reading"
+                ),
             }
         )
     return cards
@@ -581,10 +718,11 @@ def _direct_sentence(
     target: dict,
     created_at: str,
     strategy: str,
+    card_type: str,
 ) -> dict:
     return {
         "id": f"{program_id}-{day}-{target['id']}",
-        "card_type": "text_reading",
+        "card_type": card_type,
         "target_word_ids": [target["id"]],
         "lifecycle": "disposable_scaffold",
         "status": "active",
@@ -615,6 +753,7 @@ def approved_vocabulary_cards(program_state: dict) -> list[dict]:
             "back": {
                 "text": candidate["translation"],
                 "notes": (
+                    f"{candidate.get('pronunciation') or candidate['observed_form']}\n\n"
                     f"Discovered in: {candidate['source_sentence_text']}"
                 ),
             },
@@ -749,6 +888,7 @@ def _record_discovered_vocabulary(
             "surface_form": item["surface_form"].strip(),
             "observed_form": item["observed_form"].strip(),
             "translation": item["translation"].strip(),
+            "pronunciation": item["pronunciation"].strip(),
             "source_sentence_id": sentence_id,
             "source_sentence_text": sentence_text,
             "status": "pending",
@@ -1005,6 +1145,7 @@ def _validate_generated_sentences(
             if not isinstance(candidate, dict) or set(candidate) != {
                 "surface_form",
                 "observed_form",
+                "pronunciation",
                 "translation",
             }:
                 raise ValueError("discovered vocabulary has an invalid shape")
@@ -1098,6 +1239,227 @@ def _openrouter_generator(config: dict) -> SentenceGenerator:
     )
 
 
+def _azure_speech_synthesizer(config: dict) -> SpeechSynthesizer:
+    audio_config = config.get("audio", {})
+    if audio_config.get("provider") != "azure_speech":
+        raise ValueError(
+            f"unsupported sentence audio provider: {audio_config.get('provider')}"
+        )
+    key_variable = audio_config.get("api_key_env", "AZURE_SPEECH_KEY")
+    region_variable = audio_config.get("region_env", "AZURE_SPEECH_REGION")
+    api_key = os.environ.get(key_variable)
+    region = os.environ.get(region_variable)
+    if not api_key or not region:
+        raise RuntimeError(
+            f"sentence audio requires {key_variable} and {region_variable}"
+        )
+    return AzureSpeechSynthesizer(
+        api_key,
+        region,
+        int(audio_config.get("timeout_seconds", 60)),
+    )
+
+
+def _sentence_audio_directory(
+    repository_root: Path,
+    program_id: str,
+) -> Path:
+    if (
+        not program_id
+        or any(
+            character
+            not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-"
+            for character in program_id
+        )
+    ):
+        raise ValueError("program ID is invalid for sentence audio")
+    root = repository_root.resolve()
+    directory = (root / "generated" / program_id / "audio").resolve()
+    directory.relative_to(root / "generated")
+    return directory
+
+
+def _resolve_sentence_audio_path(
+    repository_root: Path,
+    program_id: str,
+    relative_path: str,
+) -> Path:
+    if not isinstance(relative_path, str) or not relative_path:
+        raise ValueError("sentence audio path must be non-empty")
+    root = repository_root.resolve()
+    expected_directory = _sentence_audio_directory(root, program_id)
+    path = (root / relative_path).resolve()
+    try:
+        path.relative_to(expected_directory)
+    except ValueError as error:
+        raise ValueError("sentence audio path escapes its program directory") from error
+    return path
+
+
+def _ensure_sentence_audio(
+    repository_root: Path,
+    program_id: str,
+    config: dict,
+    content: dict,
+    synthesizer_factory: Callable[[dict], SpeechSynthesizer] | None,
+) -> tuple[int, int]:
+    mode = config.get("mode", "text_reading")
+    if mode not in {"text_reading", "audio_listening"}:
+        raise ValueError(f"unsupported sentence card mode: {mode}")
+    for sentence in content["sentences"]:
+        sentence["card_type"] = mode
+
+    if mode != "audio_listening":
+        for sentence in content["sentences"]:
+            payload = sentence.get("payload", {})
+            payload.pop("audio_url", None)
+            payload.pop("audio_fingerprint", None)
+        return 0, 0
+    audio_config = config.get("audio")
+    if not isinstance(audio_config, dict):
+        raise ValueError("audio-listening programs require an audio object")
+    language_code = audio_config.get(
+        "language_code",
+        config.get("language_code"),
+    )
+    voice = audio_config.get("voice")
+    output_format = audio_config.get(
+        "output_format",
+        "audio-24khz-48kbitrate-mono-mp3",
+    )
+    if not all(
+        isinstance(value, str) and value
+        for value in (language_code, voice, output_format)
+    ):
+        raise ValueError(
+            "audio language_code, voice, and output_format are required"
+        )
+    if not output_format.endswith("-mp3"):
+        raise ValueError("sentence audio currently supports MP3 output only")
+    synthesizer = None
+    directory = _sentence_audio_directory(repository_root, program_id)
+    created_paths = []
+    replacements = []
+    archived = []
+    try:
+        for sentence in content["sentences"]:
+            payload = sentence.get("payload", {})
+            existing_path = payload.get("audio_url")
+            if sentence.get("status") != "active":
+                if existing_path:
+                    archived.append((payload, existing_path))
+                continue
+            text = payload.get("primary_text")
+            if not isinstance(text, str) or not text:
+                raise ValueError("active audio sentence requires primary_text")
+            fingerprint = hashlib.sha256(
+                "\0".join(
+                    (program_id, language_code, voice, output_format, text)
+                ).encode("utf-8")
+            ).hexdigest()
+            if (
+                payload.get("audio_fingerprint") == fingerprint
+                and existing_path
+                and _resolve_sentence_audio_path(
+                    repository_root,
+                    program_id,
+                    existing_path,
+                ).is_file()
+            ):
+                continue
+            if synthesizer is None:
+                synthesizer = (
+                    synthesizer_factory or _azure_speech_synthesizer
+                )(config)
+            audio = synthesizer.synthesize(
+                text,
+                language_code,
+                voice,
+                output_format,
+            )
+            directory.mkdir(parents=True, exist_ok=True)
+            sentence_digest = hashlib.sha256(
+                sentence["id"].encode("utf-8")
+            ).hexdigest()[:16]
+            filename = f"{sentence_digest}-{fingerprint[:16]}.mp3"
+            path = directory / filename
+            temporary_path = path.with_name(f".{filename}.tmp")
+            try:
+                with temporary_path.open("wb") as file:
+                    file.write(audio)
+                    file.flush()
+                    os.fsync(file.fileno())
+                os.replace(temporary_path, path)
+            finally:
+                temporary_path.unlink(missing_ok=True)
+            created_paths.append(path)
+            relative_path = path.relative_to(
+                repository_root.resolve()
+            ).as_posix()
+            replacements.append(
+                (
+                    payload,
+                    existing_path,
+                    relative_path,
+                    fingerprint,
+                )
+            )
+    except (OSError, ValueError, RuntimeError):
+        for path in created_paths:
+            path.unlink(missing_ok=True)
+        raise
+
+    for payload, existing_path, relative_path, fingerprint in replacements:
+        payload["audio_url"] = relative_path
+        payload["audio_fingerprint"] = fingerprint
+    for payload, existing_path in archived:
+        payload.pop("audio_url", None)
+        payload.pop("audio_fingerprint", None)
+    return len(replacements), 0
+
+
+def reconcile_sentence_audio(
+    program_id: str,
+    config: dict,
+    content: dict,
+    synthesizer_factory: Callable[[dict], SpeechSynthesizer] | None = None,
+) -> tuple[int, int]:
+    return _ensure_sentence_audio(
+        Path("."),
+        program_id,
+        config,
+        content,
+        synthesizer_factory,
+    )
+
+
+def prune_sentence_audio(
+    program_id: str,
+    content: dict,
+    repository_root: Path = Path("."),
+) -> int:
+    directory = _sentence_audio_directory(repository_root, program_id)
+    if not directory.is_dir():
+        return 0
+    referenced_paths = set()
+    for sentence in content["sentences"]:
+        existing_path = sentence.get("payload", {}).get("audio_url")
+        if existing_path:
+            referenced_paths.add(
+                _resolve_sentence_audio_path(
+                    repository_root,
+                    program_id,
+                    existing_path,
+                )
+            )
+    removed = 0
+    for path in directory.glob("*.mp3"):
+        if path.resolve() not in referenced_paths:
+            path.unlink()
+            removed += 1
+    return removed
+
+
 def _backfill_empty_sentence_batch(
     program_state: dict,
     generation_state: dict,
@@ -1161,6 +1523,7 @@ def prepare_sentence_program(
     sentence_stream_state: dict,
     now: datetime,
     generator_factory: Callable[[dict], SentenceGenerator] | None = None,
+    synthesizer_factory: Callable[[dict], SpeechSynthesizer] | None = None,
 ) -> dict:
     _migrate_program_state(program_state)
     _migrate_generation_state(generation_state)
@@ -1244,6 +1607,11 @@ def prepare_sentence_program(
         "disposable_scaffold"
     ):
         raise ValueError("only disposable_scaffold sentence lifecycle is supported")
+    if config.get("mode", "text_reading") not in {
+        "text_reading",
+        "audio_listening",
+    }:
+        raise ValueError("unsupported sentence card mode")
 
     _reconcile_content_state(
         program_state,
@@ -1451,6 +1819,7 @@ def prepare_sentence_program(
                         target,
                         created_at,
                         strategy,
+                        config.get("mode", "text_reading"),
                     )
                 else:
                     sentence = generated_by_target[target_id]
@@ -1506,6 +1875,12 @@ def prepare_sentence_program(
                 "sentence_ids": generated_sentence_ids if candidates else [],
             }
 
+    audio_generated, audio_removed = reconcile_sentence_audio(
+        program_id,
+        config,
+        content,
+        synthesizer_factory,
+    )
     backfilled_count = _backfill_empty_sentence_batch(
         program_state,
         generation_state,
@@ -1517,6 +1892,8 @@ def prepare_sentence_program(
         "generated": generated_count,
         "refreshed": refreshed_count,
         "discovered": discovered_count,
+        "audio_generated": audio_generated,
+        "audio_removed": audio_removed,
         "backfilled": backfilled_count,
         "active_sentences": len(sentence_cards(content)),
         "promoted_words": len(promoted_word_ids(program_state)),
