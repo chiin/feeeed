@@ -607,7 +607,9 @@ class VocabularyFirstSentenceProgramTests(unittest.TestCase):
                 "trigger": "after_first_passing_vocabulary_review",
                 "minimum_passing_reviews": 1,
                 "allow_inflected_targets": True,
+                "familiar_pool_policy": "natural_priority",
             },
+            "generation": {"max_attempts": 2},
         }
         self.program_state = {}
         self.generation_state = {}
@@ -747,6 +749,115 @@ class VocabularyFirstSentenceProgramTests(unittest.TestCase):
         self.assertNotIn("target-1", promoted_word_ids(self.program_state))
         self.assertEqual(sentence["status"], "archived")
 
+    def test_list_like_output_is_rejected_and_retried(self):
+        class RetryGenerator:
+            def __init__(self):
+                self.calls = 0
+
+            def generate(self, _request):
+                self.calls += 1
+                if self.calls == 1:
+                    primary = "Dobrý deň, tri, nie dva, nie sedem, nie osem."
+                    translation = "Good day, three, not two, not seven, not eight."
+                else:
+                    primary = "Na stole sú tri knihy."
+                    translation = "There are three books on the table."
+                return [
+                    {
+                        "target_word_id": "target-1",
+                        "target_occurrence": "tri",
+                        "primary_text": primary,
+                        "transliteration": "tri",
+                        "translation": translation,
+                        "cloze_text": "Na stole sú […] knihy.",
+                        "target_breakdown": "tri: cardinal number used with books",
+                    }
+                ]
+
+        cards = [source_card("target-1", "tri")]
+        self.source_state["cards"]["target-1"] = reviewed_state()
+        generator = RetryGenerator()
+
+        result = self.process(cards, lambda _config: generator)
+
+        self.assertEqual(result["generated"], 1)
+        self.assertEqual(generator.calls, 2)
+        self.assertEqual(
+            self.content["sentences"][0]["payload"]["primary_text"],
+            "Na stole sú tri knihy.",
+        )
+
+    def test_quality_version_refreshes_active_sentence_in_place(self):
+        cards = [source_card("target-1", "tri")]
+        self.source_state["cards"]["target-1"] = reviewed_state()
+        sentence_id = "mandarin_reading-2026-09-05-target-1"
+        self.content["sentences"] = [
+            {
+                "id": sentence_id,
+                "card_type": "text_reading",
+                "target_word_ids": ["target-1"],
+                "lifecycle": "disposable_scaffold",
+                "status": "active",
+                "created_at": "2026-09-05T14:00:00Z",
+                "introduction_strategy": "vocabulary_first",
+                "source": "generated",
+                "payload": {
+                    "primary_text": "Tri, dva, jeden, nie štyri.",
+                    "transliteration": "tri",
+                    "translation": "Three, two, one, not four.",
+                    "cloze_text": "[…], dva, jeden, nie štyri.",
+                    "target_breakdown": "tri: three",
+                },
+            }
+        ]
+        self.program_state["vocabulary"] = {
+            "target-1": {
+                "status": "sentence_reinforcement",
+                "sentence_pass_count": 1,
+                "introduced_at": "2026-09-05T14:00:00Z",
+            }
+        }
+        self.generation_state["jobs"] = {
+            "2026-09-05": {
+                "status": "completed",
+                "generated_count": 1,
+                "sentence_ids": [sentence_id],
+            }
+        }
+        self.config["generation"] = {
+            "quality_version": 2,
+            "max_attempts": 2,
+        }
+
+        class NaturalGenerator:
+            def generate(self, _request):
+                return [
+                    {
+                        "target_word_id": "target-1",
+                        "target_occurrence": "tri",
+                        "primary_text": "Na stole sú tri knihy.",
+                        "transliteration": "tri",
+                        "translation": "There are three books on the table.",
+                        "cloze_text": "Na stole sú […] knihy.",
+                        "target_breakdown": "tri: cardinal number used with books",
+                    }
+                ]
+
+        result = self.process(cards, lambda _config: NaturalGenerator())
+
+        refreshed = self.content["sentences"][0]
+        self.assertEqual(result["refreshed"], 1)
+        self.assertEqual(refreshed["id"], sentence_id)
+        self.assertEqual(refreshed["quality_version"], 2)
+        self.assertEqual(
+            refreshed["payload"]["primary_text"],
+            "Na stole sú tri knihy.",
+        )
+        self.assertEqual(
+            self.program_state["vocabulary"]["target-1"]["sentence_pass_count"],
+            1,
+        )
+
 
 class OpenRouterGeneratorTests(unittest.TestCase):
     class FakeResponse:
@@ -783,6 +894,7 @@ class OpenRouterGeneratorTests(unittest.TestCase):
             "prompt_style": "formal",
             "orthography": "Traditional Chinese",
             "known_words": ["我", "你"],
+            "familiar_pool_policy": "natural_priority",
             "targets": [
                 {
                     "id": "target-1",
@@ -805,6 +917,10 @@ class OpenRouterGeneratorTests(unittest.TestCase):
         payload = json.loads(request.data)
         self.assertEqual(payload["model"], "qwen/test")
         self.assertEqual(payload["response_format"]["type"], "json_schema")
+        self.assertIn(
+            "Never output a word list",
+            payload["messages"][1]["content"],
+        )
 
     def test_invalid_openrouter_shape_is_rejected(self):
         response = self.FakeResponse({"choices": []})
