@@ -7,6 +7,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from sentence_program import (
+    AzureSpeechSynthesizer,
     DeterministicSentenceGenerator,
     OpenRouterSentenceGenerator,
     apply_sentence_review_results,
@@ -17,7 +18,9 @@ from sentence_program import (
     eligible_source_word_ids,
     load_sentence_content,
     prepare_sentence_program,
+    prune_sentence_audio,
     promoted_word_ids,
+    reconcile_sentence_audio,
     resolve_sentence_content_path,
     save_sentence_content,
     sentence_cards,
@@ -914,6 +917,7 @@ class VocabularyFirstSentenceProgramTests(unittest.TestCase):
                             {
                                 "surface_form": "knižnica",
                                 "observed_form": "knižnica",
+                                "pronunciation": "ˈkɲiʒ.ɲit.sa",
                                 "translation": "library",
                             }
                         ],
@@ -970,10 +974,375 @@ class VocabularyFirstSentenceProgramTests(unittest.TestCase):
             approved_vocabulary_cards(self.program_state)[0]["front"]["text"],
             "knižnica",
         )
+        self.assertIn(
+            "ˈkɲiʒ.ɲit.sa",
+            approved_vocabulary_cards(self.program_state)[0]["back"]["notes"],
+        )
         self.assertEqual(
             self.program_state["vocabulary"][candidate_id]["status"],
             "sentence_complete",
         )
+
+
+class SentenceAudioTests(unittest.TestCase):
+    class FakeAudioResponse:
+        def __init__(self, audio=b"fake-mp3", content_type="audio/mpeg"):
+            self.audio = audio
+            self.headers = {"Content-Type": content_type}
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *_args):
+            return False
+
+        def read(self, _limit):
+            return self.audio
+
+    def test_azure_speech_uses_ssml_and_requested_voice(self):
+        response = self.FakeAudioResponse()
+        with patch("urllib.request.urlopen", return_value=response) as urlopen:
+            audio = AzureSpeechSynthesizer(
+                "secret-key",
+                "eastasia",
+            ).synthesize(
+                "我鍾意飲茶。",
+                "yue-HK",
+                "yue-HK-HiuMaanNeural",
+                "audio-24khz-48kbitrate-mono-mp3",
+            )
+
+        request = urlopen.call_args.args[0]
+        self.assertEqual(audio, b"fake-mp3")
+        self.assertEqual(
+            request.full_url,
+            "https://eastasia.tts.speech.microsoft.com/cognitiveservices/v1",
+        )
+        self.assertEqual(
+            request.get_header("X-microsoft-outputformat"),
+            "audio-24khz-48kbitrate-mono-mp3",
+        )
+        self.assertIn(
+            'voice name="yue-HK-HiuMaanNeural"',
+            request.data.decode("utf-8"),
+        )
+
+    def test_audio_cards_are_cached_projected_and_pruned(self):
+        class FakeSynthesizer:
+            def __init__(self):
+                self.calls = []
+
+            def synthesize(self, text, language_code, voice, output_format):
+                self.calls.append((text, language_code, voice, output_format))
+                return b"fake-mp3"
+
+        config = {
+            **program_config(daily_target=1),
+            "mode": "audio_listening",
+            "vocabulary_introduction": {"strategy": "vocabulary_first"},
+            "sentence_generation": {
+                "trigger": "after_first_passing_vocabulary_review",
+                "minimum_passing_reviews": 1,
+                "allow_inflected_targets": False,
+            },
+            "audio": {
+                "provider": "azure_speech",
+                "language_code": "yue-HK",
+                "voice": "yue-HK-HiuMaanNeural",
+                "output_format": "audio-24khz-48kbitrate-mono-mp3",
+            },
+        }
+        program_state = {}
+        generation_state = {}
+        content = empty_content()
+        source_state = {"cards": {"target-1": reviewed_state()}}
+        sentence_state = {"processed_events": {}}
+        cards = [source_card("target-1", "飲茶")]
+        synthesizer = FakeSynthesizer()
+
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                first = prepare_sentence_program(
+                    "mandarin_reading",
+                    config,
+                    program_state,
+                    generation_state,
+                    content,
+                    cards,
+                    source_state,
+                    sentence_state,
+                    NOW,
+                    lambda _config: DeterministicSentenceGenerator(),
+                    lambda _config: synthesizer,
+                )
+                second = prepare_sentence_program(
+                    "mandarin_reading",
+                    config,
+                    program_state,
+                    generation_state,
+                    content,
+                    cards,
+                    source_state,
+                    sentence_state,
+                    NOW + timedelta(minutes=1),
+                    lambda _config: DeterministicSentenceGenerator(),
+                    lambda _config: synthesizer,
+                )
+                audio_path = Path(content["sentences"][0]["payload"]["audio_url"])
+                projected = sentence_cards(content)[0]
+
+                self.assertEqual(first["audio_generated"], 1)
+                self.assertEqual(second["audio_generated"], 0)
+                self.assertEqual(len(synthesizer.calls), 1)
+                self.assertTrue(audio_path.is_file())
+                self.assertEqual(projected["front"]["text"], "")
+                self.assertEqual(projected["front"]["audio"], audio_path.as_posix())
+                self.assertIn(
+                    content["sentences"][0]["payload"]["translation"],
+                    projected["back"]["notes"],
+                )
+
+                content["sentences"][0]["status"] = "archived"
+                cleaned = prepare_sentence_program(
+                    "mandarin_reading",
+                    config,
+                    program_state,
+                    generation_state,
+                    content,
+                    cards,
+                    source_state,
+                    sentence_state,
+                    NOW + timedelta(minutes=2),
+                    lambda _config: DeterministicSentenceGenerator(),
+                    lambda _config: synthesizer,
+                )
+                self.assertEqual(cleaned["audio_removed"], 0)
+                self.assertNotIn(
+                    "audio_url",
+                    content["sentences"][0]["payload"],
+                )
+                self.assertTrue(audio_path.exists())
+                save_sentence_content(Path("sentences.json"), content)
+                removed = prune_sentence_audio(
+                    "mandarin_reading",
+                    content,
+                )
+                self.assertEqual(removed, 1)
+                self.assertFalse(audio_path.exists())
+            finally:
+                os.chdir(old_cwd)
+
+    def test_sentence_mode_changes_reconcile_existing_cards_and_audio(self):
+        class FakeSynthesizer:
+            def synthesize(self, *_args):
+                return b"fake-mp3"
+
+        audio_config = {
+            **program_config(daily_target=1),
+            "mode": "audio_listening",
+            "audio": {
+                "provider": "azure_speech",
+                "language_code": "yue-HK",
+                "voice": "yue-HK-HiuMaanNeural",
+                "output_format": "audio-24khz-48kbitrate-mono-mp3",
+            },
+        }
+        content = {
+            **empty_content(),
+            "sentences": [
+                {
+                    "id": "existing-sentence",
+                    "card_type": "text_reading",
+                    "status": "active",
+                    "payload": {
+                        "primary_text": "我去飲茶。",
+                        "transliteration": "ngo5 heoi3 jam2 caa4",
+                        "translation": "I am going for dim sum.",
+                        "target_breakdown": "飲茶: have dim sum",
+                    },
+                }
+            ],
+        }
+
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                reconcile_sentence_audio(
+                    "mandarin_reading",
+                    audio_config,
+                    content,
+                    lambda _config: FakeSynthesizer(),
+                )
+                audio_path = Path(content["sentences"][0]["payload"]["audio_url"])
+                self.assertEqual(
+                    content["sentences"][0]["card_type"],
+                    "audio_listening",
+                )
+                self.assertEqual(
+                    sentence_cards(content)[0]["presentation"],
+                    "audio_only",
+                )
+                self.assertTrue(audio_path.is_file())
+
+                reconcile_sentence_audio(
+                    "mandarin_reading",
+                    program_config(daily_target=1),
+                    content,
+                )
+                self.assertEqual(
+                    content["sentences"][0]["card_type"],
+                    "text_reading",
+                )
+                self.assertNotIn(
+                    "audio_url",
+                    content["sentences"][0]["payload"],
+                )
+                self.assertEqual(
+                    sentence_cards(content)[0]["presentation"],
+                    "text_reading",
+                )
+                self.assertTrue(audio_path.exists())
+
+                save_sentence_content(Path("sentences.json"), content)
+                removed = prune_sentence_audio(
+                    "mandarin_reading",
+                    content,
+                )
+                self.assertEqual(removed, 1)
+                self.assertFalse(audio_path.exists())
+            finally:
+                os.chdir(old_cwd)
+
+    def test_audio_batch_failure_removes_new_files(self):
+        class FailingSynthesizer:
+            def __init__(self):
+                self.calls = 0
+
+            def synthesize(self, *_args):
+                self.calls += 1
+                if self.calls == 2:
+                    raise RuntimeError("synthetic TTS failure")
+                return b"fake-mp3"
+
+        config = {
+            **program_config(daily_target=2),
+            "mode": "audio_listening",
+            "vocabulary_introduction": {"strategy": "vocabulary_first"},
+            "sentence_generation": {
+                "trigger": "after_first_passing_vocabulary_review",
+                "minimum_passing_reviews": 1,
+            },
+            "audio": {
+                "provider": "azure_speech",
+                "language_code": "yue-HK",
+                "voice": "yue-HK-HiuMaanNeural",
+                "output_format": "audio-24khz-48kbitrate-mono-mp3",
+            },
+        }
+        source_state = {
+            "cards": {
+                "target-1": reviewed_state(),
+                "target-2": reviewed_state(),
+            }
+        }
+        content = empty_content()
+
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                with self.assertRaisesRegex(
+                    RuntimeError,
+                    "synthetic TTS failure",
+                ):
+                    prepare_sentence_program(
+                        "mandarin_reading",
+                        config,
+                        {},
+                        {},
+                        content,
+                        [
+                            source_card("target-1", "飲茶"),
+                            source_card("target-2", "食飯"),
+                        ],
+                        source_state,
+                        {"processed_events": {}},
+                        NOW,
+                        lambda _config: DeterministicSentenceGenerator(),
+                        lambda _config: FailingSynthesizer(),
+                    )
+                self.assertEqual(
+                    list(Path("generated").rglob("*.mp3")),
+                    [],
+                )
+                self.assertTrue(
+                    all(
+                        "audio_url" not in sentence["payload"]
+                        for sentence in content["sentences"]
+                    )
+                )
+            finally:
+                os.chdir(old_cwd)
+
+    def test_failed_audio_refresh_keeps_previous_persisted_asset(self):
+        class FailingSynthesizer:
+            def synthesize(self, *_args):
+                raise RuntimeError("synthetic TTS failure")
+
+        config = {
+            **program_config(daily_target=1),
+            "mode": "audio_listening",
+            "audio": {
+                "provider": "azure_speech",
+                "language_code": "yue-HK",
+                "voice": "yue-HK-HiuMaanNeural",
+                "output_format": "audio-24khz-48kbitrate-mono-mp3",
+            },
+        }
+        content = {
+            **empty_content(),
+            "sentences": [
+                {
+                    "id": "refreshed-sentence",
+                    "card_type": "audio_listening",
+                    "status": "active",
+                    "payload": {
+                        "primary_text": "更新咗嘅句子。",
+                        "transliteration": "gang1 san1 zo2 ge3 geoi3 zi2",
+                        "translation": "An updated sentence.",
+                        "target_breakdown": "更新: update",
+                    },
+                }
+            ],
+        }
+
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                old_audio = Path(
+                    "generated/mandarin_reading/audio/previous.mp3"
+                )
+                old_audio.parent.mkdir(parents=True)
+                old_audio.write_bytes(b"previous-audio")
+
+                with self.assertRaisesRegex(
+                    RuntimeError,
+                    "synthetic TTS failure",
+                ):
+                    reconcile_sentence_audio(
+                        "mandarin_reading",
+                        config,
+                        content,
+                        lambda _config: FailingSynthesizer(),
+                    )
+
+                self.assertEqual(old_audio.read_bytes(), b"previous-audio")
+            finally:
+                os.chdir(old_cwd)
 
 
 class OpenRouterGeneratorTests(unittest.TestCase):
@@ -1033,11 +1402,85 @@ class OpenRouterGeneratorTests(unittest.TestCase):
         self.assertEqual(result, generated["sentences"])
         payload = json.loads(request.data)
         self.assertEqual(payload["model"], "qwen/test")
+        self.assertEqual(payload["provider"], {"require_parameters": True})
         self.assertEqual(payload["response_format"]["type"], "json_schema")
         self.assertIn(
             "Never output a word list",
             payload["messages"][1]["content"],
         )
+
+    def test_openrouter_accepts_structured_object_content(self):
+        generated = {"sentences": []}
+        response = self.FakeResponse(
+            {"choices": [{"message": {"content": generated}}]}
+        )
+        with patch("urllib.request.urlopen", return_value=response):
+            result = OpenRouterSentenceGenerator("key", "model").generate(
+                {
+                    "language_code": "sk-SK",
+                    "prompt_style": "natural",
+                    "orthography": "Slovak",
+                    "known_words": [],
+                    "targets": [],
+                }
+            )
+
+        self.assertEqual(result, [])
+
+    def test_openrouter_accepts_text_content_parts(self):
+        generated = {"sentences": []}
+        response = self.FakeResponse(
+            {
+                "choices": [
+                    {
+                        "message": {
+                            "content": [
+                                {"type": "text", "text": json.dumps(generated)}
+                            ]
+                        }
+                    }
+                ]
+            }
+        )
+        with patch("urllib.request.urlopen", return_value=response):
+            result = OpenRouterSentenceGenerator("key", "model").generate(
+                {
+                    "language_code": "sk-SK",
+                    "prompt_style": "natural",
+                    "orthography": "Slovak",
+                    "known_words": [],
+                    "targets": [],
+                }
+            )
+
+        self.assertEqual(result, [])
+
+    def test_openrouter_null_content_reports_choice_error(self):
+        response = self.FakeResponse(
+            {
+                "choices": [
+                    {
+                        "finish_reason": "error",
+                        "error": {"message": "upstream provider failed"},
+                        "message": {"content": None},
+                    }
+                ]
+            }
+        )
+        with patch("urllib.request.urlopen", return_value=response):
+            with self.assertRaisesRegex(
+                ValueError,
+                "upstream provider failed",
+            ):
+                OpenRouterSentenceGenerator("key", "model").generate(
+                    {
+                        "language_code": "sk-SK",
+                        "prompt_style": "natural",
+                        "orthography": "Slovak",
+                        "known_words": [],
+                        "targets": [],
+                    }
+                )
 
     def test_invalid_openrouter_shape_is_rejected(self):
         response = self.FakeResponse({"choices": []})
