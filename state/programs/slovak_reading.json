@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 32,
+  "revision": 34,
   "vocabulary": {
     "slovak-0001": {
       "status": "sentence_reinforcement",
@@ -134,6 +134,54 @@
       "introduced_at": "2026-09-06T22:46:15.984988Z",
       "introduction_strategy": "vocabulary_first",
       "last_sentence_pass_at": "2026-09-07T08:48:07.676000Z"
+    },
+    "slovak-0020": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-09-07T22:55:56.992009Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "slovak-0021": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-09-07T22:55:56.992009Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "slovak-0022": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-09-07T22:55:56.992009Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "slovak-0023": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-09-07T22:55:56.992009Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "slovak-0024": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-09-07T22:55:56.992009Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "slovak-0025": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-09-07T22:55:56.992009Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "slovak-0026": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-09-07T22:55:56.992009Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "slovak-0029": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-09-07T22:55:56.992009Z",
+      "introduction_strategy": "vocabulary_first"
     }
   },
   "processed_events": {
@@ -281,6 +329,267 @@
   "grandfathered_word_ids": [],
   "source_gate_initialized": true,
   "combined_batch": {
+    "id": "2026-09-08",
+    "date": "2026-09-08",
+    "created_at": "2026-09-07T22:55:56.992009Z",
+    "source_batch_ids": {
+      "slovak_vocab": "2026-09-08",
+      "slovak_sentences": "2026-09-08"
+    },
+    "members": [
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0048"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0050"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0040"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0017"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0058"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0046"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0011"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-06-slovak-0018"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0018"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0006"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-06-slovak-0003"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0044"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0060"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-08-slovak-0026"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0041"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0059"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0043"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-06-slovak-0001"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-06-slovak-0008"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0008"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-08-slovak-0029"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-07-slovak-0005"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0007"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0054"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0056"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0015"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0042"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0045"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-08-slovak-0021"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0016"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0004"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0049"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-06-slovak-0002"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0057"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0047"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0002"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0052"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0020"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-08-slovak-0025"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0001"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0014"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0013"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0033"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0003"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0051"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-06-slovak-0010"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-07-slovak-0004"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0019"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0005"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-08-slovak-0024"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-07-slovak-0012"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0053"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-08-slovak-0023"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0009"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-08-slovak-0022"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-06-slovak-0015"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-06-slovak-0009"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0055"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-08-slovak-0020"
+      },
+      {
+        "deck_id": "slovak_vocab",
+        "card_id": "slovak-0010"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-06-slovak-0007"
+      },
+      {
+        "deck_id": "slovak_sentences",
+        "card_id": "slovak_reading-2026-09-07-slovak-0013"
+      }
+    ]
+  },
+  "vocabulary_candidates": {},
+  "processed_candidate_events": {},
+  "previous_combined_batch": {
     "id": "2026-09-07",
     "date": "2026-09-07",
     "created_at": "2026-09-06T22:46:15.984988Z",
@@ -432,99 +741,6 @@
       {
         "deck_id": "slovak_vocab",
         "card_id": "slovak-0028"
-      }
-    ]
-  },
-  "vocabulary_candidates": {},
-  "processed_candidate_events": {},
-  "previous_combined_batch": {
-    "id": "2026-09-06",
-    "date": "2026-09-06",
-    "created_at": "2026-09-06T05:14:07.086732Z",
-    "source_batch_ids": {
-      "slovak_vocab": "2026-09-06",
-      "slovak_sentences": "2026-09-06"
-    },
-    "members": [
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0017"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0014"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0019"
-      },
-      {
-        "deck_id": "slovak_sentences",
-        "card_id": "slovak_reading-2026-09-06-slovak-0010"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0005"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0004"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0006"
-      },
-      {
-        "deck_id": "slovak_sentences",
-        "card_id": "slovak_reading-2026-09-06-slovak-0007"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0016"
-      },
-      {
-        "deck_id": "slovak_sentences",
-        "card_id": "slovak_reading-2026-09-06-slovak-0002"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0011"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0020"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0012"
-      },
-      {
-        "deck_id": "slovak_sentences",
-        "card_id": "slovak_reading-2026-09-06-slovak-0015"
-      },
-      {
-        "deck_id": "slovak_sentences",
-        "card_id": "slovak_reading-2026-09-06-slovak-0009"
-      },
-      {
-        "deck_id": "slovak_sentences",
-        "card_id": "slovak_reading-2026-09-06-slovak-0018"
-      },
-      {
-        "deck_id": "slovak_sentences",
-        "card_id": "slovak_reading-2026-09-06-slovak-0001"
-      },
-      {
-        "deck_id": "slovak_vocab",
-        "card_id": "slovak-0013"
-      },
-      {
-        "deck_id": "slovak_sentences",
-        "card_id": "slovak_reading-2026-09-06-slovak-0003"
-      },
-      {
-        "deck_id": "slovak_sentences",
-        "card_id": "slovak_reading-2026-09-06-slovak-0008"
       }
     ]
   }
