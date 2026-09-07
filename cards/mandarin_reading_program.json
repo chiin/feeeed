@@ -4,10 +4,10 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T09:19:04.462314Z",
+  "compiled_at": "2026-09-07T09:19:47.878896Z",
   "state_revision": 36,
   "source_revisions": {
-    "hsk": 507,
+    "hsk": 509,
     "mandarin_sentences": 50
   },
   "processed_event_ids": [
@@ -510,6 +510,8 @@
     "7d9a24b2-21da-4de1-8390-16c76241dfbb",
     "14e863b1-71a9-49db-83d5-cdd79a7956e1",
     "e7b7dea9-f436-4c2e-8293-f274ae01a658",
+    "5d7d8924-5939-4c57-916a-b5ddd2f8f32a",
+    "29960527-739f-4af4-abd6-2ce2fdfa24cd",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -558,42 +560,6 @@
     "03b86e3a-f959-4bfb-a954-2f3d1f925f8f"
   ],
   "cards": [
-    {
-      "id": "hsk-0080",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5beb",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "xi\u011b - to write; to compose",
-        "notes": null
-      },
-      "available_at": "2026-09-07T09:18:44.748000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.12773272588315596,
-        "difficulty": 9.68974374620485,
-        "interval_days": 0,
-        "reviews": 6,
-        "passing_reviews": 1,
-        "lapses": 3,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-07T09:08:44.748000Z",
-        "next_due_at": "2026-09-07T09:18:44.748000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
     {
       "id": "hsk-0197",
       "entry_type": "term",
@@ -714,13 +680,25 @@
         "text": "f\u00faw\u00f9yu\u00e1n - waiter",
         "notes": null
       },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-07T09:28:44.767000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T09:18:44.767000Z",
+        "next_due_at": "2026-09-07T09:28:44.767000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
