@@ -4,11 +4,11 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T07:49:29.280209Z",
-  "state_revision": 24,
+  "compiled_at": "2026-09-07T07:49:46.353588Z",
+  "state_revision": 26,
   "source_revisions": {
     "slovak_vocab": 38,
-    "slovak_sentences": 27
+    "slovak_sentences": 30
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -74,7 +74,10 @@
     "52c99448-1e1c-4e74-adef-de3df683fa07",
     "b15ad334-cf0a-49ef-aa64-4cf969308f0a",
     "236832f8-3cd9-4a1d-8da7-deea31ac94ea",
-    "bbb83070-f33b-432d-9438-d8e3805a3e61"
+    "bbb83070-f33b-432d-9438-d8e3805a3e61",
+    "91e288b9-dac6-4a79-9c88-2f793c15a9b9",
+    "893ac9fc-382f-49de-ab41-efbe2373b9fe",
+    "af8ac6a8-0f96-44fb-84ef-cb33ade1a54f"
   ],
   "cards": [
     {
@@ -89,55 +92,19 @@
         "notes": "[p\u00e6t]\n\np\u00e4t is the cardinal number five in the nominative plural, agreeing with the plural noun kamar\u00e1tov (friends)."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-07T07:42:28.346000Z",
+      "available_at": "2026-09-07T07:59:16.662000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
         "interval_days": 0,
-        "reviews": 1,
+        "reviews": 2,
         "passing_reviews": 0,
-        "lapses": 0,
+        "lapses": 1,
         "last_rating": "again",
-        "last_reviewed_at": "2026-09-07T07:32:28.346000Z",
-        "next_due_at": "2026-09-07T07:42:28.346000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0012",
-      "front": {
-        "text": "Odoslal dvan\u00e1s\u0165 listov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He sent twelve letters.",
-        "notes": "[\u02c8dvanas\u02d0t]\n\ndvan\u00e1s\u0165 is the cardinal number twelve, used here in the genitive plural to agree with listov (letters)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T07:44:57.975000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-07T07:34:57.975000Z",
-        "next_due_at": "2026-09-07T07:44:57.975000Z"
+        "last_reviewed_at": "2026-09-07T07:49:16.662000Z",
+        "next_due_at": "2026-09-07T07:59:16.662000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -220,42 +187,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0004",
-      "front": {
-        "text": "Na stole s\u00fa \u0161tyri poh\u00e1re.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "There are four glasses on the table.",
-        "notes": "[\u02c8\u0283t\u026ari]\n\n\u0161tyri is the cardinal number four in the nominative plural, agreeing with the plural noun poh\u00e1re (glasses)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T07:45:23.478000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-07T07:35:23.478000Z",
-        "next_due_at": "2026-09-07T07:45:23.478000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak_reading-2026-09-07-slovak-0013",
