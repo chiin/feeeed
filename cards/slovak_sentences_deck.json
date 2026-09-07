@@ -5,8 +5,8 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T07:34:56.310738Z",
-  "state_revision": 23,
+  "compiled_at": "2026-09-07T07:35:18.088227Z",
+  "state_revision": 25,
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
@@ -27,7 +27,9 @@
     "74d9ffff-1a8b-4a5e-bd32-36d4ef41cb3d",
     "c1662352-ce3d-4839-b965-b846c4f15af5",
     "fee799e9-3ddc-48e9-9c61-c031ac2e4d04",
-    "0bce8be6-5f5c-4346-9c68-9b849a730508"
+    "0bce8be6-5f5c-4346-9c68-9b849a730508",
+    "52c99448-1e1c-4e74-adef-de3df683fa07",
+    "b15ad334-cf0a-49ef-aa64-4cf969308f0a"
   ],
   "cards": [
     {
@@ -118,27 +120,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-07-slovak-0012",
-      "front": {
-        "text": "Odoslal dvan\u00e1s\u0165 listov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He sent twelve letters.",
-        "notes": "[\u02c8dvanas\u02d0t]\n\ndvan\u00e1s\u0165 is the cardinal number twelve, used here in the genitive plural to agree with listov (letters)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-07-slovak-0013",
       "front": {
         "text": "Pros\u00edm, povedz to e\u0161te raz.",
@@ -202,27 +183,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-07-slovak-0017",
-      "front": {
-        "text": "\u00c1no, pr\u00eddem na p\u00e1rty.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Yes, I will come to the party.",
-        "notes": "[\u02c8a\u02d0no]\n\n\u00c1no is the affirmative particle meaning yes, used here to confirm an invitation or statement."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-07-slovak-0019",
       "front": {
         "text": "Samozrejme, viem to.",
@@ -268,6 +228,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-07T07:32:28.346000Z",
         "next_due_at": "2026-09-07T07:42:28.346000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-07-slovak-0012",
+      "front": {
+        "text": "Odoslal dvan\u00e1s\u0165 listov.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "He sent twelve letters.",
+        "notes": "[\u02c8dvanas\u02d0t]\n\ndvan\u00e1s\u0165 is the cardinal number twelve, used here in the genitive plural to agree with listov (letters)."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-07T07:44:57.975000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T07:34:57.975000Z",
+        "next_due_at": "2026-09-07T07:44:57.975000Z"
       },
       "schedule_previews": {
         "again": "10m",
