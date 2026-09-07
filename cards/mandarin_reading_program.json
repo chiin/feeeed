@@ -4,10 +4,10 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T09:20:46.883860Z",
+  "compiled_at": "2026-09-07T09:32:50.408087Z",
   "state_revision": 37,
   "source_revisions": {
-    "hsk": 509,
+    "hsk": 513,
     "mandarin_sentences": 51
   },
   "processed_event_ids": [
@@ -512,6 +512,10 @@
     "e7b7dea9-f436-4c2e-8293-f274ae01a658",
     "5d7d8924-5939-4c57-916a-b5ddd2f8f32a",
     "29960527-739f-4af4-abd6-2ce2fdfa24cd",
+    "d09f928b-50a7-4751-92b4-da7d12fc4482",
+    "0fe7a102-a485-4484-90f3-436381fcd1a7",
+    "e4612a44-f6bd-41ea-a062-e07091f6a326",
+    "c24531a5-de3c-4475-90e9-9d41c37fb54d",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -706,54 +710,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "hsk-0167",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5927\u5bb6",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "d\u00e0ji\u0101 - everyone",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0180",
-      "entry_type": "term",
-      "front": {
-        "text": "\u54e5\u54e5",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "g\u0113ge - older brother",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
       "id": "hsk-0169",
       "entry_type": "term",
       "front": {
@@ -765,37 +721,25 @@
         "text": "de - particle for complement",
         "notes": null
       },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-07T09:30:01.896000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T09:20:01.896000Z",
+        "next_due_at": "2026-09-07T09:30:01.896000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0171",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5f1f\u5f1f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "d\u00ecdi - younger brother",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
