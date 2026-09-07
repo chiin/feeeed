@@ -4,10 +4,10 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T09:15:27.252218Z",
+  "compiled_at": "2026-09-07T09:15:48.012483Z",
   "state_revision": 33,
   "source_revisions": {
-    "hsk": 496,
+    "hsk": 498,
     "mandarin_sentences": 47
   },
   "processed_event_ids": [
@@ -499,6 +499,8 @@
     "84ad685f-2942-4a86-bfd2-e73064bf26c9",
     "d4d5e438-f022-43c4-b836-a8b68bb18807",
     "81d299e9-004b-4012-a477-29986203fe62",
+    "25bd56dd-980c-436f-a5fb-f560b27c2cf2",
+    "9f5ce49c-a6a1-4ec9-8147-3834d2b7b4ea",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -544,42 +546,6 @@
     "a2b6524d-c46d-4977-9243-d1e5e8332f37"
   ],
   "cards": [
-    {
-      "id": "hsk-0155",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5831\u7d19",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "b\u00e0ozh\u01d0 - newspaper",
-        "notes": null
-      },
-      "available_at": "2026-09-07T09:14:25.636000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.03485140985964798,
-        "difficulty": 9.592868765339693,
-        "interval_days": 0,
-        "reviews": 3,
-        "passing_reviews": 0,
-        "lapses": 2,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-07T09:04:25.636000Z",
-        "next_due_at": "2026-09-07T09:14:25.636000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
     {
       "id": "hsk-0166",
       "entry_type": "term",
@@ -772,13 +738,25 @@
         "text": "ji\u00e0n - measure word for clothes",
         "notes": null
       },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-07T09:25:20.130000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T09:15:20.130000Z",
+        "next_due_at": "2026-09-07T09:25:20.130000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
