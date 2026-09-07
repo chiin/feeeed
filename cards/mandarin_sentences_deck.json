@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T07:28:38.183283Z",
-  "state_revision": 33,
+  "compiled_at": "2026-09-07T07:28:55.802908Z",
+  "state_revision": 36,
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
@@ -36,7 +36,10 @@
     "30ef44ba-02db-4750-8648-abf42a806c5b",
     "f17c953a-4eb3-4a04-8952-33c2bf4ee955",
     "fe28b83f-44d3-47fa-9a84-6d45764d6d84",
-    "696276ff-6ea6-40ab-9044-7e39b84702df"
+    "696276ff-6ea6-40ab-9044-7e39b84702df",
+    "019fe71a-23d8-4cf8-837c-412c4467b1eb",
+    "e43b7290-30d6-4103-9473-723e6c6d10eb",
+    "5e47c897-b27c-43c0-a8e3-dda10c9fe288"
   ],
   "cards": [
     {
@@ -63,39 +66,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-06T13:10:17.839000Z",
-        "next_due_at": "2026-09-06T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-06-hsk-0153",
-      "front": {
-        "text": "\u9019\u5bb6\u5546\u5e97\u88e1\u6709\u4e09\u767e\u591a\u672c\u6f22\u8a9e\u66f8\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "There are more than three hundred Chinese books in this shop.",
-        "notes": "Zh\u00e8 ji\u0101 sh\u0101ngdi\u00e0n l\u01d0 y\u01d2u s\u0101n b\u01cei du\u014d b\u011bn H\u00e0ny\u01d4 sh\u016b.\n\n\u767e (b\u01cei) - hundred; \u4e09\u767e (three hundred)"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T13:09:56.620000Z",
         "next_due_at": "2026-09-06T16:00:00Z"
       },
       "schedule_previews": {
@@ -388,27 +358,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-09-07-hsk-0007",
-      "front": {
-        "text": "\u4ed6\u73fe\u5728\u5728\u5b78\u7fd2\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He is studying now.",
-        "notes": "t\u0101 xi\u00e0nz\u00e0i z\u00e0i xu\u00e9x\u00ed\n\n\u5728 indicates an action in progress, showing that the subject is currently studying."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-09-07-hsk-0008",
       "front": {
         "text": "\u4ed6\u6709\u4e00\u500b\u5152\u5b50\u3002",
@@ -418,27 +367,6 @@
       "back": {
         "text": "He has a son.",
         "notes": "t\u0101 y\u01d2u y\u012b g\u00e8 \u00e9rzi\n\n\u4ed6 is the third-person singular masculine pronoun meaning 'he'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-07-hsk-0009",
-      "front": {
-        "text": "\u6211\u5011\u660e\u5929\u53bb\u5b78\u6821\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We will go to school tomorrow.",
-        "notes": "w\u01d2men m\u00edngti\u0101n q\u00f9 xu\u00e9xi\u00e0o\n\n\u6211\u5011 is the first-person plural pronoun meaning 'we'."
       },
       "presentation": "text_reading",
       "available_at": "2026-09-06T16:00:00Z",
