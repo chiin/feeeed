@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T09:07:24.666397Z",
-  "state_revision": 488,
+  "compiled_at": "2026-09-07T09:08:44.615579Z",
+  "state_revision": 491,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -487,7 +487,10 @@
     "044b53a6-5fc0-4741-8ee2-e20d8e0dc83f",
     "f9e4fb17-38df-4d23-ac74-813b81650f51",
     "1a8f4107-6678-4129-9a23-25b2abf97fef",
-    "aff3db10-667e-43d9-8f04-e2ff6cef403a"
+    "aff3db10-667e-43d9-8f04-e2ff6cef403a",
+    "baab5b68-0486-4d0c-95dd-3508ace1a9ef",
+    "8e7403d5-3e62-49ee-b252-400d4627e046",
+    "1376b7ce-0218-42b9-ab24-6f7954adaa81"
   ],
   "cards": [
     {
@@ -545,48 +548,6 @@
       }
     },
     {
-      "id": "hsk-0158",
-      "entry_type": "term",
-      "front": {
-        "text": "\u9577",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ch\u00e1ng - long",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0159",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5531\u6b4c",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ch\u00e0ngg\u0113 - to sing",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "hsk-0161",
       "entry_type": "term",
       "front": {
@@ -596,27 +557,6 @@
       },
       "back": {
         "text": "chu\u00e1n - boat; ship",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0163",
-      "entry_type": "term",
-      "front": {
-        "text": "\u6b21",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "c\u00ec - times (frequency)",
         "notes": null
       },
       "available_at": "2026-09-06T16:00:00Z",
@@ -1001,6 +941,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-07T09:05:50.414000Z",
         "next_due_at": "2026-09-07T09:15:50.414000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0163",
+      "entry_type": "term",
+      "front": {
+        "text": "\u6b21",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "c\u00ec - times (frequency)",
+        "notes": null
+      },
+      "available_at": "2026-09-07T09:16:56.375000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T09:06:56.375000Z",
+        "next_due_at": "2026-09-07T09:16:56.375000Z"
       },
       "schedule_previews": {
         "again": "10m",

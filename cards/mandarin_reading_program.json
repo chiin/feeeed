@@ -4,10 +4,10 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T09:07:24.666397Z",
+  "compiled_at": "2026-09-07T09:08:44.615579Z",
   "state_revision": 30,
   "source_revisions": {
-    "hsk": 488,
+    "hsk": 491,
     "mandarin_sentences": 44
   },
   "processed_event_ids": [
@@ -491,6 +491,9 @@
     "f9e4fb17-38df-4d23-ac74-813b81650f51",
     "1a8f4107-6678-4129-9a23-25b2abf97fef",
     "aff3db10-667e-43d9-8f04-e2ff6cef403a",
+    "baab5b68-0486-4d0c-95dd-3508ace1a9ef",
+    "8e7403d5-3e62-49ee-b252-400d4627e046",
+    "1376b7ce-0218-42b9-ab24-6f7954adaa81",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -606,30 +609,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "hsk-0158",
-      "entry_type": "term",
-      "front": {
-        "text": "\u9577",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ch\u00e1ng - long",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
       "id": "mandarin_reading-2026-09-07-hsk-0005",
       "front": {
         "text": "\u6211\u770b\u4e86\u66f8\u3002",
@@ -713,37 +692,25 @@
         "text": "c\u00ec - times (frequency)",
         "notes": null
       },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-07T09:16:56.375000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T09:06:56.375000Z",
+        "next_due_at": "2026-09-07T09:16:56.375000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0159",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5531\u6b4c",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ch\u00e0ngg\u0113 - to sing",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
