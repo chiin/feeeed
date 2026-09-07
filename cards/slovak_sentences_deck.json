@@ -5,8 +5,8 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T08:48:50.124194Z",
-  "state_revision": 31,
+  "compiled_at": "2026-09-07T08:49:21.188688Z",
+  "state_revision": 36,
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
@@ -35,75 +35,14 @@
     "91e288b9-dac6-4a79-9c88-2f793c15a9b9",
     "893ac9fc-382f-49de-ab41-efbe2373b9fe",
     "af8ac6a8-0f96-44fb-84ef-cb33ade1a54f",
-    "ed0324de-b8a0-4de8-9dbb-726359f24e19"
+    "ed0324de-b8a0-4de8-9dbb-726359f24e19",
+    "7bdbead0-2d0f-4211-bc31-aa3a0b2d0bef",
+    "eedd5e98-5de2-4633-b64a-2a5eb864da89",
+    "4da09638-6da6-42fb-af39-f430c0cba23e",
+    "0139a0da-571f-4133-8d30-a59c4e62f5a7",
+    "6d300569-4f63-4047-b72d-3982677e192e"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0007",
-      "front": {
-        "text": "M\u00e1m sedem k\u00faskov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have seven pieces.",
-        "notes": "[\u02c8sed\u025bm]\n\nThe word 'sedem' is the numeral 'seven', which is invariable and used with the genitive plural form of the noun, 'k\u00faskov'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T12:34:39.488000Z",
-        "next_due_at": "2026-09-06T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0008",
-      "front": {
-        "text": "M\u00e1m osem k\u00faskov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have eight pieces.",
-        "notes": "[\u02c8\u0254sem]\n\nThe word 'osem' is the numeral 'eight', used invariable with the genitive plural noun 'k\u00faskov'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T12:34:45.230000Z",
-        "next_due_at": "2026-09-06T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
     {
       "id": "slovak_reading-2026-09-07-slovak-0013",
       "front": {
@@ -116,55 +55,25 @@
         "notes": "[\u02c8e\u0283te ra\u02d0s]\n\ne\u0161te raz is an adverbial phrase meaning once more or again, used here to request repetition of an action."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-07T08:57:41.638000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T08:47:41.638000Z",
+        "next_due_at": "2026-09-07T08:57:41.638000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0016",
-      "front": {
-        "text": "Te\u0161\u00ed ma, \u017ee sme sa stretli.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I'm pleased to meet you that we met.",
-        "notes": "[\u02c8t\u025b\u0283i\u02d0 ma]\n\nTe\u0161\u00ed ma is a common greeting expression meaning pleased to meet you or nice to meet you, literally it pleases me."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0019",
-      "front": {
-        "text": "Samozrejme, viem to.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Of course, I know it.",
-        "notes": "[samo\u02c8zrei\u032fme]\n\nSamozrejme is an adverb meaning of course, used here to emphasize certainty or obviousness."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
