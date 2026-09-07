@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T09:07:02.274897Z",
-  "state_revision": 43,
+  "compiled_at": "2026-09-07T09:07:24.666397Z",
+  "state_revision": 44,
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
@@ -46,7 +46,8 @@
     "3785b693-9077-4273-ad6b-c1d2405b4a3f",
     "9a7638d3-ff3c-4755-ad40-a285e8c89c75",
     "371d0f85-8deb-4e93-a5ab-e7cc28a20cae",
-    "a49081fc-8ea5-4dc3-9042-80aab6f3f57f"
+    "a49081fc-8ea5-4dc3-9042-80aab6f3f57f",
+    "512dcd61-40d5-403e-8e93-865ccb765f04"
   ],
   "cards": [
     {
@@ -158,27 +159,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-09-07-hsk-0008",
-      "front": {
-        "text": "\u4ed6\u6709\u4e00\u500b\u5152\u5b50\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He has a son.",
-        "notes": "t\u0101 y\u01d2u y\u012b g\u00e8 \u00e9rzi\n\n\u4ed6 is the third-person singular masculine pronoun meaning 'he'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-09-07-hsk-0010",
       "front": {
         "text": "\u5929\u6c23\u5f88\u597d\u3002",
@@ -224,6 +204,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-07T09:06:42.489000Z",
         "next_due_at": "2026-09-07T09:16:42.489000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-09-07-hsk-0008",
+      "front": {
+        "text": "\u4ed6\u6709\u4e00\u500b\u5152\u5b50\u3002",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "He has a son.",
+        "notes": "t\u0101 y\u01d2u y\u012b g\u00e8 \u00e9rzi\n\n\u4ed6 is the third-person singular masculine pronoun meaning 'he'."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-07T09:16:52.491000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T09:06:52.491000Z",
+        "next_due_at": "2026-09-07T09:16:52.491000Z"
       },
       "schedule_previews": {
         "again": "10m",
