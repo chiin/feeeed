@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 18,
+  "revision": 20,
   "vocabulary": {
     "hsk-0151": {
       "status": "sentence_preview",
@@ -64,9 +64,10 @@
     },
     "hsk-0001": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-09-06T22:46:15.984988Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-09-07T07:25:31.513000Z"
     },
     "hsk-0002": {
       "status": "sentence_reinforcement",
@@ -94,9 +95,10 @@
     },
     "hsk-0006": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-09-06T22:46:15.984988Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-09-07T07:25:26.912000Z"
     },
     "hsk-0007": {
       "status": "sentence_reinforcement",
@@ -226,6 +228,14 @@
     },
     "30ef44ba-02db-4750-8648-abf42a806c5b": {
       "processed_at": "2026-09-07T07:25:34.133076Z",
+      "status": "applied"
+    },
+    "f17c953a-4eb3-4a04-8952-33c2bf4ee955": {
+      "processed_at": "2026-09-07T07:25:51.170140Z",
+      "status": "applied"
+    },
+    "fe28b83f-44d3-47fa-9a84-6d45764d6d84": {
+      "processed_at": "2026-09-07T07:25:51.170140Z",
       "status": "applied"
     }
   },
