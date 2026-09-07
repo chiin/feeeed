@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T07:29:41.703342Z",
-  "state_revision": 458,
+  "compiled_at": "2026-09-07T07:30:28.848476Z",
+  "state_revision": 461,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -457,7 +457,10 @@
     "c19d6a22-510b-431b-9492-b57680e122e2",
     "fb9aefe8-f7d8-4c2c-bdf2-798aa40f3770",
     "971b12e6-f1ad-4aec-954a-a21267afc7eb",
-    "3575c9c7-0b42-49e4-b162-33f5a8e198f7"
+    "3575c9c7-0b42-49e4-b162-33f5a8e198f7",
+    "62614e0c-3204-4a73-b0e2-1a8358c75f39",
+    "abb135a3-ff9f-4507-b6f9-e40a84e36063",
+    "65744fb1-d70d-4bd8-a650-90b42aa3bf5c"
   ],
   "cards": [
     {
@@ -710,27 +713,6 @@
       },
       "back": {
         "text": "b\u01cei - hundred",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0155",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5831\u7d19",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "b\u00e0ozh\u01d0 - newspaper",
         "notes": null
       },
       "available_at": "2026-09-06T16:00:00Z",
@@ -1247,27 +1229,6 @@
       }
     },
     {
-      "id": "hsk-0187",
-      "entry_type": "term",
-      "front": {
-        "text": "\u9084",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "h\u00e1i - still; also",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "hsk-0188",
       "entry_type": "term",
       "front": {
@@ -1319,27 +1280,6 @@
       },
       "back": {
         "text": "h\u00f3ng - red",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0192",
-      "entry_type": "term",
-      "front": {
-        "text": "\u6b61\u8fce",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "hu\u0101ny\u00edng - welcome",
         "notes": null
       },
       "available_at": "2026-09-06T16:00:00Z",
@@ -1580,6 +1520,72 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-07T07:25:36.164000Z",
         "next_due_at": "2026-09-07T07:35:36.164000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0187",
+      "entry_type": "term",
+      "front": {
+        "text": "\u9084",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "h\u00e1i - still; also",
+        "notes": null
+      },
+      "available_at": "2026-09-07T07:38:55.005000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T07:28:55.005000Z",
+        "next_due_at": "2026-09-07T07:38:55.005000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0155",
+      "entry_type": "term",
+      "front": {
+        "text": "\u5831\u7d19",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "b\u00e0ozh\u01d0 - newspaper",
+        "notes": null
+      },
+      "available_at": "2026-09-07T07:39:03.480000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T07:29:03.480000Z",
+        "next_due_at": "2026-09-07T07:39:03.480000Z"
       },
       "schedule_previews": {
         "again": "10m",

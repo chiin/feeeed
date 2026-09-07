@@ -4,10 +4,10 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T07:29:41.703342Z",
+  "compiled_at": "2026-09-07T07:30:28.848476Z",
   "state_revision": 24,
   "source_revisions": {
-    "hsk": 458,
+    "hsk": 461,
     "mandarin_sentences": 36
   },
   "processed_event_ids": [
@@ -461,6 +461,9 @@
     "fb9aefe8-f7d8-4c2c-bdf2-798aa40f3770",
     "971b12e6-f1ad-4aec-954a-a21267afc7eb",
     "3575c9c7-0b42-49e4-b162-33f5a8e198f7",
+    "62614e0c-3204-4a73-b0e2-1a8358c75f39",
+    "abb135a3-ff9f-4507-b6f9-e40a84e36063",
+    "65744fb1-d70d-4bd8-a650-90b42aa3bf5c",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -651,13 +654,25 @@
         "text": "h\u00e1i - still; also",
         "notes": null
       },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-07T07:38:55.005000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T07:28:55.005000Z",
+        "next_due_at": "2026-09-07T07:38:55.005000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -675,37 +690,25 @@
         "text": "b\u00e0ozh\u01d0 - newspaper",
         "notes": null
       },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-07T07:39:03.480000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T07:29:03.480000Z",
+        "next_due_at": "2026-09-07T07:39:03.480000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0192",
-      "entry_type": "term",
-      "front": {
-        "text": "\u6b61\u8fce",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "hu\u0101ny\u00edng - welcome",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
