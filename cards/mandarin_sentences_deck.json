@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T09:09:03.996410Z",
-  "state_revision": 44,
+  "compiled_at": "2026-09-07T09:09:23.335229Z",
+  "state_revision": 47,
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
@@ -47,7 +47,10 @@
     "9a7638d3-ff3c-4755-ad40-a285e8c89c75",
     "371d0f85-8deb-4e93-a5ab-e7cc28a20cae",
     "a49081fc-8ea5-4dc3-9042-80aab6f3f57f",
-    "512dcd61-40d5-403e-8e93-865ccb765f04"
+    "512dcd61-40d5-403e-8e93-865ccb765f04",
+    "77b2af71-6e82-4b42-b535-2ca31f338574",
+    "39d74ed6-2155-4fca-ae6d-540f3c5f10ee",
+    "a2b6524d-c46d-4977-9243-d1e5e8332f37"
   ],
   "cards": [
     {
@@ -84,39 +87,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-09-06-hsk-0155",
-      "front": {
-        "text": "\u6211\u7238\u7238\u6bcf\u5929\u65e9\u4e0a\u90fd\u770b\u5831\u7d19\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "My father reads the newspaper every morning.",
-        "notes": "W\u01d2 b\u00e0ba m\u011biti\u0101n z\u01ceoshang d\u014du k\u00e0n b\u00e0ozh\u01d0.\n\n\u5831\u7d19 (b\u00e0ozh\u01d0) - newspaper"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.10314065007785231,
-        "difficulty": 8.792726533684817,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T05:40:12.486000Z",
-        "next_due_at": "2026-09-06T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-09-07-hsk-0002",
       "front": {
         "text": "\u6211\u4eca\u5929\u53bb\u5b78\u6821\u3002",
@@ -126,48 +96,6 @@
       "back": {
         "text": "I go to school today.",
         "notes": "w\u01d2 j\u012bnti\u0101n q\u00f9 xu\u00e9xi\u00e0o\n\n\u6211 is the first-person singular pronoun meaning 'I'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-07-hsk-0003",
-      "front": {
-        "text": "\u4f60\u6703\u8aaa\u6f22\u8a9e\u55ce\uff1f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Can you speak Chinese?",
-        "notes": "n\u01d0 hu\u00ec shu\u014d h\u00e0ny\u01d4 ma?\n\n\u4f60 is the second-person singular pronoun meaning 'you'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-07-hsk-0010",
-      "front": {
-        "text": "\u5929\u6c23\u5f88\u597d\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The weather is very good.",
-        "notes": "ti\u0101nq\u00ec h\u011bn h\u01ceo\n\n\u597d is an adjective meaning 'good', describing the weather."
       },
       "presentation": "text_reading",
       "available_at": "2026-09-06T16:00:00Z",

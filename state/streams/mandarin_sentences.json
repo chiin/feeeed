@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 44,
+  "revision": 47,
   "cards": {
     "mandarin_reading-2026-09-06-hsk-0158": {
       "state": "review",
@@ -62,15 +62,15 @@
     "mandarin_reading-2026-09-06-hsk-0155": {
       "state": "review",
       "step": null,
-      "stability": 0.10314065007785231,
-      "difficulty": 8.792726533684817,
+      "stability": 0.6952546986897922,
+      "difficulty": 8.77916217644797,
       "interval_days": 1,
-      "reviews": 3,
-      "passing_reviews": 1,
+      "reviews": 4,
+      "passing_reviews": 2,
       "lapses": 1,
       "last_rating": "good",
-      "last_reviewed_at": "2026-09-06T05:40:12.486000Z",
-      "next_due_at": "2026-09-06T16:00:00Z"
+      "last_reviewed_at": "2026-09-07T09:08:21.375000Z",
+      "next_due_at": "2026-09-07T16:00:00Z"
     },
     "mandarin_reading-2026-09-06-hsk-0157": {
       "state": "review",
@@ -227,6 +227,32 @@
       "last_rating": "again",
       "last_reviewed_at": "2026-09-07T09:06:52.491000Z",
       "next_due_at": "2026-09-07T09:16:52.491000Z"
+    },
+    "mandarin_reading-2026-09-07-hsk-0010": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-09-07T09:08:36.210000Z",
+      "next_due_at": "2026-09-08T16:00:00Z"
+    },
+    "mandarin_reading-2026-09-07-hsk-0003": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-09-07T09:08:57.996000Z",
+      "next_due_at": "2026-09-08T16:00:00Z"
     }
   },
   "processed_events": {
@@ -389,6 +415,18 @@
     "512dcd61-40d5-403e-8e93-865ccb765f04": {
       "processed_at": "2026-09-07T09:07:24.666397Z",
       "status": "applied"
+    },
+    "77b2af71-6e82-4b42-b535-2ca31f338574": {
+      "processed_at": "2026-09-07T09:09:23.335229Z",
+      "status": "applied"
+    },
+    "39d74ed6-2155-4fca-ae6d-540f3c5f10ee": {
+      "processed_at": "2026-09-07T09:09:23.335229Z",
+      "status": "applied"
+    },
+    "a2b6524d-c46d-4977-9243-d1e5e8332f37": {
+      "processed_at": "2026-09-07T09:09:23.335229Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -423,19 +461,7 @@
         "available_at": "2026-09-06T16:00:00Z"
       },
       {
-        "card_id": "mandarin_reading-2026-09-06-hsk-0155",
-        "available_at": "2026-09-06T16:00:00Z"
-      },
-      {
         "card_id": "mandarin_reading-2026-09-07-hsk-0002",
-        "available_at": "2026-09-06T16:00:00Z"
-      },
-      {
-        "card_id": "mandarin_reading-2026-09-07-hsk-0003",
-        "available_at": "2026-09-06T16:00:00Z"
-      },
-      {
-        "card_id": "mandarin_reading-2026-09-07-hsk-0010",
         "available_at": "2026-09-06T16:00:00Z"
       },
       {
