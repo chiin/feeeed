@@ -1200,22 +1200,89 @@ def _generate_with_retries(
     allow_inflected_targets: bool,
     familiar_pool_policy: str,
     max_attempts: int,
-) -> list[dict]:
-    last_error = None
+) -> tuple[list[dict], dict[str, str]]:
+    target_order = [target["id"] for target in targets]
+    pending = {target["id"]: target for target in targets}
+    validated_by_target = {}
+    errors = {}
     for _attempt in range(max_attempts):
+        if not pending:
+            break
+        attempt_targets = list(pending.values())
+        attempt_request = {
+            **request,
+            "targets": attempt_targets,
+        }
         try:
-            return _validate_generated_sentences(
-                generator.generate(request),
-                targets,
-                allow_inflected_targets,
-                familiar_pool_policy,
-            )
+            generated = generator.generate(attempt_request)
         except ValueError as error:
-            last_error = error
-    raise ValueError(
-        f"sentence generator failed quality validation after {max_attempts} attempts: "
-        f"{last_error}"
-    ) from last_error
+            for target_id in pending:
+                errors[target_id] = str(error)
+            continue
+        if not isinstance(generated, list):
+            for target_id in pending:
+                errors[target_id] = "sentence generator must return a list"
+            continue
+
+        generated_by_target = {}
+        for sentence in generated:
+            if not isinstance(sentence, dict):
+                continue
+            target_id = sentence.get("target_word_id")
+            if isinstance(target_id, str) and target_id in pending:
+                generated_by_target.setdefault(target_id, []).append(sentence)
+
+        completed = []
+        for target_id, target in pending.items():
+            matches = generated_by_target.get(target_id, [])
+            if len(matches) != 1:
+                errors[target_id] = (
+                    "sentence generator omitted the target"
+                    if not matches
+                    else "sentence generator duplicated the target"
+                )
+                continue
+            try:
+                validated = _validate_generated_sentences(
+                    matches,
+                    [target],
+                    allow_inflected_targets,
+                    familiar_pool_policy,
+                )
+            except ValueError as error:
+                errors[target_id] = str(error)
+                continue
+            validated_by_target[target_id] = validated[0]
+            errors.pop(target_id, None)
+            completed.append(target_id)
+        for target_id in completed:
+            pending.pop(target_id)
+
+    return (
+        [
+            validated_by_target[target_id]
+            for target_id in target_order
+            if target_id in validated_by_target
+        ],
+        {
+            target_id: errors.get(target_id, "sentence generation failed")
+            for target_id in target_order
+            if target_id in pending
+        },
+    )
+
+
+def _report_generation_failures(
+    program_id: str,
+    operation: str,
+    failures: dict[str, str],
+    max_attempts: int,
+) -> None:
+    for target_id, error in failures.items():
+        print(
+            f"[{program_id}] Skipping {operation} target {target_id} after "
+            f"{max_attempts} attempts: {error}"
+        )
 
 
 def _openrouter_generator(config: dict) -> SentenceGenerator:
@@ -1680,12 +1747,18 @@ def prepare_sentence_program(
             familiar_pool_policy,
         )
         refresh_generator = (generator_factory or _openrouter_generator)(config)
-        refreshed = _generate_with_retries(
+        refreshed, refresh_failures = _generate_with_retries(
             refresh_generator,
             refresh_request,
             refresh_targets,
             allow_inflected_targets,
             familiar_pool_policy,
+            max_generation_attempts,
+        )
+        _report_generation_failures(
+            program_id,
+            "sentence refresh",
+            refresh_failures,
             max_generation_attempts,
         )
         refreshed_by_target = {
@@ -1694,7 +1767,9 @@ def prepare_sentence_program(
         refreshed_at = isoformat_utc(now)
         for stored_sentence in outdated_sentences:
             target_id = stored_sentence["target_word_ids"][0]
-            replacement = refreshed_by_target[target_id]
+            replacement = refreshed_by_target.get(target_id)
+            if not replacement:
+                continue
             stored_sentence["payload"] = {
                 key: replacement[key]
                 for key in (
@@ -1717,11 +1792,13 @@ def prepare_sentence_program(
                     replacement.get("discovered_vocabulary", []),
                     now,
                 )
-        refreshed_count = len(outdated_sentences)
-        program_state["revision"] += 1
+        refreshed_count = len(refreshed)
+        if refreshed_count:
+            program_state["revision"] += 1
 
     existing_job = generation_state["jobs"].get(day)
     generated_count = 0
+    generation_failures = {}
     generation_pending = (
         not existing_job
         or existing_job.get("generated_count") == 0
@@ -1786,12 +1863,18 @@ def prepare_sentence_program(
                     familiar_pool_policy,
                 )
                 generator = (generator_factory or _openrouter_generator)(config)
-                generated = _generate_with_retries(
+                generated, generation_failures = _generate_with_retries(
                     generator,
                     request,
                     generated_targets,
                     allow_inflected_targets,
                     familiar_pool_policy,
+                    max_generation_attempts,
+                )
+                _report_generation_failures(
+                    program_id,
+                    "new sentence",
+                    generation_failures,
                     max_generation_attempts,
                 )
                 generated_by_target = {
@@ -1822,7 +1905,9 @@ def prepare_sentence_program(
                         config.get("mode", "text_reading"),
                     )
                 else:
-                    sentence = generated_by_target[target_id]
+                    sentence = generated_by_target.get(target_id)
+                    if not sentence:
+                        continue
                     stored_sentence = {
                         "id": sentence_id,
                         "card_type": config.get("mode", "text_reading"),
@@ -1864,8 +1949,9 @@ def prepare_sentence_program(
                     "introduced_at": created_at,
                     "introduction_strategy": strategy,
                 }
-            generated_count = len(candidates)
-            program_state["revision"] += 1
+            generated_count = len(generated_sentence_ids)
+            if generated_count:
+                program_state["revision"] += 1
 
         if candidates or not existing_job:
             generation_state["jobs"][day] = {
@@ -1873,6 +1959,7 @@ def prepare_sentence_program(
                 "completed_at": isoformat_utc(now),
                 "generated_count": generated_count,
                 "sentence_ids": generated_sentence_ids if candidates else [],
+                "skipped_target_ids": list(generation_failures),
             }
 
     audio_generated, audio_removed = reconcile_sentence_audio(
@@ -1890,7 +1977,9 @@ def prepare_sentence_program(
     )
     return {
         "generated": generated_count,
+        "generation_skipped": len(generation_failures),
         "refreshed": refreshed_count,
+        "refresh_skipped": len(refresh_failures) if outdated_sentences else 0,
         "discovered": discovered_count,
         "audio_generated": audio_generated,
         "audio_removed": audio_removed,
