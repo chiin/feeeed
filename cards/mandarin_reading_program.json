@@ -4,10 +4,10 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T07:26:13.802152Z",
+  "compiled_at": "2026-09-07T07:27:49.314061Z",
   "state_revision": 20,
   "source_revisions": {
-    "hsk": 456,
+    "hsk": 458,
     "mandarin_sentences": 32
   },
   "processed_event_ids": [
@@ -459,6 +459,8 @@
     "30a02597-53bf-43cc-9e14-898db67d1eb2",
     "c19d6a22-510b-431b-9492-b57680e122e2",
     "fb9aefe8-f7d8-4c2c-bdf2-798aa40f3770",
+    "971b12e6-f1ad-4aec-954a-a21267afc7eb",
+    "3575c9c7-0b42-49e4-b162-33f5a8e198f7",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -609,37 +611,25 @@
         "text": "c\u00f3ng - from",
         "notes": null
       },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-07T07:35:36.164000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T07:25:36.164000Z",
+        "next_due_at": "2026-09-07T07:35:36.164000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0154",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5e6b\u52a9",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "b\u0101ngzh\u00f9 - to help",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
