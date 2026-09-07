@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T09:15:48.012483Z",
-  "state_revision": 498,
+  "compiled_at": "2026-09-07T09:16:05.025552Z",
+  "state_revision": 503,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -497,51 +497,14 @@
     "d4d5e438-f022-43c4-b836-a8b68bb18807",
     "81d299e9-004b-4012-a477-29986203fe62",
     "25bd56dd-980c-436f-a5fb-f560b27c2cf2",
-    "9f5ce49c-a6a1-4ec9-8147-3834d2b7b4ea"
+    "9f5ce49c-a6a1-4ec9-8147-3834d2b7b4ea",
+    "4525f62f-a29a-4f8d-a6f9-9a6158c4f527",
+    "300ce19b-497b-4701-944f-805e84dc3482",
+    "18c61b62-baeb-4851-b47a-a368f595036a",
+    "cf8f05ef-1fb4-44dd-9c88-60fc0fa1741b",
+    "6f7cc2ad-d180-4fff-b4b2-3937fc660fe8"
   ],
   "cards": [
-    {
-      "id": "hsk-0157",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5225",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "bi\u00e9 - don't",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0161",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8239",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "chu\u00e1n - boat; ship",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
     {
       "id": "hsk-0167",
       "entry_type": "term",
@@ -606,27 +569,6 @@
       }
     },
     {
-      "id": "hsk-0174",
-      "entry_type": "term",
-      "front": {
-        "text": "\u623f\u9593",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "f\u00e1ngji\u0101n - room",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "hsk-0176",
       "entry_type": "term",
       "front": {
@@ -636,27 +578,6 @@
       },
       "back": {
         "text": "f\u00faw\u00f9yu\u00e1n - waiter",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0179",
-      "entry_type": "term",
-      "front": {
-        "text": "\u544a\u8a34",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "g\u00e0osu - to tell",
         "notes": null
       },
       "available_at": "2026-09-06T16:00:00Z",
@@ -720,27 +641,6 @@
       },
       "back": {
         "text": "hu\u01d2ch\u0113zh\u00e0n - train station",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0198",
-      "entry_type": "term",
-      "front": {
-        "text": "\u6559\u5ba4",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ji\u00e0osh\u00ec - classroom",
         "notes": null
       },
       "available_at": "2026-09-06T16:00:00Z",
@@ -876,6 +776,72 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-07T09:15:20.130000Z",
         "next_due_at": "2026-09-07T09:25:20.130000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0198",
+      "entry_type": "term",
+      "front": {
+        "text": "\u6559\u5ba4",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "ji\u00e0osh\u00ec - classroom",
+        "notes": null
+      },
+      "available_at": "2026-09-07T09:25:32.817000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T09:15:32.817000Z",
+        "next_due_at": "2026-09-07T09:25:32.817000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0157",
+      "entry_type": "term",
+      "front": {
+        "text": "\u5225",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "bi\u00e9 - don't",
+        "notes": null
+      },
+      "available_at": "2026-09-07T09:25:48.086000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T09:15:48.086000Z",
+        "next_due_at": "2026-09-07T09:25:48.086000Z"
       },
       "schedule_previews": {
         "again": "10m",
