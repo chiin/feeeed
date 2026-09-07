@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T07:35:55.435978Z",
-  "state_revision": 24,
+  "compiled_at": "2026-09-07T07:49:29.280209Z",
+  "state_revision": 38,
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
     "26dfa45b-c39b-49ea-8f73-4d280c30cbaf",
@@ -33,7 +33,21 @@
     "e6843ce7-a2cc-43d5-9d95-e7633233cc26",
     "852a4292-5767-4599-80ce-3bc5162af03e",
     "00bf5f12-d973-46d7-a562-a1bb010dab7e",
-    "aa222370-1f1b-48fa-9ca4-f709751e7c33"
+    "aa222370-1f1b-48fa-9ca4-f709751e7c33",
+    "1ea9c2ae-fd10-4f18-a717-eac1e716e70f",
+    "253e6b8c-16b6-49a9-84ae-418261a95e91",
+    "89bb5955-1ccb-4a58-91d1-35329fe4f5d8",
+    "b0cb5bc4-be6a-4a2d-b731-9e4e4b564776",
+    "4d6eb186-1ddd-4f80-8b80-3a6c85a21783",
+    "2d68bb90-a56d-4243-90a0-626c8775cfe5",
+    "040618a0-6d7d-4ce1-a78e-e536d11cda80",
+    "9dde2296-e081-4dd4-8a57-13ae6920b951",
+    "bf4e890d-79a4-41fe-a923-84002d3c1d78",
+    "b79ca52b-9e2b-4fba-b6d8-d6aefd986ece",
+    "adbb148c-b7a9-4b54-a43f-34d51bbfe0eb",
+    "aabd16a7-b777-4f68-ae48-1a4252cccec9",
+    "2ff28423-88bc-44a7-b8cb-8fefaa6d664f",
+    "01d85d26-f6ed-4eae-b6b8-b677dba48fdf"
   ],
   "cards": [
     {
@@ -70,27 +84,6 @@
       }
     },
     {
-      "id": "slovak-0021",
-      "entry_type": "term",
-      "front": {
-        "text": "Slovenka",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "a Slovak woman",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0022",
       "entry_type": "term",
       "front": {
@@ -112,111 +105,6 @@
       }
     },
     {
-      "id": "slovak-0023",
-      "entry_type": "term",
-      "front": {
-        "text": "Ameri\u010danka",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "an American woman",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0024",
-      "entry_type": "term",
-      "front": {
-        "text": "Angli\u010dan",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "an English man",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0025",
-      "entry_type": "term",
-      "front": {
-        "text": "Angli\u010danka",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "an English woman",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0026",
-      "entry_type": "sentence",
-      "front": {
-        "text": "m\u00e1te ... ?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you have ... ?",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0027",
-      "entry_type": "term",
-      "front": {
-        "text": "tu je",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "here it is",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0028",
       "entry_type": "term",
       "front": {
@@ -226,27 +114,6 @@
       },
       "back": {
         "text": "let's go",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0029",
-      "entry_type": "term",
-      "front": {
-        "text": "auto",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "car",
         "notes": null
       },
       "available_at": "2026-09-06T16:00:00Z",
@@ -301,111 +168,6 @@
       }
     },
     {
-      "id": "slovak-0033",
-      "entry_type": "term",
-      "front": {
-        "text": "kufor",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "suitcase",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0034",
-      "entry_type": "term",
-      "front": {
-        "text": "tak dobre",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "so",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0035",
-      "entry_type": "term",
-      "front": {
-        "text": "vonku",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "outside",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0036",
-      "entry_type": "term",
-      "front": {
-        "text": "ja",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0037",
-      "entry_type": "term",
-      "front": {
-        "text": "ty",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0038",
       "entry_type": "term",
       "front": {
@@ -415,27 +177,6 @@
       },
       "back": {
         "text": "he",
-        "notes": null
-      },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0039",
-      "entry_type": "term",
-      "front": {
-        "text": "ona",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "she",
         "notes": null
       },
       "available_at": "2026-09-06T16:00:00Z",
@@ -459,13 +200,58 @@
         "text": "it",
         "notes": null
       },
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-07T07:45:06.308000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T07:35:06.308000Z",
+        "next_due_at": "2026-09-07T07:45:06.308000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak-0033",
+      "entry_type": "term",
+      "front": {
+        "text": "kufor",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "suitcase",
+        "notes": null
+      },
+      "available_at": "2026-09-07T07:45:08.359000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T07:35:08.359000Z",
+        "next_due_at": "2026-09-07T07:45:08.359000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
