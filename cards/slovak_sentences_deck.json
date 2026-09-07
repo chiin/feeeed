@@ -5,8 +5,8 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-07",
   "batch_date": "2026-09-07",
-  "compiled_at": "2026-09-07T07:35:36.931014Z",
-  "state_revision": 26,
+  "compiled_at": "2026-09-07T07:35:55.435978Z",
+  "state_revision": 27,
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
@@ -30,7 +30,8 @@
     "0bce8be6-5f5c-4346-9c68-9b849a730508",
     "52c99448-1e1c-4e74-adef-de3df683fa07",
     "b15ad334-cf0a-49ef-aa64-4cf969308f0a",
-    "236832f8-3cd9-4a1d-8da7-deea31ac94ea"
+    "236832f8-3cd9-4a1d-8da7-deea31ac94ea",
+    "bbb83070-f33b-432d-9438-d8e3805a3e61"
   ],
   "cards": [
     {
@@ -97,27 +98,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0004",
-      "front": {
-        "text": "Na stole s\u00fa \u0161tyri poh\u00e1re.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "There are four glasses on the table.",
-        "notes": "[\u02c8\u0283t\u026ari]\n\n\u0161tyri is the cardinal number four in the nominative plural, agreeing with the plural noun poh\u00e1re (glasses)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-06T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
       }
     },
     {
@@ -241,6 +221,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-07T07:34:57.975000Z",
         "next_due_at": "2026-09-07T07:44:57.975000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-07-slovak-0004",
+      "front": {
+        "text": "Na stole s\u00fa \u0161tyri poh\u00e1re.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "There are four glasses on the table.",
+        "notes": "[\u02c8\u0283t\u026ari]\n\n\u0161tyri is the cardinal number four in the nominative plural, agreeing with the plural noun poh\u00e1re (glasses)."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-07T07:45:23.478000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-07T07:35:23.478000Z",
+        "next_due_at": "2026-09-07T07:45:23.478000Z"
       },
       "schedule_previews": {
         "again": "10m",
