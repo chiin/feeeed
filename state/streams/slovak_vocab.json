@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 47,
+  "revision": 48,
   "cards": {
     "slovak-0009": {
       "state": "review",
@@ -526,6 +526,19 @@
       "last_rating": "good",
       "last_reviewed_at": "2026-09-07T08:48:57.326000Z",
       "next_due_at": "2026-09-08T16:00:00Z"
+    },
+    "slovak-0048": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-09-08T04:53:13.654000Z",
+      "next_due_at": "2026-09-09T16:00:00Z"
     }
   },
   "processed_events": {
@@ -724,6 +737,10 @@
     "408563cd-dd37-478b-9e1f-a29f77530f11": {
       "processed_at": "2026-09-07T14:49:03.317892Z",
       "status": "stale"
+    },
+    "3d836921-cd55-4dc8-acee-41a872965305": {
+      "processed_at": "2026-09-08T04:53:33.005780Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -884,10 +901,6 @@
       },
       {
         "card_id": "slovak-0047",
-        "available_at": "2026-09-07T16:00:00Z"
-      },
-      {
-        "card_id": "slovak-0048",
         "available_at": "2026-09-07T16:00:00Z"
       },
       {
