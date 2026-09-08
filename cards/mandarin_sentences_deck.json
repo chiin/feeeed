@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-08",
   "batch_date": "2026-09-08",
-  "compiled_at": "2026-09-08T13:08:24.406509Z",
-  "state_revision": 53,
+  "compiled_at": "2026-09-08T13:08:41.626476Z",
+  "state_revision": 56,
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
@@ -55,7 +55,10 @@
     "42f0029c-65af-4515-81d7-589e43bdec09",
     "03b86e3a-f959-4bfb-a954-2f3d1f925f8f",
     "6224278c-33c1-4f24-a29d-84bfda25ab22",
-    "4971a901-8ab6-41f6-832d-3845c57bc507"
+    "4971a901-8ab6-41f6-832d-3845c57bc507",
+    "b5db239b-72db-4e4d-a555-4393c245453a",
+    "8b356bd8-80a5-469a-b38a-8fde0933ca82",
+    "b3d83188-be31-470d-86c9-8f962872abe2"
   ],
   "cards": [
     {
@@ -221,39 +224,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-06-hsk-0158",
-      "front": {
-        "text": "\u9019\u689d\u8def\u5f88\u9577,\u6211\u5011\u5750\u51fa\u79df\u8eca\u53bb\u5427\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This road is very long; let's take a taxi.",
-        "notes": "Zh\u00e8 ti\u00e1o l\u00f9 h\u011bn ch\u00e1ng, w\u01d2men zu\u00f2 ch\u016bz\u016bch\u0113 q\u00f9 ba.\n\n\u9577 (ch\u00e1ng) - long"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.6952546986897922,
-        "difficulty": 8.77916217644797,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:31:37.393000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
       }
     },
     {
@@ -512,48 +482,6 @@
       "back": {
         "text": "I would like to go to Beijing.",
         "notes": "w\u01d2 xi\u01ceng q\u00f9 b\u011bi j\u012bng\n\n\u60f3 is a verb meaning ``to think'' or ``would like to'', here expressing desire."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-08-hsk-0019",
-      "front": {
-        "text": "\u6211\u6709\u4e00\u500b\u670b\u53cb\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have a friend.",
-        "notes": "w\u01d2 y\u01d2u y\u012b ge p\u00e9ng y\u01d2u\n\n\u4e00 is a numeral meaning ``one'', used here as an indefinite article before the classifier \u500b."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-08-hsk-0020",
-      "front": {
-        "text": "\u9019\u672c\u66f8\u5f88\u597d\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This book is very good.",
-        "notes": "zh\u00e8 b\u011bn sh\u016b h\u011bn h\u01ceo\n\n\u5f88 is an adverb meaning ``very'', modifying the adjective \u597d."
       },
       "presentation": "text_reading",
       "available_at": "2026-09-07T16:00:00Z",
