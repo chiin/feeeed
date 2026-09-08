@@ -4,11 +4,11 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-08",
   "batch_date": "2026-09-08",
-  "compiled_at": "2026-09-08T04:53:56.158857Z",
-  "state_revision": 35,
+  "compiled_at": "2026-09-08T04:54:18.857944Z",
+  "state_revision": 37,
   "source_revisions": {
     "slovak_vocab": 48,
-    "slovak_sentences": 40
+    "slovak_sentences": 42
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -96,7 +96,9 @@
     "6d300569-4f63-4047-b72d-3982677e192e",
     "83c1ff13-e8c9-4b57-8561-d13903403458",
     "1ca4fa0e-af6f-40cc-a2bf-86f091142979",
-    "0adaf63c-c35f-47e8-aa73-fa4a492eee60"
+    "0adaf63c-c35f-47e8-aa73-fa4a492eee60",
+    "6ea1808a-33a6-43c6-9cf5-57ea10db17e1",
+    "2704fd45-20a3-4c23-8d9d-cce9eceded18"
   ],
   "cards": [
     {
@@ -352,42 +354,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-06-slovak-0003",
-      "front": {
-        "text": "M\u00e1m tri k\u00fasky.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have three pieces.",
-        "notes": "[tri]\n\nThe word 'tri' is the masculine nominative/accusative plural form of the numeral 'three', agreeing with the plural noun 'k\u00fasky'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T23:26:37.095000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "4d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak-0044",
       "entry_type": "term",
       "front": {
@@ -434,30 +400,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0026",
-      "front": {
-        "text": "m\u00e1te ... ?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you have ... ?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0041",

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 35,
+  "revision": 37,
   "vocabulary": {
     "slovak-0001": {
       "status": "sentence_reinforcement",
@@ -17,11 +17,12 @@
       "last_sentence_pass_at": "2026-09-06T05:25:08.925000Z"
     },
     "slovak-0003": {
-      "status": "sentence_reinforcement",
-      "sentence_pass_count": 2,
+      "status": "sentence_complete",
+      "sentence_pass_count": 3,
       "introduced_at": "2026-09-06T05:14:07.086732Z",
       "introduction_strategy": "vocabulary_first",
-      "last_sentence_pass_at": "2026-09-06T23:26:37.095000Z"
+      "last_sentence_pass_at": "2026-09-08T04:53:39.917000Z",
+      "completed_at": "2026-09-08T04:53:39.917000Z"
     },
     "slovak-0007": {
       "status": "sentence_reinforcement",
@@ -173,9 +174,10 @@
     },
     "slovak-0026": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-09-07T22:55:56.992009Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-09-08T04:53:49.378000Z"
     },
     "slovak-0029": {
       "status": "sentence_reinforcement",
@@ -327,6 +329,14 @@
     },
     "0adaf63c-c35f-47e8-aa73-fa4a492eee60": {
       "processed_at": "2026-09-08T04:53:56.158857Z",
+      "status": "applied"
+    },
+    "6ea1808a-33a6-43c6-9cf5-57ea10db17e1": {
+      "processed_at": "2026-09-08T04:54:18.857944Z",
+      "status": "applied"
+    },
+    "2704fd45-20a3-4c23-8d9d-cce9eceded18": {
+      "processed_at": "2026-09-08T04:54:18.857944Z",
       "status": "applied"
     }
   },

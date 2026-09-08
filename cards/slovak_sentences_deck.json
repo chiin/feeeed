@@ -5,8 +5,8 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-08",
   "batch_date": "2026-09-08",
-  "compiled_at": "2026-09-08T04:53:56.158857Z",
-  "state_revision": 40,
+  "compiled_at": "2026-09-08T04:54:18.857944Z",
+  "state_revision": 42,
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
@@ -43,7 +43,9 @@
     "6d300569-4f63-4047-b72d-3982677e192e",
     "83c1ff13-e8c9-4b57-8561-d13903403458",
     "1ca4fa0e-af6f-40cc-a2bf-86f091142979",
-    "0adaf63c-c35f-47e8-aa73-fa4a492eee60"
+    "0adaf63c-c35f-47e8-aa73-fa4a492eee60",
+    "6ea1808a-33a6-43c6-9cf5-57ea10db17e1",
+    "2704fd45-20a3-4c23-8d9d-cce9eceded18"
   ],
   "cards": [
     {
@@ -110,39 +112,6 @@
         "hard": "5d",
         "good": "7d",
         "easy": "12d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0003",
-      "front": {
-        "text": "M\u00e1m tri k\u00fasky.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have three pieces.",
-        "notes": "[tri]\n\nThe word 'tri' is the masculine nominative/accusative plural form of the numeral 'three', agreeing with the plural noun 'k\u00fasky'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T23:26:37.095000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "4d"
       }
     },
     {
@@ -557,27 +526,6 @@
       "back": {
         "text": "The English woman Lisa writes an article for the magazine.",
         "notes": "Angli\u010danka Lisa p\u00ed\u0161e \u010dl\u00e1nok pre \u010dasopis\n\nAngli\u010danka is the feminine singular noun indicating a female national from the United Kingdom, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0026",
-      "front": {
-        "text": "m\u00e1te ... ?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you have ... ?",
-        "notes": null
       },
       "presentation": "text_reading",
       "available_at": "2026-09-07T16:00:00Z",
