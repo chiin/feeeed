@@ -5,8 +5,8 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-08",
   "batch_date": "2026-09-08",
-  "compiled_at": "2026-09-08T04:54:39.889416Z",
-  "state_revision": 43,
+  "compiled_at": "2026-09-08T04:54:57.795590Z",
+  "state_revision": 46,
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
@@ -46,7 +46,10 @@
     "0adaf63c-c35f-47e8-aa73-fa4a492eee60",
     "6ea1808a-33a6-43c6-9cf5-57ea10db17e1",
     "2704fd45-20a3-4c23-8d9d-cce9eceded18",
-    "640e825e-1ff7-432d-9cd6-13c84b2cf8f1"
+    "640e825e-1ff7-432d-9cd6-13c84b2cf8f1",
+    "07f4e832-b0ab-499b-9502-772cc0ca1753",
+    "385c690c-9c64-4819-a463-1a757f83c6b2",
+    "0c3c81f2-a595-4e85-b475-818fc318ad6f"
   ],
   "cards": [
     {
@@ -106,39 +109,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-07T08:48:18.323000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0008",
-      "front": {
-        "text": "M\u00e1m osem k\u00faskov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have eight pieces.",
-        "notes": "[\u02c8\u0254sem]\n\nThe word 'osem' is the numeral 'eight', used invariable with the genitive plural noun 'k\u00faskov'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T08:47:57.741000Z",
         "next_due_at": "2026-09-07T16:00:00Z"
       },
       "schedule_previews": {
@@ -271,39 +241,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-07T07:49:28.361000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0005",
-      "front": {
-        "text": "V skupine je p\u00e4t kamar\u00e1tov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "There are five friends in the group.",
-        "notes": "[p\u00e6t]\n\np\u00e4t is the cardinal number five in the nominative plural, agreeing with the plural noun kamar\u00e1tov (friends)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.10314065007785231,
-        "difficulty": 8.792726533684817,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T08:47:27.799000Z",
         "next_due_at": "2026-09-07T16:00:00Z"
       },
       "schedule_previews": {
@@ -494,27 +431,6 @@
       "back": {
         "text": "The English woman Lisa writes an article for the magazine.",
         "notes": "Angli\u010danka Lisa p\u00ed\u0161e \u010dl\u00e1nok pre \u010dasopis\n\nAngli\u010danka is the feminine singular noun indicating a female national from the United Kingdom, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0029",
-      "front": {
-        "text": "M\u00e1m nov\u00fa auto.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have a new car.",
-        "notes": "M\u00e1m nov\u00fa auto.\n\nauto is the noun denoting a motor vehicle, serving as the central topic of the sentence expressing possession."
       },
       "presentation": "text_reading",
       "available_at": "2026-09-07T16:00:00Z",
