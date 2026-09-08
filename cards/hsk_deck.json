@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-08",
   "batch_date": "2026-09-08",
-  "compiled_at": "2026-09-08T00:02:29.621044Z",
-  "state_revision": 520,
+  "compiled_at": "2026-09-08T00:18:37.604081Z",
+  "state_revision": 521,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -520,7 +520,8 @@
     "605a4e75-4123-4e8b-abdd-010c8d93838b",
     "73977cb9-d039-43e4-978b-e41db4795c27",
     "0bade226-b8f7-4add-9976-dbd934a0cc8a",
-    "6db1f86f-7c58-4bb2-b752-a654e193fd86"
+    "6db1f86f-7c58-4bb2-b752-a654e193fd86",
+    "cef881ab-65e8-4762-a8f6-2edd54a4aca0"
   ],
   "cards": [
     {
@@ -1100,27 +1101,6 @@
       },
       "back": {
         "text": "k\u0101ish\u01d0 - to start",
-        "notes": null
-      },
-      "available_at": "2026-09-07T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0207",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8003\u8a66",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "k\u01ceosh\u00ec - exam",
         "notes": null
       },
       "available_at": "2026-09-07T16:00:00Z",
@@ -2033,6 +2013,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "hsk-0207",
+      "entry_type": "term",
+      "front": {
+        "text": "\u8003\u8a66",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "k\u01ceosh\u00ec - exam",
+        "notes": null
+      },
+      "available_at": "2026-09-08T00:28:20.190000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-08T00:18:20.190000Z",
+        "next_due_at": "2026-09-08T00:28:20.190000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
