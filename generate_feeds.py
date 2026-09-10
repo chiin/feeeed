@@ -3,6 +3,7 @@ import json
 import os
 import random
 import sys
+import tempfile
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from feedgen.feed import FeedGenerator
@@ -29,6 +30,8 @@ from sentence_program import (
     eligible_source_word_ids,
     load_sentence_content,
     prepare_sentence_program,
+    prune_sentence_audio,
+    reconcile_sentence_audio,
     save_sentence_content,
     sentence_cards,
     resolve_sentence_content_path,
@@ -640,6 +643,7 @@ def main():
     generated_card_overrides = {}
     gated_new_cards = {}
     sentence_content_updates = {}
+    sentence_content_programs = {}
     sentence_program_contexts = {}
     anki_snapshots = {}
     for program_id, program_cfg in config.get("programs", {}).items():
@@ -699,6 +703,7 @@ def main():
         )
         generated_card_overrides[sentence_stream_id] = sentence_cards(content)
         sentence_content_updates[content_path] = content
+        sentence_content_programs[content_path] = program_id
         sentence_program_contexts[sentence_stream_id] = (
             program_id,
             program_cfg,
@@ -797,6 +802,11 @@ def main():
                             f"[{program_id}] Reconciled sentence reviews: "
                             f"{review_result}."
                         )
+                    reconcile_sentence_audio(
+                        program_id,
+                        program_cfg,
+                        content,
+                    )
                     return sentence_cards(content)
 
                 after_review_events = reconcile_sentence_reviews
@@ -886,6 +896,10 @@ def main():
 
     for content_path, content in sentence_content_updates.items():
         save_sentence_content(content_path, content)
+        prune_sentence_audio(
+            sentence_content_programs[content_path],
+            content,
+        )
     state_store.save_all()
 
 # --- DECK PARSERS ---
@@ -914,6 +928,85 @@ def parse_csv_deck(csv_path: Path, base_url: str) -> list[dict]:
                 }
             })
     return cards
+
+
+def write_practice_export(
+    stream_key: str,
+    stream_cfg: dict,
+    all_cards: list[dict],
+    stream_history: dict,
+) -> int | None:
+    export_cfg = stream_cfg.get("practice_export")
+    if export_cfg is None:
+        return None
+    if not isinstance(export_cfg, dict):
+        raise ValueError(f"[{stream_key}] practice_export must be an object")
+
+    path_value = export_cfg.get("path")
+    if not isinstance(path_value, str) or not path_value:
+        raise ValueError(f"[{stream_key}] practice_export.path must be set")
+    export_path = Path(path_value)
+    if (
+        export_path.is_absolute()
+        or export_path.name != path_value
+        or export_path.suffix.lower() != ".csv"
+    ):
+        raise ValueError(
+            f"[{stream_key}] practice_export.path must be a root CSV filename"
+        )
+
+    minimum_interval_days = export_cfg.get("minimum_interval_days")
+    if (
+        isinstance(minimum_interval_days, bool)
+        or not isinstance(minimum_interval_days, int)
+        or minimum_interval_days < 0
+    ):
+        raise ValueError(
+            f"[{stream_key}] practice_export.minimum_interval_days "
+            "must be a non-negative integer"
+        )
+
+    card_states = stream_history.get("cards", {})
+    exported_cards = [
+        card
+        for card in all_cards
+        if int(card_states.get(card["id"], {}).get("interval_days", 0))
+        > minimum_interval_days
+    ]
+
+    descriptor, temporary_name = tempfile.mkstemp(
+        dir=export_path.parent,
+        prefix=f".{export_path.name}.",
+        suffix=".tmp",
+        text=True,
+    )
+    temporary_path = Path(temporary_name)
+    try:
+        with os.fdopen(
+            descriptor, mode="w", encoding="utf-8", newline=""
+        ) as export_file:
+            writer = csv.DictWriter(export_file, fieldnames=("id", "front", "back"))
+            writer.writeheader()
+            writer.writerows(
+                {
+                    "id": card["id"],
+                    "front": card["front"]["text"],
+                    "back": card["back"]["text"],
+                }
+                for card in exported_cards
+            )
+            export_file.flush()
+            os.fsync(export_file.fileno())
+        os.replace(temporary_path, export_path)
+    finally:
+        temporary_path.unlink(missing_ok=True)
+
+    print(
+        f"[{stream_key}] Exported {len(exported_cards)} practice cards "
+        f"to {export_path}."
+    )
+    return len(exported_cards)
+
 
 def parse_media_folder(folder_path: Path, base_url: str) -> list[dict]:
     cards = []
@@ -1023,6 +1116,12 @@ def process_anki_deck(
         updated_cards = after_review_events()
         if updated_cards is not None:
             all_cards = updated_cards
+    write_practice_export(
+        stream_key,
+        stream_cfg,
+        all_cards,
+        stream_history,
+    )
 
     scheduler = FSRSScheduler()
     front_text_scale = float(stream_cfg.get("front_text_scale", 1.0))
