@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 46,
+  "revision": 49,
   "vocabulary": {
     "slovak-0001": {
       "status": "sentence_reinforcement",
@@ -112,10 +112,10 @@
     },
     "slovak-0014": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 1,
+      "sentence_pass_count": 2,
       "introduced_at": "2026-09-06T22:46:15.984988Z",
       "introduction_strategy": "vocabulary_first",
-      "last_sentence_pass_at": "2026-09-07T07:35:02.874000Z"
+      "last_sentence_pass_at": "2026-09-10T02:46:57.960000Z"
     },
     "slovak-0016": {
       "status": "sentence_reinforcement",
@@ -216,6 +216,12 @@
       "status": "sentence_reinforcement",
       "sentence_pass_count": 0,
       "introduced_at": "2026-09-08T18:31:41.537563Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "slovak-0033": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-09-10T02:50:00.540468Z",
       "introduction_strategy": "vocabulary_first"
     }
   },
@@ -402,6 +408,10 @@
     },
     "5cfa7d55-e827-4505-9d3a-0a26148ac325": {
       "processed_at": "2026-09-10T02:45:02.836842Z",
+      "status": "applied"
+    },
+    "4ec134ae-3c54-47ed-b111-f7d94d341752": {
+      "processed_at": "2026-09-10T02:50:00.540468Z",
       "status": "applied"
     }
   },
@@ -774,7 +784,18 @@
       }
     ]
   },
-  "vocabulary_candidates": {},
+  "vocabulary_candidates": {
+    "slovak_reading-discovered-696c6b11997b70b0": {
+      "surface_form": "tiskom",
+      "observed_form": "tiskom",
+      "translation": "by mail",
+      "pronunciation": "tsikom",
+      "source_sentence_id": "slovak_reading-2026-09-10-slovak-0033",
+      "source_sentence_text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
+      "status": "pending",
+      "created_at": "2026-09-10T02:50:00.540468Z"
+    }
+  },
   "processed_candidate_events": {},
   "previous_combined_batch": {
     "id": "2026-09-09",
