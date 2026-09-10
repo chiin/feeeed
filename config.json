@@ -6,7 +6,11 @@
       "path": "HSK.csv",
       "feed_title": "HSK Vocabulary",
       "new_cards_per_day": 50,
-      "front_text_scale": 2
+      "front_text_scale": 2,
+      "practice_export": {
+        "path": "hsk_practice.csv",
+        "minimum_interval_days": 30
+      }
     },
     "economics": {
       "type": "pdf_folder",
