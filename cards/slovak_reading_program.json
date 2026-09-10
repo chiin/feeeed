@@ -4,11 +4,11 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-10",
   "batch_date": "2026-09-10",
-  "compiled_at": "2026-09-10T02:44:42.554008Z",
-  "state_revision": 44,
+  "compiled_at": "2026-09-10T02:45:02.836842Z",
+  "state_revision": 46,
   "source_revisions": {
     "slovak_vocab": 56,
-    "slovak_sentences": 49
+    "slovak_sentences": 52
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -109,7 +109,10 @@
     "07f4e832-b0ab-499b-9502-772cc0ca1753",
     "385c690c-9c64-4819-a463-1a757f83c6b2",
     "0c3c81f2-a595-4e85-b475-818fc318ad6f",
-    "edef5d81-58af-44da-8029-fa5603fe9b6e"
+    "edef5d81-58af-44da-8029-fa5603fe9b6e",
+    "7fc26f84-2558-48a7-ab24-6690751b4a41",
+    "4da5e9d2-837b-4827-9fb4-f9bd10310956",
+    "5cfa7d55-e827-4505-9d3a-0a26148ac325"
   ],
   "cards": [
     {
@@ -143,42 +146,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0009",
-      "front": {
-        "text": "M\u00e1m dev\u00e4\u0165 k\u00faskov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have nine pieces.",
-        "notes": "[\u02c8d\u0325ev\u025bac]\n\nThe word 'dev\u00e4\u0165' is the numeral 'nine', used invariable with the genitive plural noun 'k\u00faskov'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:34:21.634000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -243,42 +210,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0015",
-      "front": {
-        "text": "Dobr\u00fd de\u0148, ako sa m\u00e1te?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Good day, how are you?",
-        "notes": "[\u02c8d\u0254bri\u02d0 \u02c8d\u0325e\u0148]\n\nThe phrase 'Dobr\u00fd de\u0148' is a standard polite greeting meaning 'good day', used in formal or semi-formal contexts."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T07:10:37.119000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0036",
@@ -388,25 +319,25 @@
         "notes": "[\u02c8a\u02d0no]\n\n\u00c1no is the affirmative particle meaning yes, used here to confirm an invitation or statement."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
+      "available_at": "2026-09-10T02:54:44.162000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.6075801062519337,
+        "difficulty": 7.394502741279718,
+        "interval_days": 0,
+        "reviews": 2,
         "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:34:41.938000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-10T02:44:44.162000Z",
+        "next_due_at": "2026-09-10T02:54:44.162000Z"
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
