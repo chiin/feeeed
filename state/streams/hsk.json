@@ -2724,7 +2724,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 532,
+  "revision": 533,
   "processed_events": {
     "9b388466-e31d-4df5-9102-05901dfbc03a": {
       "processed_at": "2026-08-30T08:03:20.615217Z",
@@ -4820,6 +4820,725 @@
     }
   },
   "daily_batch": {
+    "id": "2026-09-11",
+    "date": "2026-09-11",
+    "created_at": "2026-09-10T17:32:39.141833Z",
+    "card_ids": [
+      "hsk-0080",
+      "hsk-0155",
+      "hsk-0157",
+      "hsk-0163",
+      "hsk-0164",
+      "hsk-0165",
+      "hsk-0166",
+      "hsk-0169",
+      "hsk-0173",
+      "hsk-0176",
+      "hsk-0187",
+      "hsk-0197",
+      "hsk-0198",
+      "hsk-0200",
+      "hsk-0238",
+      "hsk-0240",
+      "hsk-0210",
+      "hsk-0233",
+      "hsk-0222",
+      "hsk-0243",
+      "hsk-0201",
+      "hsk-0004",
+      "hsk-0005",
+      "hsk-0006",
+      "hsk-0007",
+      "hsk-0008",
+      "hsk-0009",
+      "hsk-0011",
+      "hsk-0017",
+      "hsk-0019",
+      "hsk-0020",
+      "hsk-0021",
+      "hsk-0087",
+      "hsk-0151",
+      "hsk-0152",
+      "hsk-0153",
+      "hsk-0154",
+      "hsk-0156",
+      "hsk-0158",
+      "hsk-0159",
+      "hsk-0160",
+      "hsk-0161",
+      "hsk-0162",
+      "hsk-0167",
+      "hsk-0168",
+      "hsk-0170",
+      "hsk-0171",
+      "hsk-0172",
+      "hsk-0174",
+      "hsk-0175",
+      "hsk-0177",
+      "hsk-0178",
+      "hsk-0179",
+      "hsk-0180",
+      "hsk-0181",
+      "hsk-0182",
+      "hsk-0183",
+      "hsk-0184",
+      "hsk-0185",
+      "hsk-0186",
+      "hsk-0188",
+      "hsk-0189",
+      "hsk-0190",
+      "hsk-0191",
+      "hsk-0192",
+      "hsk-0193",
+      "hsk-0194",
+      "hsk-0195",
+      "hsk-0196",
+      "hsk-0199",
+      "hsk-0207",
+      "hsk-0013",
+      "hsk-0037",
+      "hsk-0038",
+      "hsk-0039",
+      "hsk-0040",
+      "hsk-0041",
+      "hsk-0042",
+      "hsk-0043",
+      "hsk-0044",
+      "hsk-0045",
+      "hsk-0046",
+      "hsk-0047",
+      "hsk-0048",
+      "hsk-0049",
+      "hsk-0050",
+      "hsk-0056",
+      "hsk-0081",
+      "hsk-0136",
+      "hsk-0146",
+      "hsk-0221",
+      "hsk-0085",
+      "hsk-0202",
+      "hsk-0203",
+      "hsk-0204",
+      "hsk-0205",
+      "hsk-0206",
+      "hsk-0208",
+      "hsk-0209",
+      "hsk-0211",
+      "hsk-0212",
+      "hsk-0213",
+      "hsk-0214",
+      "hsk-0215",
+      "hsk-0216",
+      "hsk-0217",
+      "hsk-0218",
+      "hsk-0219",
+      "hsk-0220",
+      "hsk-0223",
+      "hsk-0224",
+      "hsk-0225",
+      "hsk-0226",
+      "hsk-0227",
+      "hsk-0228",
+      "hsk-0229",
+      "hsk-0230",
+      "hsk-0231",
+      "hsk-0232",
+      "hsk-0234",
+      "hsk-0235",
+      "hsk-0236",
+      "hsk-0237",
+      "hsk-0239",
+      "hsk-0241",
+      "hsk-0242",
+      "hsk-0244",
+      "hsk-0245",
+      "hsk-0246",
+      "hsk-0247",
+      "hsk-0248",
+      "hsk-0249",
+      "hsk-0250",
+      "hsk-0251",
+      "hsk-0252",
+      "hsk-0253",
+      "hsk-0254",
+      "hsk-0255",
+      "hsk-0256",
+      "hsk-0257",
+      "hsk-0258",
+      "hsk-0259"
+    ],
+    "active": [
+      {
+        "card_id": "hsk-0080",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0155",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0157",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0163",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0164",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0165",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0166",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0169",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0173",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0176",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0187",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0197",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0198",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0200",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0238",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0240",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0210",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0233",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0222",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0243",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0201",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0004",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0005",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0006",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0007",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0008",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0009",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0011",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0017",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0019",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0020",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0021",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0087",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0151",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0152",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0153",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0154",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0156",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0158",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0159",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0160",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0161",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0162",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0167",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0168",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0170",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0171",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0172",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0174",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0175",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0177",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0178",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0179",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0180",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0181",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0182",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0183",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0184",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0185",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0186",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0188",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0189",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0190",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0191",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0192",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0193",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0194",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0195",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0196",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0199",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0207",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0013",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0037",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0038",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0039",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0040",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0041",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0042",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0043",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0044",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0045",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0046",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0047",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0048",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0049",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0050",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0056",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0081",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0136",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0146",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0221",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0085",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0202",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0203",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0204",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0205",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0206",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0208",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0209",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0211",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0212",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0213",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0214",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0215",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0216",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0217",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0218",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0219",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0220",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0223",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0224",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0225",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0226",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0227",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0228",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0229",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0230",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0231",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0232",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0234",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0235",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0236",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0237",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0239",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0241",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0242",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0244",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0245",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0246",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0247",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0248",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0249",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0250",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0251",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0252",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0253",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0254",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0255",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0256",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0257",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0258",
+        "available_at": "2026-09-10T16:00:00Z"
+      },
+      {
+        "card_id": "hsk-0259",
+        "available_at": "2026-09-10T16:00:00Z"
+      }
+    ]
+  },
+  "previous_batch": {
     "id": "2026-09-10",
     "date": "2026-09-10",
     "created_at": "2026-09-09T17:40:36.319262Z",
@@ -5530,620 +6249,6 @@
       {
         "card_id": "hsk-0259",
         "available_at": "2026-09-09T16:00:00Z"
-      }
-    ]
-  },
-  "previous_batch": {
-    "id": "2026-09-09",
-    "date": "2026-09-09",
-    "created_at": "2026-09-08T18:31:41.537563Z",
-    "card_ids": [
-      "hsk-0080",
-      "hsk-0155",
-      "hsk-0157",
-      "hsk-0163",
-      "hsk-0164",
-      "hsk-0165",
-      "hsk-0166",
-      "hsk-0169",
-      "hsk-0173",
-      "hsk-0176",
-      "hsk-0187",
-      "hsk-0197",
-      "hsk-0198",
-      "hsk-0200",
-      "hsk-0238",
-      "hsk-0240",
-      "hsk-0210",
-      "hsk-0233",
-      "hsk-0222",
-      "hsk-0243",
-      "hsk-0201",
-      "hsk-0004",
-      "hsk-0005",
-      "hsk-0006",
-      "hsk-0007",
-      "hsk-0008",
-      "hsk-0009",
-      "hsk-0011",
-      "hsk-0017",
-      "hsk-0019",
-      "hsk-0020",
-      "hsk-0021",
-      "hsk-0087",
-      "hsk-0151",
-      "hsk-0152",
-      "hsk-0153",
-      "hsk-0154",
-      "hsk-0156",
-      "hsk-0158",
-      "hsk-0159",
-      "hsk-0160",
-      "hsk-0161",
-      "hsk-0162",
-      "hsk-0167",
-      "hsk-0168",
-      "hsk-0170",
-      "hsk-0171",
-      "hsk-0172",
-      "hsk-0174",
-      "hsk-0175",
-      "hsk-0177",
-      "hsk-0178",
-      "hsk-0179",
-      "hsk-0180",
-      "hsk-0181",
-      "hsk-0182",
-      "hsk-0183",
-      "hsk-0184",
-      "hsk-0185",
-      "hsk-0186",
-      "hsk-0188",
-      "hsk-0189",
-      "hsk-0190",
-      "hsk-0191",
-      "hsk-0192",
-      "hsk-0193",
-      "hsk-0194",
-      "hsk-0195",
-      "hsk-0196",
-      "hsk-0199",
-      "hsk-0207",
-      "hsk-0202",
-      "hsk-0203",
-      "hsk-0204",
-      "hsk-0205",
-      "hsk-0206",
-      "hsk-0208",
-      "hsk-0209",
-      "hsk-0211",
-      "hsk-0212",
-      "hsk-0213",
-      "hsk-0214",
-      "hsk-0215",
-      "hsk-0216",
-      "hsk-0217",
-      "hsk-0218",
-      "hsk-0219",
-      "hsk-0220",
-      "hsk-0223",
-      "hsk-0224",
-      "hsk-0225",
-      "hsk-0226",
-      "hsk-0227",
-      "hsk-0228",
-      "hsk-0229",
-      "hsk-0230",
-      "hsk-0231",
-      "hsk-0232",
-      "hsk-0234",
-      "hsk-0235",
-      "hsk-0236",
-      "hsk-0237",
-      "hsk-0239",
-      "hsk-0241",
-      "hsk-0242",
-      "hsk-0244",
-      "hsk-0245",
-      "hsk-0246",
-      "hsk-0247",
-      "hsk-0248",
-      "hsk-0249",
-      "hsk-0250",
-      "hsk-0251",
-      "hsk-0252",
-      "hsk-0253",
-      "hsk-0254",
-      "hsk-0255",
-      "hsk-0256",
-      "hsk-0257",
-      "hsk-0258",
-      "hsk-0259"
-    ],
-    "active": [
-      {
-        "card_id": "hsk-0080",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0155",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0157",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0163",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0164",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0165",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0166",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0169",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0173",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0176",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0187",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0197",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0198",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0200",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0238",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0240",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0210",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0233",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0222",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0243",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0201",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0004",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0005",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0006",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0007",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0008",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0009",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0011",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0017",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0019",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0020",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0021",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0087",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0151",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0152",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0153",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0154",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0156",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0158",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0159",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0160",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0161",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0162",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0167",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0168",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0170",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0171",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0172",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0174",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0175",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0177",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0178",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0179",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0180",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0181",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0182",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0183",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0184",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0185",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0186",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0188",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0189",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0190",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0191",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0192",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0193",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0194",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0195",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0196",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0199",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0207",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0202",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0203",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0204",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0205",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0206",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0208",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0209",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0211",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0212",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0213",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0214",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0215",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0216",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0217",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0218",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0219",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0220",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0223",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0224",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0225",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0226",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0227",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0228",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0229",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0230",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0231",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0232",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0234",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0235",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0236",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0237",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0239",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0241",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0242",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0244",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0245",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0246",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0247",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0248",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0249",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0250",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0251",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0252",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0253",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0254",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0255",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0256",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0257",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0258",
-        "available_at": "2026-09-08T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0259",
-        "available_at": "2026-09-08T16:00:00Z"
       }
     ]
   }
