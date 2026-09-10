@@ -4,10 +4,10 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-10",
   "batch_date": "2026-09-10",
-  "compiled_at": "2026-09-10T08:50:55.241506Z",
+  "compiled_at": "2026-09-10T08:51:16.424874Z",
   "state_revision": 54,
   "source_revisions": {
-    "slovak_vocab": 91,
+    "slovak_vocab": 99,
     "slovak_sentences": 57
   },
   "processed_event_ids": [
@@ -102,6 +102,14 @@
     "d17c3267-fa30-4729-8ca0-76f060de8ce3",
     "871d5d00-22b9-4808-9773-2fdf0400c701",
     "26da1eb1-bef1-4070-8dc6-ee9b8624f559",
+    "a63d824b-3849-4f0e-80af-1cac68692252",
+    "07d3dabc-410b-4e9b-bbfe-137c0ca2da0d",
+    "19a50db2-1fe3-4bf7-aaeb-5a9eb6165c21",
+    "d75d3440-24d4-4985-9808-7fa712968f38",
+    "621b30b7-60de-4737-94a6-7a78930272ea",
+    "7133a607-9615-4f82-9627-31351b0ff9af",
+    "a397da28-e722-4490-9b05-b50d97df8282",
+    "7c6b270e-2e4e-4f10-b243-b2b129f85b97",
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
     "b1e73139-ac5d-4301-918a-0a135aec15d9",
@@ -443,181 +451,25 @@
         "text": "you (s) are",
         "notes": null
       },
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0043",
-      "entry_type": "term",
-      "front": {
-        "text": "vy",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you (pl)",
-        "notes": null
-      },
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0018",
-      "entry_type": "term",
-      "front": {
-        "text": "nie",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "no",
-        "notes": null
-      },
-      "available_at": "2026-09-09T16:00:00Z",
+      "available_at": "2026-09-10T09:00:30.366000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
         "reviews": 1,
-        "passing_reviews": 1,
+        "passing_reviews": 0,
         "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T05:11:38.906000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-10T08:50:30.366000Z",
+        "next_due_at": "2026-09-10T09:00:30.366000Z"
       },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0061",
-      "entry_type": "sentence",
-      "front": {
-        "text": "ty si J\u00e1n",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you are Jan",
-        "notes": null
-      },
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0030",
-      "entry_type": "term",
-      "front": {
-        "text": "\u010dak\u00e1",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "it is waiting",
-        "notes": null
-      },
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T08:47:49.072000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0052",
-      "entry_type": "term",
-      "front": {
-        "text": "m\u00e1te",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you (pl) have",
-        "notes": null
-      },
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0053",
-      "entry_type": "term",
-      "front": {
-        "text": "maj\u00fa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "they have",
-        "notes": null
-      },
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -658,42 +510,6 @@
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
       "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0003",
-      "entry_type": "term",
-      "front": {
-        "text": "tri",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "3",
-        "notes": null
-      },
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T05:11:42.226000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
     },
     {
       "id": "slovak-0063",
