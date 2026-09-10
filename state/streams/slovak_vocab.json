@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 66,
+  "revision": 68,
   "cards": {
     "slovak-0009": {
       "state": "review",
@@ -231,15 +231,15 @@
     "slovak-0006": {
       "state": "review",
       "step": null,
-      "stability": 2.3065,
-      "difficulty": 2.118103970459016,
-      "interval_days": 2,
-      "reviews": 1,
-      "passing_reviews": 1,
+      "stability": 16.17726320265468,
+      "difficulty": 2.111214235785395,
+      "interval_days": 16,
+      "reviews": 2,
+      "passing_reviews": 2,
       "lapses": 0,
       "last_rating": "good",
-      "last_reviewed_at": "2026-09-06T05:15:24.928000Z",
-      "next_due_at": "2026-09-07T16:00:00Z"
+      "last_reviewed_at": "2026-09-10T08:47:24.462000Z",
+      "next_due_at": "2026-09-25T16:00:00Z"
     },
     "slovak-0014": {
       "state": "review",
@@ -296,15 +296,15 @@
     "slovak-0039": {
       "state": "review",
       "step": null,
-      "stability": 2.3065,
-      "difficulty": 2.118103970459016,
-      "interval_days": 2,
-      "reviews": 1,
-      "passing_reviews": 1,
+      "stability": 13.826903694354568,
+      "difficulty": 2.111214235785395,
+      "interval_days": 14,
+      "reviews": 2,
+      "passing_reviews": 2,
       "lapses": 0,
       "last_rating": "good",
-      "last_reviewed_at": "2026-09-07T07:32:34.713000Z",
-      "next_due_at": "2026-09-08T16:00:00Z"
+      "last_reviewed_at": "2026-09-10T08:47:14.758000Z",
+      "next_due_at": "2026-09-23T16:00:00Z"
     },
     "slovak-0036": {
       "state": "review",
@@ -870,6 +870,14 @@
     "5b3f3dd4-555c-4550-9398-a7c57d2cfdee": {
       "processed_at": "2026-09-10T08:30:01.768344Z",
       "status": "applied"
+    },
+    "0f196ea1-557e-42cd-9a86-427c16cbb58c": {
+      "processed_at": "2026-09-10T08:47:56.863817Z",
+      "status": "applied"
+    },
+    "1308c554-4412-46eb-b00d-5dbd3e055ebc": {
+      "processed_at": "2026-09-10T08:47:56.863817Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -962,10 +970,6 @@
         "available_at": "2026-09-09T16:00:00Z"
       },
       {
-        "card_id": "slovak-0006",
-        "available_at": "2026-09-09T16:00:00Z"
-      },
-      {
         "card_id": "slovak-0007",
         "available_at": "2026-09-09T16:00:00Z"
       },
@@ -1051,10 +1055,6 @@
       },
       {
         "card_id": "slovak-0038",
-        "available_at": "2026-09-09T16:00:00Z"
-      },
-      {
-        "card_id": "slovak-0039",
         "available_at": "2026-09-09T16:00:00Z"
       },
       {
