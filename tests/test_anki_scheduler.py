@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 import tempfile
@@ -415,6 +416,81 @@ class FeedIntegrationTests(unittest.TestCase):
         self.assertEqual(cards[0]["back"]["text"], "1")
         self.assertEqual(cards[0]["entry_type"], "term")
 
+    def test_practice_export_preserves_source_order_and_excludes_boundary(self):
+        from generate_feeds import parse_csv_deck, write_practice_export
+
+        config = {
+            "practice_export": {
+                "path": "hsk_practice.csv",
+                "minimum_interval_days": 30,
+            }
+        }
+        history = fsrs_history(
+            {
+                "mature-2": fsrs_card_state(),
+                "boundary": fsrs_card_state(),
+                "mature-1": fsrs_card_state(),
+            }
+        )
+        history["cards"]["mature-1"]["interval_days"] = 31
+        history["cards"]["boundary"]["interval_days"] = 30
+        history["cards"]["mature-2"]["interval_days"] = 90
+
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                Path("HSK.csv").write_text(
+                    "id,front,back\n"
+                    'mature-1,你好,"hello, hi"\n'
+                    "boundary,再見,goodbye\n"
+                    "mature-2,謝謝,thank you\n"
+                    "unseen,請,please\n",
+                    encoding="utf-8",
+                )
+                cards = parse_csv_deck(Path("HSK.csv"), "https://example.test")
+
+                exported = write_practice_export(
+                    "hsk", config, cards, history
+                )
+
+                with Path("hsk_practice.csv").open(
+                    mode="r", encoding="utf-8", newline=""
+                ) as export_file:
+                    rows = list(csv.DictReader(export_file))
+            finally:
+                os.chdir(old_cwd)
+
+        self.assertEqual(exported, 2)
+        self.assertEqual(
+            rows,
+            [
+                {"id": "mature-1", "front": "你好", "back": "hello, hi"},
+                {"id": "mature-2", "front": "謝謝", "back": "thank you"},
+            ],
+        )
+
+    def test_practice_export_writes_header_when_no_cards_qualify(self):
+        from generate_feeds import write_practice_export
+
+        config = {
+            "practice_export": {
+                "path": "hsk_practice.csv",
+                "minimum_interval_days": 30,
+            }
+        }
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                exported = write_practice_export("hsk", config, [], fsrs_history())
+                contents = Path("hsk_practice.csv").read_text(encoding="utf-8")
+            finally:
+                os.chdir(old_cwd)
+
+        self.assertEqual(exported, 0)
+        self.assertEqual(contents, "id,front,back\n")
+
     def test_generated_json_and_rss_follow_authoritative_batch(self):
         from generate_feeds import process_anki_deck
 
@@ -423,6 +499,10 @@ class FeedIntegrationTests(unittest.TestCase):
             "path": "HSK.csv",
             "feed_title": "HSK",
             "new_cards_per_day": 1,
+            "practice_export": {
+                "path": "hsk_practice.csv",
+                "minimum_interval_days": 30,
+            },
         }
         history = {}
         with tempfile.TemporaryDirectory() as directory:
@@ -470,6 +550,29 @@ class FeedIntegrationTests(unittest.TestCase):
                     history["daily_batch"]["card_ids"], ["hsk-1"]
                 )
                 self.assertNotIn("hsk-2", history["daily_batch"]["card_ids"])
+                self.assertEqual(
+                    Path("hsk_practice.csv").read_text(encoding="utf-8"),
+                    "id,front,back\n",
+                )
+
+                history["cards"]["hsk-1"]["interval_days"] = 31
+                process_anki_deck(
+                    "hsk",
+                    config,
+                    history,
+                    self.make_feed(),
+                    "https://example.test",
+                    {},
+                    NOW,
+                )
+                with Path("hsk_practice.csv").open(
+                    mode="r", encoding="utf-8", newline=""
+                ) as export_file:
+                    exported_rows = list(csv.DictReader(export_file))
+                self.assertEqual(
+                    exported_rows,
+                    [{"id": "hsk-1", "front": "one", "back": "first"}],
+                )
             finally:
                 os.chdir(old_cwd)
 
