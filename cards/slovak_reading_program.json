@@ -4,11 +4,11 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-10",
   "batch_date": "2026-09-10",
-  "compiled_at": "2026-09-10T08:51:38.015959Z",
-  "state_revision": 54,
+  "compiled_at": "2026-09-10T09:56:17.349498Z",
+  "state_revision": 60,
   "source_revisions": {
     "slovak_vocab": 102,
-    "slovak_sentences": 57
+    "slovak_sentences": 68
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -163,81 +163,20 @@
     "47f9b940-7992-45a5-89ac-def728a30615",
     "98be9353-69bd-4794-97a2-e8fefc2f0004",
     "9aa93574-e590-42bf-ba95-64351705dd76",
-    "eba205c0-ea07-4663-a285-1e93268d0143"
+    "eba205c0-ea07-4663-a285-1e93268d0143",
+    "d83b643e-d641-4463-b9e5-7da4641c8128",
+    "13c81813-c740-4767-989c-1c2c13473cce",
+    "30e46a0f-44f7-4a8e-9382-7d95deb00d2f",
+    "8c9c36c1-ed64-49c8-bd40-80dff9b80fe6",
+    "dacab659-e8f2-4334-82b3-610a67e326f7",
+    "4a17b620-a40f-4134-8561-0b15fb864d10",
+    "24698467-a327-46d6-b07e-d62d74aa375c",
+    "e3278ade-990d-444a-aba2-fb2eddf83ffb",
+    "8aeeb129-26b2-4094-b3d8-0291645175ff",
+    "6062d11d-1556-44c4-8087-fca24e531141",
+    "1c4e929e-a140-4660-81fb-bd7e006cb66d"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0010",
-      "front": {
-        "text": "M\u00e1m desa\u0165 k\u00faskov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have ten pieces.",
-        "notes": "[\u02c8d\u0325esaac]\n\nThe word 'desa\u0165' is the numeral 'ten', used invariable with the genitive plural noun 'k\u00faskov'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:33:27.288000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "6d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0011",
-      "front": {
-        "text": "M\u00e1 jeden\u00e1s\u0165 kn\u00edh.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He has eleven books.",
-        "notes": "[\u02c8jed\u0259na\u02d0st]\n\njeden\u00e1s\u0165 is the cardinal number eleven, used here in the genitive plural after the verb m\u00e1 (has) to agree with kn\u00edh (books)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:33:43.707000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
     {
       "id": "slovak_reading-2026-09-08-slovak-0023",
       "front": {
@@ -250,49 +189,25 @@
         "notes": "Ameri\u010danka Jana nos\u00ed nov\u00fd oble\u010denie do mesta\n\nAmeri\u010danka is the feminine singular noun indicating a female national from the United States, functioning as the subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-10T08:57:40.590000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-10T08:47:40.590000Z",
+        "next_due_at": "2026-09-10T08:57:40.590000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0026",
-      "front": {
-        "text": "m\u00e1te ... ?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you have ... ?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-08T04:53:49.378000Z",
-        "next_due_at": "2026-09-09T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -310,13 +225,25 @@
         "notes": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania\n\nSlov\u00e1k is the nominative masculine singular noun denoting a person of Slovak ethnic origin, serving as the subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-10T08:58:17.662000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-10T08:48:17.662000Z",
+        "next_due_at": "2026-09-10T08:58:17.662000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -334,49 +261,25 @@
         "notes": "[tu j\u025b]\n\ntu je is a presentational phrase: tu means here, and je is the third-person singular present form of by\u0165, used to introduce something nearby."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-10T08:58:49.996000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-10T08:48:49.996000Z",
+        "next_due_at": "2026-09-10T08:58:49.996000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0007",
-      "front": {
-        "text": "M\u00e1m sedem k\u00faskov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have seven pieces.",
-        "notes": "[\u02c8sed\u025bm]\n\nThe word 'sedem' is the numeral 'seven', which is invariable and used with the genitive plural form of the noun, 'k\u00faskov'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T08:48:18.323000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "6d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -394,49 +297,25 @@
         "notes": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina\n\nAmeri\u010dan is the masculine singular noun indicating a male national from the United States, serving as the subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-10T09:00:06.144000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-10T08:50:06.144000Z",
+        "next_due_at": "2026-09-10T09:00:06.144000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0016",
-      "front": {
-        "text": "Te\u0161\u00ed ma, \u017ee sme sa stretli.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I'm pleased to meet you that we met.",
-        "notes": "[\u02c8t\u025b\u0283i\u02d0 ma]\n\nTe\u0161\u00ed ma is a common greeting expression meaning pleased to meet you or nice to meet you, literally it pleases me."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T08:48:53.960000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -479,42 +358,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-07-slovak-0012",
-      "front": {
-        "text": "Odoslal dvan\u00e1s\u0165 listov.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He sent twelve letters.",
-        "notes": "[\u02c8dvanas\u02d0t]\n\ndvan\u00e1s\u0165 is the cardinal number twelve, used here in the genitive plural to agree with listov (letters)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:49:21.176000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak_reading-2026-09-09-slovak-0028",
       "front": {
         "text": "Mami, po\u010fme na obed.",
@@ -526,13 +369,25 @@
         "notes": "[\u02c8p\u0254\u025fm\u025b]\n\npo\u010fme is the first-person plural imperative form of \u00eds\u0165, used to suggest that the speaker and listener go together."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-09T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-10T09:01:07.739000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-10T08:51:07.739000Z",
+        "next_due_at": "2026-09-10T09:01:07.739000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -724,7 +579,7 @@
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "1d"
+        "easy": "2d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
