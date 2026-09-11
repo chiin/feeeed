@@ -4,10 +4,10 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-11",
   "batch_date": "2026-09-11",
-  "compiled_at": "2026-09-11T00:33:34.168259Z",
+  "compiled_at": "2026-09-11T00:33:58.585876Z",
   "state_revision": 64,
   "source_revisions": {
-    "slovak_vocab": 104,
+    "slovak_vocab": 108,
     "slovak_sentences": 73
   },
   "processed_event_ids": [
@@ -114,6 +114,10 @@
     "458506d7-150d-4d1d-806b-8d02b5ce55d4",
     "4ec37152-8883-4a10-88f9-16fd89973504",
     "6210904f-9529-4e91-99b1-f5f1d0cf6870",
+    "b83217a2-b264-4efa-970e-e45c39683804",
+    "cdfbb8ca-fbd7-4a91-9bc7-426621c02571",
+    "2397eac6-1f44-4ca0-9bb9-c7c8779db69d",
+    "8d19b00b-d57a-4b6e-88c6-df158238508c",
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
     "b1e73139-ac5d-4301-918a-0a135aec15d9",
@@ -194,85 +198,25 @@
         "text": "what is that?",
         "notes": null
       },
-      "available_at": "2026-09-10T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-11T00:29:05.048000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-11T00:19:05.048000Z",
+        "next_due_at": "2026-09-11T00:29:05.048000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0066",
-      "entry_type": "sentence",
-      "front": {
-        "text": "ty si Jana?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "are you Jana?",
-        "notes": null
-      },
-      "available_at": "2026-09-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0069",
-      "entry_type": "sentence",
-      "front": {
-        "text": "s\u00fa doma?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "are they at home?",
-        "notes": null
-      },
-      "available_at": "2026-09-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0074",
-      "entry_type": "sentence",
-      "front": {
-        "text": "kto je \u2026 ?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "who is \u2026 ?",
-        "notes": null
-      },
-      "available_at": "2026-09-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
