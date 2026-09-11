@@ -5,8 +5,8 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-11",
   "batch_date": "2026-09-11",
-  "compiled_at": "2026-09-11T00:19:55.894900Z",
-  "state_revision": 71,
+  "compiled_at": "2026-09-11T00:20:14.714519Z",
+  "state_revision": 73,
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
@@ -71,7 +71,9 @@
     "6062d11d-1556-44c4-8087-fca24e531141",
     "1c4e929e-a140-4660-81fb-bd7e006cb66d",
     "a733d8ac-459c-4411-ba7d-b0c751eda109",
-    "ce8daaaf-0a50-4613-ade7-9edfb55014cd"
+    "ce8daaaf-0a50-4613-ade7-9edfb55014cd",
+    "0a15facc-fdac-4f21-aaed-c6d15b9c5925",
+    "3d673f62-711b-4832-b29c-04a1805e1a23"
   ],
   "cards": [
     {
@@ -306,39 +308,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-09-slovak-0027",
-      "front": {
-        "text": "Pozrite sa, tu je moja kniha.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Look, here is my book.",
-        "notes": "[tu j\u025b]\n\ntu je is a presentational phrase: tu means here, and je is the third-person singular present form of by\u0165, used to introduce something nearby."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-10T08:48:49.996000Z",
-        "next_due_at": "2026-09-10T08:58:49.996000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-07-slovak-0017",
       "front": {
         "text": "\u00c1no, pr\u00eddem na p\u00e1rty.",
@@ -456,27 +425,6 @@
       "back": {
         "text": "Mom is waiting for us.",
         "notes": "[\u02c8t\u0361\u0283aka\u02d0]\n\n\u010dak\u00e1 is the third-person singular present form of \u010daka\u0165, meaning is waiting; \u010daka\u0165 na plus the accusative names the person or thing waited for."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-09-slovak-0031",
-      "front": {
-        "text": "Je mi dobre.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I feel well.",
-        "notes": "[\u02c8d\u0254br\u025b]\n\ndobre is an adverb used predicatively in je mi dobre, describing the speaker's state as well or fine."
       },
       "presentation": "text_reading",
       "available_at": "2026-09-10T16:00:00Z",
@@ -618,6 +566,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-11T00:19:40.281000Z",
         "next_due_at": "2026-09-11T00:29:40.281000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-09-slovak-0031",
+      "front": {
+        "text": "Je mi dobre.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I feel well.",
+        "notes": "[\u02c8d\u0254br\u025b]\n\ndobre is an adverb used predicatively in je mi dobre, describing the speaker's state as well or fine."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-11T00:29:51.550000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-11T00:19:51.550000Z",
+        "next_due_at": "2026-09-11T00:29:51.550000Z"
       },
       "schedule_previews": {
         "again": "10m",

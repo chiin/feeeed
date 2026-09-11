@@ -4,11 +4,11 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-11",
   "batch_date": "2026-09-11",
-  "compiled_at": "2026-09-11T00:19:55.894900Z",
-  "state_revision": 63,
+  "compiled_at": "2026-09-11T00:20:14.714519Z",
+  "state_revision": 64,
   "source_revisions": {
     "slovak_vocab": 104,
-    "slovak_sentences": 71
+    "slovak_sentences": 73
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -177,7 +177,9 @@
     "6062d11d-1556-44c4-8087-fca24e531141",
     "1c4e929e-a140-4660-81fb-bd7e006cb66d",
     "a733d8ac-459c-4411-ba7d-b0c751eda109",
-    "ce8daaaf-0a50-4613-ade7-9edfb55014cd"
+    "ce8daaaf-0a50-4613-ade7-9edfb55014cd",
+    "0a15facc-fdac-4f21-aaed-c6d15b9c5925",
+    "3d673f62-711b-4832-b29c-04a1805e1a23"
   ],
   "cards": [
     {
@@ -313,42 +315,6 @@
       "front_text_scale": 1.2
     },
     {
-      "id": "slovak_reading-2026-09-09-slovak-0027",
-      "front": {
-        "text": "Pozrite sa, tu je moja kniha.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Look, here is my book.",
-        "notes": "[tu j\u025b]\n\ntu je is a presentational phrase: tu means here, and je is the third-person singular present form of by\u0165, used to introduce something nearby."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-10T08:48:49.996000Z",
-        "next_due_at": "2026-09-10T08:58:49.996000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak_reading-2026-09-09-slovak-0031",
       "front": {
         "text": "Je mi dobre.",
@@ -360,13 +326,25 @@
         "notes": "[\u02c8d\u0254br\u025b]\n\ndobre is an adverb used predicatively in je mi dobre, describing the speaker's state as well or fine."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-10T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-11T00:29:51.550000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-11T00:19:51.550000Z",
+        "next_due_at": "2026-09-11T00:29:51.550000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
