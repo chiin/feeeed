@@ -4,11 +4,11 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T15:39:05.627477Z",
-  "state_revision": 73,
+  "compiled_at": "2026-09-12T15:39:25.448297Z",
+  "state_revision": 77,
   "source_revisions": {
     "hsk": 748,
-    "mandarin_sentences": 84
+    "mandarin_sentences": 88
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -822,7 +822,11 @@
     "0b1db43b-4ce8-4d3f-9d24-1c80d31994c7",
     "ef6952e9-a483-4465-ae09-1efacd68fdda",
     "749e56af-b1db-4191-ac4a-9fb05c159a4f",
-    "1a784a1b-dab9-45fc-904f-3459bca22557"
+    "1a784a1b-dab9-45fc-904f-3459bca22557",
+    "4a677ed8-678c-476f-afcb-1b9092c60ab3",
+    "11db35c4-6d81-49a6-924a-815b592d9772",
+    "d0648af9-895f-4da0-ab43-e320663fa043",
+    "fb10c05a-f006-44c9-8fbb-0e2e22cfdf7a"
   ],
   "cards": [
     {
@@ -872,78 +876,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "mandarin_reading-2026-09-06-hsk-0152",
-      "front": {
-        "text": "\u738b\u5148\u751f\u4eca\u5929\u7a7f\u4e86\u4e00\u4ef6\u767d\u8272\u7684\u8863\u670d\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Mr. Wang is wearing a white piece of clothing today.",
-        "notes": "W\u00e1ng xi\u0101nsheng j\u012bnti\u0101n chu\u0101nle y\u012b ji\u00e0n b\u00e1is\u00e8 de y\u012bfu.\n\n\u767d (b\u00e1i) - white; appears in \u767d\u8272 (white-colored)"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.6952546986897922,
-        "difficulty": 8.77916217644797,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:25:10.477000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "6d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "mandarin_reading-2026-09-06-hsk-0151",
-      "front": {
-        "text": "\u8acb\u4f60\u628a\u9019\u672c\u66f8\u653e\u5728\u684c\u5b50\u4e0a\u5427\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Please put this book on the table.",
-        "notes": "Q\u01d0ng n\u01d0 b\u01ce zh\u00e8 b\u011bn sh\u016b f\u00e0ng z\u00e0i zhu\u014dzi sh\u00e0ng ba.\n\n\u5427 (ba) - modal particle used to make a polite suggestion"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T09:05:31.665000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "4d",
-        "easy": "7d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "hsk-0046",
       "entry_type": "term",
       "front": {
@@ -988,42 +920,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-06-hsk-0156",
-      "front": {
-        "text": "\u6211\u59d0\u59d0\u6bd4\u6211\u9ad8\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "My older sister is taller than me.",
-        "notes": "W\u01d2 ji\u011bjie b\u01d0 w\u01d2 g\u0101o.\n\n\u6bd4 (b\u01d0) - than; used in comparisons"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.021477251638192,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 2,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:31:43.361000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "7d",
-        "good": "10d",
-        "easy": "17d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0113",
@@ -1116,42 +1012,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-07-hsk-0002",
-      "front": {
-        "text": "\u6211\u4eca\u5929\u53bb\u5b78\u6821\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I go to school today.",
-        "notes": "w\u01d2 j\u012bnti\u0101n q\u00f9 xu\u00e9xi\u00e0o\n\n\u6211 is the first-person singular pronoun meaning 'I'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T09:15:51.936000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0208",
