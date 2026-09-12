@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-13",
   "batch_date": "2026-09-13",
-  "compiled_at": "2026-09-12T21:59:41.501126Z",
-  "state_revision": 158,
+  "compiled_at": "2026-09-12T23:48:29.232069Z",
+  "state_revision": 159,
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
     "26dfa45b-c39b-49ea-8f73-4d280c30cbaf",
@@ -162,7 +162,8 @@
     "1e242dc2-a826-4e8c-95d2-07e9dfd7ce8b",
     "9664bb90-0b33-44a1-aa19-e4d3a3cf70d3",
     "f372df23-da0d-4a98-8d97-73e67a0fee4d",
-    "2cd2cecf-3ebe-410e-b906-9c2415b5d398"
+    "2cd2cecf-3ebe-410e-b906-9c2415b5d398",
+    "accdfa35-c8d2-4819-84a7-62cfb8810f7e"
   ],
   "cards": [
     {
@@ -478,27 +479,6 @@
       }
     },
     {
-      "id": "slovak-0091",
-      "entry_type": "term",
-      "front": {
-        "text": "tam",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "there",
-        "notes": null
-      },
-      "available_at": "2026-09-12T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0092",
       "entry_type": "term",
       "front": {
@@ -748,6 +728,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak-0091",
+      "entry_type": "term",
+      "front": {
+        "text": "tam",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "there",
+        "notes": null
+      },
+      "available_at": "2026-09-12T23:57:52.477000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T23:47:52.477000Z",
+        "next_due_at": "2026-09-12T23:57:52.477000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
