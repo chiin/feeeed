@@ -416,6 +416,120 @@ class FeedIntegrationTests(unittest.TestCase):
         self.assertEqual(cards[0]["back"]["text"], "1")
         self.assertEqual(cards[0]["entry_type"], "term")
 
+    def test_character_lookup_links_filter_and_deduplicate_han_characters(self):
+        from generate_feeds import add_character_lookup_links
+
+        cards = [
+            {
+                "id": "hsk-1",
+                "front": {"text": "打電話3打"},
+                "back": {"text": "make a phone call"},
+            }
+        ]
+        config = {
+            "character_lookup": {
+                "provider": "dong_chinese",
+                "placement": "back",
+            }
+        }
+
+        enriched = add_character_lookup_links("hsk", config, cards)
+
+        self.assertEqual(
+            enriched[0]["character_links"],
+            [
+                {
+                    "character": "打",
+                    "url": "https://www.dong-chinese.com/wiki/%E6%89%93",
+                },
+                {
+                    "character": "電",
+                    "url": "https://www.dong-chinese.com/wiki/%E9%9B%BB",
+                },
+                {
+                    "character": "話",
+                    "url": "https://www.dong-chinese.com/wiki/%E8%A9%B1",
+                },
+            ],
+        )
+        self.assertNotIn("character_links", cards[0])
+
+    def test_character_lookup_is_absent_for_unconfigured_decks(self):
+        from generate_feeds import add_character_lookup_links
+
+        cards = [
+            {
+                "id": "slovak-1",
+                "front": {"text": "jeden"},
+                "back": {"text": "one"},
+            }
+        ]
+
+        self.assertIs(add_character_lookup_links("slovak_vocab", {}, cards), cards)
+
+    def test_character_lookup_applies_to_merged_approved_vocabulary_cards(self):
+        from generate_feeds import process_anki_deck
+
+        config = {
+            "source_type": "csv",
+            "path": "HSK.csv",
+            "feed_title": "HSK",
+            "new_cards_per_day": 2,
+            "character_lookup": {
+                "provider": "dong_chinese",
+                "placement": "back",
+            },
+        }
+        cards = [
+            {
+                "id": "hsk-1",
+                "entry_type": "term",
+                "front": {"text": "電話", "audio": None, "image": None},
+                "back": {"text": "telephone", "notes": None},
+            },
+            {
+                "id": "approved-1",
+                "entry_type": "term",
+                "front": {"text": "圖書館", "audio": None, "image": None},
+                "back": {"text": "library", "notes": "approved candidate"},
+            },
+        ]
+
+        with tempfile.TemporaryDirectory() as directory:
+            old_cwd = os.getcwd()
+            os.chdir(directory)
+            try:
+                process_anki_deck(
+                    "hsk",
+                    config,
+                    {},
+                    self.make_feed(),
+                    "https://example.test",
+                    {},
+                    NOW,
+                    all_cards_override=cards,
+                )
+                snapshot = json.loads(
+                    Path("cards/hsk_deck.json").read_text(encoding="utf-8")
+                )
+            finally:
+                os.chdir(old_cwd)
+
+        self.assertEqual(
+            [
+                link["character"]
+                for link in snapshot["cards"][0]["character_links"]
+            ],
+            ["電", "話"],
+        )
+        self.assertEqual(
+            [
+                link["character"]
+                for link in snapshot["cards"][1]["character_links"]
+            ],
+            ["圖", "書", "館"],
+        )
+
     def test_practice_export_preserves_source_order_and_excludes_boundary(self):
         from generate_feeds import parse_csv_deck, write_practice_export
 
