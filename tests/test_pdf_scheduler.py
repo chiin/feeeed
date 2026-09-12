@@ -11,13 +11,16 @@ from pdf_scheduler import (
     apply_continuation_events,
     build_snapshot,
     can_continue,
+    collect_due_reminders,
     hkt_day,
     initial_release_at,
     migrate_history,
     natural_sort_key,
+    next_daily_release_at,
     next_release_at,
     parse_datetime,
     release_if_due,
+    reminder_slots,
 )
 
 
@@ -77,6 +80,24 @@ class ReleaseTimingTests(unittest.TestCase):
             + following.astimezone(HKT).minute
         )
         self.assertLessEqual(abs(next_minutes - previous_minutes), 180)
+
+    def test_regular_pdf_release_is_next_hkt_midnight(self):
+        released = datetime(2026, 8, 30, 8, 30, tzinfo=timezone.utc)
+        following = next_daily_release_at(released)
+
+        self.assertEqual(
+            following,
+            datetime(2026, 8, 30, 16, 0, tzinfo=timezone.utc),
+        )
+
+    def test_reminder_slots_are_distinct_deterministic_hkt_hours(self):
+        first = reminder_slots("economics", "2026-08-30", 5)
+        second = reminder_slots("economics", "2026-08-30", 5)
+        local_hours = [slot.astimezone(HKT).hour for slot in first]
+
+        self.assertEqual(first, second)
+        self.assertEqual(local_hours, sorted(set(local_hours)))
+        self.assertTrue(all(8 <= hour <= 22 for hour in local_hours))
 
     def test_release_happens_only_once_per_hkt_day(self):
         state = {}
@@ -277,6 +298,65 @@ class EventAndSnapshotTests(unittest.TestCase):
         self.assertIn("complete-1", snapshot["processed_event_ids"])
         self.assertIn("Economics%20Cards", snapshot["active"][0]["pdf_url"])
 
+    def test_reminders_repeat_current_pdf_and_stop_after_completion(self):
+        state = state_for()
+        batch = state["daily_batch"]
+        batch["processed_reminder_slots"] = []
+        slots = [parse_datetime(slot) for slot in batch["reminder_slots"]]
+        first_pdf = batch["active_ids"][0]
+
+        first_reminders = collect_due_reminders(
+            "economics", state, slots[0]
+        )
+        second_reminders = collect_due_reminders(
+            "economics", state, slots[1]
+        )
+
+        self.assertEqual(
+            [item["pdf_id"] for item in second_reminders],
+            [first_pdf, first_pdf],
+        )
+        apply_completion_events(
+            "economics",
+            state,
+            [pdf_event("complete-first", "complete", first_pdf, slots[1])],
+            slots[1],
+        )
+        third_reminders = collect_due_reminders(
+            "economics", state, slots[2]
+        )
+        self.assertEqual(third_reminders[-1]["pdf_id"], PDF_IDS[1])
+
+        state["daily_batch"]["active_ids"].clear()
+        final_reminders = collect_due_reminders(
+            "economics", state, slots[-1]
+        )
+        self.assertEqual(len(final_reminders), 3)
+
+    def test_reminders_keep_today_and_yesterday_only(self):
+        state = state_for()
+        state["feed_reminders"] = [
+            {
+                "id": f"reminder-{offset}",
+                "batch_date": (
+                    hkt_day(NOW) - timedelta(days=offset)
+                ).isoformat(),
+                "pdf_id": PDF_IDS[0],
+                "title": "Article 001",
+                "published_at": NOW.isoformat(),
+                "remaining": 1,
+            }
+            for offset in range(3)
+        ]
+        state["daily_batch"]["reminder_slots"] = []
+
+        reminders = collect_due_reminders("economics", state, NOW)
+
+        self.assertEqual(
+            [item["id"] for item in reminders],
+            ["reminder-0", "reminder-1"],
+        )
+
     def test_legacy_batch_and_permanent_history_are_migrated(self):
         history = {
             "completed_files": [PDF_IDS[0]],
@@ -295,7 +375,7 @@ class EventAndSnapshotTests(unittest.TestCase):
         )
         self.assertEqual(
             parse_datetime(history["next_release_at"]),
-            datetime(2026, 8, 31, 4, 0, tzinfo=timezone.utc),
+            datetime(2026, 8, 30, 16, 0, tzinfo=timezone.utc),
         )
 
     def test_legacy_shown_files_are_not_treated_as_confirmed_completions(self):
@@ -304,6 +384,39 @@ class EventAndSnapshotTests(unittest.TestCase):
             "economics", "random_without_replacement", history, NOW
         )
         self.assertEqual(history["completed_ids"], [])
+
+    def test_version_two_current_batch_waits_until_next_midnight_for_reminders(self):
+        history = {
+            "pdf_schema_version": 2,
+            "strategy": "sequential",
+            "revision": 1,
+            "completed_ids": [PDF_IDS[3]],
+            "completion_counts": {},
+            "processed_events": {},
+            "daily_batch": {
+                "id": hkt_day(NOW).isoformat(),
+                "date": hkt_day(NOW).isoformat(),
+                "released_at": NOW.isoformat(),
+                "release_summary_ids": PDF_IDS[:3],
+                "active_ids": PDF_IDS[:3],
+                "selected_ids": PDF_IDS[:3],
+                "segments": [{"kind": "initial", "ids": PDF_IDS[:3]}],
+            },
+            "next_release_at": (NOW + timedelta(hours=1)).isoformat(),
+        }
+
+        migrate_history("economics", "sequential", history, NOW)
+
+        self.assertNotIn("reminder_slots", history["daily_batch"])
+        self.assertEqual(history["completed_ids"], [PDF_IDS[3]])
+        self.assertEqual(
+            parse_datetime(history["next_release_at"]),
+            datetime(2026, 8, 30, 16, 0, tzinfo=timezone.utc),
+        )
+        self.assertEqual(
+            collect_due_reminders("economics", history, NOW),
+            [],
+        )
 
     def test_old_event_ids_remain_idempotent_for_future_random_occurrences(self):
         state = state_for("random_with_replacement")
@@ -468,7 +581,7 @@ class FakeFeed:
 
 
 class ProcessorIntegrationTests(unittest.TestCase):
-    def test_processor_keeps_rss_identity_and_summary_while_queue_shrinks(self):
+    def test_processor_emits_unique_reminders_for_current_pdf(self):
         from generate_feeds import process_pdf_folder
 
         config = {
@@ -487,6 +600,15 @@ class ProcessorIntegrationTests(unittest.TestCase):
                 for pdf_id in PDF_IDS[:4]:
                     (folder / pdf_id).write_bytes(b"%PDF-test")
 
+                migrate_history("economics", "sequential", history, NOW)
+                release_if_due(
+                    "economics", history, PDF_IDS[:4], 3, NOW, force_today=True
+                )
+                slots = [
+                    parse_datetime(slot)
+                    for slot in history["daily_batch"]["reminder_slots"]
+                ]
+                history["daily_batch"]["processed_reminder_slots"] = []
                 first_feed = FakeFeed()
                 process_pdf_folder(
                     "economics",
@@ -494,7 +616,7 @@ class ProcessorIntegrationTests(unittest.TestCase):
                     history,
                     first_feed,
                     "https://example.test",
-                    now=NOW,
+                    now=slots[0],
                 )
                 snapshot = json.loads(
                     Path("cards/economics_pdf_batch.json").read_text(
@@ -503,7 +625,6 @@ class ProcessorIntegrationTests(unittest.TestCase):
                 )
                 first_id = snapshot["active"][0]["id"]
                 rss_id = first_feed.entries[0].values["id"]
-                rss_title = first_feed.entries[0].values["title"]
 
                 second_feed = FakeFeed()
                 process_pdf_folder(
@@ -516,10 +637,15 @@ class ProcessorIntegrationTests(unittest.TestCase):
                         "event_type": "pdf_batch_event",
                         "stream_id": "economics",
                         "events": [
-                            pdf_event("complete-1", "complete", first_id)
+                            pdf_event(
+                                "complete-1",
+                                "complete",
+                                first_id,
+                                slots[1],
+                            )
                         ],
                     },
-                    NOW,
+                    slots[1],
                 )
                 updated = json.loads(
                     Path("cards/economics_pdf_batch.json").read_text(
@@ -527,11 +653,13 @@ class ProcessorIntegrationTests(unittest.TestCase):
                     )
                 )
                 self.assertEqual(len(updated["active"]), 2)
-                self.assertEqual(
+                self.assertEqual(len(second_feed.entries), 2)
+                self.assertNotEqual(
                     second_feed.entries[0].values["id"], rss_id
                 )
-                self.assertEqual(
-                    second_feed.entries[0].values["title"], rss_title
+                self.assertIn(
+                    "Article 002",
+                    second_feed.entries[0].values["title"],
                 )
             finally:
                 os.chdir(previous_cwd)
@@ -593,4 +721,3 @@ class ProcessorIntegrationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
