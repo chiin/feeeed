@@ -4,11 +4,11 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T11:38:13.918151Z",
-  "state_revision": 64,
+  "compiled_at": "2026-09-12T11:38:37.008883Z",
+  "state_revision": 66,
   "source_revisions": {
     "hsk": 653,
-    "mandarin_sentences": 75
+    "mandarin_sentences": 77
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -718,7 +718,9 @@
     "b9c4c419-5059-476f-96ca-9a9f59c3b350",
     "c9ddfa27-3055-4ecd-bd84-1d51b6bbd8f2",
     "61b0a9b1-27b3-4ad9-a60d-5e989d4ce62d",
-    "49dc1d07-cb77-4c1d-9a36-278ff687f3e2"
+    "49dc1d07-cb77-4c1d-9a36-278ff687f3e2",
+    "14d5358a-5b7b-4db5-9300-76f5ab10b345",
+    "82f0f447-a59e-4c95-a64a-f9003178fa06"
   ],
   "cards": [
     {
@@ -1108,30 +1110,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "mandarin_reading-2026-09-08-hsk-0011",
-      "front": {
-        "text": "\u6211\u6709\u4e00\u672c\u66f8\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have a book.",
-        "notes": "w\u01d2 y\u01d2u y\u012b b\u011bn sh\u016b\n\n\u6709 is a verb meaning ``to have'', indicating possession."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "hsk-0220",
       "entry_type": "term",
       "front": {
@@ -1214,42 +1192,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-07-hsk-0004",
-      "front": {
-        "text": "\u4ed6\u662f\u8001\u5e2b\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He is a teacher.",
-        "notes": "t\u0101 sh\u00ec l\u01ceosh\u012b\n\n\u662f is the copula verb meaning 'to be', linking subject and predicate."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T09:05:37.884000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0202",
