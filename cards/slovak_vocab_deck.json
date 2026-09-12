@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-11T23:56:59.662342Z",
-  "state_revision": 109,
+  "compiled_at": "2026-09-12T00:44:14.533450Z",
+  "state_revision": 110,
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
     "26dfa45b-c39b-49ea-8f73-4d280c30cbaf",
@@ -114,7 +114,8 @@
     "b83217a2-b264-4efa-970e-e45c39683804",
     "cdfbb8ca-fbd7-4a91-9bc7-426621c02571",
     "2397eac6-1f44-4ca0-9bb9-c7c8779db69d",
-    "8d19b00b-d57a-4b6e-88c6-df158238508c"
+    "8d19b00b-d57a-4b6e-88c6-df158238508c",
+    "53a5e617-5e71-4a2b-8f2f-50c2576ef705"
   ],
   "cards": [
     {
@@ -542,8 +543,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "3d"
       }
     },
     {
@@ -839,8 +840,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "4d"
       }
     },
     {
@@ -1135,27 +1136,6 @@
       },
       "back": {
         "text": "that is a suitcase",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0065",
-      "entry_type": "sentence",
-      "front": {
-        "text": "m\u00e1\u0161 kufor?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you have a suitcase?",
         "notes": null
       },
       "available_at": "2026-09-11T16:00:00Z",
