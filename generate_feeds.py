@@ -6,6 +6,7 @@ import sys
 import tempfile
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from urllib.parse import quote
 from feedgen.feed import FeedGenerator
 from anki_scheduler import (
     FSRSScheduler,
@@ -43,6 +44,14 @@ CONFIG_PATH = Path("config.json")
 LEGACY_HISTORY_PATH = Path("history.json")
 CARDS_DIR = Path("cards")
 BASE_URL = "https://chiin.github.io/feeeed"
+HAN_CODEPOINT_RANGES = (
+    (0x3400, 0x4DBF),
+    (0x4E00, 0x9FFF),
+    (0xF900, 0xFAFF),
+    (0x20000, 0x2EBEF),
+    (0x2F800, 0x2FA1F),
+    (0x30000, 0x323AF),
+)
 
 # Leitner Box Intervals (in days)
 BOX_INTERVALS = {1: 1, 2: 3, 3: 7, 4: 14, 5: 30}
@@ -955,6 +964,54 @@ def parse_csv_deck(csv_path: Path, base_url: str) -> list[dict]:
     return cards
 
 
+def _is_han_character(character: str) -> bool:
+    codepoint = ord(character)
+    return any(start <= codepoint <= end for start, end in HAN_CODEPOINT_RANGES)
+
+
+def add_character_lookup_links(
+    stream_key: str,
+    stream_cfg: dict,
+    cards: list[dict],
+) -> list[dict]:
+    lookup_cfg = stream_cfg.get("character_lookup")
+    if lookup_cfg is None:
+        return cards
+    if not isinstance(lookup_cfg, dict):
+        raise ValueError(f"[{stream_key}] character_lookup must be an object")
+    if lookup_cfg.get("provider") != "dong_chinese":
+        raise ValueError(
+            f"[{stream_key}] character_lookup.provider must be dong_chinese"
+        )
+    if lookup_cfg.get("placement", "back") != "back":
+        raise ValueError(f"[{stream_key}] character_lookup.placement must be back")
+
+    enriched_cards = []
+    for card in cards:
+        front_text = card.get("front", {}).get("text", "")
+        characters = list(
+            dict.fromkeys(
+                character for character in front_text if _is_han_character(character)
+            )
+        )
+        enriched_cards.append(
+            {
+                **card,
+                "character_links": [
+                    {
+                        "character": character,
+                        "url": (
+                            "https://www.dong-chinese.com/wiki/"
+                            f"{quote(character, safe='')}"
+                        ),
+                    }
+                    for character in characters
+                ],
+            }
+        )
+    return enriched_cards
+
+
 def write_practice_export(
     stream_key: str,
     stream_cfg: dict,
@@ -1141,6 +1198,11 @@ def process_anki_deck(
         updated_cards = after_review_events()
         if updated_cards is not None:
             all_cards = updated_cards
+    all_cards = add_character_lookup_links(
+        stream_key,
+        stream_cfg,
+        all_cards,
+    )
     write_practice_export(
         stream_key,
         stream_cfg,

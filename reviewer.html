@@ -59,6 +59,21 @@
         }
         .answer-text { color: #30d158; font-size: 1.3rem; font-weight: 600; }
         .notes-text { margin-top: 8px; color: #8e8e93; font-size: .95rem; font-style: italic; }
+        .character-links { display: none; margin-top: 18px; }
+        .character-links-label { margin-bottom: 8px; color: #8e8e93; font-size: .85rem; }
+        .character-link {
+            display: inline-block;
+            min-width: 42px;
+            margin: 0 4px 6px;
+            padding: 7px 11px;
+            border: 1px solid #48484a;
+            border-radius: 10px;
+            background: #3a3a3c;
+            color: #64d2ff;
+            font-size: 1.15rem;
+            font-style: normal;
+            text-decoration: none;
+        }
         .card-img { display: none; max-width: 100%; max-height: 180px; margin: 16px auto; border-radius: 12px; }
         .audio-btn {
             display: none;
@@ -179,6 +194,7 @@
                     <img id="backImage" class="card-img" alt="">
                     <button id="backAudioBtn" class="audio-btn" onclick="playAudio('backAudio')">Play Audio</button>
                     <div id="backNotes" class="notes-text"></div>
+                    <div id="characterLinks" class="character-links"></div>
                 </div>
             </div>
         </div>
@@ -235,6 +251,6 @@
     </div>
 
     <script src="reviewer_state.js?v=6"></script>
-    <script src="reviewer_app.js?v=7"></script>
+    <script src="reviewer_app.js?v=8"></script>
 </body>
 </html>

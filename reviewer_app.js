@@ -187,6 +187,7 @@ function renderNextCard() {
     document.getElementById("frontText").innerText = card.front.text || "";
     document.getElementById("backText").innerText = card.back.text || "";
     document.getElementById("backNotes").innerText = card.back.notes || "";
+    renderCharacterLinks(card.character_links || []);
     renderMedia("front", card.front);
     renderMedia("back", card.back);
 
@@ -194,6 +195,28 @@ function renderNextCard() {
     ["again", "hard", "good", "easy"].forEach((rating, index) => {
         document.getElementById(`int-${index + 1}`).innerText =
             previews[rating] || (rating === "again" ? "10m" : "");
+    });
+}
+
+function renderCharacterLinks(links) {
+    const container = document.getElementById("characterLinks");
+    container.replaceChildren();
+    container.style.display = links.length ? "block" : "none";
+    if (!links.length) return;
+
+    const label = document.createElement("div");
+    label.className = "character-links-label";
+    label.innerText = "Character origins";
+    container.appendChild(label);
+
+    links.forEach(link => {
+        const anchor = document.createElement("a");
+        anchor.className = "character-link";
+        anchor.href = link.url;
+        anchor.target = "_blank";
+        anchor.rel = "noopener noreferrer";
+        anchor.innerText = link.character;
+        container.appendChild(anchor);
     });
 }
 
