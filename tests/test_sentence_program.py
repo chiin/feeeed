@@ -830,6 +830,74 @@ class VocabularyFirstSentenceProgramTests(unittest.TestCase):
             "Na stole sú tri knihy.",
         )
 
+    def test_failed_target_is_skipped_without_discarding_valid_sentences(self):
+        class PartialGenerator:
+            def __init__(self):
+                self.requested_target_ids = []
+
+            def generate(self, request):
+                target_ids = [target["id"] for target in request["targets"]]
+                self.requested_target_ids.append(target_ids)
+                sentences = []
+                for target in request["targets"]:
+                    surface = target["surface_form"]
+                    primary_text = (
+                        f"Použijem výraz {surface}."
+                        if target["id"] == "target-1"
+                        else "Tento výraz vo vete chýba."
+                    )
+                    sentences.append(
+                        {
+                            "target_word_id": target["id"],
+                            "target_occurrence": surface,
+                            "primary_text": primary_text,
+                            "transliteration": surface,
+                            "translation": "A test sentence.",
+                            "cloze_text": "Použijem výraz […].",
+                            "target_breakdown": f"{surface}: test meaning",
+                        }
+                    )
+                return sentences
+
+        cards = [
+            source_card("target-1", "mesto"),
+            source_card("target-2", "tu je"),
+        ]
+        self.source_state["cards"] = {
+            "target-1": reviewed_state(),
+            "target-2": reviewed_state(),
+        }
+        generator = PartialGenerator()
+
+        result = self.process(cards, lambda _config: generator)
+
+        self.assertEqual(result["generated"], 1)
+        self.assertEqual(result["generation_skipped"], 1)
+        self.assertEqual(
+            generator.requested_target_ids,
+            [["target-1", "target-2"], ["target-2"]],
+        )
+        self.assertEqual(
+            set(self.program_state["vocabulary"]),
+            {"target-1"},
+        )
+        job = self.generation_state["jobs"]["2026-09-05"]
+        self.assertEqual(job["generated_count"], 1)
+        self.assertEqual(job["skipped_target_ids"], ["target-2"])
+
+        recovered = self.process(
+            cards,
+            lambda _config: DeterministicSentenceGenerator(),
+            NOW + timedelta(days=1),
+        )
+
+        self.assertEqual(recovered["generated"], 1)
+        self.assertEqual(recovered["generation_skipped"], 0)
+        self.assertEqual(
+            set(self.program_state["vocabulary"]),
+            {"target-1", "target-2"},
+        )
+
     def test_quality_version_refreshes_active_sentence_in_place(self):
         cards = [source_card("target-1", "tri")]
         self.source_state["cards"]["target-1"] = reviewed_state()
@@ -900,6 +968,51 @@ class VocabularyFirstSentenceProgramTests(unittest.TestCase):
             self.program_state["vocabulary"]["target-1"]["sentence_pass_count"],
             1,
         )
+
+    def test_failed_quality_refresh_keeps_existing_sentence(self):
+        cards = [
+            source_card("target-1", "mesto"),
+            source_card("target-2", "tu je"),
+        ]
+        for card in cards:
+            self.source_state["cards"][card["id"]] = reviewed_state()
+        self.process(cards, lambda _config: DeterministicSentenceGenerator())
+        original_payloads = {
+            sentence["target_word_ids"][0]: dict(sentence["payload"])
+            for sentence in self.content["sentences"]
+        }
+        self.config["generation"] = {
+            "quality_version": 2,
+            "max_attempts": 2,
+        }
+
+        class PartialRefreshGenerator:
+            def generate(self, request):
+                sentences = DeterministicSentenceGenerator().generate(request)
+                for sentence in sentences:
+                    if sentence["target_word_id"] == "target-2":
+                        sentence["target_occurrence"] = "tu je"
+                        sentence["primary_text"] = "Cieľový výraz tu chýba."
+                return sentences
+
+        result = self.process(
+            cards,
+            lambda _config: PartialRefreshGenerator(),
+            NOW + timedelta(hours=1),
+        )
+
+        by_target = {
+            sentence["target_word_ids"][0]: sentence
+            for sentence in self.content["sentences"]
+        }
+        self.assertEqual(result["refreshed"], 1)
+        self.assertEqual(result["refresh_skipped"], 1)
+        self.assertEqual(by_target["target-1"]["quality_version"], 2)
+        self.assertEqual(
+            by_target["target-2"]["payload"],
+            original_payloads["target-2"],
+        )
+        self.assertEqual(by_target["target-2"]["quality_version"], 1)
 
     def test_discovered_vocabulary_is_pending_until_approved(self):
         class DiscoveryGenerator:

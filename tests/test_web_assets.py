@@ -42,6 +42,14 @@ class WebAssetSmokeTests(unittest.TestCase):
         self.assertIn("loadReaderIndex", app)
         self.assertIn('"BOOKS"', app)
 
+    def test_workflow_exposes_optional_audio_generation_secrets(self):
+        workflow = (
+            ROOT / ".github/workflows/daily_flashcards.yaml"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("AZURE_SPEECH_KEY", workflow)
+        self.assertIn("AZURE_SPEECH_REGION", workflow)
+
 
 if __name__ == "__main__":
     unittest.main()
