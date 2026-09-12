@@ -4,10 +4,10 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T11:34:18.256667Z",
+  "compiled_at": "2026-09-12T11:34:42.435594Z",
   "state_revision": 63,
   "source_revisions": {
-    "hsk": 633,
+    "hsk": 635,
     "mandarin_sentences": 74
   },
   "processed_event_ids": [
@@ -633,6 +633,8 @@
     "9f51e786-faf0-4a43-bdb9-5d4b68bcfafe",
     "1e74eca7-a982-4b50-bdc9-2e17c38a6185",
     "d8336cd1-aaa3-44ad-9870-756b64246f83",
+    "ea9dff78-7ee9-4ccc-b14f-79025f8063ef",
+    "c56a00d2-4010-46d9-91eb-1a6802315138",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -700,52 +702,6 @@
     "61b0a9b1-27b3-4ad9-a60d-5e989d4ce62d"
   ],
   "cards": [
-    {
-      "id": "hsk-0085",
-      "entry_type": "term",
-      "front": {
-        "text": "\u770b\u898b",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "k\u00e0nji\u00e0n - see; catch sight of",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u770b",
-          "url": "https://www.dong-chinese.com/wiki/%E7%9C%8B"
-        },
-        {
-          "character": "\u898b",
-          "url": "https://www.dong-chinese.com/wiki/%E8%A6%8B"
-        }
-      ],
-      "available_at": "2026-09-12T11:33:50.939000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.1276046125711412,
-        "difficulty": 9.849820696388853,
-        "interval_days": 0,
-        "reviews": 8,
-        "passing_reviews": 1,
-        "lapses": 3,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-12T11:23:50.939000Z",
-        "next_due_at": "2026-09-12T11:33:50.939000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
     {
       "id": "hsk-0253",
       "entry_type": "term",
@@ -1127,48 +1083,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0177",
-      "entry_type": "term",
-      "front": {
-        "text": "\u9ad8",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "g\u0101o - tall; high",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u9ad8",
-          "url": "https://www.dong-chinese.com/wiki/%E9%AB%98"
-        }
-      ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T09:04:34.073000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
