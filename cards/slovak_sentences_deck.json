@@ -5,8 +5,8 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T02:15:09.277091Z",
-  "state_revision": 78,
+  "compiled_at": "2026-09-12T02:15:24.819856Z",
+  "state_revision": 80,
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
@@ -77,7 +77,9 @@
     "096e8728-9162-430b-850a-f10899c5e414",
     "2ac89da1-c8ec-4bb7-a2ac-56a94bff5002",
     "283b71d6-24d2-4075-bd37-05394a0423e3",
-    "9d9f2e1f-c2b8-43e3-97d9-e2d1730da1d7"
+    "9d9f2e1f-c2b8-43e3-97d9-e2d1730da1d7",
+    "006850f1-f35e-4407-8544-b698ee56ce76",
+    "4b799439-6307-4f93-b103-d3eda4d645d6"
   ],
   "cards": [
     {
@@ -312,39 +314,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-09-slovak-0031",
-      "front": {
-        "text": "Je mi dobre.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I feel well.",
-        "notes": "[\u02c8d\u0254br\u025b]\n\ndobre is an adverb used predicatively in je mi dobre, describing the speaker's state as well or fine."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-11T00:19:51.550000Z",
-        "next_due_at": "2026-09-11T00:29:51.550000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-09-slovak-0027",
       "front": {
         "text": "Pozrite sa, tu je moja kniha.",
@@ -420,27 +389,6 @@
       "back": {
         "text": "The Slovak woman Ana finished the book at the place.",
         "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0024",
-      "front": {
-        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The English man Tom bought fresh bread at the market.",
-        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
       },
       "presentation": "text_reading",
       "available_at": "2026-09-11T16:00:00Z",
@@ -576,6 +524,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0024",
+      "front": {
+        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The English man Tom bought fresh bread at the market.",
+        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-12T02:24:53.870000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T02:14:53.870000Z",
+        "next_due_at": "2026-09-12T02:24:53.870000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
