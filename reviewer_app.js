@@ -226,6 +226,8 @@ function showCandidateReview() {
         candidate.surface_form || "";
     document.getElementById("candidateTranslation").innerText =
         candidate.translation || "";
+    document.getElementById("candidatePronunciation").innerText =
+        candidate.pronunciation || "";
     document.getElementById("candidateObserved").innerText =
         candidate.observed_form
             ? `Observed form: ${candidate.observed_form}`
