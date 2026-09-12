@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 3,
   "strategy": "random_without_replacement",
-  "revision": 20,
+  "revision": 21,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -97,9 +97,19 @@
     "processed_reminder_slots": [
       "2026-09-12T00:00:00Z",
       "2026-09-12T03:00:00Z",
-      "2026-09-12T05:00:00Z"
+      "2026-09-12T05:00:00Z",
+      "2026-09-12T08:00:00Z"
     ]
   },
   "next_release_at": "2026-09-12T16:00:00Z",
-  "feed_reminders": []
+  "feed_reminders": [
+    {
+      "id": "politics-pdf-reminder-20260912T080000Z",
+      "batch_date": "2026-09-12",
+      "pdf_id": "article_180_Diplomacy.pdf",
+      "title": "Article 180 Diplomacy",
+      "published_at": "2026-09-12T08:00:00Z",
+      "remaining": 5
+    }
+  ]
 }
