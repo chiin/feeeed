@@ -4,10 +4,10 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T08:26:46.254363Z",
+  "compiled_at": "2026-09-12T08:27:06.741625Z",
   "state_revision": 49,
   "source_revisions": {
-    "hsk": 546,
+    "hsk": 547,
     "mandarin_sentences": 61
   },
   "processed_event_ids": [
@@ -546,6 +546,7 @@
     "6b462664-f9f0-4214-9935-43d2378fbe53",
     "dcda2baf-a00c-45d5-83a9-7a6168dad672",
     "3388fdf6-7b27-4b0f-be43-f9c022a7be20",
+    "efbf7ac7-4d33-4220-8319-ab80253e0bcd",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -894,13 +895,25 @@
           "url": "https://www.dong-chinese.com/wiki/%E5%85%A9"
         }
       ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-12T08:36:28.741000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T08:26:28.741000Z",
+        "next_due_at": "2026-09-12T08:36:28.741000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
