@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T15:46:58.080017Z",
-  "state_revision": 144,
+  "compiled_at": "2026-09-12T15:47:16.932643Z",
+  "state_revision": 146,
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
     "26dfa45b-c39b-49ea-8f73-4d280c30cbaf",
@@ -149,7 +149,9 @@
     "79f05507-696f-4d1c-93b6-1255f29b450a",
     "58ecfefb-db64-457d-a4ac-21eccc614ace",
     "0c8f3949-5be6-43f0-920f-3ba29b7ad32b",
-    "c1d7f92b-9c5a-44c3-ba66-d6329aebc0d2"
+    "c1d7f92b-9c5a-44c3-ba66-d6329aebc0d2",
+    "b6e854d7-96e8-4684-9a44-9b3082c074eb",
+    "01bc6c1c-42c3-4eb4-860f-fb3f961c7917"
   ],
   "cards": [
     {
@@ -252,39 +254,6 @@
       }
     },
     {
-      "id": "slovak-0072",
-      "entry_type": "sentence",
-      "front": {
-        "text": "\u010do je to?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "what is that?",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-11T00:19:05.048000Z",
-        "next_due_at": "2026-09-11T00:29:05.048000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
-      }
-    },
-    {
       "id": "slovak-0051",
       "entry_type": "term",
       "front": {
@@ -341,39 +310,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-10T08:49:08.650000Z",
-        "next_due_at": "2026-09-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
-      "id": "slovak-0062",
-      "entry_type": "term",
-      "front": {
-        "text": "tu som",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "here I am",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-10T08:48:55.415000Z",
         "next_due_at": "2026-09-11T16:00:00Z"
       },
       "schedule_previews": {
