@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T15:45:53.848215Z",
-  "state_revision": 139,
+  "compiled_at": "2026-09-12T15:46:21.868137Z",
+  "state_revision": 144,
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
     "26dfa45b-c39b-49ea-8f73-4d280c30cbaf",
@@ -144,7 +144,12 @@
     "32e72238-29de-4235-b162-cbc965d27ce9",
     "cf548692-afff-433b-af7f-ef4fcb9ef754",
     "40f2e66c-7adf-4314-8e98-1f44fb9ae943",
-    "dd1a40d0-b950-48da-bfde-ada1d6dc18d2"
+    "dd1a40d0-b950-48da-bfde-ada1d6dc18d2",
+    "1594886f-32d6-43ff-9724-69a91762edc7",
+    "79f05507-696f-4d1c-93b6-1255f29b450a",
+    "58ecfefb-db64-457d-a4ac-21eccc614ace",
+    "0c8f3949-5be6-43f0-920f-3ba29b7ad32b",
+    "c1d7f92b-9c5a-44c3-ba66-d6329aebc0d2"
   ],
   "cards": [
     {
@@ -204,39 +209,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-06T05:15:28.588000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "35d"
-      }
-    },
-    {
-      "id": "slovak-0019",
-      "entry_type": "term",
-      "front": {
-        "text": "samozrejme",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "of course",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-06T05:15:17.740000Z",
         "next_due_at": "2026-09-07T16:00:00Z"
       },
       "schedule_previews": {
@@ -336,72 +308,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-10T08:47:57.308000Z",
-        "next_due_at": "2026-09-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
-      "id": "slovak-0052",
-      "entry_type": "term",
-      "front": {
-        "text": "m\u00e1te",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you (pl) have",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-10T08:50:43.552000Z",
-        "next_due_at": "2026-09-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
-      "id": "slovak-0059",
-      "entry_type": "term",
-      "front": {
-        "text": "ste",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you (pl) are",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-10T08:47:47.591000Z",
         "next_due_at": "2026-09-11T16:00:00Z"
       },
       "schedule_previews": {
@@ -532,27 +438,6 @@
       }
     },
     {
-      "id": "slovak-0054",
-      "entry_type": "term",
-      "front": {
-        "text": "byt'",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to be",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0071",
       "entry_type": "sentence",
       "front": {
@@ -604,27 +489,6 @@
       },
       "back": {
         "text": "also",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0079",
-      "entry_type": "term",
-      "front": {
-        "text": "Bratislavsk\u00fd hrad",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Bratislava Castle",
         "notes": null
       },
       "available_at": "2026-09-11T16:00:00Z",
