@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T15:37:55.901136Z",
-  "state_revision": 743,
+  "compiled_at": "2026-09-12T15:38:15.222204Z",
+  "state_revision": 745,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -739,7 +739,9 @@
     "1ba7989d-c5eb-4722-aa07-26bc495531ee",
     "d3ca809b-32ca-44de-988d-e76e4d676e3c",
     "c9ae0c09-9316-4eb1-9c06-394cfec556d6",
-    "0cc61bbe-9a0e-4d93-93df-cbdfdee00377"
+    "0cc61bbe-9a0e-4d93-93df-cbdfdee00377",
+    "8a737f74-a3e9-4913-9554-0f35a3af1812",
+    "cbf40f8d-0d51-4561-8616-561904bc480f"
   ],
   "cards": [
     {
@@ -944,45 +946,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-07T07:31:58.846000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
-      }
-    },
-    {
-      "id": "hsk-0191",
-      "entry_type": "term",
-      "front": {
-        "text": "\u7d05",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "h\u00f3ng - red",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u7d05",
-          "url": "https://www.dong-chinese.com/wiki/%E7%B4%85"
-        }
-      ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:30:47.483000Z",
         "next_due_at": "2026-09-08T16:00:00Z"
       },
       "schedule_previews": {
@@ -1552,25 +1515,25 @@
           "url": "https://www.dong-chinese.com/wiki/%E5%AD%90"
         }
       ],
-      "available_at": "2026-09-12T14:40:57.830000Z",
+      "available_at": "2026-09-12T15:47:43.426000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 1.2389417584956706,
-        "difficulty": 7.392238132342694,
+        "stability": 0.4337163391265864,
+        "difficulty": 9.128074776178583,
         "interval_days": 0,
-        "reviews": 3,
+        "reviews": 4,
         "passing_reviews": 1,
-        "lapses": 1,
+        "lapses": 2,
         "last_rating": "again",
-        "last_reviewed_at": "2026-09-12T14:30:57.830000Z",
-        "next_due_at": "2026-09-12T14:40:57.830000Z"
+        "last_reviewed_at": "2026-09-12T15:37:43.426000Z",
+        "next_due_at": "2026-09-12T15:47:43.426000Z"
       },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "2d"
+        "easy": "1d"
       }
     }
   ]
