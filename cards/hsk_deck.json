@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T11:31:19.988764Z",
-  "state_revision": 624,
+  "compiled_at": "2026-09-12T11:31:38.562822Z",
+  "state_revision": 627,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -620,7 +620,10 @@
     "c9d53743-d97b-44ff-867e-c4be861275ac",
     "dd0e733c-7359-42f3-8544-8b93568ff7b7",
     "de27b4cb-56a5-4d3b-8d1b-aa5281e872c0",
-    "3a456948-17bf-4a81-92e9-698e27fa1097"
+    "3a456948-17bf-4a81-92e9-698e27fa1097",
+    "93af40fd-fef6-4c04-9adb-9a70bac0ccff",
+    "3f0fccce-29a5-471f-859a-8def89293c4c",
+    "cc74d171-672b-4b77-8459-f3c2860a2b2c"
   ],
   "cards": [
     {
@@ -1971,49 +1974,6 @@
       }
     },
     {
-      "id": "hsk-0193",
-      "entry_type": "term",
-      "front": {
-        "text": "\u56de\u7b54",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "hu\u00edd\u00e1 - to answer",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u56de",
-          "url": "https://www.dong-chinese.com/wiki/%E5%9B%9E"
-        },
-        {
-          "character": "\u7b54",
-          "url": "https://www.dong-chinese.com/wiki/%E7%AD%94"
-        }
-      ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:23:57.246000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
-      }
-    },
-    {
       "id": "hsk-0194",
       "entry_type": "term",
       "front": {
@@ -2369,49 +2329,6 @@
         "reviews": 2,
         "lapses": 0,
         "last_reviewed_at": "2026-09-03T03:54:41.414000Z",
-        "next_due_at": "2026-09-09T16:00:00Z",
-        "passing_reviews": 1,
-        "last_rating": null
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "25d",
-        "good": "36d",
-        "easy": "62d"
-      }
-    },
-    {
-      "id": "hsk-0045",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5148\u751f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "xi\u0101nsheng - Mr.; Sir",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u5148",
-          "url": "https://www.dong-chinese.com/wiki/%E5%85%88"
-        },
-        {
-          "character": "\u751f",
-          "url": "https://www.dong-chinese.com/wiki/%E7%94%9F"
-        }
-      ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "lapses": 0,
-        "last_reviewed_at": "2026-09-03T03:54:44.197000Z",
         "next_due_at": "2026-09-09T16:00:00Z",
         "passing_reviews": 1,
         "last_rating": null
@@ -4250,37 +4167,6 @@
         {
           "character": "\u8b93",
           "url": "https://www.dong-chinese.com/wiki/%E8%AE%93"
-        }
-      ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0239",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8eab\u9ad4",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sh\u0113nt\u01d0 - body; health",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8eab",
-          "url": "https://www.dong-chinese.com/wiki/%E8%BA%AB"
-        },
-        {
-          "character": "\u9ad4",
-          "url": "https://www.dong-chinese.com/wiki/%E9%AB%94"
         }
       ],
       "available_at": "2026-09-11T16:00:00Z",
