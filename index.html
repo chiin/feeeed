@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feeeed</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 32px 16px;
+            background: #1c1c1e;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        main {
+            width: 100%;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        h1 { margin: 0; font-size: 2rem; }
+        .intro { margin: 8px 0 32px; color: #8e8e93; line-height: 1.5; }
+        section { display: none; margin-top: 30px; }
+        h2 { margin-bottom: 12px; font-size: 1.15rem; color: #d1d1d6; }
+        .link-list { display: grid; gap: 12px; }
+        .reader-link {
+            display: block;
+            padding: 18px;
+            border: 1px solid #3a3a3c;
+            border-radius: 14px;
+            background: #2c2c2e;
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .reader-link:hover, .reader-link:focus-visible {
+            border-color: #0a84ff;
+            outline: none;
+        }
+        .reader-link span {
+            display: block;
+            margin-top: 6px;
+            color: #8e8e93;
+            font-size: .85rem;
+            font-weight: 500;
+        }
+        .status { margin-top: 40px; color: #8e8e93; text-align: center; }
+        .error { color: #ff453a; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Feeeed</h1>
+        <p class="intro">Choose a study program, flashcard deck, PDF reader, or current book.</p>
+
+        <div id="status" class="status">Loading...</div>
+
+        <section id="programSection">
+            <h2>Study programs</h2>
+            <div id="programLinks" class="link-list"></div>
+        </section>
+
+        <section id="deckSection">
+            <h2>Flashcard decks</h2>
+            <div id="deckLinks" class="link-list"></div>
+        </section>
+
+        <section id="pdfSection">
+            <h2>PDF readers</h2>
+            <div id="pdfLinks" class="link-list"></div>
+        </section>
+
+        <section id="bookSection">
+            <h2>Current books</h2>
+            <div id="bookLinks" class="link-list"></div>
+        </section>
+
+        <noscript>
+            <p class="status error">JavaScript is required to load the configured readers.</p>
+        </noscript>
+    </main>
+
+    <script>
+        "use strict";
+
+        function createLink(href, title, detail) {
+            const link = document.createElement("a");
+            link.className = "reader-link";
+            link.href = href;
+            link.textContent = title;
+
+            const description = document.createElement("span");
+            description.textContent = detail;
+            link.appendChild(description);
+            return link;
+        }
+
+        function populateSection(sectionId, listId, links) {
+            if (!links.length) return 0;
+            document.getElementById(listId).replaceChildren(...links);
+            document.getElementById(sectionId).style.display = "block";
+            return links.length;
+        }
+
+        function formatStrategy(strategy) {
+            return (strategy || "sequential").replaceAll("_", " ");
+        }
+
+        async function loadLandingPage() {
+            const status = document.getElementById("status");
+            try {
+                const response = await fetch(`config.json?t=${Date.now()}`, {
+                    cache: "no-store"
+                });
+                if (!response.ok) throw new Error("Configuration not found");
+                const config = await response.json();
+                const streams = Object.entries(config.streams || {});
+
+                const programLinks = Object.entries(config.programs || {})
+                    .filter(([, program]) => program.enabled)
+                    .map(([id, program]) => createLink(
+                        `reviewer.html?program=${encodeURIComponent(id)}`,
+                        program.feed_title || id,
+                        "Combined vocabulary and sentence review"
+                    ));
+                const deckLinks = streams
+                    .filter(([, stream]) => stream.type === "anki_deck")
+                    .map(([id, stream]) => createLink(
+                        `reviewer.html?deck=${encodeURIComponent(id)}`,
+                        stream.feed_title || id,
+                        `${stream.new_cards_per_day || 0} new cards per day`
+                    ));
+                const pdfLinks = streams
+                    .filter(([, stream]) => stream.type === "pdf_folder")
+                    .map(([id, stream]) => createLink(
+                        `pdf_reader.html?stream=${encodeURIComponent(id)}`,
+                        stream.feed_title || id,
+                        `${stream.batch_size || 5} PDFs · ${formatStrategy(stream.strategy)}`
+                    ));
+                const bookLinks = streams
+                    .filter(([, stream]) => stream.type === "current_book")
+                    .map(([id, stream]) => createLink(
+                        `pdf_reader.html?stream=${encodeURIComponent(id)}`,
+                        stream.feed_title || id,
+                        `Current book: ${(stream.book_id || id).replaceAll("_", " ")}`
+                    ));
+
+                const count = [
+                    populateSection("programSection", "programLinks", programLinks),
+                    populateSection("deckSection", "deckLinks", deckLinks),
+                    populateSection("pdfSection", "pdfLinks", pdfLinks),
+                    populateSection("bookSection", "bookLinks", bookLinks)
+                ].reduce((total, value) => total + value, 0);
+                status.style.display = count ? "none" : "block";
+                status.textContent = count ? "" : "No readers are configured.";
+            } catch (error) {
+                status.className = "status error";
+                status.textContent = `Unable to load readers: ${error.message}`;
+            }
+        }
+
+        loadLandingPage();
+    </script>
+</body>
+</html>
