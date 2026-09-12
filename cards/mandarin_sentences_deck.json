@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T11:46:01.300674Z",
-  "state_revision": 77,
+  "compiled_at": "2026-09-12T11:46:24.649166Z",
+  "state_revision": 80,
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
@@ -75,7 +75,10 @@
     "61b0a9b1-27b3-4ad9-a60d-5e989d4ce62d",
     "49dc1d07-cb77-4c1d-9a36-278ff687f3e2",
     "14d5358a-5b7b-4db5-9300-76f5ab10b345",
-    "82f0f447-a59e-4c95-a64a-f9003178fa06"
+    "82f0f447-a59e-4c95-a64a-f9003178fa06",
+    "9530473c-c7f1-4795-81dc-99d278cd0c01",
+    "a3c6df16-cc09-45f2-a838-1bd5ab734357",
+    "55e6a224-2589-4232-ad92-e1a65966ab60"
   ],
   "cards": [
     {
@@ -175,72 +178,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-06-hsk-0159",
-      "front": {
-        "text": "\u6211\u5f88\u9ad8\u8208\u80fd\u548c\u4f60\u4e00\u8d77\u5531\u6b4c\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I am very glad to be able to sing with you.",
-        "notes": "W\u01d2 h\u011bn g\u0101ox\u00ecng n\u00e9ng h\u00e9 n\u01d0 y\u012bq\u01d0 ch\u00e0ngg\u0113.\n\n\u5531\u6b4c (ch\u00e0ngg\u0113) - to sing (songs)"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T07:30:40.983000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "4d",
-        "easy": "7d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-07-hsk-0005",
-      "front": {
-        "text": "\u6211\u770b\u4e86\u66f8\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I read the book.",
-        "notes": "w\u01d2 k\u00e0n le sh\u016b\n\n\u4e86 indicates a completed action, marking that the action of reading the book is finished."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T09:17:19.836000Z",
-        "next_due_at": "2026-09-07T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "6d"
       }
     },
     {
@@ -366,39 +303,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-07T07:28:28.332000Z",
-        "next_due_at": "2026-09-08T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-07-hsk-0010",
-      "front": {
-        "text": "\u5929\u6c23\u5f88\u597d\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The weather is very good.",
-        "notes": "ti\u0101nq\u00ec h\u011bn h\u01ceo\n\n\u597d is an adjective meaning 'good', describing the weather."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-07T09:08:36.210000Z",
         "next_due_at": "2026-09-08T16:00:00Z"
       },
       "schedule_previews": {
