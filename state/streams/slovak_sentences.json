@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 97,
+  "revision": 98,
   "cards": {
     "slovak_reading-2026-09-06-slovak-0001": {
       "state": "review",
@@ -835,6 +835,65 @@
     }
   },
   "daily_batch": {
+    "id": "2026-09-13",
+    "date": "2026-09-13",
+    "created_at": "2026-09-12T16:13:16.694692Z",
+    "card_ids": [
+      "slovak_reading-2026-09-08-slovak-0024",
+      "slovak_reading-2026-09-10-slovak-0033",
+      "slovak_reading-2026-09-11-slovak-0034",
+      "slovak_reading-2026-09-08-slovak-0020",
+      "slovak_reading-2026-09-08-slovak-0021",
+      "slovak_reading-2026-09-07-slovak-0012",
+      "slovak_reading-2026-09-07-slovak-0013",
+      "slovak_reading-2026-09-08-slovak-0022",
+      "slovak_reading-2026-09-08-slovak-0023",
+      "slovak_reading-2026-09-12-slovak-0037"
+    ],
+    "active": [
+      {
+        "card_id": "slovak_reading-2026-09-08-slovak-0024",
+        "available_at": "2026-09-12T16:00:00Z"
+      },
+      {
+        "card_id": "slovak_reading-2026-09-10-slovak-0033",
+        "available_at": "2026-09-12T16:00:00Z"
+      },
+      {
+        "card_id": "slovak_reading-2026-09-11-slovak-0034",
+        "available_at": "2026-09-12T16:00:00Z"
+      },
+      {
+        "card_id": "slovak_reading-2026-09-08-slovak-0020",
+        "available_at": "2026-09-12T16:00:00Z"
+      },
+      {
+        "card_id": "slovak_reading-2026-09-08-slovak-0021",
+        "available_at": "2026-09-12T16:00:00Z"
+      },
+      {
+        "card_id": "slovak_reading-2026-09-07-slovak-0012",
+        "available_at": "2026-09-12T16:00:00Z"
+      },
+      {
+        "card_id": "slovak_reading-2026-09-07-slovak-0013",
+        "available_at": "2026-09-12T16:00:00Z"
+      },
+      {
+        "card_id": "slovak_reading-2026-09-08-slovak-0022",
+        "available_at": "2026-09-12T16:00:00Z"
+      },
+      {
+        "card_id": "slovak_reading-2026-09-08-slovak-0023",
+        "available_at": "2026-09-12T16:00:00Z"
+      },
+      {
+        "card_id": "slovak_reading-2026-09-12-slovak-0037",
+        "available_at": "2026-09-12T16:00:00Z"
+      }
+    ]
+  },
+  "previous_batch": {
     "id": "2026-09-12",
     "date": "2026-09-12",
     "created_at": "2026-09-11T18:14:40.708698Z",
@@ -881,112 +940,6 @@
       {
         "card_id": "slovak_reading-2026-09-08-slovak-0021",
         "available_at": "2026-09-12T15:57:37.964000Z"
-      }
-    ]
-  },
-  "previous_batch": {
-    "id": "2026-09-11",
-    "date": "2026-09-11",
-    "created_at": "2026-09-10T17:32:39.141833Z",
-    "card_ids": [
-      "slovak_reading-2026-09-07-slovak-0004",
-      "slovak_reading-2026-09-07-slovak-0013",
-      "slovak_reading-2026-09-07-slovak-0006",
-      "slovak_reading-2026-09-07-slovak-0019",
-      "slovak_reading-2026-09-08-slovak-0029",
-      "slovak_reading-2026-09-08-slovak-0023",
-      "slovak_reading-2026-09-08-slovak-0020",
-      "slovak_reading-2026-09-09-slovak-0027",
-      "slovak_reading-2026-09-08-slovak-0022",
-      "slovak_reading-2026-09-09-slovak-0028",
-      "slovak_reading-2026-09-07-slovak-0017",
-      "slovak_reading-2026-09-08-slovak-0025",
-      "slovak_reading-2026-09-08-slovak-0021",
-      "slovak_reading-2026-09-08-slovak-0024",
-      "slovak_reading-2026-09-09-slovak-0030",
-      "slovak_reading-2026-09-09-slovak-0031",
-      "slovak_reading-2026-09-09-slovak-0032",
-      "slovak_reading-2026-09-10-slovak-0033",
-      "slovak_reading-2026-09-11-slovak-0034",
-      "slovak_reading-2026-09-11-slovak-0035",
-      "slovak_reading-2026-09-11-slovak-0036"
-    ],
-    "active": [
-      {
-        "card_id": "slovak_reading-2026-09-07-slovak-0004",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-07-slovak-0013",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-07-slovak-0006",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-07-slovak-0019",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-08-slovak-0029",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-08-slovak-0023",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-08-slovak-0020",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-07-slovak-0017",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-08-slovak-0025",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-08-slovak-0021",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-08-slovak-0024",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-09-slovak-0030",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-09-slovak-0032",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-10-slovak-0033",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-11-slovak-0034",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-11-slovak-0035",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-11-slovak-0036",
-        "available_at": "2026-09-10T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-08-slovak-0022",
-        "available_at": "2026-09-11T00:29:40.281000Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-09-slovak-0031",
-        "available_at": "2026-09-11T00:29:51.550000Z"
       }
     ]
   }
