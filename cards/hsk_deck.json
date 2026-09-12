@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T08:25:59.734527Z",
-  "state_revision": 541,
+  "compiled_at": "2026-09-12T08:26:24.123393Z",
+  "state_revision": 542,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -537,7 +537,8 @@
     "f0af8f39-9c8f-468c-80d3-d6e2bf9e2612",
     "130301ae-3913-4fd7-a77d-1ab50c21fd7c",
     "5e1fdec8-241f-460d-a34d-3efd542bcbf9",
-    "c0cebb13-da88-47fc-8d55-191083a94be9"
+    "c0cebb13-da88-47fc-8d55-191083a94be9",
+    "dbfac46d-64db-4279-845e-9c10dc05ca60"
   ],
   "cards": [
     {
@@ -1149,49 +1150,6 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-08T13:05:41.157000Z",
         "next_due_at": "2026-09-08T13:15:41.157000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      }
-    },
-    {
-      "id": "hsk-0240",
-      "entry_type": "term",
-      "front": {
-        "text": "\u751f\u75c5",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sh\u0113ngb\u00ecng - get sick",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u751f",
-          "url": "https://www.dong-chinese.com/wiki/%E7%94%9F"
-        },
-        {
-          "character": "\u75c5",
-          "url": "https://www.dong-chinese.com/wiki/%E7%97%85"
-        }
-      ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-08T13:05:46.495000Z",
-        "next_due_at": "2026-09-08T13:15:46.495000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -7126,6 +7084,49 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-12T08:25:39.039000Z",
         "next_due_at": "2026-09-12T08:35:39.039000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0240",
+      "entry_type": "term",
+      "front": {
+        "text": "\u751f\u75c5",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "sh\u0113ngb\u00ecng - get sick",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u751f",
+          "url": "https://www.dong-chinese.com/wiki/%E7%94%9F"
+        },
+        {
+          "character": "\u75c5",
+          "url": "https://www.dong-chinese.com/wiki/%E7%97%85"
+        }
+      ],
+      "available_at": "2026-09-12T08:36:05.551000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.12028336828244025,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T08:26:05.551000Z",
+        "next_due_at": "2026-09-12T08:36:05.551000Z"
       },
       "schedule_previews": {
         "again": "10m",
