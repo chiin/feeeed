@@ -5,8 +5,8 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-13",
   "batch_date": "2026-09-13",
-  "compiled_at": "2026-09-12T23:50:36.149021Z",
-  "state_revision": 100,
+  "compiled_at": "2026-09-12T23:50:53.359023Z",
+  "state_revision": 101,
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
@@ -98,7 +98,8 @@
     "ffb31f04-d847-4604-8d28-9ba7773d2d0d",
     "3b3074b0-74f9-4ce3-8e5e-6eff2597d2c4",
     "2ed81bd1-a3e4-4e30-9da2-8066657b8968",
-    "27705e89-9f0e-431f-8189-1d18b9a4bf23"
+    "27705e89-9f0e-431f-8189-1d18b9a4bf23",
+    "c059fda7-1b6d-4518-b5f2-c41ae83ae36f"
   ],
   "cards": [
     {
@@ -159,39 +160,6 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-12T15:47:11.022000Z",
         "next_due_at": "2026-09-12T15:57:11.022000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-12T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-12T15:47:37.964000Z",
-        "next_due_at": "2026-09-12T15:57:37.964000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -411,6 +379,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-12T23:49:06.203000Z",
         "next_due_at": "2026-09-12T23:59:06.203000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0021",
+      "front": {
+        "text": "Slovenka Ana spravila na mieste konci knihy.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak woman Ana finished the book at the place.",
+        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-13T00:00:18.785000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T23:50:18.785000Z",
+        "next_due_at": "2026-09-13T00:00:18.785000Z"
       },
       "schedule_previews": {
         "again": "10m",
