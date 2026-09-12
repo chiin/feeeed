@@ -17,6 +17,7 @@ from pdf_scheduler import (
     apply_completion_events,
     apply_continuation_events,
     build_snapshot as build_pdf_snapshot,
+    collect_due_reminders,
     migrate_history as migrate_pdf_history,
     release_if_due,
 )
@@ -563,6 +564,11 @@ def process_pdf_folder(
     if released:
         print(f"[{stream_key}] Released HKT batch {stream_history['daily_batch']['id']}.")
 
+    reminders = (
+        []
+        if is_current_book
+        else collect_due_reminders(stream_key, stream_history, now)
+    )
     compiled_payload = build_pdf_snapshot(
         stream_key,
         stream_cfg.get("feed_title", stream_key.title()),
@@ -576,28 +582,47 @@ def process_pdf_folder(
     )
     save_json(batch_json_path, compiled_payload)
 
-    release_summary = compiled_payload["release_summary"]
-    if not release_summary:
-        return
-    titles_summary = ", ".join(item["title"] for item in release_summary)
     web_reader_url = f"{base_url}/pdf_reader.html?stream={stream_key}"
-
-    fe = fg.add_entry()
     identity = f"{stream_key}-{book_id}" if book_id else stream_key
-    fe.id(f"{identity}-pdf-batch-{compiled_payload['batch_id']}")
-    fe.title(
-        f"[{stream_cfg.get('feed_title', stream_key.title())}] {titles_summary}"
-    )
-    fe.link(href=web_reader_url)
-    fe.description(
-        f"{len(release_summary)} PDFs released; "
-        f"{len(compiled_payload['active'])} remaining."
-    )
-    fe.pubDate(
-        datetime.fromisoformat(
-            compiled_payload["released_at"].replace("Z", "+00:00")
+
+    if is_current_book:
+        release_summary = compiled_payload["release_summary"]
+        if not release_summary:
+            return
+        titles_summary = ", ".join(item["title"] for item in release_summary)
+        fe = fg.add_entry()
+        fe.id(f"{identity}-pdf-batch-{compiled_payload['batch_id']}")
+        fe.title(
+            f"[{stream_cfg.get('feed_title', stream_key.title())}] {titles_summary}"
         )
-    )
+        fe.link(href=web_reader_url)
+        fe.description(
+            f"{len(release_summary)} PDFs released; "
+            f"{len(compiled_payload['active'])} remaining."
+        )
+        fe.pubDate(
+            datetime.fromisoformat(
+                compiled_payload["released_at"].replace("Z", "+00:00")
+            )
+        )
+        return
+
+    for reminder in reversed(reminders):
+        fe = fg.add_entry()
+        fe.id(reminder["id"])
+        fe.title(
+            f"[{stream_cfg.get('feed_title', stream_key.title())}] "
+            f"{reminder['title']}"
+        )
+        fe.link(href=web_reader_url)
+        fe.description(
+            f"Current PDF; {reminder['remaining']} remaining in today's batch."
+        )
+        fe.pubDate(
+            datetime.fromisoformat(
+                reminder["published_at"].replace("Z", "+00:00")
+            )
+        )
 
 # --- MAIN CONTROLLER ---
 

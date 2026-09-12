@@ -10,7 +10,7 @@ from urllib.parse import quote
 
 
 HKT = timezone(timedelta(hours=8))
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 STRATEGIES = {
     "sequential",
     "random_without_replacement",
@@ -19,6 +19,8 @@ STRATEGIES = {
 EVENT_ACTIONS = {"complete", "continue"}
 MIN_RELEASE_MINUTE = 60
 MAX_RELEASE_MINUTE = 21 * 60
+REMINDER_HOURS = tuple(range(8, 23))
+REMINDER_RETENTION_DAYS = 2
 
 
 def parse_datetime(value: str) -> datetime:
@@ -71,6 +73,27 @@ def next_release_at(stream_key: str, released_at: datetime) -> datetime:
     ).astimezone(timezone.utc)
 
 
+def next_daily_release_at(released_at: datetime) -> datetime:
+    return _hkt_midnight(hkt_day(released_at) + timedelta(days=1)).astimezone(
+        timezone.utc
+    )
+
+
+def reminder_slots(stream_key: str, batch_date: str, count: int) -> list[datetime]:
+    if count > len(REMINDER_HOURS):
+        raise ValueError(
+            f"PDF batch size cannot exceed {len(REMINDER_HOURS)} reminder slots"
+        )
+    hours = random.Random(f"{stream_key}:{batch_date}:reminders").sample(
+        REMINDER_HOURS, count
+    )
+    day = date.fromisoformat(batch_date)
+    return [
+        datetime.combine(day, time(hour=hour), tzinfo=HKT).astimezone(timezone.utc)
+        for hour in sorted(hours)
+    ]
+
+
 def _normalize_strategy(strategy: str) -> str:
     if strategy == "random":
         return "random_with_replacement"
@@ -114,7 +137,8 @@ def migrate_history(
     book_id: str | None = None,
 ) -> dict:
     strategy = _normalize_strategy(strategy)
-    if stream_history.get("pdf_schema_version") == SCHEMA_VERSION:
+    previous_schema_version = stream_history.get("pdf_schema_version")
+    if previous_schema_version == SCHEMA_VERSION:
         if book_id is not None and stream_history.get("book_id") != book_id:
             previous_revision = max(0, int(stream_history.get("revision", 0)))
             stream_history.clear()
@@ -135,7 +159,12 @@ def migrate_history(
         stream_history["strategy"] = strategy
         return stream_history
 
-    legacy_completed = list(stream_history.get("completed_files", []))
+    legacy_completed = list(
+        stream_history.get(
+            "completed_ids",
+            stream_history.get("completed_files", []),
+        )
+    )
     completed_ids = (
         list(dict.fromkeys(legacy_completed))
         if strategy != "random_with_replacement"
@@ -166,11 +195,20 @@ def migrate_history(
                 or (
                     now.astimezone(timezone.utc)
                     if book_id
-                    else initial_release_at(stream_key, now)
+                    else _hkt_midnight(hkt_day(now)).astimezone(timezone.utc)
                 )
             ),
+            "feed_reminders": stream_history.get("feed_reminders", []),
         }
     )
+    if book_id is None and previous_schema_version != SCHEMA_VERSION:
+        current_date = (batch or {}).get("date")
+        next_day = hkt_day(now) + timedelta(days=1) if current_date == hkt_day(
+            now
+        ).isoformat() else hkt_day(now)
+        stream_history["next_release_at"] = isoformat_utc(
+            _hkt_midnight(next_day).astimezone(timezone.utc)
+        )
     if book_id is not None:
         stream_history["book_id"] = book_id
     return stream_history
@@ -284,11 +322,71 @@ def release_if_due(
         batch["segments"].append({"kind": "initial", "ids": list(carryover)})
     elif carryover:
         batch["segments"][0]["ids"] = carryover + batch["segments"][0]["ids"]
-    stream_history["next_release_at"] = isoformat_utc(
-        next_release_at(stream_key, released_at)
-    )
+    if stream_history.get("book_id"):
+        stream_history["next_release_at"] = isoformat_utc(
+            next_release_at(stream_key, released_at)
+        )
+    else:
+        slots = reminder_slots(stream_key, today, len(batch["release_summary_ids"]))
+        batch["reminder_slots"] = [isoformat_utc(slot) for slot in slots]
+        batch["processed_reminder_slots"] = [
+            isoformat_utc(slot) for slot in slots if slot <= released_at
+        ]
+        stream_history["next_release_at"] = isoformat_utc(
+            next_daily_release_at(released_at)
+        )
     stream_history["revision"] += 1
     return True
+
+
+def collect_due_reminders(
+    stream_key: str,
+    stream_history: dict,
+    now: datetime,
+) -> list[dict]:
+    cutoff = hkt_day(now) - timedelta(days=REMINDER_RETENTION_DAYS - 1)
+    reminders = [
+        reminder
+        for reminder in stream_history.setdefault("feed_reminders", [])
+        if date.fromisoformat(reminder["batch_date"]) >= cutoff
+    ]
+    changed = len(reminders) != len(stream_history["feed_reminders"])
+    stream_history["feed_reminders"] = reminders
+
+    batch = stream_history.get("daily_batch")
+    if not batch or not batch.get("reminder_slots"):
+        if changed:
+            stream_history["revision"] += 1
+        return reminders
+
+    processed = set(batch.setdefault("processed_reminder_slots", []))
+    due_slots = [
+        slot
+        for slot in batch["reminder_slots"]
+        if slot not in processed and parse_datetime(slot) <= now
+    ]
+    for slot in due_slots:
+        processed.add(slot)
+        if not batch["active_ids"]:
+            continue
+        pdf_id = batch["active_ids"][0]
+        slot_key = parse_datetime(slot).strftime("%Y%m%dT%H%M%SZ")
+        reminders.append(
+            {
+                "id": f"{stream_key}-pdf-reminder-{slot_key}",
+                "batch_date": batch["date"],
+                "pdf_id": pdf_id,
+                "title": _title(pdf_id),
+                "published_at": slot,
+                "remaining": len(batch["active_ids"]),
+            }
+        )
+    if due_slots:
+        batch["processed_reminder_slots"] = sorted(processed)
+        changed = True
+    if changed:
+        stream_history["revision"] += 1
+    return reminders
 
 
 def _validate_event(
