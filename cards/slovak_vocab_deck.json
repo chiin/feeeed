@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T15:47:16.932643Z",
-  "state_revision": 146,
+  "compiled_at": "2026-09-12T15:47:39.578342Z",
+  "state_revision": 149,
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
     "26dfa45b-c39b-49ea-8f73-4d280c30cbaf",
@@ -151,7 +151,10 @@
     "0c8f3949-5be6-43f0-920f-3ba29b7ad32b",
     "c1d7f92b-9c5a-44c3-ba66-d6329aebc0d2",
     "b6e854d7-96e8-4684-9a44-9b3082c074eb",
-    "01bc6c1c-42c3-4eb4-860f-fb3f961c7917"
+    "01bc6c1c-42c3-4eb4-860f-fb3f961c7917",
+    "d9a51c6d-9ebc-4555-bf85-0f0794851dd4",
+    "7db1eda9-d501-4ccf-a57c-86fcf957a652",
+    "09637649-f9f4-4b7f-8bee-d0980a973106"
   ],
   "cards": [
     {
@@ -353,27 +356,6 @@
       }
     },
     {
-      "id": "slovak_reading-discovered-696c6b11997b70b0",
-      "entry_type": "term",
-      "front": {
-        "text": "tiskom",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "by mail",
-        "notes": "tsikom\n\nDiscovered in: V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta."
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0071",
       "entry_type": "sentence",
       "front": {
@@ -383,27 +365,6 @@
       },
       "back": {
         "text": "is it a castle?",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0076",
-      "entry_type": "term",
-      "front": {
-        "text": "vol\u00e1 sa \u2026",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "his / her name is \u2026",
         "notes": null
       },
       "available_at": "2026-09-11T16:00:00Z",
@@ -437,24 +398,36 @@
       }
     },
     {
-      "id": "slovak-0080",
+      "id": "slovak_reading-discovered-696c6b11997b70b0",
       "entry_type": "term",
       "front": {
-        "text": "\u010dist\u00fd; -\u00e1; -\u00e9",
+        "text": "tiskom",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "clean; pure",
-        "notes": null
+        "text": "by mail",
+        "notes": "tsikom\n\nDiscovered in: V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta."
       },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-12T15:57:15.815000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T15:47:15.815000Z",
+        "next_due_at": "2026-09-12T15:57:15.815000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]

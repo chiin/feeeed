@@ -4,10 +4,10 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T15:47:16.932643Z",
+  "compiled_at": "2026-09-12T15:47:39.578342Z",
   "state_revision": 80,
   "source_revisions": {
-    "slovak_vocab": 146,
+    "slovak_vocab": 149,
     "slovak_sentences": 93
   },
   "processed_event_ids": [
@@ -155,6 +155,9 @@
     "c1d7f92b-9c5a-44c3-ba66-d6329aebc0d2",
     "b6e854d7-96e8-4684-9a44-9b3082c074eb",
     "01bc6c1c-42c3-4eb4-860f-fb3f961c7917",
+    "d9a51c6d-9ebc-4555-bf85-0f0794851dd4",
+    "7db1eda9-d501-4ccf-a57c-86fcf957a652",
+    "09637649-f9f4-4b7f-8bee-d0980a973106",
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
     "b1e73139-ac5d-4301-918a-0a135aec15d9",
@@ -387,30 +390,6 @@
       "front_text_scale": 1.2
     },
     {
-      "id": "slovak-0076",
-      "entry_type": "term",
-      "front": {
-        "text": "vol\u00e1 sa \u2026",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "his / her name is \u2026",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "slovak_reading-discovered-696c6b11997b70b0",
       "entry_type": "term",
       "front": {
@@ -422,37 +401,25 @@
         "text": "by mail",
         "notes": "tsikom\n\nDiscovered in: V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta."
       },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-12T15:57:15.815000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T15:47:15.815000Z",
+        "next_due_at": "2026-09-12T15:57:15.815000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0080",
-      "entry_type": "term",
-      "front": {
-        "text": "\u010dist\u00fd; -\u00e1; -\u00e9",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "clean; pure",
-        "notes": null
-      },
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
