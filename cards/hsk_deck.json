@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T11:29:21.003195Z",
-  "state_revision": 611,
+  "compiled_at": "2026-09-12T11:29:37.891725Z",
+  "state_revision": 615,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -607,7 +607,11 @@
     "dcef4c7a-c158-4665-9d66-62828663557a",
     "5e16cabf-401f-408c-9b5f-6213c50cb403",
     "02d2091f-eca4-40e8-9b9f-3f5d561dbd55",
-    "b8e655e8-ad59-4d0a-939d-763795a0ab34"
+    "b8e655e8-ad59-4d0a-939d-763795a0ab34",
+    "a9d75090-d9c9-484c-a785-b44f5d2b8327",
+    "df09685c-2f4f-438b-8bf6-b3cbff4da5f6",
+    "a1fb92b0-70f1-4f35-a24d-f0b45ad450fd",
+    "c7b67d75-0d6a-4c1b-a370-37f9f1b30b46"
   ],
   "cards": [
     {
@@ -2899,49 +2903,6 @@
       }
     },
     {
-      "id": "hsk-0102",
-      "entry_type": "term",
-      "front": {
-        "text": "\u96fb\u5f71",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "di\u00e0ny\u01d0ng - movie; film",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u96fb",
-          "url": "https://www.dong-chinese.com/wiki/%E9%9B%BB"
-        },
-        {
-          "character": "\u5f71",
-          "url": "https://www.dong-chinese.com/wiki/%E5%BD%B1"
-        }
-      ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "lapses": 0,
-        "last_reviewed_at": "2026-09-05T03:48:40.908000Z",
-        "next_due_at": "2026-09-11T16:00:00Z",
-        "passing_reviews": 1,
-        "last_rating": null
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "22d",
-        "good": "32d",
-        "easy": "53d"
-      }
-    },
-    {
       "id": "hsk-0103",
       "entry_type": "term",
       "front": {
@@ -4132,33 +4093,6 @@
       }
     },
     {
-      "id": "hsk-0213",
-      "entry_type": "term",
-      "front": {
-        "text": "\u7d2f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "l\u00e8i - tired",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u7d2f",
-          "url": "https://www.dong-chinese.com/wiki/%E7%B4%AF"
-        }
-      ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "hsk-0214",
       "entry_type": "term",
       "front": {
@@ -4441,37 +4375,6 @@
         {
           "character": "\u7968",
           "url": "https://www.dong-chinese.com/wiki/%E7%A5%A8"
-        }
-      ],
-      "available_at": "2026-09-11T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0232",
-      "entry_type": "term",
-      "front": {
-        "text": "\u59bb\u5b50",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "q\u012bzi - wife",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u59bb",
-          "url": "https://www.dong-chinese.com/wiki/%E5%A6%BB"
-        },
-        {
-          "character": "\u5b50",
-          "url": "https://www.dong-chinese.com/wiki/%E5%AD%90"
         }
       ],
       "available_at": "2026-09-11T16:00:00Z",
@@ -4871,45 +4774,6 @@
       }
     },
     {
-      "id": "hsk-0253",
-      "entry_type": "term",
-      "front": {
-        "text": "\u984c",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "t\u00ed - topic; question",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u984c",
-          "url": "https://www.dong-chinese.com/wiki/%E9%A1%8C"
-        }
-      ],
-      "available_at": "2026-09-12T11:28:48.485000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-12T11:18:48.485000Z",
-        "next_due_at": "2026-09-12T11:28:48.485000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "hsk-0170",
       "entry_type": "term",
       "front": {
@@ -5182,6 +5046,127 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-12T11:25:09.347000Z",
         "next_due_at": "2026-09-12T11:35:09.347000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0232",
+      "entry_type": "term",
+      "front": {
+        "text": "\u59bb\u5b50",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "q\u012bzi - wife",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u59bb",
+          "url": "https://www.dong-chinese.com/wiki/%E5%A6%BB"
+        },
+        {
+          "character": "\u5b50",
+          "url": "https://www.dong-chinese.com/wiki/%E5%AD%90"
+        }
+      ],
+      "available_at": "2026-09-12T11:38:49.109000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T11:28:49.109000Z",
+        "next_due_at": "2026-09-12T11:38:49.109000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0253",
+      "entry_type": "term",
+      "front": {
+        "text": "\u984c",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "t\u00ed - topic; question",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u984c",
+          "url": "https://www.dong-chinese.com/wiki/%E9%A1%8C"
+        }
+      ],
+      "available_at": "2026-09-12T11:39:10.078000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T11:29:10.078000Z",
+        "next_due_at": "2026-09-12T11:39:10.078000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0213",
+      "entry_type": "term",
+      "front": {
+        "text": "\u7d2f",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "l\u00e8i - tired",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u7d2f",
+          "url": "https://www.dong-chinese.com/wiki/%E7%B4%AF"
+        }
+      ],
+      "available_at": "2026-09-12T11:39:13.421000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T11:29:13.421000Z",
+        "next_due_at": "2026-09-12T11:39:13.421000Z"
       },
       "schedule_previews": {
         "again": "10m",
