@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-12",
   "batch_date": "2026-09-12",
-  "compiled_at": "2026-09-12T11:10:52.743009Z",
-  "state_revision": 550,
+  "compiled_at": "2026-09-12T11:11:10.164987Z",
+  "state_revision": 551,
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
     "c44a2eb1-bc85-4147-bd1d-ef8283ee8fe6",
@@ -546,7 +546,8 @@
     "efbf7ac7-4d33-4220-8319-ab80253e0bcd",
     "af4f75fb-7fc9-4543-9b86-69298e04b81f",
     "16f27662-34f5-42bf-908b-01a1effd2efd",
-    "43886731-04d2-4132-ad6c-5b0e8470dc18"
+    "43886731-04d2-4132-ad6c-5b0e8470dc18",
+    "143c9e62-4e1e-48fc-800a-ef6526dc59b6"
   ],
   "cards": [
     {
@@ -6715,49 +6716,6 @@
       }
     },
     {
-      "id": "hsk-0085",
-      "entry_type": "term",
-      "front": {
-        "text": "\u770b\u898b",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "k\u00e0nji\u00e0n - see; catch sight of",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u770b",
-          "url": "https://www.dong-chinese.com/wiki/%E7%9C%8B"
-        },
-        {
-          "character": "\u898b",
-          "url": "https://www.dong-chinese.com/wiki/%E8%A6%8B"
-        }
-      ],
-      "available_at": "2026-09-12T08:33:13.325000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.9379474543402216,
-        "difficulty": 8.791620869960457,
-        "interval_days": 0,
-        "reviews": 6,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-12T08:23:13.325000Z",
-        "next_due_at": "2026-09-12T08:33:13.325000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
-      }
-    },
-    {
       "id": "hsk-0246",
       "entry_type": "term",
       "front": {
@@ -6960,6 +6918,49 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-12T08:26:28.741000Z",
         "next_due_at": "2026-09-12T08:36:28.741000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0085",
+      "entry_type": "term",
+      "front": {
+        "text": "\u770b\u898b",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "k\u00e0nji\u00e0n - see; catch sight of",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u770b",
+          "url": "https://www.dong-chinese.com/wiki/%E7%9C%8B"
+        },
+        {
+          "character": "\u898b",
+          "url": "https://www.dong-chinese.com/wiki/%E8%A6%8B"
+        }
+      ],
+      "available_at": "2026-09-12T11:20:48.477000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.3344158122283668,
+        "difficulty": 9.588042366230924,
+        "interval_days": 0,
+        "reviews": 7,
+        "passing_reviews": 1,
+        "lapses": 2,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T11:10:48.477000Z",
+        "next_due_at": "2026-09-12T11:20:48.477000Z"
       },
       "schedule_previews": {
         "again": "10m",
