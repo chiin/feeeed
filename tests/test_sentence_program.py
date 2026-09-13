@@ -237,6 +237,12 @@ class SentenceProgramTests(unittest.TestCase):
             "batch_id": "2026-09-05",
             "state_revision": 3,
             "processed_event_ids": [],
+            "daily_progress": {
+                "total": 2,
+                "new": 2,
+                "review": 0,
+                "done": 0,
+            },
             "cards": [
                 {
                     **card,
@@ -259,6 +265,12 @@ class SentenceProgramTests(unittest.TestCase):
                     "batch_id": "2026-09-05",
                     "state_revision": 1,
                     "processed_event_ids": [],
+                    "daily_progress": {
+                        "total": 2,
+                        "new": 0,
+                        "review": 1,
+                        "done": 1,
+                    },
                     "cards": [
                         {
                             **source_card("known-1", "我"),
@@ -271,6 +283,10 @@ class SentenceProgramTests(unittest.TestCase):
             NOW,
         )
         self.assertEqual(len(combined["cards"]), 3)
+        self.assertEqual(
+            combined["daily_progress"],
+            {"total": 4, "new": 2, "review": 1, "done": 1},
+        )
         self.assertEqual(
             sum(
                 card["deck_id"] == "mandarin_sentences"

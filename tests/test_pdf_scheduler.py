@@ -9,6 +9,7 @@ from pdf_scheduler import (
     HKT,
     apply_completion_events,
     apply_continuation_events,
+    apply_open_events,
     build_snapshot,
     can_continue,
     collect_due_reminders,
@@ -225,6 +226,27 @@ class StrategyTests(unittest.TestCase):
 
 
 class EventAndSnapshotTests(unittest.TestCase):
+    def test_open_event_is_authoritative_idempotent_and_rejects_stale_items(self):
+        state = state_for()
+        first_id = state["daily_batch"]["active_ids"][0]
+        event = pdf_event("open-1", "open", first_id)
+
+        self.assertEqual(
+            apply_open_events("economics", state, [event], NOW)["applied"],
+            1,
+        )
+        self.assertEqual(
+            apply_open_events("economics", state, [event], NOW)["duplicate"],
+            1,
+        )
+        self.assertEqual(state["daily_batch"]["opened_ids"], [first_id])
+
+        stale = pdf_event("open-stale", "open", "missing.pdf")
+        self.assertEqual(
+            apply_open_events("economics", state, [stale], NOW)["stale"],
+            1,
+        )
+
     def test_completion_is_idempotent_and_stale_devices_do_not_advance_twice(self):
         state = state_for()
         first_id = state["daily_batch"]["active_ids"][0]
@@ -276,6 +298,13 @@ class EventAndSnapshotTests(unittest.TestCase):
     def test_snapshot_exposes_authoritative_queue_and_fixed_release_summary(self):
         state = state_for()
         completed = state["daily_batch"]["active_ids"][0]
+        opened = state["daily_batch"]["active_ids"][1]
+        apply_open_events(
+            "economics",
+            state,
+            [pdf_event("open-1", "open", opened)],
+            NOW,
+        )
         apply_completion_events(
             "economics",
             state,
@@ -297,6 +326,11 @@ class EventAndSnapshotTests(unittest.TestCase):
         self.assertNotIn(completed, [item["id"] for item in snapshot["active"]])
         self.assertIn("complete-1", snapshot["processed_event_ids"])
         self.assertIn("Economics%20Cards", snapshot["active"][0]["pdf_url"])
+        self.assertTrue(snapshot["active"][0]["opened"])
+        self.assertEqual(
+            snapshot["daily_progress"],
+            {"total": 3, "unread": 1, "opened": 1, "finished": 1},
+        )
 
     def test_reminders_repeat_current_pdf_and_stop_after_completion(self):
         state = state_for()
@@ -408,6 +442,7 @@ class EventAndSnapshotTests(unittest.TestCase):
         migrate_history("economics", "sequential", history, NOW)
 
         self.assertNotIn("reminder_slots", history["daily_batch"])
+        self.assertEqual(history["daily_batch"]["opened_ids"], [])
         self.assertEqual(history["completed_ids"], [PDF_IDS[3]])
         self.assertEqual(
             parse_datetime(history["next_release_at"]),
@@ -417,6 +452,39 @@ class EventAndSnapshotTests(unittest.TestCase):
             collect_due_reminders("economics", history, NOW),
             [],
         )
+
+    def test_version_three_reminder_state_is_preserved_and_adds_opened_ids(self):
+        history = {
+            "pdf_schema_version": 3,
+            "strategy": "sequential",
+            "revision": 4,
+            "completed_ids": [PDF_IDS[3]],
+            "completion_counts": {},
+            "processed_events": {},
+            "feed_reminders": [{"id": "existing", "batch_date": "2026-08-30"}],
+            "daily_batch": {
+                "id": hkt_day(NOW).isoformat(),
+                "date": hkt_day(NOW).isoformat(),
+                "released_at": NOW.isoformat(),
+                "release_summary_ids": PDF_IDS[:3],
+                "active_ids": PDF_IDS[:3],
+                "selected_ids": PDF_IDS[:3],
+                "segments": [{"kind": "initial", "ids": PDF_IDS[:3]}],
+                "reminder_slots": ["2026-08-30T13:00:00Z"],
+                "processed_reminder_slots": [],
+            },
+            "next_release_at": (NOW + timedelta(hours=1)).isoformat(),
+        }
+
+        migrate_history("economics", "sequential", history, NOW)
+
+        self.assertEqual(history["daily_batch"]["opened_ids"], [])
+        self.assertEqual(
+            history["daily_batch"]["reminder_slots"],
+            ["2026-08-30T13:00:00Z"],
+        )
+        self.assertEqual(history["feed_reminders"][0]["id"], "existing")
+        self.assertEqual(history["completed_ids"], [PDF_IDS[3]])
 
     def test_old_event_ids_remain_idempotent_for_future_random_occurrences(self):
         state = state_for("random_with_replacement")
@@ -638,6 +706,12 @@ class ProcessorIntegrationTests(unittest.TestCase):
                         "stream_id": "economics",
                         "events": [
                             pdf_event(
+                                "open-2",
+                                "open",
+                                PDF_IDS[1],
+                                slots[1],
+                            ),
+                            pdf_event(
                                 "complete-1",
                                 "complete",
                                 first_id,
@@ -653,6 +727,11 @@ class ProcessorIntegrationTests(unittest.TestCase):
                     )
                 )
                 self.assertEqual(len(updated["active"]), 2)
+                self.assertEqual(
+                    updated["daily_progress"],
+                    {"total": 3, "unread": 1, "opened": 1, "finished": 1},
+                )
+                self.assertTrue(updated["active"][0]["opened"])
                 self.assertEqual(len(second_feed.entries), 2)
                 self.assertNotEqual(
                     second_feed.entries[0].values["id"], rss_id

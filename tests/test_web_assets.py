@@ -6,6 +6,26 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class WebAssetSmokeTests(unittest.TestCase):
+    def test_landing_page_links_every_configured_reader_type(self):
+        html = (ROOT / "index.html").read_text(encoding="utf-8")
+
+        self.assertIn("<title>Feeeed</title>", html)
+        self.assertIn("config.json?t=", html)
+        self.assertIn('stream.type === "anki_deck"', html)
+        self.assertIn('stream.type === "pdf_folder"', html)
+        self.assertIn('stream.type === "current_book"', html)
+        self.assertIn("program.enabled", html)
+        self.assertIn("reviewer.html?program=", html)
+        self.assertIn("reviewer.html?deck=", html)
+        self.assertIn("pdf_reader.html?stream=", html)
+        self.assertIn("daily_progress", html)
+        self.assertIn("currentHktDate", html)
+        self.assertIn("progress-red", html)
+        self.assertIn("progress-orange", html)
+        self.assertIn("progress-green", html)
+        self.assertIn("Not available yet", html)
+        self.assertNotIn("innerHTML", html)
+
     def test_anki_app_is_not_the_shared_state_module(self):
         app = (ROOT / "reviewer_app.js").read_text(encoding="utf-8")
         state = (ROOT / "reviewer_state.js").read_text(encoding="utf-8")
@@ -18,7 +38,7 @@ class WebAssetSmokeTests(unittest.TestCase):
         html = (ROOT / "reviewer.html").read_text(encoding="utf-8")
         app = (ROOT / "reviewer_app.js").read_text(encoding="utf-8")
 
-        self.assertIn('src="reviewer_state.js?v=6"', html)
+        self.assertIn('src="reviewer_state.js?v=7"', html)
         self.assertIn('src="reviewer_app.js?v=8"', html)
         self.assertIn('id="homeScreen"', html)
         self.assertIn('id="candidateScreen"', html)
@@ -39,12 +59,13 @@ class WebAssetSmokeTests(unittest.TestCase):
         self.assertIn("<title>PDF Queue Reader</title>", html)
         self.assertIn('id="pdfViewer"', html)
         self.assertNotEqual(html, reviewer_html)
-        self.assertIn('src="reviewer_state.js?v=4"', html)
-        self.assertIn('src="pdf_reader_app.js?v=5"', html)
+        self.assertIn('src="reviewer_state.js?v=7"', html)
+        self.assertIn('src="pdf_reader_app.js?v=6"', html)
         self.assertIn("data.book_id", app)
         self.assertIn("pdf_outbox_v3", app)
         self.assertIn("loadReaderIndex", app)
         self.assertIn('"BOOKS"', app)
+        self.assertIn("markPdfOpened", app)
 
     def test_workflow_exposes_optional_audio_generation_secrets(self):
         workflow = (

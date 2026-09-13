@@ -637,6 +637,10 @@ class FeedIntegrationTests(unittest.TestCase):
                 self.assertEqual(
                     [card["id"] for card in first_snapshot["cards"]], ["hsk-1"]
                 )
+                self.assertEqual(
+                    first_snapshot["daily_progress"],
+                    {"total": 1, "new": 1, "review": 0, "done": 0},
+                )
                 self.assertIn(
                     "hsk-anki-batch-2026-08-30",
                     feed.rss_str(pretty=True).decode("utf-8"),
@@ -660,6 +664,10 @@ class FeedIntegrationTests(unittest.TestCase):
                     Path("cards/hsk_deck.json").read_text(encoding="utf-8")
                 )
                 self.assertEqual(updated_snapshot["cards"], [])
+                self.assertEqual(
+                    updated_snapshot["daily_progress"],
+                    {"total": 1, "new": 0, "review": 0, "done": 1},
+                )
                 self.assertEqual(
                     history["daily_batch"]["card_ids"], ["hsk-1"]
                 )

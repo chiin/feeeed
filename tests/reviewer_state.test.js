@@ -9,7 +9,8 @@ const {
     createVocabularyCandidateEvent,
     groupReviewEventsByDeck,
     reconcileCards,
-    reconcileVocabularyCandidates
+    reconcileVocabularyCandidates,
+    reconcilePdfItems
 } = require("../reviewer_state.js");
 
 class MemoryStorage {
@@ -212,7 +213,6 @@ test("candidate events reject unsupported actions", () => {
 });
 
 test("PDF reconciliation hides locally completed items until acknowledged", () => {
-    const { reconcilePdfItems } = require("../reviewer_state.js");
     const items = [
         { id: "first.pdf", title: "First" },
         { id: "second.pdf", title: "Second" }
@@ -227,6 +227,22 @@ test("PDF reconciliation hides locally completed items until acknowledged", () =
     assert.deepEqual(
         reconcilePdfItems(items, pending).map(item => item.id),
         ["second.pdf"]
+    );
+});
+
+test("PDF reconciliation marks pending opens without removing the item", () => {
+    const items = [{ id: "first.pdf", title: "First", opened: false }];
+    const pending = [{
+        event_id: "open-1",
+        stream_id: "economics",
+        action: "open",
+        pdf_id: "first.pdf",
+        occurred_at: "2026-08-30T02:00:00Z"
+    }];
+
+    assert.deepEqual(
+        reconcilePdfItems(items, pending),
+        [{ id: "first.pdf", title: "First", opened: true }]
     );
 });
 
