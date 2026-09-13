@@ -1,8 +1,8 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "stream": "art_history",
   "title": "Art History Cards",
-  "compiled_at": "2026-09-13T00:01:28.270792Z",
+  "compiled_at": "2026-09-13T00:29:23.396924Z",
   "state_revision": 17,
   "batch_id": "2026-09-13",
   "batch_date": "2026-09-13",
@@ -10,6 +10,12 @@
   "next_release_at": "2026-09-13T16:00:00Z",
   "batch_size": 5,
   "strategy": "random_with_replacement",
+  "daily_progress": {
+    "total": 5,
+    "unread": 5,
+    "opened": 0,
+    "finished": 0
+  },
   "release_summary": [
     {
       "id": "article_003_Stone_Age_painting.pdf",
@@ -41,54 +47,64 @@
     {
       "id": "article_003_Stone_Age_painting.pdf",
       "title": "Article 003 Stone Age Painting",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_003_Stone_Age_painting.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_003_Stone_Age_painting.pdf",
+      "opened": false
     },
     {
       "id": "article_004_Sumerian_and_Akkadian_art.pdf",
       "title": "Article 004 Sumerian And Akkadian Art",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_004_Sumerian_and_Akkadian_art.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_004_Sumerian_and_Akkadian_art.pdf",
+      "opened": false
     },
     {
       "id": "article_005_Babylonian_and_Assyrian_art.pdf",
       "title": "Article 005 Babylonian And Assyrian Art",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_005_Babylonian_and_Assyrian_art.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_005_Babylonian_and_Assyrian_art.pdf",
+      "opened": false
     },
     {
       "id": "article_006_Ancient_Egyptian_sculpture.pdf",
       "title": "Article 006 Ancient Egyptian Sculpture",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_006_Ancient_Egyptian_sculpture.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_006_Ancient_Egyptian_sculpture.pdf",
+      "opened": false
     },
     {
       "id": "article_126_Still_life.pdf",
       "title": "Article 126 Still Life",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_126_Still_life.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_126_Still_life.pdf",
+      "opened": false
     }
   ],
   "batch": [
     {
       "id": "article_003_Stone_Age_painting.pdf",
       "title": "Article 003 Stone Age Painting",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_003_Stone_Age_painting.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_003_Stone_Age_painting.pdf",
+      "opened": false
     },
     {
       "id": "article_004_Sumerian_and_Akkadian_art.pdf",
       "title": "Article 004 Sumerian And Akkadian Art",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_004_Sumerian_and_Akkadian_art.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_004_Sumerian_and_Akkadian_art.pdf",
+      "opened": false
     },
     {
       "id": "article_005_Babylonian_and_Assyrian_art.pdf",
       "title": "Article 005 Babylonian And Assyrian Art",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_005_Babylonian_and_Assyrian_art.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_005_Babylonian_and_Assyrian_art.pdf",
+      "opened": false
     },
     {
       "id": "article_006_Ancient_Egyptian_sculpture.pdf",
       "title": "Article 006 Ancient Egyptian Sculpture",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_006_Ancient_Egyptian_sculpture.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_006_Ancient_Egyptian_sculpture.pdf",
+      "opened": false
     },
     {
       "id": "article_126_Still_life.pdf",
       "title": "Article 126 Still Life",
-      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_126_Still_life.pdf"
+      "pdf_url": "https://chiin.github.io/feeeed/Art_History_Cards/article_126_Still_life.pdf",
+      "opened": false
     }
   ],
   "can_continue": false,
