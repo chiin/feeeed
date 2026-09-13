@@ -4,6 +4,7 @@ const test = require("node:test");
 const assert = require("node:assert/strict");
 const {
     DurableOutbox,
+    ANKI_RETRY_DELAYS_MS,
     RETRY_DELAY_MS,
     createReviewEvent,
     createVocabularyCandidateEvent,
@@ -47,6 +48,58 @@ test("durable outbox survives reload and retries after a network failure", () =>
     reloaded.markAttempt(["event-1"]);
     now += RETRY_DELAY_MS;
     assert.equal(reloaded.retryable().length, 1);
+});
+
+test("Anki retries back off after accepted dispatches", () => {
+    const storage = new MemoryStorage();
+    let now = Date.parse("2026-08-30T02:00:00Z");
+    const outbox = new DurableOutbox(
+        storage,
+        "hsk",
+        () => now,
+        "anki_outbox_v2",
+        ANKI_RETRY_DELAYS_MS
+    );
+    outbox.enqueue(createReviewEvent(
+        "hsk", "hsk-1", "good", new Date(now).toISOString(), "event-1"
+    ));
+
+    outbox.markAttempt(["event-1"]);
+    now += ANKI_RETRY_DELAYS_MS[0] - 1;
+    assert.equal(outbox.retryable().length, 0);
+    now += 1;
+    assert.equal(outbox.retryable().length, 1);
+
+    outbox.markAttempt(["event-1"]);
+    now += ANKI_RETRY_DELAYS_MS[1] - 1;
+    assert.equal(outbox.retryable().length, 0);
+    now += 1;
+    assert.equal(outbox.retryable().length, 1);
+
+    outbox.markAttempt(["event-1"]);
+    now += ANKI_RETRY_DELAYS_MS[2];
+    assert.equal(outbox.retryable().length, 1);
+    outbox.markAttempt(["event-1"]);
+    now += ANKI_RETRY_DELAYS_MS[3];
+    assert.equal(outbox.retryable().length, 1);
+    outbox.markAttempt(["event-1"]);
+    now += ANKI_RETRY_DELAYS_MS[3];
+    assert.equal(outbox.retryable().length, 1);
+});
+
+test("outbox reports unattempted and acknowledged state", () => {
+    const storage = new MemoryStorage();
+    const outbox = new DurableOutbox(storage, "hsk");
+    outbox.enqueue(createReviewEvent(
+        "hsk", "hsk-1", "good", "2026-08-30T02:00:00Z", "event-1"
+    ));
+    assert.equal(outbox.pendingCount(), 1);
+    assert.equal(outbox.hasUnattempted(), true);
+
+    outbox.markAttempt(["event-1"]);
+    assert.equal(outbox.hasUnattempted(), false);
+    outbox.acknowledge(["event-1"]);
+    assert.equal(outbox.pendingCount(), 0);
 });
 
 test("acknowledged events are removed from the durable outbox", () => {
