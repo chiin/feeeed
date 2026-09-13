@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-13",
   "batch_date": "2026-09-13",
-  "compiled_at": "2026-09-13T14:44:57.488223Z",
-  "state_revision": 99,
+  "compiled_at": "2026-09-13T14:45:18.494727Z",
+  "state_revision": 101,
   "daily_progress": {
     "total": 8,
-    "new": 2,
-    "review": 1,
-    "done": 5
+    "new": 0,
+    "review": 2,
+    "done": 6
   },
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
@@ -102,51 +102,11 @@
     "d54409e2-d932-43e1-8437-cb59fedc67e4",
     "315e8ba3-1a4a-4e3f-aacd-c1b5a6b7b342",
     "bca97fdf-b056-4699-865b-4fe021e547e9",
-    "3b2eed11-4b72-4788-b651-e4ede3203b3d"
+    "3b2eed11-4b72-4788-b651-e4ede3203b3d",
+    "04016389-8268-4f6b-8b23-271329d1fac7",
+    "ccb7f83e-399b-43a4-8285-791d23981509"
   ],
   "cards": [
-    {
-      "id": "mandarin_reading-2026-09-13-hsk-0027",
-      "front": {
-        "text": "\u6211\u660e\u5929\u548c\u7238\u7238\u53bb\u5317\u4eac\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "My father and I are going to Beijing tomorrow.",
-        "notes": "W\u01d2 m\u00edngti\u0101n h\u00e9 b\u00e0ba q\u00f9 B\u011bij\u012bng.\n\nA verb meaning \u201cto go,\u201d indicating movement toward Beijing."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-12T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-13-hsk-0030",
-      "front": {
-        "text": "\u66f8\u5728\u684c\u5b50\u4e0a\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The book is on the table.",
-        "notes": "Sh\u016b z\u00e0i zhu\u014dzi shang.\n\nA localizer meaning \u201con,\u201d showing that the book is located on the table."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-12T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
     {
       "id": "mandarin_reading-2026-09-13-hsk-0026",
       "front": {
@@ -172,6 +132,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-13T14:44:38.011000Z",
         "next_due_at": "2026-09-13T14:54:38.011000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-09-13-hsk-0027",
+      "front": {
+        "text": "\u6211\u660e\u5929\u548c\u7238\u7238\u53bb\u5317\u4eac\u3002",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "My father and I are going to Beijing tomorrow.",
+        "notes": "W\u01d2 m\u00edngti\u0101n h\u00e9 b\u00e0ba q\u00f9 B\u011bij\u012bng.\n\nA verb meaning \u201cto go,\u201d indicating movement toward Beijing."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-13T14:54:51.097000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-13T14:44:51.097000Z",
+        "next_due_at": "2026-09-13T14:54:51.097000Z"
       },
       "schedule_previews": {
         "again": "10m",

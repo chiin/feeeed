@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-13",
   "batch_date": "2026-09-13",
-  "compiled_at": "2026-09-13T14:44:57.488223Z",
-  "state_revision": 86,
+  "compiled_at": "2026-09-13T14:45:18.494727Z",
+  "state_revision": 87,
   "source_revisions": {
     "hsk": 828,
-    "mandarin_sentences": 99
+    "mandarin_sentences": 101
   },
   "daily_progress": {
     "total": 101,
-    "new": 28,
-    "review": 25,
-    "done": 48
+    "new": 26,
+    "review": 26,
+    "done": 49
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -925,7 +925,9 @@
     "d54409e2-d932-43e1-8437-cb59fedc67e4",
     "315e8ba3-1a4a-4e3f-aacd-c1b5a6b7b342",
     "bca97fdf-b056-4699-865b-4fe021e547e9",
-    "3b2eed11-4b72-4788-b651-e4ede3203b3d"
+    "3b2eed11-4b72-4788-b651-e4ede3203b3d",
+    "04016389-8268-4f6b-8b23-271329d1fac7",
+    "ccb7f83e-399b-43a4-8285-791d23981509"
   ],
   "cards": [
     {
@@ -1567,30 +1569,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "mandarin_reading-2026-09-13-hsk-0030",
-      "front": {
-        "text": "\u66f8\u5728\u684c\u5b50\u4e0a\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The book is on the table.",
-        "notes": "Sh\u016b z\u00e0i zhu\u014dzi shang.\n\nA localizer meaning \u201con,\u201d showing that the book is located on the table."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-12T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "mandarin_reading-2026-09-13-hsk-0026",
       "front": {
         "text": "\u4f60\u73fe\u5728\u80fd\u505a\u9019\u4e9b\u5de5\u4f5c\u55ce\uff1f",
@@ -1938,13 +1916,25 @@
         "notes": "W\u01d2 m\u00edngti\u0101n h\u00e9 b\u00e0ba q\u00f9 B\u011bij\u012bng.\n\nA verb meaning \u201cto go,\u201d indicating movement toward Beijing."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-12T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-13T14:54:51.097000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-13T14:44:51.097000Z",
+        "next_due_at": "2026-09-13T14:54:51.097000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
