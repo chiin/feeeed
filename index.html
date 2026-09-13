@@ -39,11 +39,45 @@
             border-color: #0a84ff;
             outline: none;
         }
-        .reader-link span {
+        .reader-link > span {
             display: block;
             margin-top: 6px;
             color: #8e8e93;
             font-size: .85rem;
+            font-weight: 500;
+        }
+        .progress-panel { margin-top: 14px; }
+        .progress-bar {
+            display: flex;
+            width: 100%;
+            height: 8px;
+            overflow: hidden;
+            border-radius: 4px;
+            background: #48484a;
+        }
+        .progress-segment { height: 100%; }
+        .progress-red { background: #ff453a; }
+        .progress-orange { background: #ff9f0a; }
+        .progress-green { background: #30d158; }
+        .progress-summary {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 7px;
+            color: #d1d1d6;
+            font-size: .8rem;
+            font-weight: 600;
+        }
+        .progress-legend {
+            margin-top: 4px;
+            color: #8e8e93;
+            font-size: .75rem;
+            font-weight: 500;
+        }
+        .progress-unavailable {
+            margin-top: 12px;
+            color: #8e8e93;
+            font-size: .8rem;
             font-weight: 500;
         }
         .status { margin-top: 40px; color: #8e8e93; text-align: center; }
@@ -85,15 +119,22 @@
     <script>
         "use strict";
 
-        function createLink(href, title, detail) {
+        function createLink(href, title, detail, snapshotPath, progressKind) {
             const link = document.createElement("a");
             link.className = "reader-link";
             link.href = href;
             link.textContent = title;
+            link.dataset.snapshot = snapshotPath;
+            link.dataset.progressKind = progressKind;
 
             const description = document.createElement("span");
             description.textContent = detail;
             link.appendChild(description);
+
+            const progress = document.createElement("div");
+            progress.className = "progress-unavailable";
+            progress.textContent = "Loading progress...";
+            link.appendChild(progress);
             return link;
         }
 
@@ -106,6 +147,101 @@
 
         function formatStrategy(strategy) {
             return (strategy || "sequential").replaceAll("_", " ");
+        }
+
+        function currentHktDate() {
+            const parts = new Intl.DateTimeFormat("en", {
+                timeZone: "Asia/Hong_Kong",
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit"
+            }).formatToParts(new Date());
+            const values = Object.fromEntries(
+                parts.filter(part => part.type !== "literal")
+                    .map(part => [part.type, part.value])
+            );
+            return `${values.year}-${values.month}-${values.day}`;
+        }
+
+        function renderProgress(link, progress) {
+            const kind = link.dataset.progressKind;
+            const categories = kind === "anki"
+                ? [
+                    ["new", "new", "progress-red"],
+                    ["review", "review", "progress-orange"],
+                    ["done", "done", "progress-green"]
+                ]
+                : [
+                    ["unread", "unread", "progress-red"],
+                    ["opened", "opened", "progress-orange"],
+                    ["finished", "finished", "progress-green"]
+                ];
+            const finishedKey = kind === "anki" ? "done" : "finished";
+            const total = Number(progress.total) || 0;
+            const panel = document.createElement("div");
+            panel.className = "progress-panel";
+
+            if (!total) {
+                panel.className = "progress-unavailable";
+                panel.textContent = "No cards scheduled today";
+                link.querySelector(".progress-unavailable").replaceWith(panel);
+                return;
+            }
+
+            const bar = document.createElement("div");
+            bar.className = "progress-bar";
+            bar.setAttribute("role", "img");
+            const finished = Number(progress[finishedKey]) || 0;
+            const percentage = Math.round((finished / total) * 100);
+            bar.setAttribute(
+                "aria-label",
+                `${finished} of ${total} finished, ${percentage} percent`
+            );
+            categories.forEach(([key, label, className]) => {
+                const count = Number(progress[key]) || 0;
+                const segment = document.createElement("div");
+                segment.className = `progress-segment ${className}`;
+                segment.style.width = `${(count / total) * 100}%`;
+                segment.title = `${count} ${label}`;
+                bar.appendChild(segment);
+            });
+
+            const summary = document.createElement("div");
+            summary.className = "progress-summary";
+            const percentageText = document.createElement("strong");
+            percentageText.textContent = `${percentage}% finished`;
+            const countText = document.createElement("span");
+            countText.textContent = `${finished} of ${total}`;
+            summary.append(percentageText, countText);
+
+            const legend = document.createElement("div");
+            legend.className = "progress-legend";
+            legend.textContent = categories
+                .map(([key, label]) => `${Number(progress[key]) || 0} ${label}`)
+                .join(" · ");
+            panel.append(bar, summary, legend);
+            link.querySelector(".progress-unavailable").replaceWith(panel);
+        }
+
+        async function loadProgress(link) {
+            try {
+                const response = await fetch(
+                    `${link.dataset.snapshot}?t=${Date.now()}`,
+                    { cache: "no-store" }
+                );
+                if (!response.ok) throw new Error("Snapshot not found");
+                const snapshot = await response.json();
+                if (
+                    snapshot.batch_date !== currentHktDate()
+                    || !snapshot.daily_progress
+                ) {
+                    throw new Error("Today's batch is not available");
+                }
+                renderProgress(link, snapshot.daily_progress);
+            } catch (_error) {
+                link.querySelector(".progress-unavailable").textContent =
+                    "Not available yet";
+            }
         }
 
         async function loadLandingPage() {
@@ -123,28 +259,36 @@
                     .map(([id, program]) => createLink(
                         `reviewer.html?program=${encodeURIComponent(id)}`,
                         program.feed_title || id,
-                        "Combined vocabulary and sentence review"
+                        "Combined vocabulary and sentence review",
+                        `cards/${id}_program.json`,
+                        "anki"
                     ));
                 const deckLinks = streams
                     .filter(([, stream]) => stream.type === "anki_deck")
                     .map(([id, stream]) => createLink(
                         `reviewer.html?deck=${encodeURIComponent(id)}`,
                         stream.feed_title || id,
-                        `${stream.new_cards_per_day || 0} new cards per day`
+                        `${stream.new_cards_per_day || 0} new cards per day`,
+                        `cards/${id}_deck.json`,
+                        "anki"
                     ));
                 const pdfLinks = streams
                     .filter(([, stream]) => stream.type === "pdf_folder")
                     .map(([id, stream]) => createLink(
                         `pdf_reader.html?stream=${encodeURIComponent(id)}`,
                         stream.feed_title || id,
-                        `${stream.batch_size || 5} PDFs · ${formatStrategy(stream.strategy)}`
+                        `${stream.batch_size || 5} PDFs · ${formatStrategy(stream.strategy)}`,
+                        `cards/${id}_pdf_batch.json`,
+                        "pdf"
                     ));
                 const bookLinks = streams
                     .filter(([, stream]) => stream.type === "current_book")
                     .map(([id, stream]) => createLink(
                         `pdf_reader.html?stream=${encodeURIComponent(id)}`,
                         stream.feed_title || id,
-                        `Current book: ${(stream.book_id || id).replaceAll("_", " ")}`
+                        `Current book: ${(stream.book_id || id).replaceAll("_", " ")}`,
+                        `cards/${id}_pdf_batch.json`,
+                        "pdf"
                     ));
 
                 const count = [
@@ -155,6 +299,10 @@
                 ].reduce((total, value) => total + value, 0);
                 status.style.display = count ? "none" : "block";
                 status.textContent = count ? "" : "No readers are configured.";
+                await Promise.allSettled(
+                    [...document.querySelectorAll("[data-snapshot]")]
+                        .map(link => loadProgress(link))
+                );
             } catch (error) {
                 status.className = "status error";
                 status.textContent = `Unable to load readers: ${error.message}`;
