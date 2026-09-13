@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 95,
+  "revision": 97,
   "cards": {
     "mandarin_reading-2026-09-06-hsk-0158": {
       "state": "review",
@@ -448,6 +448,32 @@
       "last_rating": "good",
       "last_reviewed_at": "2026-09-13T12:24:22.031000Z",
       "next_due_at": "2026-09-14T16:00:00Z"
+    },
+    "mandarin_reading-2026-09-12-hsk-0023": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-09-13T14:44:06.056000Z",
+      "next_due_at": "2026-09-14T16:00:00Z"
+    },
+    "mandarin_reading-2026-09-13-hsk-0024": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-09-13T14:44:11.257000Z",
+      "next_due_at": "2026-09-14T16:00:00Z"
     }
   },
   "processed_events": {
@@ -790,6 +816,14 @@
     "f3228aa4-b0ff-4e2f-acb2-27242ec3638a": {
       "processed_at": "2026-09-13T13:27:58.692233Z",
       "status": "applied"
+    },
+    "d54409e2-d932-43e1-8437-cb59fedc67e4": {
+      "processed_at": "2026-09-13T14:44:37.747195Z",
+      "status": "applied"
+    },
+    "315e8ba3-1a4a-4e3f-aacd-c1b5a6b7b342": {
+      "processed_at": "2026-09-13T14:44:37.747195Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -807,14 +841,6 @@
       "mandarin_reading-2026-09-13-hsk-0030"
     ],
     "active": [
-      {
-        "card_id": "mandarin_reading-2026-09-12-hsk-0023",
-        "available_at": "2026-09-12T16:00:00Z"
-      },
-      {
-        "card_id": "mandarin_reading-2026-09-13-hsk-0024",
-        "available_at": "2026-09-12T16:00:00Z"
-      },
       {
         "card_id": "mandarin_reading-2026-09-13-hsk-0025",
         "available_at": "2026-09-12T16:00:00Z"
