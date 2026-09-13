@@ -11,6 +11,7 @@ const programId = programParam && programParam.toUpperCase() !== "NONE"
     : null;
 const sessionId = programId ? `program:${programId}` : deckId;
 const ratingNames = { 1: "again", 2: "hard", 3: "good", 4: "easy" };
+const SYNC_POLL_MS = 60 * 1000;
 let cards = [];
 let candidates = [];
 let outbox = null;
@@ -18,6 +19,7 @@ let candidateOutbox = null;
 let waitTimer = null;
 let syncInFlight = false;
 let candidateSyncInFlight = false;
+let syncFailed = false;
 
 if (!sessionId) {
     loadDeckIndex();
@@ -26,7 +28,8 @@ if (!sessionId) {
         localStorage,
         sessionId,
         undefined,
-        programId ? "anki_program_outbox_v1" : "anki_outbox_v2"
+        programId ? "anki_program_outbox_v1" : "anki_outbox_v2",
+        ReviewerState.ANKI_RETRY_DELAYS_MS
     );
     if (programId) {
         candidateOutbox = new ReviewerState.DurableOutbox(
@@ -38,8 +41,8 @@ if (!sessionId) {
     }
     loadDeck();
     setInterval(loadDeck, 60000);
-    setInterval(() => flushPendingSync(), 30000);
-    if (programId) setInterval(() => flushCandidateSync(), 30000);
+    setInterval(() => flushPendingSync(), SYNC_POLL_MS);
+    if (programId) setInterval(() => flushCandidateSync(), SYNC_POLL_MS);
 }
 
 async function loadDeckIndex() {
@@ -102,9 +105,11 @@ async function loadDeck() {
         document.getElementById("deckTitle").innerText =
             data.title || programId || deckId;
         outbox.acknowledge(data.processed_event_ids);
+        syncFailed = false;
         cards = ReviewerState.reconcileCards(data.cards, outbox.events());
         if (programId) await loadCandidates();
         renderNextCard();
+        updateSyncUi();
         flushPendingSync();
     } catch (error) {
         if (!cards.length) {
@@ -127,6 +132,7 @@ async function loadCandidates() {
         candidateOutbox.events()
     );
     updateCandidateButtons();
+    updateSyncUi();
     flushCandidateSync();
 }
 
@@ -233,8 +239,7 @@ function showCompletion(title, message) {
     showScreen("finishScreen");
     document.getElementById("finishTitle").innerText = title;
     document.getElementById("finishMessage").innerText = message;
-    document.getElementById("syncBtn").style.display =
-        outbox.events().length ? "block" : "none";
+    updateSyncUi();
 }
 
 function showCandidateReview() {
@@ -276,6 +281,7 @@ function decideCandidate(action) {
             createEventId()
         )
     );
+    updateSyncUi();
     updateCandidateButtons();
     if (candidates.length) {
         showCandidateReview();
@@ -325,7 +331,7 @@ function gradeCard(grade) {
         });
     }
     renderNextCard();
-    flushPendingSync();
+    updateSyncUi();
 }
 
 function getPAT() {
@@ -344,10 +350,56 @@ function savePATFromModal() {
     if (programId) flushCandidateSync(true);
 }
 
+function updateSyncUi() {
+    if (!outbox) return;
+    const pendingCount = outbox.pendingCount()
+        + (candidateOutbox ? candidateOutbox.pendingCount() : 0);
+    const unattempted = outbox.hasUnattempted()
+        || Boolean(candidateOutbox && candidateOutbox.hasUnattempted());
+    const sending = syncInFlight || candidateSyncInFlight;
+    let label = "Synced";
+    let stateClass = "sync-confirmed";
+    let status = "All changes confirmed.";
+
+    if (sending) {
+        label = "Sending...";
+        stateClass = "sync-waiting";
+        status = `${pendingCount} change(s) are being sent to GitHub.`;
+    } else if (syncFailed) {
+        label = "Retry Sync";
+        stateClass = "sync-error";
+        status = "Sync failed. Your changes remain saved on this device.";
+    } else if (pendingCount && unattempted) {
+        label = `Sync (${pendingCount})`;
+        stateClass = "sync-ready";
+        status = `${pendingCount} change(s) saved on this device.`;
+    } else if (pendingCount) {
+        label = `Waiting... (${pendingCount})`;
+        stateClass = "sync-waiting";
+        status = "Sent to GitHub; waiting for the updated snapshot.";
+    }
+
+    document.querySelectorAll(".sync-btn").forEach(button => {
+        button.textContent = label;
+        button.classList.remove(
+            "sync-ready",
+            "sync-waiting",
+            "sync-confirmed",
+            "sync-error"
+        );
+        button.classList.add(stateClass);
+        button.disabled = sending;
+    });
+    const statusElement = document.getElementById("syncStatus");
+    if (statusElement) statusElement.innerText = status;
+}
+
 async function flushProgramEvents(events, token) {
     const eventIds = events.map(event => event.event_id);
     outbox.markAttempt(eventIds);
     syncInFlight = true;
+    syncFailed = false;
+    updateSyncUi();
     let failedEventIds = eventIds;
     try {
         for (const [targetDeckId, deckEvents] of
@@ -385,18 +437,23 @@ async function flushProgramEvents(events, token) {
             "Events accepted; waiting for GitHub Pages to publish.";
     } catch (error) {
         outbox.markFailed(failedEventIds);
+        syncFailed = true;
         console.error("[Feeeeed Sync]", error);
         document.getElementById("syncStatus").innerText =
             "Sync failed. The durable outbox will retry.";
     } finally {
         syncInFlight = false;
+        updateSyncUi();
     }
 }
 
 async function flushPendingSync(force = false) {
     if (syncInFlight) return;
     const events = outbox.retryable(force);
-    if (!events.length) return;
+    if (!events.length) {
+        updateSyncUi();
+        return;
+    }
     const token = getPAT();
     if (!token) return;
     if (programId) {
@@ -407,6 +464,8 @@ async function flushPendingSync(force = false) {
     const eventIds = events.map(event => event.event_id);
     outbox.markAttempt(eventIds);
     syncInFlight = true;
+    syncFailed = false;
+    updateSyncUi();
     try {
         const response = await fetch(
             "https://api.github.com/repos/chiin/feeeed/dispatches",
@@ -436,11 +495,13 @@ async function flushPendingSync(force = false) {
             "Events accepted; waiting for GitHub Pages to publish.";
     } catch (error) {
         outbox.markFailed(eventIds);
+        syncFailed = true;
         console.error("[Feeeeed Sync]", error);
         document.getElementById("syncStatus").innerText =
             "Sync failed. The durable outbox will retry.";
     } finally {
         syncInFlight = false;
+        updateSyncUi();
     }
 }
 
@@ -453,6 +514,8 @@ async function flushCandidateSync(force = false) {
     const eventIds = events.map(event => event.event_id);
     candidateOutbox.markAttempt(eventIds);
     candidateSyncInFlight = true;
+    syncFailed = false;
+    updateSyncUi();
     try {
         for (const event of events) {
             const response = await fetch(
@@ -484,15 +547,19 @@ async function flushCandidateSync(force = false) {
             "Candidate decisions accepted; waiting for GitHub Pages to publish.";
     } catch (error) {
         candidateOutbox.markFailed(eventIds);
+        syncFailed = true;
         console.error("[Feeeeed Candidate Sync]", error);
         document.getElementById("syncStatus").innerText =
             "Candidate sync failed. The durable outbox will retry.";
     } finally {
         candidateSyncInFlight = false;
+        updateSyncUi();
     }
 }
 
 function syncWithGitHub() {
+    syncFailed = false;
+    updateSyncUi();
     flushPendingSync(true);
     if (programId) flushCandidateSync(true);
 }

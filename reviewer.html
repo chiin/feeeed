@@ -24,7 +24,7 @@
             align-items: center;
             margin-bottom: 16px;
         }
-        .title { color: #8e8e93; font-size: 1.1rem; font-weight: 700; }
+        .title { min-width: 0; color: #8e8e93; font-size: 1.1rem; font-weight: 700; }
         .progress {
             padding: 4px 12px;
             border-radius: 12px;
@@ -33,6 +33,23 @@
             font-size: .9rem;
             font-weight: 600;
         }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn.sync-btn {
+            width: auto;
+            min-width: 96px;
+            padding: 7px 10px;
+            border-radius: 10px;
+            font-size: .8rem;
+        }
+        .sync-ready { background: #0a84ff; color: #fff; }
+        .sync-waiting { background: #ff9f0a; color: #000; }
+        .sync-confirmed { background: #30d158; color: #000; }
+        .sync-error { background: #ff453a; color: #fff; }
+        .sync-btn:disabled { cursor: default; opacity: .75; }
         .card {
             min-height: 320px;
             padding: 24px;
@@ -181,7 +198,10 @@
     <div id="reviewScreen" class="screen">
         <div class="header">
             <div id="deckTitle" class="title">Deck</div>
-            <div id="progress" class="progress">0 remaining</div>
+            <div class="header-actions">
+                <div id="progress" class="progress">0 remaining</div>
+                <button class="btn sync-btn sync-confirmed" onclick="syncWithGitHub()">Synced</button>
+            </div>
         </div>
         <button id="candidateBtn" class="btn btn-secondary" style="display:none" onclick="showCandidateReview()"></button>
         <div class="card">
@@ -212,7 +232,10 @@
     <div id="candidateScreen" class="screen">
         <div class="header">
             <div class="title">Vocabulary Candidates</div>
-            <div id="candidateProgress" class="progress">0 pending</div>
+            <div class="header-actions">
+                <div id="candidateProgress" class="progress">0 pending</div>
+                <button class="btn sync-btn sync-confirmed" onclick="syncWithGitHub()">Synced</button>
+            </div>
         </div>
         <div class="card">
             <div class="card-content">
@@ -233,9 +256,9 @@
     <div id="finishScreen" class="screen">
         <h2 id="finishTitle">Session Complete!</h2>
         <p id="finishMessage" class="muted">All due cards reviewed.</p>
-        <button id="syncBtn" class="btn btn-primary" onclick="syncWithGitHub()">Retry Sync Now</button>
+        <button class="btn sync-btn sync-confirmed" onclick="syncWithGitHub()">Synced</button>
         <button id="finishCandidateBtn" class="btn btn-secondary" style="display:none" onclick="showCandidateReview()"></button>
-        <p id="syncStatus" class="muted"></p>
+        <p id="syncStatus" class="muted" aria-live="polite"></p>
     </div>
 
     <audio id="frontAudio"></audio>
@@ -250,7 +273,7 @@
         </div>
     </div>
 
-    <script src="reviewer_state.js?v=7"></script>
-    <script src="reviewer_app.js?v=8"></script>
+    <script src="reviewer_state.js?v=8"></script>
+    <script src="reviewer_app.js?v=9"></script>
 </body>
 </html>

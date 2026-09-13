@@ -9,6 +9,12 @@
     "use strict";
 
     const RETRY_DELAY_MS = 2 * 60 * 1000;
+    const ANKI_RETRY_DELAYS_MS = [
+        RETRY_DELAY_MS,
+        5 * 60 * 1000,
+        15 * 60 * 1000,
+        30 * 60 * 1000
+    ];
 
     function parseStoredArray(storage, key) {
         const raw = storage.getItem(key);
@@ -28,12 +34,14 @@
             storage,
             deckId,
             now = () => Date.now(),
-            keyPrefix = "anki_outbox_v2"
+            keyPrefix = "anki_outbox_v2",
+            retryDelaysMs = [RETRY_DELAY_MS]
         ) {
             this.storage = storage;
             this.deckId = deckId;
             this.now = now;
             this.key = `${keyPrefix}_${deckId}`;
+            this.retryDelaysMs = retryDelaysMs;
             this.records = parseStoredArray(storage, this.key);
         }
 
@@ -62,6 +70,16 @@
             return this.records.map(record => record.event);
         }
 
+        pendingCount() {
+            this.mergeStored();
+            return this.records.length;
+        }
+
+        hasUnattempted() {
+            this.mergeStored();
+            return this.records.some(record => !record.last_attempt_at);
+        }
+
         enqueue(event) {
             this.mergeStored();
             if (!this.records.some(record => record.event.event_id === event.event_id)) {
@@ -84,10 +102,13 @@
 
         retryable(force = false) {
             this.mergeStored();
-            const cutoff = this.now() - RETRY_DELAY_MS;
             const shouldSend = force || this.records.some(record =>
                 !record.last_attempt_at
-                || Date.parse(record.last_attempt_at) <= cutoff
+                || Date.parse(record.last_attempt_at) <= this.now() -
+                    this.retryDelaysMs[Math.min(
+                        Math.max(0, Number(record.attempt_count || 1) - 1),
+                        this.retryDelaysMs.length - 1
+                    )]
             );
             return shouldSend
                 ? this.records.map(record => record.event)
@@ -101,6 +122,7 @@
             this.records.forEach(record => {
                 if (attempted.has(record.event.event_id)) {
                     record.last_attempt_at = timestamp;
+                    record.attempt_count = Number(record.attempt_count || 0) + 1;
                 }
             });
             this.save();
@@ -216,6 +238,7 @@
 
     return {
         DurableOutbox,
+        ANKI_RETRY_DELAYS_MS,
         RETRY_DELAY_MS,
         createReviewEvent,
         createVocabularyCandidateEvent,
