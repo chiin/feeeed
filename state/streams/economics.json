@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 34,
+  "revision": 36,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -119,9 +119,9 @@
     }
   },
   "daily_batch": {
-    "id": "2026-09-13",
-    "date": "2026-09-13",
-    "released_at": "2026-09-12T16:13:16.694692Z",
+    "id": "2026-09-14",
+    "date": "2026-09-14",
+    "released_at": "2026-09-13T17:59:03.942285Z",
     "release_summary_ids": [
       "article_023_Market_efficiency_and_the_welf.pdf",
       "article_024_Market_failure.pdf",
@@ -143,6 +143,7 @@
       "article_026_The_tragedy_of_the_commons.pdf",
       "article_027_The_Coase_theorem.pdf"
     ],
+    "opened_ids": [],
     "segments": [
       {
         "kind": "initial",
@@ -156,39 +157,16 @@
       }
     ],
     "reminder_slots": [
-      "2026-09-13T02:00:00Z",
-      "2026-09-13T06:00:00Z",
-      "2026-09-13T09:00:00Z",
-      "2026-09-13T11:00:00Z",
-      "2026-09-13T12:00:00Z"
+      "2026-09-14T02:00:00Z",
+      "2026-09-14T03:00:00Z",
+      "2026-09-14T06:00:00Z",
+      "2026-09-14T07:00:00Z",
+      "2026-09-14T10:00:00Z"
     ],
-    "processed_reminder_slots": [
-      "2026-09-13T02:00:00Z",
-      "2026-09-13T06:00:00Z",
-      "2026-09-13T09:00:00Z",
-      "2026-09-13T11:00:00Z",
-      "2026-09-13T12:00:00Z"
-    ],
-    "opened_ids": []
+    "processed_reminder_slots": []
   },
-  "next_release_at": "2026-09-13T16:00:00Z",
+  "next_release_at": "2026-09-14T16:00:00Z",
   "feed_reminders": [
-    {
-      "id": "economics-pdf-reminder-20260912T080000Z",
-      "batch_date": "2026-09-12",
-      "pdf_id": "article_021_The_invisible_hand.pdf",
-      "title": "Article 021 The Invisible Hand",
-      "published_at": "2026-09-12T08:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "economics-pdf-reminder-20260912T110000Z",
-      "batch_date": "2026-09-12",
-      "pdf_id": "article_021_The_invisible_hand.pdf",
-      "title": "Article 021 The Invisible Hand",
-      "published_at": "2026-09-12T11:00:00Z",
-      "remaining": 5
-    },
     {
       "id": "economics-pdf-reminder-20260913T020000Z",
       "batch_date": "2026-09-13",
