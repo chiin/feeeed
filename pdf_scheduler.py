@@ -10,13 +10,13 @@ from urllib.parse import quote
 
 
 HKT = timezone(timedelta(hours=8))
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 STRATEGIES = {
     "sequential",
     "random_without_replacement",
     "random_with_replacement",
 }
-EVENT_ACTIONS = {"complete", "continue"}
+EVENT_ACTIONS = {"open", "complete", "continue"}
 MIN_RELEASE_MINUTE = 60
 MAX_RELEASE_MINUTE = 21 * 60
 REMINDER_HOURS = tuple(range(8, 23))
@@ -124,6 +124,7 @@ def _legacy_batch(legacy_snapshot: dict | None) -> dict | None:
         "release_summary_ids": ids,
         "active_ids": list(ids),
         "selected_ids": list(ids),
+        "opened_ids": [],
         "segments": [{"kind": "initial", "ids": list(ids)}],
     }
 
@@ -171,6 +172,8 @@ def migrate_history(
         else []
     )
     batch = stream_history.get("daily_batch") or _legacy_batch(legacy_snapshot)
+    if batch is not None:
+        batch.setdefault("opened_ids", [])
     release_value = stream_history.get("next_release_at") or stream_history.get(
         "next_update_at"
     )
@@ -311,6 +314,7 @@ def release_if_due(
         "release_summary_ids": [],
         "active_ids": list(carryover),
         "selected_ids": list(carryover),
+        "opened_ids": [],
         "segments": [],
     }
     selected = _fill_batch(
@@ -408,12 +412,55 @@ def _validate_event(
     if event["action"] not in EVENT_ACTIONS:
         raise ValueError("PDF event action is invalid")
     pdf_id = event.get("pdf_id")
-    if event["action"] == "complete" and not pdf_id:
-        raise ValueError("completion event requires pdf_id")
+    if event["action"] in {"open", "complete"} and not pdf_id:
+        raise ValueError(f"{event['action']} event requires pdf_id")
     occurred_at = parse_datetime(event["occurred_at"])
     if occurred_at > now.astimezone(timezone.utc) + timedelta(minutes=5):
         raise ValueError("PDF event timestamp is in the future")
     return event["event_id"], event["action"], pdf_id, occurred_at
+
+
+def apply_open_events(
+    stream_key: str,
+    stream_history: dict,
+    events: Iterable[dict],
+    now: datetime,
+    book_id: str | None = None,
+) -> dict[str, int]:
+    processed = stream_history["processed_events"]
+    batch = stream_history.get("daily_batch")
+    counts = {"applied": 0, "duplicate": 0, "stale": 0, "invalid": 0}
+    valid_events = []
+    for event in events:
+        try:
+            validated = _validate_event(stream_key, event, now, book_id)
+        except (TypeError, ValueError) as error:
+            print(f"Ignoring invalid PDF event: {error}")
+            counts["invalid"] += 1
+            continue
+        if validated[1] == "open":
+            valid_events.append(validated)
+
+    valid_events.sort(key=lambda item: item[3])
+    for event_id, _action, pdf_id, _occurred_at in valid_events:
+        if event_id in processed:
+            counts["duplicate"] += 1
+            continue
+        processed[event_id] = {
+            "processed_at": isoformat_utc(now),
+            "status": "stale",
+        }
+        if not batch or pdf_id not in batch["active_ids"]:
+            counts["stale"] += 1
+            continue
+
+        opened_ids = batch.setdefault("opened_ids", [])
+        if pdf_id not in opened_ids:
+            opened_ids.append(pdf_id)
+            stream_history["revision"] += 1
+        processed[event_id]["status"] = "applied"
+        counts["applied"] += 1
+    return counts
 
 
 def apply_completion_events(
@@ -533,12 +580,20 @@ def _title(pdf_id: str) -> str:
     return Path(pdf_id).stem.replace("_", " ").title()
 
 
-def _item(pdf_id: str, folder_name: str, base_url: str) -> dict:
-    return {
+def _item(
+    pdf_id: str,
+    folder_name: str,
+    base_url: str,
+    opened_ids: set[str] | None = None,
+) -> dict:
+    item = {
         "id": pdf_id,
         "title": _title(pdf_id),
         "pdf_url": f"{base_url}/{quote(folder_name)}/{quote(pdf_id)}",
     }
+    if opened_ids is not None:
+        item["opened"] = pdf_id in opened_ids
+    return item
 
 
 def build_snapshot(
@@ -554,7 +609,14 @@ def build_snapshot(
 ) -> dict:
     batch = stream_history.get("daily_batch")
     active_ids = batch["active_ids"] if batch else []
+    active_id_set = set(active_ids)
     summary_ids = batch["release_summary_ids"] if batch else []
+    opened_ids = set(batch.get("opened_ids", [])) if batch else set()
+    active_summary_ids = [
+        pdf_id for pdf_id in summary_ids if pdf_id in active_id_set
+    ]
+    opened_count = sum(pdf_id in opened_ids for pdf_id in active_summary_ids)
+    total_count = len(summary_ids)
     return {
         "schema_version": SCHEMA_VERSION,
         "stream": stream_key,
@@ -567,14 +629,20 @@ def build_snapshot(
         "next_release_at": stream_history["next_release_at"],
         "batch_size": batch_size,
         "strategy": stream_history["strategy"],
+        "daily_progress": {
+            "total": total_count,
+            "unread": len(active_summary_ids) - opened_count,
+            "opened": opened_count,
+            "finished": max(0, total_count - len(active_summary_ids)),
+        },
         "release_summary": [
             _item(pdf_id, folder_name, base_url) for pdf_id in summary_ids
         ],
         "active": [
-            _item(pdf_id, folder_name, base_url) for pdf_id in active_ids
+            _item(pdf_id, folder_name, base_url, opened_ids) for pdf_id in active_ids
         ],
         "batch": [
-            _item(pdf_id, folder_name, base_url) for pdf_id in active_ids
+            _item(pdf_id, folder_name, base_url, opened_ids) for pdf_id in active_ids
         ],
         "can_continue": can_continue(stream_history, all_ids),
         "processed_event_ids": list(stream_history["processed_events"]),

@@ -17,6 +17,7 @@ from anki_scheduler import (
 from pdf_scheduler import (
     apply_completion_events,
     apply_continuation_events,
+    apply_open_events,
     build_snapshot as build_pdf_snapshot,
     collect_due_reminders,
     migrate_history as migrate_pdf_history,
@@ -535,6 +536,9 @@ def process_pdf_folder(
             "occurred_at": now.isoformat(),
         }]
 
+    open_result = apply_open_events(
+        stream_key, stream_history, events, now, book_id
+    )
     completion_result = apply_completion_events(
         stream_key, stream_history, events, now, book_id
     )
@@ -568,7 +572,8 @@ def process_pdf_folder(
     if events:
         print(
             f"[{stream_key}] Processed PDF events: "
-            f"completions={completion_result}, continuations={continuation_result}."
+            f"opens={open_result}, completions={completion_result}, "
+            f"continuations={continuation_result}."
         )
     if released:
         print(f"[{stream_key}] Released HKT batch {stream_history['daily_batch']['id']}.")

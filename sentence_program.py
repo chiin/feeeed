@@ -564,6 +564,13 @@ def build_combined_snapshot(
             if event_id not in seen_event_ids:
                 seen_event_ids.add(event_id)
                 processed_event_ids.append(event_id)
+    daily_progress = {
+        key: sum(
+            int(snapshot.get("daily_progress", {}).get(key, 0))
+            for snapshot in source_snapshots
+        )
+        for key in ("total", "new", "review", "done")
+    }
     return {
         "schema_version": 1,
         "program_id": program_id,
@@ -576,6 +583,7 @@ def build_combined_snapshot(
             snapshot["deck_id"]: snapshot["state_revision"]
             for snapshot in source_snapshots
         },
+        "daily_progress": daily_progress,
         "processed_event_ids": processed_event_ids,
         "cards": cards,
     }

@@ -431,6 +431,12 @@ def build_deck_snapshot(
 ) -> dict:
     scheduler = scheduler or FSRSScheduler()
     batch = stream_history["daily_batch"]
+    active_ids = {item["card_id"] for item in batch["active"]}
+    new_count = sum(
+        card_id not in stream_history["cards"] for card_id in active_ids
+    )
+    review_count = len(active_ids) - new_count
+    total_count = len(batch["card_ids"])
     cards_by_id = {card["id"]: card for card in all_cards}
     active_cards = []
     for item in batch["active"]:
@@ -455,6 +461,12 @@ def build_deck_snapshot(
         "batch_date": batch["date"],
         "compiled_at": isoformat_utc(now),
         "state_revision": stream_history["revision"],
+        "daily_progress": {
+            "total": total_count,
+            "new": new_count,
+            "review": review_count,
+            "done": max(0, total_count - len(active_ids)),
+        },
         "processed_event_ids": list(stream_history["processed_events"]),
         "cards": active_cards,
     }

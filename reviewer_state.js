@@ -196,6 +196,11 @@
     }
 
     function reconcilePdfItems(serverItems, pendingEvents) {
+        const openedIds = new Set(
+            (pendingEvents || [])
+                .filter(event => event.action === "open")
+                .map(event => event.pdf_id)
+        );
         const completedIds = new Set(
             (pendingEvents || [])
                 .filter(event => event.action === "complete")
@@ -203,7 +208,10 @@
         );
         return (serverItems || [])
             .filter(item => !completedIds.has(item.id))
-            .map(item => ({ ...item }));
+            .map(item => ({
+                ...item,
+                opened: Boolean(item.opened || openedIds.has(item.id))
+            }));
     }
 
     return {

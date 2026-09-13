@@ -159,6 +159,7 @@ function setSyncStatus(message) {
 async function renderPDF(item) {
     const version = ++renderVersion;
     renderedPdfId = item.id;
+    markPdfOpened(item);
     document.getElementById("docTitle").innerText = item.title;
     updateProgress();
     const viewer = document.getElementById("pdfViewer");
@@ -190,6 +191,17 @@ async function renderPDF(item) {
             viewer.appendChild(message);
         }
     }
+}
+
+function markPdfOpened(item) {
+    if (item.opened) return;
+    const alreadyPending = outbox.events().some(
+        event => event.action === "open" && event.pdf_id === item.id
+    );
+    if (alreadyPending) return;
+    item.opened = true;
+    outbox.enqueue(createPdfEvent("open", item.id));
+    flushPendingSync();
 }
 
 function createEventId() {
