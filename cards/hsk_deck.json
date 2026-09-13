@@ -5,13 +5,13 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-13",
   "batch_date": "2026-09-13",
-  "compiled_at": "2026-09-13T15:02:48.967318Z",
-  "state_revision": 831,
+  "compiled_at": "2026-09-13T15:24:34.414876Z",
+  "state_revision": 833,
   "daily_progress": {
     "total": 93,
     "new": 24,
-    "review": 25,
-    "done": 44
+    "review": 24,
+    "done": 45
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -836,7 +836,9 @@
     "12a0ae57-a085-4931-b135-97d089034cee",
     "ec68a2da-ba8a-4329-8825-3d56a9afb6dc",
     "07e47275-8f50-4dd9-87ef-a665b92ff487",
-    "c526fcc8-afb3-4968-b927-d1de22759299"
+    "c526fcc8-afb3-4968-b927-d1de22759299",
+    "feced754-e426-428c-ad84-03a8922af761",
+    "87590d31-5a34-45ed-a147-0f197ab83fe3"
   ],
   "cards": [
     {
@@ -2282,84 +2284,6 @@
       }
     },
     {
-      "id": "hsk-0291",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8457",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "zhe - action particle",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8457",
-          "url": "https://www.dong-chinese.com/wiki/%E8%91%97"
-        }
-      ],
-      "available_at": "2026-09-13T14:53:08.616000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.08335671711031604,
-        "difficulty": 8.806304468856837,
-        "interval_days": 0,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-13T14:43:08.616000Z",
-        "next_due_at": "2026-09-13T14:53:08.616000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0040",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8ab0",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sh\u00e9i - who",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8ab0",
-          "url": "https://www.dong-chinese.com/wiki/%E8%AA%B0"
-        }
-      ],
-      "available_at": "2026-09-13T14:53:14.235000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.17186455475969975,
-        "difficulty": 9.697318302420419,
-        "interval_days": 0,
-        "reviews": 6,
-        "passing_reviews": 2,
-        "lapses": 3,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-13T14:43:14.235000Z",
-        "next_due_at": "2026-09-13T14:53:14.235000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "hsk-0292",
       "entry_type": "term",
       "front": {
@@ -2550,6 +2474,45 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-13T14:45:15.251000Z",
         "next_due_at": "2026-09-13T14:55:15.251000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0291",
+      "entry_type": "term",
+      "front": {
+        "text": "\u8457",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "zhe - action particle",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u8457",
+          "url": "https://www.dong-chinese.com/wiki/%E8%91%97"
+        }
+      ],
+      "available_at": "2026-09-13T15:34:09.667000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.03485140985964798,
+        "difficulty": 9.592868765339693,
+        "interval_days": 0,
+        "reviews": 3,
+        "passing_reviews": 0,
+        "lapses": 2,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-13T15:24:09.667000Z",
+        "next_due_at": "2026-09-13T15:34:09.667000Z"
       },
       "schedule_previews": {
         "again": "10m",
