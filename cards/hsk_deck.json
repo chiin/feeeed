@@ -5,13 +5,13 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-13",
   "batch_date": "2026-09-13",
-  "compiled_at": "2026-09-13T13:30:04.003864Z",
-  "state_revision": 815,
+  "compiled_at": "2026-09-13T14:43:17.167979Z",
+  "state_revision": 816,
   "daily_progress": {
     "total": 93,
     "new": 28,
-    "review": 30,
-    "done": 35
+    "review": 29,
+    "done": 36
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -820,7 +820,8 @@
     "baf8a131-cc71-4654-8599-ff6bd34f827b",
     "2730d316-ef93-4cdb-aa78-1f735b5d6c7b",
     "b6aa4d5d-4124-46e4-9907-04697e6a91ee",
-    "6f6eaf70-9742-4265-87d9-5dfa55962be2"
+    "6f6eaf70-9742-4265-87d9-5dfa55962be2",
+    "0e6491c5-c86f-40f6-8a84-648d948314dd"
   ],
   "cards": [
     {
@@ -1397,8 +1398,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "4d"
       }
     },
     {
@@ -2586,45 +2587,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0255",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5916",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "w\u00e0i - outside",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u5916",
-          "url": "https://www.dong-chinese.com/wiki/%E5%A4%96"
-        }
-      ],
-      "available_at": "2026-09-13T12:33:39.821000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.11336722747191397,
-        "difficulty": 8.802628058192235,
-        "interval_days": 0,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-13T12:23:39.821000Z",
-        "next_due_at": "2026-09-13T12:33:39.821000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     },
     {
