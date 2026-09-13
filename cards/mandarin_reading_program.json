@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-13",
   "batch_date": "2026-09-13",
-  "compiled_at": "2026-09-13T14:44:37.747195Z",
-  "state_revision": 85,
+  "compiled_at": "2026-09-13T14:44:57.488223Z",
+  "state_revision": 86,
   "source_revisions": {
     "hsk": 828,
-    "mandarin_sentences": 97
+    "mandarin_sentences": 99
   },
   "daily_progress": {
     "total": 101,
-    "new": 30,
-    "review": 24,
-    "done": 47
+    "new": 28,
+    "review": 25,
+    "done": 48
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -923,7 +923,9 @@
     "5c6cd011-9b07-48ce-acb4-612a3469e1cd",
     "f3228aa4-b0ff-4e2f-acb2-27242ec3638a",
     "d54409e2-d932-43e1-8437-cb59fedc67e4",
-    "315e8ba3-1a4a-4e3f-aacd-c1b5a6b7b342"
+    "315e8ba3-1a4a-4e3f-aacd-c1b5a6b7b342",
+    "bca97fdf-b056-4699-865b-4fe021e547e9",
+    "3b2eed11-4b72-4788-b651-e4ede3203b3d"
   ],
   "cards": [
     {
@@ -1600,13 +1602,25 @@
         "notes": "N\u01d0 xi\u00e0nz\u00e0i n\u00e9ng zu\u00f2 zh\u00e8xi\u0113 g\u014dngzu\u00f2 ma?\n\nA modal verb meaning \u201ccan\u201d or \u201cbe able to,\u201d expressing ability."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-12T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-13T14:54:38.011000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-13T14:44:38.011000Z",
+        "next_due_at": "2026-09-13T14:54:38.011000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -2121,30 +2135,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-13-hsk-0025",
-      "front": {
-        "text": "\u6211\u6709\u4e00\u500b\u5f88\u597d\u7684\u670b\u53cb\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have a very good friend.",
-        "notes": "W\u01d2 y\u01d2u y\u00ed ge h\u011bn h\u01ceo de p\u00e9ngyou.\n\nA general measure word linking the numeral \u201cone\u201d to the noun \u201cfriend.\u201d"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-12T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0235",
