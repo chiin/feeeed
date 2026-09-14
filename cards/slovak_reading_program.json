@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-14",
   "batch_date": "2026-09-14",
-  "compiled_at": "2026-09-14T11:14:40.822796Z",
-  "state_revision": 89,
+  "compiled_at": "2026-09-14T11:19:54.809776Z",
+  "state_revision": 91,
   "source_revisions": {
     "slovak_vocab": 183,
-    "slovak_sentences": 109
+    "slovak_sentences": 113
   },
   "daily_progress": {
     "total": 64,
     "new": 15,
-    "review": 25,
-    "done": 24
+    "review": 23,
+    "done": 26
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -297,45 +297,13 @@
     "6a28bc6c-c37a-4a71-9263-9e791be11ec5",
     "f16fbff5-4f54-4cf7-8681-ea024396644a",
     "4bb9cc24-dc66-424a-9120-423e488f321b",
-    "87f0a897-599d-473a-ab01-ec7b5d1988ab"
+    "87f0a897-599d-473a-ab01-ec7b5d1988ab",
+    "e115963f-9f70-4989-8f27-1cc5925ba662",
+    "527d0ad2-0ce1-4223-a4fb-422f67bb9274",
+    "af37c644-e963-4ea9-bb54-0f7b39d830f7",
+    "ec4611e3-4fc4-459e-bb54-3254aa2157de"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-09-slovak-0032",
-      "front": {
-        "text": "Mami, tak dobre, u\u017e ideme.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Mom, all right then, we're going now.",
-        "notes": "[tak \u02c8d\u0254br\u025b]\n\ntak dobre is a discourse phrase expressing agreement or acceptance, meaning all right then or OK then."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-13T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:43:08.851000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
     {
       "id": "slovak-0085",
       "entry_type": "term",
@@ -456,19 +424,19 @@
         "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-13T16:00:00Z",
+      "available_at": "2026-09-14T11:25:40.353000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.03485140985964798,
-        "difficulty": 9.592868765339693,
+        "stability": 0.022789382912523522,
+        "difficulty": 9.85140710095639,
         "interval_days": 0,
-        "reviews": 3,
+        "reviews": 4,
         "passing_reviews": 0,
-        "lapses": 2,
+        "lapses": 3,
         "last_rating": "again",
-        "last_reviewed_at": "2026-09-13T06:09:42.311000Z",
-        "next_due_at": "2026-09-13T06:19:42.311000Z"
+        "last_reviewed_at": "2026-09-14T11:15:40.353000Z",
+        "next_due_at": "2026-09-14T11:25:40.353000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -553,42 +521,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-09-slovak-0030",
-      "front": {
-        "text": "Mama \u010dak\u00e1 na n\u00e1s.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Mom is waiting for us.",
-        "notes": "[\u02c8t\u0361\u0283aka\u02d0]\n\n\u010dak\u00e1 is the third-person singular present form of \u010daka\u0165, meaning is waiting; \u010daka\u0165 na plus the accusative names the person or thing waited for."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-13T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:44:20.825000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak-0088",
       "entry_type": "term",
       "front": {
@@ -624,19 +556,19 @@
         "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-13T16:00:00Z",
+      "available_at": "2026-09-14T11:26:08.234000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.03485140985964798,
-        "difficulty": 9.592868765339693,
+        "stability": 0.022789382912523522,
+        "difficulty": 9.85140710095639,
         "interval_days": 0,
-        "reviews": 3,
+        "reviews": 4,
         "passing_reviews": 0,
-        "lapses": 2,
+        "lapses": 3,
         "last_rating": "again",
-        "last_reviewed_at": "2026-09-13T06:09:48.252000Z",
-        "next_due_at": "2026-09-13T06:19:48.252000Z"
+        "last_reviewed_at": "2026-09-14T11:16:08.234000Z",
+        "next_due_at": "2026-09-14T11:26:08.234000Z"
       },
       "schedule_previews": {
         "again": "10m",
