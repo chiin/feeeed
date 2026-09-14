@@ -3201,15 +3201,15 @@
     "hsk-0248": {
       "state": "review",
       "step": null,
-      "stability": 0.24668918777567272,
-      "difficulty": 6.402115069296838,
-      "interval_days": 1,
-      "reviews": 2,
-      "passing_reviews": 1,
+      "stability": 2.634392411534852,
+      "difficulty": 6.3909413235243795,
+      "interval_days": 3,
+      "reviews": 3,
+      "passing_reviews": 2,
       "lapses": 0,
       "last_rating": "good",
-      "last_reviewed_at": "2026-09-12T13:13:11.837000Z",
-      "next_due_at": "2026-09-12T16:00:00Z"
+      "last_reviewed_at": "2026-09-14T15:39:51.178000Z",
+      "next_due_at": "2026-09-16T16:00:00Z"
     },
     "hsk-0235": {
       "state": "review",
@@ -4336,12 +4336,8 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 1024,
+  "revision": 1025,
   "processed_events": {
-    "4f33b2e8-244f-42d2-90b4-fc9a51110a08": {
-      "processed_at": "2026-08-30T09:33:53.453664Z",
-      "status": "applied"
-    },
     "0836b664-79d3-4c50-8f9b-d6e0fbddfc14": {
       "processed_at": "2026-08-30T09:34:44.659368Z",
       "status": "applied"
@@ -8337,6 +8333,10 @@
     "6630944c-81e9-4978-8623-9fdc38949da7": {
       "processed_at": "2026-09-14T15:39:04.374559Z",
       "status": "applied"
+    },
+    "e8c089a6-6e8f-4ddd-9469-5f547a674149": {
+      "processed_at": "2026-09-14T15:43:13.409216Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -8489,10 +8489,6 @@
       "hsk-0335"
     ],
     "active": [
-      {
-        "card_id": "hsk-0248",
-        "available_at": "2026-09-13T16:00:00Z"
-      },
       {
         "card_id": "hsk-0031",
         "available_at": "2026-09-13T16:00:00Z"
