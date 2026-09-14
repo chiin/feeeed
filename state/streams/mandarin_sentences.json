@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 114,
+  "revision": 117,
   "cards": {
     "mandarin_reading-2026-09-06-hsk-0158": {
       "state": "review",
@@ -374,15 +374,15 @@
     "mandarin_reading-2026-09-09-hsk-0021": {
       "state": "review",
       "step": null,
-      "stability": 2.3065,
-      "difficulty": 2.118103970459016,
-      "interval_days": 2,
-      "reviews": 1,
-      "passing_reviews": 1,
+      "stability": 10.964332335820698,
+      "difficulty": 2.111214235785395,
+      "interval_days": 11,
+      "reviews": 2,
+      "passing_reviews": 2,
       "lapses": 0,
       "last_rating": "good",
-      "last_reviewed_at": "2026-09-12T11:32:03.880000Z",
-      "next_due_at": "2026-09-13T16:00:00Z"
+      "last_reviewed_at": "2026-09-14T15:59:56.523000Z",
+      "next_due_at": "2026-09-24T16:00:00Z"
     },
     "mandarin_reading-2026-09-08-hsk-0011": {
       "state": "review",
@@ -489,17 +489,17 @@
       "next_due_at": "2026-09-14T16:00:00Z"
     },
     "mandarin_reading-2026-09-13-hsk-0026": {
-      "state": "relearning",
-      "step": 0,
+      "state": "review",
+      "step": null,
       "stability": 0.10088578982099844,
-      "difficulty": 8.806304468856837,
-      "interval_days": 0,
-      "reviews": 2,
+      "difficulty": 9.192797649512254,
+      "interval_days": 1,
+      "reviews": 3,
       "passing_reviews": 0,
       "lapses": 1,
-      "last_rating": "again",
-      "last_reviewed_at": "2026-09-14T15:38:12.593000Z",
-      "next_due_at": "2026-09-14T15:48:12.593000Z"
+      "last_rating": "hard",
+      "last_reviewed_at": "2026-09-14T15:59:43.914000Z",
+      "next_due_at": "2026-09-14T16:00:00Z"
     },
     "mandarin_reading-2026-09-13-hsk-0027": {
       "state": "review",
@@ -940,9 +940,66 @@
     "3c95e1ce-710d-4162-ad38-ec743439cffe": {
       "processed_at": "2026-09-14T15:40:10.201301Z",
       "status": "applied"
+    },
+    "f2f166af-c240-40b2-9b73-b44ae45a133f": {
+      "processed_at": "2026-09-14T16:00:25.162072Z",
+      "status": "applied"
+    },
+    "542f7436-8791-4f6e-a40c-7a9c54a03c8b": {
+      "processed_at": "2026-09-14T16:00:25.162072Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
+    "id": "2026-09-15",
+    "date": "2026-09-15",
+    "created_at": "2026-09-14T16:00:25.162072Z",
+    "card_ids": [
+      "mandarin_reading-2026-09-07-hsk-0005",
+      "mandarin_reading-2026-09-07-hsk-0008",
+      "mandarin_reading-2026-09-12-hsk-0023",
+      "mandarin_reading-2026-09-13-hsk-0024",
+      "mandarin_reading-2026-09-13-hsk-0025",
+      "mandarin_reading-2026-09-13-hsk-0026",
+      "mandarin_reading-2026-09-13-hsk-0028",
+      "mandarin_reading-2026-09-13-hsk-0030"
+    ],
+    "active": [
+      {
+        "card_id": "mandarin_reading-2026-09-07-hsk-0005",
+        "available_at": "2026-09-14T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-07-hsk-0008",
+        "available_at": "2026-09-14T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-12-hsk-0023",
+        "available_at": "2026-09-14T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-13-hsk-0024",
+        "available_at": "2026-09-14T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-13-hsk-0025",
+        "available_at": "2026-09-14T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-13-hsk-0026",
+        "available_at": "2026-09-14T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-13-hsk-0028",
+        "available_at": "2026-09-14T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-13-hsk-0030",
+        "available_at": "2026-09-14T16:00:00Z"
+      }
+    ]
+  },
+  "previous_batch": {
     "id": "2026-09-14",
     "date": "2026-09-14",
     "created_at": "2026-09-13T17:59:03.942285Z",
@@ -961,40 +1018,6 @@
       "mandarin_reading-2026-09-09-hsk-0022",
       "mandarin_reading-2026-09-13-hsk-0029"
     ],
-    "active": [
-      {
-        "card_id": "mandarin_reading-2026-09-09-hsk-0021",
-        "available_at": "2026-09-13T16:00:00Z"
-      },
-      {
-        "card_id": "mandarin_reading-2026-09-13-hsk-0026",
-        "available_at": "2026-09-14T15:48:12.593000Z"
-      }
-    ]
-  },
-  "previous_batch": {
-    "id": "2026-09-13",
-    "date": "2026-09-13",
-    "created_at": "2026-09-12T16:13:16.694692Z",
-    "card_ids": [
-      "mandarin_reading-2026-09-12-hsk-0023",
-      "mandarin_reading-2026-09-13-hsk-0024",
-      "mandarin_reading-2026-09-13-hsk-0025",
-      "mandarin_reading-2026-09-13-hsk-0026",
-      "mandarin_reading-2026-09-13-hsk-0027",
-      "mandarin_reading-2026-09-13-hsk-0028",
-      "mandarin_reading-2026-09-13-hsk-0029",
-      "mandarin_reading-2026-09-13-hsk-0030"
-    ],
-    "active": [
-      {
-        "card_id": "mandarin_reading-2026-09-13-hsk-0026",
-        "available_at": "2026-09-13T14:54:38.011000Z"
-      },
-      {
-        "card_id": "mandarin_reading-2026-09-13-hsk-0027",
-        "available_at": "2026-09-13T14:54:51.097000Z"
-      }
-    ]
+    "active": []
   }
 }
