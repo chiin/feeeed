@@ -5,13 +5,13 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-14",
   "batch_date": "2026-09-14",
-  "compiled_at": "2026-09-14T13:02:54.792156Z",
-  "state_revision": 953,
+  "compiled_at": "2026-09-14T13:27:53.185336Z",
+  "state_revision": 957,
   "daily_progress": {
     "total": 143,
     "new": 20,
-    "review": 37,
-    "done": 86
+    "review": 34,
+    "done": 89
   },
   "processed_event_ids": [
     "9b388466-e31d-4df5-9102-05901dfbc03a",
@@ -957,7 +957,11 @@
     "40b805a1-be8f-4ad2-b4b5-6aa4d3ddd069",
     "ccfe1fa6-f49e-44d7-b35b-8cb94fc07ba4",
     "451afc06-6e8c-451c-b6ed-99a997657e92",
-    "00e8eeb7-3fe1-4248-b53a-b732e8538d15"
+    "00e8eeb7-3fe1-4248-b53a-b732e8538d15",
+    "39c16111-4e21-4170-9e79-48010c5a3103",
+    "41217aad-2562-41f3-8e72-3468152efef2",
+    "71700224-5dd4-4f5f-b833-e6a1c92e777f",
+    "a265f726-557a-403c-a832-2ca9bec0ce65"
   ],
   "cards": [
     {
@@ -1287,9 +1291,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "4d"
+        "hard": "2d",
+        "good": "3d",
+        "easy": "5d"
       }
     },
     {
@@ -2838,170 +2842,6 @@
       }
     },
     {
-      "id": "hsk-0284",
-      "entry_type": "term",
-      "front": {
-        "text": "\u9060",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "yu\u01cen - far",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u9060",
-          "url": "https://www.dong-chinese.com/wiki/%E9%81%A0"
-        }
-      ],
-      "available_at": "2026-09-14T08:43:15.187000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.09603383636195935,
-        "difficulty": 8.802628058192235,
-        "interval_days": 0,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-14T08:33:15.187000Z",
-        "next_due_at": "2026-09-14T08:43:15.187000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0288",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5f35",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "zh\u0101ng - measure word for paper/flat objects",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u5f35",
-          "url": "https://www.dong-chinese.com/wiki/%E5%BC%B5"
-        }
-      ],
-      "available_at": "2026-09-14T08:43:24.723000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-14T08:33:24.723000Z",
-        "next_due_at": "2026-09-14T08:43:24.723000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0230",
-      "entry_type": "term",
-      "front": {
-        "text": "\u4fbf\u5b9c",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "pi\u00e1nyi - cheap",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u4fbf",
-          "url": "https://www.dong-chinese.com/wiki/%E4%BE%BF"
-        },
-        {
-          "character": "\u5b9c",
-          "url": "https://www.dong-chinese.com/wiki/%E5%AE%9C"
-        }
-      ],
-      "available_at": "2026-09-14T08:43:32.025000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.5712991793450282,
-        "difficulty": 7.394502741279718,
-        "interval_days": 0,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-14T08:33:32.025000Z",
-        "next_due_at": "2026-09-14T08:43:32.025000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0295",
-      "entry_type": "term",
-      "front": {
-        "text": "\u6e96\u5099",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "zh\u01d4nb\u00e8i - to prepare",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u6e96",
-          "url": "https://www.dong-chinese.com/wiki/%E6%BA%96"
-        },
-        {
-          "character": "\u5099",
-          "url": "https://www.dong-chinese.com/wiki/%E5%82%99"
-        }
-      ],
-      "available_at": "2026-09-14T08:43:34.091000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.09603383636195935,
-        "difficulty": 8.802628058192235,
-        "interval_days": 0,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-14T08:33:34.091000Z",
-        "next_due_at": "2026-09-14T08:43:34.091000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "hsk-0330",
       "entry_type": "term",
       "front": {
@@ -3071,6 +2911,45 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-14T08:42:44.469000Z",
         "next_due_at": "2026-09-14T08:52:44.469000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0288",
+      "entry_type": "term",
+      "front": {
+        "text": "\u5f35",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "zh\u0101ng - measure word for paper/flat objects",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u5f35",
+          "url": "https://www.dong-chinese.com/wiki/%E5%BC%B5"
+        }
+      ],
+      "available_at": "2026-09-14T13:36:32.791000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-14T13:26:32.791000Z",
+        "next_due_at": "2026-09-14T13:36:32.791000Z"
       },
       "schedule_previews": {
         "again": "10m",
