@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-15",
   "batch_date": "2026-09-15",
-  "compiled_at": "2026-09-15T07:05:34.585786Z",
-  "state_revision": 117,
+  "compiled_at": "2026-09-15T07:05:56.523074Z",
+  "state_revision": 119,
   "daily_progress": {
     "total": 18,
-    "new": 2,
-    "review": 14,
-    "done": 2
+    "new": 1,
+    "review": 13,
+    "done": 4
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -119,7 +119,9 @@
     "ec4611e3-4fc4-459e-bb54-3254aa2157de",
     "fc61c308-ebf0-452b-8f9b-42df51f3f0e2",
     "3f390860-7e81-401a-8f36-d2d4d4cdd0d3",
-    "7a3ad5e8-c8b8-4da6-96e5-e4d35fbe941e"
+    "7a3ad5e8-c8b8-4da6-96e5-e4d35fbe941e",
+    "a4509f12-1b70-4037-910d-7df7ec7358ed",
+    "1373a34f-7e7b-4cd2-9850-f61271f2c97b"
   ],
   "cards": [
     {
@@ -318,39 +320,6 @@
         "hard": "5d",
         "good": "8d",
         "easy": "13d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-11-slovak-0035",
-      "front": {
-        "text": "\u010cak\u00e1m vonku.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I am waiting outside.",
-        "notes": "[\u02c8v\u0254\u014bku]\n\nAn adverb of place meaning \u201coutside\u201d; it indicates where the waiting happens."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-14T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:43:53.296000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
       }
     },
     {
@@ -561,27 +530,6 @@
       "back": {
         "text": "You are my friend.",
         "notes": "/ta\u026a/\n\nTy means \u201cyou\u201d and is the singular nominative subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-14T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-14-slovak-0039",
-      "front": {
-        "text": "Kolegy\u0148a pri\u0161la, ale ona u\u017e odi\u0161la.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The colleague came, but she has already left.",
-        "notes": "[\u02c8\u0254na]\n\nOsobn\u00e9 z\u00e1meno v nominat\u00edve jednotn\u00e9ho \u010d\u00edsla \u017eensk\u00e9ho rodu; v tejto vete odkazuje na kolegy\u0148u."
       },
       "presentation": "text_reading",
       "available_at": "2026-09-14T16:00:00Z",
