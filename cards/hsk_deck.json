@@ -5,16 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-15",
   "batch_date": "2026-09-15",
-  "compiled_at": "2026-09-15T07:09:06.876540Z",
-  "state_revision": 1103,
+  "compiled_at": "2026-09-15T07:09:27.441189Z",
+  "state_revision": 1104,
   "daily_progress": {
     "total": 198,
     "new": 38,
-    "review": 115,
-    "done": 45
+    "review": 114,
+    "done": 46
   },
   "processed_event_ids": [
-    "543f3d8f-274b-420a-98eb-efd4a5a62548",
     "25bb6e14-ad0f-4131-9ae9-8cbfead19b7e",
     "649069b8-b8fc-4066-b4db-4c9e2eeea3ac",
     "99a02d12-a62f-46f0-8520-6964cfe081a8",
@@ -1013,7 +1012,8 @@
     "1623bfbb-58eb-451d-8c52-8020ab0fcb4c",
     "f5bd140e-8b9f-455a-8024-3fe2a69d0f2e",
     "c321ca9a-9166-47d6-84e6-9e90892aba47",
-    "a9c424fc-e981-4e19-8bd3-16f40c721767"
+    "a9c424fc-e981-4e19-8bd3-16f40c721767",
+    "90c2c3e4-9a61-4d18-aeb5-cb25ca91de35"
   ],
   "cards": [
     {
@@ -6723,49 +6723,6 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-14T16:00:00.190000Z",
         "next_due_at": "2026-09-14T16:10:00.190000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0371",
-      "entry_type": "term",
-      "front": {
-        "text": "\u9644\u8fd1",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "f\u00f9j\u00ecn - nearby",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u9644",
-          "url": "https://www.dong-chinese.com/wiki/%E9%99%84"
-        },
-        {
-          "character": "\u8fd1",
-          "url": "https://www.dong-chinese.com/wiki/%E8%BF%91"
-        }
-      ],
-      "available_at": "2026-09-15T07:07:54.453000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.03485140985964798,
-        "difficulty": 9.592868765339693,
-        "interval_days": 0,
-        "reviews": 3,
-        "passing_reviews": 0,
-        "lapses": 2,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-15T06:57:54.453000Z",
-        "next_due_at": "2026-09-15T07:07:54.453000Z"
       },
       "schedule_previews": {
         "again": "10m",
