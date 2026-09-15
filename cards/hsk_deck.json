@@ -5,16 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-15",
   "batch_date": "2026-09-15",
-  "compiled_at": "2026-09-15T07:41:12.462187Z",
-  "state_revision": 1186,
+  "compiled_at": "2026-09-15T10:04:52.817554Z",
+  "state_revision": 1187,
   "daily_progress": {
     "total": 198,
     "new": 17,
-    "review": 78,
-    "done": 103
+    "review": 77,
+    "done": 104
   },
   "processed_event_ids": [
-    "74b27b6c-96db-460a-bda2-7f7f255f88c5",
     "dfbf4ea7-0a63-4d18-8423-7e940ae148c0",
     "e444b52a-67aa-496e-8e1b-8d98a0af8917",
     "83140935-a465-4a21-9757-3da1b3b48541",
@@ -1013,7 +1012,8 @@
     "88313a1d-4ca3-4aff-819c-111aa6ac4448",
     "48b3ea39-afdb-442f-967b-149ea5618b78",
     "7187cb28-3f60-474b-8502-c87c4c59ca2c",
-    "9652b346-292c-4e47-9a5b-74a6a202ba90"
+    "9652b346-292c-4e47-9a5b-74a6a202ba90",
+    "ba388603-3683-4587-9d2a-d2836dde7d1b"
   ],
   "cards": [
     {
@@ -1626,7 +1626,7 @@
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "1d"
+        "easy": "2d"
       }
     },
     {
@@ -2208,7 +2208,7 @@
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "1d"
+        "easy": "2d"
       }
     },
     {
@@ -2363,8 +2363,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "3d"
       }
     },
     {
@@ -2665,7 +2665,7 @@
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "1d"
+        "easy": "2d"
       }
     },
     {
@@ -2824,8 +2824,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "3d"
       }
     },
     {
@@ -2863,8 +2863,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "3d"
       }
     },
     {
@@ -2949,8 +2949,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "4d"
       }
     },
     {
@@ -2988,8 +2988,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "4d"
       }
     },
     {
@@ -3027,8 +3027,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "4d"
       }
     },
     {
@@ -3277,8 +3277,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "4d"
       }
     },
     {
@@ -3695,8 +3695,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "4d"
       }
     },
     {
@@ -4534,49 +4534,6 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-15T07:34:28.905000Z",
         "next_due_at": "2026-09-15T07:44:28.905000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0207",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8003\u8a66",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "k\u01ceosh\u00ec - exam",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8003",
-          "url": "https://www.dong-chinese.com/wiki/%E8%80%83"
-        },
-        {
-          "character": "\u8a66",
-          "url": "https://www.dong-chinese.com/wiki/%E8%A9%A6"
-        }
-      ],
-      "available_at": "2026-09-15T07:44:31.285000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.09378102457663869,
-        "difficulty": 9.850613105073736,
-        "interval_days": 0,
-        "reviews": 6,
-        "passing_reviews": 2,
-        "lapses": 3,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-15T07:34:31.285000Z",
-        "next_due_at": "2026-09-15T07:44:31.285000Z"
       },
       "schedule_previews": {
         "again": "10m",
