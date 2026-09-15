@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-15",
   "batch_date": "2026-09-15",
-  "compiled_at": "2026-09-15T07:00:07.968744Z",
-  "state_revision": 204,
+  "compiled_at": "2026-09-15T07:00:34.488782Z",
+  "state_revision": 206,
   "daily_progress": {
     "total": 39,
     "new": 14,
-    "review": 14,
-    "done": 11
+    "review": 12,
+    "done": 13
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -216,7 +216,9 @@
     "71484fe2-27cf-4dd4-abcd-1294e553f9e8",
     "8d825368-28a8-499c-b20b-b67011a25230",
     "fb408bd9-ea30-447a-b80e-27ade730d05f",
-    "b0a3c67d-9a4b-40e6-8d46-52ed947d8ef9"
+    "b0a3c67d-9a4b-40e6-8d46-52ed947d8ef9",
+    "bff77549-b0ce-474a-a4d6-8cad7c0c5f49",
+    "313ef8a0-b067-4075-b685-b8b2a72e78fe"
   ],
   "cards": [
     {
@@ -517,39 +519,6 @@
       }
     },
     {
-      "id": "slovak_reading-discovered-696c6b11997b70b0",
-      "entry_type": "term",
-      "front": {
-        "text": "tiskom",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "by mail",
-        "notes": "tsikom\n\nDiscovered in: V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta."
-      },
-      "available_at": "2026-09-14T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.12327219758860002,
-        "difficulty": 8.792726533684817,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T11:12:46.445000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "slovak-0084",
       "entry_type": "term",
       "front": {
@@ -639,39 +608,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-13T06:12:04.169000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
-      "id": "slovak-0102",
-      "entry_type": "term",
-      "front": {
-        "text": "dobr\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "good",
-        "notes": null
-      },
-      "available_at": "2026-09-14T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-13T06:12:21.442000Z",
         "next_due_at": "2026-09-14T16:00:00Z"
       },
       "schedule_previews": {
