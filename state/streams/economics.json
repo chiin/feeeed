@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 49,
+  "revision": 51,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -116,6 +116,10 @@
     "ee05dc65-8839-41f3-86e8-2cf71b32a9b5": {
       "processed_at": "2026-09-12T14:29:51.828539Z",
       "status": "applied"
+    },
+    "7a9a505e-1c69-49e9-8049-466ee511ba9f": {
+      "processed_at": "2026-09-16T13:57:54.846847Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -143,7 +147,9 @@
       "article_026_The_tragedy_of_the_commons.pdf",
       "article_027_The_Coase_theorem.pdf"
     ],
-    "opened_ids": [],
+    "opened_ids": [
+      "article_023_Market_efficiency_and_the_welf.pdf"
+    ],
     "segments": [
       {
         "kind": "initial",
@@ -167,7 +173,8 @@
       "2026-09-16T03:00:00Z",
       "2026-09-16T04:00:00Z",
       "2026-09-16T06:00:00Z",
-      "2026-09-16T07:00:00Z"
+      "2026-09-16T07:00:00Z",
+      "2026-09-16T13:00:00Z"
     ]
   },
   "next_release_at": "2026-09-16T16:00:00Z",
@@ -234,6 +241,14 @@
       "pdf_id": "article_023_Market_efficiency_and_the_welf.pdf",
       "title": "Article 023 Market Efficiency And The Welf",
       "published_at": "2026-09-16T07:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20260916T130000Z",
+      "batch_date": "2026-09-16",
+      "pdf_id": "article_023_Market_efficiency_and_the_welf.pdf",
+      "title": "Article 023 Market Efficiency And The Welf",
+      "published_at": "2026-09-16T13:00:00Z",
       "remaining": 5
     }
   ]
