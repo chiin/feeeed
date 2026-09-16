@@ -2,18 +2,18 @@
   "schema_version": 1,
   "program_id": "slovak_reading",
   "title": "Slovak Vocabulary and Sentences",
-  "batch_id": "2026-09-16",
-  "batch_date": "2026-09-16",
-  "compiled_at": "2026-09-16T13:57:54.846847Z",
-  "state_revision": 98,
+  "batch_id": "2026-09-17",
+  "batch_date": "2026-09-17",
+  "compiled_at": "2026-09-16T16:23:33.049873Z",
+  "state_revision": 99,
   "source_revisions": {
-    "slovak_vocab": 207,
-    "slovak_sentences": 120
+    "slovak_vocab": 208,
+    "slovak_sentences": 121
   },
   "daily_progress": {
-    "total": 56,
+    "total": 66,
     "new": 23,
-    "review": 33,
+    "review": 43,
     "done": 0
   },
   "processed_event_ids": [
@@ -333,102 +333,6 @@
   ],
   "cards": [
     {
-      "id": "slovak-0118",
-      "entry_type": "sentence",
-      "front": {
-        "text": "vol\u00e1\u0161 sa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you call yourself",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-14-slovak-0038",
-      "front": {
-        "text": "Peter pri\u0161iel, ale on u\u017e odi\u0161iel.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Peter came, but he has already left.",
-        "notes": "[\u0254n]\n\nOsobn\u00e9 z\u00e1meno v nominat\u00edve jednotn\u00e9ho \u010d\u00edsla mu\u017esk\u00e9ho rodu; v tejto vete odkazuje na Petra."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-15T06:59:08.901000Z",
-        "next_due_at": "2026-09-15T07:09:08.901000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0068",
-      "entry_type": "sentence",
-      "front": {
-        "text": "ste tam?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "are you there?",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:43:00.841000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "slovak-0083",
       "entry_type": "term",
       "front": {
@@ -440,7 +344,7 @@
         "text": "blue",
         "notes": null
       },
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": {
         "state": "review",
         "step": null,
@@ -456,870 +360,6 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0123",
-      "entry_type": "sentence",
-      "front": {
-        "text": "ako sa m\u00e1te?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "how are you?",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0054",
-      "entry_type": "term",
-      "front": {
-        "text": "byt'",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to be",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:45:44.336000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0097",
-      "entry_type": "term",
-      "front": {
-        "text": "vpravo",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "on the right",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T11:16:10.831000Z",
-        "next_due_at": "2026-09-15T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0087",
-      "entry_type": "term",
-      "front": {
-        "text": "pekn\u00fd; -\u00e1; -\u00e9",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "nice; pretty; lovely",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0115",
-      "entry_type": "term",
-      "front": {
-        "text": "nie dnes; ale zajtra",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "not today; but tomorrow",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0093",
-      "entry_type": "term",
-      "front": {
-        "text": "u\u010ditel'ka",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "female teacher",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T11:13:12.411000Z",
-        "next_due_at": "2026-09-15T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0067",
-      "entry_type": "sentence",
-      "front": {
-        "text": "si Angli\u010danka?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "are you (f) English?",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:43:03.625000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.022789382912523522,
-        "difficulty": 9.85140710095639,
-        "interval_days": 0,
-        "reviews": 4,
-        "passing_reviews": 0,
-        "lapses": 3,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-14T11:16:08.234000Z",
-        "next_due_at": "2026-09-14T11:26:08.234000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-discovered-696c6b11997b70b0",
-      "entry_type": "term",
-      "front": {
-        "text": "tiskom",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "by mail",
-        "notes": "tsikom\n\nDiscovered in: V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta."
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.1486528931159959,
-        "difficulty": 8.77916217644797,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-15T06:59:43.333000Z",
-        "next_due_at": "2026-09-15T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0094",
-      "entry_type": "term",
-      "front": {
-        "text": "vel'mi",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "very",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T11:14:41.373000Z",
-        "next_due_at": "2026-09-15T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0018",
-      "front": {
-        "text": "Nie, to nie je probl\u00e9m.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "No, that is not a problem.",
-        "notes": "[\u0272e]\n\nThe word 'nie' is the negative particle meaning 'no', used here to reject a suggestion or answer a yes/no question."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-08T04:53:32.961000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "23d",
-        "good": "34d",
-        "easy": "57d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0111",
-      "entry_type": "term",
-      "front": {
-        "text": "\u010dak\u00e1ju",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "they are waiting",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0119",
-      "entry_type": "sentence",
-      "front": {
-        "text": "vol\u00e1me sa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "we call ourselves",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0025",
-      "front": {
-        "text": "Angli\u010danka Lisa p\u00ed\u0161e \u010dl\u00e1nok pre \u010dasopis.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The English woman Lisa writes an article for the magazine.",
-        "notes": "Angli\u010danka Lisa p\u00ed\u0161e \u010dl\u00e1nok pre \u010dasopis\n\nAngli\u010danka is the feminine singular noun indicating a female national from the United Kingdom, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.634392411534852,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 3,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:45:16.502000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "6d",
-        "good": "9d",
-        "easy": "14d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0001",
-      "front": {
-        "text": "M\u00e1m jeden k\u00fasok.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have one piece.",
-        "notes": "[\u02c8jed\u026an]\n\nThe word 'jeden' is the masculine singular form of the numeral 'one', agreeing in gender and number with the masculine noun 'k\u00fasok' (piece)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-08T04:54:19.866000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "23d",
-        "good": "34d",
-        "easy": "57d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0090",
-      "entry_type": "term",
-      "front": {
-        "text": "star\u00fd; -\u00e1; -\u00e9",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "old",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T23:48:13.694000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0020",
-      "front": {
-        "text": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak \u0160tefan opened two doors with a key.",
-        "notes": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania\n\nSlov\u00e1k is the nominative masculine singular noun denoting a person of Slovak ethnic origin, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.11279815380574301,
-        "difficulty": 8.806304468856837,
-        "interval_days": 0,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-12T15:47:11.022000Z",
-        "next_due_at": "2026-09-12T15:57:11.022000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0114",
-      "entry_type": "term",
-      "front": {
-        "text": "nie; ja tu neb\u00fdvam",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "no; I don't live here",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0113",
-      "entry_type": "sentence",
-      "front": {
-        "text": "b\u00fdvate tu?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you live here?",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0104",
-      "entry_type": "term",
-      "front": {
-        "text": "kr\u00e1sny",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "beautiful",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0085",
-      "entry_type": "term",
-      "front": {
-        "text": "n\u00e1\u0161; na\u0161a; na\u0161e",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "our",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T11:14:20.248000Z",
-        "next_due_at": "2026-09-15T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-15-slovak-0040",
-      "front": {
-        "text": "Ono je \u013eahk\u00e9.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "It is light.",
-        "notes": "[\u02c8ono]\n\n\u201cOno\u201d is a neuter singular nominative pronoun meaning \u201cit.\u201d It is the subject referring to a previously mentioned neutral thing."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0105",
-      "entry_type": "term",
-      "front": {
-        "text": "\u0161kared\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ugly",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0076",
-      "entry_type": "term",
-      "front": {
-        "text": "vol\u00e1 sa \u2026",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "his / her name is \u2026",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:47:13.605000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0112",
-      "entry_type": "term",
-      "front": {
-        "text": "b\u00fdvat'",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to live; reside",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0116",
-      "entry_type": "term",
-      "front": {
-        "text": "volat'",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to call",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0095",
-      "entry_type": "term",
-      "front": {
-        "text": "vl'avo",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "on the left",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T11:16:12.885000Z",
-        "next_due_at": "2026-09-15T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0081",
-      "entry_type": "term",
-      "front": {
-        "text": "Dunaj",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "the Danube",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T02:15:04.021000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
         "hard": "11d",
         "good": "16d",
         "easy": "28d"
@@ -1327,354 +367,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0004",
-      "front": {
-        "text": "Na stole s\u00fa \u0161tyri poh\u00e1re.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "There are four glasses on the table.",
-        "notes": "[\u02c8\u0283t\u026ari]\n\n\u0161tyri is the cardinal number four in the nominative plural, agreeing with the plural noun poh\u00e1re (glasses)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 3.2713323937660523,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 3,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T02:14:34.437000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "18d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-10-slovak-0033",
-      "front": {
-        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
-        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.022789382912523522,
-        "difficulty": 9.85140710095639,
-        "interval_days": 0,
-        "reviews": 4,
-        "passing_reviews": 0,
-        "lapses": 3,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-14T11:15:40.353000Z",
-        "next_due_at": "2026-09-14T11:25:40.353000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0098",
-      "entry_type": "term",
-      "front": {
-        "text": "vel'k\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "big",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-13T06:12:04.169000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0110",
-      "entry_type": "term",
-      "front": {
-        "text": "\u010dak\u00e1te",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you are waiting",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0022",
-      "front": {
-        "text": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The American man Mike said that his family loves him.",
-        "notes": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina\n\nAmeri\u010dan is the masculine singular noun indicating a male national from the United States, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.6139445736022262,
-        "difficulty": 8.792726533684817,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T02:14:45.668000Z",
-        "next_due_at": "2026-09-12T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0088",
-      "entry_type": "term",
-      "front": {
-        "text": "rieka",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "river",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-14T11:15:52.910000Z",
-        "next_due_at": "2026-09-14T11:25:52.910000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "2d",
-        "easy": "4d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0120",
-      "entry_type": "sentence",
-      "front": {
-        "text": "vol\u00e1te sa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you call yourselves",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0084",
-      "entry_type": "term",
-      "front": {
-        "text": "najm\u00e4",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "especially",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-13T06:12:00.658000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0109",
-      "entry_type": "term",
-      "front": {
-        "text": "\u010dak\u00e1me",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "we are waiting",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0091",
-      "entry_type": "term",
-      "front": {
-        "text": "tam",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "there",
-        "notes": null
-      },
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-13T06:09:36.995000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-15-slovak-0041",
-      "front": {
-        "text": "To je m\u00f4j nov\u00fd dom.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "That is my new home.",
-        "notes": "[to]\n\n\u201cTo\u201d is a neuter singular nominative demonstrative pronoun meaning \u201cthat.\u201d It is the subject pointing to something being indicated."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak_reading-2026-09-11-slovak-0034",
@@ -1688,7 +380,7 @@
         "notes": "[tak \u02c8d\u0254br\u025b]\n\nPr\u00edslovcov\u00e9 spojenie \u201etak dobre\u201c znamen\u00e1 \u201etak ve\u013emi dobre\u201c; \u201etak\u201c zosil\u0148uje pr\u00edslovku \u201edobre\u201c."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
@@ -1713,18 +405,54 @@
       "front_text_scale": 1.2
     },
     {
-      "id": "slovak-0122",
+      "id": "slovak_reading-discovered-696c6b11997b70b0",
       "entry_type": "term",
       "front": {
-        "text": "mat' sa",
+        "text": "tiskom",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "to be feeling",
+        "text": "by mail",
+        "notes": "tsikom\n\nDiscovered in: V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta."
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.1486528931159959,
+        "difficulty": 8.77916217644797,
+        "interval_days": 1,
+        "reviews": 4,
+        "passing_reviews": 2,
+        "lapses": 1,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-15T06:59:43.333000Z",
+        "next_due_at": "2026-09-15T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0120",
+      "entry_type": "sentence",
+      "front": {
+        "text": "vol\u00e1te sa",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "you call yourselves",
         "notes": null
       },
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": null,
       "schedule_previews": {
         "again": "10m",
@@ -1737,24 +465,444 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak-0092",
-      "entry_type": "term",
+      "id": "slovak-0068",
+      "entry_type": "sentence",
       "front": {
-        "text": "u\u010ditel'",
+        "text": "ste tam?",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "male teacher",
+        "text": "are you there?",
         "notes": null
       },
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-12T15:43:00.841000Z",
+        "next_due_at": "2026-09-13T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "11d",
+        "good": "16d",
+        "easy": "28d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-15-slovak-0040",
+      "front": {
+        "text": "Ono je \u013eahk\u00e9.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "It is light.",
+        "notes": "[\u02c8ono]\n\n\u201cOno\u201d is a neuter singular nominative pronoun meaning \u201cit.\u201d It is the subject referring to a previously mentioned neutral thing."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": null,
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0114",
+      "entry_type": "term",
+      "front": {
+        "text": "nie; ja tu neb\u00fdvam",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "no; I don't live here",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0109",
+      "entry_type": "term",
+      "front": {
+        "text": "\u010dak\u00e1me",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "we are waiting",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-07-slovak-0004",
+      "front": {
+        "text": "Na stole s\u00fa \u0161tyri poh\u00e1re.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "There are four glasses on the table.",
+        "notes": "[\u02c8\u0283t\u026ari]\n\n\u0161tyri is the cardinal number four in the nominative plural, agreeing with the plural noun poh\u00e1re (glasses)."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 3.2713323937660523,
+        "difficulty": 6.3909413235243795,
+        "interval_days": 3,
+        "reviews": 3,
+        "passing_reviews": 2,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-12T02:14:34.437000Z",
+        "next_due_at": "2026-09-14T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "8d",
+        "good": "11d",
+        "easy": "18d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0117",
+      "entry_type": "sentence",
+      "front": {
+        "text": "vol\u00e1m sa",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I call myself",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0085",
+      "entry_type": "term",
+      "front": {
+        "text": "n\u00e1\u0161; na\u0161a; na\u0161e",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "our",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-14T11:14:20.248000Z",
+        "next_due_at": "2026-09-15T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0086",
+      "entry_type": "sentence",
+      "front": {
+        "text": "nie je",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "it is not",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-15T06:59:22.203000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0076",
+      "entry_type": "term",
+      "front": {
+        "text": "vol\u00e1 sa \u2026",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "his / her name is \u2026",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-12T15:47:13.605000Z",
+        "next_due_at": "2026-09-13T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "11d",
+        "good": "16d",
+        "easy": "28d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-10-slovak-0033",
+      "front": {
+        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
+        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.022789382912523522,
+        "difficulty": 9.85140710095639,
+        "interval_days": 0,
+        "reviews": 4,
+        "passing_reviews": 0,
+        "lapses": 3,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-14T11:15:40.353000Z",
+        "next_due_at": "2026-09-14T11:25:40.353000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0087",
+      "entry_type": "term",
+      "front": {
+        "text": "pekn\u00fd; -\u00e1; -\u00e9",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "nice; pretty; lovely",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0001",
+      "front": {
+        "text": "M\u00e1m jeden k\u00fasok.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I have one piece.",
+        "notes": "[\u02c8jed\u026an]\n\nThe word 'jeden' is the masculine singular form of the numeral 'one', agreeing in gender and number with the masculine noun 'k\u00fasok' (piece)."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 7.31530074407728,
+        "difficulty": 2.111214235785395,
+        "interval_days": 7,
+        "reviews": 2,
+        "passing_reviews": 2,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-08T04:54:19.866000Z",
+        "next_due_at": "2026-09-14T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "23d",
+        "good": "34d",
+        "easy": "57d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0088",
+      "entry_type": "term",
+      "front": {
+        "text": "rieka",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "river",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-14T11:15:52.910000Z",
+        "next_due_at": "2026-09-14T11:25:52.910000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "2d",
+        "good": "2d",
+        "easy": "4d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0084",
+      "entry_type": "term",
+      "front": {
+        "text": "najm\u00e4",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "especially",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-13T06:12:00.658000Z",
+        "next_due_at": "2026-09-14T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "9d",
+        "good": "14d",
+        "easy": "24d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -1772,7 +920,7 @@
         "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
@@ -1797,60 +945,132 @@
       "front_text_scale": 1.2
     },
     {
-      "id": "slovak_reading-2026-09-09-slovak-0027",
+      "id": "slovak-0046",
+      "entry_type": "term",
       "front": {
-        "text": "Pozrite sa, tu je moja kniha.",
+        "text": "diev\u010da",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "Look, here is my book.",
-        "notes": "[tu j\u025b]\n\ntu je is a presentational phrase: tu means here, and je is the third-person singular present form of by\u0165, used to introduce something nearby."
+        "text": "girl",
+        "notes": null
       },
-      "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": {
         "state": "review",
         "step": null,
-        "stability": 2.021477251638192,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 2,
-        "reviews": 3,
+        "stability": 7.31530074407728,
+        "difficulty": 2.111214235785395,
+        "interval_days": 7,
+        "reviews": 2,
         "passing_reviews": 2,
         "lapses": 0,
         "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:43:30.912000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
+        "last_reviewed_at": "2026-09-10T08:49:52.425000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "6d",
-        "good": "8d",
-        "easy": "13d"
+        "hard": "20d",
+        "good": "29d",
+        "easy": "48d"
       },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
     },
     {
-      "id": "slovak-0121",
-      "entry_type": "sentence",
+      "id": "slovak_reading-2026-09-15-slovak-0041",
       "front": {
-        "text": "vol\u00e1ju sa",
+        "text": "To je m\u00f4j nov\u00fd dom.",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "they call themselves",
-        "notes": null
+        "text": "That is my new home.",
+        "notes": "[to]\n\n\u201cTo\u201d is a neuter singular nominative demonstrative pronoun meaning \u201cthat.\u201d It is the subject pointing to something being indicated."
       },
-      "available_at": "2026-09-15T16:00:00Z",
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": null,
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0095",
+      "entry_type": "term",
+      "front": {
+        "text": "vl'avo",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "on the left",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-14T11:16:12.885000Z",
+        "next_due_at": "2026-09-15T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0100",
+      "entry_type": "term",
+      "front": {
+        "text": "nov\u00fd",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "new",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-15T06:58:46.931000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -1868,13 +1088,229 @@
         "text": "bad",
         "notes": null
       },
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": null,
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0119",
+      "entry_type": "sentence",
+      "front": {
+        "text": "vol\u00e1me sa",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "we call ourselves",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0091",
+      "entry_type": "term",
+      "front": {
+        "text": "tam",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "there",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.24668918777567272,
+        "difficulty": 6.402115069296838,
+        "interval_days": 1,
+        "reviews": 2,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-13T06:09:36.995000Z",
+        "next_due_at": "2026-09-13T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "2d",
+        "good": "3d",
+        "easy": "5d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-14-slovak-0039",
+      "front": {
+        "text": "Kolegy\u0148a pri\u0161la, ale ona u\u017e odi\u0161la.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The colleague came, but she has already left.",
+        "notes": "[\u02c8\u0254na]\n\nOsobn\u00e9 z\u00e1meno v nominat\u00edve jednotn\u00e9ho \u010d\u00edsla \u017eensk\u00e9ho rodu; v tejto vete odkazuje na kolegy\u0148u."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-15T06:59:39.232000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0116",
+      "entry_type": "term",
+      "front": {
+        "text": "volat'",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "to call",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0025",
+      "front": {
+        "text": "Angli\u010danka Lisa p\u00ed\u0161e \u010dl\u00e1nok pre \u010dasopis.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The English woman Lisa writes an article for the magazine.",
+        "notes": "Angli\u010danka Lisa p\u00ed\u0161e \u010dl\u00e1nok pre \u010dasopis\n\nAngli\u010danka is the feminine singular noun indicating a female national from the United Kingdom, functioning as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.634392411534852,
+        "difficulty": 6.3909413235243795,
+        "interval_days": 3,
+        "reviews": 3,
+        "passing_reviews": 2,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-12T15:45:16.502000Z",
+        "next_due_at": "2026-09-14T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "7d",
+        "good": "10d",
+        "easy": "16d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0118",
+      "entry_type": "sentence",
+      "front": {
+        "text": "vol\u00e1\u0161 sa",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "you call yourself",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0098",
+      "entry_type": "term",
+      "front": {
+        "text": "vel'k\u00fd",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "big",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-13T06:12:04.169000Z",
+        "next_due_at": "2026-09-14T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "9d",
+        "good": "14d",
+        "easy": "24d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -1892,7 +1328,7 @@
         "notes": "/ta\u026a/\n\nTy means \u201cyou\u201d and is the singular nominative subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": null,
       "schedule_previews": {
         "again": "10m",
@@ -1905,40 +1341,40 @@
       "front_text_scale": 1.2
     },
     {
-      "id": "slovak-0012",
-      "entry_type": "term",
+      "id": "slovak_reading-2026-09-08-slovak-0022",
       "front": {
-        "text": "dvan\u00e1st'",
+        "text": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina.",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "12",
-        "notes": null
+        "text": "The American man Mike said that his family loves him.",
+        "notes": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina\n\nAmeri\u010dan is the masculine singular noun indicating a male national from the United States, serving as the subject of the sentence."
       },
-      "available_at": "2026-09-15T16:00:00Z",
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": {
         "state": "review",
         "step": null,
-        "stability": 6.451804956995953,
-        "difficulty": 6.379778751497693,
-        "interval_days": 6,
-        "reviews": 4,
-        "passing_reviews": 3,
-        "lapses": 0,
+        "stability": 0.6139445736022262,
+        "difficulty": 8.792726533684817,
+        "interval_days": 1,
+        "reviews": 3,
+        "passing_reviews": 1,
+        "lapses": 1,
         "last_rating": "good",
-        "last_reviewed_at": "2026-09-10T02:44:23.973000Z",
-        "next_due_at": "2026-09-15T16:00:00Z"
+        "last_reviewed_at": "2026-09-12T02:14:45.668000Z",
+        "next_due_at": "2026-09-12T16:00:00Z"
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "13d",
-        "good": "18d",
-        "easy": "27d"
+        "hard": "2d",
+        "good": "3d",
+        "easy": "5d"
       },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0045",
@@ -1952,7 +1388,7 @@
         "text": "they (female; neuter)",
         "notes": null
       },
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": {
         "state": "review",
         "step": null,
@@ -1968,9 +1404,117 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
+        "hard": "11d",
+        "good": "16d",
+        "easy": "28d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0094",
+      "entry_type": "term",
+      "front": {
+        "text": "vel'mi",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "very",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-14T11:14:41.373000Z",
+        "next_due_at": "2026-09-15T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0058",
+      "entry_type": "term",
+      "front": {
+        "text": "sme",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "we are",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 7.31530074407728,
+        "difficulty": 2.111214235785395,
+        "interval_days": 7,
+        "reviews": 2,
+        "passing_reviews": 2,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-10T08:48:56.965000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "20d",
+        "good": "29d",
+        "easy": "48d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0099",
+      "entry_type": "term",
+      "front": {
+        "text": "mal\u00fd",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "small",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-15T06:58:58.516000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -1988,7 +1532,7 @@
         "notes": "[\u02c8d\u0254br\u025b]\n\ndobre is an adverb used predicatively in je mi dobre, describing the speaker's state as well or fine."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": {
         "state": "review",
         "step": null,
@@ -2013,24 +1557,444 @@
       "front_text_scale": 1.2
     },
     {
-      "id": "slovak-0117",
-      "entry_type": "sentence",
+      "id": "slovak-0092",
+      "entry_type": "term",
       "front": {
-        "text": "vol\u00e1m sa",
+        "text": "u\u010ditel'",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "I call myself",
+        "text": "male teacher",
         "notes": null
       },
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": null,
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-09-slovak-0027",
+      "front": {
+        "text": "Pozrite sa, tu je moja kniha.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Look, here is my book.",
+        "notes": "[tu j\u025b]\n\ntu je is a presentational phrase: tu means here, and je is the third-person singular present form of by\u0165, used to introduce something nearby."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.021477251638192,
+        "difficulty": 6.3909413235243795,
+        "interval_days": 2,
+        "reviews": 3,
+        "passing_reviews": 2,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-12T15:43:30.912000Z",
+        "next_due_at": "2026-09-13T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "6d",
+        "good": "9d",
+        "easy": "15d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0111",
+      "entry_type": "term",
+      "front": {
+        "text": "\u010dak\u00e1ju",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "they are waiting",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0121",
+      "entry_type": "sentence",
+      "front": {
+        "text": "vol\u00e1ju sa",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "they call themselves",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-14-slovak-0038",
+      "front": {
+        "text": "Peter pri\u0161iel, ale on u\u017e odi\u0161iel.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Peter came, but he has already left.",
+        "notes": "[\u0254n]\n\nOsobn\u00e9 z\u00e1meno v nominat\u00edve jednotn\u00e9ho \u010d\u00edsla mu\u017esk\u00e9ho rodu; v tejto vete odkazuje na Petra."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-15T06:59:08.901000Z",
+        "next_due_at": "2026-09-15T07:09:08.901000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "3d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0090",
+      "entry_type": "term",
+      "front": {
+        "text": "star\u00fd; -\u00e1; -\u00e9",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "old",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-12T23:48:13.694000Z",
+        "next_due_at": "2026-09-14T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "9d",
+        "good": "14d",
+        "easy": "24d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0093",
+      "entry_type": "term",
+      "front": {
+        "text": "u\u010ditel'ka",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "female teacher",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-14T11:13:12.411000Z",
+        "next_due_at": "2026-09-15T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0115",
+      "entry_type": "term",
+      "front": {
+        "text": "nie dnes; ale zajtra",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "not today; but tomorrow",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0097",
+      "entry_type": "term",
+      "front": {
+        "text": "vpravo",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "on the right",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-14T11:16:10.831000Z",
+        "next_due_at": "2026-09-15T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0021",
+      "front": {
+        "text": "Slovenka Ana spravila na mieste konci knihy.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak woman Ana finished the book at the place.",
+        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.022789382912523522,
+        "difficulty": 9.85140710095639,
+        "interval_days": 0,
+        "reviews": 4,
+        "passing_reviews": 0,
+        "lapses": 3,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-14T11:16:08.234000Z",
+        "next_due_at": "2026-09-14T11:26:08.234000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0020",
+      "front": {
+        "text": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak \u0160tefan opened two doors with a key.",
+        "notes": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania\n\nSlov\u00e1k is the nominative masculine singular noun denoting a person of Slovak ethnic origin, serving as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.11279815380574301,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-12T15:47:11.022000Z",
+        "next_due_at": "2026-09-12T15:57:11.022000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "2d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0012",
+      "entry_type": "term",
+      "front": {
+        "text": "dvan\u00e1st'",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "12",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 6.451804956995953,
+        "difficulty": 6.379778751497693,
+        "interval_days": 6,
+        "reviews": 4,
+        "passing_reviews": 3,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-10T02:44:23.973000Z",
+        "next_due_at": "2026-09-15T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "13d",
+        "good": "18d",
+        "easy": "27d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0105",
+      "entry_type": "term",
+      "front": {
+        "text": "\u0161kared\u00fd",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "ugly",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0054",
+      "entry_type": "term",
+      "front": {
+        "text": "byt'",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "to be",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-12T15:45:44.336000Z",
+        "next_due_at": "2026-09-13T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "11d",
+        "good": "16d",
+        "easy": "28d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2048,7 +2012,7 @@
         "text": "young",
         "notes": null
       },
-      "available_at": "2026-09-15T16:00:00Z",
+      "available_at": "2026-09-16T16:00:00Z",
       "scheduler_state": {
         "state": "review",
         "step": null,
@@ -2067,6 +2031,402 @@
         "hard": "8d",
         "good": "11d",
         "easy": "19d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0123",
+      "entry_type": "sentence",
+      "front": {
+        "text": "ako sa m\u00e1te?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "how are you?",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0104",
+      "entry_type": "term",
+      "front": {
+        "text": "kr\u00e1sny",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "beautiful",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0050",
+      "entry_type": "term",
+      "front": {
+        "text": "m\u00e1",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "he / she / it has",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 7.31530074407728,
+        "difficulty": 2.111214235785395,
+        "interval_days": 7,
+        "reviews": 2,
+        "passing_reviews": 2,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-10T08:47:59.426000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "20d",
+        "good": "29d",
+        "easy": "48d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0122",
+      "entry_type": "term",
+      "front": {
+        "text": "mat' sa",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "to be feeling",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0112",
+      "entry_type": "term",
+      "front": {
+        "text": "b\u00fdvat'",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "to live; reside",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0067",
+      "entry_type": "sentence",
+      "front": {
+        "text": "si Angli\u010danka?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "are you (f) English?",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-12T15:43:03.625000Z",
+        "next_due_at": "2026-09-13T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "11d",
+        "good": "16d",
+        "easy": "28d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0107",
+      "entry_type": "term",
+      "front": {
+        "text": "\u010dak\u00e1m",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I am waiting",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-15T06:58:53.998000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0113",
+      "entry_type": "sentence",
+      "front": {
+        "text": "b\u00fdvate tu?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "do you live here?",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-06-slovak-0018",
+      "front": {
+        "text": "Nie, to nie je probl\u00e9m.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "No, that is not a problem.",
+        "notes": "[\u0272e]\n\nThe word 'nie' is the negative particle meaning 'no', used here to reject a suggestion or answer a yes/no question."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 7.31530074407728,
+        "difficulty": 2.111214235785395,
+        "interval_days": 7,
+        "reviews": 2,
+        "passing_reviews": 2,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-08T04:53:32.961000Z",
+        "next_due_at": "2026-09-14T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "23d",
+        "good": "34d",
+        "easy": "57d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0106",
+      "entry_type": "term",
+      "front": {
+        "text": "\u010dakat'",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "to wait",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-15T06:59:16.898000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0108",
+      "entry_type": "term",
+      "front": {
+        "text": "\u010dak\u00e1\u0161",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "you are waiting",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-15T06:59:18.485000Z",
+        "next_due_at": "2026-09-16T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0110",
+      "entry_type": "term",
+      "front": {
+        "text": "\u010dak\u00e1te",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "you are waiting",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0081",
+      "entry_type": "term",
+      "front": {
+        "text": "Dunaj",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "the Danube",
+        "notes": null
+      },
+      "available_at": "2026-09-16T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-09-12T02:15:04.021000Z",
+        "next_due_at": "2026-09-13T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "11d",
+        "good": "16d",
+        "easy": "28d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
