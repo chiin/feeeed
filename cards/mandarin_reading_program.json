@@ -4,20 +4,19 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-18",
   "batch_date": "2026-09-18",
-  "compiled_at": "2026-09-18T01:45:06.491272Z",
+  "compiled_at": "2026-09-18T01:45:29.906905Z",
   "state_revision": 113,
   "source_revisions": {
-    "hsk": 1302,
+    "hsk": 1303,
     "mandarin_sentences": 129
   },
   "daily_progress": {
     "total": 221,
-    "new": 51,
-    "review": 162,
+    "new": 50,
+    "review": 163,
     "done": 8
   },
   "processed_event_ids": [
-    "f5279110-f2cf-4f1a-a2de-afb3c1023641",
     "9953bb67-9c3d-460d-88aa-e50a2e0b74a3",
     "d0e1d458-2da1-4a79-ac30-60dcdcb45d8a",
     "283338d2-adc4-424d-8e08-ea6d1b189594",
@@ -1017,6 +1016,7 @@
     "64dd9111-a654-4b50-bde9-df4d080aab88",
     "c016f442-6029-4385-a768-f6644a75770f",
     "f8aa958d-7878-4513-9c09-13cb9156ab4b",
+    "9d010c74-53ea-4d79-a3bb-56b70c8bce39",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -1201,13 +1201,25 @@
           "url": "https://www.dong-chinese.com/wiki/%E8%80%85"
         }
       ],
-      "available_at": "2026-09-17T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-18T01:54:45.656000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-18T01:44:45.656000Z",
+        "next_due_at": "2026-09-18T01:54:45.656000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
