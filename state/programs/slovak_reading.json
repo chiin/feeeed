@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 104,
+  "revision": 107,
   "vocabulary": {
     "slovak-0001": {
       "status": "sentence_reinforcement",
@@ -71,11 +71,12 @@
       "last_sentence_pass_at": "2026-09-08T04:53:32.961000Z"
     },
     "slovak-0004": {
-      "status": "sentence_reinforcement",
-      "sentence_pass_count": 2,
+      "status": "sentence_complete",
+      "sentence_pass_count": 3,
       "introduced_at": "2026-09-06T22:46:15.984988Z",
       "introduction_strategy": "vocabulary_first",
-      "last_sentence_pass_at": "2026-09-12T02:14:34.437000Z"
+      "last_sentence_pass_at": "2026-09-19T07:48:35.688000Z",
+      "completed_at": "2026-09-19T07:48:35.688000Z"
     },
     "slovak-0005": {
       "status": "sentence_complete",
@@ -146,9 +147,10 @@
     },
     "slovak-0020": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-09-07T22:55:56.992009Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-09-19T07:47:44.506000Z"
     },
     "slovak-0021": {
       "status": "sentence_reinforcement",
@@ -200,11 +202,12 @@
       "last_sentence_pass_at": "2026-09-12T15:47:44.793000Z"
     },
     "slovak-0027": {
-      "status": "sentence_reinforcement",
-      "sentence_pass_count": 2,
+      "status": "sentence_complete",
+      "sentence_pass_count": 3,
       "introduced_at": "2026-09-08T18:31:41.537563Z",
       "introduction_strategy": "vocabulary_first",
-      "last_sentence_pass_at": "2026-09-12T15:43:30.912000Z"
+      "last_sentence_pass_at": "2026-09-19T07:48:29.633000Z",
+      "completed_at": "2026-09-19T07:48:29.633000Z"
     },
     "slovak-0028": {
       "status": "sentence_complete",
@@ -757,6 +760,26 @@
     },
     "1f2437d6-a69a-4213-b7bd-b35c9a876dba": {
       "processed_at": "2026-09-19T07:47:19.347893Z",
+      "status": "applied"
+    },
+    "fde2d332-a36e-43e6-9c5f-3dc19afa7515": {
+      "processed_at": "2026-09-19T07:49:14.137825Z",
+      "status": "applied"
+    },
+    "094b5dd0-1f43-4320-b6aa-ff307455eeac": {
+      "processed_at": "2026-09-19T07:49:14.137825Z",
+      "status": "applied"
+    },
+    "4e41e181-c88a-46f8-8db5-406f2b9fc263": {
+      "processed_at": "2026-09-19T07:49:14.137825Z",
+      "status": "applied"
+    },
+    "2b0e8751-ae3a-4c64-9ed3-0c1b3c8146ef": {
+      "processed_at": "2026-09-19T07:49:14.137825Z",
+      "status": "applied"
+    },
+    "bf864f27-09b8-4ffe-920d-ab88151dc567": {
+      "processed_at": "2026-09-19T07:49:14.137825Z",
       "status": "applied"
     }
   },
