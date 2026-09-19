@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-19",
   "batch_date": "2026-09-19",
-  "compiled_at": "2026-09-19T07:55:02.355270Z",
-  "state_revision": 135,
+  "compiled_at": "2026-09-19T08:09:06.633441Z",
+  "state_revision": 139,
   "daily_progress": {
     "total": 17,
-    "new": 3,
-    "review": 7,
-    "done": 7
+    "new": 2,
+    "review": 6,
+    "done": 9
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -133,75 +133,13 @@
     "2b0e8751-ae3a-4c64-9ed3-0c1b3c8146ef",
     "bf864f27-09b8-4ffe-920d-ab88151dc567",
     "c6440877-b06f-4d69-81de-53faf3a2346f",
-    "d235cc66-49b3-4b5d-ae9d-60dce2ddf00d"
+    "d235cc66-49b3-4b5d-ae9d-60dce2ddf00d",
+    "80e1e995-8ecd-40c5-8b73-844c149d2d0c",
+    "40ff33f1-8f13-45d1-92e8-a61894c223f3",
+    "51ecf471-1bfe-41cc-a0eb-a775098895e4",
+    "6e8a25c4-eda4-4b03-823a-1e3d4f3cd68e"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0022",
-      "front": {
-        "text": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The American man Mike said that his family loves him.",
-        "notes": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina\n\nAmeri\u010dan is the masculine singular noun indicating a male national from the United States, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.6139445736022262,
-        "difficulty": 8.792726533684817,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T02:14:45.668000Z",
-        "next_due_at": "2026-09-12T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "6d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0024",
-      "front": {
-        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The English man Tom bought fresh bread at the market.",
-        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.03485140985964798,
-        "difficulty": 9.592868765339693,
-        "interval_days": 0,
-        "reviews": 3,
-        "passing_reviews": 0,
-        "lapses": 2,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-12T16:13:11.393000Z",
-        "next_due_at": "2026-09-12T16:23:11.393000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
     {
       "id": "slovak_reading-2026-09-09-slovak-0031",
       "front": {
@@ -311,60 +249,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-15-slovak-0041",
-      "front": {
-        "text": "To je m\u00f4j nov\u00fd dom.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "That is my new home.",
-        "notes": "[to]\n\n\u201cTo\u201d is a neuter singular nominative demonstrative pronoun meaning \u201cthat.\u201d It is the subject pointing to something being indicated."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-19T07:54:23.602000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.018909589578805588,
-        "difficulty": 9.936386893812918,
-        "interval_days": 0,
-        "reviews": 5,
-        "passing_reviews": 0,
-        "lapses": 4,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-19T07:44:23.602000Z",
-        "next_due_at": "2026-09-19T07:54:23.602000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-11-slovak-0034",
       "front": {
         "text": "Nemohla som to poveda\u0165 tak dobre ako ty.",
@@ -422,6 +306,72 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-19T07:48:07.297000Z",
         "next_due_at": "2026-09-19T07:58:07.297000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0024",
+      "front": {
+        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The English man Tom bought fresh bread at the market.",
+        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-19T08:04:11.752000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.02877606680982793,
+        "difficulty": 9.85140710095639,
+        "interval_days": 0,
+        "reviews": 4,
+        "passing_reviews": 0,
+        "lapses": 3,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-19T07:54:11.752000Z",
+        "next_due_at": "2026-09-19T08:04:11.752000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0021",
+      "front": {
+        "text": "Slovenka Ana spravila na mieste konci knihy.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak woman Ana finished the book at the place.",
+        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-19T08:04:27.488000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.00871673938209574,
+        "difficulty": 9.964319173862265,
+        "interval_days": 0,
+        "reviews": 6,
+        "passing_reviews": 0,
+        "lapses": 5,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-19T07:54:27.488000Z",
+        "next_due_at": "2026-09-19T08:04:27.488000Z"
       },
       "schedule_previews": {
         "again": "10m",
