@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-19",
   "batch_date": "2026-09-19",
-  "compiled_at": "2026-09-19T07:39:08.422069Z",
-  "state_revision": 225,
+  "compiled_at": "2026-09-19T07:45:06.360800Z",
+  "state_revision": 233,
   "daily_progress": {
     "total": 56,
-    "new": 14,
-    "review": 29,
-    "done": 13
+    "new": 10,
+    "review": 25,
+    "done": 21
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -233,7 +233,15 @@
     "3b16f61e-e826-4694-afcc-317bc6e7d83b",
     "f91bf3dc-f128-41b5-9de4-95950132ed88",
     "18e918d6-4fcb-4c88-bd6e-90763e6085b6",
-    "6ef797ee-312e-4b4b-96ae-632200572b94"
+    "6ef797ee-312e-4b4b-96ae-632200572b94",
+    "e02eb87c-1a1b-45ba-b49f-2d2d5c53044d",
+    "5340af3c-49b2-4c5a-8147-773f539ad29a",
+    "6fd64154-0435-4868-895d-b2648bebff1a",
+    "5e7ce90d-62de-43d0-9759-097e058e4d67",
+    "0228624d-dbb5-44fd-872c-4ae37272210f",
+    "648e79da-dffa-400c-a7d4-858e56bc2bf6",
+    "8cbe7bc8-1832-4b45-be28-40cb39ba324b",
+    "ebf7c140-ac59-4247-81e6-ab40f8d99c23"
   ],
   "cards": [
     {
@@ -293,39 +301,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-12T15:45:44.336000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "35d"
-      }
-    },
-    {
-      "id": "slovak-0067",
-      "entry_type": "sentence",
-      "front": {
-        "text": "si Angli\u010danka?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "are you (f) English?",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:43:03.625000Z",
         "next_due_at": "2026-09-13T16:00:00Z"
       },
       "schedule_previews": {
@@ -459,72 +434,6 @@
         "last_rating": "good",
         "last_reviewed_at": "2026-09-12T15:44:25.015000Z",
         "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "35d"
-      }
-    },
-    {
-      "id": "slovak-0088",
-      "entry_type": "term",
-      "front": {
-        "text": "rieka",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "river",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-14T11:15:52.910000Z",
-        "next_due_at": "2026-09-14T11:25:52.910000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      }
-    },
-    {
-      "id": "slovak-0084",
-      "entry_type": "term",
-      "front": {
-        "text": "najm\u00e4",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "especially",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-13T06:12:00.658000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -722,39 +631,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-10T08:49:52.425000Z",
-        "next_due_at": "2026-09-16T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "23d",
-        "good": "34d",
-        "easy": "57d"
-      }
-    },
-    {
-      "id": "slovak-0050",
-      "entry_type": "term",
-      "front": {
-        "text": "m\u00e1",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "he / she / it has",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-10T08:47:59.426000Z",
         "next_due_at": "2026-09-16T16:00:00Z"
       },
       "schedule_previews": {
@@ -1257,27 +1133,6 @@
       }
     },
     {
-      "id": "slovak-0105",
-      "entry_type": "term",
-      "front": {
-        "text": "\u0161kared\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ugly",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0109",
       "entry_type": "term",
       "front": {
@@ -1287,48 +1142,6 @@
       },
       "back": {
         "text": "we are waiting",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0111",
-      "entry_type": "term",
-      "front": {
-        "text": "\u010dak\u00e1ju",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "they are waiting",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0114",
-      "entry_type": "term",
-      "front": {
-        "text": "nie; ja tu neb\u00fdvam",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "no; I don't live here",
         "notes": null
       },
       "available_at": "2026-09-18T16:00:00Z",
@@ -1392,27 +1205,6 @@
       },
       "back": {
         "text": "I call myself",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0118",
-      "entry_type": "sentence",
-      "front": {
-        "text": "vol\u00e1\u0161 sa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you call yourself",
         "notes": null
       },
       "available_at": "2026-09-18T16:00:00Z",
