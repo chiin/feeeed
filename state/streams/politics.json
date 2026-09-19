@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 68,
+  "revision": 69,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -147,7 +147,8 @@
     ],
     "processed_reminder_slots": [
       "2026-09-19T00:00:00Z",
-      "2026-09-19T06:00:00Z"
+      "2026-09-19T06:00:00Z",
+      "2026-09-19T11:00:00Z"
     ]
   },
   "next_release_at": "2026-09-19T16:00:00Z",
@@ -207,6 +208,14 @@
       "title": "Article 180 Diplomacy",
       "published_at": "2026-09-19T06:00:00Z",
       "remaining": 5
+    },
+    {
+      "id": "politics-pdf-reminder-20260919T110000Z",
+      "batch_date": "2026-09-19",
+      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
+      "title": "Article 046 Armed Forces And Intelligence",
+      "published_at": "2026-09-19T11:00:00Z",
+      "remaining": 1
     }
   ]
 }
