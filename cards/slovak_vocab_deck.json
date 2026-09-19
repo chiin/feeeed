@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-19",
   "batch_date": "2026-09-19",
-  "compiled_at": "2026-09-19T07:24:00.639108Z",
-  "state_revision": 210,
+  "compiled_at": "2026-09-19T07:28:04.058788Z",
+  "state_revision": 216,
   "daily_progress": {
     "total": 56,
-    "new": 20,
-    "review": 36,
-    "done": 0
+    "new": 15,
+    "review": 37,
+    "done": 4
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -218,7 +218,13 @@
     "fb408bd9-ea30-447a-b80e-27ade730d05f",
     "b0a3c67d-9a4b-40e6-8d46-52ed947d8ef9",
     "bff77549-b0ce-474a-a4d6-8cad7c0c5f49",
-    "313ef8a0-b067-4075-b685-b8b2a72e78fe"
+    "313ef8a0-b067-4075-b685-b8b2a72e78fe",
+    "0ce8003b-747f-443e-b841-2568d3e59b79",
+    "698eee87-6ada-456d-bf47-913ab2331063",
+    "94fb6975-8cc2-4c2c-95d2-9ea8721a49a4",
+    "55c29f5a-f888-4fe3-b460-e46f49d6c629",
+    "c2a19744-2b91-419f-81fb-6d74dbc0d829",
+    "77c7bc42-0f7e-4dd2-be66-ddd0892720e6"
   ],
   "cards": [
     {
@@ -450,39 +456,6 @@
         "hard": "13d",
         "good": "20d",
         "easy": "35d"
-      }
-    },
-    {
-      "id": "slovak-0091",
-      "entry_type": "term",
-      "front": {
-        "text": "tam",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "there",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-13T06:09:36.995000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "4d",
-        "easy": "7d"
       }
     },
     {
@@ -1473,27 +1446,6 @@
       }
     },
     {
-      "id": "slovak-0104",
-      "entry_type": "term",
-      "front": {
-        "text": "kr\u00e1sny",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "beautiful",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0105",
       "entry_type": "term",
       "front": {
@@ -1536,27 +1488,6 @@
       }
     },
     {
-      "id": "slovak-0110",
-      "entry_type": "term",
-      "front": {
-        "text": "\u010dak\u00e1te",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you are waiting",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0111",
       "entry_type": "term",
       "front": {
@@ -1566,48 +1497,6 @@
       },
       "back": {
         "text": "they are waiting",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0112",
-      "entry_type": "term",
-      "front": {
-        "text": "b\u00fdvat'",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to live; reside",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0113",
-      "entry_type": "sentence",
-      "front": {
-        "text": "b\u00fdvate tu?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you live here?",
         "notes": null
       },
       "available_at": "2026-09-18T16:00:00Z",
@@ -1767,27 +1656,6 @@
       }
     },
     {
-      "id": "slovak-0121",
-      "entry_type": "sentence",
-      "front": {
-        "text": "vol\u00e1ju sa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "they call themselves",
-        "notes": null
-      },
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0122",
       "entry_type": "term",
       "front": {
@@ -1827,6 +1695,72 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak-0104",
+      "entry_type": "term",
+      "front": {
+        "text": "kr\u00e1sny",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "beautiful",
+        "notes": null
+      },
+      "available_at": "2026-09-19T07:36:48.505000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-19T07:26:48.505000Z",
+        "next_due_at": "2026-09-19T07:36:48.505000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak-0091",
+      "entry_type": "term",
+      "front": {
+        "text": "tam",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "there",
+        "notes": null
+      },
+      "available_at": "2026-09-19T07:36:51.158000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.15040623675922207,
+        "difficulty": 8.802628058192235,
+        "interval_days": 0,
+        "reviews": 3,
+        "passing_reviews": 1,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-19T07:26:51.158000Z",
+        "next_due_at": "2026-09-19T07:36:51.158000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
