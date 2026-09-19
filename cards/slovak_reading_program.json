@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-19",
   "batch_date": "2026-09-19",
-  "compiled_at": "2026-09-19T08:09:06.633441Z",
-  "state_revision": 111,
+  "compiled_at": "2026-09-19T08:10:16.201563Z",
+  "state_revision": 115,
   "source_revisions": {
     "slovak_vocab": 257,
-    "slovak_sentences": 139
+    "slovak_sentences": 144
   },
   "daily_progress": {
     "total": 73,
-    "new": 4,
-    "review": 16,
-    "done": 53
+    "new": 3,
+    "review": 13,
+    "done": 57
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -392,7 +392,12 @@
     "80e1e995-8ecd-40c5-8b73-844c149d2d0c",
     "40ff33f1-8f13-45d1-92e8-a61894c223f3",
     "51ecf471-1bfe-41cc-a0eb-a775098895e4",
-    "6e8a25c4-eda4-4b03-823a-1e3d4f3cd68e"
+    "6e8a25c4-eda4-4b03-823a-1e3d4f3cd68e",
+    "d5d0eff5-2a6e-4eb5-a8a4-b7c15a507e87",
+    "3b4217bb-741c-454f-b967-ccd5635bda0f",
+    "59361455-7f4d-4765-b06c-0999e3b9cb63",
+    "460411be-3b22-4bb9-bfd0-29ce47758441",
+    "ec3b7bbb-fde9-4c0a-98d2-907d07eee7e6"
   ],
   "cards": [
     {
@@ -407,19 +412,19 @@
         "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-19T07:58:07.297000Z",
+      "available_at": "2026-09-19T08:19:06.272000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.00871673938209574,
-        "difficulty": 9.964319173862265,
+        "stability": 0.004228208598688968,
+        "difficulty": 9.973500324374982,
         "interval_days": 0,
-        "reviews": 6,
+        "reviews": 7,
         "passing_reviews": 0,
-        "lapses": 5,
+        "lapses": 6,
         "last_rating": "again",
-        "last_reviewed_at": "2026-09-19T07:48:07.297000Z",
-        "next_due_at": "2026-09-19T07:58:07.297000Z"
+        "last_reviewed_at": "2026-09-19T08:09:06.272000Z",
+        "next_due_at": "2026-09-19T08:19:06.272000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -456,42 +461,6 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-19T07:54:27.488000Z",
         "next_due_at": "2026-09-19T08:04:27.488000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-11-slovak-0034",
-      "front": {
-        "text": "Nemohla som to poveda\u0165 tak dobre ako ty.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I couldn't say it as well as you.",
-        "notes": "[tak \u02c8d\u0254br\u025b]\n\nPr\u00edslovcov\u00e9 spojenie \u201etak dobre\u201c znamen\u00e1 \u201etak ve\u013emi dobre\u201c; \u201etak\u201c zosil\u0148uje pr\u00edslovku \u201edobre\u201c."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-19T07:57:57.111000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.061150654480718485,
-        "difficulty": 9.592868765339693,
-        "interval_days": 0,
-        "reviews": 3,
-        "passing_reviews": 0,
-        "lapses": 2,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-19T07:47:57.111000Z",
-        "next_due_at": "2026-09-19T07:57:57.111000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -612,42 +581,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-14-slovak-0039",
-      "front": {
-        "text": "Kolegy\u0148a pri\u0161la, ale ona u\u017e odi\u0161la.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The colleague came, but she has already left.",
-        "notes": "[\u02c8\u0254na]\n\nOsobn\u00e9 z\u00e1meno v nominat\u00edve jednotn\u00e9ho \u010d\u00edsla \u017eensk\u00e9ho rodu; v tejto vete odkazuje na kolegy\u0148u."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-15T06:59:39.232000Z",
-        "next_due_at": "2026-09-16T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak_reading-discovered-696c6b11997b70b0",
       "entry_type": "term",
       "front": {
@@ -720,42 +653,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-09-slovak-0031",
-      "front": {
-        "text": "Je mi dobre.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I feel well.",
-        "notes": "[\u02c8d\u0254br\u025b]\n\ndobre is an adverb used predicatively in je mi dobre, describing the speaker's state as well or fine."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.8867876195204154,
-        "difficulty": 6.402115069296838,
-        "interval_days": 2,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T02:15:02.504000Z",
-        "next_due_at": "2026-09-13T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "7d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak-0056",
       "entry_type": "term",
       "front": {
@@ -826,30 +723,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-15-slovak-0040",
-      "front": {
-        "text": "Ono je \u013eahk\u00e9.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "It is light.",
-        "notes": "[\u02c8ono]\n\n\u201cOno\u201d is a neuter singular nominative pronoun meaning \u201cit.\u201d It is the subject referring to a previously mentioned neutral thing."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0087",
