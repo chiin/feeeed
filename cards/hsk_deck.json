@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-19",
   "batch_date": "2026-09-19",
-  "compiled_at": "2026-09-19T12:34:23.226819Z",
-  "state_revision": 1492,
+  "compiled_at": "2026-09-19T12:34:59.316518Z",
+  "state_revision": 1493,
   "daily_progress": {
     "total": 225,
     "new": 19,
@@ -14,7 +14,6 @@
     "done": 108
   },
   "processed_event_ids": [
-    "1a8f4107-6678-4129-9a23-25b2abf97fef",
     "aff3db10-667e-43d9-8f04-e2ff6cef403a",
     "baab5b68-0486-4d0c-95dd-3508ace1a9ef",
     "8e7403d5-3e62-49ee-b252-400d4627e046",
@@ -1013,7 +1012,8 @@
     "9f317100-79ea-4b99-b28c-fdd509be4d08",
     "03e92662-8059-49ac-923a-a48c287a98fa",
     "22ad3724-22a7-487f-bd25-2bce78a90d97",
-    "c0607d4f-dcf2-4b27-b734-9c661ff449e4"
+    "c0607d4f-dcf2-4b27-b734-9c661ff449e4",
+    "f2cdd2c2-05b3-433b-9570-193e8082eb8e"
   ],
   "cards": [
     {
@@ -4738,45 +4738,6 @@
       }
     },
     {
-      "id": "hsk-0413",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8b1b",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ji\u01ceng - to speak; explain; tell",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8b1b",
-          "url": "https://www.dong-chinese.com/wiki/%E8%AC%9B"
-        }
-      ],
-      "available_at": "2026-09-19T07:30:43.751000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.01543191751473265,
-        "difficulty": 9.85140710095639,
-        "interval_days": 0,
-        "reviews": 4,
-        "passing_reviews": 0,
-        "lapses": 3,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-19T07:20:43.751000Z",
-        "next_due_at": "2026-09-19T07:30:43.751000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "hsk-0357",
       "entry_type": "term",
       "front": {
@@ -5627,6 +5588,45 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-19T12:34:05.124000Z",
         "next_due_at": "2026-09-19T12:44:05.124000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "hsk-0413",
+      "entry_type": "term",
+      "front": {
+        "text": "\u8b1b",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "ji\u01ceng - to speak; explain; tell",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u8b1b",
+          "url": "https://www.dong-chinese.com/wiki/%E8%AC%9B"
+        }
+      ],
+      "available_at": "2026-09-19T12:44:41.615000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.007209406358391926,
+        "difficulty": 9.936386893812918,
+        "interval_days": 0,
+        "reviews": 5,
+        "passing_reviews": 0,
+        "lapses": 4,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-19T12:34:41.615000Z",
+        "next_due_at": "2026-09-19T12:44:41.615000Z"
       },
       "schedule_previews": {
         "again": "10m",
