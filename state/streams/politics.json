@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 59,
+  "revision": 60,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -52,6 +52,10 @@
     "39e9327e-be93-45e4-a61f-f5d1829b31fa": {
       "processed_at": "2026-09-13T00:48:12.216057Z",
       "status": "applied"
+    },
+    "080af5df-bb6f-4911-97f0-c5f25c0e6446": {
+      "processed_at": "2026-09-19T08:13:36.073481Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -79,7 +83,9 @@
       "article_024_Concept_of_justice.pdf",
       "article_046_Armed_forces_and_intelligence.pdf"
     ],
-    "opened_ids": [],
+    "opened_ids": [
+      "article_180_Diplomacy.pdf"
+    ],
     "segments": [
       {
         "kind": "initial",
