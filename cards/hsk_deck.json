@@ -5,16 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-19",
   "batch_date": "2026-09-19",
-  "compiled_at": "2026-09-19T07:07:25.603058Z",
-  "state_revision": 1403,
+  "compiled_at": "2026-09-19T07:07:45.495677Z",
+  "state_revision": 1404,
   "daily_progress": {
     "total": 225,
     "new": 35,
-    "review": 121,
-    "done": 69
+    "review": 120,
+    "done": 70
   },
   "processed_event_ids": [
-    "7cceae1c-64ba-470f-98f9-6b64bae9f519",
     "b12ce507-b741-4ff8-8838-2aea08693386",
     "32c706dd-3c31-4489-b48a-3b7fa952ab1f",
     "2fbc2ad4-302b-4568-940f-556f7548b346",
@@ -1013,7 +1012,8 @@
     "0281aacf-c610-4077-95ca-ff49029c8b94",
     "0498fb32-9afd-46e0-9b83-ac3fc0d5750e",
     "071361d4-4d67-4b41-89b6-9d9cc1573a08",
-    "e8ff6d2d-c084-49e5-9cb3-3d195f91fb94"
+    "e8ff6d2d-c084-49e5-9cb3-3d195f91fb94",
+    "0c9152bd-84dc-4d8f-8e70-cb5291f943c7"
   ],
   "cards": [
     {
@@ -1916,49 +1916,6 @@
         "hard": "2d",
         "good": "3d",
         "easy": "6d"
-      }
-    },
-    {
-      "id": "hsk-0287",
-      "entry_type": "term",
-      "front": {
-        "text": "\u65e9\u4e0a",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "z\u01ceoshang - morning",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u65e9",
-          "url": "https://www.dong-chinese.com/wiki/%E6%97%A9"
-        },
-        {
-          "character": "\u4e0a",
-          "url": "https://www.dong-chinese.com/wiki/%E4%B8%8A"
-        }
-      ],
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-13T00:51:44.144000Z",
-        "next_due_at": "2026-09-14T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "35d"
       }
     },
     {
