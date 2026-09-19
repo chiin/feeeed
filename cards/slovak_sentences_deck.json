@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-19",
   "batch_date": "2026-09-19",
-  "compiled_at": "2026-09-19T07:45:06.360800Z",
-  "state_revision": 126,
+  "compiled_at": "2026-09-19T07:47:19.347893Z",
+  "state_revision": 128,
   "daily_progress": {
     "total": 17,
     "new": 3,
-    "review": 13,
-    "done": 1
+    "review": 12,
+    "done": 2
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -124,7 +124,9 @@
     "1373a34f-7e7b-4cd2-9850-f61271f2c97b",
     "db66ba4e-d503-467f-aa98-ce53afdb5c6c",
     "1e655b9f-659d-47ab-8b8d-a72b5825afcc",
-    "d96f65df-ec2b-4763-a1ae-3ba955920d9c"
+    "d96f65df-ec2b-4763-a1ae-3ba955920d9c",
+    "f11cd520-4b83-4cdd-aa50-b8cc4c2e93ee",
+    "1f2437d6-a69a-4213-b7bd-b35c9a876dba"
   ],
   "cards": [
     {
@@ -293,39 +295,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.022789382912523522,
-        "difficulty": 9.85140710095639,
-        "interval_days": 0,
-        "reviews": 4,
-        "passing_reviews": 0,
-        "lapses": 3,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-14T11:16:08.234000Z",
-        "next_due_at": "2026-09-14T11:26:08.234000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-06-slovak-0001",
       "front": {
         "text": "M\u00e1m jeden k\u00fasok.",
@@ -422,39 +391,6 @@
         "hard": "10d",
         "good": "14d",
         "easy": "24d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-14-slovak-0038",
-      "front": {
-        "text": "Peter pri\u0161iel, ale on u\u017e odi\u0161iel.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Peter came, but he has already left.",
-        "notes": "[\u0254n]\n\nOsobn\u00e9 z\u00e1meno v nominat\u00edve jednotn\u00e9ho \u010d\u00edsla mu\u017esk\u00e9ho rodu; v tejto vete odkazuje na Petra."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-15T06:59:08.901000Z",
-        "next_due_at": "2026-09-15T07:09:08.901000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
       }
     },
     {
@@ -611,6 +547,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-19T07:37:49.236000Z",
         "next_due_at": "2026-09-19T07:47:49.236000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0021",
+      "front": {
+        "text": "Slovenka Ana spravila na mieste konci knihy.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak woman Ana finished the book at the place.",
+        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-19T07:54:23.602000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.018909589578805588,
+        "difficulty": 9.936386893812918,
+        "interval_days": 0,
+        "reviews": 5,
+        "passing_reviews": 0,
+        "lapses": 4,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-19T07:44:23.602000Z",
+        "next_due_at": "2026-09-19T07:54:23.602000Z"
       },
       "schedule_previews": {
         "again": "10m",
