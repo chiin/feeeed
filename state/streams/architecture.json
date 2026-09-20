@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_with_replacement",
-  "revision": 65,
+  "revision": 67,
   "completed_ids": [],
   "completion_counts": {
     "article_003_Mesopotamia_and_Persia.pdf": 1,
@@ -44,6 +44,10 @@
     "8c840658-6413-4f05-8ad6-0ba208e31ef4": {
       "processed_at": "2026-09-15T10:11:20.080486Z",
       "status": "applied"
+    },
+    "7bf61c77-9c5b-45a5-ac76-fd47547f392d": {
+      "processed_at": "2026-09-20T04:25:53.780029Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -71,7 +75,9 @@
       "article_093_Venice.pdf",
       "article_122_The_Royal_Pavilion.pdf"
     ],
-    "opened_ids": [],
+    "opened_ids": [
+      "article_158_Le_Corbusier.pdf"
+    ],
     "segments": [
       {
         "kind": "initial",
@@ -92,7 +98,8 @@
       "2026-09-20T14:00:00Z"
     ],
     "processed_reminder_slots": [
-      "2026-09-20T00:00:00Z"
+      "2026-09-20T00:00:00Z",
+      "2026-09-20T04:00:00Z"
     ]
   },
   "next_release_at": "2026-09-20T16:00:00Z",
@@ -135,6 +142,14 @@
       "pdf_id": "article_158_Le_Corbusier.pdf",
       "title": "Article 158 Le Corbusier",
       "published_at": "2026-09-20T00:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "architecture-pdf-reminder-20260920T040000Z",
+      "batch_date": "2026-09-20",
+      "pdf_id": "article_158_Le_Corbusier.pdf",
+      "title": "Article 158 Le Corbusier",
+      "published_at": "2026-09-20T04:00:00Z",
       "remaining": 5
     }
   ]
