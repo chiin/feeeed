@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 137,
+  "revision": 138,
   "cards": {
     "mandarin_reading-2026-09-06-hsk-0158": {
       "state": "review",
@@ -1024,6 +1024,60 @@
     }
   },
   "daily_batch": {
+    "id": "2026-09-21",
+    "date": "2026-09-21",
+    "created_at": "2026-09-20T18:04:42.746561Z",
+    "card_ids": [
+      "mandarin_reading-2026-09-13-hsk-0026",
+      "mandarin_reading-2026-09-17-hsk-0032",
+      "mandarin_reading-2026-09-08-hsk-0011",
+      "mandarin_reading-2026-09-08-hsk-0015",
+      "mandarin_reading-2026-09-08-hsk-0016",
+      "mandarin_reading-2026-09-08-hsk-0017",
+      "mandarin_reading-2026-09-08-hsk-0018",
+      "mandarin_reading-2026-09-15-hsk-0031",
+      "mandarin_reading-2026-09-19-hsk-0033"
+    ],
+    "active": [
+      {
+        "card_id": "mandarin_reading-2026-09-13-hsk-0026",
+        "available_at": "2026-09-20T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-17-hsk-0032",
+        "available_at": "2026-09-20T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-08-hsk-0011",
+        "available_at": "2026-09-20T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-08-hsk-0015",
+        "available_at": "2026-09-20T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-08-hsk-0016",
+        "available_at": "2026-09-20T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-08-hsk-0017",
+        "available_at": "2026-09-20T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-08-hsk-0018",
+        "available_at": "2026-09-20T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-15-hsk-0031",
+        "available_at": "2026-09-20T16:00:00Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-09-19-hsk-0033",
+        "available_at": "2026-09-20T16:00:00Z"
+      }
+    ]
+  },
+  "previous_batch": {
     "id": "2026-09-20",
     "date": "2026-09-20",
     "created_at": "2026-09-19T17:03:06.183759Z",
@@ -1050,33 +1104,6 @@
       {
         "card_id": "mandarin_reading-2026-09-19-hsk-0033",
         "available_at": "2026-09-19T16:00:00Z"
-      }
-    ]
-  },
-  "previous_batch": {
-    "id": "2026-09-19",
-    "date": "2026-09-19",
-    "created_at": "2026-09-18T18:08:07.341850Z",
-    "card_ids": [
-      "mandarin_reading-2026-09-13-hsk-0025",
-      "mandarin_reading-2026-09-12-hsk-0023",
-      "mandarin_reading-2026-09-13-hsk-0029",
-      "mandarin_reading-2026-09-13-hsk-0026",
-      "mandarin_reading-2026-09-15-hsk-0031",
-      "mandarin_reading-2026-09-17-hsk-0032"
-    ],
-    "active": [
-      {
-        "card_id": "mandarin_reading-2026-09-12-hsk-0023",
-        "available_at": "2026-09-18T16:00:00Z"
-      },
-      {
-        "card_id": "mandarin_reading-2026-09-13-hsk-0026",
-        "available_at": "2026-09-18T16:00:00Z"
-      },
-      {
-        "card_id": "mandarin_reading-2026-09-15-hsk-0031",
-        "available_at": "2026-09-18T16:00:00Z"
       }
     ]
   }
