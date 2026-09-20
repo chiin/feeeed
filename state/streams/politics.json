@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 72,
+  "revision": 74,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -96,6 +96,10 @@
     "b1a34063-336d-45d2-bf65-152767d74107": {
       "processed_at": "2026-09-19T08:38:25.567692Z",
       "status": "applied"
+    },
+    "6e7c7bfd-c3fc-42bc-b0ea-e55464882ce6": {
+      "processed_at": "2026-09-20T03:08:59.705278Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -123,7 +127,9 @@
       "article_156_Religious_fundamentalism.pdf",
       "article_036_Government_by_the_few.pdf"
     ],
-    "opened_ids": [],
+    "opened_ids": [
+      "article_046_Armed_forces_and_intelligence.pdf"
+    ],
     "segments": [
       {
         "kind": "initial",
@@ -143,7 +149,9 @@
       "2026-09-20T07:00:00Z",
       "2026-09-20T09:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-09-20T03:00:00Z"
+    ]
   },
   "next_release_at": "2026-09-20T16:00:00Z",
   "feed_reminders": [
@@ -178,6 +186,14 @@
       "title": "Article 046 Armed Forces And Intelligence",
       "published_at": "2026-09-19T13:00:00Z",
       "remaining": 1
+    },
+    {
+      "id": "politics-pdf-reminder-20260920T030000Z",
+      "batch_date": "2026-09-20",
+      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
+      "title": "Article 046 Armed Forces And Intelligence",
+      "published_at": "2026-09-20T03:00:00Z",
+      "remaining": 5
     }
   ]
 }
