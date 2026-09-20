@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 136,
+  "revision": 137,
   "cards": {
     "mandarin_reading-2026-09-06-hsk-0158": {
       "state": "review",
@@ -452,15 +452,15 @@
     "mandarin_reading-2026-09-12-hsk-0023": {
       "state": "review",
       "step": null,
-      "stability": 0.5712991793450282,
-      "difficulty": 8.25557787278606,
-      "interval_days": 1,
-      "reviews": 3,
-      "passing_reviews": 1,
+      "stability": 3.2812668870071864,
+      "difficulty": 8.24255066421011,
+      "interval_days": 3,
+      "reviews": 4,
+      "passing_reviews": 2,
       "lapses": 1,
-      "last_rating": "hard",
-      "last_reviewed_at": "2026-09-15T10:05:07.440000Z",
-      "next_due_at": "2026-09-15T16:00:00Z"
+      "last_rating": "good",
+      "last_reviewed_at": "2026-09-20T09:02:49.773000Z",
+      "next_due_at": "2026-09-22T16:00:00Z"
     },
     "mandarin_reading-2026-09-13-hsk-0024": {
       "state": "review",
@@ -1017,6 +1017,10 @@
     "8ec14ac5-c5ae-42cb-88b8-245b06eb8c87": {
       "processed_at": "2026-09-19T07:08:27.518531Z",
       "status": "applied"
+    },
+    "62315a58-5f78-4bbf-aecc-06863e02cc34": {
+      "processed_at": "2026-09-20T09:03:31.154769Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -1031,10 +1035,6 @@
       "mandarin_reading-2026-09-19-hsk-0033"
     ],
     "active": [
-      {
-        "card_id": "mandarin_reading-2026-09-12-hsk-0023",
-        "available_at": "2026-09-19T16:00:00Z"
-      },
       {
         "card_id": "mandarin_reading-2026-09-13-hsk-0026",
         "available_at": "2026-09-19T16:00:00Z"
