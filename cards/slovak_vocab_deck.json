@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-21",
   "batch_date": "2026-09-21",
-  "compiled_at": "2026-09-21T09:15:10.511308Z",
-  "state_revision": 280,
+  "compiled_at": "2026-09-21T09:24:09.749129Z",
+  "state_revision": 283,
   "daily_progress": {
     "total": 52,
-    "new": 18,
-    "review": 26,
-    "done": 8
+    "new": 17,
+    "review": 24,
+    "done": 11
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -286,7 +286,10 @@
     "ab9aac88-d521-4934-804c-0449f3feea86",
     "750128f8-2014-4b0c-a499-1a7c59504245",
     "e8e63364-6c7e-4e54-92a9-826875a6e019",
-    "6a9ac1e4-ff5c-4b60-bece-2434a85c0deb"
+    "6a9ac1e4-ff5c-4b60-bece-2434a85c0deb",
+    "fa998101-d0b4-4b1e-a2c7-12cba3bfeedc",
+    "15e0b6cd-ebff-4a1e-9e70-36737056518e",
+    "88ae9efc-b9ce-462b-ae28-58e1dcfd51d3"
   ],
   "cards": [
     {
@@ -445,39 +448,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-09-14T11:13:08.470000Z",
-        "next_due_at": "2026-09-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "20d",
-        "good": "29d",
-        "easy": "48d"
-      }
-    },
-    {
-      "id": "slovak-0071",
-      "entry_type": "sentence",
-      "front": {
-        "text": "je to hrad?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "is it a castle?",
-        "notes": null
-      },
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T11:15:44.281000Z",
         "next_due_at": "2026-09-20T16:00:00Z"
       },
       "schedule_previews": {
@@ -1049,39 +1019,6 @@
       }
     },
     {
-      "id": "slovak-0121",
-      "entry_type": "sentence",
-      "front": {
-        "text": "vol\u00e1ju sa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "they call themselves",
-        "notes": null
-      },
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T07:26:52.949000Z",
-        "next_due_at": "2026-09-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
       "id": "slovak-0122",
       "entry_type": "term",
       "front": {
@@ -1460,27 +1397,6 @@
       },
       "back": {
         "text": "taxi",
-        "notes": null
-      },
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0143",
-      "entry_type": "term",
-      "front": {
-        "text": "t'a\u017ek\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "heavy",
         "notes": null
       },
       "available_at": "2026-09-20T16:00:00Z",
