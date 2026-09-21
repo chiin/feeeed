@@ -4,24 +4,19 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-21",
   "batch_date": "2026-09-21",
-  "compiled_at": "2026-09-21T07:20:20.779850Z",
+  "compiled_at": "2026-09-21T07:21:58.732513Z",
   "state_revision": 121,
   "source_revisions": {
-    "hsk": 1566,
+    "hsk": 1571,
     "mandarin_sentences": 138
   },
   "daily_progress": {
     "total": 236,
-    "new": 47,
-    "review": 168,
-    "done": 21
+    "new": 46,
+    "review": 165,
+    "done": 25
   },
   "processed_event_ids": [
-    "e78dbaf1-879a-47b2-9407-5e6b3570b102",
-    "d13ae977-5c92-47f6-a6c1-68ed0eb7b509",
-    "c5a30a05-f7a4-4334-8fa1-3464ca3b0f97",
-    "3d590bf7-ab34-406d-85f4-6b9d9cb940e5",
-    "2e3c3503-c018-4fea-a066-2b5ec1ed6270",
     "3afa6bf1-d371-4c1f-abbc-8f95b1904164",
     "9425e5de-6331-404d-9194-9e94a93d39e3",
     "99144669-5516-4480-b3e7-3632f56307fe",
@@ -1017,6 +1012,11 @@
     "5726d835-dd9c-4df5-b0cf-85899c08a46e",
     "627bc6fb-8ab8-4af7-9b58-9210bde79c33",
     "8a629ea6-cb91-4781-ae94-5e1452f8a688",
+    "41447145-841d-49c6-b91b-9cd4e6ebce53",
+    "9bb5c87a-5ff9-4207-a510-321786cad5c4",
+    "fbfc7689-45b6-4e3f-ba91-17b8395f6f35",
+    "e15267c3-b106-4424-bee4-a44ca77fa198",
+    "6aec69b7-5b56-4788-9b61-87e333aeadcb",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -1584,48 +1584,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "hsk-0437",
-      "entry_type": "term",
-      "front": {
-        "text": "\u53e3",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "k\u01d2u - mouth; measure word for family members",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u53e3",
-          "url": "https://www.dong-chinese.com/wiki/%E5%8F%A3"
-        }
-      ],
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T06:41:11.015000Z",
-        "next_due_at": "2026-09-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
       "id": "hsk-0368",
       "entry_type": "term",
       "front": {
@@ -1647,13 +1605,25 @@
           "url": "https://www.dong-chinese.com/wiki/%E5%BF%83"
         }
       ],
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-21T07:31:24.039000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-21T07:21:24.039000Z",
+        "next_due_at": "2026-09-21T07:31:24.039000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -1694,144 +1664,6 @@
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "hsk-0318",
-      "entry_type": "term",
-      "front": {
-        "text": "\u6bd4\u8cfd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "b\u01d0s\u00e0i - competition; match",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u6bd4",
-          "url": "https://www.dong-chinese.com/wiki/%E6%AF%94"
-        },
-        {
-          "character": "\u8cfd",
-          "url": "https://www.dong-chinese.com/wiki/%E8%B3%BD"
-        }
-      ],
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T13:29:13.112000Z",
-        "next_due_at": "2026-09-15T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "35d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0351",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5730\u5716",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "d\u00ect\u00fa - map",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u5730",
-          "url": "https://www.dong-chinese.com/wiki/%E5%9C%B0"
-        },
-        {
-          "character": "\u5716",
-          "url": "https://www.dong-chinese.com/wiki/%E5%9C%96"
-        }
-      ],
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T07:16:38.295000Z",
-        "next_due_at": "2026-09-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0340",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8a5e\u5178",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "c\u00eddi\u01cen - dictionary",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8a5e",
-          "url": "https://www.dong-chinese.com/wiki/%E8%A9%9E"
-        },
-        {
-          "character": "\u5178",
-          "url": "https://www.dong-chinese.com/wiki/%E5%85%B8"
-        }
-      ],
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-15T03:34:24.434000Z",
-        "next_due_at": "2026-09-16T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "35d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
     },
     {
       "id": "hsk-0398",
@@ -3189,9 +3021,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "4d"
+        "hard": "2d",
+        "good": "3d",
+        "easy": "5d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -6808,8 +6640,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "2d",
-        "good": "2d",
-        "easy": "4d"
+        "good": "3d",
+        "easy": "6d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -9654,8 +9486,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "2d",
-        "good": "2d",
-        "easy": "4d"
+        "good": "3d",
+        "easy": "6d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
