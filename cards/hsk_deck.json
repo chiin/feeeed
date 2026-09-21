@@ -5,16 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-21",
   "batch_date": "2026-09-21",
-  "compiled_at": "2026-09-21T07:15:41.589837Z",
-  "state_revision": 1541,
+  "compiled_at": "2026-09-21T07:17:02.779616Z",
+  "state_revision": 1542,
   "daily_progress": {
     "total": 227,
     "new": 49,
-    "review": 172,
-    "done": 6
+    "review": 171,
+    "done": 7
   },
   "processed_event_ids": [
-    "a9d72209-55de-40fd-b1b5-5acbc85d3bfc",
     "f0af8f39-9c8f-468c-80d3-d6e2bf9e2612",
     "130301ae-3913-4fd7-a77d-1ab50c21fd7c",
     "5e1fdec8-241f-460d-a34d-3efd542bcbf9",
@@ -1013,7 +1012,8 @@
     "ce9d072d-0824-48bd-b05c-f9130c341fd1",
     "29678c60-b383-4b9d-b38e-4ca4ac2d8f4e",
     "e61c437f-3200-440c-95e5-7b49d6b17a6a",
-    "26cada11-9f3b-4574-b845-3be793ca18c4"
+    "26cada11-9f3b-4574-b845-3be793ca18c4",
+    "5f38cef3-121e-4333-a920-961462bf33fc"
   ],
   "cards": [
     {
@@ -3802,49 +3802,6 @@
       }
     },
     {
-      "id": "hsk-0391",
-      "entry_type": "term",
-      "front": {
-        "text": "\u9084\u662f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "h\u00e1ishi - still; or (in questions)",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u9084",
-          "url": "https://www.dong-chinese.com/wiki/%E9%82%84"
-        },
-        {
-          "character": "\u662f",
-          "url": "https://www.dong-chinese.com/wiki/%E6%98%AF"
-        }
-      ],
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-17T05:39:25.118000Z",
-        "next_due_at": "2026-09-18T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
-      }
-    },
-    {
       "id": "hsk-0364",
       "entry_type": "term",
       "front": {
@@ -5491,9 +5448,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "4d"
+        "hard": "2d",
+        "good": "3d",
+        "easy": "5d"
       }
     },
     {
