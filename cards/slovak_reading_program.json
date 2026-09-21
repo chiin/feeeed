@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-09-21",
   "batch_date": "2026-09-21",
-  "compiled_at": "2026-09-21T11:19:14.905758Z",
-  "state_revision": 124,
+  "compiled_at": "2026-09-21T11:19:49.903363Z",
+  "state_revision": 125,
   "source_revisions": {
     "slovak_vocab": 295,
-    "slovak_sentences": 158
+    "slovak_sentences": 160
   },
   "daily_progress": {
     "total": 70,
-    "new": 16,
-    "review": 27,
-    "done": 27
+    "new": 14,
+    "review": 28,
+    "done": 28
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -445,7 +445,9 @@
     "87ae0f75-6ab5-44f2-83b3-1fda0d5ed8c8",
     "9074849e-7c21-4b73-819d-01cfd52f2faf",
     "3b9ae9fe-0f02-4cc6-b840-ec3c362fc9a4",
-    "284a49bb-15b6-4d16-bf7e-97e054b60414"
+    "284a49bb-15b6-4d16-bf7e-97e054b60414",
+    "83144208-ad55-4e6d-866c-50d7f0beef50",
+    "fe17ae5a-8e8c-485a-83a4-6ce94ebdc31f"
   ],
   "cards": [
     {
@@ -593,30 +595,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-19-slovak-0042",
-      "front": {
-        "text": "My ideme na ve\u010deru do re\u0161taur\u00e1cie.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We are going to a restaurant for dinner.",
-        "notes": "[mi]\n\n'My' is the first-person plural nominative pronoun 'we'. In this sentence, it is the subject of the verb 'ideme' (we go/are going), used for emphasis or clarity."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak_reading-2026-09-20-slovak-0046",
       "front": {
         "text": "Diev\u010da \u010d\u00edta knihu na ulici.",
@@ -628,13 +606,25 @@
         "notes": "[\u02c8d\u02b2evt\u0283a \u02c8t\u0283i\u02d0ta \u02c8kn\u026axu na \u02c8ul\u026atsi]\n\nThe noun 'Diev\u010da' is a neuter singular word meaning 'girl', serving as the subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-21T11:28:45.980000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-21T11:18:45.980000Z",
+        "next_due_at": "2026-09-21T11:28:45.980000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",

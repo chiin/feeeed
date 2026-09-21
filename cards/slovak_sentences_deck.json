@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-21",
   "batch_date": "2026-09-21",
-  "compiled_at": "2026-09-21T11:19:14.905758Z",
-  "state_revision": 158,
+  "compiled_at": "2026-09-21T11:19:49.903363Z",
+  "state_revision": 160,
   "daily_progress": {
     "total": 18,
-    "new": 5,
-    "review": 9,
-    "done": 4
+    "new": 3,
+    "review": 10,
+    "done": 5
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -154,7 +154,9 @@
     "87ae0f75-6ab5-44f2-83b3-1fda0d5ed8c8",
     "9074849e-7c21-4b73-819d-01cfd52f2faf",
     "3b9ae9fe-0f02-4cc6-b840-ec3c362fc9a4",
-    "284a49bb-15b6-4d16-bf7e-97e054b60414"
+    "284a49bb-15b6-4d16-bf7e-97e054b60414",
+    "83144208-ad55-4e6d-866c-50d7f0beef50",
+    "fe17ae5a-8e8c-485a-83a4-6ce94ebdc31f"
   ],
   "cards": [
     {
@@ -356,27 +358,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-19-slovak-0042",
-      "front": {
-        "text": "My ideme na ve\u010deru do re\u0161taur\u00e1cie.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We are going to a restaurant for dinner.",
-        "notes": "[mi]\n\n'My' is the first-person plural nominative pronoun 'we'. In this sentence, it is the subject of the verb 'ideme' (we go/are going), used for emphasis or clarity."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-20-slovak-0043",
       "front": {
         "text": "Vy a va\u0161a kolegy\u0148a idete na poh\u00e1r?",
@@ -428,27 +409,6 @@
       "back": {
         "text": "They are going for ice cream.",
         "notes": "[\u02c8\u0254ni \u02c8\u026adu\u02d0 na \u02c8zmrzl\u026ana]\n\nThe pronoun 'Ony' is the feminine or neuter plural 'they', acting as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-20T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-20-slovak-0046",
-      "front": {
-        "text": "Diev\u010da \u010d\u00edta knihu na ulici.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The girl is reading a book on the street.",
-        "notes": "[\u02c8d\u02b2evt\u0283a \u02c8t\u0283i\u02d0ta \u02c8kn\u026axu na \u02c8ul\u026atsi]\n\nThe noun 'Diev\u010da' is a neuter singular word meaning 'girl', serving as the subject of the sentence."
       },
       "presentation": "text_reading",
       "available_at": "2026-09-20T16:00:00Z",
@@ -551,6 +511,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-21T11:17:45.449000Z",
         "next_due_at": "2026-09-21T11:27:45.449000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-20-slovak-0046",
+      "front": {
+        "text": "Diev\u010da \u010d\u00edta knihu na ulici.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The girl is reading a book on the street.",
+        "notes": "[\u02c8d\u02b2evt\u0283a \u02c8t\u0283i\u02d0ta \u02c8kn\u026axu na \u02c8ul\u026atsi]\n\nThe noun 'Diev\u010da' is a neuter singular word meaning 'girl', serving as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-21T11:28:45.980000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-21T11:18:45.980000Z",
+        "next_due_at": "2026-09-21T11:28:45.980000Z"
       },
       "schedule_previews": {
         "again": "10m",
