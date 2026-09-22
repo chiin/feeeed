@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-22",
   "batch_date": "2026-09-22",
-  "compiled_at": "2026-09-22T09:16:19.650955Z",
-  "state_revision": 130,
+  "compiled_at": "2026-09-22T09:16:39.905403Z",
+  "state_revision": 131,
   "source_revisions": {
     "hsk": 1720,
-    "mandarin_sentences": 145
+    "mandarin_sentences": 147
   },
   "daily_progress": {
     "total": 231,
-    "new": 33,
+    "new": 32,
     "review": 123,
-    "done": 75
+    "done": 76
   },
   "processed_event_ids": [
     "72360ef6-8c8a-4624-97e8-91ad88826e3b",
@@ -1142,7 +1142,9 @@
     "a2f3a48f-8301-4d09-9246-64a15d6e24f0",
     "330f9736-6dc3-4495-ba23-18718c4195d8",
     "a4e857ff-88bb-4776-9651-91c718b41296",
-    "ed1e0c3d-31db-4791-bc82-d4ad5017323f"
+    "ed1e0c3d-31db-4791-bc82-d4ad5017323f",
+    "388296f5-88d2-4695-94ff-19628f4964cf",
+    "917ec953-aff5-4307-b5cb-96276dfa15d9"
   ],
   "cards": [
     {
@@ -1589,13 +1591,25 @@
         "notes": "W\u01d2 de xu\u00e9xi\u00e0o l\u01d0 m\u00e9iy\u01d2u zhu\u014dzi.\n\n\u6c92\u6709 (m\u00e9iy\u01d2u) \u662f\u4e00\u500b\u5426\u5b9a\u52d5\u8a5e\uff0c\u610f\u70ba\u300c\u6c92\u6709\u300d\u6216\u300c\u4e0d\u5b58\u5728\u300d\uff0c\u5728\u53e5\u4e2d\u8868\u793a\u5b78\u6821\u88e1\u6c92\u6709\u684c\u5b50\u3002"
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-21T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-22T09:25:30.530000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-22T09:15:30.530000Z",
+        "next_due_at": "2026-09-22T09:25:30.530000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -1646,42 +1660,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-08-hsk-0018",
-      "front": {
-        "text": "\u6211\u60f3\u53bb\u5317\u4eac\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I would like to go to Beijing.",
-        "notes": "w\u01d2 xi\u01ceng q\u00f9 b\u011bi j\u012bng\n\n\u60f3 is a verb meaning ``to think'' or ``would like to'', here expressing desire."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-21T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T08:12:06.723000Z",
-        "next_due_at": "2026-09-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "23d",
-        "good": "34d",
-        "easy": "57d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0218",
