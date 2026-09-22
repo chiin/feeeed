@@ -4,22 +4,19 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-22",
   "batch_date": "2026-09-22",
-  "compiled_at": "2026-09-22T09:02:05.027075Z",
+  "compiled_at": "2026-09-22T09:03:55.289695Z",
   "state_revision": 126,
   "source_revisions": {
-    "hsk": 1667,
+    "hsk": 1670,
     "mandarin_sentences": 142
   },
   "daily_progress": {
     "total": 231,
-    "new": 46,
+    "new": 44,
     "review": 154,
-    "done": 31
+    "done": 33
   },
   "processed_event_ids": [
-    "999bf054-d900-4823-b99e-6870a1c59670",
-    "b43278c6-43cc-47d8-9aa3-d94ae2f05014",
-    "7690642e-1c83-491a-8f3f-828f60840028",
     "c813fa64-42fe-4a32-9b84-381522f10e92",
     "74ea7bf9-eb58-44c9-abc6-f27163593418",
     "ef582008-550b-4bdc-af1a-685046054fd4",
@@ -1017,6 +1014,9 @@
     "5e803908-0b53-439d-8826-3b64154a8c4b",
     "907e1e5d-06a8-4573-8995-dd72698133b9",
     "d88ce95e-24db-4d65-9aba-374bb4d633b7",
+    "3c744726-c0d5-42f9-bcb6-3d8019564b0c",
+    "e59c74b3-b5a9-4e09-97c7-3fe95219623a",
+    "9654d86d-c5ae-4ca0-bc0a-f989e18a22a4",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -1319,48 +1319,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "hsk-0303",
-      "entry_type": "term",
-      "front": {
-        "text": "\u77ee",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "\u01cei - short (height)",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u77ee",
-          "url": "https://www.dong-chinese.com/wiki/%E7%9F%AE"
-        }
-      ],
-      "available_at": "2026-09-21T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.012322591017448415,
-        "difficulty": 9.96120314031207,
-        "interval_days": 1,
-        "reviews": 8,
-        "passing_reviews": 1,
-        "lapses": 5,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-09-21T15:16:21.582000Z",
-        "next_due_at": "2026-09-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
       "id": "hsk-0483",
       "entry_type": "term",
       "front": {
@@ -1382,47 +1340,25 @@
           "url": "https://www.dong-chinese.com/wiki/%E4%B8%AD"
         }
       ],
-      "available_at": "2026-09-21T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-22T09:13:31.447000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-22T09:03:31.447000Z",
+        "next_due_at": "2026-09-22T09:13:31.447000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0389",
-      "entry_type": "term",
-      "front": {
-        "text": "\u679c\u6c41",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "gu\u01d2zh\u012b - fruit juice",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u679c",
-          "url": "https://www.dong-chinese.com/wiki/%E6%9E%9C"
-        },
-        {
-          "character": "\u6c41",
-          "url": "https://www.dong-chinese.com/wiki/%E6%B1%81"
-        }
-      ],
-      "available_at": "2026-09-21T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -3670,7 +3606,7 @@
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "1d"
+        "easy": "2d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -7714,9 +7650,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
