@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_with_replacement",
-  "revision": 74,
+  "revision": 75,
   "completed_ids": [],
   "completion_counts": {
     "article_001_Introduction.pdf": 1,
@@ -97,7 +97,11 @@
       "2026-09-22T11:00:00Z",
       "2026-09-22T14:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-09-22T00:00:00Z",
+      "2026-09-22T01:00:00Z",
+      "2026-09-22T03:00:00Z"
+    ]
   },
   "next_release_at": "2026-09-22T16:00:00Z",
   "feed_reminders": [
@@ -139,6 +143,30 @@
       "pdf_id": "article_130_The_categorical_imperative.pdf",
       "title": "Article 130 The Categorical Imperative",
       "published_at": "2026-09-21T12:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "philosophy-pdf-reminder-20260922T000000Z",
+      "batch_date": "2026-09-22",
+      "pdf_id": "article_130_The_categorical_imperative.pdf",
+      "title": "Article 130 The Categorical Imperative",
+      "published_at": "2026-09-22T00:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "philosophy-pdf-reminder-20260922T010000Z",
+      "batch_date": "2026-09-22",
+      "pdf_id": "article_130_The_categorical_imperative.pdf",
+      "title": "Article 130 The Categorical Imperative",
+      "published_at": "2026-09-22T01:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "philosophy-pdf-reminder-20260922T030000Z",
+      "batch_date": "2026-09-22",
+      "pdf_id": "article_130_The_categorical_imperative.pdf",
+      "title": "Article 130 The Categorical Imperative",
+      "published_at": "2026-09-22T03:00:00Z",
       "remaining": 5
     }
   ]
