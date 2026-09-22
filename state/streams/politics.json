@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 84,
+  "revision": 85,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -149,7 +149,10 @@
     ],
     "processed_reminder_slots": [
       "2026-09-22T01:00:00Z",
-      "2026-09-22T04:00:00Z"
+      "2026-09-22T04:00:00Z",
+      "2026-09-22T10:00:00Z",
+      "2026-09-22T11:00:00Z",
+      "2026-09-22T12:00:00Z"
     ]
   },
   "next_release_at": "2026-09-22T16:00:00Z",
@@ -208,6 +211,30 @@
       "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
       "title": "Article 046 Armed Forces And Intelligence",
       "published_at": "2026-09-22T04:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "politics-pdf-reminder-20260922T100000Z",
+      "batch_date": "2026-09-22",
+      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
+      "title": "Article 046 Armed Forces And Intelligence",
+      "published_at": "2026-09-22T10:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "politics-pdf-reminder-20260922T110000Z",
+      "batch_date": "2026-09-22",
+      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
+      "title": "Article 046 Armed Forces And Intelligence",
+      "published_at": "2026-09-22T11:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "politics-pdf-reminder-20260922T120000Z",
+      "batch_date": "2026-09-22",
+      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
+      "title": "Article 046 Armed Forces And Intelligence",
+      "published_at": "2026-09-22T12:00:00Z",
       "remaining": 5
     }
   ]
