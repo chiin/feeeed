@@ -5,19 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-09-22",
   "batch_date": "2026-09-22",
-  "compiled_at": "2026-09-22T09:03:55.289695Z",
-  "state_revision": 1670,
+  "compiled_at": "2026-09-22T09:05:15.427680Z",
+  "state_revision": 1674,
   "daily_progress": {
     "total": 220,
     "new": 40,
-    "review": 148,
-    "done": 32
+    "review": 144,
+    "done": 36
   },
   "processed_event_ids": [
-    "c813fa64-42fe-4a32-9b84-381522f10e92",
-    "74ea7bf9-eb58-44c9-abc6-f27163593418",
-    "ef582008-550b-4bdc-af1a-685046054fd4",
-    "94e26736-3445-4373-bc5c-e2b2572784c4",
     "1d0dcfaa-7920-40a2-90da-25bd7c925859",
     "a5415784-fe91-4155-9b15-c1001c462f66",
     "fc3310a3-a008-4169-b204-95db1191c498",
@@ -1013,7 +1009,11 @@
     "d88ce95e-24db-4d65-9aba-374bb4d633b7",
     "3c744726-c0d5-42f9-bcb6-3d8019564b0c",
     "e59c74b3-b5a9-4e09-97c7-3fe95219623a",
-    "9654d86d-c5ae-4ca0-bc0a-f989e18a22a4"
+    "9654d86d-c5ae-4ca0-bc0a-f989e18a22a4",
+    "25f58275-3814-4f9f-94cc-2c4c4cfe12d8",
+    "8e3de4fa-64cc-4467-a1ea-da2e9e81f31c",
+    "41abe7e5-e98d-4478-825d-64bc02fe4e6e",
+    "05c45f7e-a33a-47a8-8af5-ef1474f399c0"
   ],
   "cards": [
     {
@@ -2173,45 +2173,6 @@
       }
     },
     {
-      "id": "hsk-0109",
-      "entry_type": "term",
-      "front": {
-        "text": "\u4e8c",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "\u00e8r - two",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u4e8c",
-          "url": "https://www.dong-chinese.com/wiki/%E4%BA%8C"
-        }
-      ],
-      "available_at": "2026-09-21T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 11.687482913582336,
-        "difficulty": 1.0,
-        "interval_days": 12,
-        "reviews": 2,
-        "lapses": 0,
-        "last_reviewed_at": "2026-09-05T03:49:31.150000Z",
-        "next_due_at": "2026-09-16T16:00:00Z",
-        "passing_reviews": 1,
-        "last_rating": null
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "44d",
-        "good": "66d",
-        "easy": "113d"
-      }
-    },
-    {
       "id": "hsk-0235",
       "entry_type": "term",
       "front": {
@@ -2416,45 +2377,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0296",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8d70",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "z\u01d2u - to walk",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8d70",
-          "url": "https://www.dong-chinese.com/wiki/%E8%B5%B0"
-        }
-      ],
-      "available_at": "2026-09-21T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.7789614697751799,
-        "difficulty": 8.76561138356836,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 3,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-17T06:59:40.543000Z",
-        "next_due_at": "2026-09-17T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "4d",
-        "easy": "6d"
       }
     },
     {
@@ -8115,92 +8037,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0426",
-      "entry_type": "term",
-      "front": {
-        "text": "\u7d93\u904e",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "j\u012bnggu\u00f2 - to pass by; through",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u7d93",
-          "url": "https://www.dong-chinese.com/wiki/%E7%B6%93"
-        },
-        {
-          "character": "\u904e",
-          "url": "https://www.dong-chinese.com/wiki/%E9%81%8E"
-        }
-      ],
-      "available_at": "2026-09-22T09:03:50.029000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-22T08:53:50.029000Z",
-        "next_due_at": "2026-09-22T09:03:50.029000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0383",
-      "entry_type": "term",
-      "front": {
-        "text": "\u522e\u98a8",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "gu\u0101f\u0113ng - to be windy",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u522e",
-          "url": "https://www.dong-chinese.com/wiki/%E5%88%AE"
-        },
-        {
-          "character": "\u98a8",
-          "url": "https://www.dong-chinese.com/wiki/%E9%A2%A8"
-        }
-      ],
-      "available_at": "2026-09-22T09:04:09.840000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-22T08:54:09.840000Z",
-        "next_due_at": "2026-09-22T09:04:09.840000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     },
     {
