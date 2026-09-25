@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 99,
+  "revision": 100,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -167,7 +167,9 @@
       "2026-09-25T09:00:00Z",
       "2026-09-25T12:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-09-25T00:00:00Z"
+    ]
   },
   "next_release_at": "2026-09-25T16:00:00Z",
   "feed_reminders": [
@@ -201,6 +203,14 @@
       "pdf_id": "article_023_Market_efficiency_and_the_welf.pdf",
       "title": "Article 023 Market Efficiency And The Welf",
       "published_at": "2026-09-24T08:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20260925T000000Z",
+      "batch_date": "2026-09-25",
+      "pdf_id": "article_023_Market_efficiency_and_the_welf.pdf",
+      "title": "Article 023 Market Efficiency And The Welf",
+      "published_at": "2026-09-25T00:00:00Z",
       "remaining": 5
     }
   ]
