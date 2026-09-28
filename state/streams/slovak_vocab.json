@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 375,
+  "revision": 380,
   "cards": {
     "slovak-0009": {
       "state": "review",
@@ -504,15 +504,15 @@
     "slovak-0032": {
       "state": "review",
       "step": null,
-      "stability": 16.17726320265468,
-      "difficulty": 2.111214235785395,
-      "interval_days": 16,
-      "reviews": 2,
-      "passing_reviews": 2,
+      "stability": 106.71568672217369,
+      "difficulty": 1.0,
+      "interval_days": 107,
+      "reviews": 3,
+      "passing_reviews": 3,
       "lapses": 0,
-      "last_rating": "good",
-      "last_reviewed_at": "2026-09-12T02:15:08.570000Z",
-      "next_due_at": "2026-09-27T16:00:00Z"
+      "last_rating": "easy",
+      "last_reviewed_at": "2026-09-28T08:38:20.999000Z",
+      "next_due_at": "2027-01-12T16:00:00Z"
     },
     "slovak-0028": {
       "state": "review",
@@ -608,15 +608,15 @@
     "slovak-0055": {
       "state": "review",
       "step": null,
-      "stability": 10.964332335820698,
-      "difficulty": 2.111214235785395,
-      "interval_days": 11,
-      "reviews": 2,
-      "passing_reviews": 2,
+      "stability": 54.68145822636723,
+      "difficulty": 2.1043313908464483,
+      "interval_days": 55,
+      "reviews": 3,
+      "passing_reviews": 3,
       "lapses": 0,
       "last_rating": "good",
-      "last_reviewed_at": "2026-09-12T15:44:23.380000Z",
-      "next_due_at": "2026-09-22T16:00:00Z"
+      "last_reviewed_at": "2026-09-28T08:38:36.330000Z",
+      "next_due_at": "2026-11-21T16:00:00Z"
     },
     "slovak-0044": {
       "state": "review",
@@ -1596,15 +1596,15 @@
     "slovak-0087": {
       "state": "review",
       "step": null,
-      "stability": 2.3065,
-      "difficulty": 2.118103970459016,
-      "interval_days": 2,
-      "reviews": 1,
-      "passing_reviews": 1,
+      "stability": 23.993042579260447,
+      "difficulty": 2.111214235785395,
+      "interval_days": 24,
+      "reviews": 2,
+      "passing_reviews": 2,
       "lapses": 0,
       "last_rating": "good",
-      "last_reviewed_at": "2026-09-19T08:09:49.801000Z",
-      "next_due_at": "2026-09-20T16:00:00Z"
+      "last_reviewed_at": "2026-09-28T08:38:34.420000Z",
+      "next_due_at": "2026-10-21T16:00:00Z"
     },
     "slovak-0123": {
       "state": "review",
@@ -1700,15 +1700,15 @@
     "slovak-0128": {
       "state": "review",
       "step": null,
-      "stability": 2.3065,
-      "difficulty": 2.118103970459016,
-      "interval_days": 2,
-      "reviews": 1,
+      "stability": 12.882480564160312,
+      "difficulty": 4.752858488532557,
+      "interval_days": 13,
+      "reviews": 2,
       "passing_reviews": 1,
       "lapses": 0,
-      "last_rating": "good",
-      "last_reviewed_at": "2026-09-21T11:17:51.613000Z",
-      "next_due_at": "2026-09-22T16:00:00Z"
+      "last_rating": "hard",
+      "last_reviewed_at": "2026-09-28T08:38:18.769000Z",
+      "next_due_at": "2026-10-10T16:00:00Z"
     },
     "slovak-0137": {
       "state": "review",
@@ -1878,6 +1878,19 @@
       "last_rating": "good",
       "last_reviewed_at": "2026-09-28T08:34:25.101000Z",
       "next_due_at": "2026-09-29T16:00:00Z"
+    },
+    "slovak-0132": {
+      "state": "review",
+      "step": null,
+      "stability": 8.2956,
+      "difficulty": 1.0,
+      "interval_days": 8,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "easy",
+      "last_reviewed_at": "2026-09-28T08:38:27.917000Z",
+      "next_due_at": "2026-10-05T16:00:00Z"
     }
   },
   "processed_events": {
@@ -3324,6 +3337,26 @@
     "34ead83e-586b-4476-abb1-375bf329fa5b": {
       "processed_at": "2026-09-28T08:38:18.053586Z",
       "status": "applied"
+    },
+    "e4466991-6b58-4830-9327-6550783f7ad6": {
+      "processed_at": "2026-09-28T08:40:01.109621Z",
+      "status": "applied"
+    },
+    "613833ec-c09e-4fb1-bc83-7ee80f877efd": {
+      "processed_at": "2026-09-28T08:40:01.109621Z",
+      "status": "applied"
+    },
+    "a399a08f-a241-4320-b5e7-cf8026eb0295": {
+      "processed_at": "2026-09-28T08:40:01.109621Z",
+      "status": "applied"
+    },
+    "a588beb6-5a66-4ecd-a618-79fe7b530a52": {
+      "processed_at": "2026-09-28T08:40:01.109621Z",
+      "status": "applied"
+    },
+    "1de7bf45-a855-4ba2-88b9-0f7f39cc145b": {
+      "processed_at": "2026-09-28T08:40:01.109621Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -3438,10 +3471,6 @@
         "available_at": "2026-09-27T16:00:00Z"
       },
       {
-        "card_id": "slovak-0087",
-        "available_at": "2026-09-27T16:00:00Z"
-      },
-      {
         "card_id": "slovak-0115",
         "available_at": "2026-09-27T16:00:00Z"
       },
@@ -3450,15 +3479,7 @@
         "available_at": "2026-09-27T16:00:00Z"
       },
       {
-        "card_id": "slovak-0055",
-        "available_at": "2026-09-27T16:00:00Z"
-      },
-      {
         "card_id": "slovak-0063",
-        "available_at": "2026-09-27T16:00:00Z"
-      },
-      {
-        "card_id": "slovak-0128",
         "available_at": "2026-09-27T16:00:00Z"
       },
       {
@@ -3490,10 +3511,6 @@
         "available_at": "2026-09-27T16:00:00Z"
       },
       {
-        "card_id": "slovak-0032",
-        "available_at": "2026-09-27T16:00:00Z"
-      },
-      {
         "card_id": "slovak-0125",
         "available_at": "2026-09-27T16:00:00Z"
       },
@@ -3507,10 +3524,6 @@
       },
       {
         "card_id": "slovak-0131",
-        "available_at": "2026-09-27T16:00:00Z"
-      },
-      {
-        "card_id": "slovak-0132",
         "available_at": "2026-09-27T16:00:00Z"
       },
       {
