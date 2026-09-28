@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-28",
   "batch_date": "2026-09-28",
-  "compiled_at": "2026-09-28T08:19:20.962649Z",
-  "state_revision": 172,
+  "compiled_at": "2026-09-28T08:30:37.820325Z",
+  "state_revision": 184,
   "daily_progress": {
     "total": 25,
-    "new": 3,
-    "review": 17,
-    "done": 5
+    "new": 2,
+    "review": 8,
+    "done": 15
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -161,7 +161,19 @@
     "c22fc7a2-767d-456f-9a27-4d935056ecda",
     "b7fbe787-a223-4f4a-9bf1-2e09a3007353",
     "b4d989b5-2bd9-4a08-ab3d-fea9e64abef6",
-    "6c82f78b-6d84-4efe-b7fd-c572f387a952"
+    "6c82f78b-6d84-4efe-b7fd-c572f387a952",
+    "e47be70c-423b-4873-a129-5d62c8b4fe81",
+    "2b21abd4-0b9d-4445-b02a-c4a957f5af97",
+    "0af5d0a4-209e-440c-bed4-32400f3c82c8",
+    "6aa73e30-286e-468e-a113-8c37dca8f374",
+    "c9091d7a-e756-4f6c-852d-69fdac7e418a",
+    "b5961195-6c8a-4c24-8a01-5a784582a56c",
+    "a71bd2c2-7e5c-424b-a73a-4fb2948d30ce",
+    "7fec767c-ab66-4eab-b0f1-b762218d304b",
+    "c4f944d4-b41b-438d-96eb-4be0f7477bf4",
+    "9c3f679e-b7a5-4e31-9acd-664e57603a1f",
+    "76d0e156-122c-496c-89e7-5c49ba17c83f",
+    "e4f5d28e-10c6-4cc7-9786-3d7423a63bd5"
   ],
   "cards": [
     {
@@ -198,39 +210,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-09-slovak-0030",
-      "front": {
-        "text": "Mama \u010dak\u00e1 na n\u00e1s.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Mom is waiting for us.",
-        "notes": "[\u02c8t\u0361\u0283aka\u02d0]\n\n\u010dak\u00e1 is the third-person singular present form of \u010daka\u0165, meaning is waiting; \u010daka\u0165 na plus the accusative names the person or thing waited for."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T11:15:47.273000Z",
-        "next_due_at": "2026-09-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "29d",
-        "good": "44d",
-        "easy": "76d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-11-slovak-0036",
       "front": {
         "text": "Ja to viem.",
@@ -264,72 +243,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-12-slovak-0037",
-      "front": {
-        "text": "Ty si m\u00f4j kamar\u00e1t.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "You are my friend.",
-        "notes": "/ta\u026a/\n\nTy means \u201cyou\u201d and is the singular nominative subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T08:10:02.722000Z",
-        "next_due_at": "2026-09-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "15d",
-        "good": "24d",
-        "easy": "43d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-15-slovak-0041",
-      "front": {
-        "text": "To je m\u00f4j nov\u00fd dom.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "That is my new home.",
-        "notes": "[to]\n\n\u201cTo\u201d is a neuter singular nominative demonstrative pronoun meaning \u201cthat.\u201d It is the subject pointing to something being indicated."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T07:54:31.892000Z",
-        "next_due_at": "2026-09-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "15d",
-        "good": "24d",
-        "easy": "43d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-10-slovak-0033",
       "front": {
         "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
@@ -354,39 +267,6 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-21T11:17:36.931000Z",
         "next_due_at": "2026-09-21T11:27:36.931000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.0020046200306384834,
-        "difficulty": 9.977510030454273,
-        "interval_days": 0,
-        "reviews": 9,
-        "passing_reviews": 0,
-        "lapses": 8,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-21T11:17:44.148000Z",
-        "next_due_at": "2026-09-21T11:27:44.148000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -429,39 +309,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-08-slovak-0022",
-      "front": {
-        "text": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The American man Mike said that his family loves him.",
-        "notes": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina\n\nAmeri\u010dan is the masculine singular noun indicating a male national from the United States, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 3.3852387275976894,
-        "difficulty": 8.77916217644797,
-        "interval_days": 3,
-        "reviews": 4,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T07:54:04.897000Z",
-        "next_due_at": "2026-09-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "7d",
-        "good": "10d",
-        "easy": "15d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-11-slovak-0034",
       "front": {
         "text": "Nemohla som to poveda\u0165 tak dobre ako ty.",
@@ -495,39 +342,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-14-slovak-0038",
-      "front": {
-        "text": "Peter pri\u0161iel, ale on u\u017e odi\u0161iel.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Peter came, but he has already left.",
-        "notes": "[\u0254n]\n\nOsobn\u00e9 z\u00e1meno v nominat\u00edve jednotn\u00e9ho \u010d\u00edsla mu\u017esk\u00e9ho rodu; v tejto vete odkazuje na Petra."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.9939088450224105,
-        "difficulty": 6.402115069296838,
-        "interval_days": 3,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T07:44:36.744000Z",
-        "next_due_at": "2026-09-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "10d",
-        "good": "15d",
-        "easy": "26d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-06-slovak-0015",
       "front": {
         "text": "Dobr\u00fd de\u0148, ako sa m\u00e1te?",
@@ -558,171 +372,6 @@
         "hard": "45d",
         "good": "65d",
         "easy": "110d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0011",
-      "front": {
-        "text": "M\u00e1 jeden\u00e1s\u0165 kn\u00edh.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He has eleven books.",
-        "notes": "[\u02c8jed\u0259na\u02d0st]\n\njeden\u00e1s\u0165 is the cardinal number eleven, used here in the genitive plural after the verb m\u00e1 (has) to agree with kn\u00edh (books)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 13.826903694354568,
-        "difficulty": 2.111214235785395,
-        "interval_days": 14,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-10T08:47:21.711000Z",
-        "next_due_at": "2026-09-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "44d",
-        "good": "63d",
-        "easy": "106d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0016",
-      "front": {
-        "text": "Te\u0161\u00ed ma, \u017ee sme sa stretli.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I'm pleased to meet you that we met.",
-        "notes": "[\u02c8t\u025b\u0283i\u02d0 ma]\n\nTe\u0161\u00ed ma is a common greeting expression meaning pleased to meet you or nice to meet you, literally it pleases me."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 13.826903694354568,
-        "difficulty": 2.111214235785395,
-        "interval_days": 14,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-10T08:50:16.530000Z",
-        "next_due_at": "2026-09-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "44d",
-        "good": "63d",
-        "easy": "106d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0002",
-      "front": {
-        "text": "M\u00e1m dva k\u00fasky.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have two pieces.",
-        "notes": "[d\u0325va]\n\nThe word 'dva' is the masculine nominative/accusative plural form of the numeral 'two', agreeing with the plural noun 'k\u00fasky'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 16.17726320265468,
-        "difficulty": 2.111214235785395,
-        "interval_days": 16,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-10T08:28:31.058000Z",
-        "next_due_at": "2026-09-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "47d",
-        "good": "67d",
-        "easy": "111d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-11-slovak-0035",
-      "front": {
-        "text": "\u010cak\u00e1m vonku.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I am waiting outside.",
-        "notes": "[\u02c8v\u0254\u014bku]\n\nAn adverb of place meaning \u201coutside\u201d; it indicates where the waiting happens."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 10.964332335820698,
-        "difficulty": 2.111214235785395,
-        "interval_days": 11,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-15T06:59:30.606000Z",
-        "next_due_at": "2026-09-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "35d",
-        "good": "51d",
-        "easy": "85d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0029",
-      "front": {
-        "text": "M\u00e1m nov\u00fa auto.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have a new car.",
-        "notes": "M\u00e1m nov\u00fa auto.\n\nauto is the noun denoting a motor vehicle, serving as the central topic of the sentence expressing possession."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 16.17726320265468,
-        "difficulty": 2.111214235785395,
-        "interval_days": 16,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:47:44.793000Z",
-        "next_due_at": "2026-09-27T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "44d",
-        "good": "62d",
-        "easy": "103d"
       }
     },
     {
@@ -768,24 +417,69 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-22-slovak-0048",
+      "id": "slovak_reading-2026-09-07-slovak-0016",
       "front": {
-        "text": "M\u00e1m nov\u00fd bicykel.",
+        "text": "Te\u0161\u00ed ma, \u017ee sme sa stretli.",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "I have a new bicycle.",
-        "notes": "[ma\u02d0m]\n\nThe word \"M\u00e1m\" is the first-person singular present tense of the verb \"ma\u0165\" (to have), meaning \"I have\" in this sentence."
+        "text": "I'm pleased to meet you that we met.",
+        "notes": "[\u02c8t\u025b\u0283i\u02d0 ma]\n\nTe\u0161\u00ed ma is a common greeting expression meaning pleased to meet you or nice to meet you, literally it pleases me."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-28T08:33:10.450000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 1.7665255781987192,
+        "difficulty": 7.392238132342694,
+        "interval_days": 0,
+        "reviews": 3,
+        "passing_reviews": 2,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-28T08:23:10.450000Z",
+        "next_due_at": "2026-09-28T08:33:10.450000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "2d",
+        "good": "2d",
+        "easy": "3d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0021",
+      "front": {
+        "text": "Slovenka Ana spravila na mieste konci knihy.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak woman Ana finished the book at the place.",
+        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-28T08:36:36.634000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.0019078530111851287,
+        "difficulty": 9.97783606923895,
+        "interval_days": 0,
+        "reviews": 10,
+        "passing_reviews": 0,
+        "lapses": 9,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-28T08:26:36.634000Z",
+        "next_due_at": "2026-09-28T08:36:36.634000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
