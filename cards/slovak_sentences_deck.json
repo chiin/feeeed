@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-28",
   "batch_date": "2026-09-28",
-  "compiled_at": "2026-09-28T08:16:13.934418Z",
-  "state_revision": 168,
+  "compiled_at": "2026-09-28T08:19:20.962649Z",
+  "state_revision": 172,
   "daily_progress": {
     "total": 25,
-    "new": 5,
-    "review": 19,
-    "done": 1
+    "new": 3,
+    "review": 17,
+    "done": 5
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -157,7 +157,11 @@
     "284a49bb-15b6-4d16-bf7e-97e054b60414",
     "83144208-ad55-4e6d-866c-50d7f0beef50",
     "fe17ae5a-8e8c-485a-83a4-6ce94ebdc31f",
-    "640d4fa2-9ced-44d3-9818-f00b5e8055e0"
+    "640d4fa2-9ced-44d3-9818-f00b5e8055e0",
+    "c22fc7a2-767d-456f-9a27-4d935056ecda",
+    "b7fbe787-a223-4f4a-9bf1-2e09a3007353",
+    "b4d989b5-2bd9-4a08-ab3d-fea9e64abef6",
+    "6c82f78b-6d84-4efe-b7fd-c572f387a952"
   ],
   "cards": [
     {
@@ -425,39 +429,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-20-slovak-0046",
-      "front": {
-        "text": "Diev\u010da \u010d\u00edta knihu na ulici.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The girl is reading a book on the street.",
-        "notes": "[\u02c8d\u02b2evt\u0283a \u02c8t\u0283i\u02d0ta \u02c8kn\u026axu na \u02c8ul\u026atsi]\n\nThe noun 'Diev\u010da' is a neuter singular word meaning 'girl', serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-21T11:18:45.980000Z",
-        "next_due_at": "2026-09-21T11:28:45.980000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "6d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-08-slovak-0022",
       "front": {
         "text": "Ameri\u010dan Mike povedal, \u017ee ho miluje jeho rodina.",
@@ -554,39 +525,6 @@
         "hard": "10d",
         "good": "15d",
         "easy": "26d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-19-slovak-0042",
-      "front": {
-        "text": "My ideme na ve\u010deru do re\u0161taur\u00e1cie.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We are going to a restaurant for dinner.",
-        "notes": "[mi]\n\n'My' is the first-person plural nominative pronoun 'we'. In this sentence, it is the subject of the verb 'ideme' (we go/are going), used for emphasis or clarity."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-21T11:18:37.162000Z",
-        "next_due_at": "2026-09-22T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "35d"
       }
     },
     {
@@ -788,27 +726,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-20-slovak-0043",
-      "front": {
-        "text": "Vy a va\u0161a kolegy\u0148a idete na poh\u00e1r?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "You and your colleague are going for a drink?",
-        "notes": "[vi a \u02c8va\u0283a \u02c8k\u0254le\u0261i\u0272a \u02c8\u026adete na \u02c8p\u0254ha\u02d0r]\n\nThe pronoun 'Vy' is the formal or plural 'you', serving as the subject of the sentence alongside 'va\u0161a kolegy\u0148a'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-20-slovak-0044",
       "front": {
         "text": "Oni id\u00fa do kaviarne.",
@@ -818,27 +735,6 @@
       "back": {
         "text": "They are going to the cafe.",
         "notes": "[\u02c8\u0254ni \u02c8\u026adu\u02d0 \u02c8da kavi\u02c8arne]\n\nThe pronoun 'Oni' is the masculine plural 'they', acting as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-20-slovak-0045",
-      "front": {
-        "text": "Ony id\u00fa na zmrzlina.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "They are going for ice cream.",
-        "notes": "[\u02c8\u0254ni \u02c8\u026adu\u02d0 na \u02c8zmrzl\u026ana]\n\nThe pronoun 'Ony' is the feminine or neuter plural 'they', acting as the subject of the sentence."
       },
       "presentation": "text_reading",
       "available_at": "2026-09-27T16:00:00Z",

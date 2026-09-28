@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 168,
+  "revision": 172,
   "cards": {
     "slovak_reading-2026-09-06-slovak-0001": {
       "state": "review",
@@ -543,28 +543,54 @@
     "slovak_reading-2026-09-19-slovak-0042": {
       "state": "review",
       "step": null,
-      "stability": 2.3065,
-      "difficulty": 2.118103970459016,
-      "interval_days": 2,
-      "reviews": 1,
+      "stability": 19.89210120412423,
+      "difficulty": 2.111214235785395,
+      "interval_days": 20,
+      "reviews": 2,
+      "passing_reviews": 2,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-09-28T08:18:28.549000Z",
+      "next_due_at": "2026-10-17T16:00:00Z"
+    },
+    "slovak_reading-2026-09-20-slovak-0046": {
+      "state": "review",
+      "step": null,
+      "stability": 3.319582579140426,
+      "difficulty": 6.402115069296838,
+      "interval_days": 3,
+      "reviews": 2,
       "passing_reviews": 1,
       "lapses": 0,
       "last_rating": "good",
-      "last_reviewed_at": "2026-09-21T11:18:37.162000Z",
-      "next_due_at": "2026-09-22T16:00:00Z"
+      "last_reviewed_at": "2026-09-28T08:18:41.139000Z",
+      "next_due_at": "2026-09-30T16:00:00Z"
     },
-    "slovak_reading-2026-09-20-slovak-0046": {
-      "state": "relearning",
-      "step": 0,
-      "stability": 0.212,
-      "difficulty": 6.4133,
-      "interval_days": 0,
+    "slovak_reading-2026-09-20-slovak-0045": {
+      "state": "review",
+      "step": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601056,
+      "interval_days": 1,
       "reviews": 1,
       "passing_reviews": 0,
       "lapses": 0,
-      "last_rating": "again",
-      "last_reviewed_at": "2026-09-21T11:18:45.980000Z",
-      "next_due_at": "2026-09-21T11:28:45.980000Z"
+      "last_rating": "hard",
+      "last_reviewed_at": "2026-09-28T08:15:28.274000Z",
+      "next_due_at": "2026-09-28T16:00:00Z"
+    },
+    "slovak_reading-2026-09-20-slovak-0043": {
+      "state": "review",
+      "step": null,
+      "stability": 1.2931,
+      "difficulty": 5.112170705601056,
+      "interval_days": 1,
+      "reviews": 1,
+      "passing_reviews": 0,
+      "lapses": 0,
+      "last_rating": "hard",
+      "last_reviewed_at": "2026-09-28T08:18:11.863000Z",
+      "next_due_at": "2026-09-28T16:00:00Z"
     }
   },
   "processed_events": {
@@ -1143,6 +1169,22 @@
     "640d4fa2-9ced-44d3-9818-f00b5e8055e0": {
       "processed_at": "2026-09-28T08:14:41.141628Z",
       "status": "applied"
+    },
+    "c22fc7a2-767d-456f-9a27-4d935056ecda": {
+      "processed_at": "2026-09-28T08:19:20.962649Z",
+      "status": "applied"
+    },
+    "b7fbe787-a223-4f4a-9bf1-2e09a3007353": {
+      "processed_at": "2026-09-28T08:19:20.962649Z",
+      "status": "applied"
+    },
+    "b4d989b5-2bd9-4a08-ab3d-fea9e64abef6": {
+      "processed_at": "2026-09-28T08:19:20.962649Z",
+      "status": "applied"
+    },
+    "6c82f78b-6d84-4efe-b7fd-c572f387a952": {
+      "processed_at": "2026-09-28T08:19:20.962649Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -1210,10 +1252,6 @@
         "available_at": "2026-09-27T16:00:00Z"
       },
       {
-        "card_id": "slovak_reading-2026-09-20-slovak-0046",
-        "available_at": "2026-09-27T16:00:00Z"
-      },
-      {
         "card_id": "slovak_reading-2026-09-08-slovak-0022",
         "available_at": "2026-09-27T16:00:00Z"
       },
@@ -1223,10 +1261,6 @@
       },
       {
         "card_id": "slovak_reading-2026-09-14-slovak-0038",
-        "available_at": "2026-09-27T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-19-slovak-0042",
         "available_at": "2026-09-27T16:00:00Z"
       },
       {
@@ -1254,15 +1288,7 @@
         "available_at": "2026-09-27T16:00:00Z"
       },
       {
-        "card_id": "slovak_reading-2026-09-20-slovak-0043",
-        "available_at": "2026-09-27T16:00:00Z"
-      },
-      {
         "card_id": "slovak_reading-2026-09-20-slovak-0044",
-        "available_at": "2026-09-27T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-09-20-slovak-0045",
         "available_at": "2026-09-27T16:00:00Z"
       },
       {
