@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-28",
   "batch_date": "2026-09-28",
-  "compiled_at": "2026-09-28T08:47:03.563627Z",
-  "state_revision": 191,
+  "compiled_at": "2026-09-28T08:47:34.758842Z",
+  "state_revision": 195,
   "daily_progress": {
     "total": 25,
     "new": 0,
-    "review": 6,
-    "done": 19
+    "review": 4,
+    "done": 21
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -180,141 +180,13 @@
     "c72391fb-fb62-4f1b-9e85-f456a7b70014",
     "4042f752-c315-45d3-8c73-09ad97ff8b15",
     "aa7f9d59-521d-4278-8a79-bf2be3b0c383",
-    "fbbdd1bd-7de1-46f4-b5fb-d698ffa73cc3"
+    "fbbdd1bd-7de1-46f4-b5fb-d698ffa73cc3",
+    "495c8127-5c1f-4988-88c0-e38f66a97737",
+    "23613556-a729-47d4-9229-d757a09cd66e",
+    "372ba094-9359-4fe3-a72c-4f4c5764101f",
+    "a858ebe9-fe9f-42d5-8cf5-e3cc3608560b"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-11-slovak-0036",
-      "front": {
-        "text": "Ja to viem.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I know it.",
-        "notes": "[ja]\n\nThe personal pronoun \u201cI\u201d in the nominative singular, used as the emphasized subject."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T09:09:39.380000Z",
-        "next_due_at": "2026-09-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "29d",
-        "good": "44d",
-        "easy": "76d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-10-slovak-0033",
-      "front": {
-        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
-        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.0020046200306384834,
-        "difficulty": 9.977510030454273,
-        "interval_days": 0,
-        "reviews": 9,
-        "passing_reviews": 0,
-        "lapses": 8,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-21T11:17:36.931000Z",
-        "next_due_at": "2026-09-21T11:27:36.931000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-06-slovak-0015",
-      "front": {
-        "text": "Dobr\u00fd de\u0148, ako sa m\u00e1te?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Good day, how are you?",
-        "notes": "[\u02c8d\u0254bri\u02d0 \u02c8d\u0325e\u0148]\n\nThe phrase 'Dobr\u00fd de\u0148' is a standard polite greeting meaning 'good day', used in formal or semi-formal contexts."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 13.826903694354568,
-        "difficulty": 2.111214235785395,
-        "interval_days": 14,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-10T02:44:28.770000Z",
-        "next_due_at": "2026-09-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "45d",
-        "good": "65d",
-        "easy": "110d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0024",
-      "front": {
-        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The English man Tom bought fresh bread at the market.",
-        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-28T08:44:21.842000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.009968736757839821,
-        "difficulty": 9.973500324374982,
-        "interval_days": 0,
-        "reviews": 7,
-        "passing_reviews": 0,
-        "lapses": 6,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-28T08:34:21.842000Z",
-        "next_due_at": "2026-09-28T08:44:21.842000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
     {
       "id": "slovak_reading-2026-09-08-slovak-0021",
       "front": {
@@ -373,6 +245,72 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-28T08:44:19.100000Z",
         "next_due_at": "2026-09-28T08:54:19.100000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0024",
+      "front": {
+        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The English man Tom bought fresh bread at the market.",
+        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-28T08:56:32.956000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.004792998006324255,
+        "difficulty": 9.976518106116687,
+        "interval_days": 0,
+        "reviews": 8,
+        "passing_reviews": 0,
+        "lapses": 7,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-28T08:46:32.956000Z",
+        "next_due_at": "2026-09-28T08:56:32.956000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-10-slovak-0033",
+      "front": {
+        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
+        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-28T08:56:37.562000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.0019078530111851287,
+        "difficulty": 9.97783606923895,
+        "interval_days": 0,
+        "reviews": 10,
+        "passing_reviews": 0,
+        "lapses": 9,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-28T08:46:37.562000Z",
+        "next_due_at": "2026-09-28T08:56:37.562000Z"
       },
       "schedule_previews": {
         "again": "10m",
