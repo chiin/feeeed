@@ -5,12 +5,12 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-28",
   "batch_date": "2026-09-28",
-  "compiled_at": "2026-09-28T06:26:01.551913Z",
-  "state_revision": 154,
+  "compiled_at": "2026-09-28T08:03:20.558447Z",
+  "state_revision": 155,
   "daily_progress": {
     "total": 20,
-    "new": 4,
-    "review": 16,
+    "new": 3,
+    "review": 17,
     "done": 0
   },
   "processed_event_ids": [
@@ -142,7 +142,8 @@
     "ed1e0c3d-31db-4791-bc82-d4ad5017323f",
     "388296f5-88d2-4695-94ff-19628f4964cf",
     "917ec953-aff5-4307-b5cb-96276dfa15d9",
-    "d5c7a11d-674d-473d-a17d-6fe9a9c1c474"
+    "d5c7a11d-674d-473d-a17d-6fe9a9c1c474",
+    "de346650-b2f7-48dd-8c34-14ea3277b45d"
   ],
   "cards": [
     {
@@ -239,9 +240,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "28d",
-        "good": "42d",
-        "easy": "73d"
+        "hard": "29d",
+        "good": "44d",
+        "easy": "76d"
       }
     },
     {
@@ -748,13 +749,25 @@
         "notes": "J\u012bnti\u0101n ti\u0101nq\u00ec t\u00e0i r\u00e8 le, xu\u00e9sh\u0113ng men d\u014du z\u00e0i ji\u00e0osh\u00ec l\u01d0.\n\nIn this sentence, '\u592a' is an adverb meaning 'too' or 'excessively'. It modifies the adjective '\u71b1' (hot) to indicate an excessive degree, forming the structure '\u592a...\u4e86' to express a subjective evaluation of the weather."
       },
       "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-09-28T08:08:22.207000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-28T07:58:22.207000Z",
+        "next_due_at": "2026-09-28T08:08:22.207000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
