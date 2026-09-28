@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-09-28",
   "batch_date": "2026-09-28",
-  "compiled_at": "2026-09-28T08:11:10.553509Z",
-  "state_revision": 140,
+  "compiled_at": "2026-09-28T08:11:34.069881Z",
+  "state_revision": 143,
   "source_revisions": {
     "hsk": 1838,
-    "mandarin_sentences": 157
+    "mandarin_sentences": 162
   },
   "daily_progress": {
     "total": 301,
     "new": 48,
-    "review": 227,
-    "done": 26
+    "review": 222,
+    "done": 31
   },
   "processed_event_ids": [
     "adb6eb00-ea22-45b8-9a20-ee18df112ac1",
@@ -1148,7 +1148,12 @@
     "d5c7a11d-674d-473d-a17d-6fe9a9c1c474",
     "de346650-b2f7-48dd-8c34-14ea3277b45d",
     "10c420bd-e887-4289-9851-d5588cc333d3",
-    "7a8bde3f-192c-4e59-be74-2113ae35832b"
+    "7a8bde3f-192c-4e59-be74-2113ae35832b",
+    "502b4a42-8c16-46b9-84ab-327c56663ba6",
+    "00bcbb9c-1375-445e-8438-d10fd7215ecc",
+    "c4660c35-0419-49f5-a95e-d2859b909565",
+    "5a8dee9d-0d0a-479e-a366-14a86d09cb93",
+    "a234c6e5-9a3b-4304-94e4-7064e146a90c"
   ],
   "cards": [
     {
@@ -1200,42 +1205,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-23-hsk-0037",
-      "front": {
-        "text": "\u4eca\u5929\u5929\u6c23\u592a\u71b1\u4e86\uff0c\u5b78\u751f\u5011\u90fd\u5728\u6559\u5ba4\u88e1\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The weather today is too hot, and the students are all in the classroom.",
-        "notes": "J\u012bnti\u0101n ti\u0101nq\u00ec t\u00e0i r\u00e8 le, xu\u00e9sh\u0113ng men d\u014du z\u00e0i ji\u00e0osh\u00ec l\u01d0.\n\nIn this sentence, '\u592a' is an adverb meaning 'too' or 'excessively'. It modifies the adjective '\u71b1' (hot) to indicate an excessive degree, forming the structure '\u592a...\u4e86' to express a subjective evaluation of the weather."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-28T08:08:22.207000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-28T07:58:22.207000Z",
-        "next_due_at": "2026-09-28T08:08:22.207000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "mandarin_reading-2026-09-19-hsk-0033",
@@ -1542,78 +1511,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "mandarin_reading-2026-09-15-hsk-0031",
-      "front": {
-        "text": "\u6211\u7684\u5b78\u6821\u88e1\u6c92\u6709\u684c\u5b50\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "There are no desks in my school.",
-        "notes": "W\u01d2 de xu\u00e9xi\u00e0o l\u01d0 m\u00e9iy\u01d2u zhu\u014dzi.\n\n\u6c92\u6709 (m\u00e9iy\u01d2u) \u662f\u4e00\u500b\u5426\u5b9a\u52d5\u8a5e\uff0c\u610f\u70ba\u300c\u6c92\u6709\u300d\u6216\u300c\u4e0d\u5b58\u5728\u300d\uff0c\u5728\u53e5\u4e2d\u8868\u793a\u5b78\u6821\u88e1\u6c92\u6709\u684c\u5b50\u3002"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212,
-        "difficulty": 7.604209769076838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-09-22T09:32:43.651000Z",
-        "next_due_at": "2026-09-22T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "2d",
-        "easy": "4d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "mandarin_reading-2026-09-08-hsk-0015",
-      "front": {
-        "text": "\u4f60\u60f3\u5403\u4ec0\u9ebc\uff1f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "What do you want to eat?",
-        "notes": "n\u01d0 xi\u01ceng ch\u012b sh\u00e9n me\n\n\u4ec0\u9ebc is an interrogative pronoun meaning ``what'', used to ask about an object."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T08:42:40.077000Z",
-        "next_due_at": "2026-09-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "29d",
-        "good": "44d",
-        "easy": "76d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "hsk-0205",
       "entry_type": "term",
       "front": {
@@ -1658,42 +1555,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-08-hsk-0019",
-      "front": {
-        "text": "\u6211\u6709\u4e00\u500b\u670b\u53cb\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have a friend.",
-        "notes": "w\u01d2 y\u01d2u y\u012b ge p\u00e9ng y\u01d2u\n\n\u4e00 is a numeral meaning ``one'', used here as an indefinite article before the classifier \u500b."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 13.826903694354568,
-        "difficulty": 2.111214235785395,
-        "interval_days": 14,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T08:23:01.076000Z",
-        "next_due_at": "2026-09-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "41d",
-        "good": "59d",
-        "easy": "99d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0430",
@@ -1836,42 +1697,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-13-hsk-0024",
-      "front": {
-        "text": "\u6211\u5011\u4eca\u5929\u90fd\u5728\u5b78\u6821\u5b78\u7fd2\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We are all studying at school today.",
-        "notes": "W\u01d2men j\u012bnti\u0101n d\u014du z\u00e0i xu\u00e9xi\u00e0o xu\u00e9x\u00ed.\n\nAn adverb meaning \u201call\u201d; it indicates that every member of \u201cwe\u201d is included."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-15T03:07:26.905000Z",
-        "next_due_at": "2026-09-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "29d",
-        "good": "44d",
-        "easy": "76d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0362",
