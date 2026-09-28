@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-09-28",
   "batch_date": "2026-09-28",
-  "compiled_at": "2026-09-28T08:40:22.184449Z",
-  "state_revision": 380,
+  "compiled_at": "2026-09-28T08:44:50.740942Z",
+  "state_revision": 389,
   "daily_progress": {
     "total": 96,
-    "new": 8,
-    "review": 15,
-    "done": 73
+    "new": 6,
+    "review": 8,
+    "done": 82
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -379,7 +379,16 @@
     "613833ec-c09e-4fb1-bc83-7ee80f877efd",
     "a399a08f-a241-4320-b5e7-cf8026eb0295",
     "a588beb6-5a66-4ecd-a618-79fe7b530a52",
-    "1de7bf45-a855-4ba2-88b9-0f7f39cc145b"
+    "1de7bf45-a855-4ba2-88b9-0f7f39cc145b",
+    "eff8762e-cfad-415d-b031-eef36cbfdae9",
+    "110e8d56-9ac9-4f11-b932-170a28e79e21",
+    "8a399b33-3207-4c8a-8c70-c03562feb5e4",
+    "02d5359f-a76f-4654-b5e8-a154d4e54def",
+    "feafa48d-3c00-473e-b4ee-1ee1fa03ded6",
+    "f3694c34-9055-4e90-9e8b-90a758853a6b",
+    "f4919b53-1b47-45f0-a816-1c6ab05bb97f",
+    "f30a23ea-4a5b-4fb0-b269-30ea9d2947d0",
+    "1b879cbb-9dfb-4816-813f-684e931c0e54"
   ],
   "cards": [
     {
@@ -449,39 +458,6 @@
       }
     },
     {
-      "id": "slovak-0115",
-      "entry_type": "term",
-      "front": {
-        "text": "nie dnes; ale zajtra",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "not today; but tomorrow",
-        "notes": null
-      },
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T07:54:34.651000Z",
-        "next_due_at": "2026-09-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "15d",
-        "good": "24d",
-        "easy": "43d"
-      }
-    },
-    {
       "id": "slovak-0033",
       "entry_type": "term",
       "front": {
@@ -548,72 +524,6 @@
       }
     },
     {
-      "id": "slovak-0135",
-      "entry_type": "term",
-      "front": {
-        "text": "list",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "a letter",
-        "notes": null
-      },
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-21T09:13:42.842000Z",
-        "next_due_at": "2026-09-22T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "35d"
-      }
-    },
-    {
-      "id": "slovak-0141",
-      "entry_type": "term",
-      "front": {
-        "text": "\u0161t'astie",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "luck; happiness",
-        "notes": null
-      },
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-21T09:31:52.805000Z",
-        "next_due_at": "2026-09-22T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "35d"
-      }
-    },
-    {
       "id": "slovak-0069",
       "entry_type": "sentence",
       "front": {
@@ -644,39 +554,6 @@
         "hard": "37d",
         "good": "55d",
         "easy": "93d"
-      }
-    },
-    {
-      "id": "slovak-0075",
-      "entry_type": "sentence",
-      "front": {
-        "text": "ako sa vol\u00e1?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "what's his / her name?",
-        "notes": null
-      },
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 10.964332335820698,
-        "difficulty": 2.111214235785395,
-        "interval_days": 11,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-14T11:13:32.615000Z",
-        "next_due_at": "2026-09-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "35d",
-        "good": "51d",
-        "easy": "85d"
       }
     },
     {
@@ -800,27 +677,6 @@
       }
     },
     {
-      "id": "slovak-0126",
-      "entry_type": "term",
-      "front": {
-        "text": "zle",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "badly",
-        "notes": null
-      },
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0130",
       "entry_type": "term",
       "front": {
@@ -851,27 +707,6 @@
       },
       "back": {
         "text": "thanks",
-        "notes": null
-      },
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0140",
-      "entry_type": "term",
-      "front": {
-        "text": "siln\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "strong",
         "notes": null
       },
       "available_at": "2026-09-27T16:00:00Z",
@@ -944,105 +779,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0122",
-      "entry_type": "term",
-      "front": {
-        "text": "mat' sa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to be feeling",
-        "notes": null
-      },
-      "available_at": "2026-09-28T08:30:11.379000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.7465696571925393,
-        "difficulty": 7.394502741279718,
-        "interval_days": 0,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-28T08:20:11.379000Z",
-        "next_due_at": "2026-09-28T08:30:11.379000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak-0139",
-      "entry_type": "term",
-      "front": {
-        "text": "chlap",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "bloke; guy; man",
-        "notes": null
-      },
-      "available_at": "2026-09-28T08:33:00.741000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-28T08:23:00.741000Z",
-        "next_due_at": "2026-09-28T08:33:00.741000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak-0148",
-      "entry_type": "term",
-      "front": {
-        "text": "a",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "and",
-        "notes": null
-      },
-      "available_at": "2026-09-28T08:39:42.766000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-28T08:29:42.766000Z",
-        "next_due_at": "2026-09-28T08:39:42.766000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     }
   ]
