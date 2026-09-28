@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-09-28",
   "batch_date": "2026-09-28",
-  "compiled_at": "2026-09-28T08:44:50.740942Z",
-  "state_revision": 189,
+  "compiled_at": "2026-09-28T08:45:10.935927Z",
+  "state_revision": 191,
   "daily_progress": {
     "total": 25,
     "new": 0,
-    "review": 7,
-    "done": 18
+    "review": 6,
+    "done": 19
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -178,42 +178,11 @@
     "4d5698a1-bb0f-4d3d-8497-a3f0d1eef357",
     "a8b8db6d-8ba1-41c8-a82b-28fdfcfb2ecb",
     "c72391fb-fb62-4f1b-9e85-f456a7b70014",
-    "4042f752-c315-45d3-8c73-09ad97ff8b15"
+    "4042f752-c315-45d3-8c73-09ad97ff8b15",
+    "aa7f9d59-521d-4278-8a79-bf2be3b0c383",
+    "fbbdd1bd-7de1-46f4-b5fb-d698ffa73cc3"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0020",
-      "front": {
-        "text": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak \u0160tefan opened two doors with a key.",
-        "notes": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania\n\nSlov\u00e1k is the nominative masculine singular noun denoting a person of Slovak ethnic origin, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.09775087442447408,
-        "difficulty": 9.57850426587119,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 1,
-        "lapses": 2,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T07:47:44.506000Z",
-        "next_due_at": "2026-09-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
     {
       "id": "slovak_reading-2026-09-11-slovak-0036",
       "front": {
@@ -278,39 +247,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-11-slovak-0034",
-      "front": {
-        "text": "Nemohla som to poveda\u0165 tak dobre ako ty.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I couldn't say it as well as you.",
-        "notes": "[tak \u02c8d\u0254br\u025b]\n\nPr\u00edslovcov\u00e9 spojenie \u201etak dobre\u201c znamen\u00e1 \u201etak ve\u013emi dobre\u201c; \u201etak\u201c zosil\u0148uje pr\u00edslovku \u201edobre\u201c."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-09-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.4828494480720698,
-        "difficulty": 9.564154130902157,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 2,
-        "lapses": 2,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-21T09:14:17.665000Z",
-        "next_due_at": "2026-09-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
       }
     },
     {
@@ -404,6 +340,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-28T08:38:16.556000Z",
         "next_due_at": "2026-09-28T08:48:16.556000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0020",
+      "front": {
+        "text": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak \u0160tefan opened two doors with a key.",
+        "notes": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania\n\nSlov\u00e1k is the nominative masculine singular noun denoting a person of Slovak ethnic origin, serving as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-09-28T08:54:19.100000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.07325247451272693,
+        "difficulty": 9.84668558765969,
+        "interval_days": 0,
+        "reviews": 5,
+        "passing_reviews": 1,
+        "lapses": 3,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-09-28T08:44:19.100000Z",
+        "next_due_at": "2026-09-28T08:54:19.100000Z"
       },
       "schedule_previews": {
         "again": "10m",
