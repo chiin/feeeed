@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 123,
+  "revision": 125,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -103,9 +103,9 @@
     }
   },
   "daily_batch": {
-    "id": "2026-09-30",
-    "date": "2026-09-30",
-    "released_at": "2026-09-29T20:30:45.896088Z",
+    "id": "2026-10-01",
+    "date": "2026-10-01",
+    "released_at": "2026-09-30T18:53:13.858047Z",
     "release_summary_ids": [
       "article_046_Armed_forces_and_intelligence.pdf",
       "article_072_The_New_Right.pdf",
@@ -141,61 +141,16 @@
       }
     ],
     "reminder_slots": [
-      "2026-09-30T00:00:00Z",
-      "2026-09-30T02:00:00Z",
-      "2026-09-30T04:00:00Z",
-      "2026-09-30T11:00:00Z",
-      "2026-09-30T14:00:00Z"
+      "2026-10-01T00:00:00Z",
+      "2026-10-01T01:00:00Z",
+      "2026-10-01T02:00:00Z",
+      "2026-10-01T10:00:00Z",
+      "2026-10-01T11:00:00Z"
     ],
-    "processed_reminder_slots": [
-      "2026-09-30T00:00:00Z",
-      "2026-09-30T02:00:00Z",
-      "2026-09-30T04:00:00Z",
-      "2026-09-30T11:00:00Z"
-    ]
+    "processed_reminder_slots": []
   },
-  "next_release_at": "2026-09-30T16:00:00Z",
+  "next_release_at": "2026-10-01T16:00:00Z",
   "feed_reminders": [
-    {
-      "id": "politics-pdf-reminder-20260929T010000Z",
-      "batch_date": "2026-09-29",
-      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
-      "title": "Article 046 Armed Forces And Intelligence",
-      "published_at": "2026-09-29T01:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "politics-pdf-reminder-20260929T020000Z",
-      "batch_date": "2026-09-29",
-      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
-      "title": "Article 046 Armed Forces And Intelligence",
-      "published_at": "2026-09-29T02:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "politics-pdf-reminder-20260929T040000Z",
-      "batch_date": "2026-09-29",
-      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
-      "title": "Article 046 Armed Forces And Intelligence",
-      "published_at": "2026-09-29T04:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "politics-pdf-reminder-20260929T090000Z",
-      "batch_date": "2026-09-29",
-      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
-      "title": "Article 046 Armed Forces And Intelligence",
-      "published_at": "2026-09-29T09:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "politics-pdf-reminder-20260929T130000Z",
-      "batch_date": "2026-09-29",
-      "pdf_id": "article_046_Armed_forces_and_intelligence.pdf",
-      "title": "Article 046 Armed Forces And Intelligence",
-      "published_at": "2026-09-29T13:00:00Z",
-      "remaining": 5
-    },
     {
       "id": "politics-pdf-reminder-20260930T000000Z",
       "batch_date": "2026-09-30",
