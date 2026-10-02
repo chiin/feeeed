@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 135,
+  "revision": 136,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -182,7 +182,10 @@
       "2026-10-02T10:00:00Z"
     ],
     "processed_reminder_slots": [
-      "2026-10-02T00:00:00Z"
+      "2026-10-02T00:00:00Z",
+      "2026-10-02T02:00:00Z",
+      "2026-10-02T03:00:00Z",
+      "2026-10-02T04:00:00Z"
     ]
   },
   "next_release_at": "2026-10-02T16:00:00Z",
@@ -209,6 +212,30 @@
       "pdf_id": "article_024_Market_failure.pdf",
       "title": "Article 024 Market Failure",
       "published_at": "2026-10-02T00:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261002T020000Z",
+      "batch_date": "2026-10-02",
+      "pdf_id": "article_024_Market_failure.pdf",
+      "title": "Article 024 Market Failure",
+      "published_at": "2026-10-02T02:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261002T030000Z",
+      "batch_date": "2026-10-02",
+      "pdf_id": "article_024_Market_failure.pdf",
+      "title": "Article 024 Market Failure",
+      "published_at": "2026-10-02T03:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261002T040000Z",
+      "batch_date": "2026-10-02",
+      "pdf_id": "article_024_Market_failure.pdf",
+      "title": "Article 024 Market Failure",
+      "published_at": "2026-10-02T04:00:00Z",
       "remaining": 5
     }
   ]
