@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 152,
+  "revision": 154,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -187,98 +187,54 @@
     }
   },
   "daily_batch": {
-    "id": "2026-10-03",
-    "date": "2026-10-03",
-    "released_at": "2026-10-02T20:27:11.277084Z",
+    "id": "2026-10-04",
+    "date": "2026-10-04",
+    "released_at": "2026-10-03T17:02:48.056067Z",
     "release_summary_ids": [
-      "article_024_Market_failure.pdf",
-      "article_025_Externalities.pdf",
-      "article_026_The_tragedy_of_the_commons.pdf",
-      "article_027_The_Coase_theorem.pdf",
-      "article_028_Public_goods_and_free_riding.pdf"
+      "article_029_The_second_best.pdf",
+      "article_030_Arrows_impossibility_theorem.pdf",
+      "article_031_Risk_and_uncertainty.pdf",
+      "article_032_Risk_aversion.pdf",
+      "article_033_Insurance.pdf"
     ],
-    "active_ids": [],
+    "active_ids": [
+      "article_029_The_second_best.pdf",
+      "article_030_Arrows_impossibility_theorem.pdf",
+      "article_031_Risk_and_uncertainty.pdf",
+      "article_032_Risk_aversion.pdf",
+      "article_033_Insurance.pdf"
+    ],
     "selected_ids": [
-      "article_024_Market_failure.pdf",
-      "article_025_Externalities.pdf",
-      "article_026_The_tragedy_of_the_commons.pdf",
-      "article_027_The_Coase_theorem.pdf",
-      "article_028_Public_goods_and_free_riding.pdf"
+      "article_029_The_second_best.pdf",
+      "article_030_Arrows_impossibility_theorem.pdf",
+      "article_031_Risk_and_uncertainty.pdf",
+      "article_032_Risk_aversion.pdf",
+      "article_033_Insurance.pdf"
     ],
-    "opened_ids": [
-      "article_024_Market_failure.pdf",
-      "article_025_Externalities.pdf",
-      "article_026_The_tragedy_of_the_commons.pdf",
-      "article_027_The_Coase_theorem.pdf",
-      "article_028_Public_goods_and_free_riding.pdf"
-    ],
+    "opened_ids": [],
     "segments": [
       {
         "kind": "initial",
         "ids": [
-          "article_024_Market_failure.pdf",
-          "article_025_Externalities.pdf",
-          "article_026_The_tragedy_of_the_commons.pdf",
-          "article_027_The_Coase_theorem.pdf",
-          "article_028_Public_goods_and_free_riding.pdf"
+          "article_029_The_second_best.pdf",
+          "article_030_Arrows_impossibility_theorem.pdf",
+          "article_031_Risk_and_uncertainty.pdf",
+          "article_032_Risk_aversion.pdf",
+          "article_033_Insurance.pdf"
         ]
       }
     ],
     "reminder_slots": [
-      "2026-10-03T01:00:00Z",
-      "2026-10-03T06:00:00Z",
-      "2026-10-03T12:00:00Z",
-      "2026-10-03T13:00:00Z",
-      "2026-10-03T14:00:00Z"
+      "2026-10-04T02:00:00Z",
+      "2026-10-04T05:00:00Z",
+      "2026-10-04T06:00:00Z",
+      "2026-10-04T08:00:00Z",
+      "2026-10-04T10:00:00Z"
     ],
-    "processed_reminder_slots": [
-      "2026-10-03T01:00:00Z",
-      "2026-10-03T06:00:00Z",
-      "2026-10-03T12:00:00Z"
-    ]
+    "processed_reminder_slots": []
   },
-  "next_release_at": "2026-10-03T16:00:00Z",
+  "next_release_at": "2026-10-04T16:00:00Z",
   "feed_reminders": [
-    {
-      "id": "economics-pdf-reminder-20261002T000000Z",
-      "batch_date": "2026-10-02",
-      "pdf_id": "article_024_Market_failure.pdf",
-      "title": "Article 024 Market Failure",
-      "published_at": "2026-10-02T00:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "economics-pdf-reminder-20261002T020000Z",
-      "batch_date": "2026-10-02",
-      "pdf_id": "article_024_Market_failure.pdf",
-      "title": "Article 024 Market Failure",
-      "published_at": "2026-10-02T02:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "economics-pdf-reminder-20261002T030000Z",
-      "batch_date": "2026-10-02",
-      "pdf_id": "article_024_Market_failure.pdf",
-      "title": "Article 024 Market Failure",
-      "published_at": "2026-10-02T03:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "economics-pdf-reminder-20261002T040000Z",
-      "batch_date": "2026-10-02",
-      "pdf_id": "article_024_Market_failure.pdf",
-      "title": "Article 024 Market Failure",
-      "published_at": "2026-10-02T04:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "economics-pdf-reminder-20261002T100000Z",
-      "batch_date": "2026-10-02",
-      "pdf_id": "article_024_Market_failure.pdf",
-      "title": "Article 024 Market Failure",
-      "published_at": "2026-10-02T10:00:00Z",
-      "remaining": 5
-    },
     {
       "id": "economics-pdf-reminder-20261003T010000Z",
       "batch_date": "2026-10-03",
