@@ -1782,17 +1782,17 @@
       "next_due_at": "2026-10-13T16:00:00Z"
     },
     "hsk-0138": {
-      "state": "relearning",
-      "step": 0,
+      "state": "review",
+      "step": null,
       "stability": 0.036324866450537174,
-      "difficulty": 9.96307476616858,
-      "interval_days": 0,
-      "reviews": 10,
+      "difficulty": 9.960715678363643,
+      "interval_days": 1,
+      "reviews": 11,
       "passing_reviews": 3,
       "lapses": 6,
-      "last_rating": "again",
-      "last_reviewed_at": "2026-10-03T05:38:30.686000Z",
-      "next_due_at": "2026-10-03T05:48:30.686000Z"
+      "last_rating": "hard",
+      "last_reviewed_at": "2026-10-03T09:00:00.775000Z",
+      "next_due_at": "2026-10-03T16:00:00Z"
     },
     "hsk-0139": {
       "state": "review",
@@ -6139,15 +6139,15 @@
     "hsk-0487": {
       "state": "relearning",
       "step": 0,
-      "stability": 0.005358745722998331,
-      "difficulty": 9.964319173862265,
+      "stability": 0.0026839130101213846,
+      "difficulty": 9.973500324374982,
       "interval_days": 0,
-      "reviews": 6,
+      "reviews": 7,
       "passing_reviews": 0,
-      "lapses": 5,
+      "lapses": 6,
       "last_rating": "again",
-      "last_reviewed_at": "2026-10-03T05:38:26.315000Z",
-      "next_due_at": "2026-10-03T05:48:26.315000Z"
+      "last_reviewed_at": "2026-10-03T08:59:51.991000Z",
+      "next_due_at": "2026-10-03T09:09:51.991000Z"
     },
     "hsk-0494": {
       "state": "review",
@@ -6373,15 +6373,15 @@
     "hsk-0528": {
       "state": "relearning",
       "step": 0,
-      "stability": 0.08335671711031604,
-      "difficulty": 8.806304468856837,
+      "stability": 0.03485140985964798,
+      "difficulty": 9.592868765339693,
       "interval_days": 0,
-      "reviews": 2,
+      "reviews": 3,
       "passing_reviews": 0,
-      "lapses": 1,
+      "lapses": 2,
       "last_rating": "again",
-      "last_reviewed_at": "2026-10-03T05:32:37.159000Z",
-      "next_due_at": "2026-10-03T05:42:37.159000Z"
+      "last_reviewed_at": "2026-10-03T08:59:55.966000Z",
+      "next_due_at": "2026-10-03T09:09:55.966000Z"
     },
     "hsk-0512": {
       "state": "review",
@@ -6412,15 +6412,15 @@
     "hsk-0443": {
       "state": "relearning",
       "step": 0,
-      "stability": 0.212,
-      "difficulty": 6.4133,
+      "stability": 0.08335671711031604,
+      "difficulty": 8.806304468856837,
       "interval_days": 0,
-      "reviews": 1,
+      "reviews": 2,
       "passing_reviews": 0,
-      "lapses": 0,
+      "lapses": 1,
       "last_rating": "again",
-      "last_reviewed_at": "2026-10-03T05:39:08.171000Z",
-      "next_due_at": "2026-10-03T05:49:08.171000Z"
+      "last_reviewed_at": "2026-10-03T09:00:04.516000Z",
+      "next_due_at": "2026-10-03T09:10:04.516000Z"
     },
     "hsk-0509": {
       "state": "relearning",
@@ -6442,24 +6442,8 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 2032,
+  "revision": 2036,
   "processed_events": {
-    "b10e4f52-3eb7-403e-ba1a-14ae8706eb6e": {
-      "processed_at": "2026-09-14T15:37:46.325412Z",
-      "status": "applied"
-    },
-    "f9332195-8f5e-44f2-8414-4f692ac6d480": {
-      "processed_at": "2026-09-14T15:37:46.325412Z",
-      "status": "applied"
-    },
-    "cf395f70-3eab-4a9d-a741-8d8e63ac892f": {
-      "processed_at": "2026-09-14T15:37:46.325412Z",
-      "status": "applied"
-    },
-    "bcecad78-1999-4db7-9049-48b7e71fa2a7": {
-      "processed_at": "2026-09-14T15:39:04.374559Z",
-      "status": "applied"
-    },
     "eb591a0b-eb3d-4647-ac02-5a5bba8ed423": {
       "processed_at": "2026-09-14T15:39:04.374559Z",
       "status": "applied"
@@ -10443,6 +10427,22 @@
     "204e63a5-fbd4-42f1-9cb7-5c068b64b5e3": {
       "processed_at": "2026-10-03T05:43:45.741783Z",
       "status": "applied"
+    },
+    "1c73fdf8-9ba2-4e46-988c-0e06f67908a8": {
+      "processed_at": "2026-10-03T09:00:28.062199Z",
+      "status": "applied"
+    },
+    "d24e6d76-7b14-4c44-b3a2-fdb2ae67e99f": {
+      "processed_at": "2026-10-03T09:00:28.062199Z",
+      "status": "applied"
+    },
+    "b5a243f3-4b55-44db-9bf6-8ac358ffdfdb": {
+      "processed_at": "2026-10-03T09:00:28.062199Z",
+      "status": "applied"
+    },
+    "781eb9f9-c31e-4cdf-909c-1ea2fbeb823c": {
+      "processed_at": "2026-10-03T09:00:28.062199Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -11704,22 +11704,6 @@
         "available_at": "2026-10-02T16:00:00Z"
       },
       {
-        "card_id": "hsk-0528",
-        "available_at": "2026-10-03T05:42:37.159000Z"
-      },
-      {
-        "card_id": "hsk-0487",
-        "available_at": "2026-10-03T05:48:26.315000Z"
-      },
-      {
-        "card_id": "hsk-0138",
-        "available_at": "2026-10-03T05:48:30.686000Z"
-      },
-      {
-        "card_id": "hsk-0443",
-        "available_at": "2026-10-03T05:49:08.171000Z"
-      },
-      {
         "card_id": "hsk-0436",
         "available_at": "2026-10-03T05:49:13.431000Z"
       },
@@ -11738,6 +11722,18 @@
       {
         "card_id": "hsk-0509",
         "available_at": "2026-10-03T05:49:55.038000Z"
+      },
+      {
+        "card_id": "hsk-0487",
+        "available_at": "2026-10-03T09:09:51.991000Z"
+      },
+      {
+        "card_id": "hsk-0528",
+        "available_at": "2026-10-03T09:09:55.966000Z"
+      },
+      {
+        "card_id": "hsk-0443",
+        "available_at": "2026-10-03T09:10:04.516000Z"
       }
     ]
   },
