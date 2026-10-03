@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 150,
+  "revision": 151,
   "vocabulary": {
     "hsk-0151": {
       "status": "active_anki",
@@ -328,9 +328,10 @@
     },
     "hsk-0036": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-09-22T09:14:59.777194Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-10-03T05:01:40.239000Z"
     },
     "hsk-0037": {
       "status": "sentence_reinforcement",
@@ -922,6 +923,10 @@
     },
     "0d5b257c-3f17-48eb-87f4-1d27a33d2936": {
       "processed_at": "2026-09-28T09:12:29.100084Z",
+      "status": "applied"
+    },
+    "2fb5f50d-19ef-403d-8d53-55ecf5841e62": {
+      "processed_at": "2026-10-03T05:02:38.653596Z",
       "status": "applied"
     }
   },
