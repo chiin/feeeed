@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_with_replacement",
-  "revision": 141,
+  "revision": 142,
   "completed_ids": [],
   "completion_counts": {
     "article_003_Mesopotamia_and_Persia.pdf": 1,
@@ -96,7 +96,9 @@
       "2026-10-05T11:00:00Z"
     ],
     "processed_reminder_slots": [
-      "2026-10-05T01:00:00Z"
+      "2026-10-05T01:00:00Z",
+      "2026-10-05T03:00:00Z",
+      "2026-10-05T08:00:00Z"
     ]
   },
   "next_release_at": "2026-10-05T16:00:00Z",
@@ -147,6 +149,22 @@
       "pdf_id": "article_158_Le_Corbusier.pdf",
       "title": "Article 158 Le Corbusier",
       "published_at": "2026-10-05T01:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "architecture-pdf-reminder-20261005T030000Z",
+      "batch_date": "2026-10-05",
+      "pdf_id": "article_158_Le_Corbusier.pdf",
+      "title": "Article 158 Le Corbusier",
+      "published_at": "2026-10-05T03:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "architecture-pdf-reminder-20261005T080000Z",
+      "batch_date": "2026-10-05",
+      "pdf_id": "article_158_Le_Corbusier.pdf",
+      "title": "Article 158 Le Corbusier",
+      "published_at": "2026-10-05T08:00:00Z",
       "remaining": 5
     }
   ]
