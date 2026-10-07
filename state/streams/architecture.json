@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_with_replacement",
-  "revision": 148,
+  "revision": 149,
   "completed_ids": [],
   "completion_counts": {
     "article_003_Mesopotamia_and_Persia.pdf": 1,
@@ -95,7 +95,13 @@
       "2026-10-07T12:00:00Z",
       "2026-10-07T14:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-10-07T08:00:00Z",
+      "2026-10-07T09:00:00Z",
+      "2026-10-07T11:00:00Z",
+      "2026-10-07T12:00:00Z",
+      "2026-10-07T14:00:00Z"
+    ]
   },
   "next_release_at": "2026-10-07T16:00:00Z",
   "feed_reminders": [
@@ -137,6 +143,46 @@
       "pdf_id": "article_158_Le_Corbusier.pdf",
       "title": "Article 158 Le Corbusier",
       "published_at": "2026-10-06T14:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "architecture-pdf-reminder-20261007T080000Z",
+      "batch_date": "2026-10-07",
+      "pdf_id": "article_158_Le_Corbusier.pdf",
+      "title": "Article 158 Le Corbusier",
+      "published_at": "2026-10-07T08:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "architecture-pdf-reminder-20261007T090000Z",
+      "batch_date": "2026-10-07",
+      "pdf_id": "article_158_Le_Corbusier.pdf",
+      "title": "Article 158 Le Corbusier",
+      "published_at": "2026-10-07T09:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "architecture-pdf-reminder-20261007T110000Z",
+      "batch_date": "2026-10-07",
+      "pdf_id": "article_158_Le_Corbusier.pdf",
+      "title": "Article 158 Le Corbusier",
+      "published_at": "2026-10-07T11:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "architecture-pdf-reminder-20261007T120000Z",
+      "batch_date": "2026-10-07",
+      "pdf_id": "article_158_Le_Corbusier.pdf",
+      "title": "Article 158 Le Corbusier",
+      "published_at": "2026-10-07T12:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "architecture-pdf-reminder-20261007T140000Z",
+      "batch_date": "2026-10-07",
+      "pdf_id": "article_158_Le_Corbusier.pdf",
+      "title": "Article 158 Le Corbusier",
+      "published_at": "2026-10-07T14:00:00Z",
       "remaining": 5
     }
   ]
