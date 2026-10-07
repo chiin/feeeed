@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 165,
+  "revision": 166,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -231,7 +231,11 @@
       "2026-10-07T07:00:00Z",
       "2026-10-07T10:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-10-07T03:00:00Z",
+      "2026-10-07T05:00:00Z",
+      "2026-10-07T06:00:00Z"
+    ]
   },
   "next_release_at": "2026-10-07T16:00:00Z",
   "feed_reminders": [
@@ -273,6 +277,30 @@
       "pdf_id": "article_029_The_second_best.pdf",
       "title": "Article 029 The Second Best",
       "published_at": "2026-10-06T13:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261007T030000Z",
+      "batch_date": "2026-10-07",
+      "pdf_id": "article_029_The_second_best.pdf",
+      "title": "Article 029 The Second Best",
+      "published_at": "2026-10-07T03:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261007T050000Z",
+      "batch_date": "2026-10-07",
+      "pdf_id": "article_029_The_second_best.pdf",
+      "title": "Article 029 The Second Best",
+      "published_at": "2026-10-07T05:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261007T060000Z",
+      "batch_date": "2026-10-07",
+      "pdf_id": "article_029_The_second_best.pdf",
+      "title": "Article 029 The Second Best",
+      "published_at": "2026-10-07T06:00:00Z",
       "remaining": 5
     }
   ]
