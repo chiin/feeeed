@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_with_replacement",
-  "revision": 158,
+  "revision": 159,
   "completed_ids": [],
   "completion_counts": {
     "article_002_Stone_Age_sculpture.pdf": 1
@@ -74,7 +74,9 @@
     "processed_reminder_slots": [
       "2026-10-13T03:00:00Z",
       "2026-10-13T04:00:00Z",
-      "2026-10-13T06:00:00Z"
+      "2026-10-13T06:00:00Z",
+      "2026-10-13T09:00:00Z",
+      "2026-10-13T10:00:00Z"
     ]
   },
   "next_release_at": "2026-10-13T16:00:00Z",
@@ -141,6 +143,22 @@
       "pdf_id": "article_003_Stone_Age_painting.pdf",
       "title": "Article 003 Stone Age Painting",
       "published_at": "2026-10-13T06:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "art_history-pdf-reminder-20261013T090000Z",
+      "batch_date": "2026-10-13",
+      "pdf_id": "article_003_Stone_Age_painting.pdf",
+      "title": "Article 003 Stone Age Painting",
+      "published_at": "2026-10-13T09:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "art_history-pdf-reminder-20261013T100000Z",
+      "batch_date": "2026-10-13",
+      "pdf_id": "article_003_Stone_Age_painting.pdf",
+      "title": "Article 003 Stone Age Painting",
+      "published_at": "2026-10-13T10:00:00Z",
       "remaining": 5
     }
   ]
