@@ -5,16 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-10-15",
   "batch_date": "2026-10-15",
-  "compiled_at": "2026-10-14T23:02:35.535929Z",
-  "state_revision": 2059,
+  "compiled_at": "2026-10-14T23:11:28.122324Z",
+  "state_revision": 2060,
   "daily_progress": {
     "total": 385,
     "new": 50,
-    "review": 335,
-    "done": 0
+    "review": 334,
+    "done": 1
   },
   "processed_event_ids": [
-    "e5ee0f92-1761-4601-8964-75de217345f8",
     "cfde2a7e-f7fb-4e5c-bffe-36d2b9103634",
     "3923e2ad-c3ae-4885-8ca1-d95de939fdf6",
     "dc141034-db66-433c-977a-08cd9b348626",
@@ -1013,7 +1012,8 @@
     "27e547e4-ca20-4a66-9700-ced974dc10c7",
     "b3dbc99e-79ae-4938-924a-6890fe8bec48",
     "8d6d8ead-e84d-43ce-b7af-2be2b46454eb",
-    "fe7044f7-0fef-456d-8e48-e9f573bb685f"
+    "fe7044f7-0fef-456d-8e48-e9f573bb685f",
+    "47b94723-a58d-442d-b0f3-ee60b7aca6ab"
   ],
   "cards": [
     {
@@ -3896,45 +3896,6 @@
         "hard": "20d",
         "good": "29d",
         "easy": "49d"
-      }
-    },
-    {
-      "id": "hsk-0203",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5c31",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ji\u00f9 - just; then",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u5c31",
-          "url": "https://www.dong-chinese.com/wiki/%E5%B0%B1"
-        }
-      ],
-      "available_at": "2026-10-14T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.9896576236368486,
-        "difficulty": 9.506896948946098,
-        "interval_days": 3,
-        "reviews": 9,
-        "passing_reviews": 6,
-        "lapses": 2,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-21T07:25:38.219000Z",
-        "next_due_at": "2026-09-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "7d",
-        "good": "9d",
-        "easy": "14d"
       }
     },
     {
