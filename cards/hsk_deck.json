@@ -5,8 +5,8 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-10-15",
   "batch_date": "2026-10-15",
-  "compiled_at": "2026-10-14T23:55:32.084927Z",
-  "state_revision": 2093,
+  "compiled_at": "2026-10-15T00:13:36.356289Z",
+  "state_revision": 2094,
   "daily_progress": {
     "total": 385,
     "new": 49,
@@ -14,7 +14,6 @@
     "done": 25
   },
   "processed_event_ids": [
-    "5dc781b8-493b-451a-93e4-0f5220145ebb",
     "891a9286-01d2-411b-a907-45c1f79c4a56",
     "c2ef17ed-ce44-4638-9798-46ceb4265ee1",
     "7d6f92df-42f1-4b6a-825b-ee9f89b09605",
@@ -1013,7 +1012,8 @@
     "5115cfa1-2e39-42ff-a71c-c992ec05e7b1",
     "cdea6032-97e2-44e6-aab7-288e18675aac",
     "ee40e5ba-26e2-4922-b095-20eac9cb63e8",
-    "03152fff-144b-4147-bfb1-92235d812a61"
+    "03152fff-144b-4147-bfb1-92235d812a61",
+    "7ac4424d-d596-478b-81e3-6e5863317081"
   ],
   "cards": [
     {
@@ -15343,45 +15343,6 @@
       }
     },
     {
-      "id": "hsk-0424",
-      "entry_type": "term",
-      "front": {
-        "text": "\u501f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ji\u00e8 - to borrow; lend",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u501f",
-          "url": "https://www.dong-chinese.com/wiki/%E5%80%9F"
-        }
-      ],
-      "available_at": "2026-10-14T23:52:44.910000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.0013485613502637322,
-        "difficulty": 9.975464453390597,
-        "interval_days": 0,
-        "reviews": 12,
-        "passing_reviews": 1,
-        "lapses": 9,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-10-14T23:42:44.910000Z",
-        "next_due_at": "2026-10-14T23:52:44.910000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "hsk-0164",
       "entry_type": "term",
       "front": {
@@ -15418,6 +15379,45 @@
         "hard": "1d",
         "good": "2d",
         "easy": "3d"
+      }
+    },
+    {
+      "id": "hsk-0424",
+      "entry_type": "term",
+      "front": {
+        "text": "\u501f",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "ji\u00e8 - to borrow; lend",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u501f",
+          "url": "https://www.dong-chinese.com/wiki/%E5%80%9F"
+        }
+      ],
+      "available_at": "2026-10-15T00:22:41.394000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.001,
+        "difficulty": 9.977163701968044,
+        "interval_days": 0,
+        "reviews": 13,
+        "passing_reviews": 1,
+        "lapses": 10,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-10-15T00:12:41.394000Z",
+        "next_due_at": "2026-10-15T00:22:41.394000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
