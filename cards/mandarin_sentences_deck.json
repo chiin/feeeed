@@ -5,12 +5,12 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-10-16",
   "batch_date": "2026-10-16",
-  "compiled_at": "2026-10-16T00:44:50.265145Z",
-  "state_revision": 194,
+  "compiled_at": "2026-10-16T00:45:13.903483Z",
+  "state_revision": 195,
   "daily_progress": {
     "total": 25,
-    "new": 8,
-    "review": 15,
+    "new": 7,
+    "review": 16,
     "done": 2
   },
   "processed_event_ids": [
@@ -164,7 +164,8 @@
     "bc155297-9082-49c6-9546-89ca48495d6b",
     "ee62bcb5-9a7d-45ff-ae7d-5de795e3ea2f",
     "6f6ab5c3-540c-4c9e-a6c0-2c7194b3b70f",
-    "97fc29ef-2569-46b5-a756-008552148d2a"
+    "97fc29ef-2569-46b5-a756-008552148d2a",
+    "3c22a811-0b32-4946-bcbe-b28c36c524e8"
   ],
   "cards": [
     {
@@ -684,27 +685,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-09-28-hsk-0038",
-      "front": {
-        "text": "\u66f8\u5728\u623f\u9593\u88e1\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The book is inside the room.",
-        "notes": "Sh\u016b z\u00e0i f\u00e1ngji\u0101n l\u01d0.\n\n\u88e1 (l\u01d0) indicates interior location; here it follows the noun \u623f\u9593 to form the location phrase \u2018in the room\u2019."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-10-15T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-09-29-hsk-0039",
       "front": {
         "text": "\u8acb\u4f60\u597d\u597d\u807d\u8001\u5e2b\u8aaa\u3002",
@@ -828,6 +808,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-09-28-hsk-0038",
+      "front": {
+        "text": "\u66f8\u5728\u623f\u9593\u88e1\u3002",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The book is inside the room.",
+        "notes": "Sh\u016b z\u00e0i f\u00e1ngji\u0101n l\u01d0.\n\n\u88e1 (l\u01d0) indicates interior location; here it follows the noun \u623f\u9593 to form the location phrase \u2018in the room\u2019."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-10-16T00:54:23.415000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-10-16T00:44:23.415000Z",
+        "next_due_at": "2026-10-16T00:54:23.415000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
