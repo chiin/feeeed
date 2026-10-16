@@ -5,18 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-10-16",
   "batch_date": "2026-10-16",
-  "compiled_at": "2026-10-16T00:38:01.597559Z",
-  "state_revision": 2114,
+  "compiled_at": "2026-10-16T00:44:50.265145Z",
+  "state_revision": 2117,
   "daily_progress": {
     "total": 372,
     "new": 49,
-    "review": 311,
-    "done": 12
+    "review": 308,
+    "done": 15
   },
   "processed_event_ids": [
-    "db4d7aa3-2d28-4944-9ec8-a0b08484583f",
-    "b5b8d809-15b6-45db-87b4-1b5b4c6985d7",
-    "5667fdd8-09ed-40c9-9b64-8f5e9af064f9",
     "1c684880-50a4-4eb4-9926-6bc636c58f48",
     "e2af5ea9-ecd5-4f93-8f0e-604d6ad2a57a",
     "f1ac7c75-742f-4d57-849a-276e7b76dc65",
@@ -1013,7 +1010,10 @@
     "ae3892b6-05b5-4cbd-b589-27f5c793836d",
     "670bed64-5903-4b93-a9c2-7a4ee5d4e626",
     "7d45a24b-4cc2-4696-bea1-4c987e60cdb5",
-    "81a79137-6c5b-4453-9a7d-38e54100cd03"
+    "81a79137-6c5b-4453-9a7d-38e54100cd03",
+    "4efa2146-1c92-4863-935e-5add9b50984e",
+    "89700a4f-35ad-45c8-b7bd-31710fe70f77",
+    "15fc3836-1dc5-4cd8-95b7-b838f2a871f1"
   ],
   "cards": [
     {
@@ -13740,45 +13740,6 @@
       }
     },
     {
-      "id": "hsk-0446",
-      "entry_type": "term",
-      "front": {
-        "text": "\u81c9",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "li\u01cen - face",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u81c9",
-          "url": "https://www.dong-chinese.com/wiki/%E8%87%89"
-        }
-      ],
-      "available_at": "2026-10-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.22503852632421673,
-        "difficulty": 9.857283704335483,
-        "interval_days": 1,
-        "reviews": 7,
-        "passing_reviews": 2,
-        "lapses": 3,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-10-14T23:17:31.869000Z",
-        "next_due_at": "2026-10-15T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "hsk-0447",
       "entry_type": "term",
       "front": {
@@ -15340,92 +15301,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0524",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5716\u66f8\u9928",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "t\u00fash\u016bgu\u01cen - library",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u5716",
-          "url": "https://www.dong-chinese.com/wiki/%E5%9C%96"
-        },
-        {
-          "character": "\u66f8",
-          "url": "https://www.dong-chinese.com/wiki/%E6%9B%B8"
-        },
-        {
-          "character": "\u9928",
-          "url": "https://www.dong-chinese.com/wiki/%E9%A4%A8"
-        }
-      ],
-      "available_at": "2026-10-16T00:44:08.158000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-10-16T00:34:08.158000Z",
-        "next_due_at": "2026-10-16T00:44:08.158000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0284",
-      "entry_type": "term",
-      "front": {
-        "text": "\u9060",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "yu\u01cen - far",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u9060",
-          "url": "https://www.dong-chinese.com/wiki/%E9%81%A0"
-        }
-      ],
-      "available_at": "2026-10-16T00:44:23.019000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.01267465324138111,
-        "difficulty": 9.972914915800443,
-        "interval_days": 0,
-        "reviews": 10,
-        "passing_reviews": 3,
-        "lapses": 6,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-10-16T00:34:23.019000Z",
-        "next_due_at": "2026-10-16T00:44:23.019000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     }
   ]
