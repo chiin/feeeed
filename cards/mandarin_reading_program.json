@@ -4,21 +4,19 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-10-18",
   "batch_date": "2026-10-18",
-  "compiled_at": "2026-10-18T07:22:17.038087Z",
+  "compiled_at": "2026-10-18T07:22:36.373870Z",
   "state_revision": 181,
   "source_revisions": {
-    "hsk": 2174,
+    "hsk": 2176,
     "mandarin_sentences": 199
   },
   "daily_progress": {
     "total": 398,
     "new": 54,
-    "review": 323,
-    "done": 21
+    "review": 322,
+    "done": 22
   },
   "processed_event_ids": [
-    "013a9c87-6c5c-4485-a9eb-09f0867af0ad",
-    "ff5a072a-3cf3-45af-932b-d7bb3c42607e",
     "97f25a18-e108-46fe-ad1f-fb06bc65abd4",
     "2c9e8235-e054-4d4c-a9fa-555e619a3b66",
     "783958bd-6a3a-4e96-9e5f-d7f099ef0101",
@@ -1017,6 +1015,8 @@
     "afd3bcee-6d07-4a3d-bd95-1c83cf32f81d",
     "06220c76-46d3-4d32-8dea-cd6f771122ac",
     "6dd249bb-a8fd-41c1-932a-008a3052dd76",
+    "eff5bd2a-5688-420d-b077-151a91346c49",
+    "aeddf218-343f-44ce-a3b9-388497436f88",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -1241,71 +1241,25 @@
           "url": "https://www.dong-chinese.com/wiki/%E5%AD%90"
         }
       ],
-      "available_at": "2026-10-17T16:00:00Z",
+      "available_at": "2026-10-18T07:31:56.020000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.48859164476806105,
-        "difficulty": 9.326705856997966,
-        "interval_days": 1,
-        "reviews": 4,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.2906015767650816,
+        "difficulty": 9.763921162892242,
+        "interval_days": 0,
+        "reviews": 5,
         "passing_reviews": 1,
-        "lapses": 2,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-09-28T09:11:02.426000Z",
-        "next_due_at": "2026-09-28T16:00:00Z"
+        "lapses": 3,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-10-18T07:21:56.020000Z",
+        "next_due_at": "2026-10-18T07:31:56.020000Z"
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0240",
-      "entry_type": "term",
-      "front": {
-        "text": "\u751f\u75c5",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sh\u0113ngb\u00ecng - get sick",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u751f",
-          "url": "https://www.dong-chinese.com/wiki/%E7%94%9F"
-        },
-        {
-          "character": "\u75c5",
-          "url": "https://www.dong-chinese.com/wiki/%E7%97%85"
-        }
-      ],
-      "available_at": "2026-10-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 3.595372386841661,
-        "difficulty": 8.752074141481629,
-        "interval_days": 4,
-        "reviews": 6,
-        "passing_reviews": 4,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T06:59:58.852000Z",
-        "next_due_at": "2026-09-22T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "10d",
-        "good": "14d",
-        "easy": "24d"
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
