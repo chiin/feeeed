@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-10-19",
   "batch_date": "2026-10-19",
-  "compiled_at": "2026-10-19T05:51:26.175847Z",
-  "state_revision": 182,
+  "compiled_at": "2026-10-19T07:38:54.281725Z",
+  "state_revision": 184,
   "source_revisions": {
     "hsk": 2202,
-    "mandarin_sentences": 200
+    "mandarin_sentences": 202
   },
   "daily_progress": {
     "total": 387,
     "new": 58,
-    "review": 329,
-    "done": 0
+    "review": 327,
+    "done": 2
   },
   "processed_event_ids": [
     "e9912d3d-d33b-44c5-9f60-d0cf47817596",
@@ -1170,7 +1170,9 @@
     "97fc29ef-2569-46b5-a756-008552148d2a",
     "3c22a811-0b32-4946-bcbe-b28c36c524e8",
     "03c5312d-6810-4d30-b340-65557a9502e6",
-    "0f42ad74-3fc4-4f91-a8d7-a6c96498fc2d"
+    "0f42ad74-3fc4-4f91-a8d7-a6c96498fc2d",
+    "7314acc0-8d6d-481c-bd7f-d780a9da0116",
+    "826575cf-29e0-4ce7-9765-74197e91632d"
   ],
   "cards": [
     {
@@ -1218,42 +1220,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-23-hsk-0037",
-      "front": {
-        "text": "\u4eca\u5929\u5929\u6c23\u592a\u71b1\u4e86\uff0c\u5b78\u751f\u5011\u90fd\u5728\u6559\u5ba4\u88e1\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The weather today is too hot, and the students are all in the classroom.",
-        "notes": "J\u012bnti\u0101n ti\u0101nq\u00ec t\u00e0i r\u00e8 le, xu\u00e9sh\u0113ng men d\u014du z\u00e0i ji\u00e0osh\u00ec l\u01d0.\n\nIn this sentence, '\u592a' is an adverb meaning 'too' or 'excessively'. It modifies the adjective '\u71b1' (hot) to indicate an excessive degree, forming the structure '\u592a...\u4e86' to express a subjective evaluation of the weather."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-10-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.271602520166097,
-        "difficulty": 7.5918339286046,
-        "interval_days": 2,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-10-03T05:15:02.351000Z",
-        "next_due_at": "2026-10-04T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "13d",
-        "easy": "22d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0390",
@@ -1346,42 +1312,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-10-04-hsk-0044",
-      "front": {
-        "text": "\u6211\u5011\u8b1d\u8b1d\u5927\u5bb6\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We thank everyone.",
-        "notes": "w\u01d2 men xi\u00e8 xie d\u00e0 ji\u0101.\n\nHere \u8b1d\u8b1d is a verb meaning \u201cto thank.\u201d It expresses gratitude and takes \u5927\u5bb6 as its object."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-10-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-10-16T00:34:04.325000Z",
-        "next_due_at": "2026-10-17T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0513",
@@ -1884,8 +1814,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "34d",
-        "good": "48d",
-        "easy": "79d"
+        "good": "49d",
+        "easy": "80d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -2064,8 +1994,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "52d",
-        "good": "78d",
-        "easy": "137d"
+        "good": "80d",
+        "easy": "140d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -2667,7 +2597,7 @@
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "1d"
+        "easy": "3d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -3863,9 +3793,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "63d",
-        "good": "91d",
-        "easy": "154d"
+        "hard": "64d",
+        "good": "93d",
+        "easy": "157d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -4171,7 +4101,7 @@
         "again": "10m",
         "hard": "29d",
         "good": "42d",
-        "easy": "70d"
+        "easy": "71d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -4377,9 +4307,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "82d",
-        "good": "117d",
-        "easy": "195d"
+        "hard": "83d",
+        "good": "119d",
+        "easy": "199d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -5621,9 +5551,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "38d",
-        "good": "50d",
-        "easy": "76d"
+        "hard": "39d",
+        "good": "51d",
+        "easy": "77d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -5893,9 +5823,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "69d",
-        "good": "102d",
-        "easy": "174d"
+        "hard": "70d",
+        "good": "103d",
+        "easy": "178d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -7206,7 +7136,7 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "14d",
-        "good": "21d",
+        "good": "22d",
         "easy": "38d"
       },
       "deck_id": "hsk",
@@ -7251,8 +7181,8 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "1d",
+        "hard": "2d",
+        "good": "2d",
         "easy": "2d"
       },
       "deck_id": "hsk",
@@ -7848,8 +7778,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
+        "good": "2d",
+        "easy": "3d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -7977,9 +7907,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "55d",
-        "good": "83d",
-        "easy": "144d"
+        "hard": "56d",
+        "good": "84d",
+        "easy": "146d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -8061,7 +7991,7 @@
         "again": "10m",
         "hard": "30d",
         "good": "43d",
-        "easy": "72d"
+        "easy": "73d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -8143,9 +8073,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "60d",
-        "good": "88d",
-        "easy": "150d"
+        "hard": "61d",
+        "good": "90d",
+        "easy": "153d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -8642,7 +8572,7 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "13d",
-        "good": "18d",
+        "good": "19d",
         "easy": "30d"
       },
       "deck_id": "hsk",
@@ -8683,9 +8613,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "53d",
-        "good": "81d",
-        "easy": "142d"
+        "hard": "54d",
+        "good": "82d",
+        "easy": "144d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -9499,9 +9429,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
+        "hard": "3d",
+        "good": "5d",
+        "easy": "7d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -9843,7 +9773,7 @@
         "again": "10m",
         "hard": "17d",
         "good": "26d",
-        "easy": "45d"
+        "easy": "46d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -9980,7 +9910,7 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "14d",
-        "good": "21d",
+        "good": "22d",
         "easy": "38d"
       },
       "deck_id": "hsk",
@@ -10136,8 +10066,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "44d",
-        "good": "68d",
-        "easy": "121d"
+        "good": "69d",
+        "easy": "123d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -11511,9 +11441,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "59d",
-        "good": "88d",
-        "easy": "151d"
+        "hard": "60d",
+        "good": "90d",
+        "easy": "154d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -11932,8 +11862,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "17d",
-        "good": "25d",
-        "easy": "44d"
+        "good": "26d",
+        "easy": "45d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -12193,7 +12123,7 @@
         "again": "10m",
         "hard": "17d",
         "good": "26d",
-        "easy": "45d"
+        "easy": "46d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -12337,9 +12267,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "63d",
-        "good": "91d",
-        "easy": "154d"
+        "hard": "64d",
+        "good": "93d",
+        "easy": "157d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -12729,9 +12659,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "69d",
-        "good": "102d",
-        "easy": "174d"
+        "hard": "70d",
+        "good": "103d",
+        "easy": "178d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -13025,9 +12955,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
+        "hard": "2d",
+        "good": "3d",
+        "easy": "4d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -13097,9 +13027,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "62d",
-        "good": "92d",
-        "easy": "156d"
+        "hard": "63d",
+        "good": "93d",
+        "easy": "159d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -13399,9 +13329,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
+        "hard": "3d",
+        "good": "5d",
+        "easy": "7d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -13507,9 +13437,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "69d",
-        "good": "102d",
-        "easy": "174d"
+        "hard": "70d",
+        "good": "103d",
+        "easy": "178d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -13923,7 +13853,7 @@
         "again": "10m",
         "hard": "26d",
         "good": "39d",
-        "easy": "68d"
+        "easy": "69d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -15070,7 +15000,7 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "16d",
-        "good": "23d",
+        "good": "24d",
         "easy": "40d"
       },
       "deck_id": "hsk",
@@ -15211,9 +15141,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
+        "hard": "3d",
+        "good": "5d",
+        "easy": "7d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -15563,9 +15493,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "45d",
-        "good": "64d",
-        "easy": "105d"
+        "hard": "46d",
+        "good": "65d",
+        "easy": "107d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -15606,8 +15536,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "44d",
-        "good": "68d",
-        "easy": "121d"
+        "good": "69d",
+        "easy": "123d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -15699,7 +15629,7 @@
         "again": "10m",
         "hard": "26d",
         "good": "37d",
-        "easy": "59d"
+        "easy": "60d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -16191,9 +16121,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "62d",
-        "good": "92d",
-        "easy": "156d"
+        "hard": "63d",
+        "good": "93d",
+        "easy": "159d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -16459,9 +16389,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
+        "hard": "3d",
+        "good": "5d",
+        "easy": "7d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -16555,9 +16485,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "59d",
-        "good": "88d",
-        "easy": "151d"
+        "hard": "60d",
+        "good": "90d",
+        "easy": "154d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -16942,8 +16872,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "46d",
-        "good": "64d",
-        "easy": "106d"
+        "good": "65d",
+        "easy": "108d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -17121,9 +17051,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "59d",
-        "good": "88d",
-        "easy": "151d"
+        "hard": "60d",
+        "good": "90d",
+        "easy": "154d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -17480,8 +17410,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "58d",
-        "good": "85d",
-        "easy": "145d"
+        "good": "86d",
+        "easy": "148d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -17563,9 +17493,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "59d",
-        "good": "88d",
-        "easy": "151d"
+        "hard": "60d",
+        "good": "90d",
+        "easy": "154d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
