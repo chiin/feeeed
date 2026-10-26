@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 253,
+  "revision": 254,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -250,7 +250,9 @@
       "2026-10-26T12:00:00Z"
     ],
     "processed_reminder_slots": [
-      "2026-10-26T00:00:00Z"
+      "2026-10-26T00:00:00Z",
+      "2026-10-26T04:00:00Z",
+      "2026-10-26T09:00:00Z"
     ]
   },
   "next_release_at": "2026-10-26T16:00:00Z",
@@ -301,6 +303,22 @@
       "pdf_id": "article_030_Arrows_impossibility_theorem.pdf",
       "title": "Article 030 Arrows Impossibility Theorem",
       "published_at": "2026-10-26T00:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261026T040000Z",
+      "batch_date": "2026-10-26",
+      "pdf_id": "article_030_Arrows_impossibility_theorem.pdf",
+      "title": "Article 030 Arrows Impossibility Theorem",
+      "published_at": "2026-10-26T04:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261026T090000Z",
+      "batch_date": "2026-10-26",
+      "pdf_id": "article_030_Arrows_impossibility_theorem.pdf",
+      "title": "Article 030 Arrows Impossibility Theorem",
+      "published_at": "2026-10-26T09:00:00Z",
       "remaining": 5
     }
   ]
