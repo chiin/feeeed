@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 267,
+  "revision": 270,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -32,7 +32,8 @@
     "article_028_Public_goods_and_free_riding.pdf",
     "article_029_The_second_best.pdf",
     "article_030_Arrows_impossibility_theorem.pdf",
-    "article_031_Risk_and_uncertainty.pdf"
+    "article_031_Risk_and_uncertainty.pdf",
+    "article_032_Risk_aversion.pdf"
   ],
   "completion_counts": {
     "article_002_Introduction.pdf": 1,
@@ -60,7 +61,8 @@
     "article_028_Public_goods_and_free_riding.pdf": 1,
     "article_029_The_second_best.pdf": 1,
     "article_030_Arrows_impossibility_theorem.pdf": 1,
-    "article_031_Risk_and_uncertainty.pdf": 1
+    "article_031_Risk_and_uncertainty.pdf": 1,
+    "article_032_Risk_aversion.pdf": 1
   },
   "processed_events": {
     "34ba6c78-2800-4955-bd66-56792fff70f0": {
@@ -226,6 +228,14 @@
     "1fd562bf-aec9-4eb3-972c-e781ca095309": {
       "processed_at": "2026-10-28T05:47:17.622228Z",
       "status": "applied"
+    },
+    "9b13a81e-ff05-4858-9144-9caeaaccb6d4": {
+      "processed_at": "2026-10-28T07:41:48.163812Z",
+      "status": "applied"
+    },
+    "881328cd-0fbc-47b4-86e3-3502e2703fff": {
+      "processed_at": "2026-10-28T07:41:48.163812Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -240,7 +250,6 @@
       "article_034_The_principalagent_problem.pdf"
     ],
     "active_ids": [
-      "article_032_Risk_aversion.pdf",
       "article_033_Insurance.pdf",
       "article_034_The_principalagent_problem.pdf"
     ],
@@ -254,7 +263,8 @@
     "opened_ids": [
       "article_030_Arrows_impossibility_theorem.pdf",
       "article_031_Risk_and_uncertainty.pdf",
-      "article_032_Risk_aversion.pdf"
+      "article_032_Risk_aversion.pdf",
+      "article_033_Insurance.pdf"
     ],
     "segments": [
       {
@@ -277,7 +287,8 @@
     ],
     "processed_reminder_slots": [
       "2026-10-28T01:00:00Z",
-      "2026-10-28T04:00:00Z"
+      "2026-10-28T04:00:00Z",
+      "2026-10-28T06:00:00Z"
     ]
   },
   "next_release_at": "2026-10-28T16:00:00Z",
@@ -337,6 +348,14 @@
       "title": "Article 031 Risk And Uncertainty",
       "published_at": "2026-10-28T04:00:00Z",
       "remaining": 4
+    },
+    {
+      "id": "economics-pdf-reminder-20261028T060000Z",
+      "batch_date": "2026-10-28",
+      "pdf_id": "article_033_Insurance.pdf",
+      "title": "Article 033 Insurance",
+      "published_at": "2026-10-28T06:00:00Z",
+      "remaining": 2
     }
   ]
 }
