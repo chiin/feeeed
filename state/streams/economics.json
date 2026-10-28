@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 260,
+  "revision": 262,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -202,6 +202,10 @@
     "f4d2d06d-feb5-4473-ba6b-1e938c8cca0f": {
       "processed_at": "2026-10-24T02:59:35.197166Z",
       "status": "applied"
+    },
+    "bff3d3e1-c085-477a-b674-f5ce1382cb7b": {
+      "processed_at": "2026-10-28T02:21:56.608921Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -229,7 +233,9 @@
       "article_033_Insurance.pdf",
       "article_034_The_principalagent_problem.pdf"
     ],
-    "opened_ids": [],
+    "opened_ids": [
+      "article_030_Arrows_impossibility_theorem.pdf"
+    ],
     "segments": [
       {
         "kind": "initial",
@@ -249,7 +255,9 @@
       "2026-10-28T09:00:00Z",
       "2026-10-28T10:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-10-28T01:00:00Z"
+    ]
   },
   "next_release_at": "2026-10-28T16:00:00Z",
   "feed_reminders": [
@@ -291,6 +299,14 @@
       "pdf_id": "article_030_Arrows_impossibility_theorem.pdf",
       "title": "Article 030 Arrows Impossibility Theorem",
       "published_at": "2026-10-27T14:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261028T010000Z",
+      "batch_date": "2026-10-28",
+      "pdf_id": "article_030_Arrows_impossibility_theorem.pdf",
+      "title": "Article 030 Arrows Impossibility Theorem",
+      "published_at": "2026-10-28T01:00:00Z",
       "remaining": 5
     }
   ]
