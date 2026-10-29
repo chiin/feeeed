@@ -1,10 +1,11 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_with_replacement",
-  "revision": 240,
+  "revision": 242,
   "completed_ids": [],
   "completion_counts": {
-    "article_002_Stone_Age_sculpture.pdf": 1
+    "article_002_Stone_Age_sculpture.pdf": 1,
+    "article_003_Stone_Age_painting.pdf": 1
   },
   "processed_events": {
     "15d26b50-d32b-4374-9b49-e131f8f0840b": {
@@ -30,6 +31,14 @@
     "cd24c7cb-a2cb-4d40-b66a-6fc0de4a7d80": {
       "processed_at": "2026-10-29T00:22:51.253403Z",
       "status": "applied"
+    },
+    "02ffda54-abe5-4083-9ca7-f299725bbf6a": {
+      "processed_at": "2026-10-29T00:23:15.604704Z",
+      "status": "applied"
+    },
+    "a784e04f-4e57-4aa5-b652-4b87790bce25": {
+      "processed_at": "2026-10-29T00:23:15.604704Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -44,7 +53,6 @@
       "article_126_Still_life.pdf"
     ],
     "active_ids": [
-      "article_003_Stone_Age_painting.pdf",
       "article_004_Sumerian_and_Akkadian_art.pdf",
       "article_005_Babylonian_and_Assyrian_art.pdf",
       "article_006_Ancient_Egyptian_sculpture.pdf",
@@ -58,7 +66,8 @@
       "article_126_Still_life.pdf"
     ],
     "opened_ids": [
-      "article_003_Stone_Age_painting.pdf"
+      "article_003_Stone_Age_painting.pdf",
+      "article_004_Sumerian_and_Akkadian_art.pdf"
     ],
     "segments": [
       {
