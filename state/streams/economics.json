@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 275,
+  "revision": 277,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -246,6 +246,10 @@
     "876af1fd-b4c9-4351-8190-cf0937e26bfc": {
       "processed_at": "2026-10-28T07:42:07.889263Z",
       "status": "applied"
+    },
+    "0d7f30f8-7b45-4804-8b4a-2b0b25fe1030": {
+      "processed_at": "2026-10-29T00:22:28.159062Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -273,7 +277,9 @@
       "article_037_Signalling_and_screening.pdf",
       "article_038_Auctions_and_the_winners_curse.pdf"
     ],
-    "opened_ids": [],
+    "opened_ids": [
+      "article_034_The_principalagent_problem.pdf"
+    ],
     "segments": [
       {
         "kind": "initial",
@@ -293,7 +299,9 @@
       "2026-10-29T06:00:00Z",
       "2026-10-29T11:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-10-29T00:00:00Z"
+    ]
   },
   "next_release_at": "2026-10-29T16:00:00Z",
   "feed_reminders": [
@@ -336,6 +344,14 @@
       "title": "Article 034 The Principalagent Problem",
       "published_at": "2026-10-28T10:00:00Z",
       "remaining": 1
+    },
+    {
+      "id": "economics-pdf-reminder-20261029T000000Z",
+      "batch_date": "2026-10-29",
+      "pdf_id": "article_034_The_principalagent_problem.pdf",
+      "title": "Article 034 The Principalagent Problem",
+      "published_at": "2026-10-29T00:00:00Z",
+      "remaining": 5
     }
   ]
 }
