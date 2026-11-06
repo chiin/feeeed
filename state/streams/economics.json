@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 310,
+  "revision": 311,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -297,7 +297,11 @@
       "2026-11-06T13:00:00Z",
       "2026-11-06T14:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-11-06T03:00:00Z",
+      "2026-11-06T06:00:00Z",
+      "2026-11-06T07:00:00Z"
+    ]
   },
   "next_release_at": "2026-11-06T16:00:00Z",
   "feed_reminders": [
@@ -339,6 +343,30 @@
       "pdf_id": "article_034_The_principalagent_problem.pdf",
       "title": "Article 034 The Principalagent Problem",
       "published_at": "2026-11-05T13:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261106T030000Z",
+      "batch_date": "2026-11-06",
+      "pdf_id": "article_034_The_principalagent_problem.pdf",
+      "title": "Article 034 The Principalagent Problem",
+      "published_at": "2026-11-06T03:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261106T060000Z",
+      "batch_date": "2026-11-06",
+      "pdf_id": "article_034_The_principalagent_problem.pdf",
+      "title": "Article 034 The Principalagent Problem",
+      "published_at": "2026-11-06T06:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261106T070000Z",
+      "batch_date": "2026-11-06",
+      "pdf_id": "article_034_The_principalagent_problem.pdf",
+      "title": "Article 034 The Principalagent Problem",
+      "published_at": "2026-11-06T07:00:00Z",
       "remaining": 5
     }
   ]
