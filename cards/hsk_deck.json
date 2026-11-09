@@ -5,18 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-11-09",
   "batch_date": "2026-11-09",
-  "compiled_at": "2026-11-09T07:54:21.881960Z",
-  "state_revision": 2458,
+  "compiled_at": "2026-11-09T08:55:13.632410Z",
+  "state_revision": 2461,
   "daily_progress": {
     "total": 441,
     "new": 47,
-    "review": 365,
-    "done": 29
+    "review": 363,
+    "done": 31
   },
   "processed_event_ids": [
-    "fa8da431-2d23-4843-b64d-db8a0c812a7b",
-    "b796f7f2-fc12-4323-8f76-94fe52f16d34",
-    "a991cb3d-9b89-4d43-be64-3e7c8d699a8f",
     "4b05ef9a-6565-4487-923e-5469c540de36",
     "b8def9ab-66c2-4fe8-ba94-55a9bae02bb8",
     "a4b38e19-430a-4845-89b4-eec326bf2558",
@@ -1013,7 +1010,10 @@
     "11dd49e1-1c83-4f4c-b65b-d618d4c426b7",
     "2c9a815a-ea0b-49d6-bbd5-3ed067524efe",
     "8f18413e-0f44-4028-a3cd-1871d5ed71c1",
-    "0c7d86d6-583c-4ad6-8053-7cda6ef7085c"
+    "0c7d86d6-583c-4ad6-8053-7cda6ef7085c",
+    "9e35e9a5-d689-467b-9d88-0d98374d7155",
+    "106d6a45-c958-4af0-b53a-bb64d46ab374",
+    "69b120d7-2068-4607-ae82-3be1c1461830"
   ],
   "cards": [
     {
@@ -4007,8 +4007,8 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "18d",
-        "good": "28d",
+        "hard": "19d",
+        "good": "29d",
         "easy": "50d"
       }
     },
@@ -4431,7 +4431,7 @@
         "again": "10m",
         "hard": "21d",
         "good": "31d",
-        "easy": "52d"
+        "easy": "53d"
       }
     },
     {
@@ -5535,9 +5535,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "25d",
+        "hard": "26d",
         "good": "35d",
-        "easy": "56d"
+        "easy": "57d"
       }
     },
     {
@@ -8576,45 +8576,6 @@
       }
     },
     {
-      "id": "hsk-0401",
-      "entry_type": "term",
-      "front": {
-        "text": "\u63db",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "hu\u00e0n - to change; exchange",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u63db",
-          "url": "https://www.dong-chinese.com/wiki/%E6%8F%9B"
-        }
-      ],
-      "available_at": "2026-11-08T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.4444526966648266,
-        "difficulty": 9.451036214200915,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-10-19T07:56:29.280000Z",
-        "next_due_at": "2026-10-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "4d",
-        "good": "6d",
-        "easy": "9d"
-      }
-    },
-    {
       "id": "hsk-0403",
       "entry_type": "term",
       "front": {
@@ -8773,8 +8734,8 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "10d",
-        "good": "16d",
+        "hard": "11d",
+        "good": "17d",
         "easy": "30d"
       }
     },
@@ -9201,49 +9162,6 @@
       }
     },
     {
-      "id": "hsk-0496",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5bb9\u6613",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "r\u00f3ngy\u00ec - easy",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u5bb9",
-          "url": "https://www.dong-chinese.com/wiki/%E5%AE%B9"
-        },
-        {
-          "character": "\u6613",
-          "url": "https://www.dong-chinese.com/wiki/%E6%98%93"
-        }
-      ],
-      "available_at": "2026-11-08T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.2931,
-        "difficulty": 5.112170705601056,
-        "interval_days": 1,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-10-19T08:31:32.233000Z",
-        "next_due_at": "2026-10-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "10d",
-        "good": "16d",
-        "easy": "30d"
-      }
-    },
-    {
       "id": "hsk-0500",
       "entry_type": "term",
       "front": {
@@ -9488,8 +9406,8 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "10d",
-        "good": "16d",
+        "hard": "11d",
+        "good": "17d",
         "easy": "30d"
       }
     },
@@ -9651,49 +9569,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "2d"
-      }
-    },
-    {
-      "id": "hsk-0550",
-      "entry_type": "term",
-      "front": {
-        "text": "\u718a\u8c93",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "xi\u00f3ngm\u0101o - panda",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u718a",
-          "url": "https://www.dong-chinese.com/wiki/%E7%86%8A"
-        },
-        {
-          "character": "\u8c93",
-          "url": "https://www.dong-chinese.com/wiki/%E8%B2%93"
-        }
-      ],
-      "available_at": "2026-11-08T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212,
-        "difficulty": 7.604209769076838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-10-19T07:52:40.869000Z",
-        "next_due_at": "2026-10-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "6d"
       }
     },
     {
@@ -9902,9 +9777,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "53d",
-        "good": "73d",
-        "easy": "117d"
+        "hard": "54d",
+        "good": "74d",
+        "easy": "119d"
       }
     },
     {
@@ -10027,7 +9902,7 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "3d",
+        "hard": "4d",
         "good": "5d",
         "easy": "8d"
       }
@@ -10071,7 +9946,7 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "7d",
-        "good": "10d",
+        "good": "11d",
         "easy": "18d"
       }
     },
@@ -10239,7 +10114,7 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "5d",
-        "good": "7d",
+        "good": "8d",
         "easy": "12d"
       }
     },
@@ -10283,7 +10158,7 @@
         "again": "10m",
         "hard": "21d",
         "good": "33d",
-        "easy": "59d"
+        "easy": "60d"
       }
     },
     {
@@ -10369,7 +10244,7 @@
         "again": "10m",
         "hard": "21d",
         "good": "33d",
-        "easy": "59d"
+        "easy": "60d"
       }
     },
     {
@@ -10576,7 +10451,7 @@
         "again": "10m",
         "hard": "5d",
         "good": "7d",
-        "easy": "10d"
+        "easy": "11d"
       }
     },
     {
@@ -10782,7 +10657,7 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "11d",
-        "good": "16d",
+        "good": "17d",
         "easy": "28d"
       }
     },
@@ -10873,7 +10748,7 @@
         "again": "10m",
         "hard": "14d",
         "good": "21d",
-        "easy": "36d"
+        "easy": "37d"
       }
     },
     {
@@ -11404,7 +11279,7 @@
         "again": "10m",
         "hard": "18d",
         "good": "27d",
-        "easy": "45d"
+        "easy": "46d"
       }
     },
     {
@@ -11693,7 +11568,7 @@
         "again": "10m",
         "hard": "14d",
         "good": "18d",
-        "easy": "28d"
+        "easy": "29d"
       }
     },
     {
@@ -11783,7 +11658,7 @@
         "again": "10m",
         "hard": "59d",
         "good": "80d",
-        "easy": "125d"
+        "easy": "126d"
       }
     },
     {
@@ -12156,9 +12031,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "72d",
-        "good": "100d",
-        "easy": "162d"
+        "hard": "73d",
+        "good": "102d",
+        "easy": "164d"
       }
     },
     {
@@ -12719,8 +12594,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "19d",
-        "good": "25d",
-        "easy": "39d"
+        "good": "26d",
+        "easy": "40d"
       }
     },
     {
@@ -12886,7 +12761,7 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "15d",
+        "hard": "16d",
         "good": "20d",
         "easy": "29d"
       }
@@ -13798,7 +13673,7 @@
         "again": "10m",
         "hard": "19d",
         "good": "25d",
-        "easy": "38d"
+        "easy": "39d"
       }
     },
     {
@@ -13917,9 +13792,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "126d",
-        "good": "178d",
-        "easy": "294d"
+        "hard": "127d",
+        "good": "180d",
+        "easy": "297d"
       }
     },
     {
@@ -13995,9 +13870,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "126d",
-        "good": "178d",
-        "easy": "294d"
+        "hard": "127d",
+        "good": "180d",
+        "easy": "297d"
       }
     },
     {
@@ -14034,9 +13909,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "126d",
-        "good": "178d",
-        "easy": "294d"
+        "hard": "127d",
+        "good": "180d",
+        "easy": "297d"
       }
     },
     {
@@ -14073,9 +13948,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "126d",
-        "good": "178d",
-        "easy": "294d"
+        "hard": "127d",
+        "good": "180d",
+        "easy": "297d"
       }
     },
     {
@@ -14190,9 +14065,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "126d",
-        "good": "178d",
-        "easy": "294d"
+        "hard": "127d",
+        "good": "180d",
+        "easy": "297d"
       }
     },
     {
@@ -14229,9 +14104,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "126d",
-        "good": "178d",
-        "easy": "294d"
+        "hard": "127d",
+        "good": "180d",
+        "easy": "297d"
       }
     },
     {
@@ -14315,9 +14190,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "75d",
-        "good": "104d",
-        "easy": "167d"
+        "hard": "76d",
+        "good": "105d",
+        "easy": "169d"
       }
     },
     {
@@ -14360,7 +14235,7 @@
         "again": "10m",
         "hard": "17d",
         "good": "21d",
-        "easy": "29d"
+        "easy": "30d"
       }
     },
     {
@@ -14441,8 +14316,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "20d",
-        "good": "25d",
-        "easy": "36d"
+        "good": "26d",
+        "easy": "37d"
       }
     },
     {
@@ -14778,7 +14653,7 @@
         "again": "10m",
         "hard": "22d",
         "good": "27d",
-        "easy": "38d"
+        "easy": "39d"
       }
     },
     {
@@ -14820,8 +14695,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "27d",
-        "good": "35d",
-        "easy": "54d"
+        "good": "36d",
+        "easy": "55d"
       }
     },
     {
@@ -14864,7 +14739,7 @@
         "again": "10m",
         "hard": "24d",
         "good": "31d",
-        "easy": "46d"
+        "easy": "47d"
       }
     },
     {
@@ -14984,8 +14859,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "24d",
-        "good": "29d",
-        "easy": "42d"
+        "good": "30d",
+        "easy": "43d"
       }
     },
     {
@@ -16049,9 +15924,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "31d",
-        "good": "38d",
-        "easy": "53d"
+        "hard": "32d",
+        "good": "39d",
+        "easy": "54d"
       }
     },
     {
@@ -17590,6 +17465,45 @@
         "hard": "2d",
         "good": "2d",
         "easy": "3d"
+      }
+    },
+    {
+      "id": "hsk-0401",
+      "entry_type": "term",
+      "front": {
+        "text": "\u63db",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "hu\u00e0n - to change; exchange",
+        "notes": null
+      },
+      "character_links": [
+        {
+          "character": "\u63db",
+          "url": "https://www.dong-chinese.com/wiki/%E6%8F%9B"
+        }
+      ],
+      "available_at": "2026-11-09T08:03:55.155000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.5980304155739363,
+        "difficulty": 9.804787705858422,
+        "interval_days": 0,
+        "reviews": 6,
+        "passing_reviews": 1,
+        "lapses": 2,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-09T07:53:55.155000Z",
+        "next_due_at": "2026-11-09T08:03:55.155000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
