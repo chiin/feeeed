@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 225,
+  "revision": 226,
   "vocabulary": {
     "hsk-0151": {
       "status": "mastered",
@@ -407,9 +407,10 @@
     },
     "hsk-0045": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-10-14T23:45:29.072321Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-11-09T09:06:31.255000Z"
     },
     "hsk-0046": {
       "status": "sentence_reinforcement",
@@ -1148,6 +1149,10 @@
     },
     "d97decb5-dac8-44db-baa0-620955e850c2": {
       "processed_at": "2026-11-09T08:59:39.037499Z",
+      "status": "applied"
+    },
+    "9f16fb94-28c9-47e6-8720-8cc4a2288ee3": {
+      "processed_at": "2026-11-09T09:06:55.163389Z",
       "status": "applied"
     }
   },
