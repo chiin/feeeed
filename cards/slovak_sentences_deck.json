@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-10",
   "batch_date": "2026-11-10",
-  "compiled_at": "2026-11-10T14:19:14.807736Z",
-  "state_revision": 261,
+  "compiled_at": "2026-11-10T14:20:08.968329Z",
+  "state_revision": 263,
   "daily_progress": {
     "total": 30,
     "new": 5,
-    "review": 10,
-    "done": 15
+    "review": 8,
+    "done": 17
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -207,7 +207,9 @@
     "e3db26d9-dfcc-415e-9c0f-2f016c304684",
     "81419645-af27-4a17-853f-fdc44fc3ef74",
     "28d2346b-ca2a-4053-a63c-c9922cfec5c1",
-    "25428756-da45-45e1-b664-f4f1787c07da"
+    "25428756-da45-45e1-b664-f4f1787c07da",
+    "18812c48-a808-4e92-9fbd-378670a8c142",
+    "71294b76-e586-4c8f-b0ed-04824d3dc3b9"
   ],
   "cards": [
     {
@@ -241,39 +243,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-07-slovak-0006",
-      "front": {
-        "text": "K\u00fapil si \u0161est' jablk.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He bought six apples.",
-        "notes": "[\u02c8\u0283\u025bst]\n\n\u0161est' is the cardinal number six in the nominative plural, agreeing with the plural noun jablk (apples)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 18.167850235070937,
-        "difficulty": 2.111214235785395,
-        "interval_days": 18,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:46:42.597000Z",
-        "next_due_at": "2026-09-29T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "84d",
-        "good": "128d",
-        "easy": "223d"
       }
     },
     {
@@ -577,39 +546,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0024",
-      "front": {
-        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The English man Tom bought fresh bread at the market.",
-        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T14:12:18.271000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.002309019673568664,
-        "difficulty": 9.97783606923895,
-        "interval_days": 0,
-        "reviews": 10,
-        "passing_reviews": 0,
-        "lapses": 9,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-10T14:02:18.271000Z",
-        "next_due_at": "2026-11-10T14:12:18.271000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     },
     {
