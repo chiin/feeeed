@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 335,
+  "revision": 336,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -38,7 +38,8 @@
     "article_034_The_principalagent_problem.pdf",
     "article_035_Moral_hazard.pdf",
     "article_036_Adverse_selection.pdf",
-    "article_037_Signalling_and_screening.pdf"
+    "article_037_Signalling_and_screening.pdf",
+    "article_038_Auctions_and_the_winners_curse.pdf"
   ],
   "completion_counts": {
     "article_002_Introduction.pdf": 1,
@@ -72,7 +73,8 @@
     "article_034_The_principalagent_problem.pdf": 1,
     "article_035_Moral_hazard.pdf": 1,
     "article_036_Adverse_selection.pdf": 1,
-    "article_037_Signalling_and_screening.pdf": 1
+    "article_037_Signalling_and_screening.pdf": 1,
+    "article_038_Auctions_and_the_winners_curse.pdf": 1
   },
   "processed_events": {
     "34ba6c78-2800-4955-bd66-56792fff70f0": {
@@ -294,6 +296,10 @@
     "04fc8057-19c3-4013-9360-d808df1f30a4": {
       "processed_at": "2026-11-10T05:28:28.813680Z",
       "status": "applied"
+    },
+    "dce62fa7-ea36-4d81-9d72-a224fb10f3f0": {
+      "processed_at": "2026-11-10T05:28:44.603927Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -307,9 +313,7 @@
       "article_037_Signalling_and_screening.pdf",
       "article_038_Auctions_and_the_winners_curse.pdf"
     ],
-    "active_ids": [
-      "article_038_Auctions_and_the_winners_curse.pdf"
-    ],
+    "active_ids": [],
     "selected_ids": [
       "article_034_The_principalagent_problem.pdf",
       "article_035_Moral_hazard.pdf",
