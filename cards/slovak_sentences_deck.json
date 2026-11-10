@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-10",
   "batch_date": "2026-11-10",
-  "compiled_at": "2026-11-10T12:55:37.961722Z",
-  "state_revision": 245,
+  "compiled_at": "2026-11-10T12:56:35.636396Z",
+  "state_revision": 248,
   "daily_progress": {
     "total": 30,
     "new": 8,
-    "review": 18,
-    "done": 4
+    "review": 16,
+    "done": 6
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -191,7 +191,10 @@
     "6e0b0e69-8bec-4eb1-a358-dcadc900c1f3",
     "bbfaa9c8-047f-433f-af2a-bd9edc5e9a96",
     "f9231de4-12de-4df2-a19c-37b2788831e2",
-    "964543c0-ce78-4606-85a9-a567eacd593b"
+    "964543c0-ce78-4606-85a9-a567eacd593b",
+    "2af5eac6-505e-4123-9b5d-22d8a411534c",
+    "238bb2bc-64b5-4213-9ee1-b132db391936",
+    "2be2442a-0a33-4ae5-8999-889cb3198d91"
   ],
   "cards": [
     {
@@ -252,39 +255,6 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-09-28T08:44:19.100000Z",
         "next_due_at": "2026-09-28T08:54:19.100000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0024",
-      "front": {
-        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The English man Tom bought fresh bread at the market.",
-        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.004792998006324255,
-        "difficulty": 9.976518106116687,
-        "interval_days": 0,
-        "reviews": 8,
-        "passing_reviews": 0,
-        "lapses": 7,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-09-28T08:46:32.956000Z",
-        "next_due_at": "2026-09-28T08:56:32.956000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -891,63 +861,30 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-28-slovak-0049",
+      "id": "slovak_reading-2026-09-08-slovak-0024",
       "front": {
-        "text": "M\u00e1\u0161 letenku, ke\u010f ide\u0161 do Bratislavy?",
+        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "Do you have a ticket when you go to Bratislava?",
-        "notes": "[ma\u02d0\u0283 \u02c8letenka \u02c8ke\u02d0d \u02c8ide\u0283 do bra\u02c8t\u026asla\u02d0vi]\n\nThe target 'm\u00e1\u0161' is the second-person singular present tense of the verb 'ma\u0165' (to have), meaning 'you have' in this context."
+        "text": "The English man Tom bought fresh bread at the market.",
+        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-10T11:04:48.301000Z",
+      "available_at": "2026-11-10T13:05:56.574000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.08335671711031604,
-        "difficulty": 8.806304468856837,
+        "stability": 0.004561630403372516,
+        "difficulty": 9.977510030454273,
         "interval_days": 0,
-        "reviews": 2,
+        "reviews": 9,
         "passing_reviews": 0,
-        "lapses": 1,
+        "lapses": 8,
         "last_rating": "again",
-        "last_reviewed_at": "2026-11-10T10:54:48.301000Z",
-        "next_due_at": "2026-11-10T11:04:48.301000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0052",
-      "front": {
-        "text": "M\u00e1te chu\u0165 na \u010daj, pani Nov\u00e1kov\u00e1?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Would you like some tea, Mrs. Novakova?",
-        "notes": "[\u02c8ma\u02d0te \u02c8xu\u02d0t na \u02c8t\u0283aj \u02c8pa\u02d0ni \u02c8n\u0254va\u02d0k\u0254va\u02d0]\n\nThe target 'm\u00e1te' is the second-person plural present tense of the verb 'ma\u0165' (to have), meaning 'you (plural) have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T11:05:53.574000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-10T10:55:53.574000Z",
-        "next_due_at": "2026-11-10T11:05:53.574000Z"
+        "last_reviewed_at": "2026-11-10T12:55:56.574000Z",
+        "next_due_at": "2026-11-10T13:05:56.574000Z"
       },
       "schedule_previews": {
         "again": "10m",
