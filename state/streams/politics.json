@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 321,
+  "revision": 323,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -177,100 +177,54 @@
     }
   },
   "daily_batch": {
-    "id": "2026-11-10",
-    "date": "2026-11-10",
-    "released_at": "2026-11-09T23:13:58.424766Z",
+    "id": "2026-11-11",
+    "date": "2026-11-11",
+    "released_at": "2026-11-10T16:13:14.249589Z",
     "release_summary_ids": [
-      "article_130_Coup_de\u0301tat.pdf",
-      "article_156_Religious_fundamentalism.pdf",
-      "article_036_Government_by_the_few.pdf",
-      "article_085_Social_liberalism.pdf",
-      "article_182_Defence_and_national_security.pdf"
+      "article_094_Utopian_socialism.pdf",
+      "article_197_Power_to_the_people.pdf",
+      "article_131_Military_juntas.pdf",
+      "article_058_Presidential_government.pdf",
+      "article_135_Ethnic_nationalism.pdf"
     ],
-    "active_ids": [],
+    "active_ids": [
+      "article_094_Utopian_socialism.pdf",
+      "article_197_Power_to_the_people.pdf",
+      "article_131_Military_juntas.pdf",
+      "article_058_Presidential_government.pdf",
+      "article_135_Ethnic_nationalism.pdf"
+    ],
     "selected_ids": [
-      "article_130_Coup_de\u0301tat.pdf",
-      "article_156_Religious_fundamentalism.pdf",
-      "article_036_Government_by_the_few.pdf",
-      "article_085_Social_liberalism.pdf",
-      "article_182_Defence_and_national_security.pdf"
+      "article_094_Utopian_socialism.pdf",
+      "article_197_Power_to_the_people.pdf",
+      "article_131_Military_juntas.pdf",
+      "article_058_Presidential_government.pdf",
+      "article_135_Ethnic_nationalism.pdf"
     ],
-    "opened_ids": [
-      "article_130_Coup_de\u0301tat.pdf",
-      "article_156_Religious_fundamentalism.pdf",
-      "article_036_Government_by_the_few.pdf",
-      "article_085_Social_liberalism.pdf",
-      "article_182_Defence_and_national_security.pdf"
-    ],
+    "opened_ids": [],
     "segments": [
       {
         "kind": "initial",
         "ids": [
-          "article_130_Coup_de\u0301tat.pdf",
-          "article_156_Religious_fundamentalism.pdf",
-          "article_036_Government_by_the_few.pdf",
-          "article_085_Social_liberalism.pdf",
-          "article_182_Defence_and_national_security.pdf"
+          "article_094_Utopian_socialism.pdf",
+          "article_197_Power_to_the_people.pdf",
+          "article_131_Military_juntas.pdf",
+          "article_058_Presidential_government.pdf",
+          "article_135_Ethnic_nationalism.pdf"
         ]
       }
     ],
     "reminder_slots": [
-      "2026-11-10T00:00:00Z",
-      "2026-11-10T02:00:00Z",
-      "2026-11-10T08:00:00Z",
-      "2026-11-10T10:00:00Z",
-      "2026-11-10T11:00:00Z"
+      "2026-11-11T09:00:00Z",
+      "2026-11-11T10:00:00Z",
+      "2026-11-11T12:00:00Z",
+      "2026-11-11T13:00:00Z",
+      "2026-11-11T14:00:00Z"
     ],
-    "processed_reminder_slots": [
-      "2026-11-10T00:00:00Z",
-      "2026-11-10T02:00:00Z",
-      "2026-11-10T08:00:00Z",
-      "2026-11-10T10:00:00Z",
-      "2026-11-10T11:00:00Z"
-    ]
+    "processed_reminder_slots": []
   },
-  "next_release_at": "2026-11-10T16:00:00Z",
+  "next_release_at": "2026-11-11T16:00:00Z",
   "feed_reminders": [
-    {
-      "id": "politics-pdf-reminder-20261109T010000Z",
-      "batch_date": "2026-11-09",
-      "pdf_id": "article_130_Coup_de\u0301tat.pdf",
-      "title": "Article 130 Coup De\u0301Tat",
-      "published_at": "2026-11-09T01:00:00Z",
-      "remaining": 3
-    },
-    {
-      "id": "politics-pdf-reminder-20261109T020000Z",
-      "batch_date": "2026-11-09",
-      "pdf_id": "article_130_Coup_de\u0301tat.pdf",
-      "title": "Article 130 Coup De\u0301Tat",
-      "published_at": "2026-11-09T02:00:00Z",
-      "remaining": 3
-    },
-    {
-      "id": "politics-pdf-reminder-20261109T080000Z",
-      "batch_date": "2026-11-09",
-      "pdf_id": "article_130_Coup_de\u0301tat.pdf",
-      "title": "Article 130 Coup De\u0301Tat",
-      "published_at": "2026-11-09T08:00:00Z",
-      "remaining": 3
-    },
-    {
-      "id": "politics-pdf-reminder-20261109T090000Z",
-      "batch_date": "2026-11-09",
-      "pdf_id": "article_130_Coup_de\u0301tat.pdf",
-      "title": "Article 130 Coup De\u0301Tat",
-      "published_at": "2026-11-09T09:00:00Z",
-      "remaining": 3
-    },
-    {
-      "id": "politics-pdf-reminder-20261109T100000Z",
-      "batch_date": "2026-11-09",
-      "pdf_id": "article_130_Coup_de\u0301tat.pdf",
-      "title": "Article 130 Coup De\u0301Tat",
-      "published_at": "2026-11-09T10:00:00Z",
-      "remaining": 3
-    },
     {
       "id": "politics-pdf-reminder-20261110T000000Z",
       "batch_date": "2026-11-10",
