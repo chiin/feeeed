@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-10",
   "batch_date": "2026-11-10",
-  "compiled_at": "2026-11-10T05:56:10.639523Z",
-  "state_revision": 256,
+  "compiled_at": "2026-11-10T05:56:29.517841Z",
+  "state_revision": 257,
   "daily_progress": {
     "total": 14,
     "new": 7,
@@ -201,7 +201,8 @@
     "79fa4dd4-e87e-4422-951e-2a657644b79d",
     "ee7bae4a-c59d-4ee9-b132-abe7994b6f5b",
     "6984abe5-380f-49e9-bde8-c0ea57f0f353",
-    "57cad2a5-1380-45bc-bef1-aebe74b70c52"
+    "57cad2a5-1380-45bc-bef1-aebe74b70c52",
+    "5bb1486f-6c57-49d4-bdff-31a820040b1a"
   ],
   "cards": [
     {
@@ -235,39 +236,6 @@
         "hard": "84d",
         "good": "128d",
         "easy": "223d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-09-28-hsk-0038",
-      "front": {
-        "text": "\u66f8\u5728\u623f\u9593\u88e1\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The book is inside the room.",
-        "notes": "Sh\u016b z\u00e0i f\u00e1ngji\u0101n l\u01d0.\n\n\u88e1 (l\u01d0) indicates interior location; here it follows the noun \u623f\u9593 to form the location phrase \u2018in the room\u2019."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.9062252133082107,
-        "difficulty": 7.596784690858309,
-        "interval_days": 2,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-10-19T07:43:05.002000Z",
-        "next_due_at": "2026-10-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "13d",
-        "easy": "22d"
       }
     },
     {
@@ -547,6 +515,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-09-28-hsk-0038",
+      "front": {
+        "text": "\u66f8\u5728\u623f\u9593\u88e1\u3002",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The book is inside the room.",
+        "notes": "Sh\u016b z\u00e0i f\u00e1ngji\u0101n l\u01d0.\n\n\u88e1 (l\u01d0) indicates interior location; here it follows the noun \u623f\u9593 to form the location phrase \u2018in the room\u2019."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-10T06:06:02.253000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.7145483577233819,
+        "difficulty": 9.195307839046066,
+        "interval_days": 0,
+        "reviews": 4,
+        "passing_reviews": 1,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-10T05:56:02.253000Z",
+        "next_due_at": "2026-11-10T06:06:02.253000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
