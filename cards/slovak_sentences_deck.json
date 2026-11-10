@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-10",
   "batch_date": "2026-11-10",
-  "compiled_at": "2026-11-10T12:57:14.317764Z",
-  "state_revision": 248,
+  "compiled_at": "2026-11-10T12:57:32.743943Z",
+  "state_revision": 250,
   "daily_progress": {
     "total": 30,
-    "new": 8,
+    "new": 7,
     "review": 16,
-    "done": 6
+    "done": 7
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -194,7 +194,9 @@
     "964543c0-ce78-4606-85a9-a567eacd593b",
     "2af5eac6-505e-4123-9b5d-22d8a411534c",
     "238bb2bc-64b5-4213-9ee1-b132db391936",
-    "2be2442a-0a33-4ae5-8999-889cb3198d91"
+    "2be2442a-0a33-4ae5-8999-889cb3198d91",
+    "7f133709-678c-4c08-a5d2-e2da3f27a2c1",
+    "7ae48c0e-7ce5-4155-b6f5-6759d577ee0b"
   ],
   "cards": [
     {
@@ -294,39 +296,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-20-slovak-0043",
-      "front": {
-        "text": "Vy a va\u0161a kolegy\u0148a idete na poh\u00e1r?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "You and your colleague are going for a drink?",
-        "notes": "[vi a \u02c8va\u0283a \u02c8k\u0254le\u0261i\u0272a \u02c8\u026adete na \u02c8p\u0254ha\u02d0r]\n\nThe pronoun 'Vy' is the formal or plural 'you', serving as the subject of the sentence alongside 'va\u0161a kolegy\u0148a'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.2931,
-        "difficulty": 5.112170705601056,
-        "interval_days": 1,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-09-28T08:18:11.863000Z",
-        "next_due_at": "2026-09-28T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "20d",
-        "easy": "36d"
       }
     },
     {
@@ -798,27 +767,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-29-slovak-0056",
-      "front": {
-        "text": "Ty si tu?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Are you here?",
-        "notes": "/si/\n\nsi is the second person singular present form of the verb 'by\u0165' meaning 'are'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-30-slovak-0057",
       "front": {
         "text": "T\u00e1to kniha je ve\u013emi dobr\u00e1.",
@@ -885,6 +833,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-11-10T12:55:56.574000Z",
         "next_due_at": "2026-11-10T13:05:56.574000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-20-slovak-0043",
+      "front": {
+        "text": "Vy a va\u0161a kolegy\u0148a idete na poh\u00e1r?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "You and your colleague are going for a drink?",
+        "notes": "[vi a \u02c8va\u0283a \u02c8k\u0254le\u0261i\u0272a \u02c8\u026adete na \u02c8p\u0254ha\u02d0r]\n\nThe pronoun 'Vy' is the formal or plural 'you', serving as the subject of the sentence alongside 'va\u0161a kolegy\u0148a'."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-10T13:06:51.042000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.6521289986384606,
+        "difficulty": 8.378632117467106,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-10T12:56:51.042000Z",
+        "next_due_at": "2026-11-10T13:06:51.042000Z"
       },
       "schedule_previews": {
         "again": "10m",
