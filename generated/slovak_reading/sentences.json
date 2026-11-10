@@ -785,7 +785,7 @@
         "slovak-0038"
       ],
       "lifecycle": "disposable_scaffold",
-      "status": "active",
+      "status": "archived",
       "created_at": "2026-09-14T11:14:40.822796Z",
       "introduction_strategy": "vocabulary_first",
       "source": "generated",
@@ -796,7 +796,8 @@
         "translation": "Peter came, but he has already left.",
         "cloze_text": "Peter prišiel, ale ___ už odišiel.",
         "target_breakdown": "Osobné zámeno v nominatíve jednotného čísla mužského rodu; v tejto vete odkazuje na Petra."
-      }
+      },
+      "archived_at": "2026-11-10T10:55:29.251000Z"
     },
     {
       "id": "slovak_reading-2026-09-14-slovak-0039",
@@ -1196,6 +1197,26 @@
         "translation": "We are in Bratislava and we are lucky.",
         "cloze_text": "My ___ v Bratislave a máme šťastie.",
         "target_breakdown": "The target 'sme' is the first-person plural present tense form of the verb 'byť' (to be), meaning 'we are'. It connects the subject pronoun 'my' (we) to the prepositional phrase 'v Bratislave' (in Bratislava)."
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-10-slovak-0059",
+      "card_type": "text_reading",
+      "target_word_ids": [
+        "slovak-0059"
+      ],
+      "lifecycle": "disposable_scaffold",
+      "status": "active",
+      "created_at": "2026-11-10T10:57:38.450214Z",
+      "introduction_strategy": "vocabulary_first",
+      "source": "generated",
+      "quality_version": 2,
+      "payload": {
+        "primary_text": "Vy ste v meste.",
+        "transliteration": "[ste]",
+        "translation": "You are in the city.",
+        "cloze_text": "Vy _____ v meste.",
+        "target_breakdown": "The word \"ste\" is the second-person plural present tense form of the verb \"byť\" (to be), meaning \"you are\", which agrees with the plural pronoun \"Vy\"."
       }
     }
   ]

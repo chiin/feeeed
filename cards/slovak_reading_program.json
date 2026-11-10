@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-10",
   "batch_date": "2026-11-10",
-  "compiled_at": "2026-11-10T10:55:27.299459Z",
-  "state_revision": 199,
+  "compiled_at": "2026-11-10T10:57:38.450214Z",
+  "state_revision": 201,
   "source_revisions": {
     "slovak_vocab": 451,
-    "slovak_sentences": 243
+    "slovak_sentences": 245
   },
   "daily_progress": {
     "total": 151,
-    "new": 28,
+    "new": 27,
     "review": 111,
-    "done": 12
+    "done": 13
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -586,7 +586,9 @@
     "cf57cb71-f483-430c-8030-f9ab4bbf10ed",
     "07842378-e249-4c3d-baff-b00b7a9d9513",
     "6e0b0e69-8bec-4eb1-a358-dcadc900c1f3",
-    "bbfaa9c8-047f-433f-af2a-bd9edc5e9a96"
+    "bbfaa9c8-047f-433f-af2a-bd9edc5e9a96",
+    "f9231de4-12de-4df2-a19c-37b2788831e2",
+    "964543c0-ce78-4606-85a9-a567eacd593b"
   ],
   "cards": [
     {
@@ -732,42 +734,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-14-slovak-0038",
-      "front": {
-        "text": "Peter pri\u0161iel, ale on u\u017e odi\u0161iel.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Peter came, but he has already left.",
-        "notes": "[\u0254n]\n\nOsobn\u00e9 z\u00e1meno v nominat\u00edve jednotn\u00e9ho \u010d\u00edsla mu\u017esk\u00e9ho rodu; v tejto vete odkazuje na Petra."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 15.224088722968,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 15,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-28T08:29:49.334000Z",
-        "next_due_at": "2026-10-12T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "43d",
-        "good": "61d",
-        "easy": "101d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0142",
@@ -937,13 +903,25 @@
         "notes": "[\u02c8ma\u02d0te \u02c8xu\u02d0t na \u02c8t\u0283aj \u02c8pa\u02d0ni \u02c8n\u0254va\u02d0k\u0254va\u02d0]\n\nThe target 'm\u00e1te' is the second-person plural present tense of the verb 'ma\u0165' (to have), meaning 'you (plural) have' in this context."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-10T11:05:53.574000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-10T10:55:53.574000Z",
+        "next_due_at": "2026-11-10T11:05:53.574000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
