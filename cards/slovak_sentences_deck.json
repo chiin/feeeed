@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-10",
   "batch_date": "2026-11-10",
-  "compiled_at": "2026-11-10T09:34:08.522705Z",
-  "state_revision": 238,
+  "compiled_at": "2026-11-10T09:34:29.560996Z",
+  "state_revision": 241,
   "daily_progress": {
     "total": 30,
-    "new": 10,
-    "review": 20,
-    "done": 0
+    "new": 9,
+    "review": 19,
+    "done": 2
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -184,7 +184,10 @@
     "495c8127-5c1f-4988-88c0-e38f66a97737",
     "23613556-a729-47d4-9229-d757a09cd66e",
     "372ba094-9359-4fe3-a72c-4f4c5764101f",
-    "a858ebe9-fe9f-42d5-8cf5-e3cc3608560b"
+    "a858ebe9-fe9f-42d5-8cf5-e3cc3608560b",
+    "42bce0bc-e9a9-4ac6-89e7-04ccfbc7b526",
+    "cf57cb71-f483-430c-8030-f9ab4bbf10ed",
+    "07842378-e249-4c3d-baff-b00b7a9d9513"
   ],
   "cards": [
     {
@@ -518,39 +521,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-20-slovak-0044",
-      "front": {
-        "text": "Oni id\u00fa do kaviarne.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "They are going to the cafe.",
-        "notes": "[\u02c8\u0254ni \u02c8\u026adu\u02d0 \u02c8da kavi\u02c8arne]\n\nThe pronoun 'Oni' is the masculine plural 'they', acting as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-28T08:38:25.845000Z",
-        "next_due_at": "2026-09-29T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "26d",
-        "good": "42d",
-        "easy": "76d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-21-slovak-0047",
       "front": {
         "text": "Vid\u00edm die\u0165a pred kaviar\u0148ou.",
@@ -782,39 +752,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-12-slovak-0037",
-      "front": {
-        "text": "Ty si m\u00f4j kamar\u00e1t.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "You are my friend.",
-        "notes": "/ta\u026a/\n\nTy means \u201cyou\u201d and is the singular nominative subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 23.993042579260447,
-        "difficulty": 2.111214235785395,
-        "interval_days": 24,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-28T08:29:39.008000Z",
-        "next_due_at": "2026-10-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "84d",
-        "good": "124d",
-        "easy": "211d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-15-slovak-0041",
       "front": {
         "text": "To je m\u00f4j nov\u00fd dom.",
@@ -845,27 +782,6 @@
         "hard": "84d",
         "good": "124d",
         "easy": "211d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0049",
-      "front": {
-        "text": "M\u00e1\u0161 letenku, ke\u010f ide\u0161 do Bratislavy?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Do you have a ticket when you go to Bratislava?",
-        "notes": "[ma\u02d0\u0283 \u02c8letenka \u02c8ke\u02d0d \u02c8ide\u0283 do bra\u02c8t\u026asla\u02d0vi]\n\nThe target 'm\u00e1\u0161' is the second-person singular present tense of the verb 'ma\u0165' (to have), meaning 'you have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
       }
     },
     {
@@ -1055,6 +971,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-28-slovak-0049",
+      "front": {
+        "text": "M\u00e1\u0161 letenku, ke\u010f ide\u0161 do Bratislavy?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Do you have a ticket when you go to Bratislava?",
+        "notes": "[ma\u02d0\u0283 \u02c8letenka \u02c8ke\u02d0d \u02c8ide\u0283 do bra\u02c8t\u026asla\u02d0vi]\n\nThe target 'm\u00e1\u0161' is the second-person singular present tense of the verb 'ma\u0165' (to have), meaning 'you have' in this context."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-10T09:43:24.872000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-10T09:33:24.872000Z",
+        "next_due_at": "2026-11-10T09:43:24.872000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
