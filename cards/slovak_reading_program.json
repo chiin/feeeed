@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-10",
   "batch_date": "2026-11-10",
-  "compiled_at": "2026-11-10T12:57:59.520668Z",
-  "state_revision": 202,
+  "compiled_at": "2026-11-10T12:58:46.253122Z",
+  "state_revision": 203,
   "source_revisions": {
     "slovak_vocab": 487,
-    "slovak_sentences": 250
+    "slovak_sentences": 252
   },
   "daily_progress": {
     "total": 151,
     "new": 20,
-    "review": 80,
-    "done": 51
+    "review": 79,
+    "done": 52
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -629,7 +629,9 @@
     "238bb2bc-64b5-4213-9ee1-b132db391936",
     "2be2442a-0a33-4ae5-8999-889cb3198d91",
     "7f133709-678c-4c08-a5d2-e2da3f27a2c1",
-    "7ae48c0e-7ce5-4155-b6f5-6759d577ee0b"
+    "7ae48c0e-7ce5-4155-b6f5-6759d577ee0b",
+    "2d364f9a-93d3-4787-b439-c63570906a4d",
+    "eb4169b3-db7f-4b50-bcac-a4826ccf4462"
   ],
   "cards": [
     {
@@ -1293,42 +1295,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-14-slovak-0039",
-      "front": {
-        "text": "Kolegy\u0148a pri\u0161la, ale ona u\u017e odi\u0161la.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The colleague came, but she has already left.",
-        "notes": "[\u02c8\u0254na]\n\nOsobn\u00e9 z\u00e1meno v nominat\u00edve jednotn\u00e9ho \u010d\u00edsla \u017eensk\u00e9ho rodu; v tejto vete odkazuje na kolegy\u0148u."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 16.17726320265468,
-        "difficulty": 2.111214235785395,
-        "interval_days": 16,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T08:09:22.724000Z",
-        "next_due_at": "2026-10-04T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "76d",
-        "good": "116d",
-        "easy": "203d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak-0149",
       "entry_type": "sentence",
       "front": {
@@ -1364,25 +1330,25 @@
         "notes": "[\u02c8t\u025b\u0283i\u02d0 ma]\n\nTe\u0161\u00ed ma is a common greeting expression meaning pleased to meet you or nice to meet you, literally it pleases me."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
+      "available_at": "2026-11-10T13:08:19.866000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.7665255781987192,
-        "difficulty": 8.254074519842886,
-        "interval_days": 2,
-        "reviews": 4,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.7611370697539036,
+        "difficulty": 9.411354536262458,
+        "interval_days": 0,
+        "reviews": 5,
         "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-09-28T08:38:06.901000Z",
-        "next_due_at": "2026-09-29T16:00:00Z"
+        "lapses": 2,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-10T12:58:19.866000Z",
+        "next_due_at": "2026-11-10T13:08:19.866000Z"
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "8d",
-        "good": "12d",
-        "easy": "21d"
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
