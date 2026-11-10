@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-10",
   "batch_date": "2026-11-10",
-  "compiled_at": "2026-11-10T14:58:33.445501Z",
-  "state_revision": 566,
+  "compiled_at": "2026-11-10T15:43:30.780302Z",
+  "state_revision": 567,
   "daily_progress": {
     "total": 121,
     "new": 0,
-    "review": 1,
-    "done": 120
+    "review": 0,
+    "done": 121
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -522,41 +522,8 @@
     "f4687b36-d26f-4dd1-84a4-8d8150b04cf3",
     "57ecd86a-1d04-4cfc-aa85-98faf065bcad",
     "b1a7e400-daff-454d-aa71-2106dfd800ac",
-    "bc5bfcb5-0f92-425b-b4b6-3d6f0f549c79"
+    "bc5bfcb5-0f92-425b-b4b6-3d6f0f549c79",
+    "544e9962-6ff9-43f6-a731-13f592c7c68b"
   ],
-  "cards": [
-    {
-      "id": "slovak-0159",
-      "entry_type": "term",
-      "front": {
-        "text": "asi",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "probably",
-        "notes": null
-      },
-      "available_at": "2026-11-10T14:39:13.444000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-10T14:29:13.444000Z",
-        "next_due_at": "2026-11-10T14:39:13.444000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    }
-  ]
+  "cards": []
 }

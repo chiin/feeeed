@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 566,
+  "revision": 567,
   "cards": {
     "slovak-0009": {
       "state": "review",
@@ -2205,17 +2205,17 @@
       "next_due_at": "2026-11-11T16:00:00Z"
     },
     "slovak-0159": {
-      "state": "relearning",
-      "step": 0,
-      "stability": 0.212,
-      "difficulty": 6.4133,
-      "interval_days": 0,
-      "reviews": 1,
-      "passing_reviews": 0,
+      "state": "review",
+      "step": null,
+      "stability": 0.24668918777567272,
+      "difficulty": 6.402115069296838,
+      "interval_days": 1,
+      "reviews": 2,
+      "passing_reviews": 1,
       "lapses": 0,
-      "last_rating": "again",
-      "last_reviewed_at": "2026-11-10T14:29:13.444000Z",
-      "next_due_at": "2026-11-10T14:39:13.444000Z"
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-10T14:57:52.076000Z",
+      "next_due_at": "2026-11-10T16:00:00Z"
     }
   },
   "processed_events": {
@@ -4254,6 +4254,10 @@
     "bc5bfcb5-0f92-425b-b4b6-3d6f0f549c79": {
       "processed_at": "2026-11-10T14:39:14.940601Z",
       "status": "applied"
+    },
+    "544e9962-6ff9-43f6-a731-13f592c7c68b": {
+      "processed_at": "2026-11-10T15:43:30.780302Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -4383,12 +4387,7 @@
       "slovak-0168",
       "slovak-0169"
     ],
-    "active": [
-      {
-        "card_id": "slovak-0159",
-        "available_at": "2026-11-10T14:39:13.444000Z"
-      }
-    ]
+    "active": []
   },
   "previous_batch": {
     "id": "2026-11-09",
