@@ -4369,17 +4369,17 @@
       "next_due_at": "2026-10-12T16:00:00Z"
     },
     "hsk-0375": {
-      "state": "review",
-      "step": null,
-      "stability": 0.03669337437843428,
-      "difficulty": 9.949991089249995,
-      "interval_days": 1,
-      "reviews": 8,
+      "state": "relearning",
+      "step": 0,
+      "stability": 0.03441353152118066,
+      "difficulty": 9.968790780393904,
+      "interval_days": 0,
+      "reviews": 9,
       "passing_reviews": 1,
-      "lapses": 4,
-      "last_rating": "hard",
-      "last_reviewed_at": "2026-10-19T07:52:24.723000Z",
-      "next_due_at": "2026-10-19T16:00:00Z"
+      "lapses": 5,
+      "last_rating": "again",
+      "last_reviewed_at": "2026-11-10T15:46:45.726000Z",
+      "next_due_at": "2026-11-10T15:56:45.726000Z"
     },
     "hsk-0371": {
       "state": "review",
@@ -7378,12 +7378,8 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 2865,
+  "revision": 2866,
   "processed_events": {
-    "99800189-b8ba-4b3a-b6a0-2bf3cfdc9eb8": {
-      "processed_at": "2026-09-28T08:11:10.553509Z",
-      "status": "applied"
-    },
     "d681b227-a534-4ab6-bc15-bc1e887a9f97": {
       "processed_at": "2026-09-28T08:11:10.553509Z",
       "status": "applied"
@@ -11379,6 +11375,10 @@
     "4eda43bc-1624-40e9-96de-e8504382ecf9": {
       "processed_at": "2026-11-10T15:47:25.091897Z",
       "status": "applied"
+    },
+    "3c8fbdb1-5ac9-4dc2-b107-2370d735081d": {
+      "processed_at": "2026-11-10T15:47:47.684479Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -11759,10 +11759,6 @@
       },
       {
         "card_id": "hsk-0358",
-        "available_at": "2026-11-09T16:00:00Z"
-      },
-      {
-        "card_id": "hsk-0375",
         "available_at": "2026-11-09T16:00:00Z"
       },
       {
@@ -12420,6 +12416,10 @@
       {
         "card_id": "hsk-0566",
         "available_at": "2026-11-10T15:56:40.330000Z"
+      },
+      {
+        "card_id": "hsk-0375",
+        "available_at": "2026-11-10T15:56:45.726000Z"
       }
     ]
   },
