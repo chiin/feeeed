@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-10",
   "batch_date": "2026-11-10",
-  "compiled_at": "2026-11-10T14:23:23.440534Z",
-  "state_revision": 210,
+  "compiled_at": "2026-11-10T14:23:54.688207Z",
+  "state_revision": 216,
   "source_revisions": {
     "slovak_vocab": 539,
-    "slovak_sentences": 263
+    "slovak_sentences": 270
   },
   "daily_progress": {
     "total": 151,
-    "new": 10,
-    "review": 30,
-    "done": 111
+    "new": 8,
+    "review": 26,
+    "done": 117
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -694,7 +694,14 @@
     "28d2346b-ca2a-4053-a63c-c9922cfec5c1",
     "25428756-da45-45e1-b664-f4f1787c07da",
     "18812c48-a808-4e92-9fbd-378670a8c142",
-    "71294b76-e586-4c8f-b0ed-04824d3dc3b9"
+    "71294b76-e586-4c8f-b0ed-04824d3dc3b9",
+    "ed7f02e2-164d-431f-9289-1b953d2cf6d9",
+    "81c4531e-70b5-45a4-9757-aa1b67e0a135",
+    "9a16a695-5e24-4329-9c53-44449834af5d",
+    "b953dd80-c063-435a-b565-66116fda9f0a",
+    "b9ccddfe-9d0c-4edc-95e2-90d4d5fc6f3d",
+    "28d13daa-3d5a-4f9b-8084-8f3e2aeead83",
+    "3cc4f3ff-eb78-41c8-a96e-878d041533d6"
   ],
   "cards": [
     {
@@ -830,66 +837,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-07-slovak-0019",
-      "front": {
-        "text": "Samozrejme, viem to.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Of course, I know it.",
-        "notes": "[samo\u02c8zrei\u032fme]\n\nSamozrejme is an adverb meaning of course, used here to emphasize certainty or obviousness."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 18.167850235070937,
-        "difficulty": 2.111214235785395,
-        "interval_days": 18,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-12T15:45:26.365000Z",
-        "next_due_at": "2026-09-29T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "84d",
-        "good": "128d",
-        "easy": "223d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0050",
-      "front": {
-        "text": "On m\u00e1 nov\u00fd autobus.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He has a new bus.",
-        "notes": "/ma\u02d0/\n\nm\u00e1 \u2013 third person singular present tense of the verb 'ma\u0165' (to have)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak_reading-2026-09-08-slovak-0021",
       "front": {
         "text": "Slovenka Ana spravila na mieste konci knihy.",
@@ -901,61 +848,25 @@
         "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
+      "available_at": "2026-11-10T14:32:52.366000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.001022734008433123,
-        "difficulty": 9.97794323597041,
+        "stability": 0.001,
+        "difficulty": 9.977978460946307,
         "interval_days": 0,
-        "reviews": 11,
+        "reviews": 12,
         "passing_reviews": 0,
-        "lapses": 10,
+        "lapses": 11,
         "last_rating": "again",
-        "last_reviewed_at": "2026-09-28T08:38:16.556000Z",
-        "next_due_at": "2026-09-28T08:48:16.556000Z"
+        "last_reviewed_at": "2026-11-10T14:22:52.366000Z",
+        "next_due_at": "2026-11-10T14:32:52.366000Z"
       },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-09-slovak-0031",
-      "front": {
-        "text": "Je mi dobre.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I feel well.",
-        "notes": "[\u02c8d\u0254br\u025b]\n\ndobre is an adverb used predicatively in je mi dobre, describing the speaker's state as well or fine."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 11.151777751883033,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 11,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-19T08:09:31.897000Z",
-        "next_due_at": "2026-09-29T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "39d",
-        "good": "57d",
-        "easy": "96d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -996,78 +907,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-15-slovak-0040",
-      "front": {
-        "text": "Ono je \u013eahk\u00e9.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "It is light.",
-        "notes": "[\u02c8ono]\n\n\u201cOno\u201d is a neuter singular nominative pronoun meaning \u201cit.\u201d It is the subject referring to a previously mentioned neutral thing."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 10.964332335820698,
-        "difficulty": 2.111214235785395,
-        "interval_days": 11,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-21T09:31:59.247000Z",
-        "next_due_at": "2026-10-01T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "62d",
-        "good": "97d",
-        "easy": "171d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-21-slovak-0047",
-      "front": {
-        "text": "Vid\u00edm die\u0165a pred kaviar\u0148ou.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I see a child in front of the cafe.",
-        "notes": "[\u02c8d\u026aec\u0250]\n\nThe noun \"die\u0165a\" (child) is a neuter noun in the accusative singular, which is identical to the nominative singular. It functions as the direct object of the verb \"vid\u00edm\" (I see)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-28T08:38:32.033000Z",
-        "next_due_at": "2026-09-29T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "26d",
-        "good": "42d",
-        "easy": "76d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0079",
@@ -1332,30 +1171,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0055",
-      "front": {
-        "text": "Som v Bratislave a \u010dak\u00e1m na teba.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I am in Bratislava and waiting for you.",
-        "notes": "[som v bra\u02c8t\u026asla\u02d0ve a \u02c8t\u0283aka\u02d0m na \u02c8teba]\n\nThe target 'som' is the first-person singular present tense of the verb 'by\u0165' (to be), meaning 'I am' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-09T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0151",
