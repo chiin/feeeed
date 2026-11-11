@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 324,
+  "revision": 325,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -222,7 +222,8 @@
       "2026-11-11T14:00:00Z"
     ],
     "processed_reminder_slots": [
-      "2026-11-11T09:00:00Z"
+      "2026-11-11T09:00:00Z",
+      "2026-11-11T10:00:00Z"
     ]
   },
   "next_release_at": "2026-11-11T16:00:00Z",
@@ -273,6 +274,14 @@
       "pdf_id": "article_094_Utopian_socialism.pdf",
       "title": "Article 094 Utopian Socialism",
       "published_at": "2026-11-11T09:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "politics-pdf-reminder-20261111T100000Z",
+      "batch_date": "2026-11-11",
+      "pdf_id": "article_094_Utopian_socialism.pdf",
+      "title": "Article 094 Utopian Socialism",
+      "published_at": "2026-11-11T10:00:00Z",
       "remaining": 5
     }
   ]
