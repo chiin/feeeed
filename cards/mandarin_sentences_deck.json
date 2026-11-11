@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-11",
   "batch_date": "2026-11-11",
-  "compiled_at": "2026-11-11T10:01:37.234045Z",
-  "state_revision": 264,
+  "compiled_at": "2026-11-11T10:02:26.854950Z",
+  "state_revision": 266,
   "daily_progress": {
     "total": 16,
-    "new": 5,
+    "new": 4,
     "review": 10,
-    "done": 1
+    "done": 2
   },
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
@@ -208,7 +208,9 @@
     "087170fb-9933-484d-8a5a-dcec9985c4a8",
     "53113da9-e26c-421d-ac41-87712f61aeb9",
     "8fa0420b-6bec-4030-bdb4-829551862e60",
-    "e1648e63-63da-4828-8814-9fac097d08e5"
+    "e1648e63-63da-4828-8814-9fac097d08e5",
+    "212f8e75-451a-419d-ad88-18892620514f",
+    "f99e4384-9dcc-4605-acd4-0de938ced489"
   ],
   "cards": [
     {
@@ -410,39 +412,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-10-19-hsk-0047",
-      "front": {
-        "text": "\u9019\u500b\u623f\u9593\u5f88\u5927\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This room is very big.",
-        "notes": "zh\u00e8 ge f\u00e1ngji\u0101n h\u011bn d\u00e0.\n\n\u5927: adjective meaning 'big' or 'large'; functions as a predicative adjective after the adverb \u5f88 to describe the noun \u9019\u500b\u623f\u9593\u3002"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-09T09:37:35.041000Z",
-        "next_due_at": "2026-11-10T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-10-20-hsk-0048",
       "front": {
         "text": "\u6211\u5011\u5728\u5546\u5e97\u8cb7\u6771\u897f\u3002",
@@ -551,27 +520,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-11-10-hsk-0054",
-      "front": {
-        "text": "\u6211\u5011\u660e\u5929\u56de\u5bb6\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We will return home tomorrow.",
-        "notes": "W\u01d2men m\u00edngti\u0101n hu\u00ed ji\u0101\u3002\n\n\u56de is a verb meaning 'to return' or 'to go back'; here it indicates going back home."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-11-10-hsk-0055",
       "front": {
         "text": "\u6211\u5011\u5728\u5b78\u6821\u5de5\u4f5c\u3002",
@@ -638,6 +586,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-11-11T09:58:03.950000Z",
         "next_due_at": "2026-11-11T10:08:03.950000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-11-10-hsk-0054",
+      "front": {
+        "text": "\u6211\u5011\u660e\u5929\u56de\u5bb6\u3002",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "We will return home tomorrow.",
+        "notes": "W\u01d2men m\u00edngti\u0101n hu\u00ed ji\u0101\u3002\n\n\u56de is a verb meaning 'to return' or 'to go back'; here it indicates going back home."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-11T10:11:29.587000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-11T10:01:29.587000Z",
+        "next_due_at": "2026-11-11T10:11:29.587000Z"
       },
       "schedule_previews": {
         "again": "10m",

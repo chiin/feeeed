@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-11",
   "batch_date": "2026-11-11",
-  "compiled_at": "2026-11-11T10:01:37.234045Z",
-  "state_revision": 243,
+  "compiled_at": "2026-11-11T10:02:26.854950Z",
+  "state_revision": 244,
   "source_revisions": {
     "hsk": 2903,
-    "mandarin_sentences": 264
+    "mandarin_sentences": 266
   },
   "daily_progress": {
     "total": 255,
-    "new": 40,
+    "new": 39,
     "review": 200,
-    "done": 15
+    "done": 16
   },
   "processed_event_ids": [
     "0468edf2-72f3-4c91-918c-4ea0880c8e3f",
@@ -1211,7 +1211,9 @@
     "087170fb-9933-484d-8a5a-dcec9985c4a8",
     "53113da9-e26c-421d-ac41-87712f61aeb9",
     "8fa0420b-6bec-4030-bdb4-829551862e60",
-    "e1648e63-63da-4828-8814-9fac097d08e5"
+    "e1648e63-63da-4828-8814-9fac097d08e5",
+    "212f8e75-451a-419d-ad88-18892620514f",
+    "f99e4384-9dcc-4605-acd4-0de938ced489"
   ],
   "cards": [
     {
@@ -1480,13 +1482,25 @@
         "notes": "W\u01d2men m\u00edngti\u0101n hu\u00ed ji\u0101\u3002\n\n\u56de is a verb meaning 'to return' or 'to go back'; here it indicates going back home."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-11T10:11:29.587000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-11T10:01:29.587000Z",
+        "next_due_at": "2026-11-11T10:11:29.587000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -1521,42 +1535,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-10-19-hsk-0047",
-      "front": {
-        "text": "\u9019\u500b\u623f\u9593\u5f88\u5927\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This room is very big.",
-        "notes": "zh\u00e8 ge f\u00e1ngji\u0101n h\u011bn d\u00e0.\n\n\u5927: adjective meaning 'big' or 'large'; functions as a predicative adjective after the adverb \u5f88 to describe the noun \u9019\u500b\u623f\u9593\u3002"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-09T09:37:35.041000Z",
-        "next_due_at": "2026-11-10T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0428",
@@ -3259,8 +3237,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "2d",
-        "good": "2d",
-        "easy": "4d"
+        "good": "3d",
+        "easy": "5d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
