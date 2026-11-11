@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-11",
   "batch_date": "2026-11-11",
-  "compiled_at": "2026-11-11T09:58:18.903709Z",
-  "state_revision": 242,
+  "compiled_at": "2026-11-11T09:58:44.863852Z",
+  "state_revision": 243,
   "source_revisions": {
     "hsk": 2895,
-    "mandarin_sentences": 262
+    "mandarin_sentences": 264
   },
   "daily_progress": {
     "total": 255,
-    "new": 41,
+    "new": 40,
     "review": 207,
-    "done": 7
+    "done": 8
   },
   "processed_event_ids": [
     "a77c9f7a-e5ea-4c76-9c8d-06b1ebd6ad8b",
@@ -1209,7 +1209,9 @@
     "2b03d5bc-0991-4469-a280-a926e918c942",
     "a7e93246-cc00-4730-98c3-1ad23e46ca0c",
     "087170fb-9933-484d-8a5a-dcec9985c4a8",
-    "53113da9-e26c-421d-ac41-87712f61aeb9"
+    "53113da9-e26c-421d-ac41-87712f61aeb9",
+    "8fa0420b-6bec-4030-bdb4-829551862e60",
+    "e1648e63-63da-4828-8814-9fac097d08e5"
   ],
   "cards": [
     {
@@ -1400,13 +1402,25 @@
         "notes": "Q\u00f9 ni\u00e1n w\u01d2men z\u00e0i B\u011bij\u012bng xu\u00e9x\u00ed H\u00e0ny\u01d4\u3002\n\n\u5e74 means 'year'; here it forms part of the time expression \u53bb\u5e74 ('last year'), which sets the time frame for the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-11T10:08:03.950000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-11T09:58:03.950000Z",
+        "next_due_at": "2026-11-11T10:08:03.950000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -1675,42 +1689,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-28-hsk-0038",
-      "front": {
-        "text": "\u66f8\u5728\u623f\u9593\u88e1\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The book is inside the room.",
-        "notes": "Sh\u016b z\u00e0i f\u00e1ngji\u0101n l\u01d0.\n\n\u88e1 (l\u01d0) indicates interior location; here it follows the noun \u623f\u9593 to form the location phrase \u2018in the room\u2019."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.7675797312968465,
-        "difficulty": 9.181340900503857,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-10T15:45:50.660000Z",
-        "next_due_at": "2026-11-10T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0413",
