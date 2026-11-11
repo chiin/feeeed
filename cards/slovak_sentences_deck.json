@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-11",
   "batch_date": "2026-11-11",
-  "compiled_at": "2026-11-11T04:06:55.267420Z",
-  "state_revision": 287,
+  "compiled_at": "2026-11-11T04:07:16.313598Z",
+  "state_revision": 292,
   "daily_progress": {
     "total": 16,
-    "new": 4,
-    "review": 6,
-    "done": 6
+    "new": 2,
+    "review": 4,
+    "done": 10
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -232,7 +232,12 @@
     "81bbdfbf-0e82-4103-905e-70570a7b2bb6",
     "1c3d718f-45aa-438e-b485-c6c5f2836fb4",
     "8070f135-affb-4910-a8e6-7a3fb36bd433",
-    "9b8f8113-e432-415a-8c7e-c496f845c4ed"
+    "9b8f8113-e432-415a-8c7e-c496f845c4ed",
+    "2c6ae2a5-829d-4d57-96a0-15bf96cc4054",
+    "259584a3-a4bf-4f61-94e4-9ab2cd77ebe1",
+    "fdee2d77-7e2f-472f-acfe-db3be6320b4d",
+    "b2094aa0-d165-4915-a0a2-b0df5d9bb976",
+    "10ee114e-d239-432f-82f5-aeba89c72a0f"
   ],
   "cards": [
     {
@@ -259,39 +264,6 @@
         "lapses": 5,
         "last_rating": "hard",
         "last_reviewed_at": "2026-11-10T14:38:41.863000Z",
-        "next_due_at": "2026-11-10T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.001,
-        "difficulty": 9.970609445469275,
-        "interval_days": 1,
-        "reviews": 13,
-        "passing_reviews": 0,
-        "lapses": 11,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-10T14:38:43.984000Z",
         "next_due_at": "2026-11-10T16:00:00Z"
       },
       "schedule_previews": {
@@ -335,39 +307,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-20-slovak-0043",
-      "front": {
-        "text": "Vy a va\u0161a kolegy\u0148a idete na poh\u00e1r?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "You and your colleague are going for a drink?",
-        "notes": "[vi a \u02c8va\u0283a \u02c8k\u0254le\u0261i\u0272a \u02c8\u026adete na \u02c8p\u0254ha\u02d0r]\n\nThe pronoun 'Vy' is the formal or plural 'you', serving as the subject of the sentence alongside 'va\u0161a kolegy\u0148a'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.704753954314541,
-        "difficulty": 8.365481854646477,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-10T14:02:22.733000Z",
-        "next_due_at": "2026-11-10T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-28-slovak-0049",
       "front": {
         "text": "M\u00e1\u0161 letenku, ke\u010f ide\u0161 do Bratislavy?",
@@ -401,60 +340,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-28-slovak-0053",
-      "front": {
-        "text": "Maj\u00fa ve\u013emi r\u00e1di franc\u00faz\u0161tinu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "They really like French.",
-        "notes": "[\u02c8maju \u02c8v\u025blmi \u02c8ra\u02d0di fra\u02c8u\u0292t\u0283i\u02d0nu]\n\nThe target 'maj\u00fa' is the third-person plural present tense of the verb 'ma\u0165' (to have), meaning 'they have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212,
-        "difficulty": 7.604209769076838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-10T14:57:56.945000Z",
-        "next_due_at": "2026-11-10T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-10-slovak-0059",
-      "front": {
-        "text": "Vy ste v meste.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "You are in the city.",
-        "notes": "[ste]\n\nThe word \"ste\" is the second-person plural present tense form of the verb \"by\u0165\" (to be), meaning \"you are\", which agrees with the plural pronoun \"Vy\"."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-11-slovak-0060",
       "front": {
         "text": "Moji rodi\u010dia s\u00fa v kuchyni.",
@@ -464,27 +349,6 @@
       "back": {
         "text": "My parents are in the kitchen.",
         "notes": "[su\u02d0]\n\ns\u00fa \u2013 third-person plural present of by\u0165 \u2018to be\u2019; here \u2018they are\u2019, agreeing with the plural subject rodi\u010dia."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-11-slovak-0061",
-      "front": {
-        "text": "ty si J\u00e1n",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you are Jan",
-        "notes": null
       },
       "presentation": "text_reading",
       "available_at": "2026-11-10T16:00:00Z",
@@ -515,6 +379,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0021",
+      "front": {
+        "text": "Slovenka Ana spravila na mieste konci knihy.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak woman Ana finished the book at the place.",
+        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-11T04:16:10.512000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.001,
+        "difficulty": 9.97556789387836,
+        "interval_days": 0,
+        "reviews": 14,
+        "passing_reviews": 0,
+        "lapses": 12,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-11T04:06:10.512000Z",
+        "next_due_at": "2026-11-11T04:16:10.512000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
