@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-11",
   "batch_date": "2026-11-11",
-  "compiled_at": "2026-11-11T04:00:39.932808Z",
-  "state_revision": 284,
+  "compiled_at": "2026-11-11T04:01:10.789933Z",
+  "state_revision": 287,
   "daily_progress": {
     "total": 16,
-    "new": 6,
-    "review": 7,
-    "done": 3
+    "new": 4,
+    "review": 6,
+    "done": 6
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -229,7 +229,10 @@
     "c443d5ee-b6e0-417d-ba73-f2095323476c",
     "1e7f4ff8-e8c7-4966-9992-6944cf17c3f6",
     "9e08881b-8584-49d1-913c-f931e1289726",
-    "81bbdfbf-0e82-4103-905e-70570a7b2bb6"
+    "81bbdfbf-0e82-4103-905e-70570a7b2bb6",
+    "1c3d718f-45aa-438e-b485-c6c5f2836fb4",
+    "8070f135-affb-4910-a8e6-7a3fb36bd433",
+    "9b8f8113-e432-415a-8c7e-c496f845c4ed"
   ],
   "cards": [
     {
@@ -431,39 +434,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-28-slovak-0054",
-      "front": {
-        "text": "Chcem len by\u0165 \u0161\u0165astn\u00fd.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I just want to be happy.",
-        "notes": "/b\u026at/\n\nby\u0165 \u2013 infinitive form of the verb 'by\u0165' (to be)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212,
-        "difficulty": 7.604209769076838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-10T14:38:49.093000Z",
-        "next_due_at": "2026-11-10T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-10-slovak-0059",
       "front": {
         "text": "Vy ste v meste.",
@@ -514,48 +484,6 @@
       },
       "back": {
         "text": "you are Jan",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-11-slovak-0063",
-      "front": {
-        "text": "sme tu",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "we are here",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-11-slovak-0064",
-      "front": {
-        "text": "to je kufor",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "that is a suitcase",
         "notes": null
       },
       "presentation": "text_reading",
