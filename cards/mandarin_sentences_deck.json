@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-11",
   "batch_date": "2026-11-11",
-  "compiled_at": "2026-11-11T10:09:16.433547Z",
-  "state_revision": 267,
+  "compiled_at": "2026-11-11T10:18:25.077452Z",
+  "state_revision": 268,
   "daily_progress": {
     "total": 16,
     "new": 4,
-    "review": 9,
-    "done": 3
+    "review": 8,
+    "done": 4
   },
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
@@ -211,7 +211,8 @@
     "e1648e63-63da-4828-8814-9fac097d08e5",
     "212f8e75-451a-419d-ad88-18892620514f",
     "f99e4384-9dcc-4605-acd4-0de938ced489",
-    "85d6f4d9-3cdf-4d6e-8bad-fe163dc462df"
+    "85d6f4d9-3cdf-4d6e-8bad-fe163dc462df",
+    "36e4cf17-9f91-44a8-ad84-c8abefe514f8"
   ],
   "cards": [
     {
@@ -341,9 +342,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
+        "hard": "9d",
+        "good": "14d",
+        "easy": "24d"
       }
     },
     {
@@ -560,39 +561,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-11-10-hsk-0054",
-      "front": {
-        "text": "\u6211\u5011\u660e\u5929\u56de\u5bb6\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We will return home tomorrow.",
-        "notes": "W\u01d2men m\u00edngti\u0101n hu\u00ed ji\u0101\u3002\n\n\u56de is a verb meaning 'to return' or 'to go back'; here it indicates going back home."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-11T10:11:29.587000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-11T10:01:29.587000Z",
-        "next_due_at": "2026-11-11T10:11:29.587000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     }
   ]
