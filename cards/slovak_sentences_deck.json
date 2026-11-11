@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-11",
   "batch_date": "2026-11-11",
-  "compiled_at": "2026-11-11T02:35:30.922977Z",
-  "state_revision": 281,
+  "compiled_at": "2026-11-11T04:00:39.932808Z",
+  "state_revision": 284,
   "daily_progress": {
     "total": 16,
-    "new": 7,
-    "review": 9,
-    "done": 0
+    "new": 6,
+    "review": 7,
+    "done": 3
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -226,7 +226,10 @@
     "159cbf00-af7d-4d62-a995-d8d45dbd4be7",
     "182a2158-a5c1-4474-b193-c21e3424e8ee",
     "f243585f-ace3-4282-ab06-8786fb85a8e2",
-    "c443d5ee-b6e0-417d-ba73-f2095323476c"
+    "c443d5ee-b6e0-417d-ba73-f2095323476c",
+    "1e7f4ff8-e8c7-4966-9992-6944cf17c3f6",
+    "9e08881b-8584-49d1-913c-f931e1289726",
+    "81bbdfbf-0e82-4103-905e-70570a7b2bb6"
   ],
   "cards": [
     {
@@ -286,39 +289,6 @@
         "lapses": 11,
         "last_rating": "hard",
         "last_reviewed_at": "2026-11-10T14:38:43.984000Z",
-        "next_due_at": "2026-11-10T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0024",
-      "front": {
-        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The English man Tom bought fresh bread at the market.",
-        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.002309019673568664,
-        "difficulty": 9.970514919218479,
-        "interval_days": 1,
-        "reviews": 11,
-        "passing_reviews": 0,
-        "lapses": 9,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-10T14:19:02.160000Z",
         "next_due_at": "2026-11-10T16:00:00Z"
       },
       "schedule_previews": {
@@ -418,39 +388,6 @@
         "lapses": 1,
         "last_rating": "hard",
         "last_reviewed_at": "2026-11-10T12:55:30.387000Z",
-        "next_due_at": "2026-11-10T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0052",
-      "front": {
-        "text": "M\u00e1te chu\u0165 na \u010daj, pani Nov\u00e1kov\u00e1?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Would you like some tea, Mrs. Novakova?",
-        "notes": "[\u02c8ma\u02d0te \u02c8xu\u02d0t na \u02c8t\u0283aj \u02c8pa\u02d0ni \u02c8n\u0254va\u02d0k\u0254va\u02d0]\n\nThe target 'm\u00e1te' is the second-person plural present tense of the verb 'ma\u0165' (to have), meaning 'you (plural) have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212,
-        "difficulty": 7.604209769076838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-10T12:55:34.770000Z",
         "next_due_at": "2026-11-10T16:00:00Z"
       },
       "schedule_previews": {
@@ -640,27 +577,6 @@
       },
       "back": {
         "text": "do you have a suitcase?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-10T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-11-slovak-0066",
-      "front": {
-        "text": "ty si Jana?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "are you Jana?",
         "notes": null
       },
       "presentation": "text_reading",
