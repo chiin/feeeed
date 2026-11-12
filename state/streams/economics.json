@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 360,
+  "revision": 361,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -398,7 +398,9 @@
       "2026-11-12T14:00:00Z"
     ],
     "processed_reminder_slots": [
-      "2026-11-12T02:00:00Z"
+      "2026-11-12T02:00:00Z",
+      "2026-11-12T07:00:00Z",
+      "2026-11-12T09:00:00Z"
     ]
   },
   "next_release_at": "2026-11-12T16:00:00Z",
@@ -449,6 +451,22 @@
       "pdf_id": "article_044_The_role_of_money.pdf",
       "title": "Article 044 The Role Of Money",
       "published_at": "2026-11-12T02:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261112T070000Z",
+      "batch_date": "2026-11-12",
+      "pdf_id": "article_044_The_role_of_money.pdf",
+      "title": "Article 044 The Role Of Money",
+      "published_at": "2026-11-12T07:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "economics-pdf-reminder-20261112T090000Z",
+      "batch_date": "2026-11-12",
+      "pdf_id": "article_044_The_role_of_money.pdf",
+      "title": "Article 044 The Role Of Money",
+      "published_at": "2026-11-12T09:00:00Z",
       "remaining": 5
     }
   ]
