@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 384,
+  "revision": 386,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -403,76 +403,54 @@
     }
   },
   "daily_batch": {
-    "id": "2026-11-15",
-    "date": "2026-11-15",
-    "released_at": "2026-11-14T16:25:43.446817Z",
+    "id": "2026-11-16",
+    "date": "2026-11-16",
+    "released_at": "2026-11-15T16:09:44.742930Z",
     "release_summary_ids": [
-      "article_044_The_role_of_money.pdf",
-      "article_045_Fiat_and_commodity_money.pdf",
-      "article_046_Money_supply.pdf",
-      "article_047_Money_creation.pdf",
-      "article_048_The_demand_for_money.pdf"
+      "article_049_Interest_rates.pdf",
+      "article_050_Seigniorage.pdf",
+      "article_051_Money_illusion.pdf",
+      "article_052_The_Fisher_effect.pdf",
+      "article_053_Banks_and_financial_intermedia.pdf"
     ],
-    "active_ids": [],
+    "active_ids": [
+      "article_049_Interest_rates.pdf",
+      "article_050_Seigniorage.pdf",
+      "article_051_Money_illusion.pdf",
+      "article_052_The_Fisher_effect.pdf",
+      "article_053_Banks_and_financial_intermedia.pdf"
+    ],
     "selected_ids": [
-      "article_044_The_role_of_money.pdf",
-      "article_045_Fiat_and_commodity_money.pdf",
-      "article_046_Money_supply.pdf",
-      "article_047_Money_creation.pdf",
-      "article_048_The_demand_for_money.pdf"
+      "article_049_Interest_rates.pdf",
+      "article_050_Seigniorage.pdf",
+      "article_051_Money_illusion.pdf",
+      "article_052_The_Fisher_effect.pdf",
+      "article_053_Banks_and_financial_intermedia.pdf"
     ],
-    "opened_ids": [
-      "article_044_The_role_of_money.pdf",
-      "article_045_Fiat_and_commodity_money.pdf",
-      "article_046_Money_supply.pdf",
-      "article_047_Money_creation.pdf",
-      "article_048_The_demand_for_money.pdf"
-    ],
+    "opened_ids": [],
     "segments": [
       {
         "kind": "initial",
         "ids": [
-          "article_044_The_role_of_money.pdf",
-          "article_045_Fiat_and_commodity_money.pdf",
-          "article_046_Money_supply.pdf",
-          "article_047_Money_creation.pdf",
-          "article_048_The_demand_for_money.pdf"
+          "article_049_Interest_rates.pdf",
+          "article_050_Seigniorage.pdf",
+          "article_051_Money_illusion.pdf",
+          "article_052_The_Fisher_effect.pdf",
+          "article_053_Banks_and_financial_intermedia.pdf"
         ]
       }
     ],
     "reminder_slots": [
-      "2026-11-15T01:00:00Z",
-      "2026-11-15T02:00:00Z",
-      "2026-11-15T07:00:00Z",
-      "2026-11-15T08:00:00Z",
-      "2026-11-15T14:00:00Z"
+      "2026-11-16T03:00:00Z",
+      "2026-11-16T06:00:00Z",
+      "2026-11-16T09:00:00Z",
+      "2026-11-16T12:00:00Z",
+      "2026-11-16T14:00:00Z"
     ],
-    "processed_reminder_slots": [
-      "2026-11-15T01:00:00Z",
-      "2026-11-15T02:00:00Z",
-      "2026-11-15T07:00:00Z",
-      "2026-11-15T08:00:00Z",
-      "2026-11-15T14:00:00Z"
-    ]
+    "processed_reminder_slots": []
   },
-  "next_release_at": "2026-11-15T16:00:00Z",
+  "next_release_at": "2026-11-16T16:00:00Z",
   "feed_reminders": [
-    {
-      "id": "economics-pdf-reminder-20261114T050000Z",
-      "batch_date": "2026-11-14",
-      "pdf_id": "article_044_The_role_of_money.pdf",
-      "title": "Article 044 The Role Of Money",
-      "published_at": "2026-11-14T05:00:00Z",
-      "remaining": 5
-    },
-    {
-      "id": "economics-pdf-reminder-20261114T060000Z",
-      "batch_date": "2026-11-14",
-      "pdf_id": "article_044_The_role_of_money.pdf",
-      "title": "Article 044 The Role Of Money",
-      "published_at": "2026-11-14T06:00:00Z",
-      "remaining": 5
-    },
     {
       "id": "economics-pdf-reminder-20261115T010000Z",
       "batch_date": "2026-11-15",
