@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 354,
+  "revision": 355,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -274,7 +274,9 @@
     "processed_reminder_slots": [
       "2026-11-15T00:00:00Z",
       "2026-11-15T02:00:00Z",
-      "2026-11-15T10:00:00Z"
+      "2026-11-15T10:00:00Z",
+      "2026-11-15T12:00:00Z",
+      "2026-11-15T13:00:00Z"
     ]
   },
   "next_release_at": "2026-11-15T16:00:00Z",
@@ -341,6 +343,22 @@
       "pdf_id": "article_079_Toleration.pdf",
       "title": "Article 079 Toleration",
       "published_at": "2026-11-15T10:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "politics-pdf-reminder-20261115T120000Z",
+      "batch_date": "2026-11-15",
+      "pdf_id": "article_079_Toleration.pdf",
+      "title": "Article 079 Toleration",
+      "published_at": "2026-11-15T12:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "politics-pdf-reminder-20261115T130000Z",
+      "batch_date": "2026-11-15",
+      "pdf_id": "article_079_Toleration.pdf",
+      "title": "Article 079 Toleration",
+      "published_at": "2026-11-15T13:00:00Z",
       "remaining": 5
     }
   ]
