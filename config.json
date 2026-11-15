@@ -69,7 +69,7 @@
       "program_id": "mandarin_reading",
       "path": "generated/mandarin_reading/sentences.json",
       "feed_title": "Mandarin Sentence Practice",
-      "new_cards_per_day": 10,
+      "new_cards_per_day": 20,
       "front_text_scale": 1.5
     },
     "slovak_vocab": {
@@ -112,8 +112,8 @@
       "mode": "text_reading",
       "prompt_style": "formal written Mandarin",
       "promotion_threshold_sentence_passes": 3,
-      "max_active_word_buffer": 30,
-      "daily_sentence_target": 10,
+      "max_active_word_buffer": 60,
+      "daily_sentence_target": 20,
       "mastery_interval_days": 21,
       "known_pool_limit": 200,
       "sentence_lifecycle": "disposable_scaffold",
