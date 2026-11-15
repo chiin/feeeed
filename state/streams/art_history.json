@@ -1,11 +1,13 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_with_replacement",
-  "revision": 319,
+  "revision": 324,
   "completed_ids": [],
   "completion_counts": {
     "article_002_Stone_Age_sculpture.pdf": 1,
-    "article_003_Stone_Age_painting.pdf": 1
+    "article_003_Stone_Age_painting.pdf": 1,
+    "article_004_Sumerian_and_Akkadian_art.pdf": 1,
+    "article_005_Babylonian_and_Assyrian_art.pdf": 1
   },
   "processed_events": {
     "15d26b50-d32b-4374-9b49-e131f8f0840b": {
@@ -39,6 +41,26 @@
     "a784e04f-4e57-4aa5-b652-4b87790bce25": {
       "processed_at": "2026-10-29T00:23:15.604704Z",
       "status": "applied"
+    },
+    "31d21ed3-fb9a-47f8-be6f-12ff4f6ae96b": {
+      "processed_at": "2026-11-15T15:51:16.030312Z",
+      "status": "applied"
+    },
+    "81d2dcb2-9d61-4eb3-b8c2-792b26360652": {
+      "processed_at": "2026-11-15T15:51:16.030312Z",
+      "status": "applied"
+    },
+    "175e9948-27a1-4929-aef9-9fce6a5c239a": {
+      "processed_at": "2026-11-15T15:51:16.030312Z",
+      "status": "applied"
+    },
+    "72a630f6-6340-4452-b768-a14d5c0b9579": {
+      "processed_at": "2026-11-15T15:51:16.030312Z",
+      "status": "applied"
+    },
+    "41adb35b-9164-466e-abca-ebec254eff08": {
+      "processed_at": "2026-11-15T15:51:16.030312Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -53,8 +75,6 @@
       "article_160_De_StijlNeo-Plasticism.pdf"
     ],
     "active_ids": [
-      "article_004_Sumerian_and_Akkadian_art.pdf",
-      "article_005_Babylonian_and_Assyrian_art.pdf",
       "article_006_Ancient_Egyptian_sculpture.pdf",
       "article_126_Still_life.pdf",
       "article_160_De_StijlNeo-Plasticism.pdf"
@@ -66,7 +86,11 @@
       "article_126_Still_life.pdf",
       "article_160_De_StijlNeo-Plasticism.pdf"
     ],
-    "opened_ids": [],
+    "opened_ids": [
+      "article_004_Sumerian_and_Akkadian_art.pdf",
+      "article_005_Babylonian_and_Assyrian_art.pdf",
+      "article_006_Ancient_Egyptian_sculpture.pdf"
+    ],
     "segments": [
       {
         "kind": "initial",
