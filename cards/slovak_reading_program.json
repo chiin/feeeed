@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-16",
   "batch_date": "2026-11-16",
-  "compiled_at": "2026-11-16T04:00:50.880589Z",
-  "state_revision": 234,
+  "compiled_at": "2026-11-16T04:01:14.446728Z",
+  "state_revision": 236,
   "source_revisions": {
     "slovak_vocab": 610,
-    "slovak_sentences": 304
+    "slovak_sentences": 306
   },
   "daily_progress": {
     "total": 88,
     "new": 17,
-    "review": 65,
-    "done": 6
+    "review": 63,
+    "done": 8
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -794,7 +794,9 @@
     "7aa95af0-fa2e-4234-a951-045cb194bab0",
     "0c10f4e8-29e6-44bf-aca5-7d31f4f7cb85",
     "da6cd301-4ff4-42fc-b35e-657c4daf8453",
-    "64a0d18b-bc3d-4d57-9b6e-b9d120f31d22"
+    "64a0d18b-bc3d-4d57-9b6e-b9d120f31d22",
+    "25228393-c822-452d-af52-f63febe6664f",
+    "e6047793-c6b8-4d91-896b-7fcaf57ae0ea"
   ],
   "cards": [
     {
@@ -868,78 +870,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0052",
-      "front": {
-        "text": "M\u00e1te chu\u0165 na \u010daj, pani Nov\u00e1kov\u00e1?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Would you like some tea, Mrs. Novakova?",
-        "notes": "[\u02c8ma\u02d0te \u02c8xu\u02d0t na \u02c8t\u0283aj \u02c8pa\u02d0ni \u02c8n\u0254va\u02d0k\u0254va\u02d0]\n\nThe target 'm\u00e1te' is the second-person plural present tense of the verb 'ma\u0165' (to have), meaning 'you (plural) have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212,
-        "difficulty": 8.39479117018528,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-11T04:00:17.827000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-11-10-slovak-0059",
-      "front": {
-        "text": "Vy ste v meste.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "You are in the city.",
-        "notes": "[ste]\n\nThe word \"ste\" is the second-person plural present tense form of the verb \"by\u0165\" (to be), meaning \"you are\", which agrees with the plural pronoun \"Vy\"."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-11T04:05:47.149000Z",
-        "next_due_at": "2026-11-12T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0153",
@@ -2805,9 +2735,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "6d",
-        "good": "9d",
-        "easy": "16d"
+        "hard": "7d",
+        "good": "10d",
+        "easy": "18d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
