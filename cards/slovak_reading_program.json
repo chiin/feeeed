@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-16",
   "batch_date": "2026-11-16",
-  "compiled_at": "2026-11-16T04:16:55.062304Z",
-  "state_revision": 238,
+  "compiled_at": "2026-11-16T04:17:22.108785Z",
+  "state_revision": 240,
   "source_revisions": {
     "slovak_vocab": 619,
-    "slovak_sentences": 308
+    "slovak_sentences": 310
   },
   "daily_progress": {
     "total": 88,
     "new": 14,
-    "review": 56,
-    "done": 18
+    "review": 54,
+    "done": 20
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -807,7 +807,9 @@
     "25228393-c822-452d-af52-f63febe6664f",
     "e6047793-c6b8-4d91-896b-7fcaf57ae0ea",
     "f49eefd2-19c0-4a24-af2c-76d62c05612d",
-    "960871e7-5d9d-4cb4-aaba-eb94b0657c4d"
+    "960871e7-5d9d-4cb4-aaba-eb94b0657c4d",
+    "6c50ba2d-56f8-43b9-9bdc-7f616e6450f5",
+    "766970fc-118b-4e6c-bc05-2aa6acbfc2a1"
   ],
   "cards": [
     {
@@ -955,42 +957,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-28-slovak-0049",
-      "front": {
-        "text": "M\u00e1\u0161 letenku, ke\u010f ide\u0161 do Bratislavy?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Do you have a ticket when you go to Bratislava?",
-        "notes": "[ma\u02d0\u0283 \u02c8letenka \u02c8ke\u02d0d \u02c8ide\u0283 do bra\u02c8t\u026asla\u02d0vi]\n\nThe target 'm\u00e1\u0161' is the second-person singular present tense of the verb 'ma\u0165' (to have), meaning 'you have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.10314065007785231,
-        "difficulty": 9.17883322115958,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-11T04:34:25.225000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak-0172",
       "entry_type": "term",
       "front": {
@@ -1025,42 +991,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-11-slovak-0066",
-      "front": {
-        "text": "ty si Jana?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "are you Jana?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-15T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-11T04:00:09.435000Z",
-        "next_due_at": "2026-11-12T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0165",
