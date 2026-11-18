@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-18",
   "batch_date": "2026-11-18",
-  "compiled_at": "2026-11-18T05:11:00.947257Z",
-  "state_revision": 248,
+  "compiled_at": "2026-11-18T05:27:22.020908Z",
+  "state_revision": 249,
   "source_revisions": {
     "slovak_vocab": 668,
-    "slovak_sentences": 321
+    "slovak_sentences": 323
   },
   "daily_progress": {
     "total": 74,
     "new": 13,
-    "review": 38,
-    "done": 23
+    "review": 37,
+    "done": 24
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -865,7 +865,9 @@
     "473166bb-8a02-4d16-85fb-146d5a85f109",
     "66ddf740-5f56-4378-9338-1ca1c11d8ede",
     "d7eb8c69-a2f7-4d0c-860a-1b8e5db70a75",
-    "cff4427d-ca70-493c-a528-6c49f9d6d3b5"
+    "cff4427d-ca70-493c-a528-6c49f9d6d3b5",
+    "58d9adc2-cd62-45f5-ae8d-9b97a92df43b",
+    "acb5885a-9f84-41c0-b314-2b52d4471d32"
   ],
   "cards": [
     {
@@ -916,19 +918,19 @@
         "notes": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania\n\nSlov\u00e1k is the nominative masculine singular noun denoting a person of Slovak ethnic origin, serving as the subject of the sentence."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
+      "available_at": "2026-11-18T05:20:02.138000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.038100040867332194,
-        "difficulty": 9.946470306468596,
-        "interval_days": 1,
-        "reviews": 9,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.03158517715769755,
+        "difficulty": 9.96763352303498,
+        "interval_days": 0,
+        "reviews": 10,
         "passing_reviews": 2,
-        "lapses": 5,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-11T04:34:10.389000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
+        "lapses": 6,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-18T05:10:02.138000Z",
+        "next_due_at": "2026-11-18T05:20:02.138000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -975,42 +977,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-20-slovak-0043",
-      "front": {
-        "text": "Vy a va\u0161a kolegy\u0148a idete na poh\u00e1r?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "You and your colleague are going for a drink?",
-        "notes": "[vi a \u02c8va\u0283a \u02c8k\u0254le\u0261i\u0272a \u02c8\u026adete na \u02c8p\u0254ha\u02d0r]\n\nThe pronoun 'Vy' is the formal or plural 'you', serving as the subject of the sentence alongside 'va\u0161a kolegy\u0148a'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.757746268235338,
-        "difficulty": 8.352344742088668,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-11T04:06:03.077000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "3d",
-        "good": "4d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak_reading-discovered-696c6b11997b70b0",
