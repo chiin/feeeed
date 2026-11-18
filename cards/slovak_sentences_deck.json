@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-18",
   "batch_date": "2026-11-18",
-  "compiled_at": "2026-11-18T05:54:04.481913Z",
-  "state_revision": 326,
+  "compiled_at": "2026-11-18T05:55:51.930254Z",
+  "state_revision": 328,
   "daily_progress": {
     "total": 17,
     "new": 1,
-    "review": 8,
-    "done": 8
+    "review": 6,
+    "done": 10
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -264,7 +264,9 @@
     "acb5885a-9f84-41c0-b314-2b52d4471d32",
     "5a476e5b-5431-44c0-bd78-67497c8c4134",
     "89541716-79c2-49b6-ac10-f91ebfc50cab",
-    "ad9861f5-ae76-4251-84d4-c41073cf27d5"
+    "ad9861f5-ae76-4251-84d4-c41073cf27d5",
+    "10278edd-eb78-4a76-a746-4021f5a959ab",
+    "f60a6bb0-89f5-4006-862c-ebd40f8bd1d0"
   ],
   "cards": [
     {
@@ -466,39 +468,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-28-slovak-0049",
-      "front": {
-        "text": "M\u00e1\u0161 letenku, ke\u010f ide\u0161 do Bratislavy?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Do you have a ticket when you go to Bratislava?",
-        "notes": "[ma\u02d0\u0283 \u02c8letenka \u02c8ke\u02d0d \u02c8ide\u0283 do bra\u02c8t\u026asla\u02d0vi]\n\nThe target 'm\u00e1\u0161' is the second-person singular present tense of the verb 'ma\u0165' (to have), meaning 'you have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.8342885388721499,
-        "difficulty": 9.164882757235258,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-16T04:16:52.741000Z",
-        "next_due_at": "2026-11-16T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "2d",
-        "easy": "4d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-12-slovak-0062",
       "front": {
         "text": "Tu som v kaviarni, chcem k\u00e1vu s mliekom.",
@@ -517,39 +486,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0020",
-      "front": {
-        "text": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak \u0160tefan opened two doors with a key.",
-        "notes": "Slov\u00e1k \u0160tefan k\u013e\u00fa\u010dom otvoril dve vr\u00e1tania\n\nSlov\u00e1k is the nominative masculine singular noun denoting a person of Slovak ethnic origin, serving as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-18T05:20:02.138000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.03158517715769755,
-        "difficulty": 9.96763352303498,
-        "interval_days": 0,
-        "reviews": 10,
-        "passing_reviews": 2,
-        "lapses": 6,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-18T05:10:02.138000Z",
-        "next_due_at": "2026-11-18T05:20:02.138000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     }
   ]
