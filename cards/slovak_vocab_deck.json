@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-18",
   "batch_date": "2026-11-18",
-  "compiled_at": "2026-11-18T05:10:37.437770Z",
-  "state_revision": 664,
+  "compiled_at": "2026-11-18T05:11:00.947257Z",
+  "state_revision": 668,
   "daily_progress": {
     "total": 57,
-    "new": 14,
-    "review": 27,
-    "done": 16
+    "new": 12,
+    "review": 26,
+    "done": 19
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -612,7 +612,11 @@
     "ce86f661-9e0b-4569-ad6d-8ff75fa09cf0",
     "27f38958-5f72-49cc-9aac-23a0bd646924",
     "34dbbf93-c355-4dde-af3b-6dd2fe2872c1",
-    "76b59dea-00d1-4926-8069-3c6349f9ac46"
+    "76b59dea-00d1-4926-8069-3c6349f9ac46",
+    "1ccd387d-09e5-48b4-bc13-06729dd132e0",
+    "0e98cdf7-ec0d-43a3-b43b-95976aece12b",
+    "5ca716f2-fe55-44e6-84cc-ad61b6e1f0ca",
+    "1f05e337-c272-4598-ab8c-0a733e6353c8"
   ],
   "cards": [
     {
@@ -712,39 +716,6 @@
         "hard": "14d",
         "good": "21d",
         "easy": "38d"
-      }
-    },
-    {
-      "id": "slovak-0168",
-      "entry_type": "term",
-      "front": {
-        "text": "sestra",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sister",
-        "notes": null
-      },
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.2931,
-        "difficulty": 6.7404595108297,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-11T04:16:33.792000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "6d",
-        "good": "9d",
-        "easy": "15d"
       }
     },
     {
@@ -1042,39 +1013,6 @@
         "hard": "2d",
         "good": "3d",
         "easy": "5d"
-      }
-    },
-    {
-      "id": "slovak-0193",
-      "entry_type": "term",
-      "front": {
-        "text": "leniv\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "lazy",
-        "notes": null
-      },
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212,
-        "difficulty": 7.604209769076838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-16T04:16:42.434000Z",
-        "next_due_at": "2026-11-16T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
       }
     },
     {
@@ -1570,27 +1508,6 @@
       }
     },
     {
-      "id": "slovak-0198",
-      "entry_type": "term",
-      "front": {
-        "text": "niekedy",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sometimes",
-        "notes": null
-      },
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0202",
       "entry_type": "term",
       "front": {
@@ -1663,27 +1580,6 @@
       },
       "back": {
         "text": "I like swimming",
-        "notes": null
-      },
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0211",
-      "entry_type": "sentence",
-      "front": {
-        "text": "mus\u00edm varit' obed",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I have to cook lunch",
         "notes": null
       },
       "available_at": "2026-11-17T16:00:00Z",
@@ -1798,6 +1694,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak-0198",
+      "entry_type": "term",
+      "front": {
+        "text": "niekedy",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "sometimes",
+        "notes": null
+      },
+      "available_at": "2026-11-18T05:20:08.591000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-18T05:10:08.591000Z",
+        "next_due_at": "2026-11-18T05:20:08.591000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
