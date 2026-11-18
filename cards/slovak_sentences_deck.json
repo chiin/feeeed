@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-18",
   "batch_date": "2026-11-18",
-  "compiled_at": "2026-11-18T03:23:18.695325Z",
-  "state_revision": 316,
+  "compiled_at": "2026-11-18T04:36:35.645221Z",
+  "state_revision": 319,
   "daily_progress": {
     "total": 17,
     "new": 1,
-    "review": 15,
-    "done": 1
+    "review": 13,
+    "done": 3
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -254,7 +254,10 @@
     "f5fdbd95-87cd-40f1-a3db-f294f79fb5f0",
     "94c6b174-190a-46f0-bfb4-6dbf49df8f4b",
     "ff7b8f3d-97b8-4d03-a32c-af136a775a9c",
-    "94fd8a89-a9a5-428b-b284-390bc07f3c4c"
+    "94fd8a89-a9a5-428b-b284-390bc07f3c4c",
+    "9ce93121-a1b6-4fd1-92d0-f149dfb5cd0b",
+    "473166bb-8a02-4d16-85fb-146d5a85f109",
+    "66ddf740-5f56-4378-9338-1ca1c11d8ede"
   ],
   "cards": [
     {
@@ -386,7 +389,7 @@
         "again": "10m",
         "hard": "3d",
         "good": "4d",
-        "easy": "7d"
+        "easy": "8d"
       }
     },
     {
@@ -413,39 +416,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-10T14:22:48.731000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "14d",
-        "good": "21d",
-        "easy": "38d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0051",
-      "front": {
-        "text": "M\u00e1me v kufri chlieb a poh\u00e1r mlieka.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We have bread and a glass of milk in the trunk.",
-        "notes": "[\u02c8ma\u02d0me v \u02c8kufri \u02c8xl\u02b2eb a \u02c8po\u0261ar \u02c8ml\u02b2i\u02d0ka]\n\nThe target 'm\u00e1me' is the first-person plural present tense of the verb 'ma\u0165' (to have), meaning 'we have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-10T14:02:57.614000Z",
         "next_due_at": "2026-11-11T16:00:00Z"
       },
       "schedule_previews": {
@@ -489,39 +459,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-09-28-slovak-0055",
-      "front": {
-        "text": "Som v Bratislave a \u010dak\u00e1m na teba.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I am in Bratislava and waiting for you.",
-        "notes": "[som v bra\u02c8t\u026asla\u02d0ve a \u02c8t\u0283aka\u02d0m na \u02c8teba]\n\nThe target 'som' is the first-person singular present tense of the verb 'by\u0165' (to be), meaning 'I am' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-10T14:23:30.867000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "14d",
-        "good": "21d",
-        "easy": "38d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-09-29-slovak-0056",
       "front": {
         "text": "Ty si tu?",
@@ -555,39 +492,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-11-11-slovak-0060",
-      "front": {
-        "text": "Moji rodi\u010dia s\u00fa v kuchyni.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "My parents are in the kitchen.",
-        "notes": "[su\u02d0]\n\ns\u00fa \u2013 third-person plural present of by\u0165 \u2018to be\u2019; here \u2018they are\u2019, agreeing with the plural subject rodi\u010dia."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212,
-        "difficulty": 7.604209769076838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-11T07:13:58.830000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-11-slovak-0061",
       "front": {
         "text": "ty si J\u00e1n",
@@ -616,8 +520,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "7d",
-        "good": "11d",
-        "easy": "19d"
+        "good": "12d",
+        "easy": "21d"
       }
     },
     {
@@ -649,8 +553,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "7d",
-        "good": "11d",
-        "easy": "19d"
+        "good": "12d",
+        "easy": "21d"
       }
     },
     {
@@ -714,9 +618,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
+        "hard": "2d",
         "good": "2d",
-        "easy": "3d"
+        "easy": "4d"
       }
     },
     {
@@ -748,8 +652,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "3d",
-        "good": "3d",
-        "easy": "5d"
+        "good": "4d",
+        "easy": "6d"
       }
     },
     {
@@ -771,6 +675,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-28-slovak-0051",
+      "front": {
+        "text": "M\u00e1me v kufri chlieb a poh\u00e1r mlieka.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "We have bread and a glass of milk in the trunk.",
+        "notes": "[\u02c8ma\u02d0me v \u02c8kufri \u02c8xl\u02b2eb a \u02c8po\u0261ar \u02c8ml\u02b2i\u02d0ka]\n\nThe target 'm\u00e1me' is the first-person plural present tense of the verb 'ma\u0165' (to have), meaning 'we have' in this context."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-18T04:45:49.609000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.7178527669042931,
+        "difficulty": 7.394502741279718,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 1,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-18T04:35:49.609000Z",
+        "next_due_at": "2026-11-18T04:45:49.609000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
