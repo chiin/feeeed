@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_with_replacement",
-  "revision": 334,
+  "revision": 335,
   "completed_ids": [],
   "completion_counts": {
     "article_002_Stone_Age_sculpture.pdf": 1,
@@ -108,7 +108,9 @@
       "2026-11-18T06:00:00Z",
       "2026-11-18T13:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-11-18T00:00:00Z"
+    ]
   },
   "next_release_at": "2026-11-18T16:00:00Z",
   "feed_reminders": [
@@ -150,6 +152,14 @@
       "pdf_id": "article_006_Ancient_Egyptian_sculpture.pdf",
       "title": "Article 006 Ancient Egyptian Sculpture",
       "published_at": "2026-11-17T12:00:00Z",
+      "remaining": 5
+    },
+    {
+      "id": "art_history-pdf-reminder-20261118T000000Z",
+      "batch_date": "2026-11-18",
+      "pdf_id": "article_006_Ancient_Egyptian_sculpture.pdf",
+      "title": "Article 006 Ancient Egyptian Sculpture",
+      "published_at": "2026-11-18T00:00:00Z",
       "remaining": 5
     }
   ]
