@@ -5,16 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-11-18",
   "batch_date": "2026-11-18",
-  "compiled_at": "2026-11-18T09:34:50.120347Z",
-  "state_revision": 3349,
+  "compiled_at": "2026-11-18T09:35:11.939428Z",
+  "state_revision": 3350,
   "daily_progress": {
     "total": 233,
     "new": 1,
-    "review": 64,
-    "done": 168
+    "review": 63,
+    "done": 169
   },
   "processed_event_ids": [
-    "6bd2948d-6d39-489a-b083-d860bdec626d",
     "8649ab8f-a794-4f94-ac08-46656fb196fd",
     "0d9548f7-a7eb-41db-8179-24a09867b839",
     "e4416007-de22-4289-bfa7-0696d3696182",
@@ -1013,7 +1012,8 @@
     "dffaefb8-a6da-4823-b182-82b07e444027",
     "d79ec573-2aef-4406-a5b6-5decd5ddf05a",
     "7680d283-f0ff-4a09-8660-8c29d4b7a885",
-    "18e859ad-ad44-4791-bd7f-7af2d362199c"
+    "18e859ad-ad44-4791-bd7f-7af2d362199c",
+    "581572b9-8f72-47ab-8809-996a68c95fdd"
   ],
   "cards": [
     {
@@ -1941,7 +1941,7 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "2d",
+        "hard": "3d",
         "good": "4d",
         "easy": "7d"
       }
@@ -3096,45 +3096,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "hsk-0594",
-      "entry_type": "term",
-      "front": {
-        "text": "\u795d",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "zh\u00f9 - to wish (offer greetings)",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u795d",
-          "url": "https://www.dong-chinese.com/wiki/%E7%A5%9D"
-        }
-      ],
-      "available_at": "2026-11-18T09:28:01.323000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.004682013360461098,
-        "difficulty": 9.964319173862265,
-        "interval_days": 0,
-        "reviews": 6,
-        "passing_reviews": 0,
-        "lapses": 5,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-18T09:18:01.323000Z",
-        "next_due_at": "2026-11-18T09:28:01.323000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     },
     {
