@@ -2,19 +2,19 @@
   "schema_version": 1,
   "program_id": "slovak_reading",
   "title": "Slovak Vocabulary and Sentences",
-  "batch_id": "2026-11-18",
-  "batch_date": "2026-11-18",
-  "compiled_at": "2026-11-18T12:45:15.501737Z",
-  "state_revision": 260,
+  "batch_id": "2026-11-19",
+  "batch_date": "2026-11-19",
+  "compiled_at": "2026-11-18T21:09:23.286121Z",
+  "state_revision": 262,
   "source_revisions": {
-    "slovak_vocab": 706,
-    "slovak_sentences": 335
+    "slovak_vocab": 707,
+    "slovak_sentences": 336
   },
   "daily_progress": {
-    "total": 74,
-    "new": 0,
-    "review": 0,
-    "done": 74
+    "total": 30,
+    "new": 23,
+    "review": 7,
+    "done": 0
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -919,5 +919,810 @@
     "43fcf7c2-d36c-41a7-bf43-c59036a9f947",
     "49b2beaf-6186-408e-a5fc-4394c9cef134"
   ],
-  "cards": []
+  "cards": [
+    {
+      "id": "slovak_reading-2026-11-19-slovak-0068",
+      "front": {
+        "text": "ste tam?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "are you there?",
+        "notes": null
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak_reading-2026-11-18-slovak-0067",
+      "front": {
+        "text": "si Angli\u010danka?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "are you (f) English?",
+        "notes": null
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0021",
+      "front": {
+        "text": "Slovenka Ana spravila na mieste konci knihy.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak woman Ana finished the book at the place.",
+        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.011295392724454359,
+        "difficulty": 9.96465523123394,
+        "interval_days": 1,
+        "reviews": 16,
+        "passing_reviews": 0,
+        "lapses": 12,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-18T06:22:42.565000Z",
+        "next_due_at": "2026-11-18T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0232",
+      "entry_type": "term",
+      "front": {
+        "text": "ale Viera vie po anglicky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "but Viera knows English",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0024",
+      "front": {
+        "text": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The English man Tom bought fresh bread at the market.",
+        "notes": "Angli\u010dan Tom kupoval \u010derstv\u00fd chleb v trhu\n\nAngli\u010dan is the masculine singular noun indicating a male national from the United Kingdom, serving as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.034668355893063406,
+        "difficulty": 9.950917513167468,
+        "interval_days": 1,
+        "reviews": 13,
+        "passing_reviews": 1,
+        "lapses": 9,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-18T06:22:53.291000Z",
+        "next_due_at": "2026-11-18T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0227",
+      "entry_type": "term",
+      "front": {
+        "text": "po mad'arsky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Hungarian language (object)",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0122",
+      "entry_type": "term",
+      "front": {
+        "text": "mat' sa",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "to be feeling",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 9.410506436711517,
+        "difficulty": 7.37018264052428,
+        "interval_days": 9,
+        "reviews": 4,
+        "passing_reviews": 3,
+        "lapses": 1,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-10T14:23:19.154000Z",
+        "next_due_at": "2026-11-18T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "16d",
+        "good": "21d",
+        "easy": "30d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0228",
+      "entry_type": "term",
+      "front": {
+        "text": "po pol'sky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Polish language (object)",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0222",
+      "entry_type": "term",
+      "front": {
+        "text": "Viera vie hrat' hokej",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Viera knows how to play hockey",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0241",
+      "entry_type": "sentence",
+      "front": {
+        "text": "nerozumej\u00fa po anglicky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "they don't understand English",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0224",
+      "entry_type": "term",
+      "front": {
+        "text": "po anglicky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "English language (object)",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0238",
+      "entry_type": "term",
+      "front": {
+        "text": "jazyk",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "language; tongue",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0226",
+      "entry_type": "term",
+      "front": {
+        "text": "po \u010desky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Czech language (object)",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0225",
+      "entry_type": "term",
+      "front": {
+        "text": "po nemecky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "German language (object)",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0230",
+      "entry_type": "term",
+      "front": {
+        "text": "po franc\u00fazsky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "French language (object)",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0236",
+      "entry_type": "term",
+      "front": {
+        "text": "anglick\u00e1 kniha",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "an English book",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0240",
+      "entry_type": "sentence",
+      "front": {
+        "text": "rosumiete po slovensky?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "do you understand Slovak?",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0235",
+      "entry_type": "term",
+      "front": {
+        "text": "slovensk\u00fd list",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "a Slovak letter",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0233",
+      "entry_type": "term",
+      "front": {
+        "text": "hovorit'",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "to speak",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0157",
+      "entry_type": "term",
+      "front": {
+        "text": "v\u015bak",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "however; isn't it?",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.6964729097931573,
+        "difficulty": 9.435148832876964,
+        "interval_days": 1,
+        "reviews": 5,
+        "passing_reviews": 1,
+        "lapses": 1,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-18T05:09:48.603000Z",
+        "next_due_at": "2026-11-18T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-11-19-slovak-0069",
+      "front": {
+        "text": "s\u00fa doma?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "are they at home?",
+        "notes": null
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0231",
+      "entry_type": "term",
+      "front": {
+        "text": "p\u00e1n Kov\u00e1\u010d vie len po slovensky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Mr Kovac only knows Slovak",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0234",
+      "entry_type": "term",
+      "front": {
+        "text": "J\u00e1n hovori a \u010d\u00edta po nemecky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Jan speaks and reads German",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-28-slovak-0051",
+      "front": {
+        "text": "M\u00e1me v kufri chlieb a poh\u00e1r mlieka.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "We have bread and a glass of milk in the trunk.",
+        "notes": "[\u02c8ma\u02d0me v \u02c8kufri \u02c8xl\u02b2eb a \u02c8po\u0261ar \u02c8ml\u02b2i\u02d0ka]\n\nThe target 'm\u00e1me' is the first-person plural present tense of the verb 'ma\u0165' (to have), meaning 'we have' in this context."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.26048690261120067,
+        "difficulty": 9.40689791589837,
+        "interval_days": 1,
+        "reviews": 4,
+        "passing_reviews": 1,
+        "lapses": 2,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-18T05:27:09.478000Z",
+        "next_due_at": "2026-11-18T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0229",
+      "entry_type": "term",
+      "front": {
+        "text": "po rusky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Russian language (object)",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0198",
+      "entry_type": "term",
+      "front": {
+        "text": "niekedy",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "sometimes",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.212,
+        "difficulty": 7.604209769076838,
+        "interval_days": 1,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-18T05:27:11.208000Z",
+        "next_due_at": "2026-11-18T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0239",
+      "entry_type": "term",
+      "front": {
+        "text": "rozumiet'",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "to understand",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak-0237",
+      "entry_type": "term",
+      "front": {
+        "text": "rusk\u00fd rom\u00e1n",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "a Russian novel",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    },
+    {
+      "id": "slovak_reading-2026-09-10-slovak-0033",
+      "front": {
+        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
+        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.5599732351246703,
+        "difficulty": 9.949374798839147,
+        "interval_days": 1,
+        "reviews": 14,
+        "passing_reviews": 2,
+        "lapses": 9,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-18T05:09:56.198000Z",
+        "next_due_at": "2026-11-18T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      },
+      "deck_id": "slovak_sentences",
+      "deck_title": "Slovak Sentence Practice",
+      "front_text_scale": 1.2
+    },
+    {
+      "id": "slovak-0223",
+      "entry_type": "term",
+      "front": {
+        "text": "po slovensky",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Slovak language (object)",
+        "notes": null
+      },
+      "available_at": "2026-11-18T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      },
+      "deck_id": "slovak_vocab",
+      "deck_title": "Slovak Vocabulary",
+      "front_text_scale": 1.5
+    }
+  ]
 }
