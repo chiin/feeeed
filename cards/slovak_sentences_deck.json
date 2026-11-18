@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-18",
   "batch_date": "2026-11-18",
-  "compiled_at": "2026-11-18T06:45:16.152792Z",
-  "state_revision": 334,
+  "compiled_at": "2026-11-18T06:45:46.114541Z",
+  "state_revision": 335,
   "daily_progress": {
     "total": 17,
     "new": 0,
-    "review": 1,
-    "done": 16
+    "review": 0,
+    "done": 17
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -272,41 +272,8 @@
     "718b077c-87dd-4ff0-9482-e8d515b259fb",
     "e8f05271-dd4b-4d20-b06a-4e962ce8c3ba",
     "4c7955ca-b52b-4562-b9a4-e843657f2c76",
-    "43fcf7c2-d36c-41a7-bf43-c59036a9f947"
+    "43fcf7c2-d36c-41a7-bf43-c59036a9f947",
+    "49b2beaf-6186-408e-a5fc-4394c9cef134"
   ],
-  "cards": [
-    {
-      "id": "slovak_reading-2026-11-11-slovak-0061",
-      "front": {
-        "text": "ty si J\u00e1n",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you are Jan",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.2931,
-        "difficulty": 5.112170705601056,
-        "interval_days": 1,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-11T04:06:17.687000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "7d",
-        "good": "12d",
-        "easy": "21d"
-      }
-    }
-  ]
+  "cards": []
 }
