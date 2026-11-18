@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-18",
   "batch_date": "2026-11-18",
-  "compiled_at": "2026-11-18T05:27:58.022835Z",
-  "state_revision": 250,
+  "compiled_at": "2026-11-18T05:28:23.308309Z",
+  "state_revision": 252,
   "source_revisions": {
     "slovak_vocab": 675,
-    "slovak_sentences": 323
+    "slovak_sentences": 326
   },
   "daily_progress": {
     "total": 74,
     "new": 12,
-    "review": 31,
-    "done": 31
+    "review": 28,
+    "done": 34
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -874,45 +874,12 @@
     "d7eb8c69-a2f7-4d0c-860a-1b8e5db70a75",
     "cff4427d-ca70-493c-a528-6c49f9d6d3b5",
     "58d9adc2-cd62-45f5-ae8d-9b97a92df43b",
-    "acb5885a-9f84-41c0-b314-2b52d4471d32"
+    "acb5885a-9f84-41c0-b314-2b52d4471d32",
+    "5a476e5b-5431-44c0-bd78-67497c8c4134",
+    "89541716-79c2-49b6-ac10-f91ebfc50cab",
+    "ad9861f5-ae76-4251-84d4-c41073cf27d5"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0051",
-      "front": {
-        "text": "M\u00e1me v kufri chlieb a poh\u00e1r mlieka.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We have bread and a glass of milk in the trunk.",
-        "notes": "[\u02c8ma\u02d0me v \u02c8kufri \u02c8xl\u02b2eb a \u02c8po\u0261ar \u02c8ml\u02b2i\u02d0ka]\n\nThe target 'm\u00e1me' is the first-person plural present tense of the verb 'ma\u0165' (to have), meaning 'we have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-18T05:19:02.561000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.26048690261120067,
-        "difficulty": 9.128819137736839,
-        "interval_days": 0,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 2,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-18T05:09:02.561000Z",
-        "next_due_at": "2026-11-18T05:19:02.561000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
     {
       "id": "slovak_reading-2026-09-08-slovak-0020",
       "front": {
@@ -944,78 +911,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0050",
-      "front": {
-        "text": "On m\u00e1 nov\u00fd autobus.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He has a new bus.",
-        "notes": "/ma\u02d0/\n\nm\u00e1 \u2013 third person singular present tense of the verb 'ma\u0165' (to have)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-10T14:22:48.731000Z",
-        "next_due_at": "2026-11-11T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "14d",
-        "good": "21d",
-        "easy": "38d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0052",
-      "front": {
-        "text": "M\u00e1te chu\u0165 na \u010daj, pani Nov\u00e1kov\u00e1?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Would you like some tea, Mrs. Novakova?",
-        "notes": "[\u02c8ma\u02d0te \u02c8xu\u02d0t na \u02c8t\u0283aj \u02c8pa\u02d0ni \u02c8n\u0254va\u02d0k\u0254va\u02d0]\n\nThe target 'm\u00e1te' is the second-person plural present tense of the verb 'ma\u0165' (to have), meaning 'you (plural) have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.792101922251739,
-        "difficulty": 8.381624748311934,
-        "interval_days": 2,
-        "reviews": 4,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-16T03:41:03.177000Z",
-        "next_due_at": "2026-11-17T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "3d",
-        "good": "4d",
-        "easy": "6d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
