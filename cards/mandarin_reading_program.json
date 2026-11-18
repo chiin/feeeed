@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-18",
   "batch_date": "2026-11-18",
-  "compiled_at": "2026-11-18T09:22:20.943070Z",
-  "state_revision": 286,
+  "compiled_at": "2026-11-18T09:24:54.954232Z",
+  "state_revision": 288,
   "source_revisions": {
     "hsk": 3339,
-    "mandarin_sentences": 308
+    "mandarin_sentences": 311
   },
   "daily_progress": {
     "total": 266,
-    "new": 5,
+    "new": 3,
     "review": 75,
-    "done": 186
+    "done": 188
   },
   "processed_event_ids": [
     "96b819f3-6cb4-4d40-b5c3-8ac0c06dc68f",
@@ -1248,7 +1248,10 @@
     "2f186d4d-41f9-4184-94cc-50bf22fe500d",
     "4a1f8538-9e52-4bb5-beb5-df1884c5fe6e",
     "8240d954-03d6-4805-86c8-b0baff6a8e6b",
-    "d7ea7847-9d79-48bc-a2e2-3b67f70f28ad"
+    "d7ea7847-9d79-48bc-a2e2-3b67f70f28ad",
+    "237d0f67-214b-4fc1-9b2f-a6b017a800b6",
+    "89d02580-597f-47a8-aa19-94282cf92e9f",
+    "4f728499-1240-4439-909c-68fba4b43293"
   ],
   "cards": [
     {
@@ -1868,30 +1871,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "mandarin_reading-2026-11-15-hsk-0065",
-      "front": {
-        "text": "\u7238\u7238\u5728\u91ab\u9662\u5de5\u4f5c\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Dad works at the hospital.",
-        "notes": "B\u00e0ba z\u00e0i y\u012byu\u00e0n g\u014dngzu\u00f2.\n\n\u6b64\u53e5\u4e2d\u7684\u300c\u7238\u7238\u300d\u662f\u540d\u8a5e\uff0c\u6307\u7236\u89aa\u3002"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "hsk-0111",
       "entry_type": "term",
       "front": {
@@ -1945,13 +1924,25 @@
         "notes": "B\u00e0ba j\u012bnti\u0101n k\u0101ihu\u00ec.\n\n\u6b64\u53e5\u4e2d\u7684\u300c\u958b\u300d\u8207\u300c\u6703\u300d\u7d44\u6210\u300c\u958b\u6703\u300d\uff0c\u8868\u793a\u8209\u884c\u6216\u53c3\u52a0\u6703\u8b70\u3002"
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-18T09:34:08.804000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-18T09:24:08.804000Z",
+        "next_due_at": "2026-11-18T09:34:08.804000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -2044,42 +2035,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-09-29-hsk-0039",
-      "front": {
-        "text": "\u8acb\u4f60\u597d\u597d\u807d\u8001\u5e2b\u8aaa\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Please listen carefully to what the teacher says.",
-        "notes": "q\u01d0ng n\u01d0 h\u01ceo h\u01ceo t\u012bng l\u01ceo sh\u012b shu\u014d.\n\n\u807d is a verb meaning 'to listen' or 'to hear'. In this sentence, it is used as the main verb after the adverbial '\u597d\u597d' (well/carefully), indicating the action the listener is requested to perform."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-17T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.2931,
-        "difficulty": 5.112170705601056,
-        "interval_days": 1,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-09T10:26:19.945000Z",
-        "next_due_at": "2026-11-09T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "12d",
-        "easy": "22d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0363",
@@ -4093,9 +4048,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "110d",
-        "good": "161d",
-        "easy": "271d"
+        "hard": "111d",
+        "good": "162d",
+        "easy": "274d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
