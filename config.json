@@ -20,21 +20,21 @@
       "type": "pdf_folder",
       "folder": "Economics_Cards",
       "strategy": "sequential",
-      "batch_size": 5,
+      "batch_size": 10,
       "feed_title": "Daily Economics Reading"
     },
     "politics": {
       "type": "pdf_folder",
       "folder": "Politics_Cards",
       "strategy": "random_without_replacement",
-      "batch_size": 5,
+      "batch_size": 10,
       "feed_title": "Random Politics Insights"
     },
     "philosophy": {
       "type": "pdf_folder",
       "folder": "Philosophy_Cards",
       "strategy": "random_with_replacement",
-      "batch_size": 5,
+      "batch_size": 10,
       "feed_title": "Random Philosophy Reading"
     },
     "architecture": {
