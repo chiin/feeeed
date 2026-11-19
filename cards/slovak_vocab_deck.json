@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-19",
   "batch_date": "2026-11-19",
-  "compiled_at": "2026-11-19T03:09:02.527715Z",
-  "state_revision": 707,
+  "compiled_at": "2026-11-19T03:09:23.264467Z",
+  "state_revision": 713,
   "daily_progress": {
     "total": 23,
-    "new": 20,
-    "review": 3,
-    "done": 0
+    "new": 15,
+    "review": 2,
+    "done": 6
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -654,42 +654,15 @@
     "8caac936-6cab-4830-903b-caac3fd95098",
     "348a3778-8fc1-4e4d-9212-689dec1c481f",
     "cd1c327d-59b7-44a1-8c38-c63ed349bff5",
-    "f80667ce-a6be-4147-8797-ecb45fbedf2d"
+    "f80667ce-a6be-4147-8797-ecb45fbedf2d",
+    "465619a9-cd04-4694-8dd2-1a589967821f",
+    "e961865d-4b50-427a-8523-1e63767cf927",
+    "c3daf958-0914-4004-940e-7c31e4d6593a",
+    "5876f9d5-5e56-451b-bdf4-454b6a086137",
+    "be609a20-1520-4d82-be4f-de665447fff0",
+    "54538215-15b6-4bd5-a204-4c886c48ae95"
   ],
   "cards": [
-    {
-      "id": "slovak-0122",
-      "entry_type": "term",
-      "front": {
-        "text": "mat' sa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to be feeling",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 9.410506436711517,
-        "difficulty": 7.37018264052428,
-        "interval_days": 9,
-        "reviews": 4,
-        "passing_reviews": 3,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-10T14:23:19.154000Z",
-        "next_due_at": "2026-11-18T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "16d",
-        "good": "21d",
-        "easy": "30d"
-      }
-    },
     {
       "id": "slovak-0157",
       "entry_type": "term",
@@ -754,27 +727,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak-0222",
-      "entry_type": "term",
-      "front": {
-        "text": "Viera vie hrat' hokej",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Viera knows how to play hockey",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
       }
     },
     {
@@ -862,48 +814,6 @@
       }
     },
     {
-      "id": "slovak-0227",
-      "entry_type": "term",
-      "front": {
-        "text": "po mad'arsky",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Hungarian language (object)",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0228",
-      "entry_type": "term",
-      "front": {
-        "text": "po pol'sky",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Polish language (object)",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0229",
       "entry_type": "term",
       "front": {
@@ -955,27 +865,6 @@
       },
       "back": {
         "text": "Mr Kovac only knows Slovak",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0232",
-      "entry_type": "term",
-      "front": {
-        "text": "ale Viera vie po anglicky",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "but Viera knows English",
         "notes": null
       },
       "available_at": "2026-11-18T16:00:00Z",
@@ -1144,27 +1033,6 @@
       },
       "back": {
         "text": "do you understand Slovak?",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0241",
-      "entry_type": "sentence",
-      "front": {
-        "text": "nerozumej\u00fa po anglicky",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "they don't understand English",
         "notes": null
       },
       "available_at": "2026-11-18T16:00:00Z",
