@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-19",
   "batch_date": "2026-11-19",
-  "compiled_at": "2026-11-19T03:22:10.341656Z",
-  "state_revision": 266,
+  "compiled_at": "2026-11-19T03:35:06.486909Z",
+  "state_revision": 268,
   "source_revisions": {
     "slovak_vocab": 723,
-    "slovak_sentences": 340
+    "slovak_sentences": 343
   },
   "daily_progress": {
     "total": 30,
-    "new": 7,
-    "review": 3,
-    "done": 20
+    "new": 6,
+    "review": 1,
+    "done": 23
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -937,33 +937,12 @@
     "1b608007-7087-41b5-a558-90f1cd3580f4",
     "bbd5f419-9487-4d1f-9e7a-c5c6cf9ede20",
     "991402e5-06bb-4de3-9528-12e973e2aaf7",
-    "669c638b-2bf1-4ed2-a956-676e1a972ea2"
+    "669c638b-2bf1-4ed2-a956-676e1a972ea2",
+    "9bd2687a-20a1-40c1-bdac-d269ae38ad2a",
+    "84148c94-3795-44f3-ba52-d36bcc9b72f4",
+    "f658dce9-9ecb-4025-9e5d-0fe90a75dd2f"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-11-19-slovak-0069",
-      "front": {
-        "text": "s\u00fa doma?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "are they at home?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
     {
       "id": "slovak-0231",
       "entry_type": "term",
@@ -1011,42 +990,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0051",
-      "front": {
-        "text": "M\u00e1me v kufri chlieb a poh\u00e1r mlieka.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We have bread and a glass of milk in the trunk.",
-        "notes": "[\u02c8ma\u02d0me v \u02c8kufri \u02c8xl\u02b2eb a \u02c8po\u0261ar \u02c8ml\u02b2i\u02d0ka]\n\nThe target 'm\u00e1me' is the first-person plural present tense of the verb 'ma\u0165' (to have), meaning 'we have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.26048690261120067,
-        "difficulty": 9.40689791589837,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 1,
-        "lapses": 2,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-18T05:27:09.478000Z",
-        "next_due_at": "2026-11-18T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0229",
@@ -1155,42 +1098,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-10-slovak-0033",
-      "front": {
-        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
-        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.5599732351246703,
-        "difficulty": 9.949374798839147,
-        "interval_days": 1,
-        "reviews": 14,
-        "passing_reviews": 2,
-        "lapses": 9,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-18T05:09:56.198000Z",
-        "next_due_at": "2026-11-18T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0223",
