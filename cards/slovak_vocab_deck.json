@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-19",
   "batch_date": "2026-11-19",
-  "compiled_at": "2026-11-19T03:20:05.517796Z",
-  "state_revision": 713,
+  "compiled_at": "2026-11-19T03:20:28.575033Z",
+  "state_revision": 723,
   "daily_progress": {
     "total": 23,
-    "new": 15,
-    "review": 2,
-    "done": 6
+    "new": 6,
+    "review": 1,
+    "done": 16
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -660,42 +660,19 @@
     "c3daf958-0914-4004-940e-7c31e4d6593a",
     "5876f9d5-5e56-451b-bdf4-454b6a086137",
     "be609a20-1520-4d82-be4f-de665447fff0",
-    "54538215-15b6-4bd5-a204-4c886c48ae95"
+    "54538215-15b6-4bd5-a204-4c886c48ae95",
+    "267c6ae2-bf37-4256-8c94-b13065fa2654",
+    "877f205a-9611-498f-a50d-0d7319297e8e",
+    "3668464e-c80b-4973-a5f3-6f8a0e79874d",
+    "8cddbab5-2f7b-4da1-8358-7f71c00a8714",
+    "50ba4d9c-d517-4049-aeab-df8f3fc36ee8",
+    "8a959b83-b22c-49ca-bbbc-6b9ed0576d5b",
+    "ede00515-55f5-4f01-a884-34a49415fbfc",
+    "be49a387-e0ca-4d3d-8408-1af693f5c731",
+    "323c171e-ae26-4e77-87dd-425a27b82aa7",
+    "723450c5-1e03-4cc2-948a-57f9c9289243"
   ],
   "cards": [
-    {
-      "id": "slovak-0157",
-      "entry_type": "term",
-      "front": {
-        "text": "v\u015bak",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "however; isn't it?",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.6964729097931573,
-        "difficulty": 9.435148832876964,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T05:09:48.603000Z",
-        "next_due_at": "2026-11-18T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
     {
       "id": "slovak-0198",
       "entry_type": "term",
@@ -751,69 +728,6 @@
       }
     },
     {
-      "id": "slovak-0224",
-      "entry_type": "term",
-      "front": {
-        "text": "po anglicky",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "English language (object)",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0225",
-      "entry_type": "term",
-      "front": {
-        "text": "po nemecky",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "German language (object)",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0226",
-      "entry_type": "term",
-      "front": {
-        "text": "po \u010desky",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Czech language (object)",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0229",
       "entry_type": "term",
       "front": {
@@ -823,27 +737,6 @@
       },
       "back": {
         "text": "Russian language (object)",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0230",
-      "entry_type": "term",
-      "front": {
-        "text": "po franc\u00fazsky",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "French language (object)",
         "notes": null
       },
       "available_at": "2026-11-18T16:00:00Z",
@@ -877,27 +770,6 @@
       }
     },
     {
-      "id": "slovak-0233",
-      "entry_type": "term",
-      "front": {
-        "text": "hovorit'",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to speak",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0234",
       "entry_type": "term",
       "front": {
@@ -907,48 +779,6 @@
       },
       "back": {
         "text": "Jan speaks and reads German",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0235",
-      "entry_type": "term",
-      "front": {
-        "text": "slovensk\u00fd list",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "a Slovak letter",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0236",
-      "entry_type": "term",
-      "front": {
-        "text": "anglick\u00e1 kniha",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "an English book",
         "notes": null
       },
       "available_at": "2026-11-18T16:00:00Z",
@@ -982,27 +812,6 @@
       }
     },
     {
-      "id": "slovak-0238",
-      "entry_type": "term",
-      "front": {
-        "text": "jazyk",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "language; tongue",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0239",
       "entry_type": "term",
       "front": {
@@ -1012,27 +821,6 @@
       },
       "back": {
         "text": "to understand",
-        "notes": null
-      },
-      "available_at": "2026-11-18T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0240",
-      "entry_type": "sentence",
-      "front": {
-        "text": "rosumiete po slovensky?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you understand Slovak?",
         "notes": null
       },
       "available_at": "2026-11-18T16:00:00Z",
