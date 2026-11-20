@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-20",
   "batch_date": "2026-11-20",
-  "compiled_at": "2026-11-20T04:06:16.172185Z",
-  "state_revision": 349,
+  "compiled_at": "2026-11-20T04:08:14.621932Z",
+  "state_revision": 353,
   "daily_progress": {
     "total": 16,
-    "new": 7,
-    "review": 6,
-    "done": 3
+    "new": 6,
+    "review": 3,
+    "done": 7
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -285,7 +285,11 @@
     "6f60838f-29c9-4ab7-a81b-b50961729f4f",
     "17e415ed-3641-4f49-9c7c-2c87edefe373",
     "4d20b1ba-2b00-4a54-9157-540bebb9abdb",
-    "4641fe79-66f6-4cbf-8f97-bf507c3e79bf"
+    "4641fe79-66f6-4cbf-8f97-bf507c3e79bf",
+    "acf07d10-3b0b-4f7a-8bdf-414c7d5321bd",
+    "02b9ad52-51e1-4a62-8185-771039b3fc0d",
+    "7204e4ec-e705-474d-ab11-f956bf7d813d",
+    "d2bf3dde-ddd0-4261-bf86-5bf93c1d5f21"
   ],
   "cards": [
     {
@@ -388,39 +392,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-11-12-slovak-0062",
-      "front": {
-        "text": "Tu som v kaviarni, chcem k\u00e1vu s mliekom.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Here I am in the cafe, I want coffee with milk.",
-        "notes": "[tu som]\n\nThe phrase 'Tu som' translates to 'here I am'. 'Tu' is a locative adverb meaning 'here', indicating a specific place, while 'som' is the first-person singular present tense of the verb 'by\u0165' (to be), meaning 'I am'. Together, they express the speaker's current presence at a location."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-19T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T06:22:49.474000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-20-slovak-0070",
       "front": {
         "text": "je Viera Slovenka?",
@@ -450,27 +421,6 @@
       },
       "back": {
         "text": "is it a castle?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-19T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-20-slovak-0072",
-      "front": {
-        "text": "\u010do je to?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "what is that?",
         "notes": null
       },
       "presentation": "text_reading",
@@ -565,72 +515,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-20-slovak-0078",
-      "front": {
-        "text": "Bohu\u017eia\u013e, dnes je vonku tma a pr\u0161\u00ed.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Unfortunately, it is dark outside today and it is raining.",
-        "notes": "[\u02c8b\u0254\u0266u\u0292i\u032fa\u028e]\n\n'Bohu\u017eia\u013e' is a sentence adverb expressing regret or an unfortunate circumstance: 'unfortunately/regrettably'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-20T03:53:54.028000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-20T03:43:54.028000Z",
-        "next_due_at": "2026-11-20T03:53:54.028000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-20-slovak-0076",
-      "front": {
-        "text": "Vol\u00e1 sa Peter a je to mlad\u00fd p\u00e1n.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "His name is Peter and he is a young gentleman.",
-        "notes": "[\u02c8v\u0254la\u02d0 sa]\n\nThe reflexive phrase 'vol\u00e1 sa' is third-person singular and introduces someone's name: 'his/her name is'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-20T03:54:21.871000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-20T03:44:21.871000Z",
-        "next_due_at": "2026-11-20T03:54:21.871000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     }
   ]
