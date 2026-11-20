@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-20",
   "batch_date": "2026-11-20",
-  "compiled_at": "2026-11-20T02:04:36.251267Z",
+  "compiled_at": "2026-11-20T03:44:08.065780Z",
   "state_revision": 270,
   "source_revisions": {
-    "slovak_vocab": 731,
+    "slovak_vocab": 733,
     "slovak_sentences": 344
   },
   "daily_progress": {
     "total": 63,
     "new": 30,
-    "review": 33,
-    "done": 0
+    "review": 31,
+    "done": 2
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -681,6 +681,8 @@
     "ab20e48a-9190-4e3e-86b5-59ac2ba0b450",
     "5288ab65-c827-4783-a895-378aaefe5686",
     "42ef2d8e-a07f-4f2f-b1e9-1996ce5eaef4",
+    "7f339fcb-ad74-49d6-bc98-d98d37b59886",
+    "2befa3fb-f6c9-4b59-8e8c-1d17b53d8eaf",
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
     "b1e73139-ac5d-4301-918a-0a135aec15d9",
@@ -951,78 +953,6 @@
   ],
   "cards": [
     {
-      "id": "slovak-0204",
-      "entry_type": "term",
-      "front": {
-        "text": "mat' r\u00e1d",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to like",
-        "notes": null
-      },
-      "available_at": "2026-11-19T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T06:05:16.135000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0205",
-      "entry_type": "term",
-      "front": {
-        "text": "Viera m\u00e1 rada vodu",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Viera likes water",
-        "notes": null
-      },
-      "available_at": "2026-11-19T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T06:44:47.541000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "slovak_reading-2026-11-20-slovak-0077",
       "front": {
         "text": "M\u00e1m r\u00e1d k\u00e1vu a aj \u010daj.",
@@ -1160,7 +1090,7 @@
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "1d"
+        "easy": "2d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -1194,9 +1124,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -1591,8 +1521,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "2d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2035,8 +1965,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "3d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2648,7 +2578,7 @@
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "1d"
+        "easy": "2d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",

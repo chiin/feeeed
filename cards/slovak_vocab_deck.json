@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-20",
   "batch_date": "2026-11-20",
-  "compiled_at": "2026-11-20T02:04:36.251267Z",
-  "state_revision": 731,
+  "compiled_at": "2026-11-20T03:44:08.065780Z",
+  "state_revision": 733,
   "daily_progress": {
     "total": 47,
     "new": 20,
-    "review": 27,
-    "done": 0
+    "review": 25,
+    "done": 2
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -677,7 +677,9 @@
     "f61a4a93-d371-495a-8b26-f3285265e6e9",
     "ab20e48a-9190-4e3e-86b5-59ac2ba0b450",
     "5288ab65-c827-4783-a895-378aaefe5686",
-    "42ef2d8e-a07f-4f2f-b1e9-1996ce5eaef4"
+    "42ef2d8e-a07f-4f2f-b1e9-1996ce5eaef4",
+    "7f339fcb-ad74-49d6-bc98-d98d37b59886",
+    "2befa3fb-f6c9-4b59-8e8c-1d17b53d8eaf"
   ],
   "cards": [
     {
@@ -775,8 +777,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "2d"
       }
     },
     {
@@ -1006,8 +1008,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "3d"
       }
     },
     {
@@ -1034,72 +1036,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-18T05:53:21.214000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      }
-    },
-    {
-      "id": "slovak-0204",
-      "entry_type": "term",
-      "front": {
-        "text": "mat' r\u00e1d",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to like",
-        "notes": null
-      },
-      "available_at": "2026-11-19T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T06:05:16.135000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      }
-    },
-    {
-      "id": "slovak-0205",
-      "entry_type": "term",
-      "front": {
-        "text": "Viera m\u00e1 rada vodu",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Viera likes water",
-        "notes": null
-      },
-      "available_at": "2026-11-19T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T06:44:47.541000Z",
         "next_due_at": "2026-11-19T16:00:00Z"
       },
       "schedule_previews": {
@@ -1203,9 +1139,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
       }
     },
     {
