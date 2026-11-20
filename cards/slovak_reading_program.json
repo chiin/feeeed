@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-20",
   "batch_date": "2026-11-20",
-  "compiled_at": "2026-11-20T05:18:38.323948Z",
-  "state_revision": 279,
+  "compiled_at": "2026-11-20T05:18:56.952934Z",
+  "state_revision": 280,
   "source_revisions": {
     "slovak_vocab": 757,
-    "slovak_sentences": 355
+    "slovak_sentences": 357
   },
   "daily_progress": {
     "total": 63,
-    "new": 13,
-    "review": 17,
-    "done": 33
+    "new": 11,
+    "review": 18,
+    "done": 34
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -984,7 +984,9 @@
     "7204e4ec-e705-474d-ab11-f956bf7d813d",
     "d2bf3dde-ddd0-4261-bf86-5bf93c1d5f21",
     "a76dd301-78e8-4570-b65e-b1659b5d121f",
-    "1924e09e-171a-4235-9b39-bef91be5ffa4"
+    "1924e09e-171a-4235-9b39-bef91be5ffa4",
+    "245798a4-6c28-4955-8dc4-f694c9aed4a1",
+    "84c277ca-da7c-4662-af57-1d0b5b94188e"
   ],
   "cards": [
     {
@@ -1107,13 +1109,25 @@
         "notes": "[\u02c8bracislawski\u02d0 \u02c8\u0266rat]\n\n'Bratislavsk\u00fd hrad' is a nominative masculine singular proper-name phrase meaning 'Bratislava Castle'."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-19T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-20T05:28:04.358000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-20T05:18:04.358000Z",
+        "next_due_at": "2026-11-20T05:28:04.358000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -1334,30 +1348,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-20-slovak-0070",
-      "front": {
-        "text": "je Viera Slovenka?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Is Viera (a) Slovak?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-19T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0259",

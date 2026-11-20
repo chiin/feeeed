@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 355,
+  "revision": 357,
   "cards": {
     "slovak_reading-2026-09-06-slovak-0001": {
       "state": "review",
@@ -980,6 +980,32 @@
       "lapses": 0,
       "last_rating": "good",
       "last_reviewed_at": "2026-11-20T04:29:00.882000Z",
+      "next_due_at": "2026-11-21T16:00:00Z"
+    },
+    "slovak_reading-2026-11-20-slovak-0079": {
+      "state": "relearning",
+      "step": 0,
+      "stability": 0.212,
+      "difficulty": 6.4133,
+      "interval_days": 0,
+      "reviews": 1,
+      "passing_reviews": 0,
+      "lapses": 0,
+      "last_rating": "again",
+      "last_reviewed_at": "2026-11-20T05:18:04.358000Z",
+      "next_due_at": "2026-11-20T05:28:04.358000Z"
+    },
+    "slovak_reading-2026-11-20-slovak-0070": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-20T05:18:26.978000Z",
       "next_due_at": "2026-11-21T16:00:00Z"
     }
   },
@@ -2095,6 +2121,14 @@
     "1924e09e-171a-4235-9b39-bef91be5ffa4": {
       "processed_at": "2026-11-20T04:29:36.983745Z",
       "status": "applied"
+    },
+    "245798a4-6c28-4955-8dc4-f694c9aed4a1": {
+      "processed_at": "2026-11-20T05:18:56.952934Z",
+      "status": "applied"
+    },
+    "84c277ca-da7c-4662-af57-1d0b5b94188e": {
+      "processed_at": "2026-11-20T05:18:56.952934Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -2133,10 +2167,6 @@
         "available_at": "2026-11-19T16:00:00Z"
       },
       {
-        "card_id": "slovak_reading-2026-11-20-slovak-0070",
-        "available_at": "2026-11-19T16:00:00Z"
-      },
-      {
         "card_id": "slovak_reading-2026-11-20-slovak-0071",
         "available_at": "2026-11-19T16:00:00Z"
       },
@@ -2146,7 +2176,7 @@
       },
       {
         "card_id": "slovak_reading-2026-11-20-slovak-0079",
-        "available_at": "2026-11-19T16:00:00Z"
+        "available_at": "2026-11-20T05:28:04.358000Z"
       }
     ]
   },
