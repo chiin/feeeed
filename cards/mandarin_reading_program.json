@@ -4,28 +4,19 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-21",
   "batch_date": "2026-11-21",
-  "compiled_at": "2026-11-21T06:51:31.913898Z",
+  "compiled_at": "2026-11-21T06:55:23.382329Z",
   "state_revision": 293,
   "source_revisions": {
-    "hsk": 3362,
+    "hsk": 3371,
     "mandarin_sentences": 315
   },
   "daily_progress": {
     "total": 214,
     "new": 17,
-    "review": 189,
-    "done": 8
+    "review": 182,
+    "done": 15
   },
   "processed_event_ids": [
-    "4862ac64-c7e5-47f0-828a-8efa6713357a",
-    "3797a95a-fff3-4807-a019-ed5f0f3380ed",
-    "6796f9b4-43e2-4625-aa12-0a38c7b12fe6",
-    "8d8a39c7-2715-4ed4-8301-9a494de4923f",
-    "f465ffcc-0750-4ef5-b8ed-36633f267a98",
-    "f320e389-e218-4f15-9e39-f90c767e9db3",
-    "47f66ca7-b9ed-4a20-9839-c7cb4a3a27fe",
-    "531542db-f412-4da3-9a6d-9d5afe3f69fd",
-    "eb3ea51a-1fdd-48a0-a35e-34c58bd6362c",
     "42f0b95f-b949-4842-9d89-0e3ce2272308",
     "bf98c112-b27d-4e88-8e68-64eb1f7bb25c",
     "898fa4f6-4ebb-4bbb-8396-b1fcb92abffd",
@@ -1017,6 +1008,15 @@
     "a897c0af-7c9b-49a8-b25b-6ccf00e9f830",
     "e17a4cc9-d564-4ce5-a196-97e8bfc0f85f",
     "4cabfdcd-8a60-48b0-a95d-936ba9aefdde",
+    "01fc2365-9df9-4372-8ea8-66cb720d8eba",
+    "c187d7a5-2144-4100-b513-942477ff5b1f",
+    "07fb1cb3-f655-4437-b818-4869a794b926",
+    "2f467e7b-ea94-4234-9ecb-57c3e8788094",
+    "acecc8d0-6d2d-484b-a115-fe309371d861",
+    "c224af9b-10ae-463a-84ea-0177f2c9b72a",
+    "c4a23d1d-29a2-4d10-801d-69c95d587193",
+    "03cf2197-a640-4eed-858a-55db09a70509",
+    "969ee12a-7155-409d-a0e8-828cbe4a6fff",
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
     "ef3c3a47-a108-4f22-9fd9-1fb5216bf6f3",
     "84ae58bc-cba5-4c0b-9e9c-ed8fe5704723",
@@ -1256,94 +1256,6 @@
   ],
   "cards": [
     {
-      "id": "hsk-0218",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8ce3",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "m\u00e0i - to sell",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8ce3",
-          "url": "https://www.dong-chinese.com/wiki/%E8%B3%A3"
-        }
-      ],
-      "available_at": "2026-11-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.093373939835245,
-        "difficulty": 9.883945655770344,
-        "interval_days": 2,
-        "reviews": 12,
-        "passing_reviews": 7,
-        "lapses": 4,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T08:32:27.803000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "3d",
-        "good": "3d",
-        "easy": "4d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0342",
-      "entry_type": "term",
-      "front": {
-        "text": "\u6253\u6383",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "d\u01ces\u01ceo - to clean up",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u6253",
-          "url": "https://www.dong-chinese.com/wiki/%E6%89%93"
-        },
-        {
-          "character": "\u6383",
-          "url": "https://www.dong-chinese.com/wiki/%E6%8E%83"
-        }
-      ],
-      "available_at": "2026-11-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 10.797293738356935,
-        "difficulty": 9.426534846771766,
-        "interval_days": 11,
-        "reviews": 8,
-        "passing_reviews": 4,
-        "lapses": 1,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-09T09:45:08.985000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "15d",
-        "good": "17d",
-        "easy": "22d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
       "id": "hsk-0299",
       "entry_type": "term",
       "front": {
@@ -1365,205 +1277,25 @@
           "url": "https://www.dong-chinese.com/wiki/%E9%82%8A"
         }
       ],
-      "available_at": "2026-11-20T16:00:00Z",
+      "available_at": "2026-11-21T07:04:33.603000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.9224701705110343,
-        "difficulty": 9.913120184335297,
-        "interval_days": 2,
-        "reviews": 12,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.49714760539580327,
+        "difficulty": 9.956671564670597,
+        "interval_days": 0,
+        "reviews": 13,
         "passing_reviews": 5,
-        "lapses": 5,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T08:32:29.738000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "3d",
-        "good": "3d",
-        "easy": "4d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0443",
-      "entry_type": "term",
-      "front": {
-        "text": "\u96e2\u958b",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "l\u00edk\u0101i - to leave; depart",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u96e2",
-          "url": "https://www.dong-chinese.com/wiki/%E9%9B%A2"
-        },
-        {
-          "character": "\u958b",
-          "url": "https://www.dong-chinese.com/wiki/%E9%96%8B"
-        }
-      ],
-      "available_at": "2026-11-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.7848983202931417,
-        "difficulty": 9.789664107144015,
-        "interval_days": 2,
-        "reviews": 6,
-        "passing_reviews": 1,
-        "lapses": 2,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T07:50:13.050000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "4d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0285",
-      "entry_type": "term",
-      "front": {
-        "text": "\u904b\u52d5",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "y\u00f9nd\u00f2ng - exercise",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u904b",
-          "url": "https://www.dong-chinese.com/wiki/%E9%81%8B"
-        },
-        {
-          "character": "\u52d5",
-          "url": "https://www.dong-chinese.com/wiki/%E5%8B%95"
-        }
-      ],
-      "available_at": "2026-11-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 9.564203502906508,
-        "difficulty": 9.436864122203898,
-        "interval_days": 10,
-        "reviews": 7,
-        "passing_reviews": 3,
-        "lapses": 1,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-09T07:53:19.668000Z",
-        "next_due_at": "2026-11-18T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "13d",
-        "good": "16d",
-        "easy": "21d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0321",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8b8a\u5316",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "bi\u00e0nhu\u00e0 - change; to change",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8b8a",
-          "url": "https://www.dong-chinese.com/wiki/%E8%AE%8A"
-        },
-        {
-          "character": "\u5316",
-          "url": "https://www.dong-chinese.com/wiki/%E5%8C%96"
-        }
-      ],
-      "available_at": "2026-11-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.8324288810567892,
-        "difficulty": 9.93284697674752,
-        "interval_days": 1,
-        "reviews": 11,
-        "passing_reviews": 3,
-        "lapses": 3,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-18T08:32:18.936000Z",
-        "next_due_at": "2026-11-18T16:00:00Z"
+        "lapses": 6,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-21T06:54:33.603000Z",
+        "next_due_at": "2026-11-21T07:04:33.603000Z"
       },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "2d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0395",
-      "entry_type": "term",
-      "front": {
-        "text": "\u82b1",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "hu\u0101 - flower; to spend",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u82b1",
-          "url": "https://www.dong-chinese.com/wiki/%E8%8A%B1"
-        }
-      ],
-      "available_at": "2026-11-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 12.200346536989233,
-        "difficulty": 8.820841152005809,
-        "interval_days": 12,
-        "reviews": 6,
-        "passing_reviews": 3,
-        "lapses": 1,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-09T10:29:08.366000Z",
-        "next_due_at": "2026-11-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "17d",
-        "good": "21d",
-        "easy": "29d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -1591,65 +1323,19 @@
           "url": "https://www.dong-chinese.com/wiki/%E5%8F%B2"
         }
       ],
-      "available_at": "2026-11-20T16:00:00Z",
+      "available_at": "2026-11-21T07:04:53.614000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.020059311554580503,
-        "difficulty": 9.936386893812918,
+        "stability": 0.01556822946209516,
+        "difficulty": 9.964319173862265,
         "interval_days": 0,
-        "reviews": 5,
+        "reviews": 6,
         "passing_reviews": 0,
-        "lapses": 4,
+        "lapses": 5,
         "last_rating": "again",
-        "last_reviewed_at": "2026-11-18T09:18:39.779000Z",
-        "next_due_at": "2026-11-18T09:28:39.779000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "hsk",
-      "deck_title": "HSK Vocabulary",
-      "front_text_scale": 2.0
-    },
-    {
-      "id": "hsk-0568",
-      "entry_type": "term",
-      "front": {
-        "text": "\u5f71\u97ff",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "y\u01d0ngxi\u01ceng - influence; to affect",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u5f71",
-          "url": "https://www.dong-chinese.com/wiki/%E5%BD%B1"
-        },
-        {
-          "character": "\u97ff",
-          "url": "https://www.dong-chinese.com/wiki/%E9%9F%BF"
-        }
-      ],
-      "available_at": "2026-11-20T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.0025935209625364566,
-        "difficulty": 9.976518106116687,
-        "interval_days": 0,
-        "reviews": 8,
-        "passing_reviews": 0,
-        "lapses": 7,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-18T09:34:53.755000Z",
-        "next_due_at": "2026-11-18T09:44:53.755000Z"
+        "last_reviewed_at": "2026-11-21T06:54:53.614000Z",
+        "next_due_at": "2026-11-21T07:04:53.614000Z"
       },
       "schedule_previews": {
         "again": "10m",
