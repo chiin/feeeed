@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-23",
   "batch_date": "2026-11-23",
-  "compiled_at": "2026-11-23T05:30:32.082794Z",
-  "state_revision": 286,
+  "compiled_at": "2026-11-23T05:30:55.602495Z",
+  "state_revision": 289,
   "source_revisions": {
     "slovak_vocab": 765,
-    "slovak_sentences": 360
+    "slovak_sentences": 363
   },
   "daily_progress": {
     "total": 107,
     "new": 29,
-    "review": 74,
-    "done": 4
+    "review": 71,
+    "done": 7
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -991,81 +991,12 @@
     "a76dd301-78e8-4570-b65e-b1659b5d121f",
     "1924e09e-171a-4235-9b39-bef91be5ffa4",
     "245798a4-6c28-4955-8dc4-f694c9aed4a1",
-    "84c277ca-da7c-4662-af57-1d0b5b94188e"
+    "84c277ca-da7c-4662-af57-1d0b5b94188e",
+    "859a7fa1-556a-4084-808a-803809d3c289",
+    "70633c97-397b-4eb5-a22d-9d405b269894",
+    "1aeabddc-66cf-4eb9-bd28-c4c2494840c8"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-28-slovak-0052",
-      "front": {
-        "text": "M\u00e1te chu\u0165 na \u010daj, pani Nov\u00e1kov\u00e1?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Would you like some tea, Mrs. Novakova?",
-        "notes": "[\u02c8ma\u02d0te \u02c8xu\u02d0t na \u02c8t\u0283aj \u02c8pa\u02d0ni \u02c8n\u0254va\u02d0k\u0254va\u02d0]\n\nThe target 'm\u00e1te' is the second-person plural present tense of the verb 'ma\u0165' (to have), meaning 'you (plural) have' in this context."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 4.2707577035020075,
-        "difficulty": 8.36847149286046,
-        "interval_days": 4,
-        "reviews": 5,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T05:27:24.973000Z",
-        "next_due_at": "2026-11-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "7d",
-        "good": "10d",
-        "easy": "14d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-11-18-slovak-0067",
-      "front": {
-        "text": "si Angli\u010danka?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "are you (f) English?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-19T03:08:15.772000Z",
-        "next_due_at": "2026-11-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
     {
       "id": "slovak-0242",
       "entry_type": "term",
@@ -1101,42 +1032,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-20-slovak-0078",
-      "front": {
-        "text": "Bohu\u017eia\u013e, dnes je vonku tma a pr\u0161\u00ed.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Unfortunately, it is dark outside today and it is raining.",
-        "notes": "[\u02c8b\u0254\u0266u\u0292i\u032fa\u028e]\n\n'Bohu\u017eia\u013e' is a sentence adverb expressing regret or an unfortunate circumstance: 'unfortunately/regrettably'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-20T04:05:27.813000Z",
-        "next_due_at": "2026-11-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "5d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0258",
