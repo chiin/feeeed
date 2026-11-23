@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 320,
+  "revision": 323,
   "cards": {
     "mandarin_reading-2026-09-06-hsk-0158": {
       "state": "review",
@@ -1011,28 +1011,28 @@
     "mandarin_reading-2026-11-15-hsk-0070": {
       "state": "review",
       "step": null,
-      "stability": 2.3065,
-      "difficulty": 2.118103970459016,
-      "interval_days": 2,
-      "reviews": 1,
-      "passing_reviews": 1,
+      "stability": 18.167850235070937,
+      "difficulty": 2.111214235785395,
+      "interval_days": 18,
+      "reviews": 2,
+      "passing_reviews": 2,
       "lapses": 0,
       "last_rating": "good",
-      "last_reviewed_at": "2026-11-18T08:39:29.709000Z",
-      "next_due_at": "2026-11-19T16:00:00Z"
+      "last_reviewed_at": "2026-11-23T08:41:56.440000Z",
+      "next_due_at": "2026-12-10T16:00:00Z"
     },
     "mandarin_reading-2026-11-15-hsk-0060": {
-      "state": "review",
-      "step": null,
-      "stability": 2.3065,
-      "difficulty": 2.118103970459016,
-      "interval_days": 2,
-      "reviews": 1,
+      "state": "relearning",
+      "step": 0,
+      "stability": 0.6825982499532058,
+      "difficulty": 7.394502741279718,
+      "interval_days": 0,
+      "reviews": 2,
       "passing_reviews": 1,
-      "lapses": 0,
-      "last_rating": "good",
-      "last_reviewed_at": "2026-11-18T08:41:56.371000Z",
-      "next_due_at": "2026-11-19T16:00:00Z"
+      "lapses": 1,
+      "last_rating": "again",
+      "last_reviewed_at": "2026-11-23T08:42:13.395000Z",
+      "next_due_at": "2026-11-23T08:52:13.395000Z"
     },
     "mandarin_reading-2026-11-15-hsk-0074": {
       "state": "review",
@@ -1098,6 +1098,19 @@
       "last_rating": "again",
       "last_reviewed_at": "2026-11-23T08:38:17.901000Z",
       "next_due_at": "2026-11-23T08:48:17.901000Z"
+    },
+    "mandarin_reading-2026-11-16-hsk-0080": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-23T08:42:43.793000Z",
+      "next_due_at": "2026-11-24T16:00:00Z"
     }
   },
   "processed_events": {
@@ -2056,6 +2069,18 @@
     "fb8c6e66-dd2a-4a75-993e-77dd3be06a70": {
       "processed_at": "2026-11-23T08:39:21.024098Z",
       "status": "applied"
+    },
+    "7ab96810-1cda-468f-82c2-04d610b0c536": {
+      "processed_at": "2026-11-23T08:43:04.085336Z",
+      "status": "applied"
+    },
+    "7b62a69d-c64c-4bf3-a49b-f96365da0163": {
+      "processed_at": "2026-11-23T08:43:04.085336Z",
+      "status": "applied"
+    },
+    "17c6c65a-5629-4c9e-8a9d-85901400ca70": {
+      "processed_at": "2026-11-23T08:43:04.085336Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -2125,10 +2150,6 @@
         "available_at": "2026-11-22T16:00:00Z"
       },
       {
-        "card_id": "mandarin_reading-2026-11-15-hsk-0060",
-        "available_at": "2026-11-22T16:00:00Z"
-      },
-      {
         "card_id": "mandarin_reading-2026-11-15-hsk-0061",
         "available_at": "2026-11-22T16:00:00Z"
       },
@@ -2150,10 +2171,6 @@
       },
       {
         "card_id": "mandarin_reading-2026-11-15-hsk-0067",
-        "available_at": "2026-11-22T16:00:00Z"
-      },
-      {
-        "card_id": "mandarin_reading-2026-11-15-hsk-0070",
         "available_at": "2026-11-22T16:00:00Z"
       },
       {
@@ -2213,10 +2230,6 @@
         "available_at": "2026-11-22T16:00:00Z"
       },
       {
-        "card_id": "mandarin_reading-2026-11-16-hsk-0080",
-        "available_at": "2026-11-22T16:00:00Z"
-      },
-      {
         "card_id": "mandarin_reading-2026-11-16-hsk-0081",
         "available_at": "2026-11-22T16:00:00Z"
       },
@@ -2255,6 +2268,10 @@
       {
         "card_id": "mandarin_reading-2026-09-23-hsk-0037",
         "available_at": "2026-11-23T08:48:33.512000Z"
+      },
+      {
+        "card_id": "mandarin_reading-2026-11-15-hsk-0060",
+        "available_at": "2026-11-23T08:52:13.395000Z"
       }
     ]
   },

@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-23",
   "batch_date": "2026-11-23",
-  "compiled_at": "2026-11-23T08:41:09.558339Z",
-  "state_revision": 320,
+  "compiled_at": "2026-11-23T08:43:04.085336Z",
+  "state_revision": 323,
   "daily_progress": {
     "total": 39,
-    "new": 15,
-    "review": 23,
-    "done": 1
+    "new": 14,
+    "review": 22,
+    "done": 3
   },
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
@@ -252,7 +252,10 @@
     "abf3673f-0d0b-4968-8f04-4181c8772385",
     "e02a8aef-67cc-44bd-b088-527333c44582",
     "81cdb555-6687-48de-a2ee-0c4b90aff435",
-    "fb8c6e66-dd2a-4a75-993e-77dd3be06a70"
+    "fb8c6e66-dd2a-4a75-993e-77dd3be06a70",
+    "7ab96810-1cda-468f-82c2-04d610b0c536",
+    "7b62a69d-c64c-4bf3-a49b-f96365da0163",
+    "17c6c65a-5629-4c9e-8a9d-85901400ca70"
   ],
   "cards": [
     {
@@ -418,39 +421,6 @@
         "hard": "12d",
         "good": "18d",
         "easy": "32d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-11-15-hsk-0060",
-      "front": {
-        "text": "\u54ea\u500b\u91ab\u751f\u662f\u4f60\u7684\u670b\u53cb\uff1f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Which doctor is your friend?",
-        "notes": "N\u01ce ge y\u012bsh\u0113ng sh\u00ec n\u01d0 de p\u00e9ngyou?\n\n\u6b64\u53e5\u4e2d\u7684\u300c\u54ea\u300d\u662f\u7591\u554f\u4ee3\u8a5e\uff0c\u4fee\u98fe\u300c\u500b\u91ab\u751f\u300d\uff0c\u8a62\u554f\u54ea\u4e00\u4f4d\u91ab\u751f\u3002"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T08:41:56.371000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
       }
     },
     {
@@ -642,39 +612,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-18T08:38:55.462000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-11-15-hsk-0070",
-      "front": {
-        "text": "\u6211\u5011\u5bb6\u6709\u4e09\u500b\u4eba\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "There are three people in our family.",
-        "notes": "W\u01d2men ji\u0101 y\u01d2u s\u0101n ge r\u00e9n.\n\n\u6b64\u53e5\u4e2d\u7684\u300c\u4e09\u300d\u662f\u6578\u8a5e\uff0c\u8868\u793a\u6578\u91cf\u4e09\u3002"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T08:39:29.709000Z",
         "next_due_at": "2026-11-19T16:00:00Z"
       },
       "schedule_previews": {
@@ -1075,27 +1012,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-11-16-hsk-0080",
-      "front": {
-        "text": "\u6211\u5beb\u540d\u5b57\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I write my name.",
-        "notes": "W\u01d2 xi\u011b m\u00edngzi.\n\n\u5beb means \u201cto write\u201d; here it is the main verb with \u540d\u5b57 as what is written."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-11-16-hsk-0081",
       "front": {
         "text": "\u6211\u5728\u623f\u9593\u770b\u6708\u3002",
@@ -1327,6 +1243,39 @@
         "hard": "2d",
         "good": "2d",
         "easy": "4d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-11-15-hsk-0060",
+      "front": {
+        "text": "\u54ea\u500b\u91ab\u751f\u662f\u4f60\u7684\u670b\u53cb\uff1f",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Which doctor is your friend?",
+        "notes": "N\u01ce ge y\u012bsh\u0113ng sh\u00ec n\u01d0 de p\u00e9ngyou?\n\n\u6b64\u53e5\u4e2d\u7684\u300c\u54ea\u300d\u662f\u7591\u554f\u4ee3\u8a5e\uff0c\u4fee\u98fe\u300c\u500b\u91ab\u751f\u300d\uff0c\u8a62\u554f\u54ea\u4e00\u4f4d\u91ab\u751f\u3002"
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-23T08:52:13.395000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.6825982499532058,
+        "difficulty": 7.394502741279718,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 1,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-23T08:42:13.395000Z",
+        "next_due_at": "2026-11-23T08:52:13.395000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
