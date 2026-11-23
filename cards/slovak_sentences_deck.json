@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-23",
   "batch_date": "2026-11-23",
-  "compiled_at": "2026-11-23T06:59:34.251590Z",
-  "state_revision": 386,
+  "compiled_at": "2026-11-23T08:28:44.456112Z",
+  "state_revision": 388,
   "daily_progress": {
     "total": 28,
-    "new": 1,
-    "review": 5,
-    "done": 22
+    "new": 0,
+    "review": 4,
+    "done": 24
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -319,7 +319,9 @@
     "d0bcb6d8-dd3c-47f3-8686-13837736fabb",
     "431390ff-c00a-4db5-a8b6-57b862e66c50",
     "5775d5de-1c52-4020-ac5f-f2aafd4fee42",
-    "ba0b3b31-8600-4f8e-b178-d91c0b0b6d70"
+    "ba0b3b31-8600-4f8e-b178-d91c0b0b6d70",
+    "af2f0c77-1a4f-420e-9755-a0e2b5342aa0",
+    "eb349dd7-a375-44fb-9fe6-1770ed43f164"
   ],
   "cards": [
     {
@@ -452,60 +454,6 @@
         "hard": "2d",
         "good": "3d",
         "easy": "5d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-20-slovak-0073",
-      "front": {
-        "text": "kde je \u2026 ?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "where is \u2026 ?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-20T04:28:56.483000Z",
-        "next_due_at": "2026-11-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "9d",
-        "good": "14d",
-        "easy": "24d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0085",
-      "front": {
-        "text": "Na\u0161a rodina b\u00fdva v meste.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Our family lives in a town.",
-        "notes": "[\u02c8na\u0282a]\n\nPossessive pronoun n\u00e1\u0161 in feminine nominative singular, agreeing with rodina; means our."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
       }
     }
   ]
