@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-23",
   "batch_date": "2026-11-23",
-  "compiled_at": "2026-11-23T08:38:38.522497Z",
-  "state_revision": 295,
+  "compiled_at": "2026-11-23T08:39:21.024098Z",
+  "state_revision": 296,
   "source_revisions": {
     "hsk": 3373,
-    "mandarin_sentences": 317
+    "mandarin_sentences": 320
   },
   "daily_progress": {
     "total": 245,
-    "new": 17,
+    "new": 16,
     "review": 228,
-    "done": 0
+    "done": 1
   },
   "processed_event_ids": [
     "42f0b95f-b949-4842-9d89-0e3ce2272308",
@@ -1252,7 +1252,10 @@
     "237d0f67-214b-4fc1-9b2f-a6b017a800b6",
     "89d02580-597f-47a8-aa19-94282cf92e9f",
     "4f728499-1240-4439-909c-68fba4b43293",
-    "abf3673f-0d0b-4968-8f04-4181c8772385"
+    "abf3673f-0d0b-4968-8f04-4181c8772385",
+    "e02a8aef-67cc-44bd-b088-527333c44582",
+    "81cdb555-6687-48de-a2ee-0c4b90aff435",
+    "fb8c6e66-dd2a-4a75-993e-77dd3be06a70"
   ],
   "cards": [
     {
@@ -1267,13 +1270,25 @@
         "notes": "Q\u01d0ng n\u01d0 zu\u00f2 z\u00e0i zh\u00e8l\u01d0.\n\n\u5750 means \u201cto sit\u201d; here it is the main verb of the request."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-23T08:48:17.901000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-23T08:38:17.901000Z",
+        "next_due_at": "2026-11-23T08:48:17.901000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -1291,25 +1306,25 @@
         "notes": "J\u012bnti\u0101n ti\u0101nq\u00ec t\u00e0i r\u00e8 le, xu\u00e9sh\u0113ng men d\u014du z\u00e0i ji\u00e0osh\u00ec l\u01d0.\n\nIn this sentence, '\u592a' is an adverb meaning 'too' or 'excessively'. It modifies the adjective '\u71b1' (hot) to indicate an excessive degree, forming the structure '\u592a...\u4e86' to express a subjective evaluation of the weather."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
+      "available_at": "2026-11-23T08:48:33.512000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 22.232541851561948,
-        "difficulty": 6.772365417380022,
-        "interval_days": 22,
-        "reviews": 4,
+        "state": "relearning",
+        "step": 0,
+        "stability": 2.116480803890841,
+        "difficulty": 8.924326829904814,
+        "interval_days": 0,
+        "reviews": 5,
         "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "easy",
-        "last_reviewed_at": "2026-10-19T07:38:19.894000Z",
-        "next_due_at": "2026-11-09T16:00:00Z"
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-23T08:38:33.512000Z",
+        "next_due_at": "2026-11-23T08:48:33.512000Z"
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "47d",
-        "good": "63d",
-        "easy": "99d"
+        "hard": "2d",
+        "good": "2d",
+        "easy": "4d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -1448,42 +1463,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-11-15-hsk-0068",
-      "front": {
-        "text": "\u5c0d\u4e0d\u8d77\uff0c\u6211\u73fe\u5728\u4e0d\u80fd\u53bb\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Sorry, I cannot go now.",
-        "notes": "Du\u00ecbuq\u01d0, w\u01d2 xi\u00e0nz\u00e0i b\u00f9 n\u00e9ng q\u00f9.\n\n\u6b64\u53e5\u4e2d\u7684\u300c\u5c0d\u4e0d\u8d77\u300d\u662f\u9053\u6b49\u8a9e\uff0c\u8868\u793a\u6b49\u610f\u3002"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T08:34:00.486000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0520",
@@ -6943,9 +6922,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
+        "hard": "12d",
+        "good": "18d",
+        "easy": "32d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -8811,9 +8790,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
+        "hard": "12d",
+        "good": "18d",
+        "easy": "32d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -9281,9 +9260,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
+        "hard": "12d",
+        "good": "18d",
+        "easy": "32d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -11272,8 +11251,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "6d",
-        "good": "8d",
-        "easy": "13d"
+        "good": "9d",
+        "easy": "14d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
