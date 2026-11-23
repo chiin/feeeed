@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-23",
   "batch_date": "2026-11-23",
-  "compiled_at": "2026-11-23T05:54:08.011552Z",
+  "compiled_at": "2026-11-23T05:54:28.434984Z",
   "state_revision": 292,
   "source_revisions": {
-    "slovak_vocab": 773,
+    "slovak_vocab": 779,
     "slovak_sentences": 368
   },
   "daily_progress": {
     "total": 107,
-    "new": 25,
-    "review": 65,
-    "done": 17
+    "new": 24,
+    "review": 60,
+    "done": 23
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -720,6 +720,12 @@
     "3d1196cb-ffa8-4f94-84cb-9c2c93e29436",
     "975784dd-d196-4e7b-b7e2-e344422881ee",
     "79ea18cc-406b-4c88-9e1e-84b738b8d551",
+    "168afdc8-1b7a-4f4a-93eb-57c1e03a2fbb",
+    "219d5eda-94b2-4a6d-9ec4-18a3e1e4b842",
+    "41f2762e-d2aa-4190-b03d-c4007b357e06",
+    "c868eba5-ef10-4cc3-a028-0269dcfbb0fc",
+    "44193d38-120b-4ce3-8e0f-c93230172568",
+    "9c4b16ac-0f1d-4066-abbc-d47652940d8a",
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
     "b1e73139-ac5d-4301-918a-0a135aec15d9",
@@ -1011,78 +1017,6 @@
   ],
   "cards": [
     {
-      "id": "slovak-0242",
-      "entry_type": "term",
-      "front": {
-        "text": "dva hrady",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "two castles",
-        "notes": null
-      },
-      "available_at": "2026-11-23T05:40:07.302000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-23T05:30:07.302000Z",
-        "next_due_at": "2026-11-23T05:40:07.302000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0258",
-      "entry_type": "term",
-      "front": {
-        "text": "vol'n\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "free",
-        "notes": null
-      },
-      "available_at": "2026-11-23T05:40:19.574000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.6368506992409603,
-        "difficulty": 7.394502741279718,
-        "interval_days": 0,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-23T05:30:19.574000Z",
-        "next_due_at": "2026-11-23T05:40:19.574000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "slovak_reading-2026-11-21-slovak-0080",
       "front": {
         "text": "T\u00e1to voda je \u010dist\u00e1.",
@@ -1155,30 +1089,6 @@
       "front_text_scale": 1.2
     },
     {
-      "id": "slovak-0245",
-      "entry_type": "term",
-      "front": {
-        "text": "nem\u010dina",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "German language (noun)",
-        "notes": null
-      },
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "slovak_reading-2026-11-21-slovak-0087",
       "front": {
         "text": "To je pekn\u00e1 z\u00e1hrada.",
@@ -1201,114 +1111,6 @@
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
       "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0238",
-      "entry_type": "term",
-      "front": {
-        "text": "jazyk",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "language; tongue",
-        "notes": null
-      },
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-19T03:19:34.701000Z",
-        "next_due_at": "2026-11-20T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "11d",
-        "good": "16d",
-        "easy": "28d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0057",
-      "entry_type": "term",
-      "front": {
-        "text": "je",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "he / she / it is",
-        "notes": null
-      },
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 54.68145822636723,
-        "difficulty": 2.1043313908464483,
-        "interval_days": 55,
-        "reviews": 3,
-        "passing_reviews": 3,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-28T08:22:50.798000Z",
-        "next_due_at": "2026-11-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "136d",
-        "good": "190d",
-        "easy": "308d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0074",
-      "entry_type": "sentence",
-      "front": {
-        "text": "kto je \u2026 ?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "who is \u2026 ?",
-        "notes": null
-      },
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 54.71944039524483,
-        "difficulty": 2.1043313908464483,
-        "interval_days": 55,
-        "reviews": 3,
-        "passing_reviews": 3,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-09-28T08:15:44.397000Z",
-        "next_due_at": "2026-11-21T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "136d",
-        "good": "190d",
-        "easy": "308d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
     },
     {
       "id": "slovak_reading-2026-11-21-slovak-0086",
