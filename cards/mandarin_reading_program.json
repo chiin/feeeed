@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-23",
   "batch_date": "2026-11-23",
-  "compiled_at": "2026-11-23T08:50:23.287205Z",
-  "state_revision": 303,
+  "compiled_at": "2026-11-23T08:50:51.348968Z",
+  "state_revision": 305,
   "source_revisions": {
     "hsk": 3418,
-    "mandarin_sentences": 328
+    "mandarin_sentences": 332
   },
   "daily_progress": {
     "total": 245,
     "new": 12,
-    "review": 188,
-    "done": 45
+    "review": 185,
+    "done": 48
   },
   "processed_event_ids": [
     "6c70bfbb-e528-457e-a302-cfbd48c23d5f",
@@ -1263,7 +1263,11 @@
     "72ba2380-d6bc-4f9a-ac7e-230d36aef67e",
     "45fd23ed-2fef-48f0-8dc9-f438d9fbba13",
     "f6012057-c5eb-4049-b9e0-552141b05f4e",
-    "a0b4a334-f08d-4aac-a813-206d5111fcff"
+    "a0b4a334-f08d-4aac-a813-206d5111fcff",
+    "21372fa0-6b56-4a45-870e-bc3107822c1a",
+    "1c494003-d8eb-4687-8772-f45e56180515",
+    "09c0d5f5-b7bb-4fda-bdae-b63e8087cf92",
+    "abb7c7f2-1311-4a02-bf47-5c9f01d79a46"
   ],
   "cards": [
     {
@@ -1278,61 +1282,25 @@
         "notes": "Q\u01d0ng n\u01d0 zu\u00f2 z\u00e0i zh\u00e8l\u01d0.\n\n\u5750 means \u201cto sit\u201d; here it is the main verb of the request."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-23T08:48:17.901000Z",
+      "available_at": "2026-11-23T08:59:52.123000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
         "interval_days": 0,
-        "reviews": 1,
+        "reviews": 2,
         "passing_reviews": 0,
-        "lapses": 0,
+        "lapses": 1,
         "last_rating": "again",
-        "last_reviewed_at": "2026-11-23T08:38:17.901000Z",
-        "next_due_at": "2026-11-23T08:48:17.901000Z"
+        "last_reviewed_at": "2026-11-23T08:49:52.123000Z",
+        "next_due_at": "2026-11-23T08:59:52.123000Z"
       },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "mandarin_reading-2026-09-23-hsk-0037",
-      "front": {
-        "text": "\u4eca\u5929\u5929\u6c23\u592a\u71b1\u4e86\uff0c\u5b78\u751f\u5011\u90fd\u5728\u6559\u5ba4\u88e1\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The weather today is too hot, and the students are all in the classroom.",
-        "notes": "J\u012bnti\u0101n ti\u0101nq\u00ec t\u00e0i r\u00e8 le, xu\u00e9sh\u0113ng men d\u014du z\u00e0i ji\u00e0osh\u00ec l\u01d0.\n\nIn this sentence, '\u592a' is an adverb meaning 'too' or 'excessively'. It modifies the adjective '\u71b1' (hot) to indicate an excessive degree, forming the structure '\u592a...\u4e86' to express a subjective evaluation of the weather."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-23T08:48:33.512000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 2.116480803890841,
-        "difficulty": 8.924326829904814,
-        "interval_days": 0,
-        "reviews": 5,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-23T08:38:33.512000Z",
-        "next_due_at": "2026-11-23T08:48:33.512000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "2d",
-        "easy": "4d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -1961,42 +1929,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "mandarin_reading-2026-11-16-hsk-0087",
-      "front": {
-        "text": "\u5582\uff0c\u4f60\u662f\u8ab0\uff1f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Hello, who are you?",
-        "notes": "W\u00e8i, n\u01d0 sh\u00ec shu\u00ed?\n\n\u5582 is the phone-answering greeting; it stands alone before the question, not the verb \u201cto feed.\u201d"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-21T06:27:28.489000Z",
-        "next_due_at": "2026-11-22T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "hsk-0072",
       "entry_type": "term",
       "front": {
@@ -2037,42 +1969,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-11-15-hsk-0072",
-      "front": {
-        "text": "\u6211\u60f3\u8cb7\u4e9b\u6c34\u679c\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I want to buy some fruit.",
-        "notes": "W\u01d2 xi\u01ceng m\u01cei xi\u0113 shu\u01d0gu\u01d2.\n\n\u6b64\u53e5\u4e2d\u7684\u300c\u8cb7\u300d\u662f\u52d5\u8a5e\uff0c\u8868\u793a\u8cfc\u8cb7\u3002"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-22T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T07:52:56.144000Z",
-        "next_due_at": "2026-11-19T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "12d",
-        "good": "18d",
-        "easy": "32d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0517",
