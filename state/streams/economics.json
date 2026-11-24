@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 425,
+  "revision": 426,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -476,7 +476,10 @@
       "2026-11-24T13:00:00Z",
       "2026-11-24T14:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-11-24T00:00:00Z",
+      "2026-11-24T02:00:00Z"
+    ]
   },
   "next_release_at": "2026-11-24T16:00:00Z",
   "feed_reminders": [
@@ -526,6 +529,22 @@
       "pdf_id": "article_049_Interest_rates.pdf",
       "title": "Article 049 Interest Rates",
       "published_at": "2026-11-23T09:00:00Z",
+      "remaining": 10
+    },
+    {
+      "id": "economics-pdf-reminder-20261124T000000Z",
+      "batch_date": "2026-11-24",
+      "pdf_id": "article_049_Interest_rates.pdf",
+      "title": "Article 049 Interest Rates",
+      "published_at": "2026-11-24T00:00:00Z",
+      "remaining": 10
+    },
+    {
+      "id": "economics-pdf-reminder-20261124T020000Z",
+      "batch_date": "2026-11-24",
+      "pdf_id": "article_049_Interest_rates.pdf",
+      "title": "Article 049 Interest Rates",
+      "published_at": "2026-11-24T02:00:00Z",
       "remaining": 10
     }
   ]
