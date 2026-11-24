@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-24",
   "batch_date": "2026-11-24",
-  "compiled_at": "2026-11-24T04:40:41.025187Z",
-  "state_revision": 401,
+  "compiled_at": "2026-11-24T04:41:02.462863Z",
+  "state_revision": 403,
   "daily_progress": {
     "total": 16,
     "new": 5,
-    "review": 8,
-    "done": 3
+    "review": 7,
+    "done": 4
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -335,7 +335,9 @@
     "1838f5b4-d328-4df7-929e-8b412cb995b3",
     "b4582638-f13f-48a4-ae73-ec376563e202",
     "52e1e47c-850e-4e6c-a734-e64339d05a3f",
-    "879c91ba-a30b-4e62-987b-ae4c8ba48cdd"
+    "879c91ba-a30b-4e62-987b-ae4c8ba48cdd",
+    "8be6b033-f1f8-4abd-aab5-e1c5a100765d",
+    "7fddc8e7-6a6a-4a3b-9465-df82bfb130be"
   ],
   "cards": [
     {
@@ -543,72 +545,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-11-21-slovak-0089",
-      "front": {
-        "text": "T\u00e1to ko\u0161e\u013ea je \u0161pinav\u00e1.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This shirt is dirty.",
-        "notes": "[\u02c8\u0282p\u026ana\u028ba\u02d0]\n\nAdjective \u0161pinav\u00fd in feminine nominative singular, agreeing with ko\u0161e\u013ea; means dirty."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T04:35:24.691000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T04:25:24.691000Z",
-        "next_due_at": "2026-11-24T04:35:24.691000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0082",
-      "front": {
-        "text": "Toto mesto je mal\u00e9.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This town is small.",
-        "notes": "[\u02c8mesto]\n\nNeuter noun in nominative singular; means town."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T04:35:32.792000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.09603383636195935,
-        "difficulty": 8.802628058192235,
-        "interval_days": 0,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T04:25:32.792000Z",
-        "next_due_at": "2026-11-24T04:35:32.792000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-22-slovak-0090",
       "front": {
         "text": "T\u00e1 star\u00e1 \u017eena je suseda.",
@@ -699,6 +635,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-11-24T04:26:26.549000Z",
         "next_due_at": "2026-11-24T04:36:26.549000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0089",
+      "front": {
+        "text": "T\u00e1to ko\u0161e\u013ea je \u0161pinav\u00e1.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "This shirt is dirty.",
+        "notes": "[\u02c8\u0282p\u026ana\u028ba\u02d0]\n\nAdjective \u0161pinav\u00fd in feminine nominative singular, agreeing with ko\u0161e\u013ea; means dirty."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T04:50:17.269000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-24T04:40:17.269000Z",
+        "next_due_at": "2026-11-24T04:50:17.269000Z"
       },
       "schedule_previews": {
         "again": "10m",
