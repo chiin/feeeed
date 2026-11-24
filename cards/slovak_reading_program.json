@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-24",
   "batch_date": "2026-11-24",
-  "compiled_at": "2026-11-24T04:26:20.441762Z",
-  "state_revision": 313,
+  "compiled_at": "2026-11-24T04:26:40.443028Z",
+  "state_revision": 314,
   "source_revisions": {
     "slovak_vocab": 849,
-    "slovak_sentences": 393
+    "slovak_sentences": 397
   },
   "daily_progress": {
     "total": 41,
-    "new": 23,
-    "review": 13,
-    "done": 5
+    "new": 22,
+    "review": 12,
+    "done": 7
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -1118,45 +1118,13 @@
     "b83756ea-0c09-4244-aa82-5310324f2059",
     "81038501-f82a-4581-8825-db0ac41f3577",
     "36023f78-eb87-4443-b89f-9d2b4ec8fba0",
-    "4e3b841b-4c27-467b-9bbc-0730598e87ec"
+    "4e3b841b-4c27-467b-9bbc-0730598e87ec",
+    "04756d09-811b-40af-aa4a-a281b7ab3cb8",
+    "e1db6a47-85ec-4003-a6f5-8e2b4ef277cb",
+    "2fed2690-8923-4f89-8a35-3c10b2e58bac",
+    "5da9b76c-1759-473a-8440-0fe21b0dc1dd"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0084",
-      "front": {
-        "text": "M\u00e1m r\u00e1d ovocie, najm\u00e4 jablk\u00e1.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I like fruit, especially apples.",
-        "notes": "[\u02c8najme\u02d0]\n\nAdverb meaning especially; emphasizes jablk\u00e1."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.2931,
-        "difficulty": 5.112170705601056,
-        "interval_days": 1,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-23T06:56:32.816000Z",
-        "next_due_at": "2026-11-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
     {
       "id": "slovak-0290",
       "entry_type": "term",
@@ -1194,42 +1162,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-10-slovak-0033",
-      "front": {
-        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
-        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.1771555958316902,
-        "difficulty": 9.953112135718762,
-        "interval_days": 1,
-        "reviews": 16,
-        "passing_reviews": 2,
-        "lapses": 9,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-23T08:28:37.548000Z",
-        "next_due_at": "2026-11-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak_reading-2026-11-21-slovak-0089",
       "front": {
         "text": "T\u00e1to ko\u0161e\u013ea je \u0161pinav\u00e1.",
@@ -1241,13 +1173,25 @@
         "notes": "[\u02c8\u0282p\u026ana\u028ba\u02d0]\n\nAdjective \u0161pinav\u00fd in feminine nominative singular, agreeing with ko\u0161e\u013ea; means dirty."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-24T04:35:24.691000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-24T04:25:24.691000Z",
+        "next_due_at": "2026-11-24T04:35:24.691000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -1265,19 +1209,19 @@
         "notes": "[\u02c8mesto]\n\nNeuter noun in nominative singular; means town."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
+      "available_at": "2026-11-24T04:35:32.792000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.09603383636195935,
+        "difficulty": 8.802628058192235,
+        "interval_days": 0,
+        "reviews": 3,
         "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T05:53:56.348000Z",
-        "next_due_at": "2026-11-23T16:00:00Z"
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-24T04:25:32.792000Z",
+        "next_due_at": "2026-11-24T04:35:32.792000Z"
       },
       "schedule_previews": {
         "again": "10m",
