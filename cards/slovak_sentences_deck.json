@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-24",
   "batch_date": "2026-11-24",
-  "compiled_at": "2026-11-24T04:55:26.336279Z",
-  "state_revision": 412,
+  "compiled_at": "2026-11-24T04:59:30.771438Z",
+  "state_revision": 419,
   "daily_progress": {
     "total": 16,
-    "new": 1,
-    "review": 6,
-    "done": 9
+    "new": 0,
+    "review": 4,
+    "done": 12
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -346,96 +346,16 @@
     "3e306486-2b7c-47be-ab46-aa416e62d37c",
     "0f48d791-ee29-419f-92dd-0171cb87a801",
     "5b15b630-b1c6-48ce-b072-0d5f5fca677b",
-    "3afcae92-6b58-475c-bebc-258eab1c9af0"
+    "3afcae92-6b58-475c-bebc-258eab1c9af0",
+    "d901bbaa-5467-4eb6-842a-edf69445054c",
+    "502fabd8-a484-4fa3-a959-a9b8b9317753",
+    "7ee1b7b4-a25a-4f64-afeb-897e9e9cdbff",
+    "a916ec42-7c72-4d89-bae5-b39af0b4a07e",
+    "55ca6c79-62de-41cc-b01b-e8a2f97a3fad",
+    "3aaaff77-90ca-4390-9da3-77786002b82c",
+    "49500fae-ad13-4521-ad95-7fe7fb0e8a95"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.07181803253046305,
-        "difficulty": 9.961282223464849,
-        "interval_days": 1,
-        "reviews": 20,
-        "passing_reviews": 2,
-        "lapses": 13,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-23T06:56:15.998000Z",
-        "next_due_at": "2026-11-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0081",
-      "front": {
-        "text": "Dunaj te\u010die cez Bratislavu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Danube flows through Bratislava.",
-        "notes": "[\u02c8dunaj]\n\nProper noun in masculine nominative singular; name of the Danube."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T06:56:13.629000Z",
-        "next_due_at": "2026-11-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0088",
-      "front": {
-        "text": "T\u00e1to rieka je hlbok\u00e1.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This river is deep.",
-        "notes": "[\u02c8r\u026ae\u032fka]\n\nFeminine noun in nominative singular; means river."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
     {
       "id": "slovak_reading-2026-11-22-slovak-0090",
       "front": {
@@ -448,19 +368,19 @@
         "notes": "[\u02c8star\u025b\u02d0]\n\nstar\u00e1 is the feminine nominative singular form of star\u00fd, agreeing with \u017eena; it means old."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-24T04:50:24.504000Z",
+      "available_at": "2026-11-24T05:08:46.708000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.08335671711031604,
-        "difficulty": 8.806304468856837,
+        "stability": 0.03485140985964798,
+        "difficulty": 9.592868765339693,
         "interval_days": 0,
-        "reviews": 2,
+        "reviews": 3,
         "passing_reviews": 0,
-        "lapses": 1,
+        "lapses": 2,
         "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T04:40:24.504000Z",
-        "next_due_at": "2026-11-24T04:50:24.504000Z"
+        "last_reviewed_at": "2026-11-24T04:58:46.708000Z",
+        "next_due_at": "2026-11-24T05:08:46.708000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -481,19 +401,19 @@
         "notes": "[\u02c8vpra\u028bo]\n\nvpravo is an adverb of place meaning on the right; it indicates the position of mydlo."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-24T04:50:26.358000Z",
+      "available_at": "2026-11-24T05:08:48.633000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.08335671711031604,
-        "difficulty": 8.806304468856837,
+        "stability": 0.03485140985964798,
+        "difficulty": 9.592868765339693,
         "interval_days": 0,
-        "reviews": 2,
+        "reviews": 3,
         "passing_reviews": 0,
-        "lapses": 1,
+        "lapses": 2,
         "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T04:40:26.358000Z",
-        "next_due_at": "2026-11-24T04:50:26.358000Z"
+        "last_reviewed_at": "2026-11-24T04:58:48.633000Z",
+        "next_due_at": "2026-11-24T05:08:48.633000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -514,19 +434,19 @@
         "notes": "[\u02c8ve\u028emi]\n\nve\u013emi is an adverb meaning very; it intensifies fajn."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-24T04:50:28.574000Z",
+      "available_at": "2026-11-24T05:08:50.694000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.08335671711031604,
-        "difficulty": 8.806304468856837,
+        "stability": 0.03485140985964798,
+        "difficulty": 9.592868765339693,
         "interval_days": 0,
-        "reviews": 2,
+        "reviews": 3,
         "passing_reviews": 0,
-        "lapses": 1,
+        "lapses": 2,
         "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T04:40:28.574000Z",
-        "next_due_at": "2026-11-24T04:50:28.574000Z"
+        "last_reviewed_at": "2026-11-24T04:58:50.694000Z",
+        "next_due_at": "2026-11-24T05:08:50.694000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -536,18 +456,18 @@
       }
     },
     {
-      "id": "slovak_reading-2026-11-22-slovak-0096",
+      "id": "slovak_reading-2026-11-21-slovak-0088",
       "front": {
-        "text": "Pros\u00edm, daj mi vodu.",
+        "text": "T\u00e1to rieka je hlbok\u00e1.",
         "audio": null,
         "image": null
       },
       "back": {
-        "text": "Please give me water.",
-        "notes": "/\u02c8v\u0254du/\n\nvodu is the accusative singular form of the noun voda (water); it is used here as the direct object of the verb daj."
+        "text": "This river is deep.",
+        "notes": "[\u02c8r\u026ae\u032fka]\n\nFeminine noun in nominative singular; means river."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-24T04:50:39.217000Z",
+      "available_at": "2026-11-24T05:08:55.643000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
@@ -558,8 +478,8 @@
         "passing_reviews": 0,
         "lapses": 0,
         "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T04:40:39.217000Z",
-        "next_due_at": "2026-11-24T04:50:39.217000Z"
+        "last_reviewed_at": "2026-11-24T04:58:55.643000Z",
+        "next_due_at": "2026-11-24T05:08:55.643000Z"
       },
       "schedule_previews": {
         "again": "10m",
