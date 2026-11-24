@@ -3,15 +3,15 @@
   "deck_id": "slovak_sentences",
   "title": "Slovak Sentence Practice",
   "front_text_scale": 1.2,
-  "batch_id": "2026-11-24",
-  "batch_date": "2026-11-24",
-  "compiled_at": "2026-11-24T12:43:21.832979Z",
-  "state_revision": 424,
+  "batch_id": "2026-11-25",
+  "batch_date": "2026-11-25",
+  "compiled_at": "2026-11-24T17:09:43.030571Z",
+  "state_revision": 425,
   "daily_progress": {
-    "total": 16,
-    "new": 0,
-    "review": 0,
-    "done": 16
+    "total": 25,
+    "new": 6,
+    "review": 19,
+    "done": 0
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -360,5 +360,759 @@
     "687c90bc-0250-45af-a919-93a1f060af6f",
     "8f2eb409-649b-4f35-8802-dd4dfa03b436"
   ],
-  "cards": []
+  "cards": [
+    {
+      "id": "slovak_reading-2026-09-08-slovak-0021",
+      "front": {
+        "text": "Slovenka Ana spravila na mieste konci knihy.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Slovak woman Ana finished the book at the place.",
+        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.07181803253046305,
+        "difficulty": 9.959525704984419,
+        "interval_days": 1,
+        "reviews": 21,
+        "passing_reviews": 2,
+        "lapses": 13,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-24T04:59:07.429000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-09-10-slovak-0033",
+      "front": {
+        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
+        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 1.1771555958316902,
+        "difficulty": 9.954102020012476,
+        "interval_days": 1,
+        "reviews": 17,
+        "passing_reviews": 2,
+        "lapses": 9,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-24T04:25:19.612000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "2d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-20-slovak-0071",
+      "front": {
+        "text": "je to hrad?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "is it a castle?",
+        "notes": null
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-23T05:30:46.396000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-20-slovak-0074",
+      "front": {
+        "text": "kto je \u2026 ?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "who is \u2026 ?",
+        "notes": null
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-23T06:56:19.634000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0080",
+      "front": {
+        "text": "T\u00e1to voda je \u010dist\u00e1.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "This water is clean.",
+        "notes": "[\u02c8t\u0361\u0283\u026asta\u02d0]\n\nAdjective \u010dist\u00fd in feminine nominative singular, agreeing with voda; means clean."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.2842063592758949,
+        "difficulty": 6.3909413235243795,
+        "interval_days": 1,
+        "reviews": 3,
+        "passing_reviews": 2,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-24T04:40:46.575000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0081",
+      "front": {
+        "text": "Dunaj te\u010die cez Bratislavu.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The Danube flows through Bratislava.",
+        "notes": "[\u02c8dunaj]\n\nProper noun in masculine nominative singular; name of the Danube."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.2842063592758949,
+        "difficulty": 6.3909413235243795,
+        "interval_days": 1,
+        "reviews": 3,
+        "passing_reviews": 2,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-24T04:59:11.870000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0082",
+      "front": {
+        "text": "Toto mesto je mal\u00e9.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "This town is small.",
+        "notes": "[\u02c8mesto]\n\nNeuter noun in nominative singular; means town."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.09603383636195935,
+        "difficulty": 9.190357076792354,
+        "interval_days": 1,
+        "reviews": 4,
+        "passing_reviews": 1,
+        "lapses": 1,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-24T04:40:19.886000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0083",
+      "front": {
+        "text": "M\u00e1 modr\u00e9 o\u010di.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "He/She has blue eyes.",
+        "notes": "[\u02c8m\u0254dre\u02d0]\n\nAdjective modr\u00fd in plural nominative/accusative, agreeing with o\u010di; means blue."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-23T06:41:54.072000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0084",
+      "front": {
+        "text": "M\u00e1m r\u00e1d ovocie, najm\u00e4 jablk\u00e1.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I like fruit, especially apples.",
+        "notes": "[\u02c8najme\u02d0]\n\nAdverb meaning especially; emphasizes jablk\u00e1."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 1.3358997622047517,
+        "difficulty": 5.102286904192293,
+        "interval_days": 1,
+        "reviews": 2,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-24T04:25:09.904000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "2d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0085",
+      "front": {
+        "text": "Na\u0161a rodina b\u00fdva v meste.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Our family lives in a town.",
+        "notes": "[\u02c8na\u0282a]\n\nPossessive pronoun n\u00e1\u0161 in feminine nominative singular, agreeing with rodina; means our."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-23T08:27:54.374000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0086",
+      "front": {
+        "text": "nie je",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "it is not",
+        "notes": null
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-23T05:54:07.433000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0087",
+      "front": {
+        "text": "To je pekn\u00e1 z\u00e1hrada.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "That is a nice garden.",
+        "notes": "[\u02c8pekna\u02d0]\n\nAdjective pekn\u00fd in feminine nominative singular, agreeing with z\u00e1hrada; means nice/pretty."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 2.3065,
+        "difficulty": 2.118103970459016,
+        "interval_days": 2,
+        "reviews": 1,
+        "passing_reviews": 1,
+        "lapses": 0,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-23T05:54:00.877000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "5d",
+        "good": "7d",
+        "easy": "12d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0088",
+      "front": {
+        "text": "T\u00e1to rieka je hlbok\u00e1.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "This river is deep.",
+        "notes": "[\u02c8r\u026ae\u032fka]\n\nFeminine noun in nominative singular; means river."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.10314065007785231,
+        "difficulty": 8.792726533684817,
+        "interval_days": 1,
+        "reviews": 3,
+        "passing_reviews": 1,
+        "lapses": 1,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-24T11:23:05.490000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-21-slovak-0089",
+      "front": {
+        "text": "T\u00e1to ko\u0161e\u013ea je \u0161pinav\u00e1.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "This shirt is dirty.",
+        "notes": "[\u02c8\u0282p\u026ana\u028ba\u02d0]\n\nAdjective \u0161pinav\u00fd in feminine nominative singular, agreeing with ko\u0161e\u013ea; means dirty."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.10314065007785231,
+        "difficulty": 8.792726533684817,
+        "interval_days": 1,
+        "reviews": 3,
+        "passing_reviews": 1,
+        "lapses": 1,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-24T04:52:17.453000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0090",
+      "front": {
+        "text": "T\u00e1 star\u00e1 \u017eena je suseda.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "That old woman is a neighbor.",
+        "notes": "[\u02c8star\u025b\u02d0]\n\nstar\u00e1 is the feminine nominative singular form of star\u00fd, agreeing with \u017eena; it means old."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.03485140985964798,
+        "difficulty": 9.714955683413791,
+        "interval_days": 1,
+        "reviews": 4,
+        "passing_reviews": 0,
+        "lapses": 2,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-24T11:12:52.916000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0094",
+      "front": {
+        "text": "T\u00e1 bl\u00fazka je ve\u013emi fajn.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "That blouse is very nice.",
+        "notes": "[\u02c8ve\u028emi]\n\nve\u013emi is an adverb meaning very; it intensifies fajn."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.04566983117260317,
+        "difficulty": 9.57850426587119,
+        "interval_days": 1,
+        "reviews": 4,
+        "passing_reviews": 1,
+        "lapses": 2,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-24T11:12:59.521000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0095",
+      "front": {
+        "text": "Klob\u00e1sa je v\u013eavo.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The sausage is on the left.",
+        "notes": "[\u02c8v\u028eavo]\n\nv\u013eavo is an adverb of place meaning on the left; it indicates the position of klob\u00e1sa."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 1.2931,
+        "difficulty": 5.112170705601056,
+        "interval_days": 1,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-24T04:52:30.737000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "2d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0096",
+      "front": {
+        "text": "Pros\u00edm, daj mi vodu.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Please give me water.",
+        "notes": "/\u02c8v\u0254du/\n\nvodu is the accusative singular form of the noun voda (water); it is used here as the direct object of the verb daj."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.212,
+        "difficulty": 7.604209769076838,
+        "interval_days": 1,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "hard",
+        "last_reviewed_at": "2026-11-24T04:58:52.792000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0097",
+      "front": {
+        "text": "Mydlo je vpravo.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "The soap is on the right.",
+        "notes": "[\u02c8vpra\u028bo]\n\nvpravo is an adverb of place meaning on the right; it indicates the position of mydlo."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": {
+        "state": "review",
+        "step": null,
+        "stability": 0.04566983117260317,
+        "difficulty": 9.57850426587119,
+        "interval_days": 1,
+        "reviews": 4,
+        "passing_reviews": 1,
+        "lapses": 2,
+        "last_rating": "good",
+        "last_reviewed_at": "2026-11-24T11:12:56.270000Z",
+        "next_due_at": "2026-11-24T16:00:00Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0098",
+      "front": {
+        "text": "Toto je ve\u013ek\u00fd dom.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "This is a big house.",
+        "notes": "[\u02c8ve\u028eki\u02d0]\n\nve\u013ek\u00fd is an adjective meaning big; it is masculine nominative singular and agrees with dom."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0099",
+      "front": {
+        "text": "Toto je mal\u00fd dar\u010dek.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "This is a small gift.",
+        "notes": "[\u02c8mali\u02d0]\n\nmal\u00fd is an adjective meaning small; it is masculine nominative singular and agrees with dar\u010dek."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-23-slovak-0100",
+      "front": {
+        "text": "Chcem nov\u00fd bicykel.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "I want a new bicycle.",
+        "notes": "/\u02c8n\u0254\u028bi\u02d0/\n\nnov\u00fd means 'new'; it is a masculine nominative singular adjective agreeing with the masculine noun bicykel."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-24-slovak-0101",
+      "front": {
+        "text": "Pozn\u00e1te toho mlad\u00e9ho \u010dloveka?",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Do you know that young person?",
+        "notes": "[\u02c8ml\u0329ad\u032ae\u02c8\u0263\u0254]\n\nThe word 'mlad\u00e9ho' is the accusative singular masculine form of the adjective 'mlad\u00fd', meaning 'young'. It agrees with the noun '\u010dloveka' in gender, number, and case."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-24-slovak-0102",
+      "front": {
+        "text": "Je to dobr\u00fd \u0161tudent.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "He is a good student.",
+        "notes": "[\u02c8d\u0254bri\u02d0]\n\nThe word 'dobr\u00fd' is the nominative singular masculine form of the adjective 'dobr\u00fd', meaning 'good'. It agrees with the noun '\u0161tudent' in gender, number, and case."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-24-slovak-0103",
+      "front": {
+        "text": "Je to zl\u00fd \u010dlovek.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "He is a bad person.",
+        "notes": "[\u02c8zli\u02d0]\n\nThe word 'zl\u00fd' is the nominative singular masculine form of the adjective 'zl\u00fd', meaning 'bad'. It agrees with the noun '\u010dlovek' in gender, number, and case."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T16:00:00Z",
+      "scheduler_state": null,
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "2d",
+        "easy": "8d"
+      }
+    }
+  ]
 }
