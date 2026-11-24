@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-24",
   "batch_date": "2026-11-24",
-  "compiled_at": "2026-11-24T04:52:30.547442Z",
-  "state_revision": 403,
+  "compiled_at": "2026-11-24T04:52:48.292988Z",
+  "state_revision": 408,
   "daily_progress": {
     "total": 16,
-    "new": 5,
+    "new": 4,
     "review": 7,
-    "done": 4
+    "done": 5
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -337,7 +337,12 @@
     "52e1e47c-850e-4e6c-a734-e64339d05a3f",
     "879c91ba-a30b-4e62-987b-ae4c8ba48cdd",
     "8be6b033-f1f8-4abd-aab5-e1c5a100765d",
-    "7fddc8e7-6a6a-4a3b-9465-df82bfb130be"
+    "7fddc8e7-6a6a-4a3b-9465-df82bfb130be",
+    "958f48d9-6984-42e6-8e2f-851484a4d5c9",
+    "fe6b2e48-21dc-428e-9d8d-39ea03ef036d",
+    "637fc032-b77d-4e22-bc32-3a91798d350a",
+    "560695b8-bbfc-479d-83a5-bac96460a268",
+    "60ad71f7-c59b-4d16-8e0b-741cca74245b"
   ],
   "cards": [
     {
@@ -364,39 +369,6 @@
         "lapses": 13,
         "last_rating": "hard",
         "last_reviewed_at": "2026-11-23T06:56:15.998000Z",
-        "next_due_at": "2026-11-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0080",
-      "front": {
-        "text": "T\u00e1to voda je \u010dist\u00e1.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This water is clean.",
-        "notes": "[\u02c8t\u0361\u0283\u026asta\u02d0]\n\nAdjective \u010dist\u00fd in feminine nominative singular, agreeing with voda; means clean."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T05:53:53.980000Z",
         "next_due_at": "2026-11-23T16:00:00Z"
       },
       "schedule_previews": {
@@ -524,126 +496,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-11-22-slovak-0096",
-      "front": {
-        "text": "Pros\u00edm, daj mi vodu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Please give me water.",
-        "notes": "/\u02c8v\u0254du/\n\nvodu is the accusative singular form of the noun voda (water); it is used here as the direct object of the verb daj."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0090",
-      "front": {
-        "text": "T\u00e1 star\u00e1 \u017eena je suseda.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "[\u02c8star\u025b\u02d0]",
-        "notes": "[\u02c8star\u025b\u02d0]\n\nstar\u00e1 is the feminine nominative singular form of star\u00fd, agreeing with \u017eena; it means old."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T04:36:07.351000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T04:26:07.351000Z",
-        "next_due_at": "2026-11-24T04:36:07.351000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0097",
-      "front": {
-        "text": "Mydlo je vpravo.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "[\u02c8vpra\u028bo]",
-        "notes": "[\u02c8vpra\u028bo]\n\nvpravo is an adverb of place meaning on the right; it indicates the position of mydlo."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T04:36:14.915000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T04:26:14.915000Z",
-        "next_due_at": "2026-11-24T04:36:14.915000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0094",
-      "front": {
-        "text": "T\u00e1 bl\u00fazka je ve\u013emi fajn.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "[\u02c8ve\u028emi]",
-        "notes": "[\u02c8ve\u028emi]\n\nve\u013emi is an adverb meaning very; it intensifies fajn."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T04:36:26.549000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T04:26:26.549000Z",
-        "next_due_at": "2026-11-24T04:36:26.549000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-21-slovak-0089",
       "front": {
         "text": "T\u00e1to ko\u0161e\u013ea je \u0161pinav\u00e1.",
@@ -668,6 +520,138 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-11-24T04:40:17.269000Z",
         "next_due_at": "2026-11-24T04:50:17.269000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0090",
+      "front": {
+        "text": "T\u00e1 star\u00e1 \u017eena je suseda.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "[\u02c8star\u025b\u02d0]",
+        "notes": "[\u02c8star\u025b\u02d0]\n\nstar\u00e1 is the feminine nominative singular form of star\u00fd, agreeing with \u017eena; it means old."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T04:50:24.504000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-24T04:40:24.504000Z",
+        "next_due_at": "2026-11-24T04:50:24.504000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0097",
+      "front": {
+        "text": "Mydlo je vpravo.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "[\u02c8vpra\u028bo]",
+        "notes": "[\u02c8vpra\u028bo]\n\nvpravo is an adverb of place meaning on the right; it indicates the position of mydlo."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T04:50:26.358000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-24T04:40:26.358000Z",
+        "next_due_at": "2026-11-24T04:50:26.358000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0094",
+      "front": {
+        "text": "T\u00e1 bl\u00fazka je ve\u013emi fajn.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "[\u02c8ve\u028emi]",
+        "notes": "[\u02c8ve\u028emi]\n\nve\u013emi is an adverb meaning very; it intensifies fajn."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T04:50:28.574000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
+        "interval_days": 0,
+        "reviews": 2,
+        "passing_reviews": 0,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-24T04:40:28.574000Z",
+        "next_due_at": "2026-11-24T04:50:28.574000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "slovak_reading-2026-11-22-slovak-0096",
+      "front": {
+        "text": "Pros\u00edm, daj mi vodu.",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "Please give me water.",
+        "notes": "/\u02c8v\u0254du/\n\nvodu is the accusative singular form of the noun voda (water); it is used here as the direct object of the verb daj."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-24T04:50:39.217000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-24T04:40:39.217000Z",
+        "next_due_at": "2026-11-24T04:50:39.217000Z"
       },
       "schedule_previews": {
         "again": "10m",
