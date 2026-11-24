@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "sequential",
-  "revision": 429,
+  "revision": 432,
   "completed_ids": [
     "article_004_Scarcity.pdf",
     "article_005_Utility.pdf",
@@ -49,7 +49,8 @@
     "article_045_Fiat_and_commodity_money.pdf",
     "article_046_Money_supply.pdf",
     "article_047_Money_creation.pdf",
-    "article_048_The_demand_for_money.pdf"
+    "article_048_The_demand_for_money.pdf",
+    "article_049_Interest_rates.pdf"
   ],
   "completion_counts": {
     "article_002_Introduction.pdf": 1,
@@ -94,7 +95,8 @@
     "article_045_Fiat_and_commodity_money.pdf": 1,
     "article_046_Money_supply.pdf": 1,
     "article_047_Money_creation.pdf": 1,
-    "article_048_The_demand_for_money.pdf": 1
+    "article_048_The_demand_for_money.pdf": 1,
+    "article_049_Interest_rates.pdf": 1
   },
   "processed_events": {
     "34ba6c78-2800-4955-bd66-56792fff70f0": {
@@ -404,6 +406,18 @@
     "bf5ed8db-e296-448b-9565-43784f7530c5": {
       "processed_at": "2026-11-18T09:36:07.046283Z",
       "status": "applied"
+    },
+    "dd025f6c-a450-4f11-b4c5-5835a081128d": {
+      "processed_at": "2026-11-24T11:34:58.879084Z",
+      "status": "applied"
+    },
+    "684158fc-9c4e-4513-9490-15aaca34c82e": {
+      "processed_at": "2026-11-24T11:34:58.879084Z",
+      "status": "applied"
+    },
+    "df7d4eca-8375-4bcf-88c9-16083656de33": {
+      "processed_at": "2026-11-24T11:34:58.879084Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -423,7 +437,6 @@
       "article_058_The_capital_asset_pricing_mode.pdf"
     ],
     "active_ids": [
-      "article_049_Interest_rates.pdf",
       "article_050_Seigniorage.pdf",
       "article_051_Money_illusion.pdf",
       "article_052_The_Fisher_effect.pdf",
@@ -446,7 +459,10 @@
       "article_057_The_stock_market.pdf",
       "article_058_The_capital_asset_pricing_mode.pdf"
     ],
-    "opened_ids": [],
+    "opened_ids": [
+      "article_049_Interest_rates.pdf",
+      "article_050_Seigniorage.pdf"
+    ],
     "segments": [
       {
         "kind": "initial",
