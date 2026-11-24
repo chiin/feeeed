@@ -5,16 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-11-24",
   "batch_date": "2026-11-24",
-  "compiled_at": "2026-11-24T11:37:17.223622Z",
-  "state_revision": 3779,
+  "compiled_at": "2026-11-24T11:41:51.093161Z",
+  "state_revision": 3780,
   "daily_progress": {
     "total": 95,
     "new": 0,
-    "review": 1,
-    "done": 94
+    "review": 0,
+    "done": 95
   },
   "processed_event_ids": [
-    "319e5d46-234b-46bb-ad34-e7d7813a1510",
     "6e89061b-6a78-4459-a450-84371b0fabbe",
     "aef94923-951d-46d2-87bb-8a565a7d50b8",
     "b6bcac31-7711-49fb-8087-a26eb7a43291",
@@ -1013,51 +1012,8 @@
     "612e02b9-5ed9-4ebf-900b-ece433e1e993",
     "865f6a7f-c3b0-4f2b-bc69-fa68914c6b64",
     "5ef1aaef-dd9f-4741-b49d-c02fb95a5666",
-    "76a1f5bf-1cc3-46b2-a02b-71904a041544"
+    "76a1f5bf-1cc3-46b2-a02b-71904a041544",
+    "1edcb71b-4278-4a4a-a34a-186308589b9e"
   ],
-  "cards": [
-    {
-      "id": "hsk-0575",
-      "entry_type": "term",
-      "front": {
-        "text": "\u9858\u610f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "yu\u00e0ny\u00ec - willing to",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u9858",
-          "url": "https://www.dong-chinese.com/wiki/%E9%A1%98"
-        },
-        {
-          "character": "\u610f",
-          "url": "https://www.dong-chinese.com/wiki/%E6%84%8F"
-        }
-      ],
-      "available_at": "2026-11-24T11:37:38.512000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.1202466843553157,
-        "difficulty": 9.919611175228386,
-        "interval_days": 0,
-        "reviews": 6,
-        "passing_reviews": 0,
-        "lapses": 3,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-24T11:27:38.512000Z",
-        "next_due_at": "2026-11-24T11:37:38.512000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    }
-  ]
+  "cards": []
 }
