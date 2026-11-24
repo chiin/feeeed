@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 402,
+  "revision": 404,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -224,6 +224,10 @@
     "d381ac8c-92ff-43a0-9092-9a822fe4fe0f": {
       "processed_at": "2026-11-11T10:56:57.624042Z",
       "status": "applied"
+    },
+    "8a530913-c51b-4cf0-b72a-936797752d75": {
+      "processed_at": "2026-11-24T12:41:57.429081Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -266,7 +270,9 @@
       "article_011_Authority_and_legitimacy_power.pdf",
       "article_061_Cabinet.pdf"
     ],
-    "opened_ids": [],
+    "opened_ids": [
+      "article_079_Toleration.pdf"
+    ],
     "segments": [
       {
         "kind": "initial",
@@ -305,7 +311,8 @@
       "2026-11-24T05:00:00Z",
       "2026-11-24T07:00:00Z",
       "2026-11-24T09:00:00Z",
-      "2026-11-24T10:00:00Z"
+      "2026-11-24T10:00:00Z",
+      "2026-11-24T12:00:00Z"
     ]
   },
   "next_release_at": "2026-11-24T16:00:00Z",
@@ -436,6 +443,14 @@
       "pdf_id": "article_079_Toleration.pdf",
       "title": "Article 079 Toleration",
       "published_at": "2026-11-24T10:00:00Z",
+      "remaining": 10
+    },
+    {
+      "id": "politics-pdf-reminder-20261124T120000Z",
+      "batch_date": "2026-11-24",
+      "pdf_id": "article_079_Toleration.pdf",
+      "title": "Article 079 Toleration",
+      "published_at": "2026-11-24T12:00:00Z",
       "remaining": 10
     }
   ]
