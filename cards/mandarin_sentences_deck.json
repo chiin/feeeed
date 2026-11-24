@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-24",
   "batch_date": "2026-11-24",
-  "compiled_at": "2026-11-24T11:27:30.926255Z",
-  "state_revision": 368,
+  "compiled_at": "2026-11-24T11:27:51.395014Z",
+  "state_revision": 369,
   "daily_progress": {
     "total": 7,
     "new": 0,
-    "review": 1,
-    "done": 6
+    "review": 0,
+    "done": 7
   },
   "processed_event_ids": [
     "29a49f8a-c7ef-4b77-b5cb-1709c0885178",
@@ -299,41 +299,8 @@
     "11cc8ea6-ef67-4799-aa2c-18f759ab784a",
     "09964add-65f7-4649-b4ff-585fd62d9dad",
     "01cd5f2f-dd2e-4c66-8d81-8bad1acc0582",
-    "db4b73ce-78eb-4c0e-aad0-cb0c09a36cf1"
+    "db4b73ce-78eb-4c0e-aad0-cb0c09a36cf1",
+    "cd128b2a-9c4c-4ef6-94d3-8d4b9b719d90"
   ],
-  "cards": [
-    {
-      "id": "mandarin_reading-2026-11-16-hsk-0078",
-      "front": {
-        "text": "\u8acb\u4f60\u5750\u5728\u9019\u88e1\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Please sit here.",
-        "notes": "Q\u01d0ng n\u01d0 zu\u00f2 z\u00e0i zh\u00e8l\u01d0.\n\n\u5750 means \u201cto sit\u201d; here it is the main verb of the request."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-23T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.10314065007785231,
-        "difficulty": 8.792726533684817,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T09:02:06.747000Z",
-        "next_due_at": "2026-11-23T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    }
-  ]
+  "cards": []
 }
