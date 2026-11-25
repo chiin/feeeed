@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 436,
+  "revision": 441,
   "cards": {
     "slovak_reading-2026-09-06-slovak-0001": {
       "state": "review",
@@ -1063,15 +1063,15 @@
     "slovak_reading-2026-11-21-slovak-0086": {
       "state": "review",
       "step": null,
-      "stability": 2.3065,
-      "difficulty": 2.118103970459016,
-      "interval_days": 2,
-      "reviews": 1,
-      "passing_reviews": 1,
+      "stability": 10.964332335820698,
+      "difficulty": 2.111214235785395,
+      "interval_days": 11,
+      "reviews": 2,
+      "passing_reviews": 2,
       "lapses": 0,
       "last_rating": "good",
-      "last_reviewed_at": "2026-11-23T05:54:07.433000Z",
-      "next_due_at": "2026-11-24T16:00:00Z"
+      "last_reviewed_at": "2026-11-25T07:05:43.783000Z",
+      "next_due_at": "2026-12-05T16:00:00Z"
     },
     "slovak_reading-2026-11-21-slovak-0081": {
       "state": "review",
@@ -1167,15 +1167,15 @@
     "slovak_reading-2026-11-22-slovak-0097": {
       "state": "review",
       "step": null,
-      "stability": 0.04566983117260317,
-      "difficulty": 9.57850426587119,
+      "stability": 0.058791283965570755,
+      "difficulty": 9.564154130902157,
       "interval_days": 1,
-      "reviews": 4,
-      "passing_reviews": 1,
+      "reviews": 5,
+      "passing_reviews": 2,
       "lapses": 2,
       "last_rating": "good",
-      "last_reviewed_at": "2026-11-24T11:12:56.270000Z",
-      "next_due_at": "2026-11-24T16:00:00Z"
+      "last_reviewed_at": "2026-11-25T07:05:47.645000Z",
+      "next_due_at": "2026-11-25T16:00:00Z"
     },
     "slovak_reading-2026-11-22-slovak-0094": {
       "state": "review",
@@ -1206,15 +1206,15 @@
     "slovak_reading-2026-11-22-slovak-0096": {
       "state": "review",
       "step": null,
-      "stability": 0.212,
-      "difficulty": 7.604209769076838,
+      "stability": 1.4519388312378145,
+      "difficulty": 7.5918339286046,
       "interval_days": 1,
-      "reviews": 2,
-      "passing_reviews": 0,
+      "reviews": 3,
+      "passing_reviews": 1,
       "lapses": 0,
-      "last_rating": "hard",
-      "last_reviewed_at": "2026-11-24T04:58:52.792000Z",
-      "next_due_at": "2026-11-24T16:00:00Z"
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-25T07:05:54.414000Z",
+      "next_due_at": "2026-11-25T16:00:00Z"
     },
     "slovak_reading-2026-11-22-slovak-0092": {
       "state": "review",
@@ -1292,6 +1292,32 @@
       "lapses": 0,
       "last_rating": "good",
       "last_reviewed_at": "2026-11-25T05:56:51.702000Z",
+      "next_due_at": "2026-11-26T16:00:00Z"
+    },
+    "slovak_reading-2026-11-24-slovak-0103": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-25T07:05:42.564000Z",
+      "next_due_at": "2026-11-26T16:00:00Z"
+    },
+    "slovak_reading-2026-11-23-slovak-0100": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-25T07:05:52.692000Z",
       "next_due_at": "2026-11-26T16:00:00Z"
     }
   },
@@ -2719,6 +2745,26 @@
     "e1070765-9ecb-4f0c-b48b-e8a854698ce5": {
       "processed_at": "2026-11-25T05:57:19.074798Z",
       "status": "applied"
+    },
+    "1f0cefe9-c089-40b4-b530-49b0a4f0b530": {
+      "processed_at": "2026-11-25T07:08:35.351683Z",
+      "status": "applied"
+    },
+    "f78f7a99-3024-4210-afe4-05726c8e9a60": {
+      "processed_at": "2026-11-25T07:08:35.351683Z",
+      "status": "applied"
+    },
+    "38f79d6f-fb66-416e-aa11-fcacad950dca": {
+      "processed_at": "2026-11-25T07:08:35.351683Z",
+      "status": "applied"
+    },
+    "a3a8f0c2-3d88-4c4f-bedc-e1b5f553a2d6": {
+      "processed_at": "2026-11-25T07:08:35.351683Z",
+      "status": "applied"
+    },
+    "b2ee5af1-0a71-48dc-927e-24771930d7f9": {
+      "processed_at": "2026-11-25T07:08:35.351683Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -2766,10 +2812,6 @@
         "available_at": "2026-11-24T16:00:00Z"
       },
       {
-        "card_id": "slovak_reading-2026-11-21-slovak-0086",
-        "available_at": "2026-11-24T16:00:00Z"
-      },
-      {
         "card_id": "slovak_reading-2026-11-21-slovak-0087",
         "available_at": "2026-11-24T16:00:00Z"
       },
@@ -2786,27 +2828,11 @@
         "available_at": "2026-11-24T16:00:00Z"
       },
       {
-        "card_id": "slovak_reading-2026-11-22-slovak-0096",
-        "available_at": "2026-11-24T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-11-22-slovak-0097",
-        "available_at": "2026-11-24T16:00:00Z"
-      },
-      {
         "card_id": "slovak_reading-2026-11-22-slovak-0099",
         "available_at": "2026-11-24T16:00:00Z"
       },
       {
-        "card_id": "slovak_reading-2026-11-23-slovak-0100",
-        "available_at": "2026-11-24T16:00:00Z"
-      },
-      {
         "card_id": "slovak_reading-2026-11-24-slovak-0102",
-        "available_at": "2026-11-24T16:00:00Z"
-      },
-      {
-        "card_id": "slovak_reading-2026-11-24-slovak-0103",
         "available_at": "2026-11-24T16:00:00Z"
       }
     ]
