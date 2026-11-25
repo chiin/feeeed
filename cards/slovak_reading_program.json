@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-25",
   "batch_date": "2026-11-25",
-  "compiled_at": "2026-11-25T08:11:56.173923Z",
-  "state_revision": 345,
+  "compiled_at": "2026-11-25T08:16:51.816709Z",
+  "state_revision": 348,
   "source_revisions": {
     "slovak_vocab": 920,
-    "slovak_sentences": 447
+    "slovak_sentences": 450
   },
   "daily_progress": {
     "total": 78,
-    "new": 5,
-    "review": 5,
-    "done": 68
+    "new": 4,
+    "review": 3,
+    "done": 71
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -1241,7 +1241,10 @@
     "329e3360-67d5-4860-b5db-d7cec3c16043",
     "3fbbf2b6-23c3-4d66-a92b-ecad9a2a688c",
     "018b0757-7af2-4ad3-ab48-f9703aa72009",
-    "d6c1af27-2774-48c8-870c-827001a7cd08"
+    "d6c1af27-2774-48c8-870c-827001a7cd08",
+    "8f25e18b-168b-4bca-93e3-a862244e8ea5",
+    "70b323da-05d8-4e2a-8c6f-f79dda4f529a",
+    "b60f7d81-b95f-4960-9adc-ec9a55bf718d"
   ],
   "cards": [
     {
@@ -1267,42 +1270,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0089",
-      "front": {
-        "text": "T\u00e1to ko\u0161e\u013ea je \u0161pinav\u00e1.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This shirt is dirty.",
-        "notes": "[\u02c8\u0282p\u026ana\u028ba\u02d0]\n\nAdjective \u0161pinav\u00fd in feminine nominative singular, agreeing with ko\u0161e\u013ea; means dirty."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.10314065007785231,
-        "difficulty": 8.792726533684817,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T04:52:17.453000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0293",
@@ -1449,42 +1416,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-11-21-slovak-0081",
-      "front": {
-        "text": "Dunaj te\u010die cez Bratislavu.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Danube flows through Bratislava.",
-        "notes": "[\u02c8dunaj]\n\nProper noun in masculine nominative singular; name of the Danube."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T04:59:11.870000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "4d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak-0282",
       "entry_type": "term",
       "front": {
@@ -1519,30 +1450,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0099",
-      "front": {
-        "text": "Toto je mal\u00fd dar\u010dek.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This is a small gift.",
-        "notes": "[\u02c8mali\u02d0]\n\nmal\u00fd is an adjective meaning small; it is masculine nominative singular and agrees with dar\u010dek."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     }
   ]
 }
