@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-25",
   "batch_date": "2026-11-25",
-  "compiled_at": "2026-11-25T05:57:00.730388Z",
-  "state_revision": 433,
+  "compiled_at": "2026-11-25T05:57:19.074798Z",
+  "state_revision": 436,
   "daily_progress": {
     "total": 25,
-    "new": 5,
-    "review": 12,
-    "done": 8
+    "new": 4,
+    "review": 10,
+    "done": 11
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -366,7 +366,10 @@
     "d88824b2-f879-4c86-af32-2290be4c9c20",
     "03ec2919-b45c-4461-9bcf-9728f8762114",
     "f4fc68d9-e049-4e68-992e-178a1b7ea957",
-    "9cf9f014-af81-45f1-b7aa-d700fcbfccf5"
+    "9cf9f014-af81-45f1-b7aa-d700fcbfccf5",
+    "8034ef45-ef38-424e-8305-406ba62ad3a2",
+    "bba6a1a7-bbf5-4c3b-8819-de9bb3362613",
+    "e1070765-9ecb-4f0c-b48b-e8a854698ce5"
   ],
   "cards": [
     {
@@ -466,39 +469,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "4d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0084",
-      "front": {
-        "text": "M\u00e1m r\u00e1d ovocie, najm\u00e4 jablk\u00e1.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I like fruit, especially apples.",
-        "notes": "[\u02c8najme\u02d0]\n\nAdverb meaning especially; emphasizes jablk\u00e1."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.3358997622047517,
-        "difficulty": 5.102286904192293,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T04:25:09.904000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "3d",
-        "good": "5d",
-        "easy": "7d"
       }
     },
     {
@@ -624,39 +594,6 @@
         "lapses": 1,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-24T04:52:17.453000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0094",
-      "front": {
-        "text": "T\u00e1 bl\u00fazka je ve\u013emi fajn.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "That blouse is very nice.",
-        "notes": "[\u02c8ve\u028emi]\n\nve\u013emi is an adverb meaning very; it intensifies fajn."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.04566983117260317,
-        "difficulty": 9.57850426587119,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 1,
-        "lapses": 2,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T11:12:59.521000Z",
         "next_due_at": "2026-11-24T16:00:00Z"
       },
       "schedule_previews": {
@@ -796,27 +733,6 @@
       "back": {
         "text": "I want a new bicycle.",
         "notes": "/\u02c8n\u0254\u028bi\u02d0/\n\nnov\u00fd means 'new'; it is a masculine nominative singular adjective agreeing with the masculine noun bicykel."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-24-slovak-0101",
-      "front": {
-        "text": "Pozn\u00e1te toho mlad\u00e9ho \u010dloveka?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Do you know that young person?",
-        "notes": "[\u02c8ml\u0329ad\u032ae\u02c8\u0263\u0254]\n\nThe word 'mlad\u00e9ho' is the accusative singular masculine form of the adjective 'mlad\u00fd', meaning 'young'. It agrees with the noun '\u010dloveka' in gender, number, and case."
       },
       "presentation": "text_reading",
       "available_at": "2026-11-24T16:00:00Z",
