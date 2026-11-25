@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-25",
   "batch_date": "2026-11-25",
-  "compiled_at": "2026-11-25T08:09:38.927347Z",
-  "state_revision": 913,
+  "compiled_at": "2026-11-25T08:10:00.370661Z",
+  "state_revision": 920,
   "daily_progress": {
     "total": 53,
-    "new": 8,
-    "review": 6,
-    "done": 39
+    "new": 4,
+    "review": 3,
+    "done": 46
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -864,7 +864,14 @@
     "eeaf0c63-4cc7-4a06-9b46-b676e1992568",
     "07cadbe0-ef70-4d78-957b-dac98e20a12e",
     "dd44208c-00df-4c50-a770-66a9352fdc07",
-    "d535ec1f-b8a6-4e60-911b-2627a25a40f8"
+    "d535ec1f-b8a6-4e60-911b-2627a25a40f8",
+    "c55838b9-f68c-4eb6-bfcd-26b0214b62df",
+    "469bc635-f5bc-41c9-823c-2dcc5628e24d",
+    "47024572-55c4-482d-b683-28fc5c21ffc9",
+    "57a4fb1e-585b-4591-8564-591690abaef1",
+    "4b74af8d-6815-4b41-82f2-1b30fc78c244",
+    "69b88077-7375-448e-b51f-b7a23e2f56ad",
+    "5612c1be-7d34-4679-9ec8-41373d747329"
   ],
   "cards": [
     {
@@ -898,105 +905,6 @@
         "hard": "21d",
         "good": "29d",
         "easy": "47d"
-      }
-    },
-    {
-      "id": "slovak-0198",
-      "entry_type": "term",
-      "front": {
-        "text": "niekedy",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sometimes",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.4886953510653065,
-        "difficulty": 7.579470463972833,
-        "interval_days": 2,
-        "reviews": 4,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T08:34:07.045000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "4d",
-        "good": "4d",
-        "easy": "6d"
-      }
-    },
-    {
-      "id": "slovak-0251",
-      "entry_type": "term",
-      "front": {
-        "text": "\u010das",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "time",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T06:48:31.322000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
-      "id": "slovak-0272",
-      "entry_type": "term",
-      "front": {
-        "text": "voda; -u",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "water",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T08:28:13.343000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
       }
     },
     {
@@ -1138,90 +1046,6 @@
       },
       "back": {
         "text": "father is cooking",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0302",
-      "entry_type": "term",
-      "front": {
-        "text": "otec vari ve\u010deru",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "father is cooking supper",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0303",
-      "entry_type": "sentence",
-      "front": {
-        "text": "nem\u00e1me vodu",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "we don't have any water",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0305",
-      "entry_type": "term",
-      "front": {
-        "text": "kolega",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "a colleague (m)",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0309",
-      "entry_type": "sentence",
-      "front": {
-        "text": "\u010dak\u00e1m na Petra",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I am waiting for Peter",
         "notes": null
       },
       "available_at": "2026-11-24T16:00:00Z",
