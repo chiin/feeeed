@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-25",
   "batch_date": "2026-11-25",
-  "compiled_at": "2026-11-25T07:06:02.794356Z",
-  "state_revision": 901,
+  "compiled_at": "2026-11-25T07:06:21.615821Z",
+  "state_revision": 906,
   "daily_progress": {
     "total": 53,
     "new": 10,
-    "review": 16,
-    "done": 27
+    "review": 11,
+    "done": 32
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -852,7 +852,12 @@
     "761daa55-a959-4b2d-8f68-78f47cad6618",
     "640fdc8e-6f86-4823-9cd2-2fb22a8803fd",
     "9ba827f6-f510-4232-be73-4bd04b71fb26",
-    "a77c5161-2be8-4388-ac07-b48fb6dc62a0"
+    "a77c5161-2be8-4388-ac07-b48fb6dc62a0",
+    "4c6c08ac-624a-4801-9e97-bdeda28914c7",
+    "d9c8dccc-af1a-45cd-9909-2ba46351898d",
+    "a7fa61ed-4026-48b1-99aa-41ed2ce456a9",
+    "11044c7d-9c4c-4423-9537-c3c28c42641c",
+    "83440aaa-0c6f-4c17-a649-0aed7bd87142"
   ],
   "cards": [
     {
@@ -955,39 +960,6 @@
       }
     },
     {
-      "id": "slovak-0250",
-      "entry_type": "term",
-      "front": {
-        "text": "franc\u00faz\u0161tina",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "French language (noun)",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T06:37:11.183000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
       "id": "slovak-0251",
       "entry_type": "term",
       "front": {
@@ -1011,72 +983,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-23T06:48:31.322000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
-      "id": "slovak-0255",
-      "entry_type": "term",
-      "front": {
-        "text": "telev\u00edzia; -u",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "television",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T08:28:29.496000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      }
-    },
-    {
-      "id": "slovak-0263",
-      "entry_type": "term",
-      "front": {
-        "text": "chcem",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I want",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T06:41:38.384000Z",
         "next_due_at": "2026-11-24T16:00:00Z"
       },
       "schedule_previews": {
@@ -1143,39 +1049,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-23T06:42:01.353000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
-      "id": "slovak-0270",
-      "entry_type": "term",
-      "front": {
-        "text": "\u0161portovky\u0148a",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "a sportswoman",
-        "notes": null
-      },
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T06:48:44.916000Z",
         "next_due_at": "2026-11-24T16:00:00Z"
       },
       "schedule_previews": {
@@ -1558,39 +1431,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0299",
-      "entry_type": "term",
-      "front": {
-        "text": "dedo; dedko",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "grandpa",
-        "notes": null
-      },
-      "available_at": "2026-11-25T06:06:29.862000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-25T05:56:29.862000Z",
-        "next_due_at": "2026-11-25T06:06:29.862000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     }
   ]
