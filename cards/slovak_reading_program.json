@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-25",
   "batch_date": "2026-11-25",
-  "compiled_at": "2026-11-25T07:47:51.286141Z",
-  "state_revision": 344,
+  "compiled_at": "2026-11-25T08:09:38.927347Z",
+  "state_revision": 345,
   "source_revisions": {
     "slovak_vocab": 913,
-    "slovak_sentences": 444
+    "slovak_sentences": 447
   },
   "daily_progress": {
     "total": 78,
     "new": 9,
-    "review": 11,
-    "done": 58
+    "review": 8,
+    "done": 61
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -1231,7 +1231,10 @@
     "b2ee5af1-0a71-48dc-927e-24771930d7f9",
     "21ab3477-9b65-40bf-9bc3-78d4f672354b",
     "66fbb3b1-7fe7-4eb5-bab6-97cc907bfa17",
-    "329e3360-67d5-4860-b5db-d7cec3c16043"
+    "329e3360-67d5-4860-b5db-d7cec3c16043",
+    "3fbbf2b6-23c3-4d66-a92b-ecad9a2a688c",
+    "018b0757-7af2-4ad3-ab48-f9703aa72009",
+    "d6c1af27-2774-48c8-870c-827001a7cd08"
   ],
   "cards": [
     {
@@ -1257,78 +1260,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-09-10-slovak-0033",
-      "front": {
-        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
-        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.1771555958316902,
-        "difficulty": 9.954102020012476,
-        "interval_days": 1,
-        "reviews": 17,
-        "passing_reviews": 2,
-        "lapses": 9,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-24T04:25:19.612000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "2d",
-        "easy": "2d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.07181803253046305,
-        "difficulty": 9.959525704984419,
-        "interval_days": 1,
-        "reviews": 21,
-        "passing_reviews": 2,
-        "lapses": 13,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-24T04:59:07.429000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0305",
@@ -1485,42 +1416,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0087",
-      "front": {
-        "text": "To je pekn\u00e1 z\u00e1hrada.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "That is a nice garden.",
-        "notes": "[\u02c8pekna\u02d0]\n\nAdjective pekn\u00fd in feminine nominative singular, agreeing with z\u00e1hrada; means nice/pretty."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T05:54:00.877000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0309",
