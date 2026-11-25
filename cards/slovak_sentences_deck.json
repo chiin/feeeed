@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-25",
   "batch_date": "2026-11-25",
-  "compiled_at": "2026-11-25T05:20:41.021927Z",
-  "state_revision": 431,
+  "compiled_at": "2026-11-25T05:21:00.967638Z",
+  "state_revision": 433,
   "daily_progress": {
     "total": 25,
     "new": 5,
-    "review": 14,
-    "done": 6
+    "review": 12,
+    "done": 8
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -364,7 +364,9 @@
     "beb34182-b338-4984-a6d5-d35a5b6d4177",
     "1498ba2d-fea9-4ac3-96d5-4e594cd7599c",
     "d88824b2-f879-4c86-af32-2290be4c9c20",
-    "03ec2919-b45c-4461-9bcf-9728f8762114"
+    "03ec2919-b45c-4461-9bcf-9728f8762114",
+    "f4fc68d9-e049-4e68-992e-178a1b7ea957",
+    "9cf9f014-af81-45f1-b7aa-d700fcbfccf5"
   ],
   "cards": [
     {
@@ -434,39 +436,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-11-21-slovak-0080",
-      "front": {
-        "text": "T\u00e1to voda je \u010dist\u00e1.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This water is clean.",
-        "notes": "[\u02c8t\u0361\u0283\u026asta\u02d0]\n\nAdjective \u010dist\u00fd in feminine nominative singular, agreeing with voda; means clean."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T04:40:46.575000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "4d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-21-slovak-0081",
       "front": {
         "text": "Dunaj te\u010die cez Bratislavu.",
@@ -497,39 +466,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "4d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0083",
-      "front": {
-        "text": "M\u00e1 modr\u00e9 o\u010di.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He/She has blue eyes.",
-        "notes": "[\u02c8m\u0254dre\u02d0]\n\nAdjective modr\u00fd in plural nominative/accusative, agreeing with o\u010di; means blue."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T06:41:54.072000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
       }
     },
     {
