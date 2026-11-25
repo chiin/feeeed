@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-25",
   "batch_date": "2026-11-25",
-  "compiled_at": "2026-11-25T07:47:33.520176Z",
-  "state_revision": 341,
+  "compiled_at": "2026-11-25T07:47:51.286141Z",
+  "state_revision": 344,
   "source_revisions": {
     "slovak_vocab": 913,
-    "slovak_sentences": 441
+    "slovak_sentences": 444
   },
   "daily_progress": {
     "total": 78,
-    "new": 10,
-    "review": 13,
-    "done": 55
+    "new": 9,
+    "review": 11,
+    "done": 58
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -1228,105 +1228,12 @@
     "f78f7a99-3024-4210-afe4-05726c8e9a60",
     "38f79d6f-fb66-416e-aa11-fcacad950dca",
     "a3a8f0c2-3d88-4c4f-bedc-e1b5f553a2d6",
-    "b2ee5af1-0a71-48dc-927e-24771930d7f9"
+    "b2ee5af1-0a71-48dc-927e-24771930d7f9",
+    "21ab3477-9b65-40bf-9bc3-78d4f672354b",
+    "66fbb3b1-7fe7-4eb5-bab6-97cc907bfa17",
+    "329e3360-67d5-4860-b5db-d7cec3c16043"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-11-24-slovak-0102",
-      "front": {
-        "text": "Je to dobr\u00fd \u0161tudent.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He is a good student.",
-        "notes": "[\u02c8d\u0254bri\u02d0]\n\nThe word 'dobr\u00fd' is the nominative singular masculine form of the adjective 'dobr\u00fd', meaning 'good'. It agrees with the noun '\u0161tudent' in gender, number, and case."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0095",
-      "front": {
-        "text": "Klob\u00e1sa je v\u013eavo.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The sausage is on the left.",
-        "notes": "[\u02c8v\u028eavo]\n\nv\u013eavo is an adverb of place meaning on the left; it indicates the position of klob\u00e1sa."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.2931,
-        "difficulty": 5.112170705601056,
-        "interval_days": 1,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-24T04:52:30.737000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "3d",
-        "good": "5d",
-        "easy": "7d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0088",
-      "front": {
-        "text": "T\u00e1to rieka je hlbok\u00e1.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This river is deep.",
-        "notes": "[\u02c8r\u026ae\u032fka]\n\nFeminine noun in nominative singular; means river."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-24T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.10314065007785231,
-        "difficulty": 8.792726533684817,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T11:23:05.490000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
     {
       "id": "slovak-0302",
       "entry_type": "term",
