@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T03:00:38.999633Z",
+  "compiled_at": "2026-11-26T03:02:29.637315Z",
   "state_revision": 357,
   "source_revisions": {
-    "slovak_vocab": 955,
+    "slovak_vocab": 959,
     "slovak_sentences": 459
   },
   "daily_progress": {
     "total": 66,
-    "new": 10,
-    "review": 23,
-    "done": 33
+    "new": 9,
+    "review": 21,
+    "done": 36
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -909,6 +909,10 @@
     "87bae7b9-f652-45e6-a516-c1fa76025c0e",
     "4eaac551-f1f5-40ad-bf06-a8037c6239ca",
     "eb499b4b-2eba-45e0-beab-ff4c7757215d",
+    "6adf463b-d232-4247-9bae-5bc22403175a",
+    "9c1cbeb9-bac8-4309-b5bc-bd20fcefa5e3",
+    "46d7fef3-194a-4f99-8399-f0df4859cd2d",
+    "4844f21a-ed20-49f7-9f03-d2ca6b1431a2",
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
     "b1e73139-ac5d-4301-918a-0a135aec15d9",
@@ -1326,78 +1330,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak-0281",
-      "entry_type": "term",
-      "front": {
-        "text": "dc\u00e9ra",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "daughter",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T04:52:40.103000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0258",
-      "entry_type": "term",
-      "front": {
-        "text": "vol'n\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "free",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.7953238733073398,
-        "difficulty": 7.358040827180594,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 4,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T03:12:24.745000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "slovak-0283",
       "entry_type": "term",
       "front": {
@@ -1409,49 +1341,25 @@
         "text": "aunt",
         "notes": null
       },
-      "available_at": "2026-11-25T16:00:00Z",
+      "available_at": "2026-11-26T03:10:03.827000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.5712991793450282,
+        "difficulty": 7.394502741279718,
+        "interval_days": 0,
+        "reviews": 2,
         "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T04:26:21.720000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-26T03:00:03.827000Z",
+        "next_due_at": "2026-11-26T03:10:03.827000Z"
       },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0329",
-      "entry_type": "sentence",
-      "front": {
-        "text": "to je dobr\u00fa vodu",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "that is good water",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": null,
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
