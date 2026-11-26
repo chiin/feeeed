@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T08:17:29.001906Z",
-  "state_revision": 340,
+  "compiled_at": "2026-11-26T08:17:51.557700Z",
+  "state_revision": 341,
   "source_revisions": {
     "hsk": 3796,
-    "mandarin_sentences": 375
+    "mandarin_sentences": 377
   },
   "daily_progress": {
     "total": 171,
     "new": 0,
-    "review": 157,
-    "done": 14
+    "review": 156,
+    "done": 15
   },
   "processed_event_ids": [
     "8449f221-cd03-476a-84e7-9ad88b90751f",
@@ -1307,7 +1307,9 @@
     "87d259d1-6351-4068-b354-675a460cf289",
     "ea027efd-ca98-46b4-b47e-c1a042b8b923",
     "d82299da-f612-4058-ab72-4fef2cf48ecd",
-    "c822cedc-886c-411f-be7a-662655228d05"
+    "c822cedc-886c-411f-be7a-662655228d05",
+    "c992494d-079f-4428-a87b-3e15f631add4",
+    "357422ae-066b-4a58-a2df-c7016ab62b7a"
   ],
   "cards": [
     {
@@ -1446,25 +1448,25 @@
         "notes": "W\u01d2 z\u00e0i f\u00e1ngji\u0101n k\u00e0n yu\u00e8.\n\n\u6708 means \u201cmoon\u201d here; it is the object of \u770b, not the month sense."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
+      "available_at": "2026-11-26T08:26:53.744000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.6075801062519337,
+        "difficulty": 7.394502741279718,
+        "interval_days": 0,
+        "reviews": 2,
         "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T08:44:07.645000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-26T08:16:53.744000Z",
+        "next_due_at": "2026-11-26T08:26:53.744000Z"
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -1645,42 +1647,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-11-16-hsk-0085",
-      "front": {
-        "text": "\u6211\u770b\u898b\u72d7\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I see a dog.",
-        "notes": "W\u01d2 k\u00e0nji\u00e0n g\u01d2u.\n\n\u770b\u898b means \u201csee\u201d or \u201ccatch sight of\u201d; here it is the main verb taking \u72d7 as its object."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T09:53:50.538000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0087",
