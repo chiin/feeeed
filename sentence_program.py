@@ -445,7 +445,8 @@ def sentence_cards(content: dict) -> list[dict]:
         if sentence.get("status") != "active":
             continue
         payload = sentence["payload"]
-        audio_listening = sentence.get("card_type") == "audio_listening"
+        device_voice = sentence.get("card_type") == "cantonese_device_listening"
+        audio_listening = device_voice or sentence.get("card_type") == "audio_listening"
         notes = "\n\n".join(
             item
             for item in (
@@ -460,6 +461,7 @@ def sentence_cards(content: dict) -> list[dict]:
                 "id": sentence["id"],
                 "front": {
                     "text": "" if audio_listening else payload["primary_text"],
+                    **({"speak_cantonese": payload["primary_text"]} if device_voice else {}),
                     "audio": payload.get("audio_url"),
                     "image": None,
                 },
@@ -1404,7 +1406,7 @@ def _ensure_sentence_audio(
     synthesizer_factory: Callable[[dict], SpeechSynthesizer] | None,
 ) -> tuple[int, int]:
     mode = config.get("mode", "text_reading")
-    if mode not in {"text_reading", "audio_listening"}:
+    if mode not in {"text_reading", "audio_listening", "cantonese_device_listening"}:
         raise ValueError(f"unsupported sentence card mode: {mode}")
     for sentence in content["sentences"]:
         sentence["card_type"] = mode
@@ -1710,6 +1712,7 @@ def prepare_sentence_program(
     if config.get("mode", "text_reading") not in {
         "text_reading",
         "audio_listening",
+        "cantonese_device_listening",
     }:
         raise ValueError("unsupported sentence card mode")
 

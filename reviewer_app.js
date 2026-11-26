@@ -20,6 +20,7 @@ let waitTimer = null;
 let syncInFlight = false;
 let candidateSyncInFlight = false;
 let syncFailed = false;
+let currentSpeech = null;
 
 if (!sessionId) {
     loadDeckIndex();
@@ -146,6 +147,8 @@ function updateCandidateButtons() {
 }
 
 function showScreen(id) {
+    stopDeviceSpeech();
+    document.getElementById("speechStatus").textContent = "";
     document.querySelectorAll(".screen").forEach(
         screen => screen.classList.remove("active")
     );
@@ -231,7 +234,9 @@ function renderMedia(side, content) {
     image.style.display = content.image ? "block" : "none";
     if (content.image) image.src = content.image;
     const audioButton = document.getElementById(`${side}AudioBtn`);
-    audioButton.style.display = content.audio ? "inline-block" : "none";
+    audioButton.style.display = content.audio || content.speak_cantonese ? "inline-block" : "none";
+    audioButton.textContent = content.speak_cantonese ? "Play Cantonese" : "Play Audio";
+    if (content.speak_cantonese && window.speechSynthesis) window.speechSynthesis.getVoices();
     if (content.audio) document.getElementById(`${side}Audio`).src = content.audio;
 }
 
@@ -299,8 +304,51 @@ function showAnswer() {
 }
 
 function playAudio(elementId) {
+    if (elementId === "frontAudio" && cards[0]?.front.speak_cantonese) {
+        playDeviceCantonese(cards[0].front.speak_cantonese);
+        return;
+    }
     const audio = document.getElementById(elementId);
     if (audio && audio.src) audio.play().catch(() => {});
+}
+
+function stopDeviceSpeech() {
+    if (!currentSpeech) return;
+    currentSpeech = null;
+    window.speechSynthesis.cancel();
+}
+
+window.addEventListener("pagehide", stopDeviceSpeech);
+
+function playDeviceCantonese(text) {
+    stopDeviceSpeech();
+    const status = document.getElementById("speechStatus");
+    const synth = window.speechSynthesis;
+    if (!synth || !window.SpeechSynthesisUtterance) {
+        status.textContent = "Speech playback is unavailable here. Try opening this card in Safari.";
+        return;
+    }
+    const voice = synth.getVoices().find(v =>
+        /^(?:yue(?:-|$)|zh-(?:hant-)?hk$)/i.test(v.lang.replaceAll("_", "-"))
+    );
+    if (!voice) {
+        status.textContent = "No Cantonese voice is available. Enable a Cantonese voice in iPhone Accessibility settings, then retry in Safari.";
+        return;
+    }
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.voice = voice;
+    speech.lang = voice.lang;
+    currentSpeech = speech;
+    status.textContent = "";
+    speech.onerror = () => {
+        if (currentSpeech !== speech) return;
+        currentSpeech = null;
+        status.textContent = "Cantonese playback failed. Tap Play again or try Safari.";
+    };
+    speech.onend = () => {
+        if (currentSpeech === speech) currentSpeech = null;
+    };
+    synth.speak(speech);
 }
 
 function createEventId() {

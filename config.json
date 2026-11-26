@@ -88,6 +88,22 @@
       "feed_title": "Slovak Sentence Practice",
       "new_cards_per_day": 10,
       "front_text_scale": 1.2
+    },
+    "cantonese_vocab": {
+      "type": "anki_deck",
+      "source_type": "csv",
+      "path": "Cantonese.csv",
+      "feed_title": "Cantonese Vocabulary",
+      "new_cards_per_day": 10,
+      "front_text_scale": 1.5
+    },
+    "cantonese_sentences": {
+      "type": "anki_deck",
+      "source_type": "generated_sentences",
+      "program_id": "cantonese_listening",
+      "path": "generated/cantonese_listening/sentences.json",
+      "feed_title": "Cantonese Listening Practice",
+      "new_cards_per_day": 10
     }
   },
   "programs": {
@@ -165,6 +181,41 @@
         "api_key_env": "OPENROUTER_API_KEY",
         "timeout_seconds": 90,
         "quality_version": 2,
+        "max_attempts": 3
+      }
+    },
+    "cantonese_listening": {
+      "enabled": true,
+      "feed_title": "Cantonese Vocabulary and Listening",
+      "feed_file": "cantonese.xml",
+      "source_stream": "cantonese_vocab",
+      "sentence_stream": "cantonese_sentences",
+      "content_path": "generated/cantonese_listening/sentences.json",
+      "vocabulary_introduction": {"strategy": "vocabulary_first"},
+      "prior_knowledge": {"source_catalog": "assumed_familiar"},
+      "sentence_generation": {
+        "trigger": "catalog_order",
+        "allow_inflected_targets": false,
+        "familiar_pool_policy": "natural_priority",
+        "context_pool": "source_catalog"
+      },
+      "vocabulary_discovery": {"enabled": true, "approval": "manual"},
+      "language_code": "yue-HK",
+      "orthography": "Colloquial Hong Kong Cantonese in Traditional Chinese characters",
+      "transliteration_style": "Hong Kong Cantonese Yale romanization of the entire sentence, with tone marks and low-tone h; use Yale for discovered vocabulary too",
+      "prompt_style": "Conversational spoken Hong Kong Cantonese, not formal written Chinese or Mandarin. Use the target in its supplied English sense.",
+      "mode": "cantonese_device_listening",
+      "daily_sentence_target": 10,
+      "max_active_word_buffer": 60,
+      "promotion_threshold_sentence_passes": 3,
+      "mastery_interval_days": 21,
+      "known_pool_limit": 200,
+      "sentence_lifecycle": "disposable_scaffold",
+      "generation": {
+        "provider": "openrouter",
+        "model": "openrouter/free",
+        "api_key_env": "OPENROUTER_API_KEY",
+        "timeout_seconds": 90,
         "max_attempts": 3
       }
     }
