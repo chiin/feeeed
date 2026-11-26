@@ -4,6 +4,8 @@ import json
 import os
 import hashlib
 import random
+import re
+import unicodedata
 import urllib.error
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -215,7 +217,10 @@ Create exactly one sentence for each target:
 "target_word_id", "target_occurrence", "primary_text", "transliteration", "translation",
 "cloze_text", and "target_breakdown".
 
-The translation must express the same coherent sentence. The target breakdown
+Write "translation" in natural English: translate the entire sentence, not just
+the target word. Before returning JSON, check that this field is not a copy of
+the source text, IPA, pinyin, or any other pronunciation guide. Put pronunciation
+only in "transliteration". The target breakdown
 must explain only the target's meaning and grammar in this sentence; do not add
 etymology.
 
@@ -1091,6 +1096,25 @@ def apply_sentence_review_results(
     return counts
 
 
+def _validate_english_translation(sentence: dict) -> None:
+    def comparison_key(text: str) -> str:
+        return "".join(
+            c for c in unicodedata.normalize("NFKD", text.casefold()) if c.isalnum()
+        )
+
+    translation = sentence["translation"].strip()
+    if (
+        not re.search(r"[a-zA-Z]", translation)
+        or re.fullmatch(r"\[.*\]|/.*/", translation)
+        or re.search(r"[ˈˌː\u0250-\u02af]", translation)
+        or comparison_key(translation) in {
+            comparison_key(sentence["primary_text"]),
+            comparison_key(sentence["transliteration"]),
+        }
+    ):
+        raise ValueError("expected an English sentence translation, not source text or pronunciation")
+
+
 def _validate_generated_sentences(
     generated: list[dict],
     targets: list[dict],
@@ -1128,6 +1152,7 @@ def _validate_generated_sentences(
             for field in required_fields
         ):
             raise ValueError("generated sentence fields must be non-empty strings")
+        _validate_english_translation(sentence)
         target_id = sentence["target_word_id"]
         target = target_by_id.get(target_id)
         if not target or target_id in seen_ids:
