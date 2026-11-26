@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T08:43:16.022331Z",
-  "state_revision": 347,
+  "compiled_at": "2026-11-26T08:46:22.979647Z",
+  "state_revision": 349,
   "source_revisions": {
     "hsk": 3831,
-    "mandarin_sentences": 383
+    "mandarin_sentences": 385
   },
   "daily_progress": {
     "total": 171,
     "new": 0,
-    "review": 122,
-    "done": 49
+    "review": 120,
+    "done": 51
   },
   "processed_event_ids": [
     "bfe75783-aa89-4267-95d7-17b8064078a3",
@@ -1316,7 +1316,9 @@
     "c70f41db-d23a-459b-b90a-fa8bd5343e29",
     "1bdb94a0-13e4-498a-924f-388a147d3082",
     "633d4d25-eed1-4191-854d-a3e9915311a0",
-    "79a2eaf2-1a97-41d1-9a7b-ff585776270c"
+    "79a2eaf2-1a97-41d1-9a7b-ff585776270c",
+    "5f93f708-b58a-46b4-ab11-c9f654fdf192",
+    "a933dc9e-25d6-47e2-9cf6-a37045addf33"
   ],
   "cards": [
     {
@@ -1364,78 +1366,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-11-16-hsk-0082",
-      "front": {
-        "text": "\u4eca\u5929\u5e7e\u865f\uff1f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "What is the date today?",
-        "notes": "J\u012bnti\u0101n j\u01d0 h\u00e0o?\n\n\u865f in \u5e7e\u865f means the day or number of a date; it asks which day of the month today is."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T08:29:53.047000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.6075801062519337,
-        "difficulty": 7.394502741279718,
-        "interval_days": 0,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-26T08:19:53.047000Z",
-        "next_due_at": "2026-11-26T08:29:53.047000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "mandarin_reading-2026-11-23-hsk-0090",
-      "front": {
-        "text": "\u8acb\u7b49\u6211\u5e7e\u5206\u9418\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Please wait for me a few minutes.",
-        "notes": "Q\u01d0ng d\u011bng w\u01d2 j\u01d0 f\u0113nzh\u014dng.\n\n\u5206\u9418 is a measure word used to count units of time (minutes). In this sentence, it is modified by the quantifier \u5e7e (several / a few) to indicate a brief duration of time, functioning as the object of the verb \u7b49 (wait)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T09:18:49.474000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0415",
@@ -1724,8 +1654,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "3d",
-        "good": "3d",
-        "easy": "4d"
+        "good": "4d",
+        "easy": "5d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -2695,9 +2625,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "4d",
-        "good": "5d",
-        "easy": "7d"
+        "hard": "5d",
+        "good": "6d",
+        "easy": "8d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -3403,9 +3333,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
+        "hard": "9d",
+        "good": "14d",
+        "easy": "24d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -5602,8 +5532,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "3d",
-        "good": "3d",
-        "easy": "4d"
+        "good": "4d",
+        "easy": "5d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
@@ -5990,8 +5920,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "3d",
-        "good": "3d",
-        "easy": "4d"
+        "good": "4d",
+        "easy": "5d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
