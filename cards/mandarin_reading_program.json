@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T08:46:22.979647Z",
-  "state_revision": 349,
+  "compiled_at": "2026-11-26T08:47:12.448607Z",
+  "state_revision": 351,
   "source_revisions": {
     "hsk": 3831,
-    "mandarin_sentences": 385
+    "mandarin_sentences": 387
   },
   "daily_progress": {
     "total": 171,
     "new": 0,
-    "review": 120,
-    "done": 51
+    "review": 118,
+    "done": 53
   },
   "processed_event_ids": [
     "bfe75783-aa89-4267-95d7-17b8064078a3",
@@ -1318,7 +1318,9 @@
     "633d4d25-eed1-4191-854d-a3e9915311a0",
     "79a2eaf2-1a97-41d1-9a7b-ff585776270c",
     "5f93f708-b58a-46b4-ab11-c9f654fdf192",
-    "a933dc9e-25d6-47e2-9cf6-a37045addf33"
+    "a933dc9e-25d6-47e2-9cf6-a37045addf33",
+    "77008e5c-9014-4aa3-8231-1987e7bed645",
+    "7c587553-fa5d-4151-be14-1947a19961ca"
   ],
   "cards": [
     {
@@ -1456,42 +1458,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "mandarin_reading-2026-09-07-hsk-0001",
-      "front": {
-        "text": "\u9019\u662f\u6211\u7684\u66f8\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This is my book.",
-        "notes": "zh\u00e8 sh\u00ec w\u01d2 de sh\u016b\n\n\u7684 indicates possession, linking '\u6211' (I) to '\u66f8' (book), meaning 'my'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 52.71381731083166,
-        "difficulty": 4.748284761594571,
-        "interval_days": 53,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-10-03T05:10:05.566000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "109d",
-        "good": "146d",
-        "easy": "227d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "hsk-0375",
       "entry_type": "term",
       "front": {
@@ -1578,42 +1544,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-11-18-hsk-0088",
-      "front": {
-        "text": "\u4ed6\u7684\u5152\u5b50\u5728\u5b78\u6821\u5b78\u7fd2\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "His son studies at school.",
-        "notes": "T\u0101 de \u00e9rzi z\u00e0i xu\u00e9xi\u00e0o xu\u00e9x\u00ed.\n\n\u300c\u5152\u5b50\u300d\u662f\u540d\u8a5e\uff0c\u6307\u67d0\u4eba\u7684\u7537\u6027\u5b50\u5973\uff1b\u5728\u53e5\u4e2d\u4f5c\u300c\u5728\u5b78\u6821\u5b78\u7fd2\u300d\u7684\u4e3b\u8a9e\u3002"
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T08:46:34.111000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0421",
@@ -3122,8 +3052,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "3d",
-        "good": "3d",
-        "easy": "4d"
+        "good": "4d",
+        "easy": "5d"
       },
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
