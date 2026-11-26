@@ -5,9 +5,45 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 1,
-  "cards": {},
-  "processed_events": {},
+  "revision": 3,
+  "cards": {
+    "yue-0001": {
+      "state": "relearning",
+      "step": 0,
+      "stability": 0.212,
+      "difficulty": 6.4133,
+      "interval_days": 0,
+      "reviews": 1,
+      "passing_reviews": 0,
+      "lapses": 0,
+      "last_rating": "again",
+      "last_reviewed_at": "2026-11-26T12:08:00.141000Z",
+      "next_due_at": "2026-11-26T12:18:00.141000Z"
+    },
+    "yue-0003": {
+      "state": "relearning",
+      "step": 0,
+      "stability": 0.212,
+      "difficulty": 6.4133,
+      "interval_days": 0,
+      "reviews": 1,
+      "passing_reviews": 0,
+      "lapses": 0,
+      "last_rating": "again",
+      "last_reviewed_at": "2026-11-26T12:08:01.048000Z",
+      "next_due_at": "2026-11-26T12:18:01.048000Z"
+    }
+  },
+  "processed_events": {
+    "61fa1d8a-ef7a-4fcb-8873-48ca652c4b5a": {
+      "processed_at": "2026-11-26T12:09:18.912072Z",
+      "status": "applied"
+    },
+    "788c90d9-6b67-4ecd-a4af-984a52b6a2c3": {
+      "processed_at": "2026-11-26T12:09:18.912072Z",
+      "status": "applied"
+    }
+  },
   "daily_batch": {
     "id": "2026-11-26",
     "date": "2026-11-26",
@@ -25,14 +61,6 @@
       "yue-0013"
     ],
     "active": [
-      {
-        "card_id": "yue-0001",
-        "available_at": "2026-11-25T16:00:00Z"
-      },
-      {
-        "card_id": "yue-0003",
-        "available_at": "2026-11-25T16:00:00Z"
-      },
       {
         "card_id": "yue-0004",
         "available_at": "2026-11-25T16:00:00Z"
@@ -64,6 +92,14 @@
       {
         "card_id": "yue-0013",
         "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0001",
+        "available_at": "2026-11-26T12:18:00.141000Z"
+      },
+      {
+        "card_id": "yue-0003",
+        "available_at": "2026-11-26T12:18:01.048000Z"
       }
     ]
   }
