@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 353,
+  "revision": 356,
   "vocabulary": {
     "slovak-0001": {
       "status": "sentence_complete",
@@ -695,10 +695,10 @@
     },
     "slovak-0092": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 1,
+      "sentence_pass_count": 2,
       "introduced_at": "2026-11-21T17:11:02.941763Z",
       "introduction_strategy": "vocabulary_first",
-      "last_sentence_pass_at": "2026-11-24T04:52:24.570000Z"
+      "last_sentence_pass_at": "2026-11-26T02:52:08.398000Z"
     },
     "slovak-0093": {
       "status": "sentence_reinforcement",
@@ -708,11 +708,12 @@
       "last_sentence_pass_at": "2026-11-24T04:26:33.732000Z"
     },
     "slovak-0094": {
-      "status": "sentence_reinforcement",
-      "sentence_pass_count": 2,
+      "status": "sentence_complete",
+      "sentence_pass_count": 3,
       "introduced_at": "2026-11-21T17:11:02.941763Z",
       "introduction_strategy": "vocabulary_first",
-      "last_sentence_pass_at": "2026-11-25T05:56:34.947000Z"
+      "last_sentence_pass_at": "2026-11-26T02:52:23.431000Z",
+      "completed_at": "2026-11-26T02:52:23.431000Z"
     },
     "slovak-0095": {
       "status": "sentence_reinforcement",
@@ -785,9 +786,10 @@
     },
     "slovak-0105": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-11-25T21:18:03.690149Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-11-26T02:52:13.252000Z"
     }
   },
   "processed_events": {
@@ -2281,6 +2283,18 @@
     },
     "18795c28-308a-45a0-9272-45d87234b97f": {
       "processed_at": "2026-11-26T02:37:11.215216Z",
+      "status": "applied"
+    },
+    "f6a534e4-7e5c-4735-b24a-4e1c6c15c70b": {
+      "processed_at": "2026-11-26T02:53:13.465868Z",
+      "status": "applied"
+    },
+    "27a83f69-eba2-4bd7-b0c5-8f42aa0b1841": {
+      "processed_at": "2026-11-26T02:53:13.465868Z",
+      "status": "applied"
+    },
+    "06e04a8c-0a72-4bac-a55d-d72a74e35a0b": {
+      "processed_at": "2026-11-26T02:53:13.465868Z",
       "status": "applied"
     }
   },

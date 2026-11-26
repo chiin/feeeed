@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T02:52:46.482280Z",
-  "state_revision": 454,
+  "compiled_at": "2026-11-26T02:53:13.465868Z",
+  "state_revision": 457,
   "daily_progress": {
     "total": 17,
-    "new": 2,
-    "review": 12,
-    "done": 3
+    "new": 1,
+    "review": 10,
+    "done": 6
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -386,7 +386,10 @@
     "b60f7d81-b95f-4960-9adc-ec9a55bf718d",
     "dd7e0a32-ca6d-4dff-bf27-43d876b213fa",
     "6640bb19-54bb-4f22-b914-2c23ea2aed2d",
-    "18795c28-308a-45a0-9272-45d87234b97f"
+    "18795c28-308a-45a0-9272-45d87234b97f",
+    "f6a534e4-7e5c-4735-b24a-4e1c6c15c70b",
+    "27a83f69-eba2-4bd7-b0c5-8f42aa0b1841",
+    "06e04a8c-0a72-4bac-a55d-d72a74e35a0b"
   ],
   "cards": [
     {
@@ -621,39 +624,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-11-22-slovak-0092",
-      "front": {
-        "text": "Tento u\u010ditel' je z Prahy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This teacher is from Prague.",
-        "notes": "/\u02c8ut\u0283\u026alt\u025bl/\n\nu\u010ditel' is a masculine noun in the nominative singular, meaning 'male teacher'; it functions as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T04:52:24.570000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-22-slovak-0093",
       "front": {
         "text": "Moja u\u010ditel'ka je Slovenka.",
@@ -684,39 +654,6 @@
         "hard": "5d",
         "good": "7d",
         "easy": "12d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0094",
-      "front": {
-        "text": "T\u00e1 bl\u00fazka je ve\u013emi fajn.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "That blouse is very nice.",
-        "notes": "[\u02c8ve\u028emi]\n\nve\u013emi is an adverb meaning very; it intensifies fajn."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.058791283965570755,
-        "difficulty": 9.564154130902157,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 2,
-        "lapses": 2,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T05:56:34.947000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     },
     {
@@ -795,27 +732,6 @@
       "back": {
         "text": "That lamp is beautiful.",
         "notes": "/\u02c8kra\u02d0sna/\n\nkr\u00e1sna is the feminine nominative singular form of the adjective kr\u00e1sny, agreeing with the feminine noun lampa; it means 'beautiful'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-26-slovak-0105",
-      "front": {
-        "text": "To auto je \u0161kared\u00e9.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "[\u02c8\u0283kare\u02d0de\u02d0]",
-        "notes": "[\u02c8\u0283kare\u02d0de\u02d0]\n\n\u0161kared\u00e9 is the neuter singular form of the adjective \u0161kared\u00fd, agreeing with the neuter noun auto; it means 'ugly'."
       },
       "presentation": "text_reading",
       "available_at": "2026-11-25T16:00:00Z",
