@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T08:19:43.408640Z",
-  "state_revision": 341,
+  "compiled_at": "2026-11-26T08:20:58.755738Z",
+  "state_revision": 342,
   "source_revisions": {
     "hsk": 3803,
-    "mandarin_sentences": 377
+    "mandarin_sentences": 379
   },
   "daily_progress": {
     "total": 171,
     "new": 0,
-    "review": 149,
-    "done": 22
+    "review": 148,
+    "done": 23
   },
   "processed_event_ids": [
     "12c9e653-437b-4412-9477-c3cc7bcd3e21",
@@ -1310,7 +1310,9 @@
     "c822cedc-886c-411f-be7a-662655228d05",
     "c992494d-079f-4428-a87b-3e15f631add4",
     "357422ae-066b-4a58-a2df-c7016ab62b7a",
-    "44aab1d0-ee58-4d61-b03c-b12e1c1df0dc"
+    "44aab1d0-ee58-4d61-b03c-b12e1c1df0dc",
+    "cb043e38-854d-4a08-8668-987fda00945e",
+    "c7afac50-cabd-4037-8d92-bfa736255787"
   ],
   "cards": [
     {
@@ -1619,25 +1621,25 @@
         "notes": "J\u012bnti\u0101n j\u01d0 h\u00e0o?\n\n\u865f in \u5e7e\u865f means the day or number of a date; it asks which day of the month today is."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
+      "available_at": "2026-11-26T08:29:53.047000Z",
       "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.6075801062519337,
+        "difficulty": 7.394502741279718,
+        "interval_days": 0,
+        "reviews": 2,
         "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T09:17:21.484000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-26T08:19:53.047000Z",
+        "next_due_at": "2026-11-26T08:29:53.047000Z"
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
@@ -2032,42 +2034,6 @@
       "deck_id": "hsk",
       "deck_title": "HSK Vocabulary",
       "front_text_scale": 2.0
-    },
-    {
-      "id": "mandarin_reading-2026-11-16-hsk-0079",
-      "front": {
-        "text": "\u6211\u559d\u6c34\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I drink water.",
-        "notes": "W\u01d2 h\u0113 shu\u01d0.\n\n\u559d means \u201cto drink\u201d; here it is a transitive verb taking \u6c34 as its object."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T08:58:03.581000Z",
-        "next_due_at": "2026-11-24T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
     },
     {
       "id": "hsk-0413",
