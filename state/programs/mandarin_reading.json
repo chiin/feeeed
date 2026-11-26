@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 344,
+  "revision": 347,
   "vocabulary": {
     "hsk-0151": {
       "status": "mastered",
@@ -511,9 +511,10 @@
     },
     "hsk-0058": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-11-15T11:10:48.355871Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-11-26T08:41:44.139000Z"
     },
     "hsk-0059": {
       "status": "sentence_reinforcement",
@@ -671,10 +672,10 @@
     },
     "hsk-0081": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 1,
+      "sentence_pass_count": 2,
       "introduced_at": "2026-11-15T16:09:44.742930Z",
       "introduction_strategy": "vocabulary_first",
-      "last_sentence_pass_at": "2026-11-23T08:44:07.645000Z"
+      "last_sentence_pass_at": "2026-11-26T08:41:51.809000Z"
     },
     "hsk-0082": {
       "status": "sentence_reinforcement",
@@ -745,6 +746,12 @@
       "introduced_at": "2026-11-23T20:57:33.206900Z",
       "introduction_strategy": "vocabulary_first",
       "last_sentence_pass_at": "2026-11-26T08:14:12.542000Z"
+    },
+    "hsk-0092": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-26T08:42:26.365837Z",
+      "introduction_strategy": "vocabulary_first"
     }
   },
   "processed_events": {
@@ -1938,6 +1945,14 @@
     },
     "1bdb94a0-13e4-498a-924f-388a147d3082": {
       "processed_at": "2026-11-26T08:22:45.975857Z",
+      "status": "applied"
+    },
+    "633d4d25-eed1-4191-854d-a3e9915311a0": {
+      "processed_at": "2026-11-26T08:42:26.365837Z",
+      "status": "applied"
+    },
+    "79a2eaf2-1a97-41d1-9a7b-ff585776270c": {
+      "processed_at": "2026-11-26T08:42:26.365837Z",
       "status": "applied"
     }
   },
