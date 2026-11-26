@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T02:52:15.151993Z",
-  "state_revision": 942,
+  "compiled_at": "2026-11-26T02:52:46.482280Z",
+  "state_revision": 949,
   "daily_progress": {
     "total": 49,
-    "new": 14,
-    "review": 22,
-    "done": 13
+    "new": 11,
+    "review": 18,
+    "done": 20
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -892,7 +892,14 @@
     "a2d686d6-bd2a-4ee5-95ba-420762a2abca",
     "bcc2e488-e90d-478f-a611-b01f1c1ec261",
     "c21c5177-ceb9-4371-8a88-0ec15a858ed1",
-    "4fd7d137-5504-448e-8b39-a63cecf2cc04"
+    "4fd7d137-5504-448e-8b39-a63cecf2cc04",
+    "774d780f-6621-4cac-bd0c-858f741fb3db",
+    "ca4527bf-62d1-4b0b-a654-04ac2d01e80b",
+    "12974af9-7503-489d-aa4f-91341f2253b7",
+    "4db21d14-9a6a-4228-8e92-a15e7358a531",
+    "5eefcfc2-9da5-496a-bfe1-cf98a94c9112",
+    "dcc8e9eb-cde6-4e44-925b-7406175455a8",
+    "f6417ba4-d670-48ea-be79-6c3c1417e766"
   ],
   "cards": [
     {
@@ -952,39 +959,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-16T04:17:01.030000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "22d",
-        "good": "30d",
-        "easy": "48d"
-      }
-    },
-    {
-      "id": "slovak-0182",
-      "entry_type": "sentence",
-      "front": {
-        "text": "p\u00fdtam sa; kde je Peter",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I am asking where Peter is",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 10.12943659170579,
-        "difficulty": 5.102286904192293,
-        "interval_days": 10,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-16T04:27:37.540000Z",
         "next_due_at": "2026-11-25T16:00:00Z"
       },
       "schedule_previews": {
@@ -1058,39 +1032,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak-0256",
-      "entry_type": "term",
-      "front": {
-        "text": "trochu",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "a little",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 3.0061438361503616,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 3,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T08:34:05.478000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "6d",
-        "good": "8d",
-        "easy": "12d"
       }
     },
     {
@@ -1282,39 +1223,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-24T04:25:16.119000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      }
-    },
-    {
-      "id": "slovak-0280",
-      "entry_type": "term",
-      "front": {
-        "text": "otec",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "father",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T04:25:06.115000Z",
         "next_due_at": "2026-11-25T16:00:00Z"
       },
       "schedule_previews": {
@@ -1589,48 +1497,6 @@
       }
     },
     {
-      "id": "slovak-0313",
-      "entry_type": "sentence",
-      "front": {
-        "text": "to je kniha pre Igora",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "that is a book for Igor",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0315",
-      "entry_type": "sentence",
-      "front": {
-        "text": "pozer\u00e1m cez okno",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I look through the window",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0317",
       "entry_type": "sentence",
       "front": {
@@ -1640,27 +1506,6 @@
       },
       "back": {
         "text": "do you know Bratislava?",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0319",
-      "entry_type": "term",
-      "front": {
-        "text": "adresa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "address",
         "notes": null
       },
       "available_at": "2026-11-25T16:00:00Z",
@@ -1880,39 +1725,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0318",
-      "entry_type": "sentence",
-      "front": {
-        "text": "\u0160tefana nepozn\u00e1te",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you don't know Stefan",
-        "notes": null
-      },
-      "available_at": "2026-11-26T02:46:10.597000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-26T02:36:10.597000Z",
-        "next_due_at": "2026-11-26T02:46:10.597000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     }
   ]
