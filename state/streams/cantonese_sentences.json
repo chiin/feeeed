@@ -5,9 +5,28 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 1,
-  "cards": {},
-  "processed_events": {},
+  "revision": 2,
+  "cards": {
+    "cantonese_listening-2026-11-26-yue-0013": {
+      "state": "relearning",
+      "step": 0,
+      "stability": 0.212,
+      "difficulty": 6.4133,
+      "interval_days": 0,
+      "reviews": 1,
+      "passing_reviews": 0,
+      "lapses": 0,
+      "last_rating": "again",
+      "last_reviewed_at": "2026-11-26T07:47:12.838000Z",
+      "next_due_at": "2026-11-26T07:57:12.838000Z"
+    }
+  },
+  "processed_events": {
+    "32e027c4-ee53-4683-97e8-288c60646f95": {
+      "processed_at": "2026-11-26T07:47:40.520221Z",
+      "status": "applied"
+    }
+  },
   "daily_batch": {
     "id": "2026-11-26",
     "date": "2026-11-26",
@@ -63,7 +82,7 @@
       },
       {
         "card_id": "cantonese_listening-2026-11-26-yue-0013",
-        "available_at": "2026-11-25T16:00:00Z"
+        "available_at": "2026-11-26T07:57:12.838000Z"
       }
     ]
   }
