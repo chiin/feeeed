@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T03:02:29.637315Z",
-  "state_revision": 459,
+  "compiled_at": "2026-11-26T03:06:33.355708Z",
+  "state_revision": 461,
   "daily_progress": {
     "total": 17,
     "new": 1,
-    "review": 8,
-    "done": 8
+    "review": 6,
+    "done": 10
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -391,7 +391,9 @@
     "27a83f69-eba2-4bd7-b0c5-8f42aa0b1841",
     "06e04a8c-0a72-4bac-a55d-d72a74e35a0b",
     "ca90e85e-5a00-4478-9084-a15fcb42daa9",
-    "468ee7da-f174-4d25-bd6f-58753f5a59a8"
+    "468ee7da-f174-4d25-bd6f-58753f5a59a8",
+    "f450f276-270b-4fcf-894d-4dde3a1b82c7",
+    "ea5bc6cc-0186-4879-a570-c556221ef458"
   ],
   "cards": [
     {
@@ -425,39 +427,6 @@
         "hard": "22d",
         "good": "30d",
         "easy": "48d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-20-slovak-0079",
-      "front": {
-        "text": "Bratislavsk\u00fd hrad stoj\u00ed na kopci a je kr\u00e1sny.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Bratislava Castle stands on a hill and is beautiful.",
-        "notes": "[\u02c8bracislawski\u02d0 \u02c8\u0266rat]\n\n'Bratislavsk\u00fd hrad' is a nominative masculine singular proper-name phrase meaning 'Bratislava Castle'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.760965463890842,
-        "difficulty": 6.402115069296838,
-        "interval_days": 3,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T06:41:49.950000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "11d"
       }
     },
     {
@@ -623,39 +592,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "3d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0097",
-      "front": {
-        "text": "Mydlo je vpravo.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The soap is on the right.",
-        "notes": "[\u02c8vpra\u028bo]\n\nvpravo is an adverb of place meaning on the right; it indicates the position of mydlo."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.058791283965570755,
-        "difficulty": 9.564154130902157,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 2,
-        "lapses": 2,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T07:05:47.645000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     },
     {
