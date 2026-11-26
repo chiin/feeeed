@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "scheduler": {
+    "name": "fsrs-6.3.2",
+    "version": 1,
+    "desired_retention": 0.9
+  },
+  "revision": 1,
+  "cards": {},
+  "processed_events": {},
+  "daily_batch": {
+    "id": "2026-11-26",
+    "date": "2026-11-26",
+    "created_at": "2026-11-26T06:59:54.617529Z",
+    "card_ids": [
+      "yue-0001",
+      "yue-0003",
+      "yue-0004",
+      "yue-0006",
+      "yue-0007",
+      "yue-0008",
+      "yue-0009",
+      "yue-0010",
+      "yue-0011",
+      "yue-0013"
+    ],
+    "active": [
+      {
+        "card_id": "yue-0001",
+        "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0003",
+        "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0004",
+        "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0006",
+        "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0007",
+        "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0008",
+        "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0009",
+        "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0010",
+        "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0011",
+        "available_at": "2026-11-25T16:00:00Z"
+      },
+      {
+        "card_id": "yue-0013",
+        "available_at": "2026-11-25T16:00:00Z"
+      }
+    ]
+  }
+}
