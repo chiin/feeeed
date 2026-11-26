@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T02:36:52.407633Z",
-  "state_revision": 452,
+  "compiled_at": "2026-11-26T02:37:11.215216Z",
+  "state_revision": 454,
   "daily_progress": {
     "total": 17,
     "new": 2,
-    "review": 14,
-    "done": 1
+    "review": 12,
+    "done": 3
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -384,7 +384,9 @@
     "8f25e18b-168b-4bca-93e3-a862244e8ea5",
     "70b323da-05d8-4e2a-8c6f-f79dda4f529a",
     "b60f7d81-b95f-4960-9adc-ec9a55bf718d",
-    "dd7e0a32-ca6d-4dff-bf27-43d876b213fa"
+    "dd7e0a32-ca6d-4dff-bf27-43d876b213fa",
+    "6640bb19-54bb-4f22-b914-2c23ea2aed2d",
+    "18795c28-308a-45a0-9272-45d87234b97f"
   ],
   "cards": [
     {
@@ -454,39 +456,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-11-20-slovak-0078",
-      "front": {
-        "text": "Bohu\u017eia\u013e, dnes je vonku tma a pr\u0161\u00ed.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Unfortunately, it is dark outside today and it is raining.",
-        "notes": "[\u02c8b\u0254\u0266u\u0292i\u032fa\u028e]\n\n'Bohu\u017eia\u013e' is a sentence adverb expressing regret or an unfortunate circumstance: 'unfortunately/regrettably'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 3.0061438361503616,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 3,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-23T05:30:11.901000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "6d",
-        "good": "8d",
-        "easy": "12d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-20-slovak-0079",
       "front": {
         "text": "Bratislavsk\u00fd hrad stoj\u00ed na kopci a je kr\u00e1sny.",
@@ -543,39 +512,6 @@
         "lapses": 1,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-25T02:59:20.942000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0088",
-      "front": {
-        "text": "T\u00e1to rieka je hlbok\u00e1.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This river is deep.",
-        "notes": "[\u02c8r\u026ae\u032fka]\n\nFeminine noun in nominative singular; means river."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.12584423732556518,
-        "difficulty": 8.77916217644797,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T07:47:14.985000Z",
         "next_due_at": "2026-11-25T16:00:00Z"
       },
       "schedule_previews": {
