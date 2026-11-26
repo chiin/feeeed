@@ -1,7 +1,7 @@
 {
   "pdf_schema_version": 4,
   "strategy": "random_without_replacement",
-  "revision": 422,
+  "revision": 423,
   "completed_ids": [
     "article_001_Introduction.pdf",
     "article_002_The_evolution_of_politics.pdf",
@@ -340,7 +340,9 @@
       "2026-11-26T13:00:00Z",
       "2026-11-26T14:00:00Z"
     ],
-    "processed_reminder_slots": []
+    "processed_reminder_slots": [
+      "2026-11-26T01:00:00Z"
+    ]
   },
   "next_release_at": "2026-11-26T16:00:00Z",
   "feed_reminders": [
@@ -414,6 +416,14 @@
       "pdf_id": "article_057_Republic.pdf",
       "title": "Article 057 Republic",
       "published_at": "2026-11-25T11:00:00Z",
+      "remaining": 10
+    },
+    {
+      "id": "politics-pdf-reminder-20261126T010000Z",
+      "batch_date": "2026-11-26",
+      "pdf_id": "article_057_Republic.pdf",
+      "title": "Article 057 Republic",
+      "published_at": "2026-11-26T01:00:00Z",
       "remaining": 10
     }
   ]
