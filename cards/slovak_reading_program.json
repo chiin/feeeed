@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T03:00:18.543404Z",
-  "state_revision": 356,
+  "compiled_at": "2026-11-26T03:00:38.999633Z",
+  "state_revision": 357,
   "source_revisions": {
     "slovak_vocab": 955,
-    "slovak_sentences": 457
+    "slovak_sentences": 459
   },
   "daily_progress": {
     "total": 66,
     "new": 10,
-    "review": 25,
-    "done": 31
+    "review": 23,
+    "done": 33
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -1284,7 +1284,9 @@
     "18795c28-308a-45a0-9272-45d87234b97f",
     "f6a534e4-7e5c-4735-b24a-4e1c6c15c70b",
     "27a83f69-eba2-4bd7-b0c5-8f42aa0b1841",
-    "06e04a8c-0a72-4bac-a55d-d72a74e35a0b"
+    "06e04a8c-0a72-4bac-a55d-d72a74e35a0b",
+    "ca90e85e-5a00-4478-9084-a15fcb42daa9",
+    "468ee7da-f174-4d25-bd6f-58753f5a59a8"
   ],
   "cards": [
     {
@@ -1324,42 +1326,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212175980521058,
-        "difficulty": 9.958359646163347,
-        "interval_days": 1,
-        "reviews": 22,
-        "passing_reviews": 2,
-        "lapses": 13,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-25T08:09:07.099000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak-0281",
       "entry_type": "term",
       "front": {
@@ -1394,42 +1360,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-21-slovak-0082",
-      "front": {
-        "text": "Toto mesto je mal\u00e9.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This town is small.",
-        "notes": "[\u02c8mesto]\n\nNeuter noun in nominative singular; means town."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.11772478736294154,
-        "difficulty": 9.1763950890124,
-        "interval_days": 1,
-        "reviews": 5,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T02:59:20.942000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0258",
