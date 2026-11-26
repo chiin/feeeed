@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-26",
   "batch_date": "2026-11-26",
-  "compiled_at": "2026-11-26T03:27:02.526546Z",
-  "state_revision": 976,
+  "compiled_at": "2026-11-26T03:27:24.385327Z",
+  "state_revision": 981,
   "daily_progress": {
     "total": 49,
-    "new": 1,
-    "review": 4,
-    "done": 44
+    "new": 0,
+    "review": 0,
+    "done": 49
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -926,161 +926,12 @@
     "31def3b1-8307-4a4d-a85e-8d4602e0ddae",
     "d4e2611d-171d-4a4f-a707-0591ffe52018",
     "2f8007a5-c412-47b3-83e9-4f10e47b287a",
-    "5290e9c0-1779-440e-bac7-3ed10b20a45c"
+    "5290e9c0-1779-440e-bac7-3ed10b20a45c",
+    "b63a9eea-1b1c-4215-8a08-e3a60c7238be",
+    "33b7ec9b-1e27-4b2a-afd9-8c021ad1c3b2",
+    "e4d45ead-c433-43e7-b0f1-fd41dd072ad3",
+    "c020bdcd-3e38-4a04-ae8c-e1c0a87739a4",
+    "05368d4c-9683-4e38-a417-06736a1bba1b"
   ],
-  "cards": [
-    {
-      "id": "slovak-0187",
-      "entry_type": "term",
-      "front": {
-        "text": "ich",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "their",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 10.12943659170579,
-        "difficulty": 5.102286904192293,
-        "interval_days": 10,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-16T04:27:30.406000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "22d",
-        "good": "30d",
-        "easy": "48d"
-      }
-    },
-    {
-      "id": "slovak-0242",
-      "entry_type": "term",
-      "front": {
-        "text": "dva hrady",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "two castles",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.32439327450133126,
-        "difficulty": 6.379778751497693,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 3,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T02:59:15.035000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "4d"
-      }
-    },
-    {
-      "id": "slovak-0278",
-      "entry_type": "term",
-      "front": {
-        "text": "chlapec",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "boy",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-24T04:25:01.668000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      }
-    },
-    {
-      "id": "slovak-0292",
-      "entry_type": "term",
-      "front": {
-        "text": "man\u017eel",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "male spouse",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.4519388312378145,
-        "difficulty": 7.5918339286046,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T08:16:24.073000Z",
-        "next_due_at": "2026-11-25T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "3d"
-      }
-    },
-    {
-      "id": "slovak-0317",
-      "entry_type": "sentence",
-      "front": {
-        "text": "pozn\u00e1te Bratislavu?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you know Bratislava?",
-        "notes": null
-      },
-      "available_at": "2026-11-25T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    }
-  ]
+  "cards": []
 }
