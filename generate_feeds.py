@@ -969,6 +969,19 @@ def parse_csv_deck(csv_path: Path, base_url: str) -> list[dict]:
     return cards
 
 
+def cantonese_recall_card(card: dict) -> dict:
+    characters = card["front"]["text"]
+    yale, _, context = (card["back"].get("notes") or "").partition("\n\n")
+    return {
+        **card,
+        "front": {"text": card["back"]["text"], "audio": None, "image": None},
+        "back": {
+            "text": yale or characters,
+            "notes": "\n\n".join(filter(None, (characters if yale and yale != characters else "", context))) or None,
+        },
+    }
+
+
 def _is_han_character(character: str) -> bool:
     codepoint = ord(character)
     return any(start <= codepoint <= end for start, end in HAN_CODEPOINT_RANGES)
@@ -1230,6 +1243,9 @@ def process_anki_deck(
         scheduler,
         front_text_scale,
     )
+    if stream_key == "cantonese_vocab":
+        # Reverse only the review view: generation still targets the Cantonese form.
+        compiled_payload["cards"] = [cantonese_recall_card(card) for card in compiled_payload["cards"]]
     if not compiled_payload["cards"]:
         print(f"[{stream_key}] No cards due today!")
 

@@ -447,11 +447,14 @@ def sentence_cards(content: dict) -> list[dict]:
         payload = sentence["payload"]
         device_voice = sentence.get("card_type") == "cantonese_device_listening"
         audio_listening = device_voice or sentence.get("card_type") == "audio_listening"
+        secondary_text = payload["primary_text"] if device_voice else (
+            payload.get("translation") if audio_listening else None
+        )
         notes = "\n\n".join(
             item
             for item in (
                 payload.get("transliteration"),
-                payload.get("translation") if audio_listening else None,
+                secondary_text,
                 payload.get("target_breakdown"),
             )
             if item
@@ -468,7 +471,7 @@ def sentence_cards(content: dict) -> list[dict]:
                 "back": {
                     "text": (
                         payload["primary_text"]
-                        if audio_listening
+                        if audio_listening and not device_voice
                         else payload["translation"]
                     ),
                     "notes": notes,
