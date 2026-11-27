@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 367,
+  "revision": 370,
   "vocabulary": {
     "hsk-0151": {
       "status": "mastered",
@@ -634,9 +634,10 @@
     },
     "hsk-0075": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-11-15T11:10:48.355871Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-11-27T11:26:03.038000Z"
     },
     "hsk-0076": {
       "status": "sentence_reinforcement",
@@ -683,11 +684,12 @@
       "completed_at": "2026-11-27T11:22:28.123000Z"
     },
     "hsk-0082": {
-      "status": "sentence_reinforcement",
-      "sentence_pass_count": 2,
+      "status": "sentence_complete",
+      "sentence_pass_count": 3,
       "introduced_at": "2026-11-15T16:09:44.742930Z",
       "introduction_strategy": "vocabulary_first",
-      "last_sentence_pass_at": "2026-11-26T08:42:20.716000Z"
+      "last_sentence_pass_at": "2026-11-27T11:24:36.100000Z",
+      "completed_at": "2026-11-27T11:24:36.100000Z"
     },
     "hsk-0083": {
       "status": "sentence_reinforcement",
@@ -754,9 +756,10 @@
     },
     "hsk-0092": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-11-26T08:42:26.365837Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-11-27T11:26:21.171000Z"
     },
     "hsk-0093": {
       "status": "sentence_reinforcement",
@@ -2058,6 +2061,18 @@
     },
     "b5fda3f0-1d5b-419a-b5d1-3f9da6dbf57a": {
       "processed_at": "2026-11-27T11:23:14.605251Z",
+      "status": "applied"
+    },
+    "cccbb88c-213a-4b0f-b6b5-367823010224": {
+      "processed_at": "2026-11-27T11:26:53.664619Z",
+      "status": "applied"
+    },
+    "9a599a8b-bed6-4d3e-81f9-64f3b0b1cab7": {
+      "processed_at": "2026-11-27T11:26:53.664619Z",
+      "status": "applied"
+    },
+    "184128f0-983b-41e0-a817-8157008511c9": {
+      "processed_at": "2026-11-27T11:26:53.664619Z",
       "status": "applied"
     }
   },
