@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-27",
   "batch_date": "2026-11-27",
-  "compiled_at": "2026-11-27T08:22:46.085667Z",
-  "state_revision": 1025,
+  "compiled_at": "2026-11-27T08:23:02.963623Z",
+  "state_revision": 1032,
   "daily_progress": {
     "total": 61,
-    "new": 6,
-    "review": 16,
-    "done": 39
+    "new": 3,
+    "review": 12,
+    "done": 46
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -974,75 +974,16 @@
     "bd550133-7f92-43a7-a10d-1cae618223cf",
     "b38d773a-b33c-4da6-b90b-d582a7aff124",
     "31f56aa7-2f10-41b6-9810-9d7590d7da5b",
-    "32305200-5af5-454b-be87-c7651766de0a"
+    "32305200-5af5-454b-be87-c7651766de0a",
+    "a947f35d-fe81-47fd-9f42-e30a84bdacde",
+    "fb039643-f595-4ab8-b8b8-6c44e7f03b7f",
+    "1f5f7fae-1fb7-4b5a-bd01-471ef6fe0421",
+    "77ae5769-420e-44b6-96bb-88036a30c1c7",
+    "918fbf07-870f-4e81-bcd0-8c72c4c4f6e0",
+    "a78e6491-ec7d-4332-862e-cebf0436a4bb",
+    "d5d3deb4-a80b-4c26-9a17-ad01d864e0e4"
   ],
   "cards": [
-    {
-      "id": "slovak-0168",
-      "entry_type": "term",
-      "front": {
-        "text": "sestra",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sister",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 8.756093043667573,
-        "difficulty": 6.728947420615708,
-        "interval_days": 9,
-        "reviews": 3,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-18T05:10:04.797000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "17d",
-        "good": "23d",
-        "easy": "36d"
-      }
-    },
-    {
-      "id": "slovak-0202",
-      "entry_type": "term",
-      "front": {
-        "text": "viete",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "you (pl) know",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-20T04:29:05.510000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "22d",
-        "good": "32d",
-        "easy": "53d"
-      }
-    },
     {
       "id": "slovak-0212",
       "entry_type": "sentence",
@@ -1242,39 +1183,6 @@
       }
     },
     {
-      "id": "slovak-0292",
-      "entry_type": "term",
-      "front": {
-        "text": "man\u017eel",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "male spouse",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.4886043188171367,
-        "difficulty": 7.579470463972833,
-        "interval_days": 1,
-        "reviews": 4,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-26T03:26:53.339000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "3d",
-        "good": "3d",
-        "easy": "5d"
-      }
-    },
-    {
       "id": "slovak-0294",
       "entry_type": "term",
       "front": {
@@ -1374,39 +1282,6 @@
       }
     },
     {
-      "id": "slovak-0302",
-      "entry_type": "term",
-      "front": {
-        "text": "otec vari ve\u010deru",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "father is cooking supper",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T08:09:01.346000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
       "id": "slovak-0311",
       "entry_type": "term",
       "front": {
@@ -1482,48 +1357,6 @@
       }
     },
     {
-      "id": "slovak-0341",
-      "entry_type": "term",
-      "front": {
-        "text": "chce",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "he / she wants",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0343",
-      "entry_type": "sentence",
-      "front": {
-        "text": "ktor\u00fd; -\u00e1; -\u00e9",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "who (referring to preceding noun)",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0344",
       "entry_type": "term",
       "front": {
@@ -1533,27 +1366,6 @@
       },
       "back": {
         "text": "literature",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0346",
-      "entry_type": "term",
-      "front": {
-        "text": "pod'te d'alej",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "come in",
         "notes": null
       },
       "available_at": "2026-11-26T16:00:00Z",
