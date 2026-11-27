@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-27",
   "batch_date": "2026-11-27",
-  "compiled_at": "2026-11-27T08:23:02.963623Z",
-  "state_revision": 1032,
+  "compiled_at": "2026-11-27T08:23:48.180403Z",
+  "state_revision": 1040,
   "daily_progress": {
     "total": 61,
-    "new": 3,
-    "review": 12,
-    "done": 46
+    "new": 2,
+    "review": 5,
+    "done": 54
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -981,7 +981,15 @@
     "77ae5769-420e-44b6-96bb-88036a30c1c7",
     "918fbf07-870f-4e81-bcd0-8c72c4c4f6e0",
     "a78e6491-ec7d-4332-862e-cebf0436a4bb",
-    "d5d3deb4-a80b-4c26-9a17-ad01d864e0e4"
+    "d5d3deb4-a80b-4c26-9a17-ad01d864e0e4",
+    "2c181783-2407-4af0-8f62-ca5ea8f67c11",
+    "f4a7a861-7a58-4c55-a634-de967f57cb0d",
+    "93c03ca2-cc52-468a-8537-e5b18105a5d2",
+    "7ff2ba01-550d-4b39-9054-7a5900b0410a",
+    "cb181b04-c3cf-46a5-a7d6-bbd27fa925f4",
+    "4f5634fa-e498-46bc-856a-09725014edb4",
+    "e77d17b2-e466-42fa-b02e-64184354a598",
+    "85706a71-4fe5-4d8d-801a-f17d03a6a8c7"
   ],
   "cards": [
     {
@@ -1018,204 +1026,6 @@
       }
     },
     {
-      "id": "slovak-0221",
-      "entry_type": "term",
-      "front": {
-        "text": "p\u00e1n Kov\u00e1\u010d nevie varit'",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Mr Kovac doesn't know how to cook",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-20T03:44:24.526000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "22d",
-        "good": "32d",
-        "easy": "53d"
-      }
-    },
-    {
-      "id": "slovak-0258",
-      "entry_type": "term",
-      "front": {
-        "text": "vol'n\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "free",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.8483506095967376,
-        "difficulty": 7.345911155650252,
-        "interval_days": 1,
-        "reviews": 6,
-        "passing_reviews": 5,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-26T03:00:01.246000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "3d",
-        "easy": "4d"
-      }
-    },
-    {
-      "id": "slovak-0277",
-      "entry_type": "term",
-      "front": {
-        "text": "mu\u017e",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "man; husband",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.3771622371865915,
-        "difficulty": 5.0924129865849395,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-26T02:36:22.755000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "3d",
-        "good": "5d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0283",
-      "entry_type": "term",
-      "front": {
-        "text": "teta",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "aunt",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.6228007531723337,
-        "difficulty": 7.382336607835277,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 1,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-26T03:19:19.394000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "2d",
-        "easy": "4d"
-      }
-    },
-    {
-      "id": "slovak-0290",
-      "entry_type": "term",
-      "front": {
-        "text": "star\u00ed rodi\u010dia",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "grandparents",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.021477251638192,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 2,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T05:56:45.001000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "6d",
-        "easy": "10d"
-      }
-    },
-    {
-      "id": "slovak-0294",
-      "entry_type": "term",
-      "front": {
-        "text": "deti",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "children",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T03:12:21.081000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
       "id": "slovak-0296",
       "entry_type": "term",
       "front": {
@@ -1239,39 +1049,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-25T08:16:20.442000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
-      "id": "slovak-0298",
-      "entry_type": "term",
-      "front": {
-        "text": "star\u00e1 mama; babka",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "granny",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T05:56:33.013000Z",
         "next_due_at": "2026-11-26T16:00:00Z"
       },
       "schedule_previews": {
@@ -1324,27 +1101,6 @@
       },
       "back": {
         "text": "is someone there?",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0340",
-      "entry_type": "term",
-      "front": {
-        "text": "d\u00e1vat'",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to give",
         "notes": null
       },
       "available_at": "2026-11-26T16:00:00Z",
