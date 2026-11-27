@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-27",
   "batch_date": "2026-11-27",
-  "compiled_at": "2026-11-26T22:51:50.960816Z",
+  "compiled_at": "2026-11-27T04:00:46.284457Z",
   "state_revision": 368,
   "source_revisions": {
-    "slovak_vocab": 982,
+    "slovak_vocab": 986,
     "slovak_sentences": 469
   },
   "daily_progress": {
     "total": 79,
-    "new": 27,
-    "review": 52,
-    "done": 0
+    "new": 24,
+    "review": 51,
+    "done": 4
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -935,6 +935,10 @@
     "e4d45ead-c433-43e7-b0f1-fd41dd072ad3",
     "c020bdcd-3e38-4a04-ae8c-e1c0a87739a4",
     "05368d4c-9683-4e38-a417-06736a1bba1b",
+    "2435874f-6891-48f1-8a28-469deef9f388",
+    "48dad7cb-617f-4b86-9286-8e720a2ab5cb",
+    "36ef026c-0e86-4f36-9c1a-83a827dbbfec",
+    "66da4711-bcd9-4cd1-b87f-b2434a1d2821",
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
     "1b661cb7-1889-407a-b4e5-15aac3ffca55",
     "b1e73139-ac5d-4301-918a-0a135aec15d9",
@@ -1388,9 +1392,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
+        "hard": "3d",
+        "good": "3d",
+        "easy": "5d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -1457,54 +1461,6 @@
       "front_text_scale": 1.2
     },
     {
-      "id": "slovak-0348",
-      "entry_type": "term",
-      "front": {
-        "text": "pr\u00e1ve",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "just; just now",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0337",
-      "entry_type": "term",
-      "front": {
-        "text": "auto; ktor\u00e9 m\u00e1 tvoj otec; je vel'mi dobr\u00e9",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The car (which) your father has is very good",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "slovak_reading-2026-11-22-slovak-0090",
       "front": {
         "text": "T\u00e1 star\u00e1 \u017eena je suseda.",
@@ -1539,66 +1495,6 @@
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
       "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak-0342",
-      "entry_type": "term",
-      "front": {
-        "text": "in\u017einier",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "engineer",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak-0299",
-      "entry_type": "term",
-      "front": {
-        "text": "dedo; dedko",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "grandpa",
-        "notes": null
-      },
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.2842063592758949,
-        "difficulty": 6.3909413235243795,
-        "interval_days": 1,
-        "reviews": 3,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-26T02:59:40.564000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_vocab",
-      "deck_title": "Slovak Vocabulary",
-      "front_text_scale": 1.5
     },
     {
       "id": "slovak_reading-2026-09-08-slovak-0021",
@@ -1664,9 +1560,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "20d",
-        "good": "29d",
-        "easy": "48d"
+        "hard": "22d",
+        "good": "32d",
+        "easy": "53d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -1820,9 +1716,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
       },
       "deck_id": "slovak_sentences",
       "deck_title": "Slovak Sentence Practice",
@@ -1929,8 +1825,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "4d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2049,8 +1945,8 @@
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "good": "2d",
+        "easy": "4d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2108,9 +2004,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
+        "hard": "3d",
+        "good": "3d",
+        "easy": "5d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2204,9 +2100,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "20d",
-        "good": "29d",
-        "easy": "48d"
+        "hard": "22d",
+        "good": "32d",
+        "easy": "53d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2240,9 +2136,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "20d",
-        "good": "29d",
-        "easy": "48d"
+        "hard": "22d",
+        "good": "32d",
+        "easy": "53d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2278,7 +2174,7 @@
         "again": "10m",
         "hard": "1d",
         "good": "1d",
-        "easy": "1d"
+        "easy": "3d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2372,9 +2268,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "25d",
-        "good": "36d",
-        "easy": "60d"
+        "hard": "27d",
+        "good": "39d",
+        "easy": "66d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2492,9 +2388,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "20d",
-        "good": "29d",
-        "easy": "48d"
+        "hard": "22d",
+        "good": "32d",
+        "easy": "53d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2732,9 +2628,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2852,9 +2748,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "20d",
-        "good": "29d",
-        "easy": "48d"
+        "hard": "22d",
+        "good": "32d",
+        "easy": "53d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -2996,9 +2892,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -3056,9 +2952,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
+        "hard": "3d",
+        "good": "3d",
+        "easy": "5d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -3332,9 +3228,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "20d",
-        "good": "29d",
-        "easy": "48d"
+        "hard": "22d",
+        "good": "32d",
+        "easy": "53d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -3416,9 +3312,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
+        "hard": "2d",
+        "good": "2d",
+        "easy": "4d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -3452,9 +3348,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
+        "hard": "3d",
+        "good": "5d",
+        "easy": "8d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -3548,9 +3444,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -3644,9 +3540,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
+        "hard": "2d",
+        "good": "3d",
+        "easy": "4d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -3776,9 +3672,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "20d",
-        "good": "29d",
-        "easy": "48d"
+        "hard": "22d",
+        "good": "32d",
+        "easy": "53d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
@@ -3812,9 +3708,9 @@
       },
       "schedule_previews": {
         "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
+        "hard": "8d",
+        "good": "11d",
+        "easy": "19d"
       },
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
