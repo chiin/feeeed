@@ -5,16 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-11-27",
   "batch_date": "2026-11-27",
-  "compiled_at": "2026-11-27T11:47:55.642592Z",
-  "state_revision": 4058,
+  "compiled_at": "2026-11-27T11:50:55.892430Z",
+  "state_revision": 4059,
   "daily_progress": {
     "total": 86,
     "new": 0,
-    "review": 1,
-    "done": 85
+    "review": 0,
+    "done": 86
   },
   "processed_event_ids": [
-    "e378914c-befe-43c2-a5da-13fca074ed27",
     "7104f90a-8d47-4758-96a6-12f7ba94dafb",
     "8abebd38-c671-4368-afa4-82176844108e",
     "0fb641aa-4128-48f1-89d0-59e0495cb629",
@@ -1013,51 +1012,8 @@
     "b0b9a0ae-0a7e-4af8-92a3-28988ff107e5",
     "2bfb9f1d-33e4-47c3-bbb5-31d7b3a0fe9b",
     "0570f212-fbb5-4169-a5f6-439c50fa78a9",
-    "bb065cf1-b732-48f1-bc6e-2b5cb0cf8d0a"
+    "bb065cf1-b732-48f1-bc6e-2b5cb0cf8d0a",
+    "7fb161a7-6e2a-4d7d-b6a3-081cfbff4e5b"
   ],
-  "cards": [
-    {
-      "id": "hsk-0491",
-      "entry_type": "term",
-      "front": {
-        "text": "\u88d9\u5b50",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "q\u00fanzi - skirt; dress",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u88d9",
-          "url": "https://www.dong-chinese.com/wiki/%E8%A3%99"
-        },
-        {
-          "character": "\u5b50",
-          "url": "https://www.dong-chinese.com/wiki/%E5%AD%90"
-        }
-      ],
-      "available_at": "2026-11-27T11:48:36.063000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.08000838911240139,
-        "difficulty": 9.972659792105675,
-        "interval_days": 0,
-        "reviews": 12,
-        "passing_reviews": 2,
-        "lapses": 5,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-27T11:38:36.063000Z",
-        "next_due_at": "2026-11-27T11:48:36.063000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    }
-  ]
+  "cards": []
 }
