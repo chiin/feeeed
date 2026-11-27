@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-27",
   "batch_date": "2026-11-27",
-  "compiled_at": "2026-11-27T08:23:48.180403Z",
-  "state_revision": 376,
+  "compiled_at": "2026-11-27T08:24:11.511221Z",
+  "state_revision": 382,
   "source_revisions": {
     "slovak_vocab": 1040,
-    "slovak_sentences": 480
+    "slovak_sentences": 487
   },
   "daily_progress": {
     "total": 79,
-    "new": 7,
-    "review": 7,
-    "done": 65
+    "new": 2,
+    "review": 5,
+    "done": 72
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -1390,7 +1390,14 @@
     "18b2ee1f-9696-4c2c-a25a-b497ccf52388",
     "e86f0ad9-10bb-40fc-a831-5a79d5d8385e",
     "def9f9cb-7fda-4a5a-a41e-6dfff1fb37a9",
-    "a6dcc611-8b37-4f1c-a8ec-7db2639735dc"
+    "a6dcc611-8b37-4f1c-a8ec-7db2639735dc",
+    "7ac6694b-1647-494b-a45f-9e48c9229cc9",
+    "064e2cc7-b04f-44f8-8286-5b3b6dc4c4bc",
+    "8fb0df86-3e1a-44fc-9ffe-1d55376dfa3d",
+    "66eaeda8-9db2-4d12-a857-e005bef045a9",
+    "47f14f10-cc3b-427e-b09d-a2eb83e6830d",
+    "69f46625-3726-4b2a-94fd-65bfa83e0fbb",
+    "2b42f6c2-32f3-432d-95ac-768f488a8e58"
   ],
   "cards": [
     {
@@ -1464,198 +1471,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0099",
-      "front": {
-        "text": "Toto je mal\u00fd dar\u010dek.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This is a small gift.",
-        "notes": "[\u02c8mali\u02d0]\n\nmal\u00fd is an adjective meaning small; it is masculine nominative singular and agrees with dar\u010dek."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T08:16:33.424000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-11-27-slovak-0108",
-      "front": {
-        "text": "Ty \u010dak\u00e1\u0161 na ve\u010deru v re\u0161taur\u00e1cii.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "You are waiting for dinner at the restaurant.",
-        "notes": "[\u02c8t\u0361\u0283aka\u02d0\u0283]\n\nSecond-person singular present of \u010daka\u0165, meaning 'you wait / you are waiting'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-11-27-slovak-0109",
-      "front": {
-        "text": "My \u010dak\u00e1me na kamar\u00e1ta pred hotelom.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "We are waiting for a friend in front of the hotel.",
-        "notes": "[\u02c8t\u0361\u0283aka\u02d0me]\n\nFirst-person plural present of \u010daka\u0165, meaning 'we wait / we are waiting'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-11-27-slovak-0111",
-      "front": {
-        "text": "V\u0161etci \u010dakaj\u00fa v noci.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Everyone is waiting at night.",
-        "notes": "/\u02c8t\u0282aka\u02d0ju/\n\nThird-person plural present tense of '\u010dakat''; means 'they are waiting' and agrees with the plural subject 'v\u0161etci'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-11-27-slovak-0107",
-      "front": {
-        "text": "Teraz \u010dak\u00e1m na teba pred hotelom.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I am waiting for you in front of the hotel now.",
-        "notes": "[\u02c8t\u0361\u0283aka\u02d0m]\n\nFirst-person singular present of \u010daka\u0165, meaning 'I wait / I am waiting'."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-10-slovak-0033",
-      "front": {
-        "text": "V tiskom jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I shared my suitcase with a colleague, but he sent it to a new city.",
-        "notes": "v tskim jsem zdie\u013eal kufor s kolegom, ale on ho posielil do nov\u00e9ho mesta.\n\nkufor is the accusative form of 'kufor' (suitcase), serving as the direct object of the verb 'zdie\u013eal' (shared)."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 1.521913176299188,
-        "difficulty": 9.954759151335253,
-        "interval_days": 2,
-        "reviews": 18,
-        "passing_reviews": 2,
-        "lapses": 9,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-25T08:09:04.867000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "2d",
-        "good": "2d",
-        "easy": "3d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-11-27-slovak-0106",
-      "front": {
-        "text": "Chcem \u010dakat'.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I want to wait.",
-        "notes": "/\u02c8t\u0282ak\u0250t/\n\nInfinitive of the verb meaning 'to wait'; used here after 'chcem' to indicate the desired action."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0334",
