@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-27",
   "batch_date": "2026-11-27",
-  "compiled_at": "2026-11-27T09:57:01.514447Z",
-  "state_revision": 1045,
+  "compiled_at": "2026-11-27T09:57:19.547252Z",
+  "state_revision": 1047,
   "daily_progress": {
     "total": 61,
     "new": 0,
-    "review": 2,
-    "done": 59
+    "review": 0,
+    "done": 61
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -994,74 +994,9 @@
     "34e37c11-a32c-4132-8a71-b7d1f6d3558a",
     "8c7e8abf-a045-49a9-bb9d-ed3d96f3ba38",
     "be4efc51-2322-4446-92e2-cc63c7b0708e",
-    "8ab54c2b-6f2f-4660-853d-00cd8e1be1f9"
+    "8ab54c2b-6f2f-4660-853d-00cd8e1be1f9",
+    "7b29bc6a-5d62-4edf-8fb7-558ae987730b",
+    "2feb5d98-48a9-4f63-ac13-7408fd260ce4"
   ],
-  "cards": [
-    {
-      "id": "slovak-0308",
-      "entry_type": "term",
-      "front": {
-        "text": "na + acc",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "onto; for a purpose",
-        "notes": null
-      },
-      "available_at": "2026-11-27T08:31:26.335000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.6075801062519337,
-        "difficulty": 7.394502741279718,
-        "interval_days": 0,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 1,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-27T08:21:26.335000Z",
-        "next_due_at": "2026-11-27T08:31:26.335000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak-0352",
-      "entry_type": "term",
-      "front": {
-        "text": "\u017eenat\u00fd",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "married",
-        "notes": null
-      },
-      "available_at": "2026-11-27T08:31:28.311000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-27T08:21:28.311000Z",
-        "next_due_at": "2026-11-27T08:31:28.311000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    }
-  ]
+  "cards": []
 }

@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 1045,
+  "revision": 1047,
   "cards": {
     "slovak-0009": {
       "state": "review",
@@ -3856,17 +3856,17 @@
       "next_due_at": "2026-12-07T16:00:00Z"
     },
     "slovak-0308": {
-      "state": "relearning",
-      "step": 0,
+      "state": "review",
+      "step": null,
       "stability": 0.6075801062519337,
-      "difficulty": 7.394502741279718,
-      "interval_days": 0,
-      "reviews": 2,
+      "difficulty": 8.25557787278606,
+      "interval_days": 1,
+      "reviews": 3,
       "passing_reviews": 1,
       "lapses": 1,
-      "last_rating": "again",
-      "last_reviewed_at": "2026-11-27T08:21:26.335000Z",
-      "next_due_at": "2026-11-27T08:31:26.335000Z"
+      "last_rating": "hard",
+      "last_reviewed_at": "2026-11-27T09:56:44.059000Z",
+      "next_due_at": "2026-11-27T16:00:00Z"
     },
     "slovak-0312": {
       "state": "review",
@@ -4493,17 +4493,17 @@
       "next_due_at": "2026-12-04T16:00:00Z"
     },
     "slovak-0352": {
-      "state": "relearning",
-      "step": 0,
-      "stability": 0.212,
-      "difficulty": 6.4133,
-      "interval_days": 0,
-      "reviews": 1,
-      "passing_reviews": 0,
+      "state": "review",
+      "step": null,
+      "stability": 0.24668918777567272,
+      "difficulty": 6.402115069296838,
+      "interval_days": 1,
+      "reviews": 2,
+      "passing_reviews": 1,
       "lapses": 0,
-      "last_rating": "again",
-      "last_reviewed_at": "2026-11-27T08:21:28.311000Z",
-      "next_due_at": "2026-11-27T08:31:28.311000Z"
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-27T09:56:45.692000Z",
+      "next_due_at": "2026-11-27T16:00:00Z"
     },
     "slovak-0338": {
       "state": "review",
@@ -8521,6 +8521,14 @@
     "8ab54c2b-6f2f-4660-853d-00cd8e1be1f9": {
       "processed_at": "2026-11-27T09:57:01.514447Z",
       "status": "applied"
+    },
+    "7b29bc6a-5d62-4edf-8fb7-558ae987730b": {
+      "processed_at": "2026-11-27T09:57:19.547252Z",
+      "status": "applied"
+    },
+    "2feb5d98-48a9-4f63-ac13-7408fd260ce4": {
+      "processed_at": "2026-11-27T09:57:19.547252Z",
+      "status": "applied"
     }
   },
   "daily_batch": {
@@ -8590,16 +8598,7 @@
       "slovak-0351",
       "slovak-0352"
     ],
-    "active": [
-      {
-        "card_id": "slovak-0308",
-        "available_at": "2026-11-27T08:31:26.335000Z"
-      },
-      {
-        "card_id": "slovak-0352",
-        "available_at": "2026-11-27T08:31:28.311000Z"
-      }
-    ]
+    "active": []
   },
   "previous_batch": {
     "id": "2026-11-26",
