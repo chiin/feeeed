@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-27",
   "batch_date": "2026-11-27",
-  "compiled_at": "2026-11-27T08:22:21.269654Z",
-  "state_revision": 374,
+  "compiled_at": "2026-11-27T08:22:46.085667Z",
+  "state_revision": 376,
   "source_revisions": {
     "slovak_vocab": 1025,
-    "slovak_sentences": 478
+    "slovak_sentences": 480
   },
   "daily_progress": {
     "total": 79,
     "new": 11,
-    "review": 20,
-    "done": 48
+    "review": 18,
+    "done": 50
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -1373,45 +1373,11 @@
     "34aecd45-b9d0-4a17-afe3-a4993f548943",
     "5ebd45ca-59f5-453f-aa35-367e4eba7efd",
     "18b2ee1f-9696-4c2c-a25a-b497ccf52388",
-    "e86f0ad9-10bb-40fc-a831-5a79d5d8385e"
+    "e86f0ad9-10bb-40fc-a831-5a79d5d8385e",
+    "def9f9cb-7fda-4a5a-a41e-6dfff1fb37a9",
+    "a6dcc611-8b37-4f1c-a8ec-7db2639735dc"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-11-12-slovak-0062",
-      "front": {
-        "text": "Tu som v kaviarni, chcem k\u00e1vu s mliekom.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Here I am in the cafe, I want coffee with milk.",
-        "notes": "[tu som]\n\nThe phrase 'Tu som' translates to 'here I am'. 'Tu' is a locative adverb meaning 'here', indicating a specific place, while 'som' is the first-person singular present tense of the verb 'by\u0165' (to be), meaning 'I am'. Together, they express the speaker's current presence at a location."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-20T04:05:36.672000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "22d",
-        "good": "32d",
-        "easy": "53d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
     {
       "id": "slovak-0308",
       "entry_type": "term",
@@ -1483,42 +1449,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-24-slovak-0101",
-      "front": {
-        "text": "Pozn\u00e1te toho mlad\u00e9ho \u010dloveka?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Do you know that young person?",
-        "notes": "[\u02c8ml\u0329ad\u032ae\u02c8\u0263\u0254]\n\nThe word 'mlad\u00e9ho' is the accusative singular masculine form of the adjective 'mlad\u00fd', meaning 'young'. It agrees with the noun '\u010dloveka' in gender, number, and case."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T05:56:51.702000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0346",

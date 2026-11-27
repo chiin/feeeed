@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-27",
   "batch_date": "2026-11-27",
-  "compiled_at": "2026-11-27T08:22:21.269654Z",
-  "state_revision": 478,
+  "compiled_at": "2026-11-27T08:22:46.085667Z",
+  "state_revision": 480,
   "daily_progress": {
     "total": 18,
     "new": 5,
-    "review": 4,
-    "done": 9
+    "review": 2,
+    "done": 11
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -409,7 +409,9 @@
     "34aecd45-b9d0-4a17-afe3-a4993f548943",
     "5ebd45ca-59f5-453f-aa35-367e4eba7efd",
     "18b2ee1f-9696-4c2c-a25a-b497ccf52388",
-    "e86f0ad9-10bb-40fc-a831-5a79d5d8385e"
+    "e86f0ad9-10bb-40fc-a831-5a79d5d8385e",
+    "def9f9cb-7fda-4a5a-a41e-6dfff1fb37a9",
+    "a6dcc611-8b37-4f1c-a8ec-7db2639735dc"
   ],
   "cards": [
     {
@@ -446,39 +448,6 @@
       }
     },
     {
-      "id": "slovak_reading-2026-11-12-slovak-0062",
-      "front": {
-        "text": "Tu som v kaviarni, chcem k\u00e1vu s mliekom.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Here I am in the cafe, I want coffee with milk.",
-        "notes": "[tu som]\n\nThe phrase 'Tu som' translates to 'here I am'. 'Tu' is a locative adverb meaning 'here', indicating a specific place, while 'som' is the first-person singular present tense of the verb 'by\u0165' (to be), meaning 'I am'. Together, they express the speaker's current presence at a location."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 7.31530074407728,
-        "difficulty": 2.111214235785395,
-        "interval_days": 7,
-        "reviews": 2,
-        "passing_reviews": 2,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-20T04:05:36.672000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "22d",
-        "good": "32d",
-        "easy": "53d"
-      }
-    },
-    {
       "id": "slovak_reading-2026-11-22-slovak-0099",
       "front": {
         "text": "Toto je mal\u00fd dar\u010dek.",
@@ -502,39 +471,6 @@
         "lapses": 0,
         "last_rating": "good",
         "last_reviewed_at": "2026-11-25T08:16:33.424000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-24-slovak-0101",
-      "front": {
-        "text": "Pozn\u00e1te toho mlad\u00e9ho \u010dloveka?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "Do you know that young person?",
-        "notes": "[\u02c8ml\u0329ad\u032ae\u02c8\u0263\u0254]\n\nThe word 'mlad\u00e9ho' is the accusative singular masculine form of the adjective 'mlad\u00fd', meaning 'young'. It agrees with the noun '\u010dloveka' in gender, number, and case."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T05:56:51.702000Z",
         "next_due_at": "2026-11-26T16:00:00Z"
       },
       "schedule_previews": {
