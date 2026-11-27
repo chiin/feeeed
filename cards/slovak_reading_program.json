@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-27",
   "batch_date": "2026-11-27",
-  "compiled_at": "2026-11-27T04:07:40.731812Z",
-  "state_revision": 371,
+  "compiled_at": "2026-11-27T04:08:01.719389Z",
+  "state_revision": 373,
   "source_revisions": {
     "slovak_vocab": 991,
-    "slovak_sentences": 474
+    "slovak_sentences": 477
   },
   "daily_progress": {
     "total": 79,
     "new": 21,
-    "review": 45,
-    "done": 13
+    "review": 42,
+    "done": 16
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -1335,45 +1335,12 @@
     "4e355d91-eeaa-4001-a5af-0ec522cb8c6d",
     "085a0799-0c8a-4ec1-b2d5-97f1b15d5a56",
     "110ac958-7f16-4244-9ee2-05b0bca4f456",
-    "ed77caa7-9e73-4600-a8e3-d251ffa71648"
+    "ed77caa7-9e73-4600-a8e3-d251ffa71648",
+    "34aecd45-b9d0-4a17-afe3-a4993f548943",
+    "5ebd45ca-59f5-453f-aa35-367e4eba7efd",
+    "18b2ee1f-9696-4c2c-a25a-b497ccf52388"
   ],
   "cards": [
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.212175980521058,
-        "difficulty": 9.95758556197958,
-        "interval_days": 1,
-        "reviews": 23,
-        "passing_reviews": 2,
-        "lapses": 13,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-26T02:59:55.442000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
     {
       "id": "slovak-0347",
       "entry_type": "term",
@@ -1411,42 +1378,6 @@
       "front_text_scale": 1.5
     },
     {
-      "id": "slovak_reading-2026-11-22-slovak-0098",
-      "front": {
-        "text": "Toto je ve\u013ek\u00fd dom.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "This is a big house.",
-        "notes": "[\u02c8ve\u028eki\u02d0]\n\nve\u013ek\u00fd is an adjective meaning big; it is masculine nominative singular and agrees with dom."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T02:59:08.112000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
       "id": "slovak-0306",
       "entry_type": "sentence",
       "front": {
@@ -1481,42 +1412,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-24-slovak-0103",
-      "front": {
-        "text": "Je to zl\u00fd \u010dlovek.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "He is a bad person.",
-        "notes": "[\u02c8zli\u02d0]\n\nThe word 'zl\u00fd' is the nominative singular masculine form of the adjective 'zl\u00fd', meaning 'bad'. It agrees with the noun '\u010dlovek' in gender, number, and case."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-26T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-25T07:05:42.564000Z",
-        "next_due_at": "2026-11-26T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "5d",
-        "good": "7d",
-        "easy": "12d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0324",
