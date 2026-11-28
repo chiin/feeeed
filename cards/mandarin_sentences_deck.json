@@ -5,8 +5,8 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T05:52:57.112715Z",
-  "state_revision": 420,
+  "compiled_at": "2026-11-28T05:53:18.659124Z",
+  "state_revision": 421,
   "daily_progress": {
     "total": 7,
     "new": 1,
@@ -348,7 +348,8 @@
     "d04fb1bf-b12e-4c6b-be85-701ed15cf1d0",
     "ecc07a99-f626-4660-b490-1c1af6c11b1f",
     "66d0b13d-3f7e-4e41-b303-a85f6f4df69d",
-    "dc452660-0621-4ebc-94a1-18c66c774112"
+    "dc452660-0621-4ebc-94a1-18c66c774112",
+    "7cb1b0e4-5dc9-4fd5-9cd2-84eabd4b62ba"
   ],
   "cards": [
     {
@@ -382,39 +383,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "3d"
-      }
-    },
-    {
-      "id": "mandarin_reading-2026-11-27-hsk-0094",
-      "front": {
-        "text": "\u9019\u88e1\u7684\u4eba\u5f88\u5c11\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "There are very few people here.",
-        "notes": "zh\u00e8l\u01d0 de r\u00e9n h\u011bn sh\u01ceo\n\n\u5c11 is an adjective meaning \u201cfew\u201d or \u201clittle.\u201d Here it follows \u5f88 to describe a small number of people, functioning as the predicate adjective."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.24668918777567272,
-        "difficulty": 6.402115069296838,
-        "interval_days": 1,
-        "reviews": 2,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-27T11:43:04.333000Z",
-        "next_due_at": "2026-11-27T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     },
     {
@@ -463,6 +431,39 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-11-28T05:45:09.241000Z",
         "next_due_at": "2026-11-28T05:55:09.241000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-11-27-hsk-0094",
+      "front": {
+        "text": "\u9019\u88e1\u7684\u4eba\u5f88\u5c11\u3002",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "There are very few people here.",
+        "notes": "zh\u00e8l\u01d0 de r\u00e9n h\u011bn sh\u01ceo\n\n\u5c11 is an adjective meaning \u201cfew\u201d or \u201clittle.\u201d Here it follows \u5f88 to describe a small number of people, functioning as the predicate adjective."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-28T06:02:31.644000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.09603383636195935,
+        "difficulty": 8.802628058192235,
+        "interval_days": 0,
+        "reviews": 3,
+        "passing_reviews": 1,
+        "lapses": 1,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:52:31.644000Z",
+        "next_due_at": "2026-11-28T06:02:31.644000Z"
       },
       "schedule_previews": {
         "again": "10m",
