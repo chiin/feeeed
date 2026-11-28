@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 389,
+  "revision": 390,
   "vocabulary": {
     "slovak-0001": {
       "status": "sentence_complete",
@@ -827,9 +827,10 @@
     },
     "slovak-0110": {
       "status": "sentence_reinforcement",
-      "sentence_pass_count": 0,
+      "sentence_pass_count": 1,
       "introduced_at": "2026-11-26T22:51:50.960816Z",
-      "introduction_strategy": "vocabulary_first"
+      "introduction_strategy": "vocabulary_first",
+      "last_sentence_pass_at": "2026-11-28T09:10:36.376000Z"
     },
     "slovak-0111": {
       "status": "sentence_reinforcement",
@@ -2512,6 +2513,10 @@
     },
     "a9620b18-f8f8-4d83-b75d-1991b3a6e8bd": {
       "processed_at": "2026-11-28T09:10:40.365759Z",
+      "status": "applied"
+    },
+    "7a9390ef-91b7-4b04-a196-4ff9549f71fc": {
+      "processed_at": "2026-11-28T09:11:03.724705Z",
       "status": "applied"
     }
   },
