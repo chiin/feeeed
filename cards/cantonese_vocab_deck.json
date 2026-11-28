@@ -5,17 +5,21 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-27T23:16:18.435795Z",
-  "state_revision": 5,
+  "compiled_at": "2026-11-28T05:22:47.125703Z",
+  "state_revision": 9,
   "daily_progress": {
     "total": 32,
-    "new": 30,
-    "review": 2,
-    "done": 0
+    "new": 26,
+    "review": 3,
+    "done": 3
   },
   "processed_event_ids": [
     "61fa1d8a-ef7a-4fcb-8873-48ca652c4b5a",
-    "788c90d9-6b67-4ecd-a4af-984a52b6a2c3"
+    "788c90d9-6b67-4ecd-a4af-984a52b6a2c3",
+    "860dddf3-a678-467d-b5f9-92b3a06ef904",
+    "65cee86d-d0c4-4513-b297-8166e258dc07",
+    "f2b78d24-0213-4afa-a355-5b9d8b576d86",
+    "b1ccbcd4-2f95-4c7a-9f26-2d21ca08096d"
   ],
   "cards": [
     {
@@ -116,27 +120,6 @@
       "back": {
         "text": "y\u00e0uhhaak",
         "notes": "\u904a\u5ba2"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "yue-0007",
-      "entry_type": "term",
-      "front": {
-        "text": "where?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "b\u012bndouh",
-        "notes": "\u908a\u5ea6"
       },
       "available_at": "2026-11-27T16:00:00Z",
       "scheduler_state": null,
@@ -463,27 +446,6 @@
       }
     },
     {
-      "id": "yue-0025",
-      "entry_type": "term",
-      "front": {
-        "text": "would, shall",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "w\u00faih",
-        "notes": "\u6703"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "yue-0027",
       "entry_type": "term",
       "front": {
@@ -578,27 +540,6 @@
       "back": {
         "text": "ch\u012bngch\u00f3",
         "notes": "\u6e05\u695a"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "yue-0032",
-      "entry_type": "term",
-      "front": {
-        "text": "happy",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "h\u014dis\u0101m",
-        "notes": "\u958b\u5fc3"
       },
       "available_at": "2026-11-27T16:00:00Z",
       "scheduler_state": null,
@@ -705,13 +646,25 @@
         "text": "d\u00e1 dihnw\u00e1",
         "notes": "\u6253\u96fb\u8a71"
       },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-28T05:32:21.015000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:22:21.015000Z",
+        "next_due_at": "2026-11-28T05:32:21.015000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]

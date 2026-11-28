@@ -5,7 +5,7 @@
     "version": 1,
     "desired_retention": 0.9
   },
-  "revision": 5,
+  "revision": 9,
   "cards": {
     "yue-0001": {
       "state": "relearning",
@@ -32,6 +32,58 @@
       "last_rating": "again",
       "last_reviewed_at": "2026-11-26T12:08:01.048000Z",
       "next_due_at": "2026-11-26T12:18:01.048000Z"
+    },
+    "yue-0032": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-28T05:22:16.664000Z",
+      "next_due_at": "2026-11-29T16:00:00Z"
+    },
+    "yue-0037": {
+      "state": "relearning",
+      "step": 0,
+      "stability": 0.212,
+      "difficulty": 6.4133,
+      "interval_days": 0,
+      "reviews": 1,
+      "passing_reviews": 0,
+      "lapses": 0,
+      "last_rating": "again",
+      "last_reviewed_at": "2026-11-28T05:22:21.015000Z",
+      "next_due_at": "2026-11-28T05:32:21.015000Z"
+    },
+    "yue-0007": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-28T05:22:24.249000Z",
+      "next_due_at": "2026-11-29T16:00:00Z"
+    },
+    "yue-0025": {
+      "state": "review",
+      "step": null,
+      "stability": 2.3065,
+      "difficulty": 2.118103970459016,
+      "interval_days": 2,
+      "reviews": 1,
+      "passing_reviews": 1,
+      "lapses": 0,
+      "last_rating": "good",
+      "last_reviewed_at": "2026-11-28T05:22:27.366000Z",
+      "next_due_at": "2026-11-29T16:00:00Z"
     }
   },
   "processed_events": {
@@ -41,6 +93,22 @@
     },
     "788c90d9-6b67-4ecd-a4af-984a52b6a2c3": {
       "processed_at": "2026-11-26T12:09:18.912072Z",
+      "status": "applied"
+    },
+    "860dddf3-a678-467d-b5f9-92b3a06ef904": {
+      "processed_at": "2026-11-28T05:22:47.125703Z",
+      "status": "applied"
+    },
+    "65cee86d-d0c4-4513-b297-8166e258dc07": {
+      "processed_at": "2026-11-28T05:22:47.125703Z",
+      "status": "applied"
+    },
+    "f2b78d24-0213-4afa-a355-5b9d8b576d86": {
+      "processed_at": "2026-11-28T05:22:47.125703Z",
+      "status": "applied"
+    },
+    "b1ccbcd4-2f95-4c7a-9f26-2d21ca08096d": {
+      "processed_at": "2026-11-28T05:22:47.125703Z",
       "status": "applied"
     }
   },
@@ -97,10 +165,6 @@
       },
       {
         "card_id": "yue-0006",
-        "available_at": "2026-11-27T16:00:00Z"
-      },
-      {
-        "card_id": "yue-0007",
         "available_at": "2026-11-27T16:00:00Z"
       },
       {
@@ -164,10 +228,6 @@
         "available_at": "2026-11-27T16:00:00Z"
       },
       {
-        "card_id": "yue-0025",
-        "available_at": "2026-11-27T16:00:00Z"
-      },
-      {
         "card_id": "yue-0027",
         "available_at": "2026-11-27T16:00:00Z"
       },
@@ -188,10 +248,6 @@
         "available_at": "2026-11-27T16:00:00Z"
       },
       {
-        "card_id": "yue-0032",
-        "available_at": "2026-11-27T16:00:00Z"
-      },
-      {
         "card_id": "yue-0033",
         "available_at": "2026-11-27T16:00:00Z"
       },
@@ -209,7 +265,7 @@
       },
       {
         "card_id": "yue-0037",
-        "available_at": "2026-11-27T16:00:00Z"
+        "available_at": "2026-11-28T05:32:21.015000Z"
       }
     ]
   },

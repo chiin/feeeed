@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 6,
+  "revision": 13,
   "vocabulary": {
     "yue-0001": {
       "status": "sentence_reinforcement",
@@ -121,6 +121,66 @@
       "sentence_pass_count": 0,
       "introduced_at": "2026-11-26T22:51:50.960816Z",
       "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0025": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0027": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0028": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0029": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0030": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0031": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0032": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0033": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0034": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
+    },
+    "yue-0035": {
+      "status": "sentence_reinforcement",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "vocabulary_first"
     }
   },
   "processed_events": {
@@ -133,7 +193,68 @@
       "status": "applied"
     }
   },
-  "vocabulary_candidates": {},
+  "vocabulary_candidates": {
+    "cantonese_listening-discovered-915528381189dc5a": {
+      "surface_form": "\u984c",
+      "observed_form": "\u984c",
+      "translation": "question / problem",
+      "pronunciation": "t\u00e0ih",
+      "source_sentence_id": "cantonese_listening-2026-11-28-yue-0027",
+      "source_sentence_text": "\u4f60\u77e5\u5514\u77e5\u5462\u984c\u5605\u7b54\u6848\uff1f",
+      "status": "pending",
+      "created_at": "2026-11-28T05:22:47.125703Z"
+    },
+    "cantonese_listening-discovered-585ab31153939476": {
+      "surface_form": "\u65e9",
+      "observed_form": "\u65e9",
+      "translation": "early",
+      "pronunciation": "j\u00f3u",
+      "source_sentence_id": "cantonese_listening-2026-11-28-yue-0029",
+      "source_sentence_text": "\u4f60\u61c9\u8a72\u65e9\u5572\u7747\u91ab\u751f\u3002",
+      "status": "pending",
+      "created_at": "2026-11-28T05:22:47.125703Z"
+    },
+    "cantonese_listening-discovered-bb1ba8d2a950daa6": {
+      "surface_form": "\u4e5c\u5622",
+      "observed_form": "\u4e5c\u5622",
+      "translation": "what / anything",
+      "pronunciation": "m\u00e1t yeh",
+      "source_sentence_id": "cantonese_listening-2026-11-28-yue-0031",
+      "source_sentence_text": "\u6211\u5514\u6e05\u695a\u4f62\u8b1b\u5605\u4e5c\u5622\u3002",
+      "status": "pending",
+      "created_at": "2026-11-28T05:22:47.125703Z"
+    },
+    "cantonese_listening-discovered-743bcc90a4bc81c9": {
+      "surface_form": "\u8001\u53cb",
+      "observed_form": "\u8001\u53cb",
+      "translation": "old friend",
+      "pronunciation": "l\u00f3uh y\u00e1uh",
+      "source_sentence_id": "cantonese_listening-2026-11-28-yue-0032",
+      "source_sentence_text": "\u898b\u5230\u8001\u53cb\u6211\u597d\u958b\u5fc3\u3002",
+      "status": "pending",
+      "created_at": "2026-11-28T05:22:47.125703Z"
+    },
+    "cantonese_listening-discovered-2e64af47a70c7582": {
+      "surface_form": "\u8010",
+      "observed_form": "\u8010",
+      "translation": "long (of time)",
+      "pronunciation": "n\u014dih",
+      "source_sentence_id": "cantonese_listening-2026-11-28-yue-0034",
+      "source_sentence_text": "\u6211\u8b58\u4f62\u597d\u8010\u5497\u3002",
+      "status": "pending",
+      "created_at": "2026-11-28T05:22:47.125703Z"
+    },
+    "cantonese_listening-discovered-859edd837439f48a": {
+      "surface_form": "\u8981",
+      "observed_form": "\u8981",
+      "translation": "to need / want",
+      "pronunciation": "yiu",
+      "source_sentence_id": "cantonese_listening-2026-11-28-yue-0035",
+      "source_sentence_text": "\u6211\u54cb\u8981\u7747\u91ab\u751f\u3002",
+      "status": "pending",
+      "created_at": "2026-11-28T05:22:47.125703Z"
+    }
+  },
   "processed_candidate_events": {},
   "grandfathered_word_ids": [],
   "source_gate_initialized": true,
