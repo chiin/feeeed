@@ -5,19 +5,15 @@
   "front_text_scale": 2.0,
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T06:07:00.126623Z",
-  "state_revision": 4139,
+  "compiled_at": "2026-11-28T06:07:19.573086Z",
+  "state_revision": 4143,
   "daily_progress": {
     "total": 85,
     "new": 0,
-    "review": 18,
-    "done": 67
+    "review": 14,
+    "done": 71
   },
   "processed_event_ids": [
-    "63471742-5926-42f9-81d6-89f9c112db7f",
-    "dd9862c8-aa85-4c72-9f7b-3e39e3defa57",
-    "82a35561-011a-4fea-b684-d31f6748c0d7",
-    "9b8e06c7-cc15-4fdd-a732-2e4de9bb12b9",
     "b013eb86-6f47-43c3-b366-5ccac9ab1e2d",
     "61423525-d9fb-42e0-ace5-b5e66c63ad56",
     "a89dfd14-d28f-4f2f-8cf4-6e71de0c306b",
@@ -1013,7 +1009,11 @@
     "bbf0a7fb-63e9-4d56-b67b-56b8bd47fac1",
     "e8a2969f-a266-4527-b75e-34d00cbe81ec",
     "647c10e3-2c9d-4c43-9af4-6a665054f518",
-    "e36b1d5c-c0f8-40e8-a71a-d8d5fb78ad80"
+    "e36b1d5c-c0f8-40e8-a71a-d8d5fb78ad80",
+    "cc1ebb08-a205-494f-ae1e-ede133c3d072",
+    "f133d587-65da-4ddf-8f73-a67ffce823cf",
+    "49bf1cef-c4ab-4b05-aed1-bf2ff7fc60b2",
+    "6a474b42-66a9-43c9-9eac-56fc9b7d8e50"
   ],
   "cards": [
     {
@@ -1271,49 +1271,6 @@
       }
     },
     {
-      "id": "hsk-0487",
-      "entry_type": "term",
-      "front": {
-        "text": "\u7c3d\u8b49",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "qi\u0101nzh\u00e8ng - visa",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u7c3d",
-          "url": "https://www.dong-chinese.com/wiki/%E7%B0%BD"
-        },
-        {
-          "character": "\u8b49",
-          "url": "https://www.dong-chinese.com/wiki/%E8%AD%89"
-        }
-      ],
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.0731500236895538,
-        "difficulty": 9.952494310381404,
-        "interval_days": 1,
-        "reviews": 18,
-        "passing_reviews": 1,
-        "lapses": 12,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-27T11:31:02.412000Z",
-        "next_due_at": "2026-11-27T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
       "id": "hsk-0573",
       "entry_type": "term",
       "front": {
@@ -1473,135 +1430,6 @@
         "last_rating": "good",
         "last_reviewed_at": "2026-11-27T11:26:28.089000Z",
         "next_due_at": "2026-11-27T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0239",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8eab\u9ad4",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sh\u0113nt\u01d0 - body; health",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8eab",
-          "url": "https://www.dong-chinese.com/wiki/%E8%BA%AB"
-        },
-        {
-          "character": "\u9ad4",
-          "url": "https://www.dong-chinese.com/wiki/%E9%AB%94"
-        }
-      ],
-      "available_at": "2026-11-28T06:05:33.497000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.9000222369322709,
-        "difficulty": 9.412981818150069,
-        "interval_days": 0,
-        "reviews": 5,
-        "passing_reviews": 2,
-        "lapses": 2,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-28T05:55:33.497000Z",
-        "next_due_at": "2026-11-28T06:05:33.497000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
-      }
-    },
-    {
-      "id": "hsk-0495",
-      "entry_type": "term",
-      "front": {
-        "text": "\u8a8d\u771f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "r\u00e8nzh\u0113n -",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u8a8d",
-          "url": "https://www.dong-chinese.com/wiki/%E8%AA%8D"
-        },
-        {
-          "character": "\u771f",
-          "url": "https://www.dong-chinese.com/wiki/%E7%9C%9F"
-        }
-      ],
-      "available_at": "2026-11-28T06:05:53.689000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.7687399110442699,
-        "difficulty": 9.954409779460624,
-        "interval_days": 0,
-        "reviews": 13,
-        "passing_reviews": 4,
-        "lapses": 5,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-28T05:55:53.689000Z",
-        "next_due_at": "2026-11-28T06:05:53.689000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      }
-    },
-    {
-      "id": "hsk-0584",
-      "entry_type": "term",
-      "front": {
-        "text": "\u7167\u9867",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "zh\u00e0ogu - to take care of",
-        "notes": null
-      },
-      "character_links": [
-        {
-          "character": "\u7167",
-          "url": "https://www.dong-chinese.com/wiki/%E7%85%A7"
-        },
-        {
-          "character": "\u9867",
-          "url": "https://www.dong-chinese.com/wiki/%E9%A1%A7"
-        }
-      ],
-      "available_at": "2026-11-28T06:05:56.609000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.11795181434089354,
-        "difficulty": 9.963139738911465,
-        "interval_days": 0,
-        "reviews": 11,
-        "passing_reviews": 3,
-        "lapses": 5,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-28T05:55:56.609000Z",
-        "next_due_at": "2026-11-28T06:05:56.609000Z"
       },
       "schedule_previews": {
         "again": "10m",
