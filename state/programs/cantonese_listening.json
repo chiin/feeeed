@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 15,
+  "revision": 16,
   "vocabulary": {
     "yue-0001": {
       "status": "sentence_reinforcement",
@@ -193,6 +193,12 @@
       "sentence_pass_count": 0,
       "introduced_at": "2026-11-28T05:22:47.125703Z",
       "introduction_strategy": "sentence_discovery"
+    },
+    "cantonese_listening-discovered-859edd837439f48a": {
+      "status": "sentence_complete",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "sentence_discovery"
     }
   },
   "processed_events": {
@@ -273,8 +279,9 @@
       "pronunciation": "yiu",
       "source_sentence_id": "cantonese_listening-2026-11-28-yue-0035",
       "source_sentence_text": "\u6211\u54cb\u8981\u7747\u91ab\u751f\u3002",
-      "status": "pending",
-      "created_at": "2026-11-28T05:22:47.125703Z"
+      "status": "approved",
+      "created_at": "2026-11-28T05:22:47.125703Z",
+      "decided_at": "2026-11-28T05:26:35.913000Z"
     }
   },
   "processed_candidate_events": {
@@ -284,6 +291,10 @@
     },
     "df80427d-7dcc-41b3-acbe-65ef81abb104": {
       "processed_at": "2026-11-28T05:27:40.573387Z",
+      "status": "applied"
+    },
+    "9f7a367a-b8f2-4192-8c0f-d49a9c3bb9b3": {
+      "processed_at": "2026-11-28T05:28:00.018686Z",
       "status": "applied"
     }
   },
