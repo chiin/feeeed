@@ -5,12 +5,12 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T05:31:27.982495Z",
-  "state_revision": 414,
+  "compiled_at": "2026-11-28T05:31:51.005236Z",
+  "state_revision": 415,
   "daily_progress": {
     "total": 7,
-    "new": 4,
-    "review": 3,
+    "new": 3,
+    "review": 4,
     "done": 0
   },
   "processed_event_ids": [
@@ -342,7 +342,8 @@
     "e01608d3-e8b7-4ee3-936e-3a8c73160eb5",
     "e73d1307-8ac4-4bd1-baaa-44fd5aafdaf2",
     "810c3906-9fdc-4f8e-ac41-00c50fab4068",
-    "378f0797-785d-4a63-9f26-fc1ee9e9a220"
+    "378f0797-785d-4a63-9f26-fc1ee9e9a220",
+    "871d87c7-c71a-4b09-af3c-4fc747d9037c"
   ],
   "cards": [
     {
@@ -487,27 +488,6 @@
       }
     },
     {
-      "id": "mandarin_reading-2026-11-28-hsk-0097",
-      "front": {
-        "text": "\u6211\u7684\u670b\u53cb\u7684\u5973\u5152\u5728\u91ab\u9662\u5de5\u4f5c\u3002",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "My friend's daughter works at the hospital.",
-        "notes": "W\u01d2 de p\u00e9ngyou de n\u01da'\u00e9r z\u00e0i y\u012byu\u00e0n g\u014dngzu\u00f2.\n\nNoun meaning 'daughter'; it is the possessed noun after \u670b\u53cb\u7684."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "mandarin_reading-2026-11-28-hsk-0098",
       "front": {
         "text": "\u90a3\u500b\u5c0f\u59d0\u662f\u6211\u5011\u5b78\u6821\u7684\u6f22\u8a9e\u8001\u5e2b\u3002",
@@ -526,6 +506,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "mandarin_reading-2026-11-28-hsk-0097",
+      "front": {
+        "text": "\u6211\u7684\u670b\u53cb\u7684\u5973\u5152\u5728\u91ab\u9662\u5de5\u4f5c\u3002",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "My friend's daughter works at the hospital.",
+        "notes": "W\u01d2 de p\u00e9ngyou de n\u01da'\u00e9r z\u00e0i y\u012byu\u00e0n g\u014dngzu\u00f2.\n\nNoun meaning 'daughter'; it is the possessed noun after \u670b\u53cb\u7684."
+      },
+      "presentation": "text_reading",
+      "available_at": "2026-11-28T05:41:02.251000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:31:02.251000Z",
+        "next_due_at": "2026-11-28T05:41:02.251000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
