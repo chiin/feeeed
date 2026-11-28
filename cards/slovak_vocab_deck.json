@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T07:25:27.278448Z",
-  "state_revision": 1048,
+  "compiled_at": "2026-11-28T07:57:05.731724Z",
+  "state_revision": 1051,
   "daily_progress": {
     "total": 45,
-    "new": 20,
+    "new": 18,
     "review": 25,
-    "done": 0
+    "done": 2
   },
   "processed_event_ids": [
     "f2ddef21-724d-4ccc-9799-a6020e6075ba",
@@ -996,7 +996,10 @@
     "be4efc51-2322-4446-92e2-cc63c7b0708e",
     "8ab54c2b-6f2f-4660-853d-00cd8e1be1f9",
     "7b29bc6a-5d62-4edf-8fb7-558ae987730b",
-    "2feb5d98-48a9-4f63-ac13-7408fd260ce4"
+    "2feb5d98-48a9-4f63-ac13-7408fd260ce4",
+    "4dd53ed1-da8c-4850-8e42-881142cb1bb2",
+    "fbecb512-7e56-4256-a33c-08fa0ccbb2dc",
+    "efb07696-8192-457b-825b-6940af601916"
   ],
   "cards": [
     {
@@ -1594,39 +1597,6 @@
       }
     },
     {
-      "id": "slovak-0331",
-      "entry_type": "sentence",
-      "front": {
-        "text": "to je spr\u00e1vna adresa",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "that is the correct address",
-        "notes": null
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 2.3065,
-        "difficulty": 2.118103970459016,
-        "interval_days": 2,
-        "reviews": 1,
-        "passing_reviews": 1,
-        "lapses": 0,
-        "last_rating": "good",
-        "last_reviewed_at": "2026-11-26T02:36:13.656000Z",
-        "next_due_at": "2026-11-27T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "8d",
-        "good": "11d",
-        "easy": "19d"
-      }
-    },
-    {
       "id": "slovak-0332",
       "entry_type": "sentence",
       "front": {
@@ -1888,27 +1858,6 @@
       }
     },
     {
-      "id": "slovak-0356",
-      "entry_type": "term",
-      "front": {
-        "text": "idem",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "I go",
-        "notes": null
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0357",
       "entry_type": "term",
       "front": {
@@ -2098,27 +2047,6 @@
       }
     },
     {
-      "id": "slovak-0366",
-      "entry_type": "term",
-      "front": {
-        "text": "\u0161koda",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "a pity",
-        "notes": null
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "slovak-0367",
       "entry_type": "term",
       "front": {
@@ -2242,6 +2170,39 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
+      }
+    },
+    {
+      "id": "slovak-0366",
+      "entry_type": "term",
+      "front": {
+        "text": "\u0161koda",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "a pity",
+        "notes": null
+      },
+      "available_at": "2026-11-28T08:06:46.913000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T07:56:46.913000Z",
+        "next_due_at": "2026-11-28T08:06:46.913000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
