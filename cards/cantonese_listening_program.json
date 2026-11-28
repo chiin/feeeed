@@ -4,17 +4,17 @@
   "title": "Cantonese Vocabulary and Listening",
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T05:28:00.018686Z",
+  "compiled_at": "2026-11-28T05:28:22.963306Z",
   "state_revision": 16,
   "source_revisions": {
-    "cantonese_vocab": 17,
+    "cantonese_vocab": 22,
     "cantonese_sentences": 7
   },
   "daily_progress": {
     "total": 43,
-    "new": 27,
-    "review": 8,
-    "done": 8
+    "new": 22,
+    "review": 11,
+    "done": 10
   },
   "processed_event_ids": [
     "61fa1d8a-ef7a-4fcb-8873-48ca652c4b5a",
@@ -31,6 +31,11 @@
     "8733e4e2-98f7-4228-932b-c202015f1351",
     "bc33d74b-d531-4e5d-8ac4-b4ae45e47753",
     "c5f14f89-986b-4438-b46a-87fd8700fd52",
+    "2e4269ec-b203-4a88-b96c-16cac985a84b",
+    "2682fa2d-481f-4594-99ad-f68ec5f2f557",
+    "d3ff0da8-bfe4-4771-a5fe-433300e200e0",
+    "05ea32e0-8c83-4a66-98ef-df71c8604cc1",
+    "8c458774-f62d-436e-80ed-52141054db61",
     "32e027c4-ee53-4683-97e8-288c60646f95",
     "05147303-7d8f-481b-bc77-b95a7152742a",
     "6115bd36-bfc0-4e9d-9e28-cb2423324b2d",
@@ -306,30 +311,6 @@
       "front_text_scale": 1.0
     },
     {
-      "id": "yue-0019",
-      "entry_type": "term",
-      "front": {
-        "text": "it's raining",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "lohk y\u00fah",
-        "notes": "\u843d\u96e8"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "cantonese_vocab",
-      "deck_title": "Cantonese Vocabulary",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "cantonese_listening-2026-11-26-yue-0009",
       "front": {
         "text": "",
@@ -353,30 +334,6 @@
       "deck_id": "cantonese_sentences",
       "deck_title": "Cantonese Listening Practice",
       "front_text_scale": 1.0
-    },
-    {
-      "id": "yue-0020",
-      "entry_type": "term",
-      "front": {
-        "text": "difficult",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "l\u00e0ahn",
-        "notes": "\u96e3"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "cantonese_vocab",
-      "deck_title": "Cantonese Vocabulary",
-      "front_text_scale": 1.5
     },
     {
       "id": "cantonese_listening-2026-11-26-yue-0003",
@@ -415,13 +372,25 @@
         "text": "ch\u0113ut s\u0113ng",
         "notes": "\u51fa\u8072"
       },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-28T05:37:43.186000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:27:43.186000Z",
+        "next_due_at": "2026-11-28T05:37:43.186000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "cantonese_vocab",
       "deck_title": "Cantonese Vocabulary",
@@ -439,13 +408,25 @@
         "text": "jaan",
         "notes": "\u8b9a"
       },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-28T05:37:44.841000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:27:44.841000Z",
+        "next_due_at": "2026-11-28T05:37:44.841000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "cantonese_vocab",
       "deck_title": "Cantonese Vocabulary",
@@ -463,13 +444,25 @@
         "text": "h\u00f3u ch\u00f3i",
         "notes": "\u597d\u5f69"
       },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-28T05:37:50.259000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:27:50.259000Z",
+        "next_due_at": "2026-11-28T05:37:50.259000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "cantonese_vocab",
       "deck_title": "Cantonese Vocabulary",
