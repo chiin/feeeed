@@ -4,17 +4,17 @@
   "title": "Mandarin Vocabulary and Sentences",
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T05:33:59.219756Z",
-  "state_revision": 375,
+  "compiled_at": "2026-11-28T05:34:19.785757Z",
+  "state_revision": 376,
   "source_revisions": {
     "hsk": 4077,
-    "mandarin_sentences": 415
+    "mandarin_sentences": 417
   },
   "daily_progress": {
     "total": 92,
-    "new": 3,
-    "review": 73,
-    "done": 16
+    "new": 1,
+    "review": 74,
+    "done": 17
   },
   "processed_event_ids": [
     "c8bc30b3-64fd-469e-902b-b0b35863dbd3",
@@ -1346,7 +1346,9 @@
     "e73d1307-8ac4-4bd1-baaa-44fd5aafdaf2",
     "810c3906-9fdc-4f8e-ac41-00c50fab4068",
     "378f0797-785d-4a63-9f26-fc1ee9e9a220",
-    "871d87c7-c71a-4b09-af3c-4fc747d9037c"
+    "871d87c7-c71a-4b09-af3c-4fc747d9037c",
+    "7d640027-83a3-4f45-8b89-55690509d48e",
+    "d04fb1bf-b12e-4c6b-be85-701ed15cf1d0"
   ],
   "cards": [
     {
@@ -1428,30 +1430,6 @@
       "front_text_scale": 2.0
     },
     {
-      "id": "mandarin_reading-2026-11-28-hsk-0095",
-      "front": {
-        "text": "\u9019\u672c\u66f8\u662f\u591a\u5c11\u9322\uff1f",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "How much is this book?",
-        "notes": "Zh\u00e8 b\u011bn sh\u016b sh\u00ec du\u014dshao qi\u00e1n?\n\nInterrogative pronoun asking about an amount; in \u591a\u5c11\u9322 it asks the price of the book."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "mandarin_sentences",
-      "deck_title": "Mandarin Sentence Practice",
-      "front_text_scale": 1.5
-    },
-    {
       "id": "mandarin_reading-2026-11-28-hsk-0098",
       "front": {
         "text": "\u90a3\u500b\u5c0f\u59d0\u662f\u6211\u5011\u5b78\u6821\u7684\u6f22\u8a9e\u8001\u5e2b\u3002",
@@ -1463,13 +1441,25 @@
         "notes": "N\u00e0ge xi\u01ceojie sh\u00ec w\u01d2men xu\u00e9xi\u00e0o de H\u00e0ny\u01d4 l\u01ceosh\u012b.\n\nNoun title meaning 'young lady/Miss'; it is the head noun of the subject \u90a3\u500b\u5c0f\u59d0."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-28T05:43:37.449000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:33:37.449000Z",
+        "next_due_at": "2026-11-28T05:43:37.449000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       },
       "deck_id": "mandarin_sentences",
       "deck_title": "Mandarin Sentence Practice",
