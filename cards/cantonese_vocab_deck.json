@@ -5,13 +5,13 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T05:25:07.080988Z",
-  "state_revision": 9,
+  "compiled_at": "2026-11-28T05:26:41.445993Z",
+  "state_revision": 17,
   "daily_progress": {
     "total": 32,
-    "new": 26,
-    "review": 3,
-    "done": 3
+    "new": 19,
+    "review": 5,
+    "done": 8
   },
   "processed_event_ids": [
     "61fa1d8a-ef7a-4fcb-8873-48ca652c4b5a",
@@ -19,42 +19,17 @@
     "860dddf3-a678-467d-b5f9-92b3a06ef904",
     "65cee86d-d0c4-4513-b297-8166e258dc07",
     "f2b78d24-0213-4afa-a355-5b9d8b576d86",
-    "b1ccbcd4-2f95-4c7a-9f26-2d21ca08096d"
+    "b1ccbcd4-2f95-4c7a-9f26-2d21ca08096d",
+    "98fea0c6-f9dd-438f-b239-6e3cae7a0c26",
+    "af12cfd7-9c02-445f-adbe-b3e10487b173",
+    "e9176270-f555-4cbb-9150-d2038eb9777f",
+    "50796a3f-38c3-42b3-b13c-01eebb20be98",
+    "9a6faeb2-2a44-494d-85da-e1c7601871cc",
+    "8733e4e2-98f7-4228-932b-c202015f1351",
+    "bc33d74b-d531-4e5d-8ac4-b4ae45e47753",
+    "c5f14f89-986b-4438-b46a-87fd8700fd52"
   ],
   "cards": [
-    {
-      "id": "yue-0001",
-      "entry_type": "term",
-      "front": {
-        "text": "one, people",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "y\u00e0hndeih",
-        "notes": "\u4eba\u54cb"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-26T12:08:00.141000Z",
-        "next_due_at": "2026-11-26T12:18:00.141000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "3d"
-      }
-    },
     {
       "id": "yue-0003",
       "entry_type": "term",
@@ -110,27 +85,6 @@
       }
     },
     {
-      "id": "yue-0006",
-      "entry_type": "term",
-      "front": {
-        "text": "tourist",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "y\u00e0uhhaak",
-        "notes": "\u904a\u5ba2"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "yue-0008",
       "entry_type": "term",
       "front": {
@@ -162,69 +116,6 @@
       "back": {
         "text": "y\u00e1m",
         "notes": "\u98f2"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "yue-0010",
-      "entry_type": "term",
-      "front": {
-        "text": "wine",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "j\u00e1u",
-        "notes": "\u9152"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "yue-0011",
-      "entry_type": "term",
-      "front": {
-        "text": "to give",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "sung",
-        "notes": "\u9001"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "yue-0013",
-      "entry_type": "term",
-      "front": {
-        "text": "this year",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "g\u0101m l\u00edn",
-        "notes": "\u4eca\u5e74"
       },
       "available_at": "2026-11-27T16:00:00Z",
       "scheduler_state": null,
@@ -425,27 +316,6 @@
       }
     },
     {
-      "id": "yue-0024",
-      "entry_type": "term",
-      "front": {
-        "text": "confident",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "y\u00e1uh seuns\u0101m",
-        "notes": "\u6709\u4fe1\u5fc3"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "yue-0027",
       "entry_type": "term",
       "front": {
@@ -530,27 +400,6 @@
       }
     },
     {
-      "id": "yue-0031",
-      "entry_type": "term",
-      "front": {
-        "text": "clearly",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "ch\u012bngch\u00f3",
-        "notes": "\u6e05\u695a"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
       "id": "yue-0033",
       "entry_type": "term",
       "front": {
@@ -582,27 +431,6 @@
       "back": {
         "text": "s\u012bk",
         "notes": "\u8b58"
-      },
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      }
-    },
-    {
-      "id": "yue-0035",
-      "entry_type": "term",
-      "front": {
-        "text": "doctor",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "y\u012bs\u0101ng",
-        "notes": "\u91ab\u751f"
       },
       "available_at": "2026-11-27T16:00:00Z",
       "scheduler_state": null,
@@ -659,6 +487,105 @@
         "last_rating": "again",
         "last_reviewed_at": "2026-11-28T05:22:21.015000Z",
         "next_due_at": "2026-11-28T05:32:21.015000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "yue-0024",
+      "entry_type": "term",
+      "front": {
+        "text": "confident",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "y\u00e1uh seuns\u0101m",
+        "notes": "\u6709\u4fe1\u5fc3"
+      },
+      "available_at": "2026-11-28T05:33:30.119000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:23:30.119000Z",
+        "next_due_at": "2026-11-28T05:33:30.119000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "yue-0010",
+      "entry_type": "term",
+      "front": {
+        "text": "wine",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "j\u00e1u",
+        "notes": "\u9152"
+      },
+      "available_at": "2026-11-28T05:33:49.201000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:23:49.201000Z",
+        "next_due_at": "2026-11-28T05:33:49.201000Z"
+      },
+      "schedule_previews": {
+        "again": "10m",
+        "hard": "1d",
+        "good": "1d",
+        "easy": "1d"
+      }
+    },
+    {
+      "id": "yue-0011",
+      "entry_type": "term",
+      "front": {
+        "text": "to give",
+        "audio": null,
+        "image": null
+      },
+      "back": {
+        "text": "sung",
+        "notes": "\u9001"
+      },
+      "available_at": "2026-11-28T05:33:52.435000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T05:23:52.435000Z",
+        "next_due_at": "2026-11-28T05:33:52.435000Z"
       },
       "schedule_previews": {
         "again": "10m",
