@@ -4,17 +4,17 @@
   "title": "Slovak Vocabulary and Sentences",
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T09:02:26.769657Z",
-  "state_revision": 386,
+  "compiled_at": "2026-11-28T09:02:51.334134Z",
+  "state_revision": 387,
   "source_revisions": {
     "slovak_vocab": 1080,
-    "slovak_sentences": 490
+    "slovak_sentences": 493
   },
   "daily_progress": {
     "total": 52,
-    "new": 7,
-    "review": 15,
-    "done": 30
+    "new": 6,
+    "review": 14,
+    "done": 32
   },
   "processed_event_ids": [
     "ff7ec2ba-c06f-43b4-8724-c504ab1c8b04",
@@ -1423,7 +1423,10 @@
     "69f46625-3726-4b2a-94fd-65bfa83e0fbb",
     "2b42f6c2-32f3-432d-95ac-768f488a8e58",
     "6ca6d102-5e46-4f32-886d-243d4831bfd0",
-    "d6d4d197-6c6d-49ad-b0c7-491a23bd44e3"
+    "d6d4d197-6c6d-49ad-b0c7-491a23bd44e3",
+    "2a4326b5-70f9-47bd-92d6-81fd51356a4a",
+    "99a0371f-14ce-4ec7-b947-0f44e32bf081",
+    "08e37cb0-35f3-4aaf-9cac-b00c043a5158"
   ],
   "cards": [
     {
@@ -1438,19 +1441,19 @@
         "notes": "[\u0272i\u032fe ja tu \u02c8n\u025bbi\u02d0vam]\n\nThe target combines the negative answer 'nie' with 'ja tu neb\u00fdvam' ('I don't live here'); 'tu' means 'here', and 'neb\u00fdvam' is the first-person singular negative present form of 'b\u00fdva\u0165' ('to live, reside')."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-28T08:27:08.304000Z",
+      "available_at": "2026-11-28T09:11:38.905000Z",
       "scheduler_state": {
         "state": "relearning",
         "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
+        "stability": 0.08335671711031604,
+        "difficulty": 8.806304468856837,
         "interval_days": 0,
-        "reviews": 1,
+        "reviews": 2,
         "passing_reviews": 0,
-        "lapses": 0,
+        "lapses": 1,
         "last_rating": "again",
-        "last_reviewed_at": "2026-11-28T08:17:08.304000Z",
-        "next_due_at": "2026-11-28T08:27:08.304000Z"
+        "last_reviewed_at": "2026-11-28T09:01:38.905000Z",
+        "next_due_at": "2026-11-28T09:11:38.905000Z"
       },
       "schedule_previews": {
         "again": "10m",
@@ -1497,66 +1500,6 @@
       "deck_id": "slovak_vocab",
       "deck_title": "Slovak Vocabulary",
       "front_text_scale": 1.5
-    },
-    {
-      "id": "slovak_reading-2026-11-28-slovak-0113",
-      "front": {
-        "text": "b\u00fdvate tu?",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "do you live here?",
-        "notes": null
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
-    },
-    {
-      "id": "slovak_reading-2026-09-08-slovak-0021",
-      "front": {
-        "text": "Slovenka Ana spravila na mieste konci knihy.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "The Slovak woman Ana finished the book at the place.",
-        "notes": "Slovenka Ana spravila na mieste konci knihy\n\nSlovenka is the feminine singular noun indicating a woman of Slovenian origin, functioning as the subject of the sentence."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.4411569884451376,
-        "difficulty": 9.95707168882607,
-        "interval_days": 1,
-        "reviews": 24,
-        "passing_reviews": 2,
-        "lapses": 13,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-27T04:07:11.088000Z",
-        "next_due_at": "2026-11-27T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
-      },
-      "deck_id": "slovak_sentences",
-      "deck_title": "Slovak Sentence Practice",
-      "front_text_scale": 1.2
     },
     {
       "id": "slovak-0325",
