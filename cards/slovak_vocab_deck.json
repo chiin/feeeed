@@ -5,16 +5,15 @@
   "front_text_scale": 1.5,
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T08:50:58.086587Z",
-  "state_revision": 1071,
+  "compiled_at": "2026-11-28T08:51:22.664748Z",
+  "state_revision": 1072,
   "daily_progress": {
     "total": 45,
     "new": 10,
-    "review": 14,
-    "done": 21
+    "review": 13,
+    "done": 22
   },
   "processed_event_ids": [
-    "6e6bd71f-4e62-43b2-9e75-9d66520d187b",
     "44990775-365b-4c94-9247-ffbb8372bb56",
     "620c433c-a52a-41be-a050-661758ecda8b",
     "3342b4e6-eab8-4835-a918-75f377e12d32",
@@ -1013,7 +1012,8 @@
     "f1affb95-3c2b-4a76-a3e2-292667632a06",
     "5db57228-69cd-4bac-b318-35f10b15a5d0",
     "d8afc358-8dc2-4f2f-94e9-5b7343df5c23",
-    "554f115a-5d4d-4b80-82e2-ffff84549539"
+    "554f115a-5d4d-4b80-82e2-ffff84549539",
+    "c388facc-82e3-4933-acaf-bac339ff8ad8"
   ],
   "cards": [
     {
@@ -1653,39 +1653,6 @@
         "hard": "1d",
         "good": "2d",
         "easy": "8d"
-      }
-    },
-    {
-      "id": "slovak-0357",
-      "entry_type": "term",
-      "front": {
-        "text": "k Zuzke",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "to Zuzka's",
-        "notes": null
-      },
-      "available_at": "2026-11-28T08:17:50.500000Z",
-      "scheduler_state": {
-        "state": "relearning",
-        "step": 0,
-        "stability": 0.212,
-        "difficulty": 6.4133,
-        "interval_days": 0,
-        "reviews": 1,
-        "passing_reviews": 0,
-        "lapses": 0,
-        "last_rating": "again",
-        "last_reviewed_at": "2026-11-28T08:07:50.500000Z",
-        "next_due_at": "2026-11-28T08:17:50.500000Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "1d"
       }
     }
   ]
