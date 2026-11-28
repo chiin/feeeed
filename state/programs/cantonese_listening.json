@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 14,
+  "revision": 15,
   "vocabulary": {
     "yue-0001": {
       "status": "sentence_reinforcement",
@@ -187,6 +187,12 @@
       "sentence_pass_count": 0,
       "introduced_at": "2026-11-28T05:22:47.125703Z",
       "introduction_strategy": "sentence_discovery"
+    },
+    "cantonese_listening-discovered-915528381189dc5a": {
+      "status": "sentence_complete",
+      "sentence_pass_count": 0,
+      "introduced_at": "2026-11-28T05:22:47.125703Z",
+      "introduction_strategy": "sentence_discovery"
     }
   },
   "processed_events": {
@@ -215,8 +221,9 @@
       "pronunciation": "t\u00e0ih",
       "source_sentence_id": "cantonese_listening-2026-11-28-yue-0027",
       "source_sentence_text": "\u4f60\u77e5\u5514\u77e5\u5462\u984c\u5605\u7b54\u6848\uff1f",
-      "status": "pending",
-      "created_at": "2026-11-28T05:22:47.125703Z"
+      "status": "approved",
+      "created_at": "2026-11-28T05:22:47.125703Z",
+      "decided_at": "2026-11-28T05:26:31.238000Z"
     },
     "cantonese_listening-discovered-585ab31153939476": {
       "surface_form": "\u65e9",
@@ -273,6 +280,10 @@
   "processed_candidate_events": {
     "5e444105-1db3-4cc5-8194-eb057fc64c82": {
       "processed_at": "2026-11-28T05:27:03.148612Z",
+      "status": "applied"
+    },
+    "df80427d-7dcc-41b3-acbe-65ef81abb104": {
+      "processed_at": "2026-11-28T05:27:40.573387Z",
       "status": "applied"
     }
   },
