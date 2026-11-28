@@ -5,13 +5,13 @@
   "front_text_scale": 1.2,
   "batch_id": "2026-11-28",
   "batch_date": "2026-11-28",
-  "compiled_at": "2026-11-28T08:17:24.082088Z",
-  "state_revision": 488,
+  "compiled_at": "2026-11-28T08:17:50.268621Z",
+  "state_revision": 490,
   "daily_progress": {
     "total": 7,
-    "new": 2,
+    "new": 1,
     "review": 5,
-    "done": 0
+    "done": 1
   },
   "processed_event_ids": [
     "7a834f9a-b829-4f9c-a602-9e8a87e3a759",
@@ -418,7 +418,9 @@
     "66eaeda8-9db2-4d12-a857-e005bef045a9",
     "47f14f10-cc3b-427e-b09d-a2eb83e6830d",
     "69f46625-3726-4b2a-94fd-65bfa83e0fbb",
-    "2b42f6c2-32f3-432d-95ac-768f488a8e58"
+    "2b42f6c2-32f3-432d-95ac-768f488a8e58",
+    "6ca6d102-5e46-4f32-886d-243d4831bfd0",
+    "d6d4d197-6c6d-49ad-b0c7-491a23bd44e3"
   ],
   "cards": [
     {
@@ -452,39 +454,6 @@
         "hard": "1d",
         "good": "1d",
         "easy": "1d"
-      }
-    },
-    {
-      "id": "slovak_reading-2026-11-22-slovak-0090",
-      "front": {
-        "text": "T\u00e1 star\u00e1 \u017eena je suseda.",
-        "audio": null,
-        "image": null
-      },
-      "back": {
-        "text": "That old woman is a neighbor.",
-        "notes": "[\u02c8star\u025b\u02d0]\n\nstar\u00e1 is the feminine nominative singular form of star\u00fd, agreeing with \u017eena; it means old."
-      },
-      "presentation": "text_reading",
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": {
-        "state": "review",
-        "step": null,
-        "stability": 0.5909188569996358,
-        "difficulty": 9.776778543516208,
-        "interval_days": 1,
-        "reviews": 7,
-        "passing_reviews": 2,
-        "lapses": 2,
-        "last_rating": "hard",
-        "last_reviewed_at": "2026-11-27T04:00:20.527000Z",
-        "next_due_at": "2026-11-27T16:00:00Z"
-      },
-      "schedule_previews": {
-        "again": "10m",
-        "hard": "1d",
-        "good": "1d",
-        "easy": "2d"
       }
     },
     {
@@ -619,13 +588,25 @@
         "notes": "[\u0272i\u032fe ja tu \u02c8n\u025bbi\u02d0vam]\n\nThe target combines the negative answer 'nie' with 'ja tu neb\u00fdvam' ('I don't live here'); 'tu' means 'here', and 'neb\u00fdvam' is the first-person singular negative present form of 'b\u00fdva\u0165' ('to live, reside')."
       },
       "presentation": "text_reading",
-      "available_at": "2026-11-27T16:00:00Z",
-      "scheduler_state": null,
+      "available_at": "2026-11-28T08:27:08.304000Z",
+      "scheduler_state": {
+        "state": "relearning",
+        "step": 0,
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "interval_days": 0,
+        "reviews": 1,
+        "passing_reviews": 0,
+        "lapses": 0,
+        "last_rating": "again",
+        "last_reviewed_at": "2026-11-28T08:17:08.304000Z",
+        "next_due_at": "2026-11-28T08:27:08.304000Z"
+      },
       "schedule_previews": {
         "again": "10m",
         "hard": "1d",
-        "good": "2d",
-        "easy": "8d"
+        "good": "1d",
+        "easy": "1d"
       }
     }
   ]
